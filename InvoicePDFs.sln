@@ -2,7 +2,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 VisualStudioVersion = 12.0.0.0
 MinimumVisualStudioVersion = 10.0.0.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InvoicePDFs", "src\InvoicePDFs\InvoicePDFs.csproj", "{AB30C1AF-B0C6-4A3A-B2A1-A2393B01AAFB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InvoicePDFs", "src\InvoicePDFs\InvoicePDFs.csproj", "{B2F64034-0FA3-4F0F-8060-836CFC2B526C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InvoicePDFs.Test", "src\InvoicePDFs.Test\InvoicePDFs.Test.csproj", "{19F1DEBC-DE5E-4517-8062-F000CD499087}"
 EndProject
@@ -12,10 +12,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{AB30C1AF-B0C6-4A3A-B2A1-A2393B01AAFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AB30C1AF-B0C6-4A3A-B2A1-A2393B01AAFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AB30C1AF-B0C6-4A3A-B2A1-A2393B01AAFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AB30C1AF-B0C6-4A3A-B2A1-A2393B01AAFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2F64034-0FA3-4F0F-8060-836CFC2B526C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2F64034-0FA3-4F0F-8060-836CFC2B526C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2F64034-0FA3-4F0F-8060-836CFC2B526C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2F64034-0FA3-4F0F-8060-836CFC2B526C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Release|Any CPU.ActiveCfg = Release|Any CPU

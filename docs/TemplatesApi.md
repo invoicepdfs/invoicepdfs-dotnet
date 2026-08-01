@@ -762,7 +762,7 @@ catch (ApiException e)
 
 <a id="previewtemplateapiv1templatestemplateidpreviewpost"></a>
 # **PreviewTemplateApiV1TemplatesTemplateIdPreviewPost**
-> Object PreviewTemplateApiV1TemplatesTemplateIdPreviewPost (string templateId, DocumentRenderRequest documentRenderRequest, string? idempotencyKey = null)
+> Object PreviewTemplateApiV1TemplatesTemplateIdPreviewPost (string templateId, AppSchemasV1DocumentRenderRequest appSchemasV1DocumentRenderRequest, string? idempotencyKey = null)
 
 Preview Template
 
@@ -787,13 +787,13 @@ namespace Example
 
             var apiInstance = new TemplatesApi(config);
             var templateId = "templateId_example";  // string | 
-            var documentRenderRequest = new DocumentRenderRequest(); // DocumentRenderRequest | 
+            var appSchemasV1DocumentRenderRequest = new AppSchemasV1DocumentRenderRequest(); // AppSchemasV1DocumentRenderRequest | 
             var idempotencyKey = "idempotencyKey_example";  // string? |  (optional) 
 
             try
             {
                 // Preview Template
-                Object result = apiInstance.PreviewTemplateApiV1TemplatesTemplateIdPreviewPost(templateId, documentRenderRequest, idempotencyKey);
+                Object result = apiInstance.PreviewTemplateApiV1TemplatesTemplateIdPreviewPost(templateId, appSchemasV1DocumentRenderRequest, idempotencyKey);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -814,7 +814,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Preview Template
-    ApiResponse<Object> response = apiInstance.PreviewTemplateApiV1TemplatesTemplateIdPreviewPostWithHttpInfo(templateId, documentRenderRequest, idempotencyKey);
+    ApiResponse<Object> response = apiInstance.PreviewTemplateApiV1TemplatesTemplateIdPreviewPostWithHttpInfo(templateId, appSchemasV1DocumentRenderRequest, idempotencyKey);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -832,7 +832,7 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **templateId** | **string** |  |  |
-| **documentRenderRequest** | [**DocumentRenderRequest**](DocumentRenderRequest.md) |  |  |
+| **appSchemasV1DocumentRenderRequest** | [**AppSchemasV1DocumentRenderRequest**](AppSchemasV1DocumentRenderRequest.md) |  |  |
 | **idempotencyKey** | **string?** |  | [optional]  |
 
 ### Return type

@@ -4,13 +4,13 @@ All URIs are relative to *http://localhost*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
-| [**CreateAttachmentApiV1InvoicesInvoiceIdAttachmentsPost**](InvoiceAttachmentsApi.md#createattachmentapiv1invoicesinvoiceidattachmentspost) | **POST** /api/v1/invoices/{invoice_id}/attachments | Create Attachment |
-| [**DeleteAttachmentApiV1InvoicesInvoiceIdAttachmentsAttachmentIdDelete**](InvoiceAttachmentsApi.md#deleteattachmentapiv1invoicesinvoiceidattachmentsattachmentiddelete) | **DELETE** /api/v1/invoices/{invoice_id}/attachments/{attachment_id} | Delete Attachment |
-| [**ListAttachmentsApiV1InvoicesInvoiceIdAttachmentsGet**](InvoiceAttachmentsApi.md#listattachmentsapiv1invoicesinvoiceidattachmentsget) | **GET** /api/v1/invoices/{invoice_id}/attachments | List Attachments |
+| [**CreateAttachmentApiV1DocumentsInvoiceIdAttachmentsPost**](InvoiceAttachmentsApi.md#createattachmentapiv1documentsinvoiceidattachmentspost) | **POST** /api/v1/documents/{invoice_id}/attachments | Create Attachment |
+| [**DeleteAttachmentApiV1DocumentsInvoiceIdAttachmentsAttachmentIdDelete**](InvoiceAttachmentsApi.md#deleteattachmentapiv1documentsinvoiceidattachmentsattachmentiddelete) | **DELETE** /api/v1/documents/{invoice_id}/attachments/{attachment_id} | Delete Attachment |
+| [**ListAttachmentsApiV1DocumentsInvoiceIdAttachmentsGet**](InvoiceAttachmentsApi.md#listattachmentsapiv1documentsinvoiceidattachmentsget) | **GET** /api/v1/documents/{invoice_id}/attachments | List Attachments |
 
-<a id="createattachmentapiv1invoicesinvoiceidattachmentspost"></a>
-# **CreateAttachmentApiV1InvoicesInvoiceIdAttachmentsPost**
-> InvoiceAttachmentResponse CreateAttachmentApiV1InvoicesInvoiceIdAttachmentsPost (string invoiceId, InvoiceAttachmentCreateRequest invoiceAttachmentCreateRequest)
+<a id="createattachmentapiv1documentsinvoiceidattachmentspost"></a>
+# **CreateAttachmentApiV1DocumentsInvoiceIdAttachmentsPost**
+> InvoiceAttachmentResponse CreateAttachmentApiV1DocumentsInvoiceIdAttachmentsPost (string invoiceId, InvoiceAttachmentCreateRequest invoiceAttachmentCreateRequest)
 
 Create Attachment
 
@@ -24,7 +24,7 @@ using InvoicePDFs.Model;
 
 namespace Example
 {
-    public class CreateAttachmentApiV1InvoicesInvoiceIdAttachmentsPostExample
+    public class CreateAttachmentApiV1DocumentsInvoiceIdAttachmentsPostExample
     {
         public static void Main()
         {
@@ -40,12 +40,12 @@ namespace Example
             try
             {
                 // Create Attachment
-                InvoiceAttachmentResponse result = apiInstance.CreateAttachmentApiV1InvoicesInvoiceIdAttachmentsPost(invoiceId, invoiceAttachmentCreateRequest);
+                InvoiceAttachmentResponse result = apiInstance.CreateAttachmentApiV1DocumentsInvoiceIdAttachmentsPost(invoiceId, invoiceAttachmentCreateRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling InvoiceAttachmentsApi.CreateAttachmentApiV1InvoicesInvoiceIdAttachmentsPost: " + e.Message);
+                Debug.Print("Exception when calling InvoiceAttachmentsApi.CreateAttachmentApiV1DocumentsInvoiceIdAttachmentsPost: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -54,21 +54,21 @@ namespace Example
 }
 ```
 
-#### Using the CreateAttachmentApiV1InvoicesInvoiceIdAttachmentsPostWithHttpInfo variant
+#### Using the CreateAttachmentApiV1DocumentsInvoiceIdAttachmentsPostWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // Create Attachment
-    ApiResponse<InvoiceAttachmentResponse> response = apiInstance.CreateAttachmentApiV1InvoicesInvoiceIdAttachmentsPostWithHttpInfo(invoiceId, invoiceAttachmentCreateRequest);
+    ApiResponse<InvoiceAttachmentResponse> response = apiInstance.CreateAttachmentApiV1DocumentsInvoiceIdAttachmentsPostWithHttpInfo(invoiceId, invoiceAttachmentCreateRequest);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling InvoiceAttachmentsApi.CreateAttachmentApiV1InvoicesInvoiceIdAttachmentsPostWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling InvoiceAttachmentsApi.CreateAttachmentApiV1DocumentsInvoiceIdAttachmentsPostWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -103,9 +103,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="deleteattachmentapiv1invoicesinvoiceidattachmentsattachmentiddelete"></a>
-# **DeleteAttachmentApiV1InvoicesInvoiceIdAttachmentsAttachmentIdDelete**
-> SimpleBoolResponse DeleteAttachmentApiV1InvoicesInvoiceIdAttachmentsAttachmentIdDelete (string invoiceId, string attachmentId)
+<a id="deleteattachmentapiv1documentsinvoiceidattachmentsattachmentiddelete"></a>
+# **DeleteAttachmentApiV1DocumentsInvoiceIdAttachmentsAttachmentIdDelete**
+> SimpleBoolResponse DeleteAttachmentApiV1DocumentsInvoiceIdAttachmentsAttachmentIdDelete (string invoiceId, string attachmentId)
 
 Delete Attachment
 
@@ -119,7 +119,7 @@ using InvoicePDFs.Model;
 
 namespace Example
 {
-    public class DeleteAttachmentApiV1InvoicesInvoiceIdAttachmentsAttachmentIdDeleteExample
+    public class DeleteAttachmentApiV1DocumentsInvoiceIdAttachmentsAttachmentIdDeleteExample
     {
         public static void Main()
         {
@@ -135,12 +135,12 @@ namespace Example
             try
             {
                 // Delete Attachment
-                SimpleBoolResponse result = apiInstance.DeleteAttachmentApiV1InvoicesInvoiceIdAttachmentsAttachmentIdDelete(invoiceId, attachmentId);
+                SimpleBoolResponse result = apiInstance.DeleteAttachmentApiV1DocumentsInvoiceIdAttachmentsAttachmentIdDelete(invoiceId, attachmentId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling InvoiceAttachmentsApi.DeleteAttachmentApiV1InvoicesInvoiceIdAttachmentsAttachmentIdDelete: " + e.Message);
+                Debug.Print("Exception when calling InvoiceAttachmentsApi.DeleteAttachmentApiV1DocumentsInvoiceIdAttachmentsAttachmentIdDelete: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -149,21 +149,21 @@ namespace Example
 }
 ```
 
-#### Using the DeleteAttachmentApiV1InvoicesInvoiceIdAttachmentsAttachmentIdDeleteWithHttpInfo variant
+#### Using the DeleteAttachmentApiV1DocumentsInvoiceIdAttachmentsAttachmentIdDeleteWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // Delete Attachment
-    ApiResponse<SimpleBoolResponse> response = apiInstance.DeleteAttachmentApiV1InvoicesInvoiceIdAttachmentsAttachmentIdDeleteWithHttpInfo(invoiceId, attachmentId);
+    ApiResponse<SimpleBoolResponse> response = apiInstance.DeleteAttachmentApiV1DocumentsInvoiceIdAttachmentsAttachmentIdDeleteWithHttpInfo(invoiceId, attachmentId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling InvoiceAttachmentsApi.DeleteAttachmentApiV1InvoicesInvoiceIdAttachmentsAttachmentIdDeleteWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling InvoiceAttachmentsApi.DeleteAttachmentApiV1DocumentsInvoiceIdAttachmentsAttachmentIdDeleteWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -198,9 +198,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="listattachmentsapiv1invoicesinvoiceidattachmentsget"></a>
-# **ListAttachmentsApiV1InvoicesInvoiceIdAttachmentsGet**
-> InvoiceAttachmentsListResponse ListAttachmentsApiV1InvoicesInvoiceIdAttachmentsGet (string invoiceId)
+<a id="listattachmentsapiv1documentsinvoiceidattachmentsget"></a>
+# **ListAttachmentsApiV1DocumentsInvoiceIdAttachmentsGet**
+> InvoiceAttachmentsListResponse ListAttachmentsApiV1DocumentsInvoiceIdAttachmentsGet (string invoiceId)
 
 List Attachments
 
@@ -214,7 +214,7 @@ using InvoicePDFs.Model;
 
 namespace Example
 {
-    public class ListAttachmentsApiV1InvoicesInvoiceIdAttachmentsGetExample
+    public class ListAttachmentsApiV1DocumentsInvoiceIdAttachmentsGetExample
     {
         public static void Main()
         {
@@ -229,12 +229,12 @@ namespace Example
             try
             {
                 // List Attachments
-                InvoiceAttachmentsListResponse result = apiInstance.ListAttachmentsApiV1InvoicesInvoiceIdAttachmentsGet(invoiceId);
+                InvoiceAttachmentsListResponse result = apiInstance.ListAttachmentsApiV1DocumentsInvoiceIdAttachmentsGet(invoiceId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling InvoiceAttachmentsApi.ListAttachmentsApiV1InvoicesInvoiceIdAttachmentsGet: " + e.Message);
+                Debug.Print("Exception when calling InvoiceAttachmentsApi.ListAttachmentsApiV1DocumentsInvoiceIdAttachmentsGet: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -243,21 +243,21 @@ namespace Example
 }
 ```
 
-#### Using the ListAttachmentsApiV1InvoicesInvoiceIdAttachmentsGetWithHttpInfo variant
+#### Using the ListAttachmentsApiV1DocumentsInvoiceIdAttachmentsGetWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // List Attachments
-    ApiResponse<InvoiceAttachmentsListResponse> response = apiInstance.ListAttachmentsApiV1InvoicesInvoiceIdAttachmentsGetWithHttpInfo(invoiceId);
+    ApiResponse<InvoiceAttachmentsListResponse> response = apiInstance.ListAttachmentsApiV1DocumentsInvoiceIdAttachmentsGetWithHttpInfo(invoiceId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling InvoiceAttachmentsApi.ListAttachmentsApiV1InvoicesInvoiceIdAttachmentsGetWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling InvoiceAttachmentsApi.ListAttachmentsApiV1DocumentsInvoiceIdAttachmentsGetWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
