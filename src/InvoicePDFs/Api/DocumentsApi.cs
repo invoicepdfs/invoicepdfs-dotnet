@@ -109,6 +109,26 @@ namespace InvoicePDFs.Api
         /// <returns>ApiResponse of SimpleBoolResponse</returns>
         ApiResponse<SimpleBoolResponse> DeleteDocumentApiV1DocumentsDocumentIdDeleteWithHttpInfo(string documentId, int operationIndex = 0);
         /// <summary>
+        /// Duplicate Document
+        /// </summary>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="documentId"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>DocumentResponse</returns>
+        DocumentResponse DuplicateDocumentApiV1DocumentsDocumentIdDuplicatePost(string documentId, int operationIndex = 0);
+
+        /// <summary>
+        /// Duplicate Document
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="documentId"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of DocumentResponse</returns>
+        ApiResponse<DocumentResponse> DuplicateDocumentApiV1DocumentsDocumentIdDuplicatePostWithHttpInfo(string documentId, int operationIndex = 0);
+        /// <summary>
         /// Finalize Document
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
@@ -519,6 +539,31 @@ namespace InvoicePDFs.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (SimpleBoolResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<SimpleBoolResponse>> DeleteDocumentApiV1DocumentsDocumentIdDeleteWithHttpInfoAsync(string documentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// Duplicate Document
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="documentId"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of DocumentResponse</returns>
+        System.Threading.Tasks.Task<DocumentResponse> DuplicateDocumentApiV1DocumentsDocumentIdDuplicatePostAsync(string documentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Duplicate Document
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="documentId"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (DocumentResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DocumentResponse>> DuplicateDocumentApiV1DocumentsDocumentIdDuplicatePostWithHttpInfoAsync(string documentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Finalize Document
         /// </summary>
@@ -1640,6 +1685,162 @@ namespace InvoicePDFs.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("DeleteDocumentApiV1DocumentsDocumentIdDelete", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Duplicate Document 
+        /// </summary>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="documentId"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>DocumentResponse</returns>
+        public DocumentResponse DuplicateDocumentApiV1DocumentsDocumentIdDuplicatePost(string documentId, int operationIndex = 0)
+        {
+            InvoicePDFs.Client.ApiResponse<DocumentResponse> localVarResponse = DuplicateDocumentApiV1DocumentsDocumentIdDuplicatePostWithHttpInfo(documentId);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Duplicate Document 
+        /// </summary>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="documentId"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of DocumentResponse</returns>
+        public InvoicePDFs.Client.ApiResponse<DocumentResponse> DuplicateDocumentApiV1DocumentsDocumentIdDuplicatePostWithHttpInfo(string documentId, int operationIndex = 0)
+        {
+            // verify the required parameter 'documentId' is set
+            if (documentId == null)
+            {
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'documentId' when calling DocumentsApi->DuplicateDocumentApiV1DocumentsDocumentIdDuplicatePost");
+            }
+
+            InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = InvoicePDFs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = InvoicePDFs.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("document_id", InvoicePDFs.Client.ClientUtils.ParameterToString(documentId)); // path parameter
+
+            localVarRequestOptions.Operation = "DocumentsApi.DuplicateDocumentApiV1DocumentsDocumentIdDuplicatePost";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (HTTPBearer) required
+            // bearer authentication required
+            if (!string.IsNullOrEmpty(this.Configuration.AccessToken) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Bearer " + this.Configuration.AccessToken);
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<DocumentResponse>("/api/v1/documents/{document_id}/duplicate", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("DuplicateDocumentApiV1DocumentsDocumentIdDuplicatePost", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Duplicate Document 
+        /// </summary>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="documentId"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of DocumentResponse</returns>
+        public async System.Threading.Tasks.Task<DocumentResponse> DuplicateDocumentApiV1DocumentsDocumentIdDuplicatePostAsync(string documentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            InvoicePDFs.Client.ApiResponse<DocumentResponse> localVarResponse = await DuplicateDocumentApiV1DocumentsDocumentIdDuplicatePostWithHttpInfoAsync(documentId, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Duplicate Document 
+        /// </summary>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="documentId"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (DocumentResponse)</returns>
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<DocumentResponse>> DuplicateDocumentApiV1DocumentsDocumentIdDuplicatePostWithHttpInfoAsync(string documentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'documentId' is set
+            if (documentId == null)
+            {
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'documentId' when calling DocumentsApi->DuplicateDocumentApiV1DocumentsDocumentIdDuplicatePost");
+            }
+
+
+            InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = InvoicePDFs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = InvoicePDFs.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("document_id", InvoicePDFs.Client.ClientUtils.ParameterToString(documentId)); // path parameter
+
+            localVarRequestOptions.Operation = "DocumentsApi.DuplicateDocumentApiV1DocumentsDocumentIdDuplicatePost";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (HTTPBearer) required
+            // bearer authentication required
+            if (!string.IsNullOrEmpty(this.Configuration.AccessToken) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Bearer " + this.Configuration.AccessToken);
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PostAsync<DocumentResponse>("/api/v1/documents/{document_id}/duplicate", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("DuplicateDocumentApiV1DocumentsDocumentIdDuplicatePost", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

@@ -8,6 +8,7 @@ All URIs are relative to *http://localhost*
 | [**CalculateDocumentApiV1DocumentsCalculatePost**](DocumentsApi.md#calculatedocumentapiv1documentscalculatepost) | **POST** /api/v1/documents/calculate | Calculate Document |
 | [**CreateDocumentApiV1DocumentsPost**](DocumentsApi.md#createdocumentapiv1documentspost) | **POST** /api/v1/documents | Create Document |
 | [**DeleteDocumentApiV1DocumentsDocumentIdDelete**](DocumentsApi.md#deletedocumentapiv1documentsdocumentiddelete) | **DELETE** /api/v1/documents/{document_id} | Delete Document |
+| [**DuplicateDocumentApiV1DocumentsDocumentIdDuplicatePost**](DocumentsApi.md#duplicatedocumentapiv1documentsdocumentidduplicatepost) | **POST** /api/v1/documents/{document_id}/duplicate | Duplicate Document |
 | [**FinalizeDocumentApiV1DocumentsDocumentIdFinalizePost**](DocumentsApi.md#finalizedocumentapiv1documentsdocumentidfinalizepost) | **POST** /api/v1/documents/{document_id}/finalize | Finalize Document |
 | [**GetDocumentApiV1DocumentsDocumentIdGet**](DocumentsApi.md#getdocumentapiv1documentsdocumentidget) | **GET** /api/v1/documents/{document_id} | Get Document |
 | [**ListDocumentDeliveriesApiV1DocumentsDocumentIdDeliveriesGet**](DocumentsApi.md#listdocumentdeliveriesapiv1documentsdocumentiddeliveriesget) | **GET** /api/v1/documents/{document_id}/deliveries | List Document Deliveries |
@@ -378,6 +379,99 @@ catch (ApiException e)
 ### Return type
 
 [**SimpleBoolResponse**](SimpleBoolResponse.md)
+
+### Authorization
+
+[HTTPBearer](../README.md#HTTPBearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Successful Response |  -  |
+| **422** | Validation Error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a id="duplicatedocumentapiv1documentsdocumentidduplicatepost"></a>
+# **DuplicateDocumentApiV1DocumentsDocumentIdDuplicatePost**
+> DocumentResponse DuplicateDocumentApiV1DocumentsDocumentIdDuplicatePost (string documentId)
+
+Duplicate Document
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using InvoicePDFs.Api;
+using InvoicePDFs.Client;
+using InvoicePDFs.Model;
+
+namespace Example
+{
+    public class DuplicateDocumentApiV1DocumentsDocumentIdDuplicatePostExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // Configure Bearer token for authorization: HTTPBearer
+            config.AccessToken = "YOUR_BEARER_TOKEN";
+
+            var apiInstance = new DocumentsApi(config);
+            var documentId = "documentId_example";  // string | 
+
+            try
+            {
+                // Duplicate Document
+                DocumentResponse result = apiInstance.DuplicateDocumentApiV1DocumentsDocumentIdDuplicatePost(documentId);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling DocumentsApi.DuplicateDocumentApiV1DocumentsDocumentIdDuplicatePost: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the DuplicateDocumentApiV1DocumentsDocumentIdDuplicatePostWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Duplicate Document
+    ApiResponse<DocumentResponse> response = apiInstance.DuplicateDocumentApiV1DocumentsDocumentIdDuplicatePostWithHttpInfo(documentId);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling DocumentsApi.DuplicateDocumentApiV1DocumentsDocumentIdDuplicatePostWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **documentId** | **string** |  |  |
+
+### Return type
+
+[**DocumentResponse**](DocumentResponse.md)
 
 ### Authorization
 
