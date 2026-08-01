@@ -1,0 +1,53 @@
+name: Publish to NuGet
+
+# On release (or manual run), regenerate the client at the version and push to
+# NuGet. Needs repo secret NUGET_API_KEY.
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "Version (e.g. 0.1.1)"
+        required: true
+        default: "0.1.1"
+
+permissions:
+  contents: read
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Resolve version
+        id: v
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "version=${{ inputs.version }}" >> "$GITHUB_OUTPUT"
+          else
+            echo "version=${GITHUB_REF_NAME#v}" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Fetch OpenAPI spec
+        run: |
+          curl -fsSL -H "Accept: application/vnd.github.raw+json" \
+            "https://api.github.com/repos/invoicepdfs/invoicepdfs-openapi/contents/openapi-3.0.json?ref=main" \
+            -o openapi.json
+      - name: Generate client
+        run: |
+          docker run --rm -v "${{ github.workspace }}:/local" \
+            openapitools/openapi-generator-cli:v7.7.0 generate \
+            -i /local/openapi.json -g csharp -o /local/dist-src \
+            --additional-properties=packageName=InvoicePDFs,packageVersion=${{ steps.v.outputs.version }},targetFramework=net8.0
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "8.0.x"
+      - name: Build & publish
+        working-directory: dist-src
+        env:
+          NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
+        run: |
+          sudo chown -R "$(id -u):$(id -g)" .  # docker generates as root
+          proj=$(find . -name "*.csproj" | grep -vi test | head -1)
+          dotnet pack "$proj" -c Release -o out
+          dotnet nuget push "out/*.nupkg" --api-key "$NUGET_API_KEY" --source https://api.nuget.org/v3/index.json --skip-duplicate
