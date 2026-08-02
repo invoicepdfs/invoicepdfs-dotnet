@@ -23,6 +23,7 @@ Name | Type | Description | Notes
 **CustomFields** | [**List&lt;InvoiceCustomFieldInput&gt;**](InvoiceCustomFieldInput.md) |  | [optional] 
 **Payment** | [**InvoicePaymentInput**](InvoicePaymentInput.md) |  | [optional] 
 **Branding** | [**InvoiceBrandingInput**](InvoiceBrandingInput.md) |  | [optional] 
+**BrandingProfileId** | **string** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

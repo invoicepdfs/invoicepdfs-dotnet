@@ -596,35 +596,35 @@ paths:
       summary: Patch Business Profile
       tags:
       - business-profiles
-  /api/v1/branding:
+  /api/v1/branding-profiles:
     get:
-      operationId: get_branding_api_v1_branding_get
+      operationId: list_profiles_api_v1_branding_profiles_get
       responses:
         "200":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/BrandingResponse'
+                $ref: '#/components/schemas/BrandingProfilesListResponse'
           description: Successful Response
       security:
       - HTTPBearer: []
-      summary: Get Branding
+      summary: List Profiles
       tags:
-      - branding
-    put:
-      operationId: update_branding_api_v1_branding_put
+      - branding-profiles
+    post:
+      operationId: create_profile_api_v1_branding_profiles_post
       requestBody:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/BrandingUpdateRequest'
+              $ref: '#/components/schemas/BrandingProfileCreateRequest'
         required: true
       responses:
         "200":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/BrandingResponse'
+                $ref: '#/components/schemas/BrandingProfileResponse'
           description: Successful Response
         "422":
           content:
@@ -634,12 +634,21 @@ paths:
           description: Validation Error
       security:
       - HTTPBearer: []
-      summary: Update Branding
+      summary: Create Profile
       tags:
-      - branding
-  /api/v1/branding/logo:
+      - branding-profiles
+  /api/v1/branding-profiles/{profile_id}:
     delete:
-      operationId: delete_logo_api_v1_branding_logo_delete
+      operationId: delete_profile_api_v1_branding_profiles__profile_id__delete
+      parameters:
+      - explode: false
+        in: path
+        name: profile_id
+        required: true
+        schema:
+          title: Profile Id
+          type: string
+        style: simple
       responses:
         "200":
           content:
@@ -647,25 +656,164 @@ paths:
               schema:
                 $ref: '#/components/schemas/SimpleBoolResponse'
           description: Successful Response
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+          description: Validation Error
       security:
       - HTTPBearer: []
-      summary: Delete Logo
+      summary: Delete Profile
       tags:
-      - branding
-    post:
-      operationId: upload_logo_api_v1_branding_logo_post
+      - branding-profiles
+    get:
+      operationId: get_profile_api_v1_branding_profiles__profile_id__get
+      parameters:
+      - explode: false
+        in: path
+        name: profile_id
+        required: true
+        schema:
+          title: Profile Id
+          type: string
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BrandingProfileResponse'
+          description: Successful Response
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+          description: Validation Error
+      security:
+      - HTTPBearer: []
+      summary: Get Profile
+      tags:
+      - branding-profiles
+    patch:
+      operationId: update_profile_api_v1_branding_profiles__profile_id__patch
+      parameters:
+      - explode: false
+        in: path
+        name: profile_id
+        required: true
+        schema:
+          title: Profile Id
+          type: string
+        style: simple
       requestBody:
         content:
-          multipart/form-data:
+          application/json:
             schema:
-              $ref: '#/components/schemas/Body_upload_logo_api_v1_branding_logo_post'
+              $ref: '#/components/schemas/BrandingProfilePatchRequest'
         required: true
       responses:
         "200":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/BrandingResponse'
+                $ref: '#/components/schemas/BrandingProfileResponse'
+          description: Successful Response
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+          description: Validation Error
+      security:
+      - HTTPBearer: []
+      summary: Update Profile
+      tags:
+      - branding-profiles
+  /api/v1/branding-profiles/{profile_id}/default:
+    post:
+      operationId: set_default_api_v1_branding_profiles__profile_id__default_post
+      parameters:
+      - explode: false
+        in: path
+        name: profile_id
+        required: true
+        schema:
+          title: Profile Id
+          type: string
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BrandingProfileResponse'
+          description: Successful Response
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+          description: Validation Error
+      security:
+      - HTTPBearer: []
+      summary: Set Default
+      tags:
+      - branding-profiles
+  /api/v1/branding-profiles/{profile_id}/logo:
+    delete:
+      operationId: delete_logo_api_v1_branding_profiles__profile_id__logo_delete
+      parameters:
+      - explode: false
+        in: path
+        name: profile_id
+        required: true
+        schema:
+          title: Profile Id
+          type: string
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SimpleBoolResponse'
+          description: Successful Response
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+          description: Validation Error
+      security:
+      - HTTPBearer: []
+      summary: Delete Logo
+      tags:
+      - branding-profiles
+    post:
+      operationId: upload_logo_api_v1_branding_profiles__profile_id__logo_post
+      parameters:
+      - explode: false
+        in: path
+        name: profile_id
+        required: true
+        schema:
+          title: Profile Id
+          type: string
+        style: simple
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Body_upload_logo_api_v1_branding_profiles__profile_id__logo_post'
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BrandingProfileResponse'
           description: Successful Response
         "422":
           content:
@@ -677,7 +825,7 @@ paths:
       - HTTPBearer: []
       summary: Upload Logo
       tags:
-      - branding
+      - branding-profiles
   /api/v1/customers:
     get:
       operationId: list_customers_api_v1_customers_get
@@ -5551,7 +5699,7 @@ components:
       - file
       title: Body_upload_file_api_v1_files_post
       type: object
-    Body_upload_logo_api_v1_branding_logo_post:
+    Body_upload_logo_api_v1_branding_profiles__profile_id__logo_post:
       properties:
         file:
           format: binary
@@ -5559,19 +5707,79 @@ components:
           type: string
       required:
       - file
-      title: Body_upload_logo_api_v1_branding_logo_post
+      title: Body_upload_logo_api_v1_branding_profiles__profile_id__logo_post
       type: object
-    BrandingOut:
+    BrandingProfileCreateRequest:
+      example:
+        accent_color: '#06B6D4'
+        hide_invoicepdfs_branding: false
+        name: Acme Corp
+        font_family: font_family
+        header_text: header_text
+        footer_text: Generated by InvoicePDFs
+        primary_color: '#111827'
+        is_default: false
+      properties:
+        name:
+          example: Acme Corp
+          title: Name
+          type: string
+        primary_color:
+          default: '#111827'
+          example: '#111827'
+          title: Primary Color
+          type: string
+        accent_color:
+          default: '#111827'
+          example: '#06B6D4'
+          title: Accent Color
+          type: string
+        font_family:
+          nullable: true
+          type: string
+        header_text:
+          nullable: true
+          type: string
+        footer_text:
+          default: Generated by InvoicePDFs
+          title: Footer Text
+          type: string
+        hide_invoicepdfs_branding:
+          default: false
+          title: Hide Invoicepdfs Branding
+          type: boolean
+        is_default:
+          default: false
+          title: Is Default
+          type: boolean
+      required:
+      - name
+      title: BrandingProfileCreateRequest
+      type: object
+    BrandingProfileOut:
       example:
         accent_color: accent_color
         hide_invoicepdfs_branding: true
         updated_at: updated_at
         logo_file_id: logo_file_id
+        name: name
         created_at: created_at
+        id: id
         font_family: font_family
+        header_text: header_text
         footer_text: footer_text
+        is_default: true
         primary_color: primary_color
       properties:
+        id:
+          title: Id
+          type: string
+        name:
+          title: Name
+          type: string
+        is_default:
+          title: Is Default
+          type: boolean
         logo_file_id:
           nullable: true
           type: string
@@ -5582,6 +5790,9 @@ components:
           title: Accent Color
           type: string
         font_family:
+          nullable: true
+          type: string
+        header_text:
           nullable: true
           type: string
         footer_text:
@@ -5601,36 +5812,27 @@ components:
       - created_at
       - footer_text
       - hide_invoicepdfs_branding
+      - id
+      - is_default
+      - name
       - primary_color
       - updated_at
-      title: BrandingOut
+      title: BrandingProfileOut
       type: object
-    BrandingResponse:
-      example:
-        data:
-          accent_color: accent_color
-          hide_invoicepdfs_branding: true
-          updated_at: updated_at
-          logo_file_id: logo_file_id
-          created_at: created_at
-          font_family: font_family
-          footer_text: footer_text
-          primary_color: primary_color
-      properties:
-        data:
-          $ref: '#/components/schemas/BrandingOut'
-      required:
-      - data
-      title: BrandingResponse
-      type: object
-    BrandingUpdateRequest:
+    BrandingProfilePatchRequest:
       example:
         accent_color: accent_color
         hide_invoicepdfs_branding: true
+        name: name
         font_family: font_family
+        header_text: header_text
         footer_text: footer_text
         primary_color: primary_color
+        is_default: true
       properties:
+        name:
+          nullable: true
+          type: string
         primary_color:
           nullable: true
           type: string
@@ -5640,13 +5842,78 @@ components:
         font_family:
           nullable: true
           type: string
+        header_text:
+          nullable: true
+          type: string
         footer_text:
           nullable: true
           type: string
         hide_invoicepdfs_branding:
           nullable: true
           type: boolean
-      title: BrandingUpdateRequest
+        is_default:
+          nullable: true
+          type: boolean
+      title: BrandingProfilePatchRequest
+      type: object
+    BrandingProfileResponse:
+      example:
+        data:
+          accent_color: accent_color
+          hide_invoicepdfs_branding: true
+          updated_at: updated_at
+          logo_file_id: logo_file_id
+          name: name
+          created_at: created_at
+          id: id
+          font_family: font_family
+          header_text: header_text
+          footer_text: footer_text
+          is_default: true
+          primary_color: primary_color
+      properties:
+        data:
+          $ref: '#/components/schemas/BrandingProfileOut'
+      required:
+      - data
+      title: BrandingProfileResponse
+      type: object
+    BrandingProfilesListResponse:
+      example:
+        data:
+        - accent_color: accent_color
+          hide_invoicepdfs_branding: true
+          updated_at: updated_at
+          logo_file_id: logo_file_id
+          name: name
+          created_at: created_at
+          id: id
+          font_family: font_family
+          header_text: header_text
+          footer_text: footer_text
+          is_default: true
+          primary_color: primary_color
+        - accent_color: accent_color
+          hide_invoicepdfs_branding: true
+          updated_at: updated_at
+          logo_file_id: logo_file_id
+          name: name
+          created_at: created_at
+          id: id
+          font_family: font_family
+          header_text: header_text
+          footer_text: footer_text
+          is_default: true
+          primary_color: primary_color
+      properties:
+        data:
+          items:
+            $ref: '#/components/schemas/BrandingProfileOut'
+          title: Data
+          type: array
+      required:
+      - data
+      title: BrandingProfilesListResponse
       type: object
     BusinessProfileCreate:
       example:
@@ -6763,10 +7030,12 @@ components:
           value: PO-2026-001
         - label: PO Number
           value: PO-2026-001
+        branding_profile_id: branding_profile_id
         branding:
           accent_color: '#111827'
           logo_file_id: logo_file_id
           font_family: font_family
+          header_text: header_text
           footer_text: Generated by InvoicePDFs
           primary_color: '#111827'
         due_date: 2000-01-23
@@ -6934,6 +7203,9 @@ components:
           $ref: '#/components/schemas/InvoicePaymentInput'
         branding:
           $ref: '#/components/schemas/InvoiceBrandingInput'
+        branding_profile_id:
+          nullable: true
+          type: string
       required:
       - business_profile_id
       - currency
@@ -7462,6 +7734,7 @@ components:
           accent_color: '#111827'
           logo_file_id: logo_file_id
           font_family: font_family
+          header_text: header_text
           footer_text: Generated by InvoicePDFs
           primary_color: '#111827'
         due_date: 2000-01-23
@@ -8306,6 +8579,7 @@ components:
         accent_color: '#111827'
         logo_file_id: logo_file_id
         font_family: font_family
+        header_text: header_text
         footer_text: Generated by InvoicePDFs
         primary_color: '#111827'
       properties:
@@ -8321,6 +8595,9 @@ components:
           title: Accent Color
           type: string
         font_family:
+          nullable: true
+          type: string
+        header_text:
           nullable: true
           type: string
         footer_text:
@@ -8387,6 +8664,7 @@ components:
           accent_color: '#111827'
           logo_file_id: logo_file_id
           font_family: font_family
+          header_text: header_text
           footer_text: Generated by InvoicePDFs
           primary_color: '#111827'
         due_date: 2000-01-23
@@ -9587,6 +9865,7 @@ components:
             accent_color: '#111827'
             logo_file_id: logo_file_id
             font_family: font_family
+            header_text: header_text
             footer_text: Generated by InvoicePDFs
             primary_color: '#111827'
           due_date: 2000-01-23
@@ -9823,6 +10102,7 @@ components:
             accent_color: '#111827'
             logo_file_id: logo_file_id
             font_family: font_family
+            header_text: header_text
             footer_text: Generated by InvoicePDFs
             primary_color: '#111827'
           due_date: 2000-01-23

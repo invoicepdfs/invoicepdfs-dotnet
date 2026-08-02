@@ -113,7 +113,8 @@ namespace InvoicePDFs.Model
         /// <param name="customFields">customFields.</param>
         /// <param name="payment">payment.</param>
         /// <param name="branding">branding.</param>
-        public DocumentCreateRequest(DocumentTypeEnum? documentType = DocumentTypeEnum.Invoice, string number = default(string), DateOnly issueDate = default(DateOnly), DateOnly dueDate = default(DateOnly), string currency = default(string), string locale = default(string), string businessProfileId = default(string), string customerId = default(string), string sourceDocumentId = default(string), string reason = default(string), PostalAddress shipTo = default(PostalAddress), List<StandardLineItemInput> lineItems = default(List<StandardLineItemInput>), List<LineItemDiscountInput> discounts = default(List<LineItemDiscountInput>), InvoiceShippingInput shipping = default(InvoiceShippingInput), List<InvoiceNoteInput> notes = default(List<InvoiceNoteInput>), List<InvoiceTermInput> terms = default(List<InvoiceTermInput>), List<InvoiceCustomFieldInput> customFields = default(List<InvoiceCustomFieldInput>), InvoicePaymentInput payment = default(InvoicePaymentInput), InvoiceBrandingInput branding = default(InvoiceBrandingInput))
+        /// <param name="brandingProfileId">brandingProfileId.</param>
+        public DocumentCreateRequest(DocumentTypeEnum? documentType = DocumentTypeEnum.Invoice, string number = default(string), DateOnly issueDate = default(DateOnly), DateOnly dueDate = default(DateOnly), string currency = default(string), string locale = default(string), string businessProfileId = default(string), string customerId = default(string), string sourceDocumentId = default(string), string reason = default(string), PostalAddress shipTo = default(PostalAddress), List<StandardLineItemInput> lineItems = default(List<StandardLineItemInput>), List<LineItemDiscountInput> discounts = default(List<LineItemDiscountInput>), InvoiceShippingInput shipping = default(InvoiceShippingInput), List<InvoiceNoteInput> notes = default(List<InvoiceNoteInput>), List<InvoiceTermInput> terms = default(List<InvoiceTermInput>), List<InvoiceCustomFieldInput> customFields = default(List<InvoiceCustomFieldInput>), InvoicePaymentInput payment = default(InvoicePaymentInput), InvoiceBrandingInput branding = default(InvoiceBrandingInput), string brandingProfileId = default(string))
         {
             // to ensure "number" is required (not null)
             if (number == null)
@@ -164,6 +165,7 @@ namespace InvoicePDFs.Model
             this.CustomFields = customFields;
             this.Payment = payment;
             this.Branding = branding;
+            this.BrandingProfileId = brandingProfileId;
         }
 
         /// <summary>
@@ -280,6 +282,12 @@ namespace InvoicePDFs.Model
         public InvoiceBrandingInput Branding { get; set; }
 
         /// <summary>
+        /// Gets or Sets BrandingProfileId
+        /// </summary>
+        [DataMember(Name = "branding_profile_id", EmitDefaultValue = true)]
+        public string BrandingProfileId { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -306,6 +314,7 @@ namespace InvoicePDFs.Model
             sb.Append("  CustomFields: ").Append(CustomFields).Append("\n");
             sb.Append("  Payment: ").Append(Payment).Append("\n");
             sb.Append("  Branding: ").Append(Branding).Append("\n");
+            sb.Append("  BrandingProfileId: ").Append(BrandingProfileId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
