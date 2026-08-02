@@ -217,13 +217,7 @@ docs/WorkspaceResponse.md
 docs/WorkspacesApi.md
 docs/WorkspacesListResponse.md
 git_push.sh
-src/InvoicePDFs.Test/Api/BrandingProfilesApiTests.cs
 src/InvoicePDFs.Test/InvoicePDFs.Test.csproj
-src/InvoicePDFs.Test/Model/BrandingProfileCreateRequestTests.cs
-src/InvoicePDFs.Test/Model/BrandingProfileOutTests.cs
-src/InvoicePDFs.Test/Model/BrandingProfilePatchRequestTests.cs
-src/InvoicePDFs.Test/Model/BrandingProfileResponseTests.cs
-src/InvoicePDFs.Test/Model/BrandingProfilesListResponseTests.cs
 src/InvoicePDFs/Api/ApiKeysApi.cs
 src/InvoicePDFs/Api/AuditLogApi.cs
 src/InvoicePDFs/Api/AuthApi.cs
