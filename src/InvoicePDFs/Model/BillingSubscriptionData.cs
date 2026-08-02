@@ -43,7 +43,9 @@ namespace InvoicePDFs.Model
         /// <param name="status">status.</param>
         /// <param name="planId">planId (required).</param>
         /// <param name="planName">planName (required).</param>
-        public BillingSubscriptionData(string subscriptionId = default(string), string status = default(string), string planId = default(string), string planName = default(string))
+        /// <param name="stripeConfigured">stripeConfigured (default to false).</param>
+        /// <param name="hasBillingAccount">hasBillingAccount (default to false).</param>
+        public BillingSubscriptionData(string subscriptionId = default(string), string status = default(string), string planId = default(string), string planName = default(string), bool stripeConfigured = false, bool hasBillingAccount = false)
         {
             // to ensure "planId" is required (not null)
             if (planId == null)
@@ -59,6 +61,8 @@ namespace InvoicePDFs.Model
             this.PlanName = planName;
             this.SubscriptionId = subscriptionId;
             this.Status = status;
+            this.StripeConfigured = stripeConfigured;
+            this.HasBillingAccount = hasBillingAccount;
         }
 
         /// <summary>
@@ -86,6 +90,18 @@ namespace InvoicePDFs.Model
         public string PlanName { get; set; }
 
         /// <summary>
+        /// Gets or Sets StripeConfigured
+        /// </summary>
+        [DataMember(Name = "stripe_configured", EmitDefaultValue = true)]
+        public bool StripeConfigured { get; set; }
+
+        /// <summary>
+        /// Gets or Sets HasBillingAccount
+        /// </summary>
+        [DataMember(Name = "has_billing_account", EmitDefaultValue = true)]
+        public bool HasBillingAccount { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -97,6 +113,8 @@ namespace InvoicePDFs.Model
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  PlanId: ").Append(PlanId).Append("\n");
             sb.Append("  PlanName: ").Append(PlanName).Append("\n");
+            sb.Append("  StripeConfigured: ").Append(StripeConfigured).Append("\n");
+            sb.Append("  HasBillingAccount: ").Append(HasBillingAccount).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

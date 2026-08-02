@@ -7,6 +7,7 @@ All URIs are relative to *http://localhost*
 | [**CreateCheckoutApiV1BillingCheckoutSessionPost**](BillingApi.md#createcheckoutapiv1billingcheckoutsessionpost) | **POST** /api/v1/billing/checkout-session | Create Checkout |
 | [**CreatePortalApiV1BillingPortalSessionPost**](BillingApi.md#createportalapiv1billingportalsessionpost) | **POST** /api/v1/billing/portal-session | Create Portal |
 | [**GetSubscriptionApiV1BillingSubscriptionGet**](BillingApi.md#getsubscriptionapiv1billingsubscriptionget) | **GET** /api/v1/billing/subscription | Get Subscription |
+| [**ListPlansApiV1BillingPlansGet**](BillingApi.md#listplansapiv1billingplansget) | **GET** /api/v1/billing/plans | List Plans |
 
 <a id="createcheckoutapiv1billingcheckoutsessionpost"></a>
 # **CreateCheckoutApiV1BillingCheckoutSessionPost**
@@ -263,6 +264,95 @@ This endpoint does not need any parameter.
 ### Return type
 
 [**BillingSubscriptionResponse**](BillingSubscriptionResponse.md)
+
+### Authorization
+
+[HTTPBearer](../README.md#HTTPBearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Successful Response |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a id="listplansapiv1billingplansget"></a>
+# **ListPlansApiV1BillingPlansGet**
+> BillingPlansListResponse ListPlansApiV1BillingPlansGet ()
+
+List Plans
+
+Purchasable plans — the ones wired to a Stripe price.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using InvoicePDFs.Api;
+using InvoicePDFs.Client;
+using InvoicePDFs.Model;
+
+namespace Example
+{
+    public class ListPlansApiV1BillingPlansGetExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // Configure Bearer token for authorization: HTTPBearer
+            config.AccessToken = "YOUR_BEARER_TOKEN";
+
+            var apiInstance = new BillingApi(config);
+
+            try
+            {
+                // List Plans
+                BillingPlansListResponse result = apiInstance.ListPlansApiV1BillingPlansGet();
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling BillingApi.ListPlansApiV1BillingPlansGet: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the ListPlansApiV1BillingPlansGetWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // List Plans
+    ApiResponse<BillingPlansListResponse> response = apiInstance.ListPlansApiV1BillingPlansGetWithHttpInfo();
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling BillingApi.ListPlansApiV1BillingPlansGetWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+### Return type
+
+[**BillingPlansListResponse**](BillingPlansListResponse.md)
 
 ### Authorization
 
