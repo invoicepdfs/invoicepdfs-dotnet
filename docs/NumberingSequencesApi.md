@@ -4,19 +4,19 @@ All URIs are relative to *http://localhost*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
-| [**ConsumeNextApiV1NumberingSequencesSequenceIdNextPost**](NumberingSequencesApi.md#consumenextapiv1numberingsequencessequenceidnextpost) | **POST** /api/v1/numbering-sequences/{sequence_id}/next | Consume Next |
-| [**CreateSequenceApiV1NumberingSequencesPost**](NumberingSequencesApi.md#createsequenceapiv1numberingsequencespost) | **POST** /api/v1/numbering-sequences | Create Sequence |
-| [**DeleteSequenceApiV1NumberingSequencesSequenceIdDelete**](NumberingSequencesApi.md#deletesequenceapiv1numberingsequencessequenceiddelete) | **DELETE** /api/v1/numbering-sequences/{sequence_id} | Delete Sequence |
-| [**GetSequenceApiV1NumberingSequencesSequenceIdGet**](NumberingSequencesApi.md#getsequenceapiv1numberingsequencessequenceidget) | **GET** /api/v1/numbering-sequences/{sequence_id} | Get Sequence |
-| [**ListSequencesApiV1NumberingSequencesGet**](NumberingSequencesApi.md#listsequencesapiv1numberingsequencesget) | **GET** /api/v1/numbering-sequences | List Sequences |
-| [**PreviewSequenceApiV1NumberingSequencesSequenceIdPreviewPost**](NumberingSequencesApi.md#previewsequenceapiv1numberingsequencessequenceidpreviewpost) | **POST** /api/v1/numbering-sequences/{sequence_id}/preview | Preview Sequence |
-| [**UpdateSequenceApiV1NumberingSequencesSequenceIdPatch**](NumberingSequencesApi.md#updatesequenceapiv1numberingsequencessequenceidpatch) | **PATCH** /api/v1/numbering-sequences/{sequence_id} | Update Sequence |
+| [**ConsumeSequenceNumber**](NumberingSequencesApi.md#consumesequencenumber) | **POST** /api/v1/numbering-sequences/{sequence_id}/next | Consume Sequence Number |
+| [**CreateSequence**](NumberingSequencesApi.md#createsequence) | **POST** /api/v1/numbering-sequences | Create Sequence |
+| [**DeleteSequence**](NumberingSequencesApi.md#deletesequence) | **DELETE** /api/v1/numbering-sequences/{sequence_id} | Delete Sequence |
+| [**GetSequence**](NumberingSequencesApi.md#getsequence) | **GET** /api/v1/numbering-sequences/{sequence_id} | Get Sequence |
+| [**ListSequences**](NumberingSequencesApi.md#listsequences) | **GET** /api/v1/numbering-sequences | List Sequences |
+| [**PreviewSequence**](NumberingSequencesApi.md#previewsequence) | **POST** /api/v1/numbering-sequences/{sequence_id}/preview | Preview Sequence |
+| [**UpdateSequence**](NumberingSequencesApi.md#updatesequence) | **PATCH** /api/v1/numbering-sequences/{sequence_id} | Update Sequence |
 
-<a id="consumenextapiv1numberingsequencessequenceidnextpost"></a>
-# **ConsumeNextApiV1NumberingSequencesSequenceIdNextPost**
-> NumberingSequenceResponse ConsumeNextApiV1NumberingSequencesSequenceIdNextPost (string sequenceId)
+<a id="consumesequencenumber"></a>
+# **ConsumeSequenceNumber**
+> NumberingSequenceResponse ConsumeSequenceNumber (string sequenceId)
 
-Consume Next
+Consume Sequence Number
 
 Consume and return the next number, incrementing the counter.
 
@@ -30,7 +30,7 @@ using InvoicePDFs.Model;
 
 namespace Example
 {
-    public class ConsumeNextApiV1NumberingSequencesSequenceIdNextPostExample
+    public class ConsumeSequenceNumberExample
     {
         public static void Main()
         {
@@ -44,13 +44,13 @@ namespace Example
 
             try
             {
-                // Consume Next
-                NumberingSequenceResponse result = apiInstance.ConsumeNextApiV1NumberingSequencesSequenceIdNextPost(sequenceId);
+                // Consume Sequence Number
+                NumberingSequenceResponse result = apiInstance.ConsumeSequenceNumber(sequenceId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling NumberingSequencesApi.ConsumeNextApiV1NumberingSequencesSequenceIdNextPost: " + e.Message);
+                Debug.Print("Exception when calling NumberingSequencesApi.ConsumeSequenceNumber: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -59,21 +59,21 @@ namespace Example
 }
 ```
 
-#### Using the ConsumeNextApiV1NumberingSequencesSequenceIdNextPostWithHttpInfo variant
+#### Using the ConsumeSequenceNumberWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
-    // Consume Next
-    ApiResponse<NumberingSequenceResponse> response = apiInstance.ConsumeNextApiV1NumberingSequencesSequenceIdNextPostWithHttpInfo(sequenceId);
+    // Consume Sequence Number
+    ApiResponse<NumberingSequenceResponse> response = apiInstance.ConsumeSequenceNumberWithHttpInfo(sequenceId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling NumberingSequencesApi.ConsumeNextApiV1NumberingSequencesSequenceIdNextPostWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling NumberingSequencesApi.ConsumeSequenceNumberWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -107,9 +107,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="createsequenceapiv1numberingsequencespost"></a>
-# **CreateSequenceApiV1NumberingSequencesPost**
-> NumberingSequenceResponse CreateSequenceApiV1NumberingSequencesPost (NumberingSequenceCreateRequest numberingSequenceCreateRequest)
+<a id="createsequence"></a>
+# **CreateSequence**
+> NumberingSequenceResponse CreateSequence (NumberingSequenceCreateRequest numberingSequenceCreateRequest)
 
 Create Sequence
 
@@ -123,7 +123,7 @@ using InvoicePDFs.Model;
 
 namespace Example
 {
-    public class CreateSequenceApiV1NumberingSequencesPostExample
+    public class CreateSequenceExample
     {
         public static void Main()
         {
@@ -138,12 +138,12 @@ namespace Example
             try
             {
                 // Create Sequence
-                NumberingSequenceResponse result = apiInstance.CreateSequenceApiV1NumberingSequencesPost(numberingSequenceCreateRequest);
+                NumberingSequenceResponse result = apiInstance.CreateSequence(numberingSequenceCreateRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling NumberingSequencesApi.CreateSequenceApiV1NumberingSequencesPost: " + e.Message);
+                Debug.Print("Exception when calling NumberingSequencesApi.CreateSequence: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -152,21 +152,21 @@ namespace Example
 }
 ```
 
-#### Using the CreateSequenceApiV1NumberingSequencesPostWithHttpInfo variant
+#### Using the CreateSequenceWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // Create Sequence
-    ApiResponse<NumberingSequenceResponse> response = apiInstance.CreateSequenceApiV1NumberingSequencesPostWithHttpInfo(numberingSequenceCreateRequest);
+    ApiResponse<NumberingSequenceResponse> response = apiInstance.CreateSequenceWithHttpInfo(numberingSequenceCreateRequest);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling NumberingSequencesApi.CreateSequenceApiV1NumberingSequencesPostWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling NumberingSequencesApi.CreateSequenceWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -200,9 +200,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="deletesequenceapiv1numberingsequencessequenceiddelete"></a>
-# **DeleteSequenceApiV1NumberingSequencesSequenceIdDelete**
-> SimpleBoolResponse DeleteSequenceApiV1NumberingSequencesSequenceIdDelete (string sequenceId)
+<a id="deletesequence"></a>
+# **DeleteSequence**
+> SimpleBoolResponse DeleteSequence (string sequenceId)
 
 Delete Sequence
 
@@ -216,7 +216,7 @@ using InvoicePDFs.Model;
 
 namespace Example
 {
-    public class DeleteSequenceApiV1NumberingSequencesSequenceIdDeleteExample
+    public class DeleteSequenceExample
     {
         public static void Main()
         {
@@ -231,12 +231,12 @@ namespace Example
             try
             {
                 // Delete Sequence
-                SimpleBoolResponse result = apiInstance.DeleteSequenceApiV1NumberingSequencesSequenceIdDelete(sequenceId);
+                SimpleBoolResponse result = apiInstance.DeleteSequence(sequenceId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling NumberingSequencesApi.DeleteSequenceApiV1NumberingSequencesSequenceIdDelete: " + e.Message);
+                Debug.Print("Exception when calling NumberingSequencesApi.DeleteSequence: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -245,21 +245,21 @@ namespace Example
 }
 ```
 
-#### Using the DeleteSequenceApiV1NumberingSequencesSequenceIdDeleteWithHttpInfo variant
+#### Using the DeleteSequenceWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // Delete Sequence
-    ApiResponse<SimpleBoolResponse> response = apiInstance.DeleteSequenceApiV1NumberingSequencesSequenceIdDeleteWithHttpInfo(sequenceId);
+    ApiResponse<SimpleBoolResponse> response = apiInstance.DeleteSequenceWithHttpInfo(sequenceId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling NumberingSequencesApi.DeleteSequenceApiV1NumberingSequencesSequenceIdDeleteWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling NumberingSequencesApi.DeleteSequenceWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -293,9 +293,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="getsequenceapiv1numberingsequencessequenceidget"></a>
-# **GetSequenceApiV1NumberingSequencesSequenceIdGet**
-> NumberingSequenceResponse GetSequenceApiV1NumberingSequencesSequenceIdGet (string sequenceId)
+<a id="getsequence"></a>
+# **GetSequence**
+> NumberingSequenceResponse GetSequence (string sequenceId)
 
 Get Sequence
 
@@ -309,7 +309,7 @@ using InvoicePDFs.Model;
 
 namespace Example
 {
-    public class GetSequenceApiV1NumberingSequencesSequenceIdGetExample
+    public class GetSequenceExample
     {
         public static void Main()
         {
@@ -324,12 +324,12 @@ namespace Example
             try
             {
                 // Get Sequence
-                NumberingSequenceResponse result = apiInstance.GetSequenceApiV1NumberingSequencesSequenceIdGet(sequenceId);
+                NumberingSequenceResponse result = apiInstance.GetSequence(sequenceId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling NumberingSequencesApi.GetSequenceApiV1NumberingSequencesSequenceIdGet: " + e.Message);
+                Debug.Print("Exception when calling NumberingSequencesApi.GetSequence: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -338,21 +338,21 @@ namespace Example
 }
 ```
 
-#### Using the GetSequenceApiV1NumberingSequencesSequenceIdGetWithHttpInfo variant
+#### Using the GetSequenceWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // Get Sequence
-    ApiResponse<NumberingSequenceResponse> response = apiInstance.GetSequenceApiV1NumberingSequencesSequenceIdGetWithHttpInfo(sequenceId);
+    ApiResponse<NumberingSequenceResponse> response = apiInstance.GetSequenceWithHttpInfo(sequenceId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling NumberingSequencesApi.GetSequenceApiV1NumberingSequencesSequenceIdGetWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling NumberingSequencesApi.GetSequenceWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -386,9 +386,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="listsequencesapiv1numberingsequencesget"></a>
-# **ListSequencesApiV1NumberingSequencesGet**
-> NumberingSequencesListResponse ListSequencesApiV1NumberingSequencesGet (int? limit = null, string? cursor = null)
+<a id="listsequences"></a>
+# **ListSequences**
+> NumberingSequencesListResponse ListSequences (int? limit = null, string? cursor = null)
 
 List Sequences
 
@@ -402,7 +402,7 @@ using InvoicePDFs.Model;
 
 namespace Example
 {
-    public class ListSequencesApiV1NumberingSequencesGetExample
+    public class ListSequencesExample
     {
         public static void Main()
         {
@@ -418,12 +418,12 @@ namespace Example
             try
             {
                 // List Sequences
-                NumberingSequencesListResponse result = apiInstance.ListSequencesApiV1NumberingSequencesGet(limit, cursor);
+                NumberingSequencesListResponse result = apiInstance.ListSequences(limit, cursor);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling NumberingSequencesApi.ListSequencesApiV1NumberingSequencesGet: " + e.Message);
+                Debug.Print("Exception when calling NumberingSequencesApi.ListSequences: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -432,21 +432,21 @@ namespace Example
 }
 ```
 
-#### Using the ListSequencesApiV1NumberingSequencesGetWithHttpInfo variant
+#### Using the ListSequencesWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // List Sequences
-    ApiResponse<NumberingSequencesListResponse> response = apiInstance.ListSequencesApiV1NumberingSequencesGetWithHttpInfo(limit, cursor);
+    ApiResponse<NumberingSequencesListResponse> response = apiInstance.ListSequencesWithHttpInfo(limit, cursor);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling NumberingSequencesApi.ListSequencesApiV1NumberingSequencesGetWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling NumberingSequencesApi.ListSequencesWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -481,9 +481,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="previewsequenceapiv1numberingsequencessequenceidpreviewpost"></a>
-# **PreviewSequenceApiV1NumberingSequencesSequenceIdPreviewPost**
-> NumberingSequencePreviewResponse PreviewSequenceApiV1NumberingSequencesSequenceIdPreviewPost (string sequenceId)
+<a id="previewsequence"></a>
+# **PreviewSequence**
+> NumberingSequencePreviewResponse PreviewSequence (string sequenceId)
 
 Preview Sequence
 
@@ -497,7 +497,7 @@ using InvoicePDFs.Model;
 
 namespace Example
 {
-    public class PreviewSequenceApiV1NumberingSequencesSequenceIdPreviewPostExample
+    public class PreviewSequenceExample
     {
         public static void Main()
         {
@@ -512,12 +512,12 @@ namespace Example
             try
             {
                 // Preview Sequence
-                NumberingSequencePreviewResponse result = apiInstance.PreviewSequenceApiV1NumberingSequencesSequenceIdPreviewPost(sequenceId);
+                NumberingSequencePreviewResponse result = apiInstance.PreviewSequence(sequenceId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling NumberingSequencesApi.PreviewSequenceApiV1NumberingSequencesSequenceIdPreviewPost: " + e.Message);
+                Debug.Print("Exception when calling NumberingSequencesApi.PreviewSequence: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -526,21 +526,21 @@ namespace Example
 }
 ```
 
-#### Using the PreviewSequenceApiV1NumberingSequencesSequenceIdPreviewPostWithHttpInfo variant
+#### Using the PreviewSequenceWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // Preview Sequence
-    ApiResponse<NumberingSequencePreviewResponse> response = apiInstance.PreviewSequenceApiV1NumberingSequencesSequenceIdPreviewPostWithHttpInfo(sequenceId);
+    ApiResponse<NumberingSequencePreviewResponse> response = apiInstance.PreviewSequenceWithHttpInfo(sequenceId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling NumberingSequencesApi.PreviewSequenceApiV1NumberingSequencesSequenceIdPreviewPostWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling NumberingSequencesApi.PreviewSequenceWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -574,9 +574,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="updatesequenceapiv1numberingsequencessequenceidpatch"></a>
-# **UpdateSequenceApiV1NumberingSequencesSequenceIdPatch**
-> NumberingSequenceResponse UpdateSequenceApiV1NumberingSequencesSequenceIdPatch (string sequenceId, NumberingSequencePatchRequest numberingSequencePatchRequest)
+<a id="updatesequence"></a>
+# **UpdateSequence**
+> NumberingSequenceResponse UpdateSequence (string sequenceId, NumberingSequencePatchRequest numberingSequencePatchRequest)
 
 Update Sequence
 
@@ -590,7 +590,7 @@ using InvoicePDFs.Model;
 
 namespace Example
 {
-    public class UpdateSequenceApiV1NumberingSequencesSequenceIdPatchExample
+    public class UpdateSequenceExample
     {
         public static void Main()
         {
@@ -606,12 +606,12 @@ namespace Example
             try
             {
                 // Update Sequence
-                NumberingSequenceResponse result = apiInstance.UpdateSequenceApiV1NumberingSequencesSequenceIdPatch(sequenceId, numberingSequencePatchRequest);
+                NumberingSequenceResponse result = apiInstance.UpdateSequence(sequenceId, numberingSequencePatchRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling NumberingSequencesApi.UpdateSequenceApiV1NumberingSequencesSequenceIdPatch: " + e.Message);
+                Debug.Print("Exception when calling NumberingSequencesApi.UpdateSequence: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -620,21 +620,21 @@ namespace Example
 }
 ```
 
-#### Using the UpdateSequenceApiV1NumberingSequencesSequenceIdPatchWithHttpInfo variant
+#### Using the UpdateSequenceWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // Update Sequence
-    ApiResponse<NumberingSequenceResponse> response = apiInstance.UpdateSequenceApiV1NumberingSequencesSequenceIdPatchWithHttpInfo(sequenceId, numberingSequencePatchRequest);
+    ApiResponse<NumberingSequenceResponse> response = apiInstance.UpdateSequenceWithHttpInfo(sequenceId, numberingSequencePatchRequest);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling NumberingSequencesApi.UpdateSequenceApiV1NumberingSequencesSequenceIdPatchWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling NumberingSequencesApi.UpdateSequenceWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }

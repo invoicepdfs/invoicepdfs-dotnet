@@ -33,7 +33,7 @@ namespace InvoicePDFs.Api
         /// <param name="renderId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>System.IO.Stream</returns>
-        System.IO.Stream DownloadRenderApiV1RendersRenderIdDownloadGet(string renderId, int operationIndex = 0);
+        System.IO.Stream DownloadRender(string renderId, int operationIndex = 0);
 
         /// <summary>
         /// Download Render
@@ -45,7 +45,7 @@ namespace InvoicePDFs.Api
         /// <param name="renderId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of System.IO.Stream</returns>
-        ApiResponse<System.IO.Stream> DownloadRenderApiV1RendersRenderIdDownloadGetWithHttpInfo(string renderId, int operationIndex = 0);
+        ApiResponse<System.IO.Stream> DownloadRenderWithHttpInfo(string renderId, int operationIndex = 0);
         /// <summary>
         /// Get Render
         /// </summary>
@@ -53,7 +53,7 @@ namespace InvoicePDFs.Api
         /// <param name="renderId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>Dictionary&lt;string, Object&gt;</returns>
-        Dictionary<string, Object> GetRenderApiV1RendersRenderIdGet(string renderId, int operationIndex = 0);
+        Dictionary<string, Object> GetRender(string renderId, int operationIndex = 0);
 
         /// <summary>
         /// Get Render
@@ -65,7 +65,7 @@ namespace InvoicePDFs.Api
         /// <param name="renderId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Dictionary&lt;string, Object&gt;</returns>
-        ApiResponse<Dictionary<string, Object>> GetRenderApiV1RendersRenderIdGetWithHttpInfo(string renderId, int operationIndex = 0);
+        ApiResponse<Dictionary<string, Object>> GetRenderWithHttpInfo(string renderId, int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -86,7 +86,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of System.IO.Stream</returns>
-        System.Threading.Tasks.Task<System.IO.Stream> DownloadRenderApiV1RendersRenderIdDownloadGetAsync(string renderId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<System.IO.Stream> DownloadRenderAsync(string renderId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Download Render
@@ -99,7 +99,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
-        System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> DownloadRenderApiV1RendersRenderIdDownloadGetWithHttpInfoAsync(string renderId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> DownloadRenderWithHttpInfoAsync(string renderId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Get Render
         /// </summary>
@@ -111,7 +111,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Dictionary&lt;string, Object&gt;</returns>
-        System.Threading.Tasks.Task<Dictionary<string, Object>> GetRenderApiV1RendersRenderIdGetAsync(string renderId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<Dictionary<string, Object>> GetRenderAsync(string renderId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Get Render
@@ -124,7 +124,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Dictionary&lt;string, Object&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Dictionary<string, Object>>> GetRenderApiV1RendersRenderIdGetWithHttpInfoAsync(string renderId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Dictionary<string, Object>>> GetRenderWithHttpInfoAsync(string renderId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -252,9 +252,9 @@ namespace InvoicePDFs.Api
         /// <param name="renderId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>System.IO.Stream</returns>
-        public System.IO.Stream DownloadRenderApiV1RendersRenderIdDownloadGet(string renderId, int operationIndex = 0)
+        public System.IO.Stream DownloadRender(string renderId, int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<System.IO.Stream> localVarResponse = DownloadRenderApiV1RendersRenderIdDownloadGetWithHttpInfo(renderId);
+            InvoicePDFs.Client.ApiResponse<System.IO.Stream> localVarResponse = DownloadRenderWithHttpInfo(renderId);
             return localVarResponse.Data;
         }
 
@@ -265,12 +265,12 @@ namespace InvoicePDFs.Api
         /// <param name="renderId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of System.IO.Stream</returns>
-        public InvoicePDFs.Client.ApiResponse<System.IO.Stream> DownloadRenderApiV1RendersRenderIdDownloadGetWithHttpInfo(string renderId, int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<System.IO.Stream> DownloadRenderWithHttpInfo(string renderId, int operationIndex = 0)
         {
             // verify the required parameter 'renderId' is set
             if (renderId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'renderId' when calling RendersApi->DownloadRenderApiV1RendersRenderIdDownloadGet");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'renderId' when calling RendersApi->DownloadRender");
             }
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -298,7 +298,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("render_id", InvoicePDFs.Client.ClientUtils.ParameterToString(renderId)); // path parameter
 
-            localVarRequestOptions.Operation = "RendersApi.DownloadRenderApiV1RendersRenderIdDownloadGet";
+            localVarRequestOptions.Operation = "RendersApi.DownloadRender";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -312,7 +312,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Get<System.IO.Stream>("/api/v1/renders/{render_id}/download", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DownloadRenderApiV1RendersRenderIdDownloadGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DownloadRender", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -330,9 +330,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of System.IO.Stream</returns>
-        public async System.Threading.Tasks.Task<System.IO.Stream> DownloadRenderApiV1RendersRenderIdDownloadGetAsync(string renderId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<System.IO.Stream> DownloadRenderAsync(string renderId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<System.IO.Stream> localVarResponse = await DownloadRenderApiV1RendersRenderIdDownloadGetWithHttpInfoAsync(renderId, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<System.IO.Stream> localVarResponse = await DownloadRenderWithHttpInfoAsync(renderId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -344,12 +344,12 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<System.IO.Stream>> DownloadRenderApiV1RendersRenderIdDownloadGetWithHttpInfoAsync(string renderId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<System.IO.Stream>> DownloadRenderWithHttpInfoAsync(string renderId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'renderId' is set
             if (renderId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'renderId' when calling RendersApi->DownloadRenderApiV1RendersRenderIdDownloadGet");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'renderId' when calling RendersApi->DownloadRender");
             }
 
 
@@ -378,7 +378,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("render_id", InvoicePDFs.Client.ClientUtils.ParameterToString(renderId)); // path parameter
 
-            localVarRequestOptions.Operation = "RendersApi.DownloadRenderApiV1RendersRenderIdDownloadGet";
+            localVarRequestOptions.Operation = "RendersApi.DownloadRender";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -393,7 +393,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DownloadRenderApiV1RendersRenderIdDownloadGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DownloadRender", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -410,9 +410,9 @@ namespace InvoicePDFs.Api
         /// <param name="renderId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>Dictionary&lt;string, Object&gt;</returns>
-        public Dictionary<string, Object> GetRenderApiV1RendersRenderIdGet(string renderId, int operationIndex = 0)
+        public Dictionary<string, Object> GetRender(string renderId, int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<Dictionary<string, Object>> localVarResponse = GetRenderApiV1RendersRenderIdGetWithHttpInfo(renderId);
+            InvoicePDFs.Client.ApiResponse<Dictionary<string, Object>> localVarResponse = GetRenderWithHttpInfo(renderId);
             return localVarResponse.Data;
         }
 
@@ -423,12 +423,12 @@ namespace InvoicePDFs.Api
         /// <param name="renderId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Dictionary&lt;string, Object&gt;</returns>
-        public InvoicePDFs.Client.ApiResponse<Dictionary<string, Object>> GetRenderApiV1RendersRenderIdGetWithHttpInfo(string renderId, int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<Dictionary<string, Object>> GetRenderWithHttpInfo(string renderId, int operationIndex = 0)
         {
             // verify the required parameter 'renderId' is set
             if (renderId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'renderId' when calling RendersApi->GetRenderApiV1RendersRenderIdGet");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'renderId' when calling RendersApi->GetRender");
             }
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -455,7 +455,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("render_id", InvoicePDFs.Client.ClientUtils.ParameterToString(renderId)); // path parameter
 
-            localVarRequestOptions.Operation = "RendersApi.GetRenderApiV1RendersRenderIdGet";
+            localVarRequestOptions.Operation = "RendersApi.GetRender";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -469,7 +469,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Get<Dictionary<string, Object>>("/api/v1/renders/{render_id}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetRenderApiV1RendersRenderIdGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetRender", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -487,9 +487,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Dictionary&lt;string, Object&gt;</returns>
-        public async System.Threading.Tasks.Task<Dictionary<string, Object>> GetRenderApiV1RendersRenderIdGetAsync(string renderId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Dictionary<string, Object>> GetRenderAsync(string renderId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<Dictionary<string, Object>> localVarResponse = await GetRenderApiV1RendersRenderIdGetWithHttpInfoAsync(renderId, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<Dictionary<string, Object>> localVarResponse = await GetRenderWithHttpInfoAsync(renderId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -501,12 +501,12 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Dictionary&lt;string, Object&gt;)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<Dictionary<string, Object>>> GetRenderApiV1RendersRenderIdGetWithHttpInfoAsync(string renderId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<Dictionary<string, Object>>> GetRenderWithHttpInfoAsync(string renderId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'renderId' is set
             if (renderId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'renderId' when calling RendersApi->GetRenderApiV1RendersRenderIdGet");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'renderId' when calling RendersApi->GetRender");
             }
 
 
@@ -534,7 +534,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("render_id", InvoicePDFs.Client.ClientUtils.ParameterToString(renderId)); // path parameter
 
-            localVarRequestOptions.Operation = "RendersApi.GetRenderApiV1RendersRenderIdGet";
+            localVarRequestOptions.Operation = "RendersApi.GetRender";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -549,7 +549,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetRenderApiV1RendersRenderIdGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetRender", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

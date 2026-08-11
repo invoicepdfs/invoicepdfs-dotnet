@@ -27,59 +27,38 @@ namespace InvoicePDFs.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Forgot Password
+        /// Exchange Auth Token
         /// </summary>
         /// <remarks>
-        /// Send a password reset email via Firebase.
+        /// Exchange a Firebase ID token for account info.  Use this on login: the client authenticates with Firebase, sends the ID token here, and receives the InvoicePDFs account details. The Firebase token itself is used as the Bearer token for subsequent API calls.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="authForgotPasswordRequest"></param>
+        /// <param name="authTokenRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>AuthMessageResponse</returns>
-        AuthMessageResponse ForgotPasswordApiV1AuthForgotPasswordPost(AuthForgotPasswordRequest authForgotPasswordRequest, int operationIndex = 0);
+        /// <returns>AuthTokenResponse</returns>
+        AuthTokenResponse ExchangeAuthToken(AuthTokenRequest authTokenRequest, int operationIndex = 0);
 
         /// <summary>
-        /// Forgot Password
+        /// Exchange Auth Token
         /// </summary>
         /// <remarks>
-        /// Send a password reset email via Firebase.
+        /// Exchange a Firebase ID token for account info.  Use this on login: the client authenticates with Firebase, sends the ID token here, and receives the InvoicePDFs account details. The Firebase token itself is used as the Bearer token for subsequent API calls.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="authForgotPasswordRequest"></param>
+        /// <param name="authTokenRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of AuthMessageResponse</returns>
-        ApiResponse<AuthMessageResponse> ForgotPasswordApiV1AuthForgotPasswordPostWithHttpInfo(AuthForgotPasswordRequest authForgotPasswordRequest, int operationIndex = 0);
+        /// <returns>ApiResponse of AuthTokenResponse</returns>
+        ApiResponse<AuthTokenResponse> ExchangeAuthTokenWithHttpInfo(AuthTokenRequest authTokenRequest, int operationIndex = 0);
         /// <summary>
-        /// Logout
-        /// </summary>
-        /// <remarks>
-        /// Revoke all Firebase refresh tokens for the authenticated user.
-        /// </remarks>
-        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>AuthMessageResponse</returns>
-        AuthMessageResponse LogoutApiV1AuthLogoutPost(int operationIndex = 0);
-
-        /// <summary>
-        /// Logout
-        /// </summary>
-        /// <remarks>
-        /// Revoke all Firebase refresh tokens for the authenticated user.
-        /// </remarks>
-        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of AuthMessageResponse</returns>
-        ApiResponse<AuthMessageResponse> LogoutApiV1AuthLogoutPostWithHttpInfo(int operationIndex = 0);
-        /// <summary>
-        /// Me
+        /// Get Current User
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AuthMeResponse</returns>
-        AuthMeResponse MeApiV1AuthMeGet(int operationIndex = 0);
+        AuthMeResponse GetCurrentUser(int operationIndex = 0);
 
         /// <summary>
-        /// Me
+        /// Get Current User
         /// </summary>
         /// <remarks>
         /// 
@@ -87,32 +66,30 @@ namespace InvoicePDFs.Api
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AuthMeResponse</returns>
-        ApiResponse<AuthMeResponse> MeApiV1AuthMeGetWithHttpInfo(int operationIndex = 0);
+        ApiResponse<AuthMeResponse> GetCurrentUserWithHttpInfo(int operationIndex = 0);
         /// <summary>
-        /// Patch Me
+        /// Logout
         /// </summary>
         /// <remarks>
-        /// Update the authenticated account&#39;s name or email.
+        /// Revoke all Firebase refresh tokens for the authenticated user.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="authMePatchRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>AuthMeResponse</returns>
-        AuthMeResponse PatchMeApiV1AuthMePatch(AuthMePatchRequest authMePatchRequest, int operationIndex = 0);
+        /// <returns>AuthMessageResponse</returns>
+        AuthMessageResponse Logout(int operationIndex = 0);
 
         /// <summary>
-        /// Patch Me
+        /// Logout
         /// </summary>
         /// <remarks>
-        /// Update the authenticated account&#39;s name or email.
+        /// Revoke all Firebase refresh tokens for the authenticated user.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="authMePatchRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of AuthMeResponse</returns>
-        ApiResponse<AuthMeResponse> PatchMeApiV1AuthMePatchWithHttpInfo(AuthMePatchRequest authMePatchRequest, int operationIndex = 0);
+        /// <returns>ApiResponse of AuthMessageResponse</returns>
+        ApiResponse<AuthMessageResponse> LogoutWithHttpInfo(int operationIndex = 0);
         /// <summary>
-        /// Refresh
+        /// Refresh Access Token
         /// </summary>
         /// <remarks>
         /// Exchange a Firebase refresh token for a new ID token.
@@ -121,10 +98,10 @@ namespace InvoicePDFs.Api
         /// <param name="authRefreshRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AuthRefreshResponse</returns>
-        AuthRefreshResponse RefreshApiV1AuthRefreshPost(AuthRefreshRequest authRefreshRequest, int operationIndex = 0);
+        AuthRefreshResponse RefreshAccessToken(AuthRefreshRequest authRefreshRequest, int operationIndex = 0);
 
         /// <summary>
-        /// Refresh
+        /// Refresh Access Token
         /// </summary>
         /// <remarks>
         /// Exchange a Firebase refresh token for a new ID token.
@@ -133,7 +110,7 @@ namespace InvoicePDFs.Api
         /// <param name="authRefreshRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AuthRefreshResponse</returns>
-        ApiResponse<AuthRefreshResponse> RefreshApiV1AuthRefreshPostWithHttpInfo(AuthRefreshRequest authRefreshRequest, int operationIndex = 0);
+        ApiResponse<AuthRefreshResponse> RefreshAccessTokenWithHttpInfo(AuthRefreshRequest authRefreshRequest, int operationIndex = 0);
         /// <summary>
         /// Register
         /// </summary>
@@ -144,7 +121,7 @@ namespace InvoicePDFs.Api
         /// <param name="authRegisterRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AuthRegisterResponse</returns>
-        AuthRegisterResponse RegisterApiV1AuthRegisterPost(AuthRegisterRequest authRegisterRequest, int operationIndex = 0);
+        AuthRegisterResponse Register(AuthRegisterRequest authRegisterRequest, int operationIndex = 0);
 
         /// <summary>
         /// Register
@@ -156,7 +133,30 @@ namespace InvoicePDFs.Api
         /// <param name="authRegisterRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AuthRegisterResponse</returns>
-        ApiResponse<AuthRegisterResponse> RegisterApiV1AuthRegisterPostWithHttpInfo(AuthRegisterRequest authRegisterRequest, int operationIndex = 0);
+        ApiResponse<AuthRegisterResponse> RegisterWithHttpInfo(AuthRegisterRequest authRegisterRequest, int operationIndex = 0);
+        /// <summary>
+        /// Request Password Reset
+        /// </summary>
+        /// <remarks>
+        /// Send a password reset email via Firebase.
+        /// </remarks>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="authForgotPasswordRequest"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>AuthMessageResponse</returns>
+        AuthMessageResponse RequestPasswordReset(AuthForgotPasswordRequest authForgotPasswordRequest, int operationIndex = 0);
+
+        /// <summary>
+        /// Request Password Reset
+        /// </summary>
+        /// <remarks>
+        /// Send a password reset email via Firebase.
+        /// </remarks>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="authForgotPasswordRequest"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of AuthMessageResponse</returns>
+        ApiResponse<AuthMessageResponse> RequestPasswordResetWithHttpInfo(AuthForgotPasswordRequest authForgotPasswordRequest, int operationIndex = 0);
         /// <summary>
         /// Reset Password
         /// </summary>
@@ -167,7 +167,7 @@ namespace InvoicePDFs.Api
         /// <param name="authResetPasswordRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AuthMessageResponse</returns>
-        AuthMessageResponse ResetPasswordApiV1AuthResetPasswordPost(AuthResetPasswordRequest authResetPasswordRequest, int operationIndex = 0);
+        AuthMessageResponse ResetPassword(AuthResetPasswordRequest authResetPasswordRequest, int operationIndex = 0);
 
         /// <summary>
         /// Reset Password
@@ -179,30 +179,30 @@ namespace InvoicePDFs.Api
         /// <param name="authResetPasswordRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AuthMessageResponse</returns>
-        ApiResponse<AuthMessageResponse> ResetPasswordApiV1AuthResetPasswordPostWithHttpInfo(AuthResetPasswordRequest authResetPasswordRequest, int operationIndex = 0);
+        ApiResponse<AuthMessageResponse> ResetPasswordWithHttpInfo(AuthResetPasswordRequest authResetPasswordRequest, int operationIndex = 0);
         /// <summary>
-        /// Token Exchange
+        /// Update Current User
         /// </summary>
         /// <remarks>
-        /// Exchange a Firebase ID token for account info.  Use this on login: the client authenticates with Firebase, sends the ID token here, and receives the InvoicePDFs account details. The Firebase token itself is used as the Bearer token for subsequent API calls.
+        /// Update the authenticated account&#39;s name or email.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="authTokenRequest"></param>
+        /// <param name="authMePatchRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>AuthTokenResponse</returns>
-        AuthTokenResponse TokenExchangeApiV1AuthTokenPost(AuthTokenRequest authTokenRequest, int operationIndex = 0);
+        /// <returns>AuthMeResponse</returns>
+        AuthMeResponse UpdateCurrentUser(AuthMePatchRequest authMePatchRequest, int operationIndex = 0);
 
         /// <summary>
-        /// Token Exchange
+        /// Update Current User
         /// </summary>
         /// <remarks>
-        /// Exchange a Firebase ID token for account info.  Use this on login: the client authenticates with Firebase, sends the ID token here, and receives the InvoicePDFs account details. The Firebase token itself is used as the Bearer token for subsequent API calls.
+        /// Update the authenticated account&#39;s name or email.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="authTokenRequest"></param>
+        /// <param name="authMePatchRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of AuthTokenResponse</returns>
-        ApiResponse<AuthTokenResponse> TokenExchangeApiV1AuthTokenPostWithHttpInfo(AuthTokenRequest authTokenRequest, int operationIndex = 0);
+        /// <returns>ApiResponse of AuthMeResponse</returns>
+        ApiResponse<AuthMeResponse> UpdateCurrentUserWithHttpInfo(AuthMePatchRequest authMePatchRequest, int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -213,30 +213,53 @@ namespace InvoicePDFs.Api
     {
         #region Asynchronous Operations
         /// <summary>
-        /// Forgot Password
+        /// Exchange Auth Token
         /// </summary>
         /// <remarks>
-        /// Send a password reset email via Firebase.
+        /// Exchange a Firebase ID token for account info.  Use this on login: the client authenticates with Firebase, sends the ID token here, and receives the InvoicePDFs account details. The Firebase token itself is used as the Bearer token for subsequent API calls.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="authForgotPasswordRequest"></param>
+        /// <param name="authTokenRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of AuthMessageResponse</returns>
-        System.Threading.Tasks.Task<AuthMessageResponse> ForgotPasswordApiV1AuthForgotPasswordPostAsync(AuthForgotPasswordRequest authForgotPasswordRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of AuthTokenResponse</returns>
+        System.Threading.Tasks.Task<AuthTokenResponse> ExchangeAuthTokenAsync(AuthTokenRequest authTokenRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// Forgot Password
+        /// Exchange Auth Token
         /// </summary>
         /// <remarks>
-        /// Send a password reset email via Firebase.
+        /// Exchange a Firebase ID token for account info.  Use this on login: the client authenticates with Firebase, sends the ID token here, and receives the InvoicePDFs account details. The Firebase token itself is used as the Bearer token for subsequent API calls.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="authForgotPasswordRequest"></param>
+        /// <param name="authTokenRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (AuthMessageResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AuthMessageResponse>> ForgotPasswordApiV1AuthForgotPasswordPostWithHttpInfoAsync(AuthForgotPasswordRequest authForgotPasswordRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (AuthTokenResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AuthTokenResponse>> ExchangeAuthTokenWithHttpInfoAsync(AuthTokenRequest authTokenRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// Get Current User
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of AuthMeResponse</returns>
+        System.Threading.Tasks.Task<AuthMeResponse> GetCurrentUserAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Get Current User
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (AuthMeResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AuthMeResponse>> GetCurrentUserWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Logout
         /// </summary>
@@ -247,7 +270,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AuthMessageResponse</returns>
-        System.Threading.Tasks.Task<AuthMessageResponse> LogoutApiV1AuthLogoutPostAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AuthMessageResponse> LogoutAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Logout
@@ -259,57 +282,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AuthMessageResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AuthMessageResponse>> LogoutApiV1AuthLogoutPostWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<AuthMessageResponse>> LogoutWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// Me
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of AuthMeResponse</returns>
-        System.Threading.Tasks.Task<AuthMeResponse> MeApiV1AuthMeGetAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-
-        /// <summary>
-        /// Me
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (AuthMeResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AuthMeResponse>> MeApiV1AuthMeGetWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// Patch Me
-        /// </summary>
-        /// <remarks>
-        /// Update the authenticated account&#39;s name or email.
-        /// </remarks>
-        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="authMePatchRequest"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of AuthMeResponse</returns>
-        System.Threading.Tasks.Task<AuthMeResponse> PatchMeApiV1AuthMePatchAsync(AuthMePatchRequest authMePatchRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-
-        /// <summary>
-        /// Patch Me
-        /// </summary>
-        /// <remarks>
-        /// Update the authenticated account&#39;s name or email.
-        /// </remarks>
-        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="authMePatchRequest"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (AuthMeResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AuthMeResponse>> PatchMeApiV1AuthMePatchWithHttpInfoAsync(AuthMePatchRequest authMePatchRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// Refresh
+        /// Refresh Access Token
         /// </summary>
         /// <remarks>
         /// Exchange a Firebase refresh token for a new ID token.
@@ -319,10 +294,10 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AuthRefreshResponse</returns>
-        System.Threading.Tasks.Task<AuthRefreshResponse> RefreshApiV1AuthRefreshPostAsync(AuthRefreshRequest authRefreshRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AuthRefreshResponse> RefreshAccessTokenAsync(AuthRefreshRequest authRefreshRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// Refresh
+        /// Refresh Access Token
         /// </summary>
         /// <remarks>
         /// Exchange a Firebase refresh token for a new ID token.
@@ -332,7 +307,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AuthRefreshResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AuthRefreshResponse>> RefreshApiV1AuthRefreshPostWithHttpInfoAsync(AuthRefreshRequest authRefreshRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<AuthRefreshResponse>> RefreshAccessTokenWithHttpInfoAsync(AuthRefreshRequest authRefreshRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Register
         /// </summary>
@@ -344,7 +319,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AuthRegisterResponse</returns>
-        System.Threading.Tasks.Task<AuthRegisterResponse> RegisterApiV1AuthRegisterPostAsync(AuthRegisterRequest authRegisterRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AuthRegisterResponse> RegisterAsync(AuthRegisterRequest authRegisterRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Register
@@ -357,7 +332,32 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AuthRegisterResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AuthRegisterResponse>> RegisterApiV1AuthRegisterPostWithHttpInfoAsync(AuthRegisterRequest authRegisterRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<AuthRegisterResponse>> RegisterWithHttpInfoAsync(AuthRegisterRequest authRegisterRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// Request Password Reset
+        /// </summary>
+        /// <remarks>
+        /// Send a password reset email via Firebase.
+        /// </remarks>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="authForgotPasswordRequest"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of AuthMessageResponse</returns>
+        System.Threading.Tasks.Task<AuthMessageResponse> RequestPasswordResetAsync(AuthForgotPasswordRequest authForgotPasswordRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Request Password Reset
+        /// </summary>
+        /// <remarks>
+        /// Send a password reset email via Firebase.
+        /// </remarks>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="authForgotPasswordRequest"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (AuthMessageResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AuthMessageResponse>> RequestPasswordResetWithHttpInfoAsync(AuthForgotPasswordRequest authForgotPasswordRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Reset Password
         /// </summary>
@@ -369,7 +369,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AuthMessageResponse</returns>
-        System.Threading.Tasks.Task<AuthMessageResponse> ResetPasswordApiV1AuthResetPasswordPostAsync(AuthResetPasswordRequest authResetPasswordRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AuthMessageResponse> ResetPasswordAsync(AuthResetPasswordRequest authResetPasswordRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Reset Password
@@ -382,32 +382,32 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AuthMessageResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AuthMessageResponse>> ResetPasswordApiV1AuthResetPasswordPostWithHttpInfoAsync(AuthResetPasswordRequest authResetPasswordRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<AuthMessageResponse>> ResetPasswordWithHttpInfoAsync(AuthResetPasswordRequest authResetPasswordRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// Token Exchange
+        /// Update Current User
         /// </summary>
         /// <remarks>
-        /// Exchange a Firebase ID token for account info.  Use this on login: the client authenticates with Firebase, sends the ID token here, and receives the InvoicePDFs account details. The Firebase token itself is used as the Bearer token for subsequent API calls.
+        /// Update the authenticated account&#39;s name or email.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="authTokenRequest"></param>
+        /// <param name="authMePatchRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of AuthTokenResponse</returns>
-        System.Threading.Tasks.Task<AuthTokenResponse> TokenExchangeApiV1AuthTokenPostAsync(AuthTokenRequest authTokenRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of AuthMeResponse</returns>
+        System.Threading.Tasks.Task<AuthMeResponse> UpdateCurrentUserAsync(AuthMePatchRequest authMePatchRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// Token Exchange
+        /// Update Current User
         /// </summary>
         /// <remarks>
-        /// Exchange a Firebase ID token for account info.  Use this on login: the client authenticates with Firebase, sends the ID token here, and receives the InvoicePDFs account details. The Firebase token itself is used as the Bearer token for subsequent API calls.
+        /// Update the authenticated account&#39;s name or email.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="authTokenRequest"></param>
+        /// <param name="authMePatchRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (AuthTokenResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AuthTokenResponse>> TokenExchangeApiV1AuthTokenPostWithHttpInfoAsync(AuthTokenRequest authTokenRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (AuthMeResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AuthMeResponse>> UpdateCurrentUserWithHttpInfoAsync(AuthMePatchRequest authMePatchRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -529,31 +529,31 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Forgot Password Send a password reset email via Firebase.
+        /// Exchange Auth Token Exchange a Firebase ID token for account info.  Use this on login: the client authenticates with Firebase, sends the ID token here, and receives the InvoicePDFs account details. The Firebase token itself is used as the Bearer token for subsequent API calls.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="authForgotPasswordRequest"></param>
+        /// <param name="authTokenRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>AuthMessageResponse</returns>
-        public AuthMessageResponse ForgotPasswordApiV1AuthForgotPasswordPost(AuthForgotPasswordRequest authForgotPasswordRequest, int operationIndex = 0)
+        /// <returns>AuthTokenResponse</returns>
+        public AuthTokenResponse ExchangeAuthToken(AuthTokenRequest authTokenRequest, int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<AuthMessageResponse> localVarResponse = ForgotPasswordApiV1AuthForgotPasswordPostWithHttpInfo(authForgotPasswordRequest);
+            InvoicePDFs.Client.ApiResponse<AuthTokenResponse> localVarResponse = ExchangeAuthTokenWithHttpInfo(authTokenRequest);
             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Forgot Password Send a password reset email via Firebase.
+        /// Exchange Auth Token Exchange a Firebase ID token for account info.  Use this on login: the client authenticates with Firebase, sends the ID token here, and receives the InvoicePDFs account details. The Firebase token itself is used as the Bearer token for subsequent API calls.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="authForgotPasswordRequest"></param>
+        /// <param name="authTokenRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of AuthMessageResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<AuthMessageResponse> ForgotPasswordApiV1AuthForgotPasswordPostWithHttpInfo(AuthForgotPasswordRequest authForgotPasswordRequest, int operationIndex = 0)
+        /// <returns>ApiResponse of AuthTokenResponse</returns>
+        public InvoicePDFs.Client.ApiResponse<AuthTokenResponse> ExchangeAuthTokenWithHttpInfo(AuthTokenRequest authTokenRequest, int operationIndex = 0)
         {
-            // verify the required parameter 'authForgotPasswordRequest' is set
-            if (authForgotPasswordRequest == null)
+            // verify the required parameter 'authTokenRequest' is set
+            if (authTokenRequest == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'authForgotPasswordRequest' when calling AuthApi->ForgotPasswordApiV1AuthForgotPasswordPost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'authTokenRequest' when calling AuthApi->ExchangeAuthToken");
             }
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -579,17 +579,17 @@ namespace InvoicePDFs.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = authForgotPasswordRequest;
+            localVarRequestOptions.Data = authTokenRequest;
 
-            localVarRequestOptions.Operation = "AuthApi.ForgotPasswordApiV1AuthForgotPasswordPost";
+            localVarRequestOptions.Operation = "AuthApi.ExchangeAuthToken";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<AuthMessageResponse>("/api/v1/auth/forgot-password", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<AuthTokenResponse>("/api/v1/auth/token", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ForgotPasswordApiV1AuthForgotPasswordPost", localVarResponse);
+                Exception _exception = this.ExceptionFactory("ExchangeAuthToken", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -600,33 +600,33 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Forgot Password Send a password reset email via Firebase.
+        /// Exchange Auth Token Exchange a Firebase ID token for account info.  Use this on login: the client authenticates with Firebase, sends the ID token here, and receives the InvoicePDFs account details. The Firebase token itself is used as the Bearer token for subsequent API calls.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="authForgotPasswordRequest"></param>
+        /// <param name="authTokenRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of AuthMessageResponse</returns>
-        public async System.Threading.Tasks.Task<AuthMessageResponse> ForgotPasswordApiV1AuthForgotPasswordPostAsync(AuthForgotPasswordRequest authForgotPasswordRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of AuthTokenResponse</returns>
+        public async System.Threading.Tasks.Task<AuthTokenResponse> ExchangeAuthTokenAsync(AuthTokenRequest authTokenRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<AuthMessageResponse> localVarResponse = await ForgotPasswordApiV1AuthForgotPasswordPostWithHttpInfoAsync(authForgotPasswordRequest, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<AuthTokenResponse> localVarResponse = await ExchangeAuthTokenWithHttpInfoAsync(authTokenRequest, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Forgot Password Send a password reset email via Firebase.
+        /// Exchange Auth Token Exchange a Firebase ID token for account info.  Use this on login: the client authenticates with Firebase, sends the ID token here, and receives the InvoicePDFs account details. The Firebase token itself is used as the Bearer token for subsequent API calls.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="authForgotPasswordRequest"></param>
+        /// <param name="authTokenRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (AuthMessageResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<AuthMessageResponse>> ForgotPasswordApiV1AuthForgotPasswordPostWithHttpInfoAsync(AuthForgotPasswordRequest authForgotPasswordRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (AuthTokenResponse)</returns>
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<AuthTokenResponse>> ExchangeAuthTokenWithHttpInfoAsync(AuthTokenRequest authTokenRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            // verify the required parameter 'authForgotPasswordRequest' is set
-            if (authForgotPasswordRequest == null)
+            // verify the required parameter 'authTokenRequest' is set
+            if (authTokenRequest == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'authForgotPasswordRequest' when calling AuthApi->ForgotPasswordApiV1AuthForgotPasswordPost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'authTokenRequest' when calling AuthApi->ExchangeAuthToken");
             }
 
 
@@ -653,18 +653,18 @@ namespace InvoicePDFs.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = authForgotPasswordRequest;
+            localVarRequestOptions.Data = authTokenRequest;
 
-            localVarRequestOptions.Operation = "AuthApi.ForgotPasswordApiV1AuthForgotPasswordPost";
+            localVarRequestOptions.Operation = "AuthApi.ExchangeAuthToken";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<AuthMessageResponse>("/api/v1/auth/forgot-password", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<AuthTokenResponse>("/api/v1/auth/token", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ForgotPasswordApiV1AuthForgotPasswordPost", localVarResponse);
+                Exception _exception = this.ExceptionFactory("ExchangeAuthToken", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -675,162 +675,24 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Logout Revoke all Firebase refresh tokens for the authenticated user.
-        /// </summary>
-        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>AuthMessageResponse</returns>
-        public AuthMessageResponse LogoutApiV1AuthLogoutPost(int operationIndex = 0)
-        {
-            InvoicePDFs.Client.ApiResponse<AuthMessageResponse> localVarResponse = LogoutApiV1AuthLogoutPostWithHttpInfo();
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Logout Revoke all Firebase refresh tokens for the authenticated user.
-        /// </summary>
-        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of AuthMessageResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<AuthMessageResponse> LogoutApiV1AuthLogoutPostWithHttpInfo(int operationIndex = 0)
-        {
-            InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var localVarContentType = InvoicePDFs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
-
-            var localVarAccept = InvoicePDFs.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
-
-
-            localVarRequestOptions.Operation = "AuthApi.LogoutApiV1AuthLogoutPost";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
-            // authentication (HTTPBearer) required
-            // bearer authentication required
-            if (!string.IsNullOrEmpty(this.Configuration.AccessToken) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
-            {
-                localVarRequestOptions.HeaderParameters.Add("Authorization", "Bearer " + this.Configuration.AccessToken);
-            }
-
-            // make the HTTP request
-            var localVarResponse = this.Client.Post<AuthMessageResponse>("/api/v1/auth/logout", localVarRequestOptions, this.Configuration);
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("LogoutApiV1AuthLogoutPost", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
-        /// Logout Revoke all Firebase refresh tokens for the authenticated user.
-        /// </summary>
-        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of AuthMessageResponse</returns>
-        public async System.Threading.Tasks.Task<AuthMessageResponse> LogoutApiV1AuthLogoutPostAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            InvoicePDFs.Client.ApiResponse<AuthMessageResponse> localVarResponse = await LogoutApiV1AuthLogoutPostWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Logout Revoke all Firebase refresh tokens for the authenticated user.
-        /// </summary>
-        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (AuthMessageResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<AuthMessageResponse>> LogoutApiV1AuthLogoutPostWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-
-            InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var localVarContentType = InvoicePDFs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
-
-            var localVarAccept = InvoicePDFs.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
-
-
-            localVarRequestOptions.Operation = "AuthApi.LogoutApiV1AuthLogoutPost";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
-            // authentication (HTTPBearer) required
-            // bearer authentication required
-            if (!string.IsNullOrEmpty(this.Configuration.AccessToken) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
-            {
-                localVarRequestOptions.HeaderParameters.Add("Authorization", "Bearer " + this.Configuration.AccessToken);
-            }
-
-            // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<AuthMessageResponse>("/api/v1/auth/logout", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("LogoutApiV1AuthLogoutPost", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
-        /// Me 
+        /// Get Current User 
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AuthMeResponse</returns>
-        public AuthMeResponse MeApiV1AuthMeGet(int operationIndex = 0)
+        public AuthMeResponse GetCurrentUser(int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<AuthMeResponse> localVarResponse = MeApiV1AuthMeGetWithHttpInfo();
+            InvoicePDFs.Client.ApiResponse<AuthMeResponse> localVarResponse = GetCurrentUserWithHttpInfo();
             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Me 
+        /// Get Current User 
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AuthMeResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<AuthMeResponse> MeApiV1AuthMeGetWithHttpInfo(int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<AuthMeResponse> GetCurrentUserWithHttpInfo(int operationIndex = 0)
         {
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
 
@@ -855,7 +717,7 @@ namespace InvoicePDFs.Api
             }
 
 
-            localVarRequestOptions.Operation = "AuthApi.MeApiV1AuthMeGet";
+            localVarRequestOptions.Operation = "AuthApi.GetCurrentUser";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -869,7 +731,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Get<AuthMeResponse>("/api/v1/auth/me", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("MeApiV1AuthMeGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetCurrentUser", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -880,26 +742,26 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Me 
+        /// Get Current User 
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AuthMeResponse</returns>
-        public async System.Threading.Tasks.Task<AuthMeResponse> MeApiV1AuthMeGetAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AuthMeResponse> GetCurrentUserAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<AuthMeResponse> localVarResponse = await MeApiV1AuthMeGetWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<AuthMeResponse> localVarResponse = await GetCurrentUserWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Me 
+        /// Get Current User 
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AuthMeResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<AuthMeResponse>> MeApiV1AuthMeGetWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<AuthMeResponse>> GetCurrentUserWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -925,7 +787,7 @@ namespace InvoicePDFs.Api
             }
 
 
-            localVarRequestOptions.Operation = "AuthApi.MeApiV1AuthMeGet";
+            localVarRequestOptions.Operation = "AuthApi.GetCurrentUser";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -940,7 +802,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("MeApiV1AuthMeGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetCurrentUser", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -951,37 +813,28 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Patch Me Update the authenticated account&#39;s name or email.
+        /// Logout Revoke all Firebase refresh tokens for the authenticated user.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="authMePatchRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>AuthMeResponse</returns>
-        public AuthMeResponse PatchMeApiV1AuthMePatch(AuthMePatchRequest authMePatchRequest, int operationIndex = 0)
+        /// <returns>AuthMessageResponse</returns>
+        public AuthMessageResponse Logout(int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<AuthMeResponse> localVarResponse = PatchMeApiV1AuthMePatchWithHttpInfo(authMePatchRequest);
+            InvoicePDFs.Client.ApiResponse<AuthMessageResponse> localVarResponse = LogoutWithHttpInfo();
             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Patch Me Update the authenticated account&#39;s name or email.
+        /// Logout Revoke all Firebase refresh tokens for the authenticated user.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="authMePatchRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of AuthMeResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<AuthMeResponse> PatchMeApiV1AuthMePatchWithHttpInfo(AuthMePatchRequest authMePatchRequest, int operationIndex = 0)
+        /// <returns>ApiResponse of AuthMessageResponse</returns>
+        public InvoicePDFs.Client.ApiResponse<AuthMessageResponse> LogoutWithHttpInfo(int operationIndex = 0)
         {
-            // verify the required parameter 'authMePatchRequest' is set
-            if (authMePatchRequest == null)
-            {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'authMePatchRequest' when calling AuthApi->PatchMeApiV1AuthMePatch");
-            }
-
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
-                "application/json"
             };
 
             // to determine the Accept header
@@ -1001,9 +854,8 @@ namespace InvoicePDFs.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = authMePatchRequest;
 
-            localVarRequestOptions.Operation = "AuthApi.PatchMeApiV1AuthMePatch";
+            localVarRequestOptions.Operation = "AuthApi.Logout";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -1014,10 +866,10 @@ namespace InvoicePDFs.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Patch<AuthMeResponse>("/api/v1/auth/me", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<AuthMessageResponse>("/api/v1/auth/logout", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PatchMeApiV1AuthMePatch", localVarResponse);
+                Exception _exception = this.ExceptionFactory("Logout", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1028,40 +880,31 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Patch Me Update the authenticated account&#39;s name or email.
+        /// Logout Revoke all Firebase refresh tokens for the authenticated user.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="authMePatchRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of AuthMeResponse</returns>
-        public async System.Threading.Tasks.Task<AuthMeResponse> PatchMeApiV1AuthMePatchAsync(AuthMePatchRequest authMePatchRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of AuthMessageResponse</returns>
+        public async System.Threading.Tasks.Task<AuthMessageResponse> LogoutAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<AuthMeResponse> localVarResponse = await PatchMeApiV1AuthMePatchWithHttpInfoAsync(authMePatchRequest, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<AuthMessageResponse> localVarResponse = await LogoutWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Patch Me Update the authenticated account&#39;s name or email.
+        /// Logout Revoke all Firebase refresh tokens for the authenticated user.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="authMePatchRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (AuthMeResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<AuthMeResponse>> PatchMeApiV1AuthMePatchWithHttpInfoAsync(AuthMePatchRequest authMePatchRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (AuthMessageResponse)</returns>
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<AuthMessageResponse>> LogoutWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            // verify the required parameter 'authMePatchRequest' is set
-            if (authMePatchRequest == null)
-            {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'authMePatchRequest' when calling AuthApi->PatchMeApiV1AuthMePatch");
-            }
-
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
-                "application/json"
             };
 
             // to determine the Accept header
@@ -1081,9 +924,8 @@ namespace InvoicePDFs.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = authMePatchRequest;
 
-            localVarRequestOptions.Operation = "AuthApi.PatchMeApiV1AuthMePatch";
+            localVarRequestOptions.Operation = "AuthApi.Logout";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -1094,11 +936,11 @@ namespace InvoicePDFs.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PatchAsync<AuthMeResponse>("/api/v1/auth/me", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<AuthMessageResponse>("/api/v1/auth/logout", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PatchMeApiV1AuthMePatch", localVarResponse);
+                Exception _exception = this.ExceptionFactory("Logout", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1109,31 +951,31 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Refresh Exchange a Firebase refresh token for a new ID token.
+        /// Refresh Access Token Exchange a Firebase refresh token for a new ID token.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authRefreshRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AuthRefreshResponse</returns>
-        public AuthRefreshResponse RefreshApiV1AuthRefreshPost(AuthRefreshRequest authRefreshRequest, int operationIndex = 0)
+        public AuthRefreshResponse RefreshAccessToken(AuthRefreshRequest authRefreshRequest, int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<AuthRefreshResponse> localVarResponse = RefreshApiV1AuthRefreshPostWithHttpInfo(authRefreshRequest);
+            InvoicePDFs.Client.ApiResponse<AuthRefreshResponse> localVarResponse = RefreshAccessTokenWithHttpInfo(authRefreshRequest);
             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Refresh Exchange a Firebase refresh token for a new ID token.
+        /// Refresh Access Token Exchange a Firebase refresh token for a new ID token.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authRefreshRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AuthRefreshResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<AuthRefreshResponse> RefreshApiV1AuthRefreshPostWithHttpInfo(AuthRefreshRequest authRefreshRequest, int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<AuthRefreshResponse> RefreshAccessTokenWithHttpInfo(AuthRefreshRequest authRefreshRequest, int operationIndex = 0)
         {
             // verify the required parameter 'authRefreshRequest' is set
             if (authRefreshRequest == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'authRefreshRequest' when calling AuthApi->RefreshApiV1AuthRefreshPost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'authRefreshRequest' when calling AuthApi->RefreshAccessToken");
             }
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -1161,7 +1003,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.Data = authRefreshRequest;
 
-            localVarRequestOptions.Operation = "AuthApi.RefreshApiV1AuthRefreshPost";
+            localVarRequestOptions.Operation = "AuthApi.RefreshAccessToken";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -1169,7 +1011,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Post<AuthRefreshResponse>("/api/v1/auth/refresh", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("RefreshApiV1AuthRefreshPost", localVarResponse);
+                Exception _exception = this.ExceptionFactory("RefreshAccessToken", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1180,33 +1022,33 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Refresh Exchange a Firebase refresh token for a new ID token.
+        /// Refresh Access Token Exchange a Firebase refresh token for a new ID token.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authRefreshRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AuthRefreshResponse</returns>
-        public async System.Threading.Tasks.Task<AuthRefreshResponse> RefreshApiV1AuthRefreshPostAsync(AuthRefreshRequest authRefreshRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AuthRefreshResponse> RefreshAccessTokenAsync(AuthRefreshRequest authRefreshRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<AuthRefreshResponse> localVarResponse = await RefreshApiV1AuthRefreshPostWithHttpInfoAsync(authRefreshRequest, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<AuthRefreshResponse> localVarResponse = await RefreshAccessTokenWithHttpInfoAsync(authRefreshRequest, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Refresh Exchange a Firebase refresh token for a new ID token.
+        /// Refresh Access Token Exchange a Firebase refresh token for a new ID token.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="authRefreshRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AuthRefreshResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<AuthRefreshResponse>> RefreshApiV1AuthRefreshPostWithHttpInfoAsync(AuthRefreshRequest authRefreshRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<AuthRefreshResponse>> RefreshAccessTokenWithHttpInfoAsync(AuthRefreshRequest authRefreshRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'authRefreshRequest' is set
             if (authRefreshRequest == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'authRefreshRequest' when calling AuthApi->RefreshApiV1AuthRefreshPost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'authRefreshRequest' when calling AuthApi->RefreshAccessToken");
             }
 
 
@@ -1235,7 +1077,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.Data = authRefreshRequest;
 
-            localVarRequestOptions.Operation = "AuthApi.RefreshApiV1AuthRefreshPost";
+            localVarRequestOptions.Operation = "AuthApi.RefreshAccessToken";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -1244,7 +1086,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("RefreshApiV1AuthRefreshPost", localVarResponse);
+                Exception _exception = this.ExceptionFactory("RefreshAccessToken", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1261,9 +1103,9 @@ namespace InvoicePDFs.Api
         /// <param name="authRegisterRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AuthRegisterResponse</returns>
-        public AuthRegisterResponse RegisterApiV1AuthRegisterPost(AuthRegisterRequest authRegisterRequest, int operationIndex = 0)
+        public AuthRegisterResponse Register(AuthRegisterRequest authRegisterRequest, int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<AuthRegisterResponse> localVarResponse = RegisterApiV1AuthRegisterPostWithHttpInfo(authRegisterRequest);
+            InvoicePDFs.Client.ApiResponse<AuthRegisterResponse> localVarResponse = RegisterWithHttpInfo(authRegisterRequest);
             return localVarResponse.Data;
         }
 
@@ -1274,12 +1116,12 @@ namespace InvoicePDFs.Api
         /// <param name="authRegisterRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AuthRegisterResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<AuthRegisterResponse> RegisterApiV1AuthRegisterPostWithHttpInfo(AuthRegisterRequest authRegisterRequest, int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<AuthRegisterResponse> RegisterWithHttpInfo(AuthRegisterRequest authRegisterRequest, int operationIndex = 0)
         {
             // verify the required parameter 'authRegisterRequest' is set
             if (authRegisterRequest == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'authRegisterRequest' when calling AuthApi->RegisterApiV1AuthRegisterPost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'authRegisterRequest' when calling AuthApi->Register");
             }
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -1307,7 +1149,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.Data = authRegisterRequest;
 
-            localVarRequestOptions.Operation = "AuthApi.RegisterApiV1AuthRegisterPost";
+            localVarRequestOptions.Operation = "AuthApi.Register";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -1315,7 +1157,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Post<AuthRegisterResponse>("/api/v1/auth/register", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("RegisterApiV1AuthRegisterPost", localVarResponse);
+                Exception _exception = this.ExceptionFactory("Register", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1333,9 +1175,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AuthRegisterResponse</returns>
-        public async System.Threading.Tasks.Task<AuthRegisterResponse> RegisterApiV1AuthRegisterPostAsync(AuthRegisterRequest authRegisterRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AuthRegisterResponse> RegisterAsync(AuthRegisterRequest authRegisterRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<AuthRegisterResponse> localVarResponse = await RegisterApiV1AuthRegisterPostWithHttpInfoAsync(authRegisterRequest, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<AuthRegisterResponse> localVarResponse = await RegisterWithHttpInfoAsync(authRegisterRequest, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1347,12 +1189,12 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AuthRegisterResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<AuthRegisterResponse>> RegisterApiV1AuthRegisterPostWithHttpInfoAsync(AuthRegisterRequest authRegisterRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<AuthRegisterResponse>> RegisterWithHttpInfoAsync(AuthRegisterRequest authRegisterRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'authRegisterRequest' is set
             if (authRegisterRequest == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'authRegisterRequest' when calling AuthApi->RegisterApiV1AuthRegisterPost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'authRegisterRequest' when calling AuthApi->Register");
             }
 
 
@@ -1381,7 +1223,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.Data = authRegisterRequest;
 
-            localVarRequestOptions.Operation = "AuthApi.RegisterApiV1AuthRegisterPost";
+            localVarRequestOptions.Operation = "AuthApi.Register";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -1390,7 +1232,153 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("RegisterApiV1AuthRegisterPost", localVarResponse);
+                Exception _exception = this.ExceptionFactory("Register", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Request Password Reset Send a password reset email via Firebase.
+        /// </summary>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="authForgotPasswordRequest"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>AuthMessageResponse</returns>
+        public AuthMessageResponse RequestPasswordReset(AuthForgotPasswordRequest authForgotPasswordRequest, int operationIndex = 0)
+        {
+            InvoicePDFs.Client.ApiResponse<AuthMessageResponse> localVarResponse = RequestPasswordResetWithHttpInfo(authForgotPasswordRequest);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Request Password Reset Send a password reset email via Firebase.
+        /// </summary>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="authForgotPasswordRequest"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of AuthMessageResponse</returns>
+        public InvoicePDFs.Client.ApiResponse<AuthMessageResponse> RequestPasswordResetWithHttpInfo(AuthForgotPasswordRequest authForgotPasswordRequest, int operationIndex = 0)
+        {
+            // verify the required parameter 'authForgotPasswordRequest' is set
+            if (authForgotPasswordRequest == null)
+            {
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'authForgotPasswordRequest' when calling AuthApi->RequestPasswordReset");
+            }
+
+            InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = InvoicePDFs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = InvoicePDFs.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = authForgotPasswordRequest;
+
+            localVarRequestOptions.Operation = "AuthApi.RequestPasswordReset";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<AuthMessageResponse>("/api/v1/auth/forgot-password", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("RequestPasswordReset", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Request Password Reset Send a password reset email via Firebase.
+        /// </summary>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="authForgotPasswordRequest"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of AuthMessageResponse</returns>
+        public async System.Threading.Tasks.Task<AuthMessageResponse> RequestPasswordResetAsync(AuthForgotPasswordRequest authForgotPasswordRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            InvoicePDFs.Client.ApiResponse<AuthMessageResponse> localVarResponse = await RequestPasswordResetWithHttpInfoAsync(authForgotPasswordRequest, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Request Password Reset Send a password reset email via Firebase.
+        /// </summary>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="authForgotPasswordRequest"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (AuthMessageResponse)</returns>
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<AuthMessageResponse>> RequestPasswordResetWithHttpInfoAsync(AuthForgotPasswordRequest authForgotPasswordRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'authForgotPasswordRequest' is set
+            if (authForgotPasswordRequest == null)
+            {
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'authForgotPasswordRequest' when calling AuthApi->RequestPasswordReset");
+            }
+
+
+            InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = InvoicePDFs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = InvoicePDFs.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = authForgotPasswordRequest;
+
+            localVarRequestOptions.Operation = "AuthApi.RequestPasswordReset";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PostAsync<AuthMessageResponse>("/api/v1/auth/forgot-password", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("RequestPasswordReset", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1407,9 +1395,9 @@ namespace InvoicePDFs.Api
         /// <param name="authResetPasswordRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AuthMessageResponse</returns>
-        public AuthMessageResponse ResetPasswordApiV1AuthResetPasswordPost(AuthResetPasswordRequest authResetPasswordRequest, int operationIndex = 0)
+        public AuthMessageResponse ResetPassword(AuthResetPasswordRequest authResetPasswordRequest, int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<AuthMessageResponse> localVarResponse = ResetPasswordApiV1AuthResetPasswordPostWithHttpInfo(authResetPasswordRequest);
+            InvoicePDFs.Client.ApiResponse<AuthMessageResponse> localVarResponse = ResetPasswordWithHttpInfo(authResetPasswordRequest);
             return localVarResponse.Data;
         }
 
@@ -1420,12 +1408,12 @@ namespace InvoicePDFs.Api
         /// <param name="authResetPasswordRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AuthMessageResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<AuthMessageResponse> ResetPasswordApiV1AuthResetPasswordPostWithHttpInfo(AuthResetPasswordRequest authResetPasswordRequest, int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<AuthMessageResponse> ResetPasswordWithHttpInfo(AuthResetPasswordRequest authResetPasswordRequest, int operationIndex = 0)
         {
             // verify the required parameter 'authResetPasswordRequest' is set
             if (authResetPasswordRequest == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'authResetPasswordRequest' when calling AuthApi->ResetPasswordApiV1AuthResetPasswordPost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'authResetPasswordRequest' when calling AuthApi->ResetPassword");
             }
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -1453,7 +1441,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.Data = authResetPasswordRequest;
 
-            localVarRequestOptions.Operation = "AuthApi.ResetPasswordApiV1AuthResetPasswordPost";
+            localVarRequestOptions.Operation = "AuthApi.ResetPassword";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -1461,7 +1449,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Post<AuthMessageResponse>("/api/v1/auth/reset-password", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ResetPasswordApiV1AuthResetPasswordPost", localVarResponse);
+                Exception _exception = this.ExceptionFactory("ResetPassword", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1479,9 +1467,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AuthMessageResponse</returns>
-        public async System.Threading.Tasks.Task<AuthMessageResponse> ResetPasswordApiV1AuthResetPasswordPostAsync(AuthResetPasswordRequest authResetPasswordRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AuthMessageResponse> ResetPasswordAsync(AuthResetPasswordRequest authResetPasswordRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<AuthMessageResponse> localVarResponse = await ResetPasswordApiV1AuthResetPasswordPostWithHttpInfoAsync(authResetPasswordRequest, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<AuthMessageResponse> localVarResponse = await ResetPasswordWithHttpInfoAsync(authResetPasswordRequest, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1493,12 +1481,12 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AuthMessageResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<AuthMessageResponse>> ResetPasswordApiV1AuthResetPasswordPostWithHttpInfoAsync(AuthResetPasswordRequest authResetPasswordRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<AuthMessageResponse>> ResetPasswordWithHttpInfoAsync(AuthResetPasswordRequest authResetPasswordRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'authResetPasswordRequest' is set
             if (authResetPasswordRequest == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'authResetPasswordRequest' when calling AuthApi->ResetPasswordApiV1AuthResetPasswordPost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'authResetPasswordRequest' when calling AuthApi->ResetPassword");
             }
 
 
@@ -1527,7 +1515,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.Data = authResetPasswordRequest;
 
-            localVarRequestOptions.Operation = "AuthApi.ResetPasswordApiV1AuthResetPasswordPost";
+            localVarRequestOptions.Operation = "AuthApi.ResetPassword";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -1536,7 +1524,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ResetPasswordApiV1AuthResetPasswordPost", localVarResponse);
+                Exception _exception = this.ExceptionFactory("ResetPassword", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1547,31 +1535,31 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Token Exchange Exchange a Firebase ID token for account info.  Use this on login: the client authenticates with Firebase, sends the ID token here, and receives the InvoicePDFs account details. The Firebase token itself is used as the Bearer token for subsequent API calls.
+        /// Update Current User Update the authenticated account&#39;s name or email.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="authTokenRequest"></param>
+        /// <param name="authMePatchRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>AuthTokenResponse</returns>
-        public AuthTokenResponse TokenExchangeApiV1AuthTokenPost(AuthTokenRequest authTokenRequest, int operationIndex = 0)
+        /// <returns>AuthMeResponse</returns>
+        public AuthMeResponse UpdateCurrentUser(AuthMePatchRequest authMePatchRequest, int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<AuthTokenResponse> localVarResponse = TokenExchangeApiV1AuthTokenPostWithHttpInfo(authTokenRequest);
+            InvoicePDFs.Client.ApiResponse<AuthMeResponse> localVarResponse = UpdateCurrentUserWithHttpInfo(authMePatchRequest);
             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Token Exchange Exchange a Firebase ID token for account info.  Use this on login: the client authenticates with Firebase, sends the ID token here, and receives the InvoicePDFs account details. The Firebase token itself is used as the Bearer token for subsequent API calls.
+        /// Update Current User Update the authenticated account&#39;s name or email.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="authTokenRequest"></param>
+        /// <param name="authMePatchRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of AuthTokenResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<AuthTokenResponse> TokenExchangeApiV1AuthTokenPostWithHttpInfo(AuthTokenRequest authTokenRequest, int operationIndex = 0)
+        /// <returns>ApiResponse of AuthMeResponse</returns>
+        public InvoicePDFs.Client.ApiResponse<AuthMeResponse> UpdateCurrentUserWithHttpInfo(AuthMePatchRequest authMePatchRequest, int operationIndex = 0)
         {
-            // verify the required parameter 'authTokenRequest' is set
-            if (authTokenRequest == null)
+            // verify the required parameter 'authMePatchRequest' is set
+            if (authMePatchRequest == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'authTokenRequest' when calling AuthApi->TokenExchangeApiV1AuthTokenPost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'authMePatchRequest' when calling AuthApi->UpdateCurrentUser");
             }
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -1597,17 +1585,23 @@ namespace InvoicePDFs.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = authTokenRequest;
+            localVarRequestOptions.Data = authMePatchRequest;
 
-            localVarRequestOptions.Operation = "AuthApi.TokenExchangeApiV1AuthTokenPost";
+            localVarRequestOptions.Operation = "AuthApi.UpdateCurrentUser";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (HTTPBearer) required
+            // bearer authentication required
+            if (!string.IsNullOrEmpty(this.Configuration.AccessToken) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Bearer " + this.Configuration.AccessToken);
+            }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<AuthTokenResponse>("/api/v1/auth/token", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Patch<AuthMeResponse>("/api/v1/auth/me", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("TokenExchangeApiV1AuthTokenPost", localVarResponse);
+                Exception _exception = this.ExceptionFactory("UpdateCurrentUser", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1618,33 +1612,33 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Token Exchange Exchange a Firebase ID token for account info.  Use this on login: the client authenticates with Firebase, sends the ID token here, and receives the InvoicePDFs account details. The Firebase token itself is used as the Bearer token for subsequent API calls.
+        /// Update Current User Update the authenticated account&#39;s name or email.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="authTokenRequest"></param>
+        /// <param name="authMePatchRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of AuthTokenResponse</returns>
-        public async System.Threading.Tasks.Task<AuthTokenResponse> TokenExchangeApiV1AuthTokenPostAsync(AuthTokenRequest authTokenRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of AuthMeResponse</returns>
+        public async System.Threading.Tasks.Task<AuthMeResponse> UpdateCurrentUserAsync(AuthMePatchRequest authMePatchRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<AuthTokenResponse> localVarResponse = await TokenExchangeApiV1AuthTokenPostWithHttpInfoAsync(authTokenRequest, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<AuthMeResponse> localVarResponse = await UpdateCurrentUserWithHttpInfoAsync(authMePatchRequest, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Token Exchange Exchange a Firebase ID token for account info.  Use this on login: the client authenticates with Firebase, sends the ID token here, and receives the InvoicePDFs account details. The Firebase token itself is used as the Bearer token for subsequent API calls.
+        /// Update Current User Update the authenticated account&#39;s name or email.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="authTokenRequest"></param>
+        /// <param name="authMePatchRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (AuthTokenResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<AuthTokenResponse>> TokenExchangeApiV1AuthTokenPostWithHttpInfoAsync(AuthTokenRequest authTokenRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (AuthMeResponse)</returns>
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<AuthMeResponse>> UpdateCurrentUserWithHttpInfoAsync(AuthMePatchRequest authMePatchRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            // verify the required parameter 'authTokenRequest' is set
-            if (authTokenRequest == null)
+            // verify the required parameter 'authMePatchRequest' is set
+            if (authMePatchRequest == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'authTokenRequest' when calling AuthApi->TokenExchangeApiV1AuthTokenPost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'authMePatchRequest' when calling AuthApi->UpdateCurrentUser");
             }
 
 
@@ -1671,18 +1665,24 @@ namespace InvoicePDFs.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = authTokenRequest;
+            localVarRequestOptions.Data = authMePatchRequest;
 
-            localVarRequestOptions.Operation = "AuthApi.TokenExchangeApiV1AuthTokenPost";
+            localVarRequestOptions.Operation = "AuthApi.UpdateCurrentUser";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (HTTPBearer) required
+            // bearer authentication required
+            if (!string.IsNullOrEmpty(this.Configuration.AccessToken) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Bearer " + this.Configuration.AccessToken);
+            }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<AuthTokenResponse>("/api/v1/auth/token", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PatchAsync<AuthMeResponse>("/api/v1/auth/me", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("TokenExchangeApiV1AuthTokenPost", localVarResponse);
+                Exception _exception = this.ExceptionFactory("UpdateCurrentUser", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

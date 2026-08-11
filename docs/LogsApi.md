@@ -4,11 +4,11 @@ All URIs are relative to *http://localhost*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
-| [**ListLogsApiV1LogsGet**](LogsApi.md#listlogsapiv1logsget) | **GET** /api/v1/logs | List Logs |
+| [**ListLogs**](LogsApi.md#listlogs) | **GET** /api/v1/logs | List Logs |
 
-<a id="listlogsapiv1logsget"></a>
-# **ListLogsApiV1LogsGet**
-> ApiRequestLogsListResponse ListLogsApiV1LogsGet (string? status = null, int? limit = null)
+<a id="listlogs"></a>
+# **ListLogs**
+> ApiRequestLogsListResponse ListLogs (string? status = null, int? limit = null)
 
 List Logs
 
@@ -22,7 +22,7 @@ using InvoicePDFs.Model;
 
 namespace Example
 {
-    public class ListLogsApiV1LogsGetExample
+    public class ListLogsExample
     {
         public static void Main()
         {
@@ -38,12 +38,12 @@ namespace Example
             try
             {
                 // List Logs
-                ApiRequestLogsListResponse result = apiInstance.ListLogsApiV1LogsGet(status, limit);
+                ApiRequestLogsListResponse result = apiInstance.ListLogs(status, limit);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling LogsApi.ListLogsApiV1LogsGet: " + e.Message);
+                Debug.Print("Exception when calling LogsApi.ListLogs: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -52,21 +52,21 @@ namespace Example
 }
 ```
 
-#### Using the ListLogsApiV1LogsGetWithHttpInfo variant
+#### Using the ListLogsWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // List Logs
-    ApiResponse<ApiRequestLogsListResponse> response = apiInstance.ListLogsApiV1LogsGetWithHttpInfo(status, limit);
+    ApiResponse<ApiRequestLogsListResponse> response = apiInstance.ListLogsWithHttpInfo(status, limit);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling LogsApi.ListLogsApiV1LogsGetWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling LogsApi.ListLogsWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }

@@ -34,7 +34,7 @@ namespace InvoicePDFs.Api
         /// <param name="idempotencyKey"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>BusinessProfileResponse</returns>
-        BusinessProfileResponse CreateBusinessProfileApiV1BusinessProfilesPost(BusinessProfileCreate businessProfileCreate, string? idempotencyKey = default(string?), int operationIndex = 0);
+        BusinessProfileResponse CreateBusinessProfile(BusinessProfileCreate businessProfileCreate, string? idempotencyKey = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// Create Business Profile
@@ -47,7 +47,7 @@ namespace InvoicePDFs.Api
         /// <param name="idempotencyKey"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of BusinessProfileResponse</returns>
-        ApiResponse<BusinessProfileResponse> CreateBusinessProfileApiV1BusinessProfilesPostWithHttpInfo(BusinessProfileCreate businessProfileCreate, string? idempotencyKey = default(string?), int operationIndex = 0);
+        ApiResponse<BusinessProfileResponse> CreateBusinessProfileWithHttpInfo(BusinessProfileCreate businessProfileCreate, string? idempotencyKey = default(string?), int operationIndex = 0);
         /// <summary>
         /// Delete Business Profile
         /// </summary>
@@ -55,7 +55,7 @@ namespace InvoicePDFs.Api
         /// <param name="businessProfileId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>SimpleBoolResponse</returns>
-        SimpleBoolResponse DeleteBusinessProfileApiV1BusinessProfilesBusinessProfileIdDelete(string businessProfileId, int operationIndex = 0);
+        SimpleBoolResponse DeleteBusinessProfile(string businessProfileId, int operationIndex = 0);
 
         /// <summary>
         /// Delete Business Profile
@@ -67,7 +67,7 @@ namespace InvoicePDFs.Api
         /// <param name="businessProfileId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of SimpleBoolResponse</returns>
-        ApiResponse<SimpleBoolResponse> DeleteBusinessProfileApiV1BusinessProfilesBusinessProfileIdDeleteWithHttpInfo(string businessProfileId, int operationIndex = 0);
+        ApiResponse<SimpleBoolResponse> DeleteBusinessProfileWithHttpInfo(string businessProfileId, int operationIndex = 0);
         /// <summary>
         /// Get Business Profile
         /// </summary>
@@ -75,7 +75,7 @@ namespace InvoicePDFs.Api
         /// <param name="businessProfileId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>BusinessProfileResponse</returns>
-        BusinessProfileResponse GetBusinessProfileApiV1BusinessProfilesBusinessProfileIdGet(string businessProfileId, int operationIndex = 0);
+        BusinessProfileResponse GetBusinessProfile(string businessProfileId, int operationIndex = 0);
 
         /// <summary>
         /// Get Business Profile
@@ -87,7 +87,7 @@ namespace InvoicePDFs.Api
         /// <param name="businessProfileId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of BusinessProfileResponse</returns>
-        ApiResponse<BusinessProfileResponse> GetBusinessProfileApiV1BusinessProfilesBusinessProfileIdGetWithHttpInfo(string businessProfileId, int operationIndex = 0);
+        ApiResponse<BusinessProfileResponse> GetBusinessProfileWithHttpInfo(string businessProfileId, int operationIndex = 0);
         /// <summary>
         /// List Business Profiles
         /// </summary>
@@ -96,7 +96,7 @@ namespace InvoicePDFs.Api
         /// <param name="cursor"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>BusinessProfilesListResponse</returns>
-        BusinessProfilesListResponse ListBusinessProfilesApiV1BusinessProfilesGet(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0);
+        BusinessProfilesListResponse ListBusinessProfiles(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// List Business Profiles
@@ -109,9 +109,9 @@ namespace InvoicePDFs.Api
         /// <param name="cursor"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of BusinessProfilesListResponse</returns>
-        ApiResponse<BusinessProfilesListResponse> ListBusinessProfilesApiV1BusinessProfilesGetWithHttpInfo(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0);
+        ApiResponse<BusinessProfilesListResponse> ListBusinessProfilesWithHttpInfo(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0);
         /// <summary>
-        /// Patch Business Profile
+        /// Update Business Profile
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessProfileId"></param>
@@ -119,10 +119,10 @@ namespace InvoicePDFs.Api
         /// <param name="idempotencyKey"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>BusinessProfileResponse</returns>
-        BusinessProfileResponse PatchBusinessProfileApiV1BusinessProfilesBusinessProfileIdPatch(string businessProfileId, BusinessProfilePatch businessProfilePatch, string? idempotencyKey = default(string?), int operationIndex = 0);
+        BusinessProfileResponse UpdateBusinessProfile(string businessProfileId, BusinessProfilePatch businessProfilePatch, string? idempotencyKey = default(string?), int operationIndex = 0);
 
         /// <summary>
-        /// Patch Business Profile
+        /// Update Business Profile
         /// </summary>
         /// <remarks>
         /// 
@@ -133,7 +133,7 @@ namespace InvoicePDFs.Api
         /// <param name="idempotencyKey"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of BusinessProfileResponse</returns>
-        ApiResponse<BusinessProfileResponse> PatchBusinessProfileApiV1BusinessProfilesBusinessProfileIdPatchWithHttpInfo(string businessProfileId, BusinessProfilePatch businessProfilePatch, string? idempotencyKey = default(string?), int operationIndex = 0);
+        ApiResponse<BusinessProfileResponse> UpdateBusinessProfileWithHttpInfo(string businessProfileId, BusinessProfilePatch businessProfilePatch, string? idempotencyKey = default(string?), int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -155,7 +155,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of BusinessProfileResponse</returns>
-        System.Threading.Tasks.Task<BusinessProfileResponse> CreateBusinessProfileApiV1BusinessProfilesPostAsync(BusinessProfileCreate businessProfileCreate, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<BusinessProfileResponse> CreateBusinessProfileAsync(BusinessProfileCreate businessProfileCreate, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Create Business Profile
@@ -169,7 +169,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (BusinessProfileResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<BusinessProfileResponse>> CreateBusinessProfileApiV1BusinessProfilesPostWithHttpInfoAsync(BusinessProfileCreate businessProfileCreate, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<BusinessProfileResponse>> CreateBusinessProfileWithHttpInfoAsync(BusinessProfileCreate businessProfileCreate, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Delete Business Profile
         /// </summary>
@@ -181,7 +181,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of SimpleBoolResponse</returns>
-        System.Threading.Tasks.Task<SimpleBoolResponse> DeleteBusinessProfileApiV1BusinessProfilesBusinessProfileIdDeleteAsync(string businessProfileId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<SimpleBoolResponse> DeleteBusinessProfileAsync(string businessProfileId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Delete Business Profile
@@ -194,7 +194,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (SimpleBoolResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SimpleBoolResponse>> DeleteBusinessProfileApiV1BusinessProfilesBusinessProfileIdDeleteWithHttpInfoAsync(string businessProfileId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<SimpleBoolResponse>> DeleteBusinessProfileWithHttpInfoAsync(string businessProfileId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Get Business Profile
         /// </summary>
@@ -206,7 +206,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of BusinessProfileResponse</returns>
-        System.Threading.Tasks.Task<BusinessProfileResponse> GetBusinessProfileApiV1BusinessProfilesBusinessProfileIdGetAsync(string businessProfileId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<BusinessProfileResponse> GetBusinessProfileAsync(string businessProfileId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Get Business Profile
@@ -219,7 +219,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (BusinessProfileResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<BusinessProfileResponse>> GetBusinessProfileApiV1BusinessProfilesBusinessProfileIdGetWithHttpInfoAsync(string businessProfileId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<BusinessProfileResponse>> GetBusinessProfileWithHttpInfoAsync(string businessProfileId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// List Business Profiles
         /// </summary>
@@ -232,7 +232,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of BusinessProfilesListResponse</returns>
-        System.Threading.Tasks.Task<BusinessProfilesListResponse> ListBusinessProfilesApiV1BusinessProfilesGetAsync(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<BusinessProfilesListResponse> ListBusinessProfilesAsync(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// List Business Profiles
@@ -246,9 +246,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (BusinessProfilesListResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<BusinessProfilesListResponse>> ListBusinessProfilesApiV1BusinessProfilesGetWithHttpInfoAsync(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<BusinessProfilesListResponse>> ListBusinessProfilesWithHttpInfoAsync(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// Patch Business Profile
+        /// Update Business Profile
         /// </summary>
         /// <remarks>
         /// 
@@ -260,10 +260,10 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of BusinessProfileResponse</returns>
-        System.Threading.Tasks.Task<BusinessProfileResponse> PatchBusinessProfileApiV1BusinessProfilesBusinessProfileIdPatchAsync(string businessProfileId, BusinessProfilePatch businessProfilePatch, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<BusinessProfileResponse> UpdateBusinessProfileAsync(string businessProfileId, BusinessProfilePatch businessProfilePatch, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// Patch Business Profile
+        /// Update Business Profile
         /// </summary>
         /// <remarks>
         /// 
@@ -275,7 +275,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (BusinessProfileResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<BusinessProfileResponse>> PatchBusinessProfileApiV1BusinessProfilesBusinessProfileIdPatchWithHttpInfoAsync(string businessProfileId, BusinessProfilePatch businessProfilePatch, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<BusinessProfileResponse>> UpdateBusinessProfileWithHttpInfoAsync(string businessProfileId, BusinessProfilePatch businessProfilePatch, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -404,9 +404,9 @@ namespace InvoicePDFs.Api
         /// <param name="idempotencyKey"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>BusinessProfileResponse</returns>
-        public BusinessProfileResponse CreateBusinessProfileApiV1BusinessProfilesPost(BusinessProfileCreate businessProfileCreate, string? idempotencyKey = default(string?), int operationIndex = 0)
+        public BusinessProfileResponse CreateBusinessProfile(BusinessProfileCreate businessProfileCreate, string? idempotencyKey = default(string?), int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<BusinessProfileResponse> localVarResponse = CreateBusinessProfileApiV1BusinessProfilesPostWithHttpInfo(businessProfileCreate, idempotencyKey);
+            InvoicePDFs.Client.ApiResponse<BusinessProfileResponse> localVarResponse = CreateBusinessProfileWithHttpInfo(businessProfileCreate, idempotencyKey);
             return localVarResponse.Data;
         }
 
@@ -418,12 +418,12 @@ namespace InvoicePDFs.Api
         /// <param name="idempotencyKey"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of BusinessProfileResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<BusinessProfileResponse> CreateBusinessProfileApiV1BusinessProfilesPostWithHttpInfo(BusinessProfileCreate businessProfileCreate, string? idempotencyKey = default(string?), int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<BusinessProfileResponse> CreateBusinessProfileWithHttpInfo(BusinessProfileCreate businessProfileCreate, string? idempotencyKey = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'businessProfileCreate' is set
             if (businessProfileCreate == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'businessProfileCreate' when calling BusinessProfilesApi->CreateBusinessProfileApiV1BusinessProfilesPost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'businessProfileCreate' when calling BusinessProfilesApi->CreateBusinessProfile");
             }
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -455,7 +455,7 @@ namespace InvoicePDFs.Api
             }
             localVarRequestOptions.Data = businessProfileCreate;
 
-            localVarRequestOptions.Operation = "BusinessProfilesApi.CreateBusinessProfileApiV1BusinessProfilesPost";
+            localVarRequestOptions.Operation = "BusinessProfilesApi.CreateBusinessProfile";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -469,7 +469,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Post<BusinessProfileResponse>("/api/v1/business-profiles", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("CreateBusinessProfileApiV1BusinessProfilesPost", localVarResponse);
+                Exception _exception = this.ExceptionFactory("CreateBusinessProfile", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -488,9 +488,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of BusinessProfileResponse</returns>
-        public async System.Threading.Tasks.Task<BusinessProfileResponse> CreateBusinessProfileApiV1BusinessProfilesPostAsync(BusinessProfileCreate businessProfileCreate, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<BusinessProfileResponse> CreateBusinessProfileAsync(BusinessProfileCreate businessProfileCreate, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<BusinessProfileResponse> localVarResponse = await CreateBusinessProfileApiV1BusinessProfilesPostWithHttpInfoAsync(businessProfileCreate, idempotencyKey, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<BusinessProfileResponse> localVarResponse = await CreateBusinessProfileWithHttpInfoAsync(businessProfileCreate, idempotencyKey, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -503,12 +503,12 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (BusinessProfileResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<BusinessProfileResponse>> CreateBusinessProfileApiV1BusinessProfilesPostWithHttpInfoAsync(BusinessProfileCreate businessProfileCreate, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<BusinessProfileResponse>> CreateBusinessProfileWithHttpInfoAsync(BusinessProfileCreate businessProfileCreate, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'businessProfileCreate' is set
             if (businessProfileCreate == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'businessProfileCreate' when calling BusinessProfilesApi->CreateBusinessProfileApiV1BusinessProfilesPost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'businessProfileCreate' when calling BusinessProfilesApi->CreateBusinessProfile");
             }
 
 
@@ -541,7 +541,7 @@ namespace InvoicePDFs.Api
             }
             localVarRequestOptions.Data = businessProfileCreate;
 
-            localVarRequestOptions.Operation = "BusinessProfilesApi.CreateBusinessProfileApiV1BusinessProfilesPost";
+            localVarRequestOptions.Operation = "BusinessProfilesApi.CreateBusinessProfile";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -556,7 +556,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("CreateBusinessProfileApiV1BusinessProfilesPost", localVarResponse);
+                Exception _exception = this.ExceptionFactory("CreateBusinessProfile", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -573,9 +573,9 @@ namespace InvoicePDFs.Api
         /// <param name="businessProfileId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>SimpleBoolResponse</returns>
-        public SimpleBoolResponse DeleteBusinessProfileApiV1BusinessProfilesBusinessProfileIdDelete(string businessProfileId, int operationIndex = 0)
+        public SimpleBoolResponse DeleteBusinessProfile(string businessProfileId, int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<SimpleBoolResponse> localVarResponse = DeleteBusinessProfileApiV1BusinessProfilesBusinessProfileIdDeleteWithHttpInfo(businessProfileId);
+            InvoicePDFs.Client.ApiResponse<SimpleBoolResponse> localVarResponse = DeleteBusinessProfileWithHttpInfo(businessProfileId);
             return localVarResponse.Data;
         }
 
@@ -586,12 +586,12 @@ namespace InvoicePDFs.Api
         /// <param name="businessProfileId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of SimpleBoolResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<SimpleBoolResponse> DeleteBusinessProfileApiV1BusinessProfilesBusinessProfileIdDeleteWithHttpInfo(string businessProfileId, int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<SimpleBoolResponse> DeleteBusinessProfileWithHttpInfo(string businessProfileId, int operationIndex = 0)
         {
             // verify the required parameter 'businessProfileId' is set
             if (businessProfileId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'businessProfileId' when calling BusinessProfilesApi->DeleteBusinessProfileApiV1BusinessProfilesBusinessProfileIdDelete");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'businessProfileId' when calling BusinessProfilesApi->DeleteBusinessProfile");
             }
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -618,7 +618,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("business_profile_id", InvoicePDFs.Client.ClientUtils.ParameterToString(businessProfileId)); // path parameter
 
-            localVarRequestOptions.Operation = "BusinessProfilesApi.DeleteBusinessProfileApiV1BusinessProfilesBusinessProfileIdDelete";
+            localVarRequestOptions.Operation = "BusinessProfilesApi.DeleteBusinessProfile";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -632,7 +632,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Delete<SimpleBoolResponse>("/api/v1/business-profiles/{business_profile_id}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteBusinessProfileApiV1BusinessProfilesBusinessProfileIdDelete", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteBusinessProfile", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -650,9 +650,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of SimpleBoolResponse</returns>
-        public async System.Threading.Tasks.Task<SimpleBoolResponse> DeleteBusinessProfileApiV1BusinessProfilesBusinessProfileIdDeleteAsync(string businessProfileId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<SimpleBoolResponse> DeleteBusinessProfileAsync(string businessProfileId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<SimpleBoolResponse> localVarResponse = await DeleteBusinessProfileApiV1BusinessProfilesBusinessProfileIdDeleteWithHttpInfoAsync(businessProfileId, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<SimpleBoolResponse> localVarResponse = await DeleteBusinessProfileWithHttpInfoAsync(businessProfileId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -664,12 +664,12 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (SimpleBoolResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<SimpleBoolResponse>> DeleteBusinessProfileApiV1BusinessProfilesBusinessProfileIdDeleteWithHttpInfoAsync(string businessProfileId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<SimpleBoolResponse>> DeleteBusinessProfileWithHttpInfoAsync(string businessProfileId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'businessProfileId' is set
             if (businessProfileId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'businessProfileId' when calling BusinessProfilesApi->DeleteBusinessProfileApiV1BusinessProfilesBusinessProfileIdDelete");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'businessProfileId' when calling BusinessProfilesApi->DeleteBusinessProfile");
             }
 
 
@@ -697,7 +697,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("business_profile_id", InvoicePDFs.Client.ClientUtils.ParameterToString(businessProfileId)); // path parameter
 
-            localVarRequestOptions.Operation = "BusinessProfilesApi.DeleteBusinessProfileApiV1BusinessProfilesBusinessProfileIdDelete";
+            localVarRequestOptions.Operation = "BusinessProfilesApi.DeleteBusinessProfile";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -712,7 +712,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteBusinessProfileApiV1BusinessProfilesBusinessProfileIdDelete", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteBusinessProfile", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -729,9 +729,9 @@ namespace InvoicePDFs.Api
         /// <param name="businessProfileId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>BusinessProfileResponse</returns>
-        public BusinessProfileResponse GetBusinessProfileApiV1BusinessProfilesBusinessProfileIdGet(string businessProfileId, int operationIndex = 0)
+        public BusinessProfileResponse GetBusinessProfile(string businessProfileId, int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<BusinessProfileResponse> localVarResponse = GetBusinessProfileApiV1BusinessProfilesBusinessProfileIdGetWithHttpInfo(businessProfileId);
+            InvoicePDFs.Client.ApiResponse<BusinessProfileResponse> localVarResponse = GetBusinessProfileWithHttpInfo(businessProfileId);
             return localVarResponse.Data;
         }
 
@@ -742,12 +742,12 @@ namespace InvoicePDFs.Api
         /// <param name="businessProfileId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of BusinessProfileResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<BusinessProfileResponse> GetBusinessProfileApiV1BusinessProfilesBusinessProfileIdGetWithHttpInfo(string businessProfileId, int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<BusinessProfileResponse> GetBusinessProfileWithHttpInfo(string businessProfileId, int operationIndex = 0)
         {
             // verify the required parameter 'businessProfileId' is set
             if (businessProfileId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'businessProfileId' when calling BusinessProfilesApi->GetBusinessProfileApiV1BusinessProfilesBusinessProfileIdGet");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'businessProfileId' when calling BusinessProfilesApi->GetBusinessProfile");
             }
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -774,7 +774,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("business_profile_id", InvoicePDFs.Client.ClientUtils.ParameterToString(businessProfileId)); // path parameter
 
-            localVarRequestOptions.Operation = "BusinessProfilesApi.GetBusinessProfileApiV1BusinessProfilesBusinessProfileIdGet";
+            localVarRequestOptions.Operation = "BusinessProfilesApi.GetBusinessProfile";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -788,7 +788,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Get<BusinessProfileResponse>("/api/v1/business-profiles/{business_profile_id}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetBusinessProfileApiV1BusinessProfilesBusinessProfileIdGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetBusinessProfile", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -806,9 +806,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of BusinessProfileResponse</returns>
-        public async System.Threading.Tasks.Task<BusinessProfileResponse> GetBusinessProfileApiV1BusinessProfilesBusinessProfileIdGetAsync(string businessProfileId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<BusinessProfileResponse> GetBusinessProfileAsync(string businessProfileId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<BusinessProfileResponse> localVarResponse = await GetBusinessProfileApiV1BusinessProfilesBusinessProfileIdGetWithHttpInfoAsync(businessProfileId, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<BusinessProfileResponse> localVarResponse = await GetBusinessProfileWithHttpInfoAsync(businessProfileId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -820,12 +820,12 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (BusinessProfileResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<BusinessProfileResponse>> GetBusinessProfileApiV1BusinessProfilesBusinessProfileIdGetWithHttpInfoAsync(string businessProfileId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<BusinessProfileResponse>> GetBusinessProfileWithHttpInfoAsync(string businessProfileId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'businessProfileId' is set
             if (businessProfileId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'businessProfileId' when calling BusinessProfilesApi->GetBusinessProfileApiV1BusinessProfilesBusinessProfileIdGet");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'businessProfileId' when calling BusinessProfilesApi->GetBusinessProfile");
             }
 
 
@@ -853,7 +853,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("business_profile_id", InvoicePDFs.Client.ClientUtils.ParameterToString(businessProfileId)); // path parameter
 
-            localVarRequestOptions.Operation = "BusinessProfilesApi.GetBusinessProfileApiV1BusinessProfilesBusinessProfileIdGet";
+            localVarRequestOptions.Operation = "BusinessProfilesApi.GetBusinessProfile";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -868,7 +868,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetBusinessProfileApiV1BusinessProfilesBusinessProfileIdGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetBusinessProfile", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -886,9 +886,9 @@ namespace InvoicePDFs.Api
         /// <param name="cursor"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>BusinessProfilesListResponse</returns>
-        public BusinessProfilesListResponse ListBusinessProfilesApiV1BusinessProfilesGet(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0)
+        public BusinessProfilesListResponse ListBusinessProfiles(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<BusinessProfilesListResponse> localVarResponse = ListBusinessProfilesApiV1BusinessProfilesGetWithHttpInfo(limit, cursor);
+            InvoicePDFs.Client.ApiResponse<BusinessProfilesListResponse> localVarResponse = ListBusinessProfilesWithHttpInfo(limit, cursor);
             return localVarResponse.Data;
         }
 
@@ -900,7 +900,7 @@ namespace InvoicePDFs.Api
         /// <param name="cursor"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of BusinessProfilesListResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<BusinessProfilesListResponse> ListBusinessProfilesApiV1BusinessProfilesGetWithHttpInfo(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<BusinessProfilesListResponse> ListBusinessProfilesWithHttpInfo(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0)
         {
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
 
@@ -933,7 +933,7 @@ namespace InvoicePDFs.Api
                 localVarRequestOptions.QueryParameters.Add(InvoicePDFs.Client.ClientUtils.ParameterToMultiMap("", "cursor", cursor));
             }
 
-            localVarRequestOptions.Operation = "BusinessProfilesApi.ListBusinessProfilesApiV1BusinessProfilesGet";
+            localVarRequestOptions.Operation = "BusinessProfilesApi.ListBusinessProfiles";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -947,7 +947,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Get<BusinessProfilesListResponse>("/api/v1/business-profiles", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListBusinessProfilesApiV1BusinessProfilesGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("ListBusinessProfiles", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -966,9 +966,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of BusinessProfilesListResponse</returns>
-        public async System.Threading.Tasks.Task<BusinessProfilesListResponse> ListBusinessProfilesApiV1BusinessProfilesGetAsync(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<BusinessProfilesListResponse> ListBusinessProfilesAsync(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<BusinessProfilesListResponse> localVarResponse = await ListBusinessProfilesApiV1BusinessProfilesGetWithHttpInfoAsync(limit, cursor, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<BusinessProfilesListResponse> localVarResponse = await ListBusinessProfilesWithHttpInfoAsync(limit, cursor, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -981,7 +981,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (BusinessProfilesListResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<BusinessProfilesListResponse>> ListBusinessProfilesApiV1BusinessProfilesGetWithHttpInfoAsync(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<BusinessProfilesListResponse>> ListBusinessProfilesWithHttpInfoAsync(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -1015,7 +1015,7 @@ namespace InvoicePDFs.Api
                 localVarRequestOptions.QueryParameters.Add(InvoicePDFs.Client.ClientUtils.ParameterToMultiMap("", "cursor", cursor));
             }
 
-            localVarRequestOptions.Operation = "BusinessProfilesApi.ListBusinessProfilesApiV1BusinessProfilesGet";
+            localVarRequestOptions.Operation = "BusinessProfilesApi.ListBusinessProfiles";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -1030,7 +1030,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListBusinessProfilesApiV1BusinessProfilesGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("ListBusinessProfiles", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1041,7 +1041,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Patch Business Profile 
+        /// Update Business Profile 
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessProfileId"></param>
@@ -1049,14 +1049,14 @@ namespace InvoicePDFs.Api
         /// <param name="idempotencyKey"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>BusinessProfileResponse</returns>
-        public BusinessProfileResponse PatchBusinessProfileApiV1BusinessProfilesBusinessProfileIdPatch(string businessProfileId, BusinessProfilePatch businessProfilePatch, string? idempotencyKey = default(string?), int operationIndex = 0)
+        public BusinessProfileResponse UpdateBusinessProfile(string businessProfileId, BusinessProfilePatch businessProfilePatch, string? idempotencyKey = default(string?), int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<BusinessProfileResponse> localVarResponse = PatchBusinessProfileApiV1BusinessProfilesBusinessProfileIdPatchWithHttpInfo(businessProfileId, businessProfilePatch, idempotencyKey);
+            InvoicePDFs.Client.ApiResponse<BusinessProfileResponse> localVarResponse = UpdateBusinessProfileWithHttpInfo(businessProfileId, businessProfilePatch, idempotencyKey);
             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Patch Business Profile 
+        /// Update Business Profile 
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessProfileId"></param>
@@ -1064,18 +1064,18 @@ namespace InvoicePDFs.Api
         /// <param name="idempotencyKey"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of BusinessProfileResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<BusinessProfileResponse> PatchBusinessProfileApiV1BusinessProfilesBusinessProfileIdPatchWithHttpInfo(string businessProfileId, BusinessProfilePatch businessProfilePatch, string? idempotencyKey = default(string?), int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<BusinessProfileResponse> UpdateBusinessProfileWithHttpInfo(string businessProfileId, BusinessProfilePatch businessProfilePatch, string? idempotencyKey = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'businessProfileId' is set
             if (businessProfileId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'businessProfileId' when calling BusinessProfilesApi->PatchBusinessProfileApiV1BusinessProfilesBusinessProfileIdPatch");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'businessProfileId' when calling BusinessProfilesApi->UpdateBusinessProfile");
             }
 
             // verify the required parameter 'businessProfilePatch' is set
             if (businessProfilePatch == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'businessProfilePatch' when calling BusinessProfilesApi->PatchBusinessProfileApiV1BusinessProfilesBusinessProfileIdPatch");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'businessProfilePatch' when calling BusinessProfilesApi->UpdateBusinessProfile");
             }
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -1108,7 +1108,7 @@ namespace InvoicePDFs.Api
             }
             localVarRequestOptions.Data = businessProfilePatch;
 
-            localVarRequestOptions.Operation = "BusinessProfilesApi.PatchBusinessProfileApiV1BusinessProfilesBusinessProfileIdPatch";
+            localVarRequestOptions.Operation = "BusinessProfilesApi.UpdateBusinessProfile";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -1122,7 +1122,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Patch<BusinessProfileResponse>("/api/v1/business-profiles/{business_profile_id}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PatchBusinessProfileApiV1BusinessProfilesBusinessProfileIdPatch", localVarResponse);
+                Exception _exception = this.ExceptionFactory("UpdateBusinessProfile", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1133,7 +1133,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Patch Business Profile 
+        /// Update Business Profile 
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessProfileId"></param>
@@ -1142,14 +1142,14 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of BusinessProfileResponse</returns>
-        public async System.Threading.Tasks.Task<BusinessProfileResponse> PatchBusinessProfileApiV1BusinessProfilesBusinessProfileIdPatchAsync(string businessProfileId, BusinessProfilePatch businessProfilePatch, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<BusinessProfileResponse> UpdateBusinessProfileAsync(string businessProfileId, BusinessProfilePatch businessProfilePatch, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<BusinessProfileResponse> localVarResponse = await PatchBusinessProfileApiV1BusinessProfilesBusinessProfileIdPatchWithHttpInfoAsync(businessProfileId, businessProfilePatch, idempotencyKey, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<BusinessProfileResponse> localVarResponse = await UpdateBusinessProfileWithHttpInfoAsync(businessProfileId, businessProfilePatch, idempotencyKey, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Patch Business Profile 
+        /// Update Business Profile 
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessProfileId"></param>
@@ -1158,18 +1158,18 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (BusinessProfileResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<BusinessProfileResponse>> PatchBusinessProfileApiV1BusinessProfilesBusinessProfileIdPatchWithHttpInfoAsync(string businessProfileId, BusinessProfilePatch businessProfilePatch, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<BusinessProfileResponse>> UpdateBusinessProfileWithHttpInfoAsync(string businessProfileId, BusinessProfilePatch businessProfilePatch, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'businessProfileId' is set
             if (businessProfileId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'businessProfileId' when calling BusinessProfilesApi->PatchBusinessProfileApiV1BusinessProfilesBusinessProfileIdPatch");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'businessProfileId' when calling BusinessProfilesApi->UpdateBusinessProfile");
             }
 
             // verify the required parameter 'businessProfilePatch' is set
             if (businessProfilePatch == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'businessProfilePatch' when calling BusinessProfilesApi->PatchBusinessProfileApiV1BusinessProfilesBusinessProfileIdPatch");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'businessProfilePatch' when calling BusinessProfilesApi->UpdateBusinessProfile");
             }
 
 
@@ -1203,7 +1203,7 @@ namespace InvoicePDFs.Api
             }
             localVarRequestOptions.Data = businessProfilePatch;
 
-            localVarRequestOptions.Operation = "BusinessProfilesApi.PatchBusinessProfileApiV1BusinessProfilesBusinessProfileIdPatch";
+            localVarRequestOptions.Operation = "BusinessProfilesApi.UpdateBusinessProfile";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -1218,7 +1218,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PatchBusinessProfileApiV1BusinessProfilesBusinessProfileIdPatch", localVarResponse);
+                Exception _exception = this.ExceptionFactory("UpdateBusinessProfile", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

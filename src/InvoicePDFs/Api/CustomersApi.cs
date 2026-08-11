@@ -34,7 +34,7 @@ namespace InvoicePDFs.Api
         /// <param name="idempotencyKey"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CustomerResponse</returns>
-        CustomerResponse CreateCustomerApiV1CustomersPost(CustomerCreate customerCreate, string? idempotencyKey = default(string?), int operationIndex = 0);
+        CustomerResponse CreateCustomer(CustomerCreate customerCreate, string? idempotencyKey = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// Create Customer
@@ -47,7 +47,7 @@ namespace InvoicePDFs.Api
         /// <param name="idempotencyKey"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CustomerResponse</returns>
-        ApiResponse<CustomerResponse> CreateCustomerApiV1CustomersPostWithHttpInfo(CustomerCreate customerCreate, string? idempotencyKey = default(string?), int operationIndex = 0);
+        ApiResponse<CustomerResponse> CreateCustomerWithHttpInfo(CustomerCreate customerCreate, string? idempotencyKey = default(string?), int operationIndex = 0);
         /// <summary>
         /// Delete Customer
         /// </summary>
@@ -55,7 +55,7 @@ namespace InvoicePDFs.Api
         /// <param name="customerId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>SimpleBoolResponse</returns>
-        SimpleBoolResponse DeleteCustomerApiV1CustomersCustomerIdDelete(string customerId, int operationIndex = 0);
+        SimpleBoolResponse DeleteCustomer(string customerId, int operationIndex = 0);
 
         /// <summary>
         /// Delete Customer
@@ -67,7 +67,7 @@ namespace InvoicePDFs.Api
         /// <param name="customerId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of SimpleBoolResponse</returns>
-        ApiResponse<SimpleBoolResponse> DeleteCustomerApiV1CustomersCustomerIdDeleteWithHttpInfo(string customerId, int operationIndex = 0);
+        ApiResponse<SimpleBoolResponse> DeleteCustomerWithHttpInfo(string customerId, int operationIndex = 0);
         /// <summary>
         /// Get Customer
         /// </summary>
@@ -75,7 +75,7 @@ namespace InvoicePDFs.Api
         /// <param name="customerId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CustomerResponse</returns>
-        CustomerResponse GetCustomerApiV1CustomersCustomerIdGet(string customerId, int operationIndex = 0);
+        CustomerResponse GetCustomer(string customerId, int operationIndex = 0);
 
         /// <summary>
         /// Get Customer
@@ -87,7 +87,7 @@ namespace InvoicePDFs.Api
         /// <param name="customerId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CustomerResponse</returns>
-        ApiResponse<CustomerResponse> GetCustomerApiV1CustomersCustomerIdGetWithHttpInfo(string customerId, int operationIndex = 0);
+        ApiResponse<CustomerResponse> GetCustomerWithHttpInfo(string customerId, int operationIndex = 0);
         /// <summary>
         /// List Customers
         /// </summary>
@@ -96,7 +96,7 @@ namespace InvoicePDFs.Api
         /// <param name="cursor"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CustomersListResponse</returns>
-        CustomersListResponse ListCustomersApiV1CustomersGet(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0);
+        CustomersListResponse ListCustomers(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// List Customers
@@ -109,9 +109,9 @@ namespace InvoicePDFs.Api
         /// <param name="cursor"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CustomersListResponse</returns>
-        ApiResponse<CustomersListResponse> ListCustomersApiV1CustomersGetWithHttpInfo(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0);
+        ApiResponse<CustomersListResponse> ListCustomersWithHttpInfo(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0);
         /// <summary>
-        /// Patch Customer
+        /// Update Customer
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="customerId"></param>
@@ -119,10 +119,10 @@ namespace InvoicePDFs.Api
         /// <param name="idempotencyKey"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CustomerResponse</returns>
-        CustomerResponse PatchCustomerApiV1CustomersCustomerIdPatch(string customerId, CustomerPatch customerPatch, string? idempotencyKey = default(string?), int operationIndex = 0);
+        CustomerResponse UpdateCustomer(string customerId, CustomerPatch customerPatch, string? idempotencyKey = default(string?), int operationIndex = 0);
 
         /// <summary>
-        /// Patch Customer
+        /// Update Customer
         /// </summary>
         /// <remarks>
         /// 
@@ -133,7 +133,7 @@ namespace InvoicePDFs.Api
         /// <param name="idempotencyKey"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CustomerResponse</returns>
-        ApiResponse<CustomerResponse> PatchCustomerApiV1CustomersCustomerIdPatchWithHttpInfo(string customerId, CustomerPatch customerPatch, string? idempotencyKey = default(string?), int operationIndex = 0);
+        ApiResponse<CustomerResponse> UpdateCustomerWithHttpInfo(string customerId, CustomerPatch customerPatch, string? idempotencyKey = default(string?), int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -155,7 +155,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CustomerResponse</returns>
-        System.Threading.Tasks.Task<CustomerResponse> CreateCustomerApiV1CustomersPostAsync(CustomerCreate customerCreate, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<CustomerResponse> CreateCustomerAsync(CustomerCreate customerCreate, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Create Customer
@@ -169,7 +169,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CustomerResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CustomerResponse>> CreateCustomerApiV1CustomersPostWithHttpInfoAsync(CustomerCreate customerCreate, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<CustomerResponse>> CreateCustomerWithHttpInfoAsync(CustomerCreate customerCreate, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Delete Customer
         /// </summary>
@@ -181,7 +181,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of SimpleBoolResponse</returns>
-        System.Threading.Tasks.Task<SimpleBoolResponse> DeleteCustomerApiV1CustomersCustomerIdDeleteAsync(string customerId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<SimpleBoolResponse> DeleteCustomerAsync(string customerId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Delete Customer
@@ -194,7 +194,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (SimpleBoolResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SimpleBoolResponse>> DeleteCustomerApiV1CustomersCustomerIdDeleteWithHttpInfoAsync(string customerId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<SimpleBoolResponse>> DeleteCustomerWithHttpInfoAsync(string customerId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Get Customer
         /// </summary>
@@ -206,7 +206,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CustomerResponse</returns>
-        System.Threading.Tasks.Task<CustomerResponse> GetCustomerApiV1CustomersCustomerIdGetAsync(string customerId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<CustomerResponse> GetCustomerAsync(string customerId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Get Customer
@@ -219,7 +219,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CustomerResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CustomerResponse>> GetCustomerApiV1CustomersCustomerIdGetWithHttpInfoAsync(string customerId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<CustomerResponse>> GetCustomerWithHttpInfoAsync(string customerId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// List Customers
         /// </summary>
@@ -232,7 +232,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CustomersListResponse</returns>
-        System.Threading.Tasks.Task<CustomersListResponse> ListCustomersApiV1CustomersGetAsync(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<CustomersListResponse> ListCustomersAsync(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// List Customers
@@ -246,9 +246,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CustomersListResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CustomersListResponse>> ListCustomersApiV1CustomersGetWithHttpInfoAsync(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<CustomersListResponse>> ListCustomersWithHttpInfoAsync(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// Patch Customer
+        /// Update Customer
         /// </summary>
         /// <remarks>
         /// 
@@ -260,10 +260,10 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CustomerResponse</returns>
-        System.Threading.Tasks.Task<CustomerResponse> PatchCustomerApiV1CustomersCustomerIdPatchAsync(string customerId, CustomerPatch customerPatch, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<CustomerResponse> UpdateCustomerAsync(string customerId, CustomerPatch customerPatch, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// Patch Customer
+        /// Update Customer
         /// </summary>
         /// <remarks>
         /// 
@@ -275,7 +275,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CustomerResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CustomerResponse>> PatchCustomerApiV1CustomersCustomerIdPatchWithHttpInfoAsync(string customerId, CustomerPatch customerPatch, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<CustomerResponse>> UpdateCustomerWithHttpInfoAsync(string customerId, CustomerPatch customerPatch, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -404,9 +404,9 @@ namespace InvoicePDFs.Api
         /// <param name="idempotencyKey"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CustomerResponse</returns>
-        public CustomerResponse CreateCustomerApiV1CustomersPost(CustomerCreate customerCreate, string? idempotencyKey = default(string?), int operationIndex = 0)
+        public CustomerResponse CreateCustomer(CustomerCreate customerCreate, string? idempotencyKey = default(string?), int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<CustomerResponse> localVarResponse = CreateCustomerApiV1CustomersPostWithHttpInfo(customerCreate, idempotencyKey);
+            InvoicePDFs.Client.ApiResponse<CustomerResponse> localVarResponse = CreateCustomerWithHttpInfo(customerCreate, idempotencyKey);
             return localVarResponse.Data;
         }
 
@@ -418,12 +418,12 @@ namespace InvoicePDFs.Api
         /// <param name="idempotencyKey"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CustomerResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<CustomerResponse> CreateCustomerApiV1CustomersPostWithHttpInfo(CustomerCreate customerCreate, string? idempotencyKey = default(string?), int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<CustomerResponse> CreateCustomerWithHttpInfo(CustomerCreate customerCreate, string? idempotencyKey = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'customerCreate' is set
             if (customerCreate == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'customerCreate' when calling CustomersApi->CreateCustomerApiV1CustomersPost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'customerCreate' when calling CustomersApi->CreateCustomer");
             }
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -455,7 +455,7 @@ namespace InvoicePDFs.Api
             }
             localVarRequestOptions.Data = customerCreate;
 
-            localVarRequestOptions.Operation = "CustomersApi.CreateCustomerApiV1CustomersPost";
+            localVarRequestOptions.Operation = "CustomersApi.CreateCustomer";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -469,7 +469,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Post<CustomerResponse>("/api/v1/customers", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("CreateCustomerApiV1CustomersPost", localVarResponse);
+                Exception _exception = this.ExceptionFactory("CreateCustomer", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -488,9 +488,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CustomerResponse</returns>
-        public async System.Threading.Tasks.Task<CustomerResponse> CreateCustomerApiV1CustomersPostAsync(CustomerCreate customerCreate, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CustomerResponse> CreateCustomerAsync(CustomerCreate customerCreate, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<CustomerResponse> localVarResponse = await CreateCustomerApiV1CustomersPostWithHttpInfoAsync(customerCreate, idempotencyKey, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<CustomerResponse> localVarResponse = await CreateCustomerWithHttpInfoAsync(customerCreate, idempotencyKey, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -503,12 +503,12 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CustomerResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<CustomerResponse>> CreateCustomerApiV1CustomersPostWithHttpInfoAsync(CustomerCreate customerCreate, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<CustomerResponse>> CreateCustomerWithHttpInfoAsync(CustomerCreate customerCreate, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'customerCreate' is set
             if (customerCreate == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'customerCreate' when calling CustomersApi->CreateCustomerApiV1CustomersPost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'customerCreate' when calling CustomersApi->CreateCustomer");
             }
 
 
@@ -541,7 +541,7 @@ namespace InvoicePDFs.Api
             }
             localVarRequestOptions.Data = customerCreate;
 
-            localVarRequestOptions.Operation = "CustomersApi.CreateCustomerApiV1CustomersPost";
+            localVarRequestOptions.Operation = "CustomersApi.CreateCustomer";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -556,7 +556,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("CreateCustomerApiV1CustomersPost", localVarResponse);
+                Exception _exception = this.ExceptionFactory("CreateCustomer", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -573,9 +573,9 @@ namespace InvoicePDFs.Api
         /// <param name="customerId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>SimpleBoolResponse</returns>
-        public SimpleBoolResponse DeleteCustomerApiV1CustomersCustomerIdDelete(string customerId, int operationIndex = 0)
+        public SimpleBoolResponse DeleteCustomer(string customerId, int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<SimpleBoolResponse> localVarResponse = DeleteCustomerApiV1CustomersCustomerIdDeleteWithHttpInfo(customerId);
+            InvoicePDFs.Client.ApiResponse<SimpleBoolResponse> localVarResponse = DeleteCustomerWithHttpInfo(customerId);
             return localVarResponse.Data;
         }
 
@@ -586,12 +586,12 @@ namespace InvoicePDFs.Api
         /// <param name="customerId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of SimpleBoolResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<SimpleBoolResponse> DeleteCustomerApiV1CustomersCustomerIdDeleteWithHttpInfo(string customerId, int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<SimpleBoolResponse> DeleteCustomerWithHttpInfo(string customerId, int operationIndex = 0)
         {
             // verify the required parameter 'customerId' is set
             if (customerId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'customerId' when calling CustomersApi->DeleteCustomerApiV1CustomersCustomerIdDelete");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'customerId' when calling CustomersApi->DeleteCustomer");
             }
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -618,7 +618,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("customer_id", InvoicePDFs.Client.ClientUtils.ParameterToString(customerId)); // path parameter
 
-            localVarRequestOptions.Operation = "CustomersApi.DeleteCustomerApiV1CustomersCustomerIdDelete";
+            localVarRequestOptions.Operation = "CustomersApi.DeleteCustomer";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -632,7 +632,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Delete<SimpleBoolResponse>("/api/v1/customers/{customer_id}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteCustomerApiV1CustomersCustomerIdDelete", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteCustomer", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -650,9 +650,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of SimpleBoolResponse</returns>
-        public async System.Threading.Tasks.Task<SimpleBoolResponse> DeleteCustomerApiV1CustomersCustomerIdDeleteAsync(string customerId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<SimpleBoolResponse> DeleteCustomerAsync(string customerId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<SimpleBoolResponse> localVarResponse = await DeleteCustomerApiV1CustomersCustomerIdDeleteWithHttpInfoAsync(customerId, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<SimpleBoolResponse> localVarResponse = await DeleteCustomerWithHttpInfoAsync(customerId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -664,12 +664,12 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (SimpleBoolResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<SimpleBoolResponse>> DeleteCustomerApiV1CustomersCustomerIdDeleteWithHttpInfoAsync(string customerId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<SimpleBoolResponse>> DeleteCustomerWithHttpInfoAsync(string customerId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'customerId' is set
             if (customerId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'customerId' when calling CustomersApi->DeleteCustomerApiV1CustomersCustomerIdDelete");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'customerId' when calling CustomersApi->DeleteCustomer");
             }
 
 
@@ -697,7 +697,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("customer_id", InvoicePDFs.Client.ClientUtils.ParameterToString(customerId)); // path parameter
 
-            localVarRequestOptions.Operation = "CustomersApi.DeleteCustomerApiV1CustomersCustomerIdDelete";
+            localVarRequestOptions.Operation = "CustomersApi.DeleteCustomer";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -712,7 +712,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteCustomerApiV1CustomersCustomerIdDelete", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteCustomer", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -729,9 +729,9 @@ namespace InvoicePDFs.Api
         /// <param name="customerId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CustomerResponse</returns>
-        public CustomerResponse GetCustomerApiV1CustomersCustomerIdGet(string customerId, int operationIndex = 0)
+        public CustomerResponse GetCustomer(string customerId, int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<CustomerResponse> localVarResponse = GetCustomerApiV1CustomersCustomerIdGetWithHttpInfo(customerId);
+            InvoicePDFs.Client.ApiResponse<CustomerResponse> localVarResponse = GetCustomerWithHttpInfo(customerId);
             return localVarResponse.Data;
         }
 
@@ -742,12 +742,12 @@ namespace InvoicePDFs.Api
         /// <param name="customerId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CustomerResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<CustomerResponse> GetCustomerApiV1CustomersCustomerIdGetWithHttpInfo(string customerId, int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<CustomerResponse> GetCustomerWithHttpInfo(string customerId, int operationIndex = 0)
         {
             // verify the required parameter 'customerId' is set
             if (customerId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'customerId' when calling CustomersApi->GetCustomerApiV1CustomersCustomerIdGet");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'customerId' when calling CustomersApi->GetCustomer");
             }
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -774,7 +774,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("customer_id", InvoicePDFs.Client.ClientUtils.ParameterToString(customerId)); // path parameter
 
-            localVarRequestOptions.Operation = "CustomersApi.GetCustomerApiV1CustomersCustomerIdGet";
+            localVarRequestOptions.Operation = "CustomersApi.GetCustomer";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -788,7 +788,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Get<CustomerResponse>("/api/v1/customers/{customer_id}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetCustomerApiV1CustomersCustomerIdGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetCustomer", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -806,9 +806,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CustomerResponse</returns>
-        public async System.Threading.Tasks.Task<CustomerResponse> GetCustomerApiV1CustomersCustomerIdGetAsync(string customerId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CustomerResponse> GetCustomerAsync(string customerId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<CustomerResponse> localVarResponse = await GetCustomerApiV1CustomersCustomerIdGetWithHttpInfoAsync(customerId, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<CustomerResponse> localVarResponse = await GetCustomerWithHttpInfoAsync(customerId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -820,12 +820,12 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CustomerResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<CustomerResponse>> GetCustomerApiV1CustomersCustomerIdGetWithHttpInfoAsync(string customerId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<CustomerResponse>> GetCustomerWithHttpInfoAsync(string customerId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'customerId' is set
             if (customerId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'customerId' when calling CustomersApi->GetCustomerApiV1CustomersCustomerIdGet");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'customerId' when calling CustomersApi->GetCustomer");
             }
 
 
@@ -853,7 +853,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("customer_id", InvoicePDFs.Client.ClientUtils.ParameterToString(customerId)); // path parameter
 
-            localVarRequestOptions.Operation = "CustomersApi.GetCustomerApiV1CustomersCustomerIdGet";
+            localVarRequestOptions.Operation = "CustomersApi.GetCustomer";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -868,7 +868,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetCustomerApiV1CustomersCustomerIdGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetCustomer", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -886,9 +886,9 @@ namespace InvoicePDFs.Api
         /// <param name="cursor"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CustomersListResponse</returns>
-        public CustomersListResponse ListCustomersApiV1CustomersGet(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0)
+        public CustomersListResponse ListCustomers(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<CustomersListResponse> localVarResponse = ListCustomersApiV1CustomersGetWithHttpInfo(limit, cursor);
+            InvoicePDFs.Client.ApiResponse<CustomersListResponse> localVarResponse = ListCustomersWithHttpInfo(limit, cursor);
             return localVarResponse.Data;
         }
 
@@ -900,7 +900,7 @@ namespace InvoicePDFs.Api
         /// <param name="cursor"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CustomersListResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<CustomersListResponse> ListCustomersApiV1CustomersGetWithHttpInfo(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<CustomersListResponse> ListCustomersWithHttpInfo(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0)
         {
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
 
@@ -933,7 +933,7 @@ namespace InvoicePDFs.Api
                 localVarRequestOptions.QueryParameters.Add(InvoicePDFs.Client.ClientUtils.ParameterToMultiMap("", "cursor", cursor));
             }
 
-            localVarRequestOptions.Operation = "CustomersApi.ListCustomersApiV1CustomersGet";
+            localVarRequestOptions.Operation = "CustomersApi.ListCustomers";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -947,7 +947,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Get<CustomersListResponse>("/api/v1/customers", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListCustomersApiV1CustomersGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("ListCustomers", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -966,9 +966,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CustomersListResponse</returns>
-        public async System.Threading.Tasks.Task<CustomersListResponse> ListCustomersApiV1CustomersGetAsync(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CustomersListResponse> ListCustomersAsync(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<CustomersListResponse> localVarResponse = await ListCustomersApiV1CustomersGetWithHttpInfoAsync(limit, cursor, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<CustomersListResponse> localVarResponse = await ListCustomersWithHttpInfoAsync(limit, cursor, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -981,7 +981,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CustomersListResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<CustomersListResponse>> ListCustomersApiV1CustomersGetWithHttpInfoAsync(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<CustomersListResponse>> ListCustomersWithHttpInfoAsync(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -1015,7 +1015,7 @@ namespace InvoicePDFs.Api
                 localVarRequestOptions.QueryParameters.Add(InvoicePDFs.Client.ClientUtils.ParameterToMultiMap("", "cursor", cursor));
             }
 
-            localVarRequestOptions.Operation = "CustomersApi.ListCustomersApiV1CustomersGet";
+            localVarRequestOptions.Operation = "CustomersApi.ListCustomers";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -1030,7 +1030,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListCustomersApiV1CustomersGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("ListCustomers", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1041,7 +1041,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Patch Customer 
+        /// Update Customer 
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="customerId"></param>
@@ -1049,14 +1049,14 @@ namespace InvoicePDFs.Api
         /// <param name="idempotencyKey"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CustomerResponse</returns>
-        public CustomerResponse PatchCustomerApiV1CustomersCustomerIdPatch(string customerId, CustomerPatch customerPatch, string? idempotencyKey = default(string?), int operationIndex = 0)
+        public CustomerResponse UpdateCustomer(string customerId, CustomerPatch customerPatch, string? idempotencyKey = default(string?), int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<CustomerResponse> localVarResponse = PatchCustomerApiV1CustomersCustomerIdPatchWithHttpInfo(customerId, customerPatch, idempotencyKey);
+            InvoicePDFs.Client.ApiResponse<CustomerResponse> localVarResponse = UpdateCustomerWithHttpInfo(customerId, customerPatch, idempotencyKey);
             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Patch Customer 
+        /// Update Customer 
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="customerId"></param>
@@ -1064,18 +1064,18 @@ namespace InvoicePDFs.Api
         /// <param name="idempotencyKey"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CustomerResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<CustomerResponse> PatchCustomerApiV1CustomersCustomerIdPatchWithHttpInfo(string customerId, CustomerPatch customerPatch, string? idempotencyKey = default(string?), int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<CustomerResponse> UpdateCustomerWithHttpInfo(string customerId, CustomerPatch customerPatch, string? idempotencyKey = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'customerId' is set
             if (customerId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'customerId' when calling CustomersApi->PatchCustomerApiV1CustomersCustomerIdPatch");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'customerId' when calling CustomersApi->UpdateCustomer");
             }
 
             // verify the required parameter 'customerPatch' is set
             if (customerPatch == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'customerPatch' when calling CustomersApi->PatchCustomerApiV1CustomersCustomerIdPatch");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'customerPatch' when calling CustomersApi->UpdateCustomer");
             }
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -1108,7 +1108,7 @@ namespace InvoicePDFs.Api
             }
             localVarRequestOptions.Data = customerPatch;
 
-            localVarRequestOptions.Operation = "CustomersApi.PatchCustomerApiV1CustomersCustomerIdPatch";
+            localVarRequestOptions.Operation = "CustomersApi.UpdateCustomer";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -1122,7 +1122,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Patch<CustomerResponse>("/api/v1/customers/{customer_id}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PatchCustomerApiV1CustomersCustomerIdPatch", localVarResponse);
+                Exception _exception = this.ExceptionFactory("UpdateCustomer", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1133,7 +1133,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Patch Customer 
+        /// Update Customer 
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="customerId"></param>
@@ -1142,14 +1142,14 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CustomerResponse</returns>
-        public async System.Threading.Tasks.Task<CustomerResponse> PatchCustomerApiV1CustomersCustomerIdPatchAsync(string customerId, CustomerPatch customerPatch, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CustomerResponse> UpdateCustomerAsync(string customerId, CustomerPatch customerPatch, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<CustomerResponse> localVarResponse = await PatchCustomerApiV1CustomersCustomerIdPatchWithHttpInfoAsync(customerId, customerPatch, idempotencyKey, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<CustomerResponse> localVarResponse = await UpdateCustomerWithHttpInfoAsync(customerId, customerPatch, idempotencyKey, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Patch Customer 
+        /// Update Customer 
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="customerId"></param>
@@ -1158,18 +1158,18 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CustomerResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<CustomerResponse>> PatchCustomerApiV1CustomersCustomerIdPatchWithHttpInfoAsync(string customerId, CustomerPatch customerPatch, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<CustomerResponse>> UpdateCustomerWithHttpInfoAsync(string customerId, CustomerPatch customerPatch, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'customerId' is set
             if (customerId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'customerId' when calling CustomersApi->PatchCustomerApiV1CustomersCustomerIdPatch");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'customerId' when calling CustomersApi->UpdateCustomer");
             }
 
             // verify the required parameter 'customerPatch' is set
             if (customerPatch == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'customerPatch' when calling CustomersApi->PatchCustomerApiV1CustomersCustomerIdPatch");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'customerPatch' when calling CustomersApi->UpdateCustomer");
             }
 
 
@@ -1203,7 +1203,7 @@ namespace InvoicePDFs.Api
             }
             localVarRequestOptions.Data = customerPatch;
 
-            localVarRequestOptions.Operation = "CustomersApi.PatchCustomerApiV1CustomersCustomerIdPatch";
+            localVarRequestOptions.Operation = "CustomersApi.UpdateCustomer";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -1218,7 +1218,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PatchCustomerApiV1CustomersCustomerIdPatch", localVarResponse);
+                Exception _exception = this.ExceptionFactory("UpdateCustomer", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

@@ -4,20 +4,20 @@ All URIs are relative to *http://localhost*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
-| [**CreateProfileApiV1BrandingProfilesPost**](BrandingProfilesApi.md#createprofileapiv1brandingprofilespost) | **POST** /api/v1/branding-profiles | Create Profile |
-| [**DeleteLogoApiV1BrandingProfilesProfileIdLogoDelete**](BrandingProfilesApi.md#deletelogoapiv1brandingprofilesprofileidlogodelete) | **DELETE** /api/v1/branding-profiles/{profile_id}/logo | Delete Logo |
-| [**DeleteProfileApiV1BrandingProfilesProfileIdDelete**](BrandingProfilesApi.md#deleteprofileapiv1brandingprofilesprofileiddelete) | **DELETE** /api/v1/branding-profiles/{profile_id} | Delete Profile |
-| [**GetProfileApiV1BrandingProfilesProfileIdGet**](BrandingProfilesApi.md#getprofileapiv1brandingprofilesprofileidget) | **GET** /api/v1/branding-profiles/{profile_id} | Get Profile |
-| [**ListProfilesApiV1BrandingProfilesGet**](BrandingProfilesApi.md#listprofilesapiv1brandingprofilesget) | **GET** /api/v1/branding-profiles | List Profiles |
-| [**SetDefaultApiV1BrandingProfilesProfileIdDefaultPost**](BrandingProfilesApi.md#setdefaultapiv1brandingprofilesprofileiddefaultpost) | **POST** /api/v1/branding-profiles/{profile_id}/default | Set Default |
-| [**UpdateProfileApiV1BrandingProfilesProfileIdPatch**](BrandingProfilesApi.md#updateprofileapiv1brandingprofilesprofileidpatch) | **PATCH** /api/v1/branding-profiles/{profile_id} | Update Profile |
-| [**UploadLogoApiV1BrandingProfilesProfileIdLogoPost**](BrandingProfilesApi.md#uploadlogoapiv1brandingprofilesprofileidlogopost) | **POST** /api/v1/branding-profiles/{profile_id}/logo | Upload Logo |
+| [**CreateBrandingProfile**](BrandingProfilesApi.md#createbrandingprofile) | **POST** /api/v1/branding-profiles | Create Branding Profile |
+| [**DeleteBrandingLogo**](BrandingProfilesApi.md#deletebrandinglogo) | **DELETE** /api/v1/branding-profiles/{profile_id}/logo | Delete Branding Logo |
+| [**DeleteBrandingProfile**](BrandingProfilesApi.md#deletebrandingprofile) | **DELETE** /api/v1/branding-profiles/{profile_id} | Delete Branding Profile |
+| [**GetBrandingProfile**](BrandingProfilesApi.md#getbrandingprofile) | **GET** /api/v1/branding-profiles/{profile_id} | Get Branding Profile |
+| [**ListBrandingProfiles**](BrandingProfilesApi.md#listbrandingprofiles) | **GET** /api/v1/branding-profiles | List Branding Profiles |
+| [**SetDefaultBrandingProfile**](BrandingProfilesApi.md#setdefaultbrandingprofile) | **POST** /api/v1/branding-profiles/{profile_id}/default | Set Default Branding Profile |
+| [**UpdateBrandingProfile**](BrandingProfilesApi.md#updatebrandingprofile) | **PATCH** /api/v1/branding-profiles/{profile_id} | Update Branding Profile |
+| [**UploadBrandingLogo**](BrandingProfilesApi.md#uploadbrandinglogo) | **POST** /api/v1/branding-profiles/{profile_id}/logo | Upload Branding Logo |
 
-<a id="createprofileapiv1brandingprofilespost"></a>
-# **CreateProfileApiV1BrandingProfilesPost**
-> BrandingProfileResponse CreateProfileApiV1BrandingProfilesPost (BrandingProfileCreateRequest brandingProfileCreateRequest)
+<a id="createbrandingprofile"></a>
+# **CreateBrandingProfile**
+> BrandingProfileResponse CreateBrandingProfile (BrandingProfileCreateRequest brandingProfileCreateRequest)
 
-Create Profile
+Create Branding Profile
 
 ### Example
 ```csharp
@@ -29,7 +29,7 @@ using InvoicePDFs.Model;
 
 namespace Example
 {
-    public class CreateProfileApiV1BrandingProfilesPostExample
+    public class CreateBrandingProfileExample
     {
         public static void Main()
         {
@@ -43,13 +43,13 @@ namespace Example
 
             try
             {
-                // Create Profile
-                BrandingProfileResponse result = apiInstance.CreateProfileApiV1BrandingProfilesPost(brandingProfileCreateRequest);
+                // Create Branding Profile
+                BrandingProfileResponse result = apiInstance.CreateBrandingProfile(brandingProfileCreateRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling BrandingProfilesApi.CreateProfileApiV1BrandingProfilesPost: " + e.Message);
+                Debug.Print("Exception when calling BrandingProfilesApi.CreateBrandingProfile: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -58,21 +58,21 @@ namespace Example
 }
 ```
 
-#### Using the CreateProfileApiV1BrandingProfilesPostWithHttpInfo variant
+#### Using the CreateBrandingProfileWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
-    // Create Profile
-    ApiResponse<BrandingProfileResponse> response = apiInstance.CreateProfileApiV1BrandingProfilesPostWithHttpInfo(brandingProfileCreateRequest);
+    // Create Branding Profile
+    ApiResponse<BrandingProfileResponse> response = apiInstance.CreateBrandingProfileWithHttpInfo(brandingProfileCreateRequest);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling BrandingProfilesApi.CreateProfileApiV1BrandingProfilesPostWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling BrandingProfilesApi.CreateBrandingProfileWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -106,11 +106,11 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="deletelogoapiv1brandingprofilesprofileidlogodelete"></a>
-# **DeleteLogoApiV1BrandingProfilesProfileIdLogoDelete**
-> SimpleBoolResponse DeleteLogoApiV1BrandingProfilesProfileIdLogoDelete (string profileId)
+<a id="deletebrandinglogo"></a>
+# **DeleteBrandingLogo**
+> SimpleBoolResponse DeleteBrandingLogo (string profileId)
 
-Delete Logo
+Delete Branding Logo
 
 ### Example
 ```csharp
@@ -122,7 +122,7 @@ using InvoicePDFs.Model;
 
 namespace Example
 {
-    public class DeleteLogoApiV1BrandingProfilesProfileIdLogoDeleteExample
+    public class DeleteBrandingLogoExample
     {
         public static void Main()
         {
@@ -136,13 +136,13 @@ namespace Example
 
             try
             {
-                // Delete Logo
-                SimpleBoolResponse result = apiInstance.DeleteLogoApiV1BrandingProfilesProfileIdLogoDelete(profileId);
+                // Delete Branding Logo
+                SimpleBoolResponse result = apiInstance.DeleteBrandingLogo(profileId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling BrandingProfilesApi.DeleteLogoApiV1BrandingProfilesProfileIdLogoDelete: " + e.Message);
+                Debug.Print("Exception when calling BrandingProfilesApi.DeleteBrandingLogo: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -151,21 +151,21 @@ namespace Example
 }
 ```
 
-#### Using the DeleteLogoApiV1BrandingProfilesProfileIdLogoDeleteWithHttpInfo variant
+#### Using the DeleteBrandingLogoWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
-    // Delete Logo
-    ApiResponse<SimpleBoolResponse> response = apiInstance.DeleteLogoApiV1BrandingProfilesProfileIdLogoDeleteWithHttpInfo(profileId);
+    // Delete Branding Logo
+    ApiResponse<SimpleBoolResponse> response = apiInstance.DeleteBrandingLogoWithHttpInfo(profileId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling BrandingProfilesApi.DeleteLogoApiV1BrandingProfilesProfileIdLogoDeleteWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling BrandingProfilesApi.DeleteBrandingLogoWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -199,11 +199,11 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="deleteprofileapiv1brandingprofilesprofileiddelete"></a>
-# **DeleteProfileApiV1BrandingProfilesProfileIdDelete**
-> SimpleBoolResponse DeleteProfileApiV1BrandingProfilesProfileIdDelete (string profileId)
+<a id="deletebrandingprofile"></a>
+# **DeleteBrandingProfile**
+> SimpleBoolResponse DeleteBrandingProfile (string profileId)
 
-Delete Profile
+Delete Branding Profile
 
 ### Example
 ```csharp
@@ -215,7 +215,7 @@ using InvoicePDFs.Model;
 
 namespace Example
 {
-    public class DeleteProfileApiV1BrandingProfilesProfileIdDeleteExample
+    public class DeleteBrandingProfileExample
     {
         public static void Main()
         {
@@ -229,13 +229,13 @@ namespace Example
 
             try
             {
-                // Delete Profile
-                SimpleBoolResponse result = apiInstance.DeleteProfileApiV1BrandingProfilesProfileIdDelete(profileId);
+                // Delete Branding Profile
+                SimpleBoolResponse result = apiInstance.DeleteBrandingProfile(profileId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling BrandingProfilesApi.DeleteProfileApiV1BrandingProfilesProfileIdDelete: " + e.Message);
+                Debug.Print("Exception when calling BrandingProfilesApi.DeleteBrandingProfile: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -244,21 +244,21 @@ namespace Example
 }
 ```
 
-#### Using the DeleteProfileApiV1BrandingProfilesProfileIdDeleteWithHttpInfo variant
+#### Using the DeleteBrandingProfileWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
-    // Delete Profile
-    ApiResponse<SimpleBoolResponse> response = apiInstance.DeleteProfileApiV1BrandingProfilesProfileIdDeleteWithHttpInfo(profileId);
+    // Delete Branding Profile
+    ApiResponse<SimpleBoolResponse> response = apiInstance.DeleteBrandingProfileWithHttpInfo(profileId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling BrandingProfilesApi.DeleteProfileApiV1BrandingProfilesProfileIdDeleteWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling BrandingProfilesApi.DeleteBrandingProfileWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -292,11 +292,11 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="getprofileapiv1brandingprofilesprofileidget"></a>
-# **GetProfileApiV1BrandingProfilesProfileIdGet**
-> BrandingProfileResponse GetProfileApiV1BrandingProfilesProfileIdGet (string profileId)
+<a id="getbrandingprofile"></a>
+# **GetBrandingProfile**
+> BrandingProfileResponse GetBrandingProfile (string profileId)
 
-Get Profile
+Get Branding Profile
 
 ### Example
 ```csharp
@@ -308,7 +308,7 @@ using InvoicePDFs.Model;
 
 namespace Example
 {
-    public class GetProfileApiV1BrandingProfilesProfileIdGetExample
+    public class GetBrandingProfileExample
     {
         public static void Main()
         {
@@ -322,13 +322,13 @@ namespace Example
 
             try
             {
-                // Get Profile
-                BrandingProfileResponse result = apiInstance.GetProfileApiV1BrandingProfilesProfileIdGet(profileId);
+                // Get Branding Profile
+                BrandingProfileResponse result = apiInstance.GetBrandingProfile(profileId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling BrandingProfilesApi.GetProfileApiV1BrandingProfilesProfileIdGet: " + e.Message);
+                Debug.Print("Exception when calling BrandingProfilesApi.GetBrandingProfile: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -337,21 +337,21 @@ namespace Example
 }
 ```
 
-#### Using the GetProfileApiV1BrandingProfilesProfileIdGetWithHttpInfo variant
+#### Using the GetBrandingProfileWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
-    // Get Profile
-    ApiResponse<BrandingProfileResponse> response = apiInstance.GetProfileApiV1BrandingProfilesProfileIdGetWithHttpInfo(profileId);
+    // Get Branding Profile
+    ApiResponse<BrandingProfileResponse> response = apiInstance.GetBrandingProfileWithHttpInfo(profileId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling BrandingProfilesApi.GetProfileApiV1BrandingProfilesProfileIdGetWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling BrandingProfilesApi.GetBrandingProfileWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -385,11 +385,11 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="listprofilesapiv1brandingprofilesget"></a>
-# **ListProfilesApiV1BrandingProfilesGet**
-> BrandingProfilesListResponse ListProfilesApiV1BrandingProfilesGet ()
+<a id="listbrandingprofiles"></a>
+# **ListBrandingProfiles**
+> BrandingProfilesListResponse ListBrandingProfiles ()
 
-List Profiles
+List Branding Profiles
 
 ### Example
 ```csharp
@@ -401,7 +401,7 @@ using InvoicePDFs.Model;
 
 namespace Example
 {
-    public class ListProfilesApiV1BrandingProfilesGetExample
+    public class ListBrandingProfilesExample
     {
         public static void Main()
         {
@@ -414,13 +414,13 @@ namespace Example
 
             try
             {
-                // List Profiles
-                BrandingProfilesListResponse result = apiInstance.ListProfilesApiV1BrandingProfilesGet();
+                // List Branding Profiles
+                BrandingProfilesListResponse result = apiInstance.ListBrandingProfiles();
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling BrandingProfilesApi.ListProfilesApiV1BrandingProfilesGet: " + e.Message);
+                Debug.Print("Exception when calling BrandingProfilesApi.ListBrandingProfiles: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -429,21 +429,21 @@ namespace Example
 }
 ```
 
-#### Using the ListProfilesApiV1BrandingProfilesGetWithHttpInfo variant
+#### Using the ListBrandingProfilesWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
-    // List Profiles
-    ApiResponse<BrandingProfilesListResponse> response = apiInstance.ListProfilesApiV1BrandingProfilesGetWithHttpInfo();
+    // List Branding Profiles
+    ApiResponse<BrandingProfilesListResponse> response = apiInstance.ListBrandingProfilesWithHttpInfo();
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling BrandingProfilesApi.ListProfilesApiV1BrandingProfilesGetWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling BrandingProfilesApi.ListBrandingProfilesWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -472,11 +472,11 @@ This endpoint does not need any parameter.
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="setdefaultapiv1brandingprofilesprofileiddefaultpost"></a>
-# **SetDefaultApiV1BrandingProfilesProfileIdDefaultPost**
-> BrandingProfileResponse SetDefaultApiV1BrandingProfilesProfileIdDefaultPost (string profileId)
+<a id="setdefaultbrandingprofile"></a>
+# **SetDefaultBrandingProfile**
+> BrandingProfileResponse SetDefaultBrandingProfile (string profileId)
 
-Set Default
+Set Default Branding Profile
 
 ### Example
 ```csharp
@@ -488,7 +488,7 @@ using InvoicePDFs.Model;
 
 namespace Example
 {
-    public class SetDefaultApiV1BrandingProfilesProfileIdDefaultPostExample
+    public class SetDefaultBrandingProfileExample
     {
         public static void Main()
         {
@@ -502,13 +502,13 @@ namespace Example
 
             try
             {
-                // Set Default
-                BrandingProfileResponse result = apiInstance.SetDefaultApiV1BrandingProfilesProfileIdDefaultPost(profileId);
+                // Set Default Branding Profile
+                BrandingProfileResponse result = apiInstance.SetDefaultBrandingProfile(profileId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling BrandingProfilesApi.SetDefaultApiV1BrandingProfilesProfileIdDefaultPost: " + e.Message);
+                Debug.Print("Exception when calling BrandingProfilesApi.SetDefaultBrandingProfile: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -517,21 +517,21 @@ namespace Example
 }
 ```
 
-#### Using the SetDefaultApiV1BrandingProfilesProfileIdDefaultPostWithHttpInfo variant
+#### Using the SetDefaultBrandingProfileWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
-    // Set Default
-    ApiResponse<BrandingProfileResponse> response = apiInstance.SetDefaultApiV1BrandingProfilesProfileIdDefaultPostWithHttpInfo(profileId);
+    // Set Default Branding Profile
+    ApiResponse<BrandingProfileResponse> response = apiInstance.SetDefaultBrandingProfileWithHttpInfo(profileId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling BrandingProfilesApi.SetDefaultApiV1BrandingProfilesProfileIdDefaultPostWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling BrandingProfilesApi.SetDefaultBrandingProfileWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -565,11 +565,11 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="updateprofileapiv1brandingprofilesprofileidpatch"></a>
-# **UpdateProfileApiV1BrandingProfilesProfileIdPatch**
-> BrandingProfileResponse UpdateProfileApiV1BrandingProfilesProfileIdPatch (string profileId, BrandingProfilePatchRequest brandingProfilePatchRequest)
+<a id="updatebrandingprofile"></a>
+# **UpdateBrandingProfile**
+> BrandingProfileResponse UpdateBrandingProfile (string profileId, BrandingProfilePatchRequest brandingProfilePatchRequest)
 
-Update Profile
+Update Branding Profile
 
 ### Example
 ```csharp
@@ -581,7 +581,7 @@ using InvoicePDFs.Model;
 
 namespace Example
 {
-    public class UpdateProfileApiV1BrandingProfilesProfileIdPatchExample
+    public class UpdateBrandingProfileExample
     {
         public static void Main()
         {
@@ -596,13 +596,13 @@ namespace Example
 
             try
             {
-                // Update Profile
-                BrandingProfileResponse result = apiInstance.UpdateProfileApiV1BrandingProfilesProfileIdPatch(profileId, brandingProfilePatchRequest);
+                // Update Branding Profile
+                BrandingProfileResponse result = apiInstance.UpdateBrandingProfile(profileId, brandingProfilePatchRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling BrandingProfilesApi.UpdateProfileApiV1BrandingProfilesProfileIdPatch: " + e.Message);
+                Debug.Print("Exception when calling BrandingProfilesApi.UpdateBrandingProfile: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -611,21 +611,21 @@ namespace Example
 }
 ```
 
-#### Using the UpdateProfileApiV1BrandingProfilesProfileIdPatchWithHttpInfo variant
+#### Using the UpdateBrandingProfileWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
-    // Update Profile
-    ApiResponse<BrandingProfileResponse> response = apiInstance.UpdateProfileApiV1BrandingProfilesProfileIdPatchWithHttpInfo(profileId, brandingProfilePatchRequest);
+    // Update Branding Profile
+    ApiResponse<BrandingProfileResponse> response = apiInstance.UpdateBrandingProfileWithHttpInfo(profileId, brandingProfilePatchRequest);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling BrandingProfilesApi.UpdateProfileApiV1BrandingProfilesProfileIdPatchWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling BrandingProfilesApi.UpdateBrandingProfileWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -660,11 +660,11 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="uploadlogoapiv1brandingprofilesprofileidlogopost"></a>
-# **UploadLogoApiV1BrandingProfilesProfileIdLogoPost**
-> BrandingProfileResponse UploadLogoApiV1BrandingProfilesProfileIdLogoPost (string profileId, System.IO.Stream file)
+<a id="uploadbrandinglogo"></a>
+# **UploadBrandingLogo**
+> BrandingProfileResponse UploadBrandingLogo (string profileId, System.IO.Stream file)
 
-Upload Logo
+Upload Branding Logo
 
 ### Example
 ```csharp
@@ -676,7 +676,7 @@ using InvoicePDFs.Model;
 
 namespace Example
 {
-    public class UploadLogoApiV1BrandingProfilesProfileIdLogoPostExample
+    public class UploadBrandingLogoExample
     {
         public static void Main()
         {
@@ -691,13 +691,13 @@ namespace Example
 
             try
             {
-                // Upload Logo
-                BrandingProfileResponse result = apiInstance.UploadLogoApiV1BrandingProfilesProfileIdLogoPost(profileId, file);
+                // Upload Branding Logo
+                BrandingProfileResponse result = apiInstance.UploadBrandingLogo(profileId, file);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling BrandingProfilesApi.UploadLogoApiV1BrandingProfilesProfileIdLogoPost: " + e.Message);
+                Debug.Print("Exception when calling BrandingProfilesApi.UploadBrandingLogo: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -706,21 +706,21 @@ namespace Example
 }
 ```
 
-#### Using the UploadLogoApiV1BrandingProfilesProfileIdLogoPostWithHttpInfo variant
+#### Using the UploadBrandingLogoWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
-    // Upload Logo
-    ApiResponse<BrandingProfileResponse> response = apiInstance.UploadLogoApiV1BrandingProfilesProfileIdLogoPostWithHttpInfo(profileId, file);
+    // Upload Branding Logo
+    ApiResponse<BrandingProfileResponse> response = apiInstance.UploadBrandingLogoWithHttpInfo(profileId, file);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling BrandingProfilesApi.UploadLogoApiV1BrandingProfilesProfileIdLogoPostWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling BrandingProfilesApi.UploadBrandingLogoWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }

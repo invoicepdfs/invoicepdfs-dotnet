@@ -31,7 +31,7 @@ namespace InvoicePDFs.Api
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>Dictionary&lt;string, Object&gt;</returns>
-        Dictionary<string, Object> ListCountriesApiV1ReferenceCountriesGet(int operationIndex = 0);
+        Dictionary<string, Object> ListCountries(int operationIndex = 0);
 
         /// <summary>
         /// List Countries
@@ -42,14 +42,14 @@ namespace InvoicePDFs.Api
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Dictionary&lt;string, Object&gt;</returns>
-        ApiResponse<Dictionary<string, Object>> ListCountriesApiV1ReferenceCountriesGetWithHttpInfo(int operationIndex = 0);
+        ApiResponse<Dictionary<string, Object>> ListCountriesWithHttpInfo(int operationIndex = 0);
         /// <summary>
         /// List Currencies
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>Dictionary&lt;string, Object&gt;</returns>
-        Dictionary<string, Object> ListCurrenciesApiV1ReferenceCurrenciesGet(int operationIndex = 0);
+        Dictionary<string, Object> ListCurrencies(int operationIndex = 0);
 
         /// <summary>
         /// List Currencies
@@ -60,7 +60,7 @@ namespace InvoicePDFs.Api
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Dictionary&lt;string, Object&gt;</returns>
-        ApiResponse<Dictionary<string, Object>> ListCurrenciesApiV1ReferenceCurrenciesGetWithHttpInfo(int operationIndex = 0);
+        ApiResponse<Dictionary<string, Object>> ListCurrenciesWithHttpInfo(int operationIndex = 0);
         /// <summary>
         /// List Document Types
         /// </summary>
@@ -70,7 +70,7 @@ namespace InvoicePDFs.Api
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>Dictionary&lt;string, Object&gt;</returns>
-        Dictionary<string, Object> ListDocumentTypesApiV1ReferenceDocumentTypesGet(int operationIndex = 0);
+        Dictionary<string, Object> ListDocumentTypes(int operationIndex = 0);
 
         /// <summary>
         /// List Document Types
@@ -81,14 +81,14 @@ namespace InvoicePDFs.Api
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Dictionary&lt;string, Object&gt;</returns>
-        ApiResponse<Dictionary<string, Object>> ListDocumentTypesApiV1ReferenceDocumentTypesGetWithHttpInfo(int operationIndex = 0);
+        ApiResponse<Dictionary<string, Object>> ListDocumentTypesWithHttpInfo(int operationIndex = 0);
         /// <summary>
         /// List Locales
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>Dictionary&lt;string, Object&gt;</returns>
-        Dictionary<string, Object> ListLocalesApiV1ReferenceLocalesGet(int operationIndex = 0);
+        Dictionary<string, Object> ListLocales(int operationIndex = 0);
 
         /// <summary>
         /// List Locales
@@ -99,14 +99,14 @@ namespace InvoicePDFs.Api
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Dictionary&lt;string, Object&gt;</returns>
-        ApiResponse<Dictionary<string, Object>> ListLocalesApiV1ReferenceLocalesGetWithHttpInfo(int operationIndex = 0);
+        ApiResponse<Dictionary<string, Object>> ListLocalesWithHttpInfo(int operationIndex = 0);
         /// <summary>
         /// List Page Sizes
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>Dictionary&lt;string, Object&gt;</returns>
-        Dictionary<string, Object> ListPageSizesApiV1ReferencePageSizesGet(int operationIndex = 0);
+        Dictionary<string, Object> ListPageSizes(int operationIndex = 0);
 
         /// <summary>
         /// List Page Sizes
@@ -117,14 +117,14 @@ namespace InvoicePDFs.Api
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Dictionary&lt;string, Object&gt;</returns>
-        ApiResponse<Dictionary<string, Object>> ListPageSizesApiV1ReferencePageSizesGetWithHttpInfo(int operationIndex = 0);
+        ApiResponse<Dictionary<string, Object>> ListPageSizesWithHttpInfo(int operationIndex = 0);
         /// <summary>
         /// List Timezones
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>Dictionary&lt;string, Object&gt;</returns>
-        Dictionary<string, Object> ListTimezonesApiV1ReferenceTimezonesGet(int operationIndex = 0);
+        Dictionary<string, Object> ListTimezones(int operationIndex = 0);
 
         /// <summary>
         /// List Timezones
@@ -135,7 +135,7 @@ namespace InvoicePDFs.Api
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Dictionary&lt;string, Object&gt;</returns>
-        ApiResponse<Dictionary<string, Object>> ListTimezonesApiV1ReferenceTimezonesGetWithHttpInfo(int operationIndex = 0);
+        ApiResponse<Dictionary<string, Object>> ListTimezonesWithHttpInfo(int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -155,7 +155,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Dictionary&lt;string, Object&gt;</returns>
-        System.Threading.Tasks.Task<Dictionary<string, Object>> ListCountriesApiV1ReferenceCountriesGetAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<Dictionary<string, Object>> ListCountriesAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// List Countries
@@ -167,7 +167,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Dictionary&lt;string, Object&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Dictionary<string, Object>>> ListCountriesApiV1ReferenceCountriesGetWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Dictionary<string, Object>>> ListCountriesWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// List Currencies
         /// </summary>
@@ -178,7 +178,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Dictionary&lt;string, Object&gt;</returns>
-        System.Threading.Tasks.Task<Dictionary<string, Object>> ListCurrenciesApiV1ReferenceCurrenciesGetAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<Dictionary<string, Object>> ListCurrenciesAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// List Currencies
@@ -190,7 +190,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Dictionary&lt;string, Object&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Dictionary<string, Object>>> ListCurrenciesApiV1ReferenceCurrenciesGetWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Dictionary<string, Object>>> ListCurrenciesWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// List Document Types
         /// </summary>
@@ -201,7 +201,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Dictionary&lt;string, Object&gt;</returns>
-        System.Threading.Tasks.Task<Dictionary<string, Object>> ListDocumentTypesApiV1ReferenceDocumentTypesGetAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<Dictionary<string, Object>> ListDocumentTypesAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// List Document Types
@@ -213,7 +213,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Dictionary&lt;string, Object&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Dictionary<string, Object>>> ListDocumentTypesApiV1ReferenceDocumentTypesGetWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Dictionary<string, Object>>> ListDocumentTypesWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// List Locales
         /// </summary>
@@ -224,7 +224,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Dictionary&lt;string, Object&gt;</returns>
-        System.Threading.Tasks.Task<Dictionary<string, Object>> ListLocalesApiV1ReferenceLocalesGetAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<Dictionary<string, Object>> ListLocalesAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// List Locales
@@ -236,7 +236,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Dictionary&lt;string, Object&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Dictionary<string, Object>>> ListLocalesApiV1ReferenceLocalesGetWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Dictionary<string, Object>>> ListLocalesWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// List Page Sizes
         /// </summary>
@@ -247,7 +247,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Dictionary&lt;string, Object&gt;</returns>
-        System.Threading.Tasks.Task<Dictionary<string, Object>> ListPageSizesApiV1ReferencePageSizesGetAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<Dictionary<string, Object>> ListPageSizesAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// List Page Sizes
@@ -259,7 +259,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Dictionary&lt;string, Object&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Dictionary<string, Object>>> ListPageSizesApiV1ReferencePageSizesGetWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Dictionary<string, Object>>> ListPageSizesWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// List Timezones
         /// </summary>
@@ -270,7 +270,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Dictionary&lt;string, Object&gt;</returns>
-        System.Threading.Tasks.Task<Dictionary<string, Object>> ListTimezonesApiV1ReferenceTimezonesGetAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<Dictionary<string, Object>> ListTimezonesAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// List Timezones
@@ -282,7 +282,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Dictionary&lt;string, Object&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Dictionary<string, Object>>> ListTimezonesApiV1ReferenceTimezonesGetWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Dictionary<string, Object>>> ListTimezonesWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -409,9 +409,9 @@ namespace InvoicePDFs.Api
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>Dictionary&lt;string, Object&gt;</returns>
-        public Dictionary<string, Object> ListCountriesApiV1ReferenceCountriesGet(int operationIndex = 0)
+        public Dictionary<string, Object> ListCountries(int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<Dictionary<string, Object>> localVarResponse = ListCountriesApiV1ReferenceCountriesGetWithHttpInfo();
+            InvoicePDFs.Client.ApiResponse<Dictionary<string, Object>> localVarResponse = ListCountriesWithHttpInfo();
             return localVarResponse.Data;
         }
 
@@ -421,7 +421,7 @@ namespace InvoicePDFs.Api
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Dictionary&lt;string, Object&gt;</returns>
-        public InvoicePDFs.Client.ApiResponse<Dictionary<string, Object>> ListCountriesApiV1ReferenceCountriesGetWithHttpInfo(int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<Dictionary<string, Object>> ListCountriesWithHttpInfo(int operationIndex = 0)
         {
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
 
@@ -446,7 +446,7 @@ namespace InvoicePDFs.Api
             }
 
 
-            localVarRequestOptions.Operation = "ReferenceApi.ListCountriesApiV1ReferenceCountriesGet";
+            localVarRequestOptions.Operation = "ReferenceApi.ListCountries";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -454,7 +454,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Get<Dictionary<string, Object>>("/api/v1/reference/countries", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListCountriesApiV1ReferenceCountriesGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("ListCountries", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -471,9 +471,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Dictionary&lt;string, Object&gt;</returns>
-        public async System.Threading.Tasks.Task<Dictionary<string, Object>> ListCountriesApiV1ReferenceCountriesGetAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Dictionary<string, Object>> ListCountriesAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<Dictionary<string, Object>> localVarResponse = await ListCountriesApiV1ReferenceCountriesGetWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<Dictionary<string, Object>> localVarResponse = await ListCountriesWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -484,7 +484,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Dictionary&lt;string, Object&gt;)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<Dictionary<string, Object>>> ListCountriesApiV1ReferenceCountriesGetWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<Dictionary<string, Object>>> ListCountriesWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -510,7 +510,7 @@ namespace InvoicePDFs.Api
             }
 
 
-            localVarRequestOptions.Operation = "ReferenceApi.ListCountriesApiV1ReferenceCountriesGet";
+            localVarRequestOptions.Operation = "ReferenceApi.ListCountries";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -519,7 +519,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListCountriesApiV1ReferenceCountriesGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("ListCountries", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -535,9 +535,9 @@ namespace InvoicePDFs.Api
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>Dictionary&lt;string, Object&gt;</returns>
-        public Dictionary<string, Object> ListCurrenciesApiV1ReferenceCurrenciesGet(int operationIndex = 0)
+        public Dictionary<string, Object> ListCurrencies(int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<Dictionary<string, Object>> localVarResponse = ListCurrenciesApiV1ReferenceCurrenciesGetWithHttpInfo();
+            InvoicePDFs.Client.ApiResponse<Dictionary<string, Object>> localVarResponse = ListCurrenciesWithHttpInfo();
             return localVarResponse.Data;
         }
 
@@ -547,7 +547,7 @@ namespace InvoicePDFs.Api
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Dictionary&lt;string, Object&gt;</returns>
-        public InvoicePDFs.Client.ApiResponse<Dictionary<string, Object>> ListCurrenciesApiV1ReferenceCurrenciesGetWithHttpInfo(int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<Dictionary<string, Object>> ListCurrenciesWithHttpInfo(int operationIndex = 0)
         {
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
 
@@ -572,7 +572,7 @@ namespace InvoicePDFs.Api
             }
 
 
-            localVarRequestOptions.Operation = "ReferenceApi.ListCurrenciesApiV1ReferenceCurrenciesGet";
+            localVarRequestOptions.Operation = "ReferenceApi.ListCurrencies";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -580,7 +580,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Get<Dictionary<string, Object>>("/api/v1/reference/currencies", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListCurrenciesApiV1ReferenceCurrenciesGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("ListCurrencies", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -597,9 +597,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Dictionary&lt;string, Object&gt;</returns>
-        public async System.Threading.Tasks.Task<Dictionary<string, Object>> ListCurrenciesApiV1ReferenceCurrenciesGetAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Dictionary<string, Object>> ListCurrenciesAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<Dictionary<string, Object>> localVarResponse = await ListCurrenciesApiV1ReferenceCurrenciesGetWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<Dictionary<string, Object>> localVarResponse = await ListCurrenciesWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -610,7 +610,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Dictionary&lt;string, Object&gt;)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<Dictionary<string, Object>>> ListCurrenciesApiV1ReferenceCurrenciesGetWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<Dictionary<string, Object>>> ListCurrenciesWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -636,7 +636,7 @@ namespace InvoicePDFs.Api
             }
 
 
-            localVarRequestOptions.Operation = "ReferenceApi.ListCurrenciesApiV1ReferenceCurrenciesGet";
+            localVarRequestOptions.Operation = "ReferenceApi.ListCurrencies";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -645,7 +645,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListCurrenciesApiV1ReferenceCurrenciesGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("ListCurrencies", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -661,9 +661,9 @@ namespace InvoicePDFs.Api
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>Dictionary&lt;string, Object&gt;</returns>
-        public Dictionary<string, Object> ListDocumentTypesApiV1ReferenceDocumentTypesGet(int operationIndex = 0)
+        public Dictionary<string, Object> ListDocumentTypes(int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<Dictionary<string, Object>> localVarResponse = ListDocumentTypesApiV1ReferenceDocumentTypesGetWithHttpInfo();
+            InvoicePDFs.Client.ApiResponse<Dictionary<string, Object>> localVarResponse = ListDocumentTypesWithHttpInfo();
             return localVarResponse.Data;
         }
 
@@ -673,7 +673,7 @@ namespace InvoicePDFs.Api
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Dictionary&lt;string, Object&gt;</returns>
-        public InvoicePDFs.Client.ApiResponse<Dictionary<string, Object>> ListDocumentTypesApiV1ReferenceDocumentTypesGetWithHttpInfo(int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<Dictionary<string, Object>> ListDocumentTypesWithHttpInfo(int operationIndex = 0)
         {
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
 
@@ -698,7 +698,7 @@ namespace InvoicePDFs.Api
             }
 
 
-            localVarRequestOptions.Operation = "ReferenceApi.ListDocumentTypesApiV1ReferenceDocumentTypesGet";
+            localVarRequestOptions.Operation = "ReferenceApi.ListDocumentTypes";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -706,7 +706,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Get<Dictionary<string, Object>>("/api/v1/reference/document-types", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListDocumentTypesApiV1ReferenceDocumentTypesGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("ListDocumentTypes", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -723,9 +723,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Dictionary&lt;string, Object&gt;</returns>
-        public async System.Threading.Tasks.Task<Dictionary<string, Object>> ListDocumentTypesApiV1ReferenceDocumentTypesGetAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Dictionary<string, Object>> ListDocumentTypesAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<Dictionary<string, Object>> localVarResponse = await ListDocumentTypesApiV1ReferenceDocumentTypesGetWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<Dictionary<string, Object>> localVarResponse = await ListDocumentTypesWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -736,7 +736,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Dictionary&lt;string, Object&gt;)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<Dictionary<string, Object>>> ListDocumentTypesApiV1ReferenceDocumentTypesGetWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<Dictionary<string, Object>>> ListDocumentTypesWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -762,7 +762,7 @@ namespace InvoicePDFs.Api
             }
 
 
-            localVarRequestOptions.Operation = "ReferenceApi.ListDocumentTypesApiV1ReferenceDocumentTypesGet";
+            localVarRequestOptions.Operation = "ReferenceApi.ListDocumentTypes";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -771,7 +771,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListDocumentTypesApiV1ReferenceDocumentTypesGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("ListDocumentTypes", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -787,9 +787,9 @@ namespace InvoicePDFs.Api
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>Dictionary&lt;string, Object&gt;</returns>
-        public Dictionary<string, Object> ListLocalesApiV1ReferenceLocalesGet(int operationIndex = 0)
+        public Dictionary<string, Object> ListLocales(int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<Dictionary<string, Object>> localVarResponse = ListLocalesApiV1ReferenceLocalesGetWithHttpInfo();
+            InvoicePDFs.Client.ApiResponse<Dictionary<string, Object>> localVarResponse = ListLocalesWithHttpInfo();
             return localVarResponse.Data;
         }
 
@@ -799,7 +799,7 @@ namespace InvoicePDFs.Api
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Dictionary&lt;string, Object&gt;</returns>
-        public InvoicePDFs.Client.ApiResponse<Dictionary<string, Object>> ListLocalesApiV1ReferenceLocalesGetWithHttpInfo(int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<Dictionary<string, Object>> ListLocalesWithHttpInfo(int operationIndex = 0)
         {
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
 
@@ -824,7 +824,7 @@ namespace InvoicePDFs.Api
             }
 
 
-            localVarRequestOptions.Operation = "ReferenceApi.ListLocalesApiV1ReferenceLocalesGet";
+            localVarRequestOptions.Operation = "ReferenceApi.ListLocales";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -832,7 +832,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Get<Dictionary<string, Object>>("/api/v1/reference/locales", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListLocalesApiV1ReferenceLocalesGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("ListLocales", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -849,9 +849,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Dictionary&lt;string, Object&gt;</returns>
-        public async System.Threading.Tasks.Task<Dictionary<string, Object>> ListLocalesApiV1ReferenceLocalesGetAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Dictionary<string, Object>> ListLocalesAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<Dictionary<string, Object>> localVarResponse = await ListLocalesApiV1ReferenceLocalesGetWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<Dictionary<string, Object>> localVarResponse = await ListLocalesWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -862,7 +862,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Dictionary&lt;string, Object&gt;)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<Dictionary<string, Object>>> ListLocalesApiV1ReferenceLocalesGetWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<Dictionary<string, Object>>> ListLocalesWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -888,7 +888,7 @@ namespace InvoicePDFs.Api
             }
 
 
-            localVarRequestOptions.Operation = "ReferenceApi.ListLocalesApiV1ReferenceLocalesGet";
+            localVarRequestOptions.Operation = "ReferenceApi.ListLocales";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -897,7 +897,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListLocalesApiV1ReferenceLocalesGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("ListLocales", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -913,9 +913,9 @@ namespace InvoicePDFs.Api
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>Dictionary&lt;string, Object&gt;</returns>
-        public Dictionary<string, Object> ListPageSizesApiV1ReferencePageSizesGet(int operationIndex = 0)
+        public Dictionary<string, Object> ListPageSizes(int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<Dictionary<string, Object>> localVarResponse = ListPageSizesApiV1ReferencePageSizesGetWithHttpInfo();
+            InvoicePDFs.Client.ApiResponse<Dictionary<string, Object>> localVarResponse = ListPageSizesWithHttpInfo();
             return localVarResponse.Data;
         }
 
@@ -925,7 +925,7 @@ namespace InvoicePDFs.Api
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Dictionary&lt;string, Object&gt;</returns>
-        public InvoicePDFs.Client.ApiResponse<Dictionary<string, Object>> ListPageSizesApiV1ReferencePageSizesGetWithHttpInfo(int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<Dictionary<string, Object>> ListPageSizesWithHttpInfo(int operationIndex = 0)
         {
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
 
@@ -950,7 +950,7 @@ namespace InvoicePDFs.Api
             }
 
 
-            localVarRequestOptions.Operation = "ReferenceApi.ListPageSizesApiV1ReferencePageSizesGet";
+            localVarRequestOptions.Operation = "ReferenceApi.ListPageSizes";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -958,7 +958,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Get<Dictionary<string, Object>>("/api/v1/reference/page-sizes", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListPageSizesApiV1ReferencePageSizesGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("ListPageSizes", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -975,9 +975,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Dictionary&lt;string, Object&gt;</returns>
-        public async System.Threading.Tasks.Task<Dictionary<string, Object>> ListPageSizesApiV1ReferencePageSizesGetAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Dictionary<string, Object>> ListPageSizesAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<Dictionary<string, Object>> localVarResponse = await ListPageSizesApiV1ReferencePageSizesGetWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<Dictionary<string, Object>> localVarResponse = await ListPageSizesWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -988,7 +988,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Dictionary&lt;string, Object&gt;)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<Dictionary<string, Object>>> ListPageSizesApiV1ReferencePageSizesGetWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<Dictionary<string, Object>>> ListPageSizesWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -1014,7 +1014,7 @@ namespace InvoicePDFs.Api
             }
 
 
-            localVarRequestOptions.Operation = "ReferenceApi.ListPageSizesApiV1ReferencePageSizesGet";
+            localVarRequestOptions.Operation = "ReferenceApi.ListPageSizes";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -1023,7 +1023,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListPageSizesApiV1ReferencePageSizesGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("ListPageSizes", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1039,9 +1039,9 @@ namespace InvoicePDFs.Api
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>Dictionary&lt;string, Object&gt;</returns>
-        public Dictionary<string, Object> ListTimezonesApiV1ReferenceTimezonesGet(int operationIndex = 0)
+        public Dictionary<string, Object> ListTimezones(int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<Dictionary<string, Object>> localVarResponse = ListTimezonesApiV1ReferenceTimezonesGetWithHttpInfo();
+            InvoicePDFs.Client.ApiResponse<Dictionary<string, Object>> localVarResponse = ListTimezonesWithHttpInfo();
             return localVarResponse.Data;
         }
 
@@ -1051,7 +1051,7 @@ namespace InvoicePDFs.Api
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Dictionary&lt;string, Object&gt;</returns>
-        public InvoicePDFs.Client.ApiResponse<Dictionary<string, Object>> ListTimezonesApiV1ReferenceTimezonesGetWithHttpInfo(int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<Dictionary<string, Object>> ListTimezonesWithHttpInfo(int operationIndex = 0)
         {
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
 
@@ -1076,7 +1076,7 @@ namespace InvoicePDFs.Api
             }
 
 
-            localVarRequestOptions.Operation = "ReferenceApi.ListTimezonesApiV1ReferenceTimezonesGet";
+            localVarRequestOptions.Operation = "ReferenceApi.ListTimezones";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -1084,7 +1084,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Get<Dictionary<string, Object>>("/api/v1/reference/timezones", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListTimezonesApiV1ReferenceTimezonesGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("ListTimezones", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1101,9 +1101,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Dictionary&lt;string, Object&gt;</returns>
-        public async System.Threading.Tasks.Task<Dictionary<string, Object>> ListTimezonesApiV1ReferenceTimezonesGetAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Dictionary<string, Object>> ListTimezonesAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<Dictionary<string, Object>> localVarResponse = await ListTimezonesApiV1ReferenceTimezonesGetWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<Dictionary<string, Object>> localVarResponse = await ListTimezonesWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1114,7 +1114,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Dictionary&lt;string, Object&gt;)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<Dictionary<string, Object>>> ListTimezonesApiV1ReferenceTimezonesGetWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<Dictionary<string, Object>>> ListTimezonesWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -1140,7 +1140,7 @@ namespace InvoicePDFs.Api
             }
 
 
-            localVarRequestOptions.Operation = "ReferenceApi.ListTimezonesApiV1ReferenceTimezonesGet";
+            localVarRequestOptions.Operation = "ReferenceApi.ListTimezones";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -1149,7 +1149,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListTimezonesApiV1ReferenceTimezonesGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("ListTimezones", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

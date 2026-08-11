@@ -27,16 +27,16 @@ namespace InvoicePDFs.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Create Profile
+        /// Create Branding Profile
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="brandingProfileCreateRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>BrandingProfileResponse</returns>
-        BrandingProfileResponse CreateProfileApiV1BrandingProfilesPost(BrandingProfileCreateRequest brandingProfileCreateRequest, int operationIndex = 0);
+        BrandingProfileResponse CreateBrandingProfile(BrandingProfileCreateRequest brandingProfileCreateRequest, int operationIndex = 0);
 
         /// <summary>
-        /// Create Profile
+        /// Create Branding Profile
         /// </summary>
         /// <remarks>
         /// 
@@ -45,18 +45,18 @@ namespace InvoicePDFs.Api
         /// <param name="brandingProfileCreateRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of BrandingProfileResponse</returns>
-        ApiResponse<BrandingProfileResponse> CreateProfileApiV1BrandingProfilesPostWithHttpInfo(BrandingProfileCreateRequest brandingProfileCreateRequest, int operationIndex = 0);
+        ApiResponse<BrandingProfileResponse> CreateBrandingProfileWithHttpInfo(BrandingProfileCreateRequest brandingProfileCreateRequest, int operationIndex = 0);
         /// <summary>
-        /// Delete Logo
+        /// Delete Branding Logo
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>SimpleBoolResponse</returns>
-        SimpleBoolResponse DeleteLogoApiV1BrandingProfilesProfileIdLogoDelete(string profileId, int operationIndex = 0);
+        SimpleBoolResponse DeleteBrandingLogo(string profileId, int operationIndex = 0);
 
         /// <summary>
-        /// Delete Logo
+        /// Delete Branding Logo
         /// </summary>
         /// <remarks>
         /// 
@@ -65,18 +65,18 @@ namespace InvoicePDFs.Api
         /// <param name="profileId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of SimpleBoolResponse</returns>
-        ApiResponse<SimpleBoolResponse> DeleteLogoApiV1BrandingProfilesProfileIdLogoDeleteWithHttpInfo(string profileId, int operationIndex = 0);
+        ApiResponse<SimpleBoolResponse> DeleteBrandingLogoWithHttpInfo(string profileId, int operationIndex = 0);
         /// <summary>
-        /// Delete Profile
+        /// Delete Branding Profile
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>SimpleBoolResponse</returns>
-        SimpleBoolResponse DeleteProfileApiV1BrandingProfilesProfileIdDelete(string profileId, int operationIndex = 0);
+        SimpleBoolResponse DeleteBrandingProfile(string profileId, int operationIndex = 0);
 
         /// <summary>
-        /// Delete Profile
+        /// Delete Branding Profile
         /// </summary>
         /// <remarks>
         /// 
@@ -85,18 +85,18 @@ namespace InvoicePDFs.Api
         /// <param name="profileId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of SimpleBoolResponse</returns>
-        ApiResponse<SimpleBoolResponse> DeleteProfileApiV1BrandingProfilesProfileIdDeleteWithHttpInfo(string profileId, int operationIndex = 0);
+        ApiResponse<SimpleBoolResponse> DeleteBrandingProfileWithHttpInfo(string profileId, int operationIndex = 0);
         /// <summary>
-        /// Get Profile
+        /// Get Branding Profile
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>BrandingProfileResponse</returns>
-        BrandingProfileResponse GetProfileApiV1BrandingProfilesProfileIdGet(string profileId, int operationIndex = 0);
+        BrandingProfileResponse GetBrandingProfile(string profileId, int operationIndex = 0);
 
         /// <summary>
-        /// Get Profile
+        /// Get Branding Profile
         /// </summary>
         /// <remarks>
         /// 
@@ -105,17 +105,17 @@ namespace InvoicePDFs.Api
         /// <param name="profileId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of BrandingProfileResponse</returns>
-        ApiResponse<BrandingProfileResponse> GetProfileApiV1BrandingProfilesProfileIdGetWithHttpInfo(string profileId, int operationIndex = 0);
+        ApiResponse<BrandingProfileResponse> GetBrandingProfileWithHttpInfo(string profileId, int operationIndex = 0);
         /// <summary>
-        /// List Profiles
+        /// List Branding Profiles
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>BrandingProfilesListResponse</returns>
-        BrandingProfilesListResponse ListProfilesApiV1BrandingProfilesGet(int operationIndex = 0);
+        BrandingProfilesListResponse ListBrandingProfiles(int operationIndex = 0);
 
         /// <summary>
-        /// List Profiles
+        /// List Branding Profiles
         /// </summary>
         /// <remarks>
         /// 
@@ -123,18 +123,18 @@ namespace InvoicePDFs.Api
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of BrandingProfilesListResponse</returns>
-        ApiResponse<BrandingProfilesListResponse> ListProfilesApiV1BrandingProfilesGetWithHttpInfo(int operationIndex = 0);
+        ApiResponse<BrandingProfilesListResponse> ListBrandingProfilesWithHttpInfo(int operationIndex = 0);
         /// <summary>
-        /// Set Default
+        /// Set Default Branding Profile
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>BrandingProfileResponse</returns>
-        BrandingProfileResponse SetDefaultApiV1BrandingProfilesProfileIdDefaultPost(string profileId, int operationIndex = 0);
+        BrandingProfileResponse SetDefaultBrandingProfile(string profileId, int operationIndex = 0);
 
         /// <summary>
-        /// Set Default
+        /// Set Default Branding Profile
         /// </summary>
         /// <remarks>
         /// 
@@ -143,19 +143,19 @@ namespace InvoicePDFs.Api
         /// <param name="profileId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of BrandingProfileResponse</returns>
-        ApiResponse<BrandingProfileResponse> SetDefaultApiV1BrandingProfilesProfileIdDefaultPostWithHttpInfo(string profileId, int operationIndex = 0);
+        ApiResponse<BrandingProfileResponse> SetDefaultBrandingProfileWithHttpInfo(string profileId, int operationIndex = 0);
         /// <summary>
-        /// Update Profile
+        /// Update Branding Profile
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId"></param>
         /// <param name="brandingProfilePatchRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>BrandingProfileResponse</returns>
-        BrandingProfileResponse UpdateProfileApiV1BrandingProfilesProfileIdPatch(string profileId, BrandingProfilePatchRequest brandingProfilePatchRequest, int operationIndex = 0);
+        BrandingProfileResponse UpdateBrandingProfile(string profileId, BrandingProfilePatchRequest brandingProfilePatchRequest, int operationIndex = 0);
 
         /// <summary>
-        /// Update Profile
+        /// Update Branding Profile
         /// </summary>
         /// <remarks>
         /// 
@@ -165,19 +165,19 @@ namespace InvoicePDFs.Api
         /// <param name="brandingProfilePatchRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of BrandingProfileResponse</returns>
-        ApiResponse<BrandingProfileResponse> UpdateProfileApiV1BrandingProfilesProfileIdPatchWithHttpInfo(string profileId, BrandingProfilePatchRequest brandingProfilePatchRequest, int operationIndex = 0);
+        ApiResponse<BrandingProfileResponse> UpdateBrandingProfileWithHttpInfo(string profileId, BrandingProfilePatchRequest brandingProfilePatchRequest, int operationIndex = 0);
         /// <summary>
-        /// Upload Logo
+        /// Upload Branding Logo
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId"></param>
         /// <param name="file"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>BrandingProfileResponse</returns>
-        BrandingProfileResponse UploadLogoApiV1BrandingProfilesProfileIdLogoPost(string profileId, System.IO.Stream file, int operationIndex = 0);
+        BrandingProfileResponse UploadBrandingLogo(string profileId, System.IO.Stream file, int operationIndex = 0);
 
         /// <summary>
-        /// Upload Logo
+        /// Upload Branding Logo
         /// </summary>
         /// <remarks>
         /// 
@@ -187,7 +187,7 @@ namespace InvoicePDFs.Api
         /// <param name="file"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of BrandingProfileResponse</returns>
-        ApiResponse<BrandingProfileResponse> UploadLogoApiV1BrandingProfilesProfileIdLogoPostWithHttpInfo(string profileId, System.IO.Stream file, int operationIndex = 0);
+        ApiResponse<BrandingProfileResponse> UploadBrandingLogoWithHttpInfo(string profileId, System.IO.Stream file, int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -198,7 +198,7 @@ namespace InvoicePDFs.Api
     {
         #region Asynchronous Operations
         /// <summary>
-        /// Create Profile
+        /// Create Branding Profile
         /// </summary>
         /// <remarks>
         /// 
@@ -208,10 +208,10 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of BrandingProfileResponse</returns>
-        System.Threading.Tasks.Task<BrandingProfileResponse> CreateProfileApiV1BrandingProfilesPostAsync(BrandingProfileCreateRequest brandingProfileCreateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<BrandingProfileResponse> CreateBrandingProfileAsync(BrandingProfileCreateRequest brandingProfileCreateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// Create Profile
+        /// Create Branding Profile
         /// </summary>
         /// <remarks>
         /// 
@@ -221,9 +221,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (BrandingProfileResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<BrandingProfileResponse>> CreateProfileApiV1BrandingProfilesPostWithHttpInfoAsync(BrandingProfileCreateRequest brandingProfileCreateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<BrandingProfileResponse>> CreateBrandingProfileWithHttpInfoAsync(BrandingProfileCreateRequest brandingProfileCreateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// Delete Logo
+        /// Delete Branding Logo
         /// </summary>
         /// <remarks>
         /// 
@@ -233,10 +233,10 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of SimpleBoolResponse</returns>
-        System.Threading.Tasks.Task<SimpleBoolResponse> DeleteLogoApiV1BrandingProfilesProfileIdLogoDeleteAsync(string profileId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<SimpleBoolResponse> DeleteBrandingLogoAsync(string profileId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// Delete Logo
+        /// Delete Branding Logo
         /// </summary>
         /// <remarks>
         /// 
@@ -246,9 +246,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (SimpleBoolResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SimpleBoolResponse>> DeleteLogoApiV1BrandingProfilesProfileIdLogoDeleteWithHttpInfoAsync(string profileId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<SimpleBoolResponse>> DeleteBrandingLogoWithHttpInfoAsync(string profileId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// Delete Profile
+        /// Delete Branding Profile
         /// </summary>
         /// <remarks>
         /// 
@@ -258,10 +258,10 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of SimpleBoolResponse</returns>
-        System.Threading.Tasks.Task<SimpleBoolResponse> DeleteProfileApiV1BrandingProfilesProfileIdDeleteAsync(string profileId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<SimpleBoolResponse> DeleteBrandingProfileAsync(string profileId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// Delete Profile
+        /// Delete Branding Profile
         /// </summary>
         /// <remarks>
         /// 
@@ -271,9 +271,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (SimpleBoolResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SimpleBoolResponse>> DeleteProfileApiV1BrandingProfilesProfileIdDeleteWithHttpInfoAsync(string profileId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<SimpleBoolResponse>> DeleteBrandingProfileWithHttpInfoAsync(string profileId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// Get Profile
+        /// Get Branding Profile
         /// </summary>
         /// <remarks>
         /// 
@@ -283,10 +283,10 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of BrandingProfileResponse</returns>
-        System.Threading.Tasks.Task<BrandingProfileResponse> GetProfileApiV1BrandingProfilesProfileIdGetAsync(string profileId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<BrandingProfileResponse> GetBrandingProfileAsync(string profileId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// Get Profile
+        /// Get Branding Profile
         /// </summary>
         /// <remarks>
         /// 
@@ -296,9 +296,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (BrandingProfileResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<BrandingProfileResponse>> GetProfileApiV1BrandingProfilesProfileIdGetWithHttpInfoAsync(string profileId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<BrandingProfileResponse>> GetBrandingProfileWithHttpInfoAsync(string profileId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// List Profiles
+        /// List Branding Profiles
         /// </summary>
         /// <remarks>
         /// 
@@ -307,10 +307,10 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of BrandingProfilesListResponse</returns>
-        System.Threading.Tasks.Task<BrandingProfilesListResponse> ListProfilesApiV1BrandingProfilesGetAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<BrandingProfilesListResponse> ListBrandingProfilesAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// List Profiles
+        /// List Branding Profiles
         /// </summary>
         /// <remarks>
         /// 
@@ -319,9 +319,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (BrandingProfilesListResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<BrandingProfilesListResponse>> ListProfilesApiV1BrandingProfilesGetWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<BrandingProfilesListResponse>> ListBrandingProfilesWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// Set Default
+        /// Set Default Branding Profile
         /// </summary>
         /// <remarks>
         /// 
@@ -331,10 +331,10 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of BrandingProfileResponse</returns>
-        System.Threading.Tasks.Task<BrandingProfileResponse> SetDefaultApiV1BrandingProfilesProfileIdDefaultPostAsync(string profileId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<BrandingProfileResponse> SetDefaultBrandingProfileAsync(string profileId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// Set Default
+        /// Set Default Branding Profile
         /// </summary>
         /// <remarks>
         /// 
@@ -344,9 +344,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (BrandingProfileResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<BrandingProfileResponse>> SetDefaultApiV1BrandingProfilesProfileIdDefaultPostWithHttpInfoAsync(string profileId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<BrandingProfileResponse>> SetDefaultBrandingProfileWithHttpInfoAsync(string profileId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// Update Profile
+        /// Update Branding Profile
         /// </summary>
         /// <remarks>
         /// 
@@ -357,10 +357,10 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of BrandingProfileResponse</returns>
-        System.Threading.Tasks.Task<BrandingProfileResponse> UpdateProfileApiV1BrandingProfilesProfileIdPatchAsync(string profileId, BrandingProfilePatchRequest brandingProfilePatchRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<BrandingProfileResponse> UpdateBrandingProfileAsync(string profileId, BrandingProfilePatchRequest brandingProfilePatchRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// Update Profile
+        /// Update Branding Profile
         /// </summary>
         /// <remarks>
         /// 
@@ -371,9 +371,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (BrandingProfileResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<BrandingProfileResponse>> UpdateProfileApiV1BrandingProfilesProfileIdPatchWithHttpInfoAsync(string profileId, BrandingProfilePatchRequest brandingProfilePatchRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<BrandingProfileResponse>> UpdateBrandingProfileWithHttpInfoAsync(string profileId, BrandingProfilePatchRequest brandingProfilePatchRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// Upload Logo
+        /// Upload Branding Logo
         /// </summary>
         /// <remarks>
         /// 
@@ -384,10 +384,10 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of BrandingProfileResponse</returns>
-        System.Threading.Tasks.Task<BrandingProfileResponse> UploadLogoApiV1BrandingProfilesProfileIdLogoPostAsync(string profileId, System.IO.Stream file, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<BrandingProfileResponse> UploadBrandingLogoAsync(string profileId, System.IO.Stream file, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// Upload Logo
+        /// Upload Branding Logo
         /// </summary>
         /// <remarks>
         /// 
@@ -398,7 +398,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (BrandingProfileResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<BrandingProfileResponse>> UploadLogoApiV1BrandingProfilesProfileIdLogoPostWithHttpInfoAsync(string profileId, System.IO.Stream file, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<BrandingProfileResponse>> UploadBrandingLogoWithHttpInfoAsync(string profileId, System.IO.Stream file, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -520,31 +520,31 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Create Profile 
+        /// Create Branding Profile 
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="brandingProfileCreateRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>BrandingProfileResponse</returns>
-        public BrandingProfileResponse CreateProfileApiV1BrandingProfilesPost(BrandingProfileCreateRequest brandingProfileCreateRequest, int operationIndex = 0)
+        public BrandingProfileResponse CreateBrandingProfile(BrandingProfileCreateRequest brandingProfileCreateRequest, int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<BrandingProfileResponse> localVarResponse = CreateProfileApiV1BrandingProfilesPostWithHttpInfo(brandingProfileCreateRequest);
+            InvoicePDFs.Client.ApiResponse<BrandingProfileResponse> localVarResponse = CreateBrandingProfileWithHttpInfo(brandingProfileCreateRequest);
             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Create Profile 
+        /// Create Branding Profile 
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="brandingProfileCreateRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of BrandingProfileResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<BrandingProfileResponse> CreateProfileApiV1BrandingProfilesPostWithHttpInfo(BrandingProfileCreateRequest brandingProfileCreateRequest, int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<BrandingProfileResponse> CreateBrandingProfileWithHttpInfo(BrandingProfileCreateRequest brandingProfileCreateRequest, int operationIndex = 0)
         {
             // verify the required parameter 'brandingProfileCreateRequest' is set
             if (brandingProfileCreateRequest == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'brandingProfileCreateRequest' when calling BrandingProfilesApi->CreateProfileApiV1BrandingProfilesPost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'brandingProfileCreateRequest' when calling BrandingProfilesApi->CreateBrandingProfile");
             }
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -572,7 +572,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.Data = brandingProfileCreateRequest;
 
-            localVarRequestOptions.Operation = "BrandingProfilesApi.CreateProfileApiV1BrandingProfilesPost";
+            localVarRequestOptions.Operation = "BrandingProfilesApi.CreateBrandingProfile";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -586,7 +586,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Post<BrandingProfileResponse>("/api/v1/branding-profiles", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("CreateProfileApiV1BrandingProfilesPost", localVarResponse);
+                Exception _exception = this.ExceptionFactory("CreateBrandingProfile", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -597,33 +597,33 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Create Profile 
+        /// Create Branding Profile 
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="brandingProfileCreateRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of BrandingProfileResponse</returns>
-        public async System.Threading.Tasks.Task<BrandingProfileResponse> CreateProfileApiV1BrandingProfilesPostAsync(BrandingProfileCreateRequest brandingProfileCreateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<BrandingProfileResponse> CreateBrandingProfileAsync(BrandingProfileCreateRequest brandingProfileCreateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<BrandingProfileResponse> localVarResponse = await CreateProfileApiV1BrandingProfilesPostWithHttpInfoAsync(brandingProfileCreateRequest, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<BrandingProfileResponse> localVarResponse = await CreateBrandingProfileWithHttpInfoAsync(brandingProfileCreateRequest, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Create Profile 
+        /// Create Branding Profile 
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="brandingProfileCreateRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (BrandingProfileResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<BrandingProfileResponse>> CreateProfileApiV1BrandingProfilesPostWithHttpInfoAsync(BrandingProfileCreateRequest brandingProfileCreateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<BrandingProfileResponse>> CreateBrandingProfileWithHttpInfoAsync(BrandingProfileCreateRequest brandingProfileCreateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'brandingProfileCreateRequest' is set
             if (brandingProfileCreateRequest == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'brandingProfileCreateRequest' when calling BrandingProfilesApi->CreateProfileApiV1BrandingProfilesPost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'brandingProfileCreateRequest' when calling BrandingProfilesApi->CreateBrandingProfile");
             }
 
 
@@ -652,7 +652,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.Data = brandingProfileCreateRequest;
 
-            localVarRequestOptions.Operation = "BrandingProfilesApi.CreateProfileApiV1BrandingProfilesPost";
+            localVarRequestOptions.Operation = "BrandingProfilesApi.CreateBrandingProfile";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -667,7 +667,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("CreateProfileApiV1BrandingProfilesPost", localVarResponse);
+                Exception _exception = this.ExceptionFactory("CreateBrandingProfile", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -678,31 +678,31 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Delete Logo 
+        /// Delete Branding Logo 
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>SimpleBoolResponse</returns>
-        public SimpleBoolResponse DeleteLogoApiV1BrandingProfilesProfileIdLogoDelete(string profileId, int operationIndex = 0)
+        public SimpleBoolResponse DeleteBrandingLogo(string profileId, int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<SimpleBoolResponse> localVarResponse = DeleteLogoApiV1BrandingProfilesProfileIdLogoDeleteWithHttpInfo(profileId);
+            InvoicePDFs.Client.ApiResponse<SimpleBoolResponse> localVarResponse = DeleteBrandingLogoWithHttpInfo(profileId);
             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Delete Logo 
+        /// Delete Branding Logo 
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of SimpleBoolResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<SimpleBoolResponse> DeleteLogoApiV1BrandingProfilesProfileIdLogoDeleteWithHttpInfo(string profileId, int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<SimpleBoolResponse> DeleteBrandingLogoWithHttpInfo(string profileId, int operationIndex = 0)
         {
             // verify the required parameter 'profileId' is set
             if (profileId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'profileId' when calling BrandingProfilesApi->DeleteLogoApiV1BrandingProfilesProfileIdLogoDelete");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'profileId' when calling BrandingProfilesApi->DeleteBrandingLogo");
             }
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -729,7 +729,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("profile_id", InvoicePDFs.Client.ClientUtils.ParameterToString(profileId)); // path parameter
 
-            localVarRequestOptions.Operation = "BrandingProfilesApi.DeleteLogoApiV1BrandingProfilesProfileIdLogoDelete";
+            localVarRequestOptions.Operation = "BrandingProfilesApi.DeleteBrandingLogo";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -743,7 +743,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Delete<SimpleBoolResponse>("/api/v1/branding-profiles/{profile_id}/logo", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteLogoApiV1BrandingProfilesProfileIdLogoDelete", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteBrandingLogo", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -754,33 +754,33 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Delete Logo 
+        /// Delete Branding Logo 
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of SimpleBoolResponse</returns>
-        public async System.Threading.Tasks.Task<SimpleBoolResponse> DeleteLogoApiV1BrandingProfilesProfileIdLogoDeleteAsync(string profileId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<SimpleBoolResponse> DeleteBrandingLogoAsync(string profileId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<SimpleBoolResponse> localVarResponse = await DeleteLogoApiV1BrandingProfilesProfileIdLogoDeleteWithHttpInfoAsync(profileId, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<SimpleBoolResponse> localVarResponse = await DeleteBrandingLogoWithHttpInfoAsync(profileId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Delete Logo 
+        /// Delete Branding Logo 
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (SimpleBoolResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<SimpleBoolResponse>> DeleteLogoApiV1BrandingProfilesProfileIdLogoDeleteWithHttpInfoAsync(string profileId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<SimpleBoolResponse>> DeleteBrandingLogoWithHttpInfoAsync(string profileId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'profileId' is set
             if (profileId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'profileId' when calling BrandingProfilesApi->DeleteLogoApiV1BrandingProfilesProfileIdLogoDelete");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'profileId' when calling BrandingProfilesApi->DeleteBrandingLogo");
             }
 
 
@@ -808,7 +808,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("profile_id", InvoicePDFs.Client.ClientUtils.ParameterToString(profileId)); // path parameter
 
-            localVarRequestOptions.Operation = "BrandingProfilesApi.DeleteLogoApiV1BrandingProfilesProfileIdLogoDelete";
+            localVarRequestOptions.Operation = "BrandingProfilesApi.DeleteBrandingLogo";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -823,7 +823,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteLogoApiV1BrandingProfilesProfileIdLogoDelete", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteBrandingLogo", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -834,31 +834,31 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Delete Profile 
+        /// Delete Branding Profile 
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>SimpleBoolResponse</returns>
-        public SimpleBoolResponse DeleteProfileApiV1BrandingProfilesProfileIdDelete(string profileId, int operationIndex = 0)
+        public SimpleBoolResponse DeleteBrandingProfile(string profileId, int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<SimpleBoolResponse> localVarResponse = DeleteProfileApiV1BrandingProfilesProfileIdDeleteWithHttpInfo(profileId);
+            InvoicePDFs.Client.ApiResponse<SimpleBoolResponse> localVarResponse = DeleteBrandingProfileWithHttpInfo(profileId);
             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Delete Profile 
+        /// Delete Branding Profile 
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of SimpleBoolResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<SimpleBoolResponse> DeleteProfileApiV1BrandingProfilesProfileIdDeleteWithHttpInfo(string profileId, int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<SimpleBoolResponse> DeleteBrandingProfileWithHttpInfo(string profileId, int operationIndex = 0)
         {
             // verify the required parameter 'profileId' is set
             if (profileId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'profileId' when calling BrandingProfilesApi->DeleteProfileApiV1BrandingProfilesProfileIdDelete");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'profileId' when calling BrandingProfilesApi->DeleteBrandingProfile");
             }
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -885,7 +885,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("profile_id", InvoicePDFs.Client.ClientUtils.ParameterToString(profileId)); // path parameter
 
-            localVarRequestOptions.Operation = "BrandingProfilesApi.DeleteProfileApiV1BrandingProfilesProfileIdDelete";
+            localVarRequestOptions.Operation = "BrandingProfilesApi.DeleteBrandingProfile";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -899,7 +899,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Delete<SimpleBoolResponse>("/api/v1/branding-profiles/{profile_id}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteProfileApiV1BrandingProfilesProfileIdDelete", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteBrandingProfile", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -910,33 +910,33 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Delete Profile 
+        /// Delete Branding Profile 
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of SimpleBoolResponse</returns>
-        public async System.Threading.Tasks.Task<SimpleBoolResponse> DeleteProfileApiV1BrandingProfilesProfileIdDeleteAsync(string profileId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<SimpleBoolResponse> DeleteBrandingProfileAsync(string profileId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<SimpleBoolResponse> localVarResponse = await DeleteProfileApiV1BrandingProfilesProfileIdDeleteWithHttpInfoAsync(profileId, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<SimpleBoolResponse> localVarResponse = await DeleteBrandingProfileWithHttpInfoAsync(profileId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Delete Profile 
+        /// Delete Branding Profile 
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (SimpleBoolResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<SimpleBoolResponse>> DeleteProfileApiV1BrandingProfilesProfileIdDeleteWithHttpInfoAsync(string profileId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<SimpleBoolResponse>> DeleteBrandingProfileWithHttpInfoAsync(string profileId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'profileId' is set
             if (profileId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'profileId' when calling BrandingProfilesApi->DeleteProfileApiV1BrandingProfilesProfileIdDelete");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'profileId' when calling BrandingProfilesApi->DeleteBrandingProfile");
             }
 
 
@@ -964,7 +964,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("profile_id", InvoicePDFs.Client.ClientUtils.ParameterToString(profileId)); // path parameter
 
-            localVarRequestOptions.Operation = "BrandingProfilesApi.DeleteProfileApiV1BrandingProfilesProfileIdDelete";
+            localVarRequestOptions.Operation = "BrandingProfilesApi.DeleteBrandingProfile";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -979,7 +979,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteProfileApiV1BrandingProfilesProfileIdDelete", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteBrandingProfile", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -990,31 +990,31 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Get Profile 
+        /// Get Branding Profile 
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>BrandingProfileResponse</returns>
-        public BrandingProfileResponse GetProfileApiV1BrandingProfilesProfileIdGet(string profileId, int operationIndex = 0)
+        public BrandingProfileResponse GetBrandingProfile(string profileId, int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<BrandingProfileResponse> localVarResponse = GetProfileApiV1BrandingProfilesProfileIdGetWithHttpInfo(profileId);
+            InvoicePDFs.Client.ApiResponse<BrandingProfileResponse> localVarResponse = GetBrandingProfileWithHttpInfo(profileId);
             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Get Profile 
+        /// Get Branding Profile 
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of BrandingProfileResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<BrandingProfileResponse> GetProfileApiV1BrandingProfilesProfileIdGetWithHttpInfo(string profileId, int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<BrandingProfileResponse> GetBrandingProfileWithHttpInfo(string profileId, int operationIndex = 0)
         {
             // verify the required parameter 'profileId' is set
             if (profileId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'profileId' when calling BrandingProfilesApi->GetProfileApiV1BrandingProfilesProfileIdGet");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'profileId' when calling BrandingProfilesApi->GetBrandingProfile");
             }
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -1041,7 +1041,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("profile_id", InvoicePDFs.Client.ClientUtils.ParameterToString(profileId)); // path parameter
 
-            localVarRequestOptions.Operation = "BrandingProfilesApi.GetProfileApiV1BrandingProfilesProfileIdGet";
+            localVarRequestOptions.Operation = "BrandingProfilesApi.GetBrandingProfile";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -1055,7 +1055,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Get<BrandingProfileResponse>("/api/v1/branding-profiles/{profile_id}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetProfileApiV1BrandingProfilesProfileIdGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetBrandingProfile", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1066,33 +1066,33 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Get Profile 
+        /// Get Branding Profile 
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of BrandingProfileResponse</returns>
-        public async System.Threading.Tasks.Task<BrandingProfileResponse> GetProfileApiV1BrandingProfilesProfileIdGetAsync(string profileId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<BrandingProfileResponse> GetBrandingProfileAsync(string profileId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<BrandingProfileResponse> localVarResponse = await GetProfileApiV1BrandingProfilesProfileIdGetWithHttpInfoAsync(profileId, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<BrandingProfileResponse> localVarResponse = await GetBrandingProfileWithHttpInfoAsync(profileId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Get Profile 
+        /// Get Branding Profile 
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (BrandingProfileResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<BrandingProfileResponse>> GetProfileApiV1BrandingProfilesProfileIdGetWithHttpInfoAsync(string profileId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<BrandingProfileResponse>> GetBrandingProfileWithHttpInfoAsync(string profileId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'profileId' is set
             if (profileId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'profileId' when calling BrandingProfilesApi->GetProfileApiV1BrandingProfilesProfileIdGet");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'profileId' when calling BrandingProfilesApi->GetBrandingProfile");
             }
 
 
@@ -1120,7 +1120,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("profile_id", InvoicePDFs.Client.ClientUtils.ParameterToString(profileId)); // path parameter
 
-            localVarRequestOptions.Operation = "BrandingProfilesApi.GetProfileApiV1BrandingProfilesProfileIdGet";
+            localVarRequestOptions.Operation = "BrandingProfilesApi.GetBrandingProfile";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -1135,7 +1135,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetProfileApiV1BrandingProfilesProfileIdGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetBrandingProfile", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1146,24 +1146,24 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Profiles 
+        /// List Branding Profiles 
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>BrandingProfilesListResponse</returns>
-        public BrandingProfilesListResponse ListProfilesApiV1BrandingProfilesGet(int operationIndex = 0)
+        public BrandingProfilesListResponse ListBrandingProfiles(int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<BrandingProfilesListResponse> localVarResponse = ListProfilesApiV1BrandingProfilesGetWithHttpInfo();
+            InvoicePDFs.Client.ApiResponse<BrandingProfilesListResponse> localVarResponse = ListBrandingProfilesWithHttpInfo();
             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// List Profiles 
+        /// List Branding Profiles 
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of BrandingProfilesListResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<BrandingProfilesListResponse> ListProfilesApiV1BrandingProfilesGetWithHttpInfo(int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<BrandingProfilesListResponse> ListBrandingProfilesWithHttpInfo(int operationIndex = 0)
         {
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
 
@@ -1188,7 +1188,7 @@ namespace InvoicePDFs.Api
             }
 
 
-            localVarRequestOptions.Operation = "BrandingProfilesApi.ListProfilesApiV1BrandingProfilesGet";
+            localVarRequestOptions.Operation = "BrandingProfilesApi.ListBrandingProfiles";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -1202,7 +1202,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Get<BrandingProfilesListResponse>("/api/v1/branding-profiles", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListProfilesApiV1BrandingProfilesGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("ListBrandingProfiles", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1213,26 +1213,26 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Profiles 
+        /// List Branding Profiles 
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of BrandingProfilesListResponse</returns>
-        public async System.Threading.Tasks.Task<BrandingProfilesListResponse> ListProfilesApiV1BrandingProfilesGetAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<BrandingProfilesListResponse> ListBrandingProfilesAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<BrandingProfilesListResponse> localVarResponse = await ListProfilesApiV1BrandingProfilesGetWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<BrandingProfilesListResponse> localVarResponse = await ListBrandingProfilesWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// List Profiles 
+        /// List Branding Profiles 
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (BrandingProfilesListResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<BrandingProfilesListResponse>> ListProfilesApiV1BrandingProfilesGetWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<BrandingProfilesListResponse>> ListBrandingProfilesWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -1258,7 +1258,7 @@ namespace InvoicePDFs.Api
             }
 
 
-            localVarRequestOptions.Operation = "BrandingProfilesApi.ListProfilesApiV1BrandingProfilesGet";
+            localVarRequestOptions.Operation = "BrandingProfilesApi.ListBrandingProfiles";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -1273,7 +1273,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListProfilesApiV1BrandingProfilesGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("ListBrandingProfiles", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1284,31 +1284,31 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Set Default 
+        /// Set Default Branding Profile 
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>BrandingProfileResponse</returns>
-        public BrandingProfileResponse SetDefaultApiV1BrandingProfilesProfileIdDefaultPost(string profileId, int operationIndex = 0)
+        public BrandingProfileResponse SetDefaultBrandingProfile(string profileId, int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<BrandingProfileResponse> localVarResponse = SetDefaultApiV1BrandingProfilesProfileIdDefaultPostWithHttpInfo(profileId);
+            InvoicePDFs.Client.ApiResponse<BrandingProfileResponse> localVarResponse = SetDefaultBrandingProfileWithHttpInfo(profileId);
             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Set Default 
+        /// Set Default Branding Profile 
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of BrandingProfileResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<BrandingProfileResponse> SetDefaultApiV1BrandingProfilesProfileIdDefaultPostWithHttpInfo(string profileId, int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<BrandingProfileResponse> SetDefaultBrandingProfileWithHttpInfo(string profileId, int operationIndex = 0)
         {
             // verify the required parameter 'profileId' is set
             if (profileId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'profileId' when calling BrandingProfilesApi->SetDefaultApiV1BrandingProfilesProfileIdDefaultPost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'profileId' when calling BrandingProfilesApi->SetDefaultBrandingProfile");
             }
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -1335,7 +1335,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("profile_id", InvoicePDFs.Client.ClientUtils.ParameterToString(profileId)); // path parameter
 
-            localVarRequestOptions.Operation = "BrandingProfilesApi.SetDefaultApiV1BrandingProfilesProfileIdDefaultPost";
+            localVarRequestOptions.Operation = "BrandingProfilesApi.SetDefaultBrandingProfile";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -1349,7 +1349,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Post<BrandingProfileResponse>("/api/v1/branding-profiles/{profile_id}/default", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("SetDefaultApiV1BrandingProfilesProfileIdDefaultPost", localVarResponse);
+                Exception _exception = this.ExceptionFactory("SetDefaultBrandingProfile", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1360,33 +1360,33 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Set Default 
+        /// Set Default Branding Profile 
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of BrandingProfileResponse</returns>
-        public async System.Threading.Tasks.Task<BrandingProfileResponse> SetDefaultApiV1BrandingProfilesProfileIdDefaultPostAsync(string profileId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<BrandingProfileResponse> SetDefaultBrandingProfileAsync(string profileId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<BrandingProfileResponse> localVarResponse = await SetDefaultApiV1BrandingProfilesProfileIdDefaultPostWithHttpInfoAsync(profileId, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<BrandingProfileResponse> localVarResponse = await SetDefaultBrandingProfileWithHttpInfoAsync(profileId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Set Default 
+        /// Set Default Branding Profile 
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (BrandingProfileResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<BrandingProfileResponse>> SetDefaultApiV1BrandingProfilesProfileIdDefaultPostWithHttpInfoAsync(string profileId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<BrandingProfileResponse>> SetDefaultBrandingProfileWithHttpInfoAsync(string profileId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'profileId' is set
             if (profileId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'profileId' when calling BrandingProfilesApi->SetDefaultApiV1BrandingProfilesProfileIdDefaultPost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'profileId' when calling BrandingProfilesApi->SetDefaultBrandingProfile");
             }
 
 
@@ -1414,7 +1414,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("profile_id", InvoicePDFs.Client.ClientUtils.ParameterToString(profileId)); // path parameter
 
-            localVarRequestOptions.Operation = "BrandingProfilesApi.SetDefaultApiV1BrandingProfilesProfileIdDefaultPost";
+            localVarRequestOptions.Operation = "BrandingProfilesApi.SetDefaultBrandingProfile";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -1429,7 +1429,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("SetDefaultApiV1BrandingProfilesProfileIdDefaultPost", localVarResponse);
+                Exception _exception = this.ExceptionFactory("SetDefaultBrandingProfile", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1440,39 +1440,39 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Update Profile 
+        /// Update Branding Profile 
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId"></param>
         /// <param name="brandingProfilePatchRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>BrandingProfileResponse</returns>
-        public BrandingProfileResponse UpdateProfileApiV1BrandingProfilesProfileIdPatch(string profileId, BrandingProfilePatchRequest brandingProfilePatchRequest, int operationIndex = 0)
+        public BrandingProfileResponse UpdateBrandingProfile(string profileId, BrandingProfilePatchRequest brandingProfilePatchRequest, int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<BrandingProfileResponse> localVarResponse = UpdateProfileApiV1BrandingProfilesProfileIdPatchWithHttpInfo(profileId, brandingProfilePatchRequest);
+            InvoicePDFs.Client.ApiResponse<BrandingProfileResponse> localVarResponse = UpdateBrandingProfileWithHttpInfo(profileId, brandingProfilePatchRequest);
             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Update Profile 
+        /// Update Branding Profile 
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId"></param>
         /// <param name="brandingProfilePatchRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of BrandingProfileResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<BrandingProfileResponse> UpdateProfileApiV1BrandingProfilesProfileIdPatchWithHttpInfo(string profileId, BrandingProfilePatchRequest brandingProfilePatchRequest, int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<BrandingProfileResponse> UpdateBrandingProfileWithHttpInfo(string profileId, BrandingProfilePatchRequest brandingProfilePatchRequest, int operationIndex = 0)
         {
             // verify the required parameter 'profileId' is set
             if (profileId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'profileId' when calling BrandingProfilesApi->UpdateProfileApiV1BrandingProfilesProfileIdPatch");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'profileId' when calling BrandingProfilesApi->UpdateBrandingProfile");
             }
 
             // verify the required parameter 'brandingProfilePatchRequest' is set
             if (brandingProfilePatchRequest == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'brandingProfilePatchRequest' when calling BrandingProfilesApi->UpdateProfileApiV1BrandingProfilesProfileIdPatch");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'brandingProfilePatchRequest' when calling BrandingProfilesApi->UpdateBrandingProfile");
             }
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -1501,7 +1501,7 @@ namespace InvoicePDFs.Api
             localVarRequestOptions.PathParameters.Add("profile_id", InvoicePDFs.Client.ClientUtils.ParameterToString(profileId)); // path parameter
             localVarRequestOptions.Data = brandingProfilePatchRequest;
 
-            localVarRequestOptions.Operation = "BrandingProfilesApi.UpdateProfileApiV1BrandingProfilesProfileIdPatch";
+            localVarRequestOptions.Operation = "BrandingProfilesApi.UpdateBrandingProfile";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -1515,7 +1515,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Patch<BrandingProfileResponse>("/api/v1/branding-profiles/{profile_id}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateProfileApiV1BrandingProfilesProfileIdPatch", localVarResponse);
+                Exception _exception = this.ExceptionFactory("UpdateBrandingProfile", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1526,7 +1526,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Update Profile 
+        /// Update Branding Profile 
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId"></param>
@@ -1534,14 +1534,14 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of BrandingProfileResponse</returns>
-        public async System.Threading.Tasks.Task<BrandingProfileResponse> UpdateProfileApiV1BrandingProfilesProfileIdPatchAsync(string profileId, BrandingProfilePatchRequest brandingProfilePatchRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<BrandingProfileResponse> UpdateBrandingProfileAsync(string profileId, BrandingProfilePatchRequest brandingProfilePatchRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<BrandingProfileResponse> localVarResponse = await UpdateProfileApiV1BrandingProfilesProfileIdPatchWithHttpInfoAsync(profileId, brandingProfilePatchRequest, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<BrandingProfileResponse> localVarResponse = await UpdateBrandingProfileWithHttpInfoAsync(profileId, brandingProfilePatchRequest, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Update Profile 
+        /// Update Branding Profile 
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId"></param>
@@ -1549,18 +1549,18 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (BrandingProfileResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<BrandingProfileResponse>> UpdateProfileApiV1BrandingProfilesProfileIdPatchWithHttpInfoAsync(string profileId, BrandingProfilePatchRequest brandingProfilePatchRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<BrandingProfileResponse>> UpdateBrandingProfileWithHttpInfoAsync(string profileId, BrandingProfilePatchRequest brandingProfilePatchRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'profileId' is set
             if (profileId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'profileId' when calling BrandingProfilesApi->UpdateProfileApiV1BrandingProfilesProfileIdPatch");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'profileId' when calling BrandingProfilesApi->UpdateBrandingProfile");
             }
 
             // verify the required parameter 'brandingProfilePatchRequest' is set
             if (brandingProfilePatchRequest == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'brandingProfilePatchRequest' when calling BrandingProfilesApi->UpdateProfileApiV1BrandingProfilesProfileIdPatch");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'brandingProfilePatchRequest' when calling BrandingProfilesApi->UpdateBrandingProfile");
             }
 
 
@@ -1590,7 +1590,7 @@ namespace InvoicePDFs.Api
             localVarRequestOptions.PathParameters.Add("profile_id", InvoicePDFs.Client.ClientUtils.ParameterToString(profileId)); // path parameter
             localVarRequestOptions.Data = brandingProfilePatchRequest;
 
-            localVarRequestOptions.Operation = "BrandingProfilesApi.UpdateProfileApiV1BrandingProfilesProfileIdPatch";
+            localVarRequestOptions.Operation = "BrandingProfilesApi.UpdateBrandingProfile";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -1605,7 +1605,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateProfileApiV1BrandingProfilesProfileIdPatch", localVarResponse);
+                Exception _exception = this.ExceptionFactory("UpdateBrandingProfile", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1616,39 +1616,39 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Upload Logo 
+        /// Upload Branding Logo 
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId"></param>
         /// <param name="file"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>BrandingProfileResponse</returns>
-        public BrandingProfileResponse UploadLogoApiV1BrandingProfilesProfileIdLogoPost(string profileId, System.IO.Stream file, int operationIndex = 0)
+        public BrandingProfileResponse UploadBrandingLogo(string profileId, System.IO.Stream file, int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<BrandingProfileResponse> localVarResponse = UploadLogoApiV1BrandingProfilesProfileIdLogoPostWithHttpInfo(profileId, file);
+            InvoicePDFs.Client.ApiResponse<BrandingProfileResponse> localVarResponse = UploadBrandingLogoWithHttpInfo(profileId, file);
             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Upload Logo 
+        /// Upload Branding Logo 
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId"></param>
         /// <param name="file"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of BrandingProfileResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<BrandingProfileResponse> UploadLogoApiV1BrandingProfilesProfileIdLogoPostWithHttpInfo(string profileId, System.IO.Stream file, int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<BrandingProfileResponse> UploadBrandingLogoWithHttpInfo(string profileId, System.IO.Stream file, int operationIndex = 0)
         {
             // verify the required parameter 'profileId' is set
             if (profileId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'profileId' when calling BrandingProfilesApi->UploadLogoApiV1BrandingProfilesProfileIdLogoPost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'profileId' when calling BrandingProfilesApi->UploadBrandingLogo");
             }
 
             // verify the required parameter 'file' is set
             if (file == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'file' when calling BrandingProfilesApi->UploadLogoApiV1BrandingProfilesProfileIdLogoPost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'file' when calling BrandingProfilesApi->UploadBrandingLogo");
             }
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -1677,7 +1677,7 @@ namespace InvoicePDFs.Api
             localVarRequestOptions.PathParameters.Add("profile_id", InvoicePDFs.Client.ClientUtils.ParameterToString(profileId)); // path parameter
             localVarRequestOptions.FileParameters.Add("file", file);
 
-            localVarRequestOptions.Operation = "BrandingProfilesApi.UploadLogoApiV1BrandingProfilesProfileIdLogoPost";
+            localVarRequestOptions.Operation = "BrandingProfilesApi.UploadBrandingLogo";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -1691,7 +1691,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Post<BrandingProfileResponse>("/api/v1/branding-profiles/{profile_id}/logo", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UploadLogoApiV1BrandingProfilesProfileIdLogoPost", localVarResponse);
+                Exception _exception = this.ExceptionFactory("UploadBrandingLogo", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1702,7 +1702,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Upload Logo 
+        /// Upload Branding Logo 
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId"></param>
@@ -1710,14 +1710,14 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of BrandingProfileResponse</returns>
-        public async System.Threading.Tasks.Task<BrandingProfileResponse> UploadLogoApiV1BrandingProfilesProfileIdLogoPostAsync(string profileId, System.IO.Stream file, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<BrandingProfileResponse> UploadBrandingLogoAsync(string profileId, System.IO.Stream file, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<BrandingProfileResponse> localVarResponse = await UploadLogoApiV1BrandingProfilesProfileIdLogoPostWithHttpInfoAsync(profileId, file, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<BrandingProfileResponse> localVarResponse = await UploadBrandingLogoWithHttpInfoAsync(profileId, file, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Upload Logo 
+        /// Upload Branding Logo 
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId"></param>
@@ -1725,18 +1725,18 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (BrandingProfileResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<BrandingProfileResponse>> UploadLogoApiV1BrandingProfilesProfileIdLogoPostWithHttpInfoAsync(string profileId, System.IO.Stream file, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<BrandingProfileResponse>> UploadBrandingLogoWithHttpInfoAsync(string profileId, System.IO.Stream file, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'profileId' is set
             if (profileId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'profileId' when calling BrandingProfilesApi->UploadLogoApiV1BrandingProfilesProfileIdLogoPost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'profileId' when calling BrandingProfilesApi->UploadBrandingLogo");
             }
 
             // verify the required parameter 'file' is set
             if (file == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'file' when calling BrandingProfilesApi->UploadLogoApiV1BrandingProfilesProfileIdLogoPost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'file' when calling BrandingProfilesApi->UploadBrandingLogo");
             }
 
 
@@ -1766,7 +1766,7 @@ namespace InvoicePDFs.Api
             localVarRequestOptions.PathParameters.Add("profile_id", InvoicePDFs.Client.ClientUtils.ParameterToString(profileId)); // path parameter
             localVarRequestOptions.FileParameters.Add("file", file);
 
-            localVarRequestOptions.Operation = "BrandingProfilesApi.UploadLogoApiV1BrandingProfilesProfileIdLogoPost";
+            localVarRequestOptions.Operation = "BrandingProfilesApi.UploadBrandingLogo";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -1781,7 +1781,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UploadLogoApiV1BrandingProfilesProfileIdLogoPost", localVarResponse);
+                Exception _exception = this.ExceptionFactory("UploadBrandingLogo", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

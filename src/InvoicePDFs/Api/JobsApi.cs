@@ -33,7 +33,7 @@ namespace InvoicePDFs.Api
         /// <param name="jobId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>JobResponse</returns>
-        JobResponse CancelJobApiV1JobsJobIdCancelPost(string jobId, int operationIndex = 0);
+        JobResponse CancelJob(string jobId, int operationIndex = 0);
 
         /// <summary>
         /// Cancel Job
@@ -45,7 +45,7 @@ namespace InvoicePDFs.Api
         /// <param name="jobId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of JobResponse</returns>
-        ApiResponse<JobResponse> CancelJobApiV1JobsJobIdCancelPostWithHttpInfo(string jobId, int operationIndex = 0);
+        ApiResponse<JobResponse> CancelJobWithHttpInfo(string jobId, int operationIndex = 0);
         /// <summary>
         /// Get Job
         /// </summary>
@@ -53,7 +53,7 @@ namespace InvoicePDFs.Api
         /// <param name="jobId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>JobResponse</returns>
-        JobResponse GetJobApiV1JobsJobIdGet(string jobId, int operationIndex = 0);
+        JobResponse GetJob(string jobId, int operationIndex = 0);
 
         /// <summary>
         /// Get Job
@@ -65,7 +65,7 @@ namespace InvoicePDFs.Api
         /// <param name="jobId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of JobResponse</returns>
-        ApiResponse<JobResponse> GetJobApiV1JobsJobIdGetWithHttpInfo(string jobId, int operationIndex = 0);
+        ApiResponse<JobResponse> GetJobWithHttpInfo(string jobId, int operationIndex = 0);
         /// <summary>
         /// Retry Job
         /// </summary>
@@ -73,7 +73,7 @@ namespace InvoicePDFs.Api
         /// <param name="jobId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>JobResponse</returns>
-        JobResponse RetryJobApiV1JobsJobIdRetryPost(string jobId, int operationIndex = 0);
+        JobResponse RetryJob(string jobId, int operationIndex = 0);
 
         /// <summary>
         /// Retry Job
@@ -85,7 +85,7 @@ namespace InvoicePDFs.Api
         /// <param name="jobId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of JobResponse</returns>
-        ApiResponse<JobResponse> RetryJobApiV1JobsJobIdRetryPostWithHttpInfo(string jobId, int operationIndex = 0);
+        ApiResponse<JobResponse> RetryJobWithHttpInfo(string jobId, int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -106,7 +106,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of JobResponse</returns>
-        System.Threading.Tasks.Task<JobResponse> CancelJobApiV1JobsJobIdCancelPostAsync(string jobId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<JobResponse> CancelJobAsync(string jobId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Cancel Job
@@ -119,7 +119,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (JobResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<JobResponse>> CancelJobApiV1JobsJobIdCancelPostWithHttpInfoAsync(string jobId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<JobResponse>> CancelJobWithHttpInfoAsync(string jobId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Get Job
         /// </summary>
@@ -131,7 +131,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of JobResponse</returns>
-        System.Threading.Tasks.Task<JobResponse> GetJobApiV1JobsJobIdGetAsync(string jobId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<JobResponse> GetJobAsync(string jobId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Get Job
@@ -144,7 +144,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (JobResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<JobResponse>> GetJobApiV1JobsJobIdGetWithHttpInfoAsync(string jobId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<JobResponse>> GetJobWithHttpInfoAsync(string jobId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Retry Job
         /// </summary>
@@ -156,7 +156,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of JobResponse</returns>
-        System.Threading.Tasks.Task<JobResponse> RetryJobApiV1JobsJobIdRetryPostAsync(string jobId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<JobResponse> RetryJobAsync(string jobId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Retry Job
@@ -169,7 +169,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (JobResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<JobResponse>> RetryJobApiV1JobsJobIdRetryPostWithHttpInfoAsync(string jobId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<JobResponse>> RetryJobWithHttpInfoAsync(string jobId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -297,9 +297,9 @@ namespace InvoicePDFs.Api
         /// <param name="jobId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>JobResponse</returns>
-        public JobResponse CancelJobApiV1JobsJobIdCancelPost(string jobId, int operationIndex = 0)
+        public JobResponse CancelJob(string jobId, int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<JobResponse> localVarResponse = CancelJobApiV1JobsJobIdCancelPostWithHttpInfo(jobId);
+            InvoicePDFs.Client.ApiResponse<JobResponse> localVarResponse = CancelJobWithHttpInfo(jobId);
             return localVarResponse.Data;
         }
 
@@ -310,12 +310,12 @@ namespace InvoicePDFs.Api
         /// <param name="jobId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of JobResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<JobResponse> CancelJobApiV1JobsJobIdCancelPostWithHttpInfo(string jobId, int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<JobResponse> CancelJobWithHttpInfo(string jobId, int operationIndex = 0)
         {
             // verify the required parameter 'jobId' is set
             if (jobId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'jobId' when calling JobsApi->CancelJobApiV1JobsJobIdCancelPost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'jobId' when calling JobsApi->CancelJob");
             }
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -342,7 +342,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("job_id", InvoicePDFs.Client.ClientUtils.ParameterToString(jobId)); // path parameter
 
-            localVarRequestOptions.Operation = "JobsApi.CancelJobApiV1JobsJobIdCancelPost";
+            localVarRequestOptions.Operation = "JobsApi.CancelJob";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -356,7 +356,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Post<JobResponse>("/api/v1/jobs/{job_id}/cancel", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("CancelJobApiV1JobsJobIdCancelPost", localVarResponse);
+                Exception _exception = this.ExceptionFactory("CancelJob", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -374,9 +374,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of JobResponse</returns>
-        public async System.Threading.Tasks.Task<JobResponse> CancelJobApiV1JobsJobIdCancelPostAsync(string jobId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<JobResponse> CancelJobAsync(string jobId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<JobResponse> localVarResponse = await CancelJobApiV1JobsJobIdCancelPostWithHttpInfoAsync(jobId, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<JobResponse> localVarResponse = await CancelJobWithHttpInfoAsync(jobId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -388,12 +388,12 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (JobResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<JobResponse>> CancelJobApiV1JobsJobIdCancelPostWithHttpInfoAsync(string jobId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<JobResponse>> CancelJobWithHttpInfoAsync(string jobId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'jobId' is set
             if (jobId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'jobId' when calling JobsApi->CancelJobApiV1JobsJobIdCancelPost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'jobId' when calling JobsApi->CancelJob");
             }
 
 
@@ -421,7 +421,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("job_id", InvoicePDFs.Client.ClientUtils.ParameterToString(jobId)); // path parameter
 
-            localVarRequestOptions.Operation = "JobsApi.CancelJobApiV1JobsJobIdCancelPost";
+            localVarRequestOptions.Operation = "JobsApi.CancelJob";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -436,7 +436,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("CancelJobApiV1JobsJobIdCancelPost", localVarResponse);
+                Exception _exception = this.ExceptionFactory("CancelJob", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -453,9 +453,9 @@ namespace InvoicePDFs.Api
         /// <param name="jobId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>JobResponse</returns>
-        public JobResponse GetJobApiV1JobsJobIdGet(string jobId, int operationIndex = 0)
+        public JobResponse GetJob(string jobId, int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<JobResponse> localVarResponse = GetJobApiV1JobsJobIdGetWithHttpInfo(jobId);
+            InvoicePDFs.Client.ApiResponse<JobResponse> localVarResponse = GetJobWithHttpInfo(jobId);
             return localVarResponse.Data;
         }
 
@@ -466,12 +466,12 @@ namespace InvoicePDFs.Api
         /// <param name="jobId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of JobResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<JobResponse> GetJobApiV1JobsJobIdGetWithHttpInfo(string jobId, int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<JobResponse> GetJobWithHttpInfo(string jobId, int operationIndex = 0)
         {
             // verify the required parameter 'jobId' is set
             if (jobId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'jobId' when calling JobsApi->GetJobApiV1JobsJobIdGet");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'jobId' when calling JobsApi->GetJob");
             }
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -498,7 +498,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("job_id", InvoicePDFs.Client.ClientUtils.ParameterToString(jobId)); // path parameter
 
-            localVarRequestOptions.Operation = "JobsApi.GetJobApiV1JobsJobIdGet";
+            localVarRequestOptions.Operation = "JobsApi.GetJob";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -512,7 +512,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Get<JobResponse>("/api/v1/jobs/{job_id}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetJobApiV1JobsJobIdGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetJob", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -530,9 +530,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of JobResponse</returns>
-        public async System.Threading.Tasks.Task<JobResponse> GetJobApiV1JobsJobIdGetAsync(string jobId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<JobResponse> GetJobAsync(string jobId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<JobResponse> localVarResponse = await GetJobApiV1JobsJobIdGetWithHttpInfoAsync(jobId, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<JobResponse> localVarResponse = await GetJobWithHttpInfoAsync(jobId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -544,12 +544,12 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (JobResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<JobResponse>> GetJobApiV1JobsJobIdGetWithHttpInfoAsync(string jobId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<JobResponse>> GetJobWithHttpInfoAsync(string jobId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'jobId' is set
             if (jobId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'jobId' when calling JobsApi->GetJobApiV1JobsJobIdGet");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'jobId' when calling JobsApi->GetJob");
             }
 
 
@@ -577,7 +577,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("job_id", InvoicePDFs.Client.ClientUtils.ParameterToString(jobId)); // path parameter
 
-            localVarRequestOptions.Operation = "JobsApi.GetJobApiV1JobsJobIdGet";
+            localVarRequestOptions.Operation = "JobsApi.GetJob";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -592,7 +592,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetJobApiV1JobsJobIdGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetJob", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -609,9 +609,9 @@ namespace InvoicePDFs.Api
         /// <param name="jobId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>JobResponse</returns>
-        public JobResponse RetryJobApiV1JobsJobIdRetryPost(string jobId, int operationIndex = 0)
+        public JobResponse RetryJob(string jobId, int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<JobResponse> localVarResponse = RetryJobApiV1JobsJobIdRetryPostWithHttpInfo(jobId);
+            InvoicePDFs.Client.ApiResponse<JobResponse> localVarResponse = RetryJobWithHttpInfo(jobId);
             return localVarResponse.Data;
         }
 
@@ -622,12 +622,12 @@ namespace InvoicePDFs.Api
         /// <param name="jobId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of JobResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<JobResponse> RetryJobApiV1JobsJobIdRetryPostWithHttpInfo(string jobId, int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<JobResponse> RetryJobWithHttpInfo(string jobId, int operationIndex = 0)
         {
             // verify the required parameter 'jobId' is set
             if (jobId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'jobId' when calling JobsApi->RetryJobApiV1JobsJobIdRetryPost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'jobId' when calling JobsApi->RetryJob");
             }
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -654,7 +654,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("job_id", InvoicePDFs.Client.ClientUtils.ParameterToString(jobId)); // path parameter
 
-            localVarRequestOptions.Operation = "JobsApi.RetryJobApiV1JobsJobIdRetryPost";
+            localVarRequestOptions.Operation = "JobsApi.RetryJob";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -668,7 +668,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Post<JobResponse>("/api/v1/jobs/{job_id}/retry", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("RetryJobApiV1JobsJobIdRetryPost", localVarResponse);
+                Exception _exception = this.ExceptionFactory("RetryJob", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -686,9 +686,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of JobResponse</returns>
-        public async System.Threading.Tasks.Task<JobResponse> RetryJobApiV1JobsJobIdRetryPostAsync(string jobId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<JobResponse> RetryJobAsync(string jobId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<JobResponse> localVarResponse = await RetryJobApiV1JobsJobIdRetryPostWithHttpInfoAsync(jobId, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<JobResponse> localVarResponse = await RetryJobWithHttpInfoAsync(jobId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -700,12 +700,12 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (JobResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<JobResponse>> RetryJobApiV1JobsJobIdRetryPostWithHttpInfoAsync(string jobId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<JobResponse>> RetryJobWithHttpInfoAsync(string jobId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'jobId' is set
             if (jobId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'jobId' when calling JobsApi->RetryJobApiV1JobsJobIdRetryPost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'jobId' when calling JobsApi->RetryJob");
             }
 
 
@@ -733,7 +733,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("job_id", InvoicePDFs.Client.ClientUtils.ParameterToString(jobId)); // path parameter
 
-            localVarRequestOptions.Operation = "JobsApi.RetryJobApiV1JobsJobIdRetryPost";
+            localVarRequestOptions.Operation = "JobsApi.RetryJob";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -748,7 +748,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("RetryJobApiV1JobsJobIdRetryPost", localVarResponse);
+                Exception _exception = this.ExceptionFactory("RetryJob", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

@@ -1,18 +1,18 @@
-# InvoicePDFs.Api.JobsApi
+# InvoicePDFs.Api.DocumentAttachmentsApi
 
 All URIs are relative to *http://localhost*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
-| [**CancelJob**](JobsApi.md#canceljob) | **POST** /api/v1/jobs/{job_id}/cancel | Cancel Job |
-| [**GetJob**](JobsApi.md#getjob) | **GET** /api/v1/jobs/{job_id} | Get Job |
-| [**RetryJob**](JobsApi.md#retryjob) | **POST** /api/v1/jobs/{job_id}/retry | Retry Job |
+| [**CreateDocumentAttachment**](DocumentAttachmentsApi.md#createdocumentattachment) | **POST** /api/v1/documents/{document_id}/attachments | Create Document Attachment |
+| [**DeleteDocumentAttachment**](DocumentAttachmentsApi.md#deletedocumentattachment) | **DELETE** /api/v1/documents/{document_id}/attachments/{attachment_id} | Delete Document Attachment |
+| [**ListDocumentAttachments**](DocumentAttachmentsApi.md#listdocumentattachments) | **GET** /api/v1/documents/{document_id}/attachments | List Document Attachments |
 
-<a id="canceljob"></a>
-# **CancelJob**
-> JobResponse CancelJob (string jobId)
+<a id="createdocumentattachment"></a>
+# **CreateDocumentAttachment**
+> InvoiceAttachmentResponse CreateDocumentAttachment (string documentId, InvoiceAttachmentCreateRequest invoiceAttachmentCreateRequest)
 
-Cancel Job
+Create Document Attachment
 
 ### Example
 ```csharp
@@ -24,7 +24,7 @@ using InvoicePDFs.Model;
 
 namespace Example
 {
-    public class CancelJobExample
+    public class CreateDocumentAttachmentExample
     {
         public static void Main()
         {
@@ -33,18 +33,19 @@ namespace Example
             // Configure Bearer token for authorization: HTTPBearer
             config.AccessToken = "YOUR_BEARER_TOKEN";
 
-            var apiInstance = new JobsApi(config);
-            var jobId = "jobId_example";  // string | 
+            var apiInstance = new DocumentAttachmentsApi(config);
+            var documentId = "documentId_example";  // string | 
+            var invoiceAttachmentCreateRequest = new InvoiceAttachmentCreateRequest(); // InvoiceAttachmentCreateRequest | 
 
             try
             {
-                // Cancel Job
-                JobResponse result = apiInstance.CancelJob(jobId);
+                // Create Document Attachment
+                InvoiceAttachmentResponse result = apiInstance.CreateDocumentAttachment(documentId, invoiceAttachmentCreateRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling JobsApi.CancelJob: " + e.Message);
+                Debug.Print("Exception when calling DocumentAttachmentsApi.CreateDocumentAttachment: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -53,21 +54,21 @@ namespace Example
 }
 ```
 
-#### Using the CancelJobWithHttpInfo variant
+#### Using the CreateDocumentAttachmentWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
-    // Cancel Job
-    ApiResponse<JobResponse> response = apiInstance.CancelJobWithHttpInfo(jobId);
+    // Create Document Attachment
+    ApiResponse<InvoiceAttachmentResponse> response = apiInstance.CreateDocumentAttachmentWithHttpInfo(documentId, invoiceAttachmentCreateRequest);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling JobsApi.CancelJobWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling DocumentAttachmentsApi.CreateDocumentAttachmentWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -77,11 +78,107 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **jobId** | **string** |  |  |
+| **documentId** | **string** |  |  |
+| **invoiceAttachmentCreateRequest** | [**InvoiceAttachmentCreateRequest**](InvoiceAttachmentCreateRequest.md) |  |  |
 
 ### Return type
 
-[**JobResponse**](JobResponse.md)
+[**InvoiceAttachmentResponse**](InvoiceAttachmentResponse.md)
+
+### Authorization
+
+[HTTPBearer](../README.md#HTTPBearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Successful Response |  -  |
+| **422** | Validation Error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a id="deletedocumentattachment"></a>
+# **DeleteDocumentAttachment**
+> SimpleBoolResponse DeleteDocumentAttachment (string documentId, string attachmentId)
+
+Delete Document Attachment
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using InvoicePDFs.Api;
+using InvoicePDFs.Client;
+using InvoicePDFs.Model;
+
+namespace Example
+{
+    public class DeleteDocumentAttachmentExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // Configure Bearer token for authorization: HTTPBearer
+            config.AccessToken = "YOUR_BEARER_TOKEN";
+
+            var apiInstance = new DocumentAttachmentsApi(config);
+            var documentId = "documentId_example";  // string | 
+            var attachmentId = "attachmentId_example";  // string | 
+
+            try
+            {
+                // Delete Document Attachment
+                SimpleBoolResponse result = apiInstance.DeleteDocumentAttachment(documentId, attachmentId);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling DocumentAttachmentsApi.DeleteDocumentAttachment: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the DeleteDocumentAttachmentWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Delete Document Attachment
+    ApiResponse<SimpleBoolResponse> response = apiInstance.DeleteDocumentAttachmentWithHttpInfo(documentId, attachmentId);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling DocumentAttachmentsApi.DeleteDocumentAttachmentWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **documentId** | **string** |  |  |
+| **attachmentId** | **string** |  |  |
+
+### Return type
+
+[**SimpleBoolResponse**](SimpleBoolResponse.md)
 
 ### Authorization
 
@@ -101,104 +198,11 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="getjob"></a>
-# **GetJob**
-> JobResponse GetJob (string jobId)
+<a id="listdocumentattachments"></a>
+# **ListDocumentAttachments**
+> InvoiceAttachmentsListResponse ListDocumentAttachments (string documentId)
 
-Get Job
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using InvoicePDFs.Api;
-using InvoicePDFs.Client;
-using InvoicePDFs.Model;
-
-namespace Example
-{
-    public class GetJobExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            // Configure Bearer token for authorization: HTTPBearer
-            config.AccessToken = "YOUR_BEARER_TOKEN";
-
-            var apiInstance = new JobsApi(config);
-            var jobId = "jobId_example";  // string | 
-
-            try
-            {
-                // Get Job
-                JobResponse result = apiInstance.GetJob(jobId);
-                Debug.WriteLine(result);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling JobsApi.GetJob: " + e.Message);
-                Debug.Print("Status Code: " + e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-#### Using the GetJobWithHttpInfo variant
-This returns an ApiResponse object which contains the response data, status code and headers.
-
-```csharp
-try
-{
-    // Get Job
-    ApiResponse<JobResponse> response = apiInstance.GetJobWithHttpInfo(jobId);
-    Debug.Write("Status Code: " + response.StatusCode);
-    Debug.Write("Response Headers: " + response.Headers);
-    Debug.Write("Response Body: " + response.Data);
-}
-catch (ApiException e)
-{
-    Debug.Print("Exception when calling JobsApi.GetJobWithHttpInfo: " + e.Message);
-    Debug.Print("Status Code: " + e.ErrorCode);
-    Debug.Print(e.StackTrace);
-}
-```
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **jobId** | **string** |  |  |
-
-### Return type
-
-[**JobResponse**](JobResponse.md)
-
-### Authorization
-
-[HTTPBearer](../README.md#HTTPBearer)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Successful Response |  -  |
-| **422** | Validation Error |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a id="retryjob"></a>
-# **RetryJob**
-> JobResponse RetryJob (string jobId)
-
-Retry Job
+List Document Attachments
 
 ### Example
 ```csharp
@@ -210,7 +214,7 @@ using InvoicePDFs.Model;
 
 namespace Example
 {
-    public class RetryJobExample
+    public class ListDocumentAttachmentsExample
     {
         public static void Main()
         {
@@ -219,18 +223,18 @@ namespace Example
             // Configure Bearer token for authorization: HTTPBearer
             config.AccessToken = "YOUR_BEARER_TOKEN";
 
-            var apiInstance = new JobsApi(config);
-            var jobId = "jobId_example";  // string | 
+            var apiInstance = new DocumentAttachmentsApi(config);
+            var documentId = "documentId_example";  // string | 
 
             try
             {
-                // Retry Job
-                JobResponse result = apiInstance.RetryJob(jobId);
+                // List Document Attachments
+                InvoiceAttachmentsListResponse result = apiInstance.ListDocumentAttachments(documentId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling JobsApi.RetryJob: " + e.Message);
+                Debug.Print("Exception when calling DocumentAttachmentsApi.ListDocumentAttachments: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -239,21 +243,21 @@ namespace Example
 }
 ```
 
-#### Using the RetryJobWithHttpInfo variant
+#### Using the ListDocumentAttachmentsWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
-    // Retry Job
-    ApiResponse<JobResponse> response = apiInstance.RetryJobWithHttpInfo(jobId);
+    // List Document Attachments
+    ApiResponse<InvoiceAttachmentsListResponse> response = apiInstance.ListDocumentAttachmentsWithHttpInfo(documentId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling JobsApi.RetryJobWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling DocumentAttachmentsApi.ListDocumentAttachmentsWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -263,11 +267,11 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **jobId** | **string** |  |  |
+| **documentId** | **string** |  |  |
 
 ### Return type
 
-[**JobResponse**](JobResponse.md)
+[**InvoiceAttachmentsListResponse**](InvoiceAttachmentsListResponse.md)
 
 ### Authorization
 

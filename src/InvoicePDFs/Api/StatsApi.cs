@@ -32,7 +32,7 @@ namespace InvoicePDFs.Api
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>StatsResponse</returns>
-        StatsResponse GetStatsApiV1StatsGet(int operationIndex = 0);
+        StatsResponse GetStats(int operationIndex = 0);
 
         /// <summary>
         /// Get Stats
@@ -43,7 +43,7 @@ namespace InvoicePDFs.Api
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of StatsResponse</returns>
-        ApiResponse<StatsResponse> GetStatsApiV1StatsGetWithHttpInfo(int operationIndex = 0);
+        ApiResponse<StatsResponse> GetStatsWithHttpInfo(int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -63,7 +63,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of StatsResponse</returns>
-        System.Threading.Tasks.Task<StatsResponse> GetStatsApiV1StatsGetAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<StatsResponse> GetStatsAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Get Stats
@@ -75,7 +75,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (StatsResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<StatsResponse>> GetStatsApiV1StatsGetWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<StatsResponse>> GetStatsWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -202,9 +202,9 @@ namespace InvoicePDFs.Api
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>StatsResponse</returns>
-        public StatsResponse GetStatsApiV1StatsGet(int operationIndex = 0)
+        public StatsResponse GetStats(int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<StatsResponse> localVarResponse = GetStatsApiV1StatsGetWithHttpInfo();
+            InvoicePDFs.Client.ApiResponse<StatsResponse> localVarResponse = GetStatsWithHttpInfo();
             return localVarResponse.Data;
         }
 
@@ -214,7 +214,7 @@ namespace InvoicePDFs.Api
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of StatsResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<StatsResponse> GetStatsApiV1StatsGetWithHttpInfo(int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<StatsResponse> GetStatsWithHttpInfo(int operationIndex = 0)
         {
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
 
@@ -239,7 +239,7 @@ namespace InvoicePDFs.Api
             }
 
 
-            localVarRequestOptions.Operation = "StatsApi.GetStatsApiV1StatsGet";
+            localVarRequestOptions.Operation = "StatsApi.GetStats";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -253,7 +253,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Get<StatsResponse>("/api/v1/stats", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetStatsApiV1StatsGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetStats", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -270,9 +270,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of StatsResponse</returns>
-        public async System.Threading.Tasks.Task<StatsResponse> GetStatsApiV1StatsGetAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<StatsResponse> GetStatsAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<StatsResponse> localVarResponse = await GetStatsApiV1StatsGetWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<StatsResponse> localVarResponse = await GetStatsWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -283,7 +283,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (StatsResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<StatsResponse>> GetStatsApiV1StatsGetWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<StatsResponse>> GetStatsWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -309,7 +309,7 @@ namespace InvoicePDFs.Api
             }
 
 
-            localVarRequestOptions.Operation = "StatsApi.GetStatsApiV1StatsGet";
+            localVarRequestOptions.Operation = "StatsApi.GetStats";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -324,7 +324,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetStatsApiV1StatsGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetStats", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

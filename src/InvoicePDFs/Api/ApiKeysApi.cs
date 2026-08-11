@@ -33,7 +33,7 @@ namespace InvoicePDFs.Api
         /// <param name="apiKeyCreateRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiKeyCreateResponse</returns>
-        ApiKeyCreateResponse CreateApiKeyApiV1ApiKeysPost(ApiKeyCreateRequest apiKeyCreateRequest, int operationIndex = 0);
+        ApiKeyCreateResponse CreateApiKey(ApiKeyCreateRequest apiKeyCreateRequest, int operationIndex = 0);
 
         /// <summary>
         /// Create Api Key
@@ -45,7 +45,7 @@ namespace InvoicePDFs.Api
         /// <param name="apiKeyCreateRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ApiKeyCreateResponse</returns>
-        ApiResponse<ApiKeyCreateResponse> CreateApiKeyApiV1ApiKeysPostWithHttpInfo(ApiKeyCreateRequest apiKeyCreateRequest, int operationIndex = 0);
+        ApiResponse<ApiKeyCreateResponse> CreateApiKeyWithHttpInfo(ApiKeyCreateRequest apiKeyCreateRequest, int operationIndex = 0);
         /// <summary>
         /// Get Api Key
         /// </summary>
@@ -53,7 +53,7 @@ namespace InvoicePDFs.Api
         /// <param name="apiKeyId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiKeyDetailResponse</returns>
-        ApiKeyDetailResponse GetApiKeyApiV1ApiKeysApiKeyIdGet(string apiKeyId, int operationIndex = 0);
+        ApiKeyDetailResponse GetApiKey(string apiKeyId, int operationIndex = 0);
 
         /// <summary>
         /// Get Api Key
@@ -65,14 +65,14 @@ namespace InvoicePDFs.Api
         /// <param name="apiKeyId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ApiKeyDetailResponse</returns>
-        ApiResponse<ApiKeyDetailResponse> GetApiKeyApiV1ApiKeysApiKeyIdGetWithHttpInfo(string apiKeyId, int operationIndex = 0);
+        ApiResponse<ApiKeyDetailResponse> GetApiKeyWithHttpInfo(string apiKeyId, int operationIndex = 0);
         /// <summary>
         /// List Api Keys
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiKeyListResponse</returns>
-        ApiKeyListResponse ListApiKeysApiV1ApiKeysGet(int operationIndex = 0);
+        ApiKeyListResponse ListApiKeys(int operationIndex = 0);
 
         /// <summary>
         /// List Api Keys
@@ -83,29 +83,7 @@ namespace InvoicePDFs.Api
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ApiKeyListResponse</returns>
-        ApiResponse<ApiKeyListResponse> ListApiKeysApiV1ApiKeysGetWithHttpInfo(int operationIndex = 0);
-        /// <summary>
-        /// Patch Api Key
-        /// </summary>
-        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="apiKeyId"></param>
-        /// <param name="apiKeyPatchRequest"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiKeyDetailResponse</returns>
-        ApiKeyDetailResponse PatchApiKeyApiV1ApiKeysApiKeyIdPatch(string apiKeyId, ApiKeyPatchRequest apiKeyPatchRequest, int operationIndex = 0);
-
-        /// <summary>
-        /// Patch Api Key
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="apiKeyId"></param>
-        /// <param name="apiKeyPatchRequest"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of ApiKeyDetailResponse</returns>
-        ApiResponse<ApiKeyDetailResponse> PatchApiKeyApiV1ApiKeysApiKeyIdPatchWithHttpInfo(string apiKeyId, ApiKeyPatchRequest apiKeyPatchRequest, int operationIndex = 0);
+        ApiResponse<ApiKeyListResponse> ListApiKeysWithHttpInfo(int operationIndex = 0);
         /// <summary>
         /// Revoke Api Key
         /// </summary>
@@ -113,7 +91,7 @@ namespace InvoicePDFs.Api
         /// <param name="apiKeyId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiKeyRevokeResponse</returns>
-        ApiKeyRevokeResponse RevokeApiKeyApiV1ApiKeysApiKeyIdDelete(string apiKeyId, int operationIndex = 0);
+        ApiKeyRevokeResponse RevokeApiKey(string apiKeyId, int operationIndex = 0);
 
         /// <summary>
         /// Revoke Api Key
@@ -125,7 +103,7 @@ namespace InvoicePDFs.Api
         /// <param name="apiKeyId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ApiKeyRevokeResponse</returns>
-        ApiResponse<ApiKeyRevokeResponse> RevokeApiKeyApiV1ApiKeysApiKeyIdDeleteWithHttpInfo(string apiKeyId, int operationIndex = 0);
+        ApiResponse<ApiKeyRevokeResponse> RevokeApiKeyWithHttpInfo(string apiKeyId, int operationIndex = 0);
         /// <summary>
         /// Rotate Api Key
         /// </summary>
@@ -136,7 +114,7 @@ namespace InvoicePDFs.Api
         /// <param name="apiKeyId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiKeyRotateResponse</returns>
-        ApiKeyRotateResponse RotateApiKeyApiV1ApiKeysApiKeyIdRotatePost(string apiKeyId, int operationIndex = 0);
+        ApiKeyRotateResponse RotateApiKey(string apiKeyId, int operationIndex = 0);
 
         /// <summary>
         /// Rotate Api Key
@@ -148,7 +126,29 @@ namespace InvoicePDFs.Api
         /// <param name="apiKeyId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ApiKeyRotateResponse</returns>
-        ApiResponse<ApiKeyRotateResponse> RotateApiKeyApiV1ApiKeysApiKeyIdRotatePostWithHttpInfo(string apiKeyId, int operationIndex = 0);
+        ApiResponse<ApiKeyRotateResponse> RotateApiKeyWithHttpInfo(string apiKeyId, int operationIndex = 0);
+        /// <summary>
+        /// Update Api Key
+        /// </summary>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="apiKeyId"></param>
+        /// <param name="apiKeyPatchRequest"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiKeyDetailResponse</returns>
+        ApiKeyDetailResponse UpdateApiKey(string apiKeyId, ApiKeyPatchRequest apiKeyPatchRequest, int operationIndex = 0);
+
+        /// <summary>
+        /// Update Api Key
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="apiKeyId"></param>
+        /// <param name="apiKeyPatchRequest"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of ApiKeyDetailResponse</returns>
+        ApiResponse<ApiKeyDetailResponse> UpdateApiKeyWithHttpInfo(string apiKeyId, ApiKeyPatchRequest apiKeyPatchRequest, int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -169,7 +169,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiKeyCreateResponse</returns>
-        System.Threading.Tasks.Task<ApiKeyCreateResponse> CreateApiKeyApiV1ApiKeysPostAsync(ApiKeyCreateRequest apiKeyCreateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiKeyCreateResponse> CreateApiKeyAsync(ApiKeyCreateRequest apiKeyCreateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Create Api Key
@@ -182,7 +182,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ApiKeyCreateResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiKeyCreateResponse>> CreateApiKeyApiV1ApiKeysPostWithHttpInfoAsync(ApiKeyCreateRequest apiKeyCreateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ApiKeyCreateResponse>> CreateApiKeyWithHttpInfoAsync(ApiKeyCreateRequest apiKeyCreateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Get Api Key
         /// </summary>
@@ -194,7 +194,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiKeyDetailResponse</returns>
-        System.Threading.Tasks.Task<ApiKeyDetailResponse> GetApiKeyApiV1ApiKeysApiKeyIdGetAsync(string apiKeyId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiKeyDetailResponse> GetApiKeyAsync(string apiKeyId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Get Api Key
@@ -207,7 +207,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ApiKeyDetailResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiKeyDetailResponse>> GetApiKeyApiV1ApiKeysApiKeyIdGetWithHttpInfoAsync(string apiKeyId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ApiKeyDetailResponse>> GetApiKeyWithHttpInfoAsync(string apiKeyId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// List Api Keys
         /// </summary>
@@ -218,7 +218,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiKeyListResponse</returns>
-        System.Threading.Tasks.Task<ApiKeyListResponse> ListApiKeysApiV1ApiKeysGetAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiKeyListResponse> ListApiKeysAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// List Api Keys
@@ -230,34 +230,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ApiKeyListResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiKeyListResponse>> ListApiKeysApiV1ApiKeysGetWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// Patch Api Key
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="apiKeyId"></param>
-        /// <param name="apiKeyPatchRequest"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiKeyDetailResponse</returns>
-        System.Threading.Tasks.Task<ApiKeyDetailResponse> PatchApiKeyApiV1ApiKeysApiKeyIdPatchAsync(string apiKeyId, ApiKeyPatchRequest apiKeyPatchRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-
-        /// <summary>
-        /// Patch Api Key
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="apiKeyId"></param>
-        /// <param name="apiKeyPatchRequest"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (ApiKeyDetailResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiKeyDetailResponse>> PatchApiKeyApiV1ApiKeysApiKeyIdPatchWithHttpInfoAsync(string apiKeyId, ApiKeyPatchRequest apiKeyPatchRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ApiKeyListResponse>> ListApiKeysWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Revoke Api Key
         /// </summary>
@@ -269,7 +242,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiKeyRevokeResponse</returns>
-        System.Threading.Tasks.Task<ApiKeyRevokeResponse> RevokeApiKeyApiV1ApiKeysApiKeyIdDeleteAsync(string apiKeyId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiKeyRevokeResponse> RevokeApiKeyAsync(string apiKeyId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Revoke Api Key
@@ -282,7 +255,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ApiKeyRevokeResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiKeyRevokeResponse>> RevokeApiKeyApiV1ApiKeysApiKeyIdDeleteWithHttpInfoAsync(string apiKeyId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ApiKeyRevokeResponse>> RevokeApiKeyWithHttpInfoAsync(string apiKeyId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Rotate Api Key
         /// </summary>
@@ -294,7 +267,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiKeyRotateResponse</returns>
-        System.Threading.Tasks.Task<ApiKeyRotateResponse> RotateApiKeyApiV1ApiKeysApiKeyIdRotatePostAsync(string apiKeyId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiKeyRotateResponse> RotateApiKeyAsync(string apiKeyId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Rotate Api Key
@@ -307,7 +280,34 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ApiKeyRotateResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiKeyRotateResponse>> RotateApiKeyApiV1ApiKeysApiKeyIdRotatePostWithHttpInfoAsync(string apiKeyId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ApiKeyRotateResponse>> RotateApiKeyWithHttpInfoAsync(string apiKeyId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// Update Api Key
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="apiKeyId"></param>
+        /// <param name="apiKeyPatchRequest"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiKeyDetailResponse</returns>
+        System.Threading.Tasks.Task<ApiKeyDetailResponse> UpdateApiKeyAsync(string apiKeyId, ApiKeyPatchRequest apiKeyPatchRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Update Api Key
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="apiKeyId"></param>
+        /// <param name="apiKeyPatchRequest"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (ApiKeyDetailResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiKeyDetailResponse>> UpdateApiKeyWithHttpInfoAsync(string apiKeyId, ApiKeyPatchRequest apiKeyPatchRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -435,9 +435,9 @@ namespace InvoicePDFs.Api
         /// <param name="apiKeyCreateRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiKeyCreateResponse</returns>
-        public ApiKeyCreateResponse CreateApiKeyApiV1ApiKeysPost(ApiKeyCreateRequest apiKeyCreateRequest, int operationIndex = 0)
+        public ApiKeyCreateResponse CreateApiKey(ApiKeyCreateRequest apiKeyCreateRequest, int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<ApiKeyCreateResponse> localVarResponse = CreateApiKeyApiV1ApiKeysPostWithHttpInfo(apiKeyCreateRequest);
+            InvoicePDFs.Client.ApiResponse<ApiKeyCreateResponse> localVarResponse = CreateApiKeyWithHttpInfo(apiKeyCreateRequest);
             return localVarResponse.Data;
         }
 
@@ -448,12 +448,12 @@ namespace InvoicePDFs.Api
         /// <param name="apiKeyCreateRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ApiKeyCreateResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<ApiKeyCreateResponse> CreateApiKeyApiV1ApiKeysPostWithHttpInfo(ApiKeyCreateRequest apiKeyCreateRequest, int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<ApiKeyCreateResponse> CreateApiKeyWithHttpInfo(ApiKeyCreateRequest apiKeyCreateRequest, int operationIndex = 0)
         {
             // verify the required parameter 'apiKeyCreateRequest' is set
             if (apiKeyCreateRequest == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'apiKeyCreateRequest' when calling ApiKeysApi->CreateApiKeyApiV1ApiKeysPost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'apiKeyCreateRequest' when calling ApiKeysApi->CreateApiKey");
             }
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -481,7 +481,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.Data = apiKeyCreateRequest;
 
-            localVarRequestOptions.Operation = "ApiKeysApi.CreateApiKeyApiV1ApiKeysPost";
+            localVarRequestOptions.Operation = "ApiKeysApi.CreateApiKey";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -495,7 +495,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Post<ApiKeyCreateResponse>("/api/v1/api-keys", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("CreateApiKeyApiV1ApiKeysPost", localVarResponse);
+                Exception _exception = this.ExceptionFactory("CreateApiKey", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -513,9 +513,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiKeyCreateResponse</returns>
-        public async System.Threading.Tasks.Task<ApiKeyCreateResponse> CreateApiKeyApiV1ApiKeysPostAsync(ApiKeyCreateRequest apiKeyCreateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ApiKeyCreateResponse> CreateApiKeyAsync(ApiKeyCreateRequest apiKeyCreateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<ApiKeyCreateResponse> localVarResponse = await CreateApiKeyApiV1ApiKeysPostWithHttpInfoAsync(apiKeyCreateRequest, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<ApiKeyCreateResponse> localVarResponse = await CreateApiKeyWithHttpInfoAsync(apiKeyCreateRequest, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -527,12 +527,12 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ApiKeyCreateResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<ApiKeyCreateResponse>> CreateApiKeyApiV1ApiKeysPostWithHttpInfoAsync(ApiKeyCreateRequest apiKeyCreateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<ApiKeyCreateResponse>> CreateApiKeyWithHttpInfoAsync(ApiKeyCreateRequest apiKeyCreateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'apiKeyCreateRequest' is set
             if (apiKeyCreateRequest == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'apiKeyCreateRequest' when calling ApiKeysApi->CreateApiKeyApiV1ApiKeysPost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'apiKeyCreateRequest' when calling ApiKeysApi->CreateApiKey");
             }
 
 
@@ -561,7 +561,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.Data = apiKeyCreateRequest;
 
-            localVarRequestOptions.Operation = "ApiKeysApi.CreateApiKeyApiV1ApiKeysPost";
+            localVarRequestOptions.Operation = "ApiKeysApi.CreateApiKey";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -576,7 +576,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("CreateApiKeyApiV1ApiKeysPost", localVarResponse);
+                Exception _exception = this.ExceptionFactory("CreateApiKey", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -593,9 +593,9 @@ namespace InvoicePDFs.Api
         /// <param name="apiKeyId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiKeyDetailResponse</returns>
-        public ApiKeyDetailResponse GetApiKeyApiV1ApiKeysApiKeyIdGet(string apiKeyId, int operationIndex = 0)
+        public ApiKeyDetailResponse GetApiKey(string apiKeyId, int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<ApiKeyDetailResponse> localVarResponse = GetApiKeyApiV1ApiKeysApiKeyIdGetWithHttpInfo(apiKeyId);
+            InvoicePDFs.Client.ApiResponse<ApiKeyDetailResponse> localVarResponse = GetApiKeyWithHttpInfo(apiKeyId);
             return localVarResponse.Data;
         }
 
@@ -606,12 +606,12 @@ namespace InvoicePDFs.Api
         /// <param name="apiKeyId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ApiKeyDetailResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<ApiKeyDetailResponse> GetApiKeyApiV1ApiKeysApiKeyIdGetWithHttpInfo(string apiKeyId, int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<ApiKeyDetailResponse> GetApiKeyWithHttpInfo(string apiKeyId, int operationIndex = 0)
         {
             // verify the required parameter 'apiKeyId' is set
             if (apiKeyId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'apiKeyId' when calling ApiKeysApi->GetApiKeyApiV1ApiKeysApiKeyIdGet");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'apiKeyId' when calling ApiKeysApi->GetApiKey");
             }
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -638,7 +638,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("api_key_id", InvoicePDFs.Client.ClientUtils.ParameterToString(apiKeyId)); // path parameter
 
-            localVarRequestOptions.Operation = "ApiKeysApi.GetApiKeyApiV1ApiKeysApiKeyIdGet";
+            localVarRequestOptions.Operation = "ApiKeysApi.GetApiKey";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -652,7 +652,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Get<ApiKeyDetailResponse>("/api/v1/api-keys/{api_key_id}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetApiKeyApiV1ApiKeysApiKeyIdGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetApiKey", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -670,9 +670,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiKeyDetailResponse</returns>
-        public async System.Threading.Tasks.Task<ApiKeyDetailResponse> GetApiKeyApiV1ApiKeysApiKeyIdGetAsync(string apiKeyId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ApiKeyDetailResponse> GetApiKeyAsync(string apiKeyId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<ApiKeyDetailResponse> localVarResponse = await GetApiKeyApiV1ApiKeysApiKeyIdGetWithHttpInfoAsync(apiKeyId, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<ApiKeyDetailResponse> localVarResponse = await GetApiKeyWithHttpInfoAsync(apiKeyId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -684,12 +684,12 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ApiKeyDetailResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<ApiKeyDetailResponse>> GetApiKeyApiV1ApiKeysApiKeyIdGetWithHttpInfoAsync(string apiKeyId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<ApiKeyDetailResponse>> GetApiKeyWithHttpInfoAsync(string apiKeyId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'apiKeyId' is set
             if (apiKeyId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'apiKeyId' when calling ApiKeysApi->GetApiKeyApiV1ApiKeysApiKeyIdGet");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'apiKeyId' when calling ApiKeysApi->GetApiKey");
             }
 
 
@@ -717,7 +717,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("api_key_id", InvoicePDFs.Client.ClientUtils.ParameterToString(apiKeyId)); // path parameter
 
-            localVarRequestOptions.Operation = "ApiKeysApi.GetApiKeyApiV1ApiKeysApiKeyIdGet";
+            localVarRequestOptions.Operation = "ApiKeysApi.GetApiKey";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -732,7 +732,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetApiKeyApiV1ApiKeysApiKeyIdGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetApiKey", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -748,9 +748,9 @@ namespace InvoicePDFs.Api
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiKeyListResponse</returns>
-        public ApiKeyListResponse ListApiKeysApiV1ApiKeysGet(int operationIndex = 0)
+        public ApiKeyListResponse ListApiKeys(int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<ApiKeyListResponse> localVarResponse = ListApiKeysApiV1ApiKeysGetWithHttpInfo();
+            InvoicePDFs.Client.ApiResponse<ApiKeyListResponse> localVarResponse = ListApiKeysWithHttpInfo();
             return localVarResponse.Data;
         }
 
@@ -760,7 +760,7 @@ namespace InvoicePDFs.Api
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ApiKeyListResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<ApiKeyListResponse> ListApiKeysApiV1ApiKeysGetWithHttpInfo(int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<ApiKeyListResponse> ListApiKeysWithHttpInfo(int operationIndex = 0)
         {
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
 
@@ -785,7 +785,7 @@ namespace InvoicePDFs.Api
             }
 
 
-            localVarRequestOptions.Operation = "ApiKeysApi.ListApiKeysApiV1ApiKeysGet";
+            localVarRequestOptions.Operation = "ApiKeysApi.ListApiKeys";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -799,7 +799,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Get<ApiKeyListResponse>("/api/v1/api-keys", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListApiKeysApiV1ApiKeysGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("ListApiKeys", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -816,9 +816,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiKeyListResponse</returns>
-        public async System.Threading.Tasks.Task<ApiKeyListResponse> ListApiKeysApiV1ApiKeysGetAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ApiKeyListResponse> ListApiKeysAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<ApiKeyListResponse> localVarResponse = await ListApiKeysApiV1ApiKeysGetWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<ApiKeyListResponse> localVarResponse = await ListApiKeysWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -829,7 +829,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ApiKeyListResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<ApiKeyListResponse>> ListApiKeysApiV1ApiKeysGetWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<ApiKeyListResponse>> ListApiKeysWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -855,7 +855,7 @@ namespace InvoicePDFs.Api
             }
 
 
-            localVarRequestOptions.Operation = "ApiKeysApi.ListApiKeysApiV1ApiKeysGet";
+            localVarRequestOptions.Operation = "ApiKeysApi.ListApiKeys";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -870,183 +870,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListApiKeysApiV1ApiKeysGet", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
-        /// Patch Api Key 
-        /// </summary>
-        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="apiKeyId"></param>
-        /// <param name="apiKeyPatchRequest"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiKeyDetailResponse</returns>
-        public ApiKeyDetailResponse PatchApiKeyApiV1ApiKeysApiKeyIdPatch(string apiKeyId, ApiKeyPatchRequest apiKeyPatchRequest, int operationIndex = 0)
-        {
-            InvoicePDFs.Client.ApiResponse<ApiKeyDetailResponse> localVarResponse = PatchApiKeyApiV1ApiKeysApiKeyIdPatchWithHttpInfo(apiKeyId, apiKeyPatchRequest);
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Patch Api Key 
-        /// </summary>
-        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="apiKeyId"></param>
-        /// <param name="apiKeyPatchRequest"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of ApiKeyDetailResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<ApiKeyDetailResponse> PatchApiKeyApiV1ApiKeysApiKeyIdPatchWithHttpInfo(string apiKeyId, ApiKeyPatchRequest apiKeyPatchRequest, int operationIndex = 0)
-        {
-            // verify the required parameter 'apiKeyId' is set
-            if (apiKeyId == null)
-            {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'apiKeyId' when calling ApiKeysApi->PatchApiKeyApiV1ApiKeysApiKeyIdPatch");
-            }
-
-            // verify the required parameter 'apiKeyPatchRequest' is set
-            if (apiKeyPatchRequest == null)
-            {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'apiKeyPatchRequest' when calling ApiKeysApi->PatchApiKeyApiV1ApiKeysApiKeyIdPatch");
-            }
-
-            InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-                "application/json"
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var localVarContentType = InvoicePDFs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
-
-            var localVarAccept = InvoicePDFs.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
-
-            localVarRequestOptions.PathParameters.Add("api_key_id", InvoicePDFs.Client.ClientUtils.ParameterToString(apiKeyId)); // path parameter
-            localVarRequestOptions.Data = apiKeyPatchRequest;
-
-            localVarRequestOptions.Operation = "ApiKeysApi.PatchApiKeyApiV1ApiKeysApiKeyIdPatch";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
-            // authentication (HTTPBearer) required
-            // bearer authentication required
-            if (!string.IsNullOrEmpty(this.Configuration.AccessToken) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
-            {
-                localVarRequestOptions.HeaderParameters.Add("Authorization", "Bearer " + this.Configuration.AccessToken);
-            }
-
-            // make the HTTP request
-            var localVarResponse = this.Client.Patch<ApiKeyDetailResponse>("/api/v1/api-keys/{api_key_id}", localVarRequestOptions, this.Configuration);
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("PatchApiKeyApiV1ApiKeysApiKeyIdPatch", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
-        /// Patch Api Key 
-        /// </summary>
-        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="apiKeyId"></param>
-        /// <param name="apiKeyPatchRequest"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiKeyDetailResponse</returns>
-        public async System.Threading.Tasks.Task<ApiKeyDetailResponse> PatchApiKeyApiV1ApiKeysApiKeyIdPatchAsync(string apiKeyId, ApiKeyPatchRequest apiKeyPatchRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            InvoicePDFs.Client.ApiResponse<ApiKeyDetailResponse> localVarResponse = await PatchApiKeyApiV1ApiKeysApiKeyIdPatchWithHttpInfoAsync(apiKeyId, apiKeyPatchRequest, operationIndex, cancellationToken).ConfigureAwait(false);
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Patch Api Key 
-        /// </summary>
-        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="apiKeyId"></param>
-        /// <param name="apiKeyPatchRequest"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (ApiKeyDetailResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<ApiKeyDetailResponse>> PatchApiKeyApiV1ApiKeysApiKeyIdPatchWithHttpInfoAsync(string apiKeyId, ApiKeyPatchRequest apiKeyPatchRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            // verify the required parameter 'apiKeyId' is set
-            if (apiKeyId == null)
-            {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'apiKeyId' when calling ApiKeysApi->PatchApiKeyApiV1ApiKeysApiKeyIdPatch");
-            }
-
-            // verify the required parameter 'apiKeyPatchRequest' is set
-            if (apiKeyPatchRequest == null)
-            {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'apiKeyPatchRequest' when calling ApiKeysApi->PatchApiKeyApiV1ApiKeysApiKeyIdPatch");
-            }
-
-
-            InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-                "application/json"
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var localVarContentType = InvoicePDFs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
-
-            var localVarAccept = InvoicePDFs.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
-
-            localVarRequestOptions.PathParameters.Add("api_key_id", InvoicePDFs.Client.ClientUtils.ParameterToString(apiKeyId)); // path parameter
-            localVarRequestOptions.Data = apiKeyPatchRequest;
-
-            localVarRequestOptions.Operation = "ApiKeysApi.PatchApiKeyApiV1ApiKeysApiKeyIdPatch";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
-            // authentication (HTTPBearer) required
-            // bearer authentication required
-            if (!string.IsNullOrEmpty(this.Configuration.AccessToken) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
-            {
-                localVarRequestOptions.HeaderParameters.Add("Authorization", "Bearer " + this.Configuration.AccessToken);
-            }
-
-            // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PatchAsync<ApiKeyDetailResponse>("/api/v1/api-keys/{api_key_id}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("PatchApiKeyApiV1ApiKeysApiKeyIdPatch", localVarResponse);
+                Exception _exception = this.ExceptionFactory("ListApiKeys", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1063,9 +887,9 @@ namespace InvoicePDFs.Api
         /// <param name="apiKeyId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiKeyRevokeResponse</returns>
-        public ApiKeyRevokeResponse RevokeApiKeyApiV1ApiKeysApiKeyIdDelete(string apiKeyId, int operationIndex = 0)
+        public ApiKeyRevokeResponse RevokeApiKey(string apiKeyId, int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<ApiKeyRevokeResponse> localVarResponse = RevokeApiKeyApiV1ApiKeysApiKeyIdDeleteWithHttpInfo(apiKeyId);
+            InvoicePDFs.Client.ApiResponse<ApiKeyRevokeResponse> localVarResponse = RevokeApiKeyWithHttpInfo(apiKeyId);
             return localVarResponse.Data;
         }
 
@@ -1076,12 +900,12 @@ namespace InvoicePDFs.Api
         /// <param name="apiKeyId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ApiKeyRevokeResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<ApiKeyRevokeResponse> RevokeApiKeyApiV1ApiKeysApiKeyIdDeleteWithHttpInfo(string apiKeyId, int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<ApiKeyRevokeResponse> RevokeApiKeyWithHttpInfo(string apiKeyId, int operationIndex = 0)
         {
             // verify the required parameter 'apiKeyId' is set
             if (apiKeyId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'apiKeyId' when calling ApiKeysApi->RevokeApiKeyApiV1ApiKeysApiKeyIdDelete");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'apiKeyId' when calling ApiKeysApi->RevokeApiKey");
             }
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -1108,7 +932,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("api_key_id", InvoicePDFs.Client.ClientUtils.ParameterToString(apiKeyId)); // path parameter
 
-            localVarRequestOptions.Operation = "ApiKeysApi.RevokeApiKeyApiV1ApiKeysApiKeyIdDelete";
+            localVarRequestOptions.Operation = "ApiKeysApi.RevokeApiKey";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -1122,7 +946,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Delete<ApiKeyRevokeResponse>("/api/v1/api-keys/{api_key_id}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("RevokeApiKeyApiV1ApiKeysApiKeyIdDelete", localVarResponse);
+                Exception _exception = this.ExceptionFactory("RevokeApiKey", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1140,9 +964,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiKeyRevokeResponse</returns>
-        public async System.Threading.Tasks.Task<ApiKeyRevokeResponse> RevokeApiKeyApiV1ApiKeysApiKeyIdDeleteAsync(string apiKeyId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ApiKeyRevokeResponse> RevokeApiKeyAsync(string apiKeyId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<ApiKeyRevokeResponse> localVarResponse = await RevokeApiKeyApiV1ApiKeysApiKeyIdDeleteWithHttpInfoAsync(apiKeyId, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<ApiKeyRevokeResponse> localVarResponse = await RevokeApiKeyWithHttpInfoAsync(apiKeyId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1154,12 +978,12 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ApiKeyRevokeResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<ApiKeyRevokeResponse>> RevokeApiKeyApiV1ApiKeysApiKeyIdDeleteWithHttpInfoAsync(string apiKeyId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<ApiKeyRevokeResponse>> RevokeApiKeyWithHttpInfoAsync(string apiKeyId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'apiKeyId' is set
             if (apiKeyId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'apiKeyId' when calling ApiKeysApi->RevokeApiKeyApiV1ApiKeysApiKeyIdDelete");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'apiKeyId' when calling ApiKeysApi->RevokeApiKey");
             }
 
 
@@ -1187,7 +1011,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("api_key_id", InvoicePDFs.Client.ClientUtils.ParameterToString(apiKeyId)); // path parameter
 
-            localVarRequestOptions.Operation = "ApiKeysApi.RevokeApiKeyApiV1ApiKeysApiKeyIdDelete";
+            localVarRequestOptions.Operation = "ApiKeysApi.RevokeApiKey";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -1202,7 +1026,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("RevokeApiKeyApiV1ApiKeysApiKeyIdDelete", localVarResponse);
+                Exception _exception = this.ExceptionFactory("RevokeApiKey", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1219,9 +1043,9 @@ namespace InvoicePDFs.Api
         /// <param name="apiKeyId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiKeyRotateResponse</returns>
-        public ApiKeyRotateResponse RotateApiKeyApiV1ApiKeysApiKeyIdRotatePost(string apiKeyId, int operationIndex = 0)
+        public ApiKeyRotateResponse RotateApiKey(string apiKeyId, int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<ApiKeyRotateResponse> localVarResponse = RotateApiKeyApiV1ApiKeysApiKeyIdRotatePostWithHttpInfo(apiKeyId);
+            InvoicePDFs.Client.ApiResponse<ApiKeyRotateResponse> localVarResponse = RotateApiKeyWithHttpInfo(apiKeyId);
             return localVarResponse.Data;
         }
 
@@ -1232,12 +1056,12 @@ namespace InvoicePDFs.Api
         /// <param name="apiKeyId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ApiKeyRotateResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<ApiKeyRotateResponse> RotateApiKeyApiV1ApiKeysApiKeyIdRotatePostWithHttpInfo(string apiKeyId, int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<ApiKeyRotateResponse> RotateApiKeyWithHttpInfo(string apiKeyId, int operationIndex = 0)
         {
             // verify the required parameter 'apiKeyId' is set
             if (apiKeyId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'apiKeyId' when calling ApiKeysApi->RotateApiKeyApiV1ApiKeysApiKeyIdRotatePost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'apiKeyId' when calling ApiKeysApi->RotateApiKey");
             }
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -1264,7 +1088,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("api_key_id", InvoicePDFs.Client.ClientUtils.ParameterToString(apiKeyId)); // path parameter
 
-            localVarRequestOptions.Operation = "ApiKeysApi.RotateApiKeyApiV1ApiKeysApiKeyIdRotatePost";
+            localVarRequestOptions.Operation = "ApiKeysApi.RotateApiKey";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -1278,7 +1102,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Post<ApiKeyRotateResponse>("/api/v1/api-keys/{api_key_id}/rotate", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("RotateApiKeyApiV1ApiKeysApiKeyIdRotatePost", localVarResponse);
+                Exception _exception = this.ExceptionFactory("RotateApiKey", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1296,9 +1120,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiKeyRotateResponse</returns>
-        public async System.Threading.Tasks.Task<ApiKeyRotateResponse> RotateApiKeyApiV1ApiKeysApiKeyIdRotatePostAsync(string apiKeyId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ApiKeyRotateResponse> RotateApiKeyAsync(string apiKeyId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<ApiKeyRotateResponse> localVarResponse = await RotateApiKeyApiV1ApiKeysApiKeyIdRotatePostWithHttpInfoAsync(apiKeyId, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<ApiKeyRotateResponse> localVarResponse = await RotateApiKeyWithHttpInfoAsync(apiKeyId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1310,12 +1134,12 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ApiKeyRotateResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<ApiKeyRotateResponse>> RotateApiKeyApiV1ApiKeysApiKeyIdRotatePostWithHttpInfoAsync(string apiKeyId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<ApiKeyRotateResponse>> RotateApiKeyWithHttpInfoAsync(string apiKeyId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'apiKeyId' is set
             if (apiKeyId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'apiKeyId' when calling ApiKeysApi->RotateApiKeyApiV1ApiKeysApiKeyIdRotatePost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'apiKeyId' when calling ApiKeysApi->RotateApiKey");
             }
 
 
@@ -1343,7 +1167,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("api_key_id", InvoicePDFs.Client.ClientUtils.ParameterToString(apiKeyId)); // path parameter
 
-            localVarRequestOptions.Operation = "ApiKeysApi.RotateApiKeyApiV1ApiKeysApiKeyIdRotatePost";
+            localVarRequestOptions.Operation = "ApiKeysApi.RotateApiKey";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -1358,7 +1182,183 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("RotateApiKeyApiV1ApiKeysApiKeyIdRotatePost", localVarResponse);
+                Exception _exception = this.ExceptionFactory("RotateApiKey", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Update Api Key 
+        /// </summary>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="apiKeyId"></param>
+        /// <param name="apiKeyPatchRequest"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiKeyDetailResponse</returns>
+        public ApiKeyDetailResponse UpdateApiKey(string apiKeyId, ApiKeyPatchRequest apiKeyPatchRequest, int operationIndex = 0)
+        {
+            InvoicePDFs.Client.ApiResponse<ApiKeyDetailResponse> localVarResponse = UpdateApiKeyWithHttpInfo(apiKeyId, apiKeyPatchRequest);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update Api Key 
+        /// </summary>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="apiKeyId"></param>
+        /// <param name="apiKeyPatchRequest"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of ApiKeyDetailResponse</returns>
+        public InvoicePDFs.Client.ApiResponse<ApiKeyDetailResponse> UpdateApiKeyWithHttpInfo(string apiKeyId, ApiKeyPatchRequest apiKeyPatchRequest, int operationIndex = 0)
+        {
+            // verify the required parameter 'apiKeyId' is set
+            if (apiKeyId == null)
+            {
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'apiKeyId' when calling ApiKeysApi->UpdateApiKey");
+            }
+
+            // verify the required parameter 'apiKeyPatchRequest' is set
+            if (apiKeyPatchRequest == null)
+            {
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'apiKeyPatchRequest' when calling ApiKeysApi->UpdateApiKey");
+            }
+
+            InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = InvoicePDFs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = InvoicePDFs.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("api_key_id", InvoicePDFs.Client.ClientUtils.ParameterToString(apiKeyId)); // path parameter
+            localVarRequestOptions.Data = apiKeyPatchRequest;
+
+            localVarRequestOptions.Operation = "ApiKeysApi.UpdateApiKey";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (HTTPBearer) required
+            // bearer authentication required
+            if (!string.IsNullOrEmpty(this.Configuration.AccessToken) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Bearer " + this.Configuration.AccessToken);
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Patch<ApiKeyDetailResponse>("/api/v1/api-keys/{api_key_id}", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("UpdateApiKey", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Update Api Key 
+        /// </summary>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="apiKeyId"></param>
+        /// <param name="apiKeyPatchRequest"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiKeyDetailResponse</returns>
+        public async System.Threading.Tasks.Task<ApiKeyDetailResponse> UpdateApiKeyAsync(string apiKeyId, ApiKeyPatchRequest apiKeyPatchRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            InvoicePDFs.Client.ApiResponse<ApiKeyDetailResponse> localVarResponse = await UpdateApiKeyWithHttpInfoAsync(apiKeyId, apiKeyPatchRequest, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update Api Key 
+        /// </summary>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="apiKeyId"></param>
+        /// <param name="apiKeyPatchRequest"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (ApiKeyDetailResponse)</returns>
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<ApiKeyDetailResponse>> UpdateApiKeyWithHttpInfoAsync(string apiKeyId, ApiKeyPatchRequest apiKeyPatchRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'apiKeyId' is set
+            if (apiKeyId == null)
+            {
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'apiKeyId' when calling ApiKeysApi->UpdateApiKey");
+            }
+
+            // verify the required parameter 'apiKeyPatchRequest' is set
+            if (apiKeyPatchRequest == null)
+            {
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'apiKeyPatchRequest' when calling ApiKeysApi->UpdateApiKey");
+            }
+
+
+            InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = InvoicePDFs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = InvoicePDFs.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("api_key_id", InvoicePDFs.Client.ClientUtils.ParameterToString(apiKeyId)); // path parameter
+            localVarRequestOptions.Data = apiKeyPatchRequest;
+
+            localVarRequestOptions.Operation = "ApiKeysApi.UpdateApiKey";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (HTTPBearer) required
+            // bearer authentication required
+            if (!string.IsNullOrEmpty(this.Configuration.AccessToken) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Bearer " + this.Configuration.AccessToken);
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PatchAsync<ApiKeyDetailResponse>("/api/v1/api-keys/{api_key_id}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("UpdateApiKey", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

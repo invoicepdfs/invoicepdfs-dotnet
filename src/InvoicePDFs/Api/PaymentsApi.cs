@@ -27,27 +27,27 @@ namespace InvoicePDFs.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Create Payment
+        /// Create Document Payment
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="invoiceId"></param>
+        /// <param name="documentId"></param>
         /// <param name="paymentCreateRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>PaymentResponse</returns>
-        PaymentResponse CreatePaymentApiV1DocumentsInvoiceIdPaymentsPost(string invoiceId, PaymentCreateRequest paymentCreateRequest, int operationIndex = 0);
+        PaymentResponse CreateDocumentPayment(string documentId, PaymentCreateRequest paymentCreateRequest, int operationIndex = 0);
 
         /// <summary>
-        /// Create Payment
+        /// Create Document Payment
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="invoiceId"></param>
+        /// <param name="documentId"></param>
         /// <param name="paymentCreateRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of PaymentResponse</returns>
-        ApiResponse<PaymentResponse> CreatePaymentApiV1DocumentsInvoiceIdPaymentsPostWithHttpInfo(string invoiceId, PaymentCreateRequest paymentCreateRequest, int operationIndex = 0);
+        ApiResponse<PaymentResponse> CreateDocumentPaymentWithHttpInfo(string documentId, PaymentCreateRequest paymentCreateRequest, int operationIndex = 0);
         /// <summary>
         /// Delete Payment
         /// </summary>
@@ -55,7 +55,7 @@ namespace InvoicePDFs.Api
         /// <param name="paymentId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>SimpleBoolResponse</returns>
-        SimpleBoolResponse DeletePaymentApiV1PaymentsPaymentIdDelete(string paymentId, int operationIndex = 0);
+        SimpleBoolResponse DeletePayment(string paymentId, int operationIndex = 0);
 
         /// <summary>
         /// Delete Payment
@@ -67,7 +67,7 @@ namespace InvoicePDFs.Api
         /// <param name="paymentId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of SimpleBoolResponse</returns>
-        ApiResponse<SimpleBoolResponse> DeletePaymentApiV1PaymentsPaymentIdDeleteWithHttpInfo(string paymentId, int operationIndex = 0);
+        ApiResponse<SimpleBoolResponse> DeletePaymentWithHttpInfo(string paymentId, int operationIndex = 0);
         /// <summary>
         /// Get Payment
         /// </summary>
@@ -75,7 +75,7 @@ namespace InvoicePDFs.Api
         /// <param name="paymentId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>PaymentResponse</returns>
-        PaymentResponse GetPaymentApiV1PaymentsPaymentIdGet(string paymentId, int operationIndex = 0);
+        PaymentResponse GetPayment(string paymentId, int operationIndex = 0);
 
         /// <summary>
         /// Get Payment
@@ -87,31 +87,31 @@ namespace InvoicePDFs.Api
         /// <param name="paymentId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of PaymentResponse</returns>
-        ApiResponse<PaymentResponse> GetPaymentApiV1PaymentsPaymentIdGetWithHttpInfo(string paymentId, int operationIndex = 0);
+        ApiResponse<PaymentResponse> GetPaymentWithHttpInfo(string paymentId, int operationIndex = 0);
         /// <summary>
-        /// List Invoice Payments
+        /// List Document Payments
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="invoiceId"></param>
+        /// <param name="documentId"></param>
         /// <param name="limit"> (optional, default to 50)</param>
         /// <param name="cursor"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>PaymentsListResponse</returns>
-        PaymentsListResponse ListInvoicePaymentsApiV1DocumentsInvoiceIdPaymentsGet(string invoiceId, int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0);
+        PaymentsListResponse ListDocumentPayments(string documentId, int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0);
 
         /// <summary>
-        /// List Invoice Payments
+        /// List Document Payments
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="invoiceId"></param>
+        /// <param name="documentId"></param>
         /// <param name="limit"> (optional, default to 50)</param>
         /// <param name="cursor"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of PaymentsListResponse</returns>
-        ApiResponse<PaymentsListResponse> ListInvoicePaymentsApiV1DocumentsInvoiceIdPaymentsGetWithHttpInfo(string invoiceId, int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0);
+        ApiResponse<PaymentsListResponse> ListDocumentPaymentsWithHttpInfo(string documentId, int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0);
         /// <summary>
         /// Update Payment
         /// </summary>
@@ -120,7 +120,7 @@ namespace InvoicePDFs.Api
         /// <param name="paymentPatchRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>PaymentResponse</returns>
-        PaymentResponse UpdatePaymentApiV1PaymentsPaymentIdPatch(string paymentId, PaymentPatchRequest paymentPatchRequest, int operationIndex = 0);
+        PaymentResponse UpdatePayment(string paymentId, PaymentPatchRequest paymentPatchRequest, int operationIndex = 0);
 
         /// <summary>
         /// Update Payment
@@ -133,7 +133,7 @@ namespace InvoicePDFs.Api
         /// <param name="paymentPatchRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of PaymentResponse</returns>
-        ApiResponse<PaymentResponse> UpdatePaymentApiV1PaymentsPaymentIdPatchWithHttpInfo(string paymentId, PaymentPatchRequest paymentPatchRequest, int operationIndex = 0);
+        ApiResponse<PaymentResponse> UpdatePaymentWithHttpInfo(string paymentId, PaymentPatchRequest paymentPatchRequest, int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -144,32 +144,32 @@ namespace InvoicePDFs.Api
     {
         #region Asynchronous Operations
         /// <summary>
-        /// Create Payment
+        /// Create Document Payment
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="invoiceId"></param>
+        /// <param name="documentId"></param>
         /// <param name="paymentCreateRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of PaymentResponse</returns>
-        System.Threading.Tasks.Task<PaymentResponse> CreatePaymentApiV1DocumentsInvoiceIdPaymentsPostAsync(string invoiceId, PaymentCreateRequest paymentCreateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<PaymentResponse> CreateDocumentPaymentAsync(string documentId, PaymentCreateRequest paymentCreateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// Create Payment
+        /// Create Document Payment
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="invoiceId"></param>
+        /// <param name="documentId"></param>
         /// <param name="paymentCreateRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (PaymentResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PaymentResponse>> CreatePaymentApiV1DocumentsInvoiceIdPaymentsPostWithHttpInfoAsync(string invoiceId, PaymentCreateRequest paymentCreateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<PaymentResponse>> CreateDocumentPaymentWithHttpInfoAsync(string documentId, PaymentCreateRequest paymentCreateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Delete Payment
         /// </summary>
@@ -181,7 +181,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of SimpleBoolResponse</returns>
-        System.Threading.Tasks.Task<SimpleBoolResponse> DeletePaymentApiV1PaymentsPaymentIdDeleteAsync(string paymentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<SimpleBoolResponse> DeletePaymentAsync(string paymentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Delete Payment
@@ -194,7 +194,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (SimpleBoolResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SimpleBoolResponse>> DeletePaymentApiV1PaymentsPaymentIdDeleteWithHttpInfoAsync(string paymentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<SimpleBoolResponse>> DeletePaymentWithHttpInfoAsync(string paymentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Get Payment
         /// </summary>
@@ -206,7 +206,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of PaymentResponse</returns>
-        System.Threading.Tasks.Task<PaymentResponse> GetPaymentApiV1PaymentsPaymentIdGetAsync(string paymentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<PaymentResponse> GetPaymentAsync(string paymentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Get Payment
@@ -219,36 +219,36 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (PaymentResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PaymentResponse>> GetPaymentApiV1PaymentsPaymentIdGetWithHttpInfoAsync(string paymentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<PaymentResponse>> GetPaymentWithHttpInfoAsync(string paymentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// List Invoice Payments
+        /// List Document Payments
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="invoiceId"></param>
+        /// <param name="documentId"></param>
         /// <param name="limit"> (optional, default to 50)</param>
         /// <param name="cursor"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of PaymentsListResponse</returns>
-        System.Threading.Tasks.Task<PaymentsListResponse> ListInvoicePaymentsApiV1DocumentsInvoiceIdPaymentsGetAsync(string invoiceId, int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<PaymentsListResponse> ListDocumentPaymentsAsync(string documentId, int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// List Invoice Payments
+        /// List Document Payments
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="invoiceId"></param>
+        /// <param name="documentId"></param>
         /// <param name="limit"> (optional, default to 50)</param>
         /// <param name="cursor"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (PaymentsListResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PaymentsListResponse>> ListInvoicePaymentsApiV1DocumentsInvoiceIdPaymentsGetWithHttpInfoAsync(string invoiceId, int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<PaymentsListResponse>> ListDocumentPaymentsWithHttpInfoAsync(string documentId, int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Update Payment
         /// </summary>
@@ -261,7 +261,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of PaymentResponse</returns>
-        System.Threading.Tasks.Task<PaymentResponse> UpdatePaymentApiV1PaymentsPaymentIdPatchAsync(string paymentId, PaymentPatchRequest paymentPatchRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<PaymentResponse> UpdatePaymentAsync(string paymentId, PaymentPatchRequest paymentPatchRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Update Payment
@@ -275,7 +275,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (PaymentResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PaymentResponse>> UpdatePaymentApiV1PaymentsPaymentIdPatchWithHttpInfoAsync(string paymentId, PaymentPatchRequest paymentPatchRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<PaymentResponse>> UpdatePaymentWithHttpInfoAsync(string paymentId, PaymentPatchRequest paymentPatchRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -397,39 +397,39 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Create Payment 
+        /// Create Document Payment 
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="invoiceId"></param>
+        /// <param name="documentId"></param>
         /// <param name="paymentCreateRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>PaymentResponse</returns>
-        public PaymentResponse CreatePaymentApiV1DocumentsInvoiceIdPaymentsPost(string invoiceId, PaymentCreateRequest paymentCreateRequest, int operationIndex = 0)
+        public PaymentResponse CreateDocumentPayment(string documentId, PaymentCreateRequest paymentCreateRequest, int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<PaymentResponse> localVarResponse = CreatePaymentApiV1DocumentsInvoiceIdPaymentsPostWithHttpInfo(invoiceId, paymentCreateRequest);
+            InvoicePDFs.Client.ApiResponse<PaymentResponse> localVarResponse = CreateDocumentPaymentWithHttpInfo(documentId, paymentCreateRequest);
             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Create Payment 
+        /// Create Document Payment 
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="invoiceId"></param>
+        /// <param name="documentId"></param>
         /// <param name="paymentCreateRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of PaymentResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<PaymentResponse> CreatePaymentApiV1DocumentsInvoiceIdPaymentsPostWithHttpInfo(string invoiceId, PaymentCreateRequest paymentCreateRequest, int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<PaymentResponse> CreateDocumentPaymentWithHttpInfo(string documentId, PaymentCreateRequest paymentCreateRequest, int operationIndex = 0)
         {
-            // verify the required parameter 'invoiceId' is set
-            if (invoiceId == null)
+            // verify the required parameter 'documentId' is set
+            if (documentId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'invoiceId' when calling PaymentsApi->CreatePaymentApiV1DocumentsInvoiceIdPaymentsPost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'documentId' when calling PaymentsApi->CreateDocumentPayment");
             }
 
             // verify the required parameter 'paymentCreateRequest' is set
             if (paymentCreateRequest == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'paymentCreateRequest' when calling PaymentsApi->CreatePaymentApiV1DocumentsInvoiceIdPaymentsPost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'paymentCreateRequest' when calling PaymentsApi->CreateDocumentPayment");
             }
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -455,10 +455,10 @@ namespace InvoicePDFs.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.PathParameters.Add("invoice_id", InvoicePDFs.Client.ClientUtils.ParameterToString(invoiceId)); // path parameter
+            localVarRequestOptions.PathParameters.Add("document_id", InvoicePDFs.Client.ClientUtils.ParameterToString(documentId)); // path parameter
             localVarRequestOptions.Data = paymentCreateRequest;
 
-            localVarRequestOptions.Operation = "PaymentsApi.CreatePaymentApiV1DocumentsInvoiceIdPaymentsPost";
+            localVarRequestOptions.Operation = "PaymentsApi.CreateDocumentPayment";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -469,10 +469,10 @@ namespace InvoicePDFs.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<PaymentResponse>("/api/v1/documents/{invoice_id}/payments", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<PaymentResponse>("/api/v1/documents/{document_id}/payments", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("CreatePaymentApiV1DocumentsInvoiceIdPaymentsPost", localVarResponse);
+                Exception _exception = this.ExceptionFactory("CreateDocumentPayment", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -483,41 +483,41 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Create Payment 
+        /// Create Document Payment 
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="invoiceId"></param>
+        /// <param name="documentId"></param>
         /// <param name="paymentCreateRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of PaymentResponse</returns>
-        public async System.Threading.Tasks.Task<PaymentResponse> CreatePaymentApiV1DocumentsInvoiceIdPaymentsPostAsync(string invoiceId, PaymentCreateRequest paymentCreateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<PaymentResponse> CreateDocumentPaymentAsync(string documentId, PaymentCreateRequest paymentCreateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<PaymentResponse> localVarResponse = await CreatePaymentApiV1DocumentsInvoiceIdPaymentsPostWithHttpInfoAsync(invoiceId, paymentCreateRequest, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<PaymentResponse> localVarResponse = await CreateDocumentPaymentWithHttpInfoAsync(documentId, paymentCreateRequest, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Create Payment 
+        /// Create Document Payment 
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="invoiceId"></param>
+        /// <param name="documentId"></param>
         /// <param name="paymentCreateRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (PaymentResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<PaymentResponse>> CreatePaymentApiV1DocumentsInvoiceIdPaymentsPostWithHttpInfoAsync(string invoiceId, PaymentCreateRequest paymentCreateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<PaymentResponse>> CreateDocumentPaymentWithHttpInfoAsync(string documentId, PaymentCreateRequest paymentCreateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            // verify the required parameter 'invoiceId' is set
-            if (invoiceId == null)
+            // verify the required parameter 'documentId' is set
+            if (documentId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'invoiceId' when calling PaymentsApi->CreatePaymentApiV1DocumentsInvoiceIdPaymentsPost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'documentId' when calling PaymentsApi->CreateDocumentPayment");
             }
 
             // verify the required parameter 'paymentCreateRequest' is set
             if (paymentCreateRequest == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'paymentCreateRequest' when calling PaymentsApi->CreatePaymentApiV1DocumentsInvoiceIdPaymentsPost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'paymentCreateRequest' when calling PaymentsApi->CreateDocumentPayment");
             }
 
 
@@ -544,10 +544,10 @@ namespace InvoicePDFs.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.PathParameters.Add("invoice_id", InvoicePDFs.Client.ClientUtils.ParameterToString(invoiceId)); // path parameter
+            localVarRequestOptions.PathParameters.Add("document_id", InvoicePDFs.Client.ClientUtils.ParameterToString(documentId)); // path parameter
             localVarRequestOptions.Data = paymentCreateRequest;
 
-            localVarRequestOptions.Operation = "PaymentsApi.CreatePaymentApiV1DocumentsInvoiceIdPaymentsPost";
+            localVarRequestOptions.Operation = "PaymentsApi.CreateDocumentPayment";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -558,11 +558,11 @@ namespace InvoicePDFs.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<PaymentResponse>("/api/v1/documents/{invoice_id}/payments", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<PaymentResponse>("/api/v1/documents/{document_id}/payments", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("CreatePaymentApiV1DocumentsInvoiceIdPaymentsPost", localVarResponse);
+                Exception _exception = this.ExceptionFactory("CreateDocumentPayment", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -579,9 +579,9 @@ namespace InvoicePDFs.Api
         /// <param name="paymentId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>SimpleBoolResponse</returns>
-        public SimpleBoolResponse DeletePaymentApiV1PaymentsPaymentIdDelete(string paymentId, int operationIndex = 0)
+        public SimpleBoolResponse DeletePayment(string paymentId, int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<SimpleBoolResponse> localVarResponse = DeletePaymentApiV1PaymentsPaymentIdDeleteWithHttpInfo(paymentId);
+            InvoicePDFs.Client.ApiResponse<SimpleBoolResponse> localVarResponse = DeletePaymentWithHttpInfo(paymentId);
             return localVarResponse.Data;
         }
 
@@ -592,12 +592,12 @@ namespace InvoicePDFs.Api
         /// <param name="paymentId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of SimpleBoolResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<SimpleBoolResponse> DeletePaymentApiV1PaymentsPaymentIdDeleteWithHttpInfo(string paymentId, int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<SimpleBoolResponse> DeletePaymentWithHttpInfo(string paymentId, int operationIndex = 0)
         {
             // verify the required parameter 'paymentId' is set
             if (paymentId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'paymentId' when calling PaymentsApi->DeletePaymentApiV1PaymentsPaymentIdDelete");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'paymentId' when calling PaymentsApi->DeletePayment");
             }
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -624,7 +624,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("payment_id", InvoicePDFs.Client.ClientUtils.ParameterToString(paymentId)); // path parameter
 
-            localVarRequestOptions.Operation = "PaymentsApi.DeletePaymentApiV1PaymentsPaymentIdDelete";
+            localVarRequestOptions.Operation = "PaymentsApi.DeletePayment";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -638,7 +638,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Delete<SimpleBoolResponse>("/api/v1/payments/{payment_id}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeletePaymentApiV1PaymentsPaymentIdDelete", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeletePayment", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -656,9 +656,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of SimpleBoolResponse</returns>
-        public async System.Threading.Tasks.Task<SimpleBoolResponse> DeletePaymentApiV1PaymentsPaymentIdDeleteAsync(string paymentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<SimpleBoolResponse> DeletePaymentAsync(string paymentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<SimpleBoolResponse> localVarResponse = await DeletePaymentApiV1PaymentsPaymentIdDeleteWithHttpInfoAsync(paymentId, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<SimpleBoolResponse> localVarResponse = await DeletePaymentWithHttpInfoAsync(paymentId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -670,12 +670,12 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (SimpleBoolResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<SimpleBoolResponse>> DeletePaymentApiV1PaymentsPaymentIdDeleteWithHttpInfoAsync(string paymentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<SimpleBoolResponse>> DeletePaymentWithHttpInfoAsync(string paymentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'paymentId' is set
             if (paymentId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'paymentId' when calling PaymentsApi->DeletePaymentApiV1PaymentsPaymentIdDelete");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'paymentId' when calling PaymentsApi->DeletePayment");
             }
 
 
@@ -703,7 +703,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("payment_id", InvoicePDFs.Client.ClientUtils.ParameterToString(paymentId)); // path parameter
 
-            localVarRequestOptions.Operation = "PaymentsApi.DeletePaymentApiV1PaymentsPaymentIdDelete";
+            localVarRequestOptions.Operation = "PaymentsApi.DeletePayment";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -718,7 +718,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeletePaymentApiV1PaymentsPaymentIdDelete", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeletePayment", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -735,9 +735,9 @@ namespace InvoicePDFs.Api
         /// <param name="paymentId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>PaymentResponse</returns>
-        public PaymentResponse GetPaymentApiV1PaymentsPaymentIdGet(string paymentId, int operationIndex = 0)
+        public PaymentResponse GetPayment(string paymentId, int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<PaymentResponse> localVarResponse = GetPaymentApiV1PaymentsPaymentIdGetWithHttpInfo(paymentId);
+            InvoicePDFs.Client.ApiResponse<PaymentResponse> localVarResponse = GetPaymentWithHttpInfo(paymentId);
             return localVarResponse.Data;
         }
 
@@ -748,12 +748,12 @@ namespace InvoicePDFs.Api
         /// <param name="paymentId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of PaymentResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<PaymentResponse> GetPaymentApiV1PaymentsPaymentIdGetWithHttpInfo(string paymentId, int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<PaymentResponse> GetPaymentWithHttpInfo(string paymentId, int operationIndex = 0)
         {
             // verify the required parameter 'paymentId' is set
             if (paymentId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'paymentId' when calling PaymentsApi->GetPaymentApiV1PaymentsPaymentIdGet");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'paymentId' when calling PaymentsApi->GetPayment");
             }
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -780,7 +780,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("payment_id", InvoicePDFs.Client.ClientUtils.ParameterToString(paymentId)); // path parameter
 
-            localVarRequestOptions.Operation = "PaymentsApi.GetPaymentApiV1PaymentsPaymentIdGet";
+            localVarRequestOptions.Operation = "PaymentsApi.GetPayment";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -794,7 +794,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Get<PaymentResponse>("/api/v1/payments/{payment_id}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetPaymentApiV1PaymentsPaymentIdGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetPayment", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -812,9 +812,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of PaymentResponse</returns>
-        public async System.Threading.Tasks.Task<PaymentResponse> GetPaymentApiV1PaymentsPaymentIdGetAsync(string paymentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<PaymentResponse> GetPaymentAsync(string paymentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<PaymentResponse> localVarResponse = await GetPaymentApiV1PaymentsPaymentIdGetWithHttpInfoAsync(paymentId, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<PaymentResponse> localVarResponse = await GetPaymentWithHttpInfoAsync(paymentId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -826,12 +826,12 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (PaymentResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<PaymentResponse>> GetPaymentApiV1PaymentsPaymentIdGetWithHttpInfoAsync(string paymentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<PaymentResponse>> GetPaymentWithHttpInfoAsync(string paymentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'paymentId' is set
             if (paymentId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'paymentId' when calling PaymentsApi->GetPaymentApiV1PaymentsPaymentIdGet");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'paymentId' when calling PaymentsApi->GetPayment");
             }
 
 
@@ -859,7 +859,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("payment_id", InvoicePDFs.Client.ClientUtils.ParameterToString(paymentId)); // path parameter
 
-            localVarRequestOptions.Operation = "PaymentsApi.GetPaymentApiV1PaymentsPaymentIdGet";
+            localVarRequestOptions.Operation = "PaymentsApi.GetPayment";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -874,7 +874,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetPaymentApiV1PaymentsPaymentIdGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetPayment", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -885,35 +885,35 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Invoice Payments 
+        /// List Document Payments 
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="invoiceId"></param>
+        /// <param name="documentId"></param>
         /// <param name="limit"> (optional, default to 50)</param>
         /// <param name="cursor"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>PaymentsListResponse</returns>
-        public PaymentsListResponse ListInvoicePaymentsApiV1DocumentsInvoiceIdPaymentsGet(string invoiceId, int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0)
+        public PaymentsListResponse ListDocumentPayments(string documentId, int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<PaymentsListResponse> localVarResponse = ListInvoicePaymentsApiV1DocumentsInvoiceIdPaymentsGetWithHttpInfo(invoiceId, limit, cursor);
+            InvoicePDFs.Client.ApiResponse<PaymentsListResponse> localVarResponse = ListDocumentPaymentsWithHttpInfo(documentId, limit, cursor);
             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// List Invoice Payments 
+        /// List Document Payments 
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="invoiceId"></param>
+        /// <param name="documentId"></param>
         /// <param name="limit"> (optional, default to 50)</param>
         /// <param name="cursor"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of PaymentsListResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<PaymentsListResponse> ListInvoicePaymentsApiV1DocumentsInvoiceIdPaymentsGetWithHttpInfo(string invoiceId, int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<PaymentsListResponse> ListDocumentPaymentsWithHttpInfo(string documentId, int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0)
         {
-            // verify the required parameter 'invoiceId' is set
-            if (invoiceId == null)
+            // verify the required parameter 'documentId' is set
+            if (documentId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'invoiceId' when calling PaymentsApi->ListInvoicePaymentsApiV1DocumentsInvoiceIdPaymentsGet");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'documentId' when calling PaymentsApi->ListDocumentPayments");
             }
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -938,7 +938,7 @@ namespace InvoicePDFs.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.PathParameters.Add("invoice_id", InvoicePDFs.Client.ClientUtils.ParameterToString(invoiceId)); // path parameter
+            localVarRequestOptions.PathParameters.Add("document_id", InvoicePDFs.Client.ClientUtils.ParameterToString(documentId)); // path parameter
             if (limit != null)
             {
                 localVarRequestOptions.QueryParameters.Add(InvoicePDFs.Client.ClientUtils.ParameterToMultiMap("", "limit", limit));
@@ -948,7 +948,7 @@ namespace InvoicePDFs.Api
                 localVarRequestOptions.QueryParameters.Add(InvoicePDFs.Client.ClientUtils.ParameterToMultiMap("", "cursor", cursor));
             }
 
-            localVarRequestOptions.Operation = "PaymentsApi.ListInvoicePaymentsApiV1DocumentsInvoiceIdPaymentsGet";
+            localVarRequestOptions.Operation = "PaymentsApi.ListDocumentPayments";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -959,10 +959,10 @@ namespace InvoicePDFs.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<PaymentsListResponse>("/api/v1/documents/{invoice_id}/payments", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PaymentsListResponse>("/api/v1/documents/{document_id}/payments", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListInvoicePaymentsApiV1DocumentsInvoiceIdPaymentsGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("ListDocumentPayments", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -973,37 +973,37 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Invoice Payments 
+        /// List Document Payments 
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="invoiceId"></param>
+        /// <param name="documentId"></param>
         /// <param name="limit"> (optional, default to 50)</param>
         /// <param name="cursor"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of PaymentsListResponse</returns>
-        public async System.Threading.Tasks.Task<PaymentsListResponse> ListInvoicePaymentsApiV1DocumentsInvoiceIdPaymentsGetAsync(string invoiceId, int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<PaymentsListResponse> ListDocumentPaymentsAsync(string documentId, int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<PaymentsListResponse> localVarResponse = await ListInvoicePaymentsApiV1DocumentsInvoiceIdPaymentsGetWithHttpInfoAsync(invoiceId, limit, cursor, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<PaymentsListResponse> localVarResponse = await ListDocumentPaymentsWithHttpInfoAsync(documentId, limit, cursor, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// List Invoice Payments 
+        /// List Document Payments 
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="invoiceId"></param>
+        /// <param name="documentId"></param>
         /// <param name="limit"> (optional, default to 50)</param>
         /// <param name="cursor"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (PaymentsListResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<PaymentsListResponse>> ListInvoicePaymentsApiV1DocumentsInvoiceIdPaymentsGetWithHttpInfoAsync(string invoiceId, int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<PaymentsListResponse>> ListDocumentPaymentsWithHttpInfoAsync(string documentId, int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            // verify the required parameter 'invoiceId' is set
-            if (invoiceId == null)
+            // verify the required parameter 'documentId' is set
+            if (documentId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'invoiceId' when calling PaymentsApi->ListInvoicePaymentsApiV1DocumentsInvoiceIdPaymentsGet");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'documentId' when calling PaymentsApi->ListDocumentPayments");
             }
 
 
@@ -1029,7 +1029,7 @@ namespace InvoicePDFs.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.PathParameters.Add("invoice_id", InvoicePDFs.Client.ClientUtils.ParameterToString(invoiceId)); // path parameter
+            localVarRequestOptions.PathParameters.Add("document_id", InvoicePDFs.Client.ClientUtils.ParameterToString(documentId)); // path parameter
             if (limit != null)
             {
                 localVarRequestOptions.QueryParameters.Add(InvoicePDFs.Client.ClientUtils.ParameterToMultiMap("", "limit", limit));
@@ -1039,7 +1039,7 @@ namespace InvoicePDFs.Api
                 localVarRequestOptions.QueryParameters.Add(InvoicePDFs.Client.ClientUtils.ParameterToMultiMap("", "cursor", cursor));
             }
 
-            localVarRequestOptions.Operation = "PaymentsApi.ListInvoicePaymentsApiV1DocumentsInvoiceIdPaymentsGet";
+            localVarRequestOptions.Operation = "PaymentsApi.ListDocumentPayments";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -1050,11 +1050,11 @@ namespace InvoicePDFs.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<PaymentsListResponse>("/api/v1/documents/{invoice_id}/payments", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PaymentsListResponse>("/api/v1/documents/{document_id}/payments", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListInvoicePaymentsApiV1DocumentsInvoiceIdPaymentsGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("ListDocumentPayments", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1072,9 +1072,9 @@ namespace InvoicePDFs.Api
         /// <param name="paymentPatchRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>PaymentResponse</returns>
-        public PaymentResponse UpdatePaymentApiV1PaymentsPaymentIdPatch(string paymentId, PaymentPatchRequest paymentPatchRequest, int operationIndex = 0)
+        public PaymentResponse UpdatePayment(string paymentId, PaymentPatchRequest paymentPatchRequest, int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<PaymentResponse> localVarResponse = UpdatePaymentApiV1PaymentsPaymentIdPatchWithHttpInfo(paymentId, paymentPatchRequest);
+            InvoicePDFs.Client.ApiResponse<PaymentResponse> localVarResponse = UpdatePaymentWithHttpInfo(paymentId, paymentPatchRequest);
             return localVarResponse.Data;
         }
 
@@ -1086,18 +1086,18 @@ namespace InvoicePDFs.Api
         /// <param name="paymentPatchRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of PaymentResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<PaymentResponse> UpdatePaymentApiV1PaymentsPaymentIdPatchWithHttpInfo(string paymentId, PaymentPatchRequest paymentPatchRequest, int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<PaymentResponse> UpdatePaymentWithHttpInfo(string paymentId, PaymentPatchRequest paymentPatchRequest, int operationIndex = 0)
         {
             // verify the required parameter 'paymentId' is set
             if (paymentId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'paymentId' when calling PaymentsApi->UpdatePaymentApiV1PaymentsPaymentIdPatch");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'paymentId' when calling PaymentsApi->UpdatePayment");
             }
 
             // verify the required parameter 'paymentPatchRequest' is set
             if (paymentPatchRequest == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'paymentPatchRequest' when calling PaymentsApi->UpdatePaymentApiV1PaymentsPaymentIdPatch");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'paymentPatchRequest' when calling PaymentsApi->UpdatePayment");
             }
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -1126,7 +1126,7 @@ namespace InvoicePDFs.Api
             localVarRequestOptions.PathParameters.Add("payment_id", InvoicePDFs.Client.ClientUtils.ParameterToString(paymentId)); // path parameter
             localVarRequestOptions.Data = paymentPatchRequest;
 
-            localVarRequestOptions.Operation = "PaymentsApi.UpdatePaymentApiV1PaymentsPaymentIdPatch";
+            localVarRequestOptions.Operation = "PaymentsApi.UpdatePayment";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -1140,7 +1140,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Patch<PaymentResponse>("/api/v1/payments/{payment_id}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdatePaymentApiV1PaymentsPaymentIdPatch", localVarResponse);
+                Exception _exception = this.ExceptionFactory("UpdatePayment", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1159,9 +1159,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of PaymentResponse</returns>
-        public async System.Threading.Tasks.Task<PaymentResponse> UpdatePaymentApiV1PaymentsPaymentIdPatchAsync(string paymentId, PaymentPatchRequest paymentPatchRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<PaymentResponse> UpdatePaymentAsync(string paymentId, PaymentPatchRequest paymentPatchRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<PaymentResponse> localVarResponse = await UpdatePaymentApiV1PaymentsPaymentIdPatchWithHttpInfoAsync(paymentId, paymentPatchRequest, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<PaymentResponse> localVarResponse = await UpdatePaymentWithHttpInfoAsync(paymentId, paymentPatchRequest, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1174,18 +1174,18 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (PaymentResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<PaymentResponse>> UpdatePaymentApiV1PaymentsPaymentIdPatchWithHttpInfoAsync(string paymentId, PaymentPatchRequest paymentPatchRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<PaymentResponse>> UpdatePaymentWithHttpInfoAsync(string paymentId, PaymentPatchRequest paymentPatchRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'paymentId' is set
             if (paymentId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'paymentId' when calling PaymentsApi->UpdatePaymentApiV1PaymentsPaymentIdPatch");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'paymentId' when calling PaymentsApi->UpdatePayment");
             }
 
             // verify the required parameter 'paymentPatchRequest' is set
             if (paymentPatchRequest == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'paymentPatchRequest' when calling PaymentsApi->UpdatePaymentApiV1PaymentsPaymentIdPatch");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'paymentPatchRequest' when calling PaymentsApi->UpdatePayment");
             }
 
 
@@ -1215,7 +1215,7 @@ namespace InvoicePDFs.Api
             localVarRequestOptions.PathParameters.Add("payment_id", InvoicePDFs.Client.ClientUtils.ParameterToString(paymentId)); // path parameter
             localVarRequestOptions.Data = paymentPatchRequest;
 
-            localVarRequestOptions.Operation = "PaymentsApi.UpdatePaymentApiV1PaymentsPaymentIdPatch";
+            localVarRequestOptions.Operation = "PaymentsApi.UpdatePayment";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -1230,7 +1230,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdatePaymentApiV1PaymentsPaymentIdPatch", localVarResponse);
+                Exception _exception = this.ExceptionFactory("UpdatePayment", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

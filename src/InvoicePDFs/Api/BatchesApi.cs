@@ -33,7 +33,7 @@ namespace InvoicePDFs.Api
         /// <param name="batchId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>BatchResponse</returns>
-        BatchResponse CancelBatchApiV1BatchesBatchIdCancelPost(string batchId, int operationIndex = 0);
+        BatchResponse CancelBatch(string batchId, int operationIndex = 0);
 
         /// <summary>
         /// Cancel Batch
@@ -45,7 +45,7 @@ namespace InvoicePDFs.Api
         /// <param name="batchId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of BatchResponse</returns>
-        ApiResponse<BatchResponse> CancelBatchApiV1BatchesBatchIdCancelPostWithHttpInfo(string batchId, int operationIndex = 0);
+        ApiResponse<BatchResponse> CancelBatchWithHttpInfo(string batchId, int operationIndex = 0);
         /// <summary>
         /// Create Batch
         /// </summary>
@@ -53,7 +53,7 @@ namespace InvoicePDFs.Api
         /// <param name="batchCreateRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>BatchResponse</returns>
-        BatchResponse CreateBatchApiV1BatchesPost(BatchCreateRequest batchCreateRequest, int operationIndex = 0);
+        BatchResponse CreateBatch(BatchCreateRequest batchCreateRequest, int operationIndex = 0);
 
         /// <summary>
         /// Create Batch
@@ -65,7 +65,7 @@ namespace InvoicePDFs.Api
         /// <param name="batchCreateRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of BatchResponse</returns>
-        ApiResponse<BatchResponse> CreateBatchApiV1BatchesPostWithHttpInfo(BatchCreateRequest batchCreateRequest, int operationIndex = 0);
+        ApiResponse<BatchResponse> CreateBatchWithHttpInfo(BatchCreateRequest batchCreateRequest, int operationIndex = 0);
         /// <summary>
         /// Download Batch
         /// </summary>
@@ -73,7 +73,7 @@ namespace InvoicePDFs.Api
         /// <param name="batchId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>Object</returns>
-        Object DownloadBatchApiV1BatchesBatchIdDownloadGet(string batchId, int operationIndex = 0);
+        Object DownloadBatch(string batchId, int operationIndex = 0);
 
         /// <summary>
         /// Download Batch
@@ -85,7 +85,7 @@ namespace InvoicePDFs.Api
         /// <param name="batchId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Object</returns>
-        ApiResponse<Object> DownloadBatchApiV1BatchesBatchIdDownloadGetWithHttpInfo(string batchId, int operationIndex = 0);
+        ApiResponse<Object> DownloadBatchWithHttpInfo(string batchId, int operationIndex = 0);
         /// <summary>
         /// Get Batch
         /// </summary>
@@ -93,7 +93,7 @@ namespace InvoicePDFs.Api
         /// <param name="batchId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>BatchResponse</returns>
-        BatchResponse GetBatchApiV1BatchesBatchIdGet(string batchId, int operationIndex = 0);
+        BatchResponse GetBatch(string batchId, int operationIndex = 0);
 
         /// <summary>
         /// Get Batch
@@ -105,7 +105,7 @@ namespace InvoicePDFs.Api
         /// <param name="batchId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of BatchResponse</returns>
-        ApiResponse<BatchResponse> GetBatchApiV1BatchesBatchIdGetWithHttpInfo(string batchId, int operationIndex = 0);
+        ApiResponse<BatchResponse> GetBatchWithHttpInfo(string batchId, int operationIndex = 0);
         /// <summary>
         /// List Batch Items
         /// </summary>
@@ -115,7 +115,7 @@ namespace InvoicePDFs.Api
         /// <param name="cursor"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>BatchItemsListResponse</returns>
-        BatchItemsListResponse ListBatchItemsApiV1BatchesBatchIdItemsGet(string batchId, int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0);
+        BatchItemsListResponse ListBatchItems(string batchId, int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// List Batch Items
@@ -129,7 +129,7 @@ namespace InvoicePDFs.Api
         /// <param name="cursor"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of BatchItemsListResponse</returns>
-        ApiResponse<BatchItemsListResponse> ListBatchItemsApiV1BatchesBatchIdItemsGetWithHttpInfo(string batchId, int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0);
+        ApiResponse<BatchItemsListResponse> ListBatchItemsWithHttpInfo(string batchId, int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0);
         /// <summary>
         /// List Batches
         /// </summary>
@@ -138,7 +138,7 @@ namespace InvoicePDFs.Api
         /// <param name="cursor"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>BatchesListResponse</returns>
-        BatchesListResponse ListBatchesApiV1BatchesGet(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0);
+        BatchesListResponse ListBatches(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// List Batches
@@ -151,7 +151,7 @@ namespace InvoicePDFs.Api
         /// <param name="cursor"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of BatchesListResponse</returns>
-        ApiResponse<BatchesListResponse> ListBatchesApiV1BatchesGetWithHttpInfo(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0);
+        ApiResponse<BatchesListResponse> ListBatchesWithHttpInfo(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -172,7 +172,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of BatchResponse</returns>
-        System.Threading.Tasks.Task<BatchResponse> CancelBatchApiV1BatchesBatchIdCancelPostAsync(string batchId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<BatchResponse> CancelBatchAsync(string batchId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Cancel Batch
@@ -185,7 +185,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (BatchResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<BatchResponse>> CancelBatchApiV1BatchesBatchIdCancelPostWithHttpInfoAsync(string batchId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<BatchResponse>> CancelBatchWithHttpInfoAsync(string batchId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Create Batch
         /// </summary>
@@ -197,7 +197,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of BatchResponse</returns>
-        System.Threading.Tasks.Task<BatchResponse> CreateBatchApiV1BatchesPostAsync(BatchCreateRequest batchCreateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<BatchResponse> CreateBatchAsync(BatchCreateRequest batchCreateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Create Batch
@@ -210,7 +210,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (BatchResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<BatchResponse>> CreateBatchApiV1BatchesPostWithHttpInfoAsync(BatchCreateRequest batchCreateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<BatchResponse>> CreateBatchWithHttpInfoAsync(BatchCreateRequest batchCreateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Download Batch
         /// </summary>
@@ -222,7 +222,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> DownloadBatchApiV1BatchesBatchIdDownloadGetAsync(string batchId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<Object> DownloadBatchAsync(string batchId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Download Batch
@@ -235,7 +235,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DownloadBatchApiV1BatchesBatchIdDownloadGetWithHttpInfoAsync(string batchId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> DownloadBatchWithHttpInfoAsync(string batchId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Get Batch
         /// </summary>
@@ -247,7 +247,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of BatchResponse</returns>
-        System.Threading.Tasks.Task<BatchResponse> GetBatchApiV1BatchesBatchIdGetAsync(string batchId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<BatchResponse> GetBatchAsync(string batchId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Get Batch
@@ -260,7 +260,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (BatchResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<BatchResponse>> GetBatchApiV1BatchesBatchIdGetWithHttpInfoAsync(string batchId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<BatchResponse>> GetBatchWithHttpInfoAsync(string batchId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// List Batch Items
         /// </summary>
@@ -274,7 +274,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of BatchItemsListResponse</returns>
-        System.Threading.Tasks.Task<BatchItemsListResponse> ListBatchItemsApiV1BatchesBatchIdItemsGetAsync(string batchId, int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<BatchItemsListResponse> ListBatchItemsAsync(string batchId, int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// List Batch Items
@@ -289,7 +289,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (BatchItemsListResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<BatchItemsListResponse>> ListBatchItemsApiV1BatchesBatchIdItemsGetWithHttpInfoAsync(string batchId, int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<BatchItemsListResponse>> ListBatchItemsWithHttpInfoAsync(string batchId, int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// List Batches
         /// </summary>
@@ -302,7 +302,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of BatchesListResponse</returns>
-        System.Threading.Tasks.Task<BatchesListResponse> ListBatchesApiV1BatchesGetAsync(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<BatchesListResponse> ListBatchesAsync(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// List Batches
@@ -316,7 +316,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (BatchesListResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<BatchesListResponse>> ListBatchesApiV1BatchesGetWithHttpInfoAsync(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<BatchesListResponse>> ListBatchesWithHttpInfoAsync(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -444,9 +444,9 @@ namespace InvoicePDFs.Api
         /// <param name="batchId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>BatchResponse</returns>
-        public BatchResponse CancelBatchApiV1BatchesBatchIdCancelPost(string batchId, int operationIndex = 0)
+        public BatchResponse CancelBatch(string batchId, int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<BatchResponse> localVarResponse = CancelBatchApiV1BatchesBatchIdCancelPostWithHttpInfo(batchId);
+            InvoicePDFs.Client.ApiResponse<BatchResponse> localVarResponse = CancelBatchWithHttpInfo(batchId);
             return localVarResponse.Data;
         }
 
@@ -457,12 +457,12 @@ namespace InvoicePDFs.Api
         /// <param name="batchId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of BatchResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<BatchResponse> CancelBatchApiV1BatchesBatchIdCancelPostWithHttpInfo(string batchId, int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<BatchResponse> CancelBatchWithHttpInfo(string batchId, int operationIndex = 0)
         {
             // verify the required parameter 'batchId' is set
             if (batchId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'batchId' when calling BatchesApi->CancelBatchApiV1BatchesBatchIdCancelPost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'batchId' when calling BatchesApi->CancelBatch");
             }
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -489,7 +489,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("batch_id", InvoicePDFs.Client.ClientUtils.ParameterToString(batchId)); // path parameter
 
-            localVarRequestOptions.Operation = "BatchesApi.CancelBatchApiV1BatchesBatchIdCancelPost";
+            localVarRequestOptions.Operation = "BatchesApi.CancelBatch";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -503,7 +503,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Post<BatchResponse>("/api/v1/batches/{batch_id}/cancel", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("CancelBatchApiV1BatchesBatchIdCancelPost", localVarResponse);
+                Exception _exception = this.ExceptionFactory("CancelBatch", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -521,9 +521,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of BatchResponse</returns>
-        public async System.Threading.Tasks.Task<BatchResponse> CancelBatchApiV1BatchesBatchIdCancelPostAsync(string batchId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<BatchResponse> CancelBatchAsync(string batchId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<BatchResponse> localVarResponse = await CancelBatchApiV1BatchesBatchIdCancelPostWithHttpInfoAsync(batchId, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<BatchResponse> localVarResponse = await CancelBatchWithHttpInfoAsync(batchId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -535,12 +535,12 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (BatchResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<BatchResponse>> CancelBatchApiV1BatchesBatchIdCancelPostWithHttpInfoAsync(string batchId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<BatchResponse>> CancelBatchWithHttpInfoAsync(string batchId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'batchId' is set
             if (batchId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'batchId' when calling BatchesApi->CancelBatchApiV1BatchesBatchIdCancelPost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'batchId' when calling BatchesApi->CancelBatch");
             }
 
 
@@ -568,7 +568,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("batch_id", InvoicePDFs.Client.ClientUtils.ParameterToString(batchId)); // path parameter
 
-            localVarRequestOptions.Operation = "BatchesApi.CancelBatchApiV1BatchesBatchIdCancelPost";
+            localVarRequestOptions.Operation = "BatchesApi.CancelBatch";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -583,7 +583,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("CancelBatchApiV1BatchesBatchIdCancelPost", localVarResponse);
+                Exception _exception = this.ExceptionFactory("CancelBatch", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -600,9 +600,9 @@ namespace InvoicePDFs.Api
         /// <param name="batchCreateRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>BatchResponse</returns>
-        public BatchResponse CreateBatchApiV1BatchesPost(BatchCreateRequest batchCreateRequest, int operationIndex = 0)
+        public BatchResponse CreateBatch(BatchCreateRequest batchCreateRequest, int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<BatchResponse> localVarResponse = CreateBatchApiV1BatchesPostWithHttpInfo(batchCreateRequest);
+            InvoicePDFs.Client.ApiResponse<BatchResponse> localVarResponse = CreateBatchWithHttpInfo(batchCreateRequest);
             return localVarResponse.Data;
         }
 
@@ -613,12 +613,12 @@ namespace InvoicePDFs.Api
         /// <param name="batchCreateRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of BatchResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<BatchResponse> CreateBatchApiV1BatchesPostWithHttpInfo(BatchCreateRequest batchCreateRequest, int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<BatchResponse> CreateBatchWithHttpInfo(BatchCreateRequest batchCreateRequest, int operationIndex = 0)
         {
             // verify the required parameter 'batchCreateRequest' is set
             if (batchCreateRequest == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'batchCreateRequest' when calling BatchesApi->CreateBatchApiV1BatchesPost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'batchCreateRequest' when calling BatchesApi->CreateBatch");
             }
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -646,7 +646,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.Data = batchCreateRequest;
 
-            localVarRequestOptions.Operation = "BatchesApi.CreateBatchApiV1BatchesPost";
+            localVarRequestOptions.Operation = "BatchesApi.CreateBatch";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -660,7 +660,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Post<BatchResponse>("/api/v1/batches", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("CreateBatchApiV1BatchesPost", localVarResponse);
+                Exception _exception = this.ExceptionFactory("CreateBatch", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -678,9 +678,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of BatchResponse</returns>
-        public async System.Threading.Tasks.Task<BatchResponse> CreateBatchApiV1BatchesPostAsync(BatchCreateRequest batchCreateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<BatchResponse> CreateBatchAsync(BatchCreateRequest batchCreateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<BatchResponse> localVarResponse = await CreateBatchApiV1BatchesPostWithHttpInfoAsync(batchCreateRequest, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<BatchResponse> localVarResponse = await CreateBatchWithHttpInfoAsync(batchCreateRequest, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -692,12 +692,12 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (BatchResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<BatchResponse>> CreateBatchApiV1BatchesPostWithHttpInfoAsync(BatchCreateRequest batchCreateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<BatchResponse>> CreateBatchWithHttpInfoAsync(BatchCreateRequest batchCreateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'batchCreateRequest' is set
             if (batchCreateRequest == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'batchCreateRequest' when calling BatchesApi->CreateBatchApiV1BatchesPost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'batchCreateRequest' when calling BatchesApi->CreateBatch");
             }
 
 
@@ -726,7 +726,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.Data = batchCreateRequest;
 
-            localVarRequestOptions.Operation = "BatchesApi.CreateBatchApiV1BatchesPost";
+            localVarRequestOptions.Operation = "BatchesApi.CreateBatch";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -741,7 +741,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("CreateBatchApiV1BatchesPost", localVarResponse);
+                Exception _exception = this.ExceptionFactory("CreateBatch", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -758,9 +758,9 @@ namespace InvoicePDFs.Api
         /// <param name="batchId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>Object</returns>
-        public Object DownloadBatchApiV1BatchesBatchIdDownloadGet(string batchId, int operationIndex = 0)
+        public Object DownloadBatch(string batchId, int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<Object> localVarResponse = DownloadBatchApiV1BatchesBatchIdDownloadGetWithHttpInfo(batchId);
+            InvoicePDFs.Client.ApiResponse<Object> localVarResponse = DownloadBatchWithHttpInfo(batchId);
             return localVarResponse.Data;
         }
 
@@ -771,12 +771,12 @@ namespace InvoicePDFs.Api
         /// <param name="batchId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Object</returns>
-        public InvoicePDFs.Client.ApiResponse<Object> DownloadBatchApiV1BatchesBatchIdDownloadGetWithHttpInfo(string batchId, int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<Object> DownloadBatchWithHttpInfo(string batchId, int operationIndex = 0)
         {
             // verify the required parameter 'batchId' is set
             if (batchId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'batchId' when calling BatchesApi->DownloadBatchApiV1BatchesBatchIdDownloadGet");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'batchId' when calling BatchesApi->DownloadBatch");
             }
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -803,7 +803,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("batch_id", InvoicePDFs.Client.ClientUtils.ParameterToString(batchId)); // path parameter
 
-            localVarRequestOptions.Operation = "BatchesApi.DownloadBatchApiV1BatchesBatchIdDownloadGet";
+            localVarRequestOptions.Operation = "BatchesApi.DownloadBatch";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -817,7 +817,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Get<Object>("/api/v1/batches/{batch_id}/download", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DownloadBatchApiV1BatchesBatchIdDownloadGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DownloadBatch", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -835,9 +835,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> DownloadBatchApiV1BatchesBatchIdDownloadGetAsync(string batchId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Object> DownloadBatchAsync(string batchId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<Object> localVarResponse = await DownloadBatchApiV1BatchesBatchIdDownloadGetWithHttpInfoAsync(batchId, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<Object> localVarResponse = await DownloadBatchWithHttpInfoAsync(batchId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -849,12 +849,12 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<Object>> DownloadBatchApiV1BatchesBatchIdDownloadGetWithHttpInfoAsync(string batchId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<Object>> DownloadBatchWithHttpInfoAsync(string batchId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'batchId' is set
             if (batchId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'batchId' when calling BatchesApi->DownloadBatchApiV1BatchesBatchIdDownloadGet");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'batchId' when calling BatchesApi->DownloadBatch");
             }
 
 
@@ -882,7 +882,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("batch_id", InvoicePDFs.Client.ClientUtils.ParameterToString(batchId)); // path parameter
 
-            localVarRequestOptions.Operation = "BatchesApi.DownloadBatchApiV1BatchesBatchIdDownloadGet";
+            localVarRequestOptions.Operation = "BatchesApi.DownloadBatch";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -897,7 +897,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DownloadBatchApiV1BatchesBatchIdDownloadGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DownloadBatch", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -914,9 +914,9 @@ namespace InvoicePDFs.Api
         /// <param name="batchId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>BatchResponse</returns>
-        public BatchResponse GetBatchApiV1BatchesBatchIdGet(string batchId, int operationIndex = 0)
+        public BatchResponse GetBatch(string batchId, int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<BatchResponse> localVarResponse = GetBatchApiV1BatchesBatchIdGetWithHttpInfo(batchId);
+            InvoicePDFs.Client.ApiResponse<BatchResponse> localVarResponse = GetBatchWithHttpInfo(batchId);
             return localVarResponse.Data;
         }
 
@@ -927,12 +927,12 @@ namespace InvoicePDFs.Api
         /// <param name="batchId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of BatchResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<BatchResponse> GetBatchApiV1BatchesBatchIdGetWithHttpInfo(string batchId, int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<BatchResponse> GetBatchWithHttpInfo(string batchId, int operationIndex = 0)
         {
             // verify the required parameter 'batchId' is set
             if (batchId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'batchId' when calling BatchesApi->GetBatchApiV1BatchesBatchIdGet");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'batchId' when calling BatchesApi->GetBatch");
             }
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -959,7 +959,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("batch_id", InvoicePDFs.Client.ClientUtils.ParameterToString(batchId)); // path parameter
 
-            localVarRequestOptions.Operation = "BatchesApi.GetBatchApiV1BatchesBatchIdGet";
+            localVarRequestOptions.Operation = "BatchesApi.GetBatch";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -973,7 +973,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Get<BatchResponse>("/api/v1/batches/{batch_id}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetBatchApiV1BatchesBatchIdGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetBatch", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -991,9 +991,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of BatchResponse</returns>
-        public async System.Threading.Tasks.Task<BatchResponse> GetBatchApiV1BatchesBatchIdGetAsync(string batchId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<BatchResponse> GetBatchAsync(string batchId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<BatchResponse> localVarResponse = await GetBatchApiV1BatchesBatchIdGetWithHttpInfoAsync(batchId, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<BatchResponse> localVarResponse = await GetBatchWithHttpInfoAsync(batchId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1005,12 +1005,12 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (BatchResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<BatchResponse>> GetBatchApiV1BatchesBatchIdGetWithHttpInfoAsync(string batchId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<BatchResponse>> GetBatchWithHttpInfoAsync(string batchId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'batchId' is set
             if (batchId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'batchId' when calling BatchesApi->GetBatchApiV1BatchesBatchIdGet");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'batchId' when calling BatchesApi->GetBatch");
             }
 
 
@@ -1038,7 +1038,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("batch_id", InvoicePDFs.Client.ClientUtils.ParameterToString(batchId)); // path parameter
 
-            localVarRequestOptions.Operation = "BatchesApi.GetBatchApiV1BatchesBatchIdGet";
+            localVarRequestOptions.Operation = "BatchesApi.GetBatch";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -1053,7 +1053,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetBatchApiV1BatchesBatchIdGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetBatch", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1072,9 +1072,9 @@ namespace InvoicePDFs.Api
         /// <param name="cursor"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>BatchItemsListResponse</returns>
-        public BatchItemsListResponse ListBatchItemsApiV1BatchesBatchIdItemsGet(string batchId, int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0)
+        public BatchItemsListResponse ListBatchItems(string batchId, int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<BatchItemsListResponse> localVarResponse = ListBatchItemsApiV1BatchesBatchIdItemsGetWithHttpInfo(batchId, limit, cursor);
+            InvoicePDFs.Client.ApiResponse<BatchItemsListResponse> localVarResponse = ListBatchItemsWithHttpInfo(batchId, limit, cursor);
             return localVarResponse.Data;
         }
 
@@ -1087,12 +1087,12 @@ namespace InvoicePDFs.Api
         /// <param name="cursor"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of BatchItemsListResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<BatchItemsListResponse> ListBatchItemsApiV1BatchesBatchIdItemsGetWithHttpInfo(string batchId, int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<BatchItemsListResponse> ListBatchItemsWithHttpInfo(string batchId, int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'batchId' is set
             if (batchId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'batchId' when calling BatchesApi->ListBatchItemsApiV1BatchesBatchIdItemsGet");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'batchId' when calling BatchesApi->ListBatchItems");
             }
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -1127,7 +1127,7 @@ namespace InvoicePDFs.Api
                 localVarRequestOptions.QueryParameters.Add(InvoicePDFs.Client.ClientUtils.ParameterToMultiMap("", "cursor", cursor));
             }
 
-            localVarRequestOptions.Operation = "BatchesApi.ListBatchItemsApiV1BatchesBatchIdItemsGet";
+            localVarRequestOptions.Operation = "BatchesApi.ListBatchItems";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -1141,7 +1141,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Get<BatchItemsListResponse>("/api/v1/batches/{batch_id}/items", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListBatchItemsApiV1BatchesBatchIdItemsGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("ListBatchItems", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1161,9 +1161,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of BatchItemsListResponse</returns>
-        public async System.Threading.Tasks.Task<BatchItemsListResponse> ListBatchItemsApiV1BatchesBatchIdItemsGetAsync(string batchId, int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<BatchItemsListResponse> ListBatchItemsAsync(string batchId, int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<BatchItemsListResponse> localVarResponse = await ListBatchItemsApiV1BatchesBatchIdItemsGetWithHttpInfoAsync(batchId, limit, cursor, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<BatchItemsListResponse> localVarResponse = await ListBatchItemsWithHttpInfoAsync(batchId, limit, cursor, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1177,12 +1177,12 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (BatchItemsListResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<BatchItemsListResponse>> ListBatchItemsApiV1BatchesBatchIdItemsGetWithHttpInfoAsync(string batchId, int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<BatchItemsListResponse>> ListBatchItemsWithHttpInfoAsync(string batchId, int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'batchId' is set
             if (batchId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'batchId' when calling BatchesApi->ListBatchItemsApiV1BatchesBatchIdItemsGet");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'batchId' when calling BatchesApi->ListBatchItems");
             }
 
 
@@ -1218,7 +1218,7 @@ namespace InvoicePDFs.Api
                 localVarRequestOptions.QueryParameters.Add(InvoicePDFs.Client.ClientUtils.ParameterToMultiMap("", "cursor", cursor));
             }
 
-            localVarRequestOptions.Operation = "BatchesApi.ListBatchItemsApiV1BatchesBatchIdItemsGet";
+            localVarRequestOptions.Operation = "BatchesApi.ListBatchItems";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -1233,7 +1233,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListBatchItemsApiV1BatchesBatchIdItemsGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("ListBatchItems", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1251,9 +1251,9 @@ namespace InvoicePDFs.Api
         /// <param name="cursor"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>BatchesListResponse</returns>
-        public BatchesListResponse ListBatchesApiV1BatchesGet(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0)
+        public BatchesListResponse ListBatches(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<BatchesListResponse> localVarResponse = ListBatchesApiV1BatchesGetWithHttpInfo(limit, cursor);
+            InvoicePDFs.Client.ApiResponse<BatchesListResponse> localVarResponse = ListBatchesWithHttpInfo(limit, cursor);
             return localVarResponse.Data;
         }
 
@@ -1265,7 +1265,7 @@ namespace InvoicePDFs.Api
         /// <param name="cursor"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of BatchesListResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<BatchesListResponse> ListBatchesApiV1BatchesGetWithHttpInfo(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<BatchesListResponse> ListBatchesWithHttpInfo(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0)
         {
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
 
@@ -1298,7 +1298,7 @@ namespace InvoicePDFs.Api
                 localVarRequestOptions.QueryParameters.Add(InvoicePDFs.Client.ClientUtils.ParameterToMultiMap("", "cursor", cursor));
             }
 
-            localVarRequestOptions.Operation = "BatchesApi.ListBatchesApiV1BatchesGet";
+            localVarRequestOptions.Operation = "BatchesApi.ListBatches";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -1312,7 +1312,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Get<BatchesListResponse>("/api/v1/batches", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListBatchesApiV1BatchesGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("ListBatches", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1331,9 +1331,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of BatchesListResponse</returns>
-        public async System.Threading.Tasks.Task<BatchesListResponse> ListBatchesApiV1BatchesGetAsync(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<BatchesListResponse> ListBatchesAsync(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<BatchesListResponse> localVarResponse = await ListBatchesApiV1BatchesGetWithHttpInfoAsync(limit, cursor, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<BatchesListResponse> localVarResponse = await ListBatchesWithHttpInfoAsync(limit, cursor, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1346,7 +1346,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (BatchesListResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<BatchesListResponse>> ListBatchesApiV1BatchesGetWithHttpInfoAsync(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<BatchesListResponse>> ListBatchesWithHttpInfoAsync(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -1380,7 +1380,7 @@ namespace InvoicePDFs.Api
                 localVarRequestOptions.QueryParameters.Add(InvoicePDFs.Client.ClientUtils.ParameterToMultiMap("", "cursor", cursor));
             }
 
-            localVarRequestOptions.Operation = "BatchesApi.ListBatchesApiV1BatchesGet";
+            localVarRequestOptions.Operation = "BatchesApi.ListBatches";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -1395,7 +1395,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListBatchesApiV1BatchesGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("ListBatches", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

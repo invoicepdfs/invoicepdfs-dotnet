@@ -4,11 +4,11 @@ All URIs are relative to *http://localhost*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
-| [**GetStatsApiV1StatsGet**](StatsApi.md#getstatsapiv1statsget) | **GET** /api/v1/stats | Get Stats |
+| [**GetStats**](StatsApi.md#getstats) | **GET** /api/v1/stats | Get Stats |
 
-<a id="getstatsapiv1statsget"></a>
-# **GetStatsApiV1StatsGet**
-> StatsResponse GetStatsApiV1StatsGet ()
+<a id="getstats"></a>
+# **GetStats**
+> StatsResponse GetStats ()
 
 Get Stats
 
@@ -22,7 +22,7 @@ using InvoicePDFs.Model;
 
 namespace Example
 {
-    public class GetStatsApiV1StatsGetExample
+    public class GetStatsExample
     {
         public static void Main()
         {
@@ -36,12 +36,12 @@ namespace Example
             try
             {
                 // Get Stats
-                StatsResponse result = apiInstance.GetStatsApiV1StatsGet();
+                StatsResponse result = apiInstance.GetStats();
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling StatsApi.GetStatsApiV1StatsGet: " + e.Message);
+                Debug.Print("Exception when calling StatsApi.GetStats: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -50,21 +50,21 @@ namespace Example
 }
 ```
 
-#### Using the GetStatsApiV1StatsGetWithHttpInfo variant
+#### Using the GetStatsWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // Get Stats
-    ApiResponse<StatsResponse> response = apiInstance.GetStatsApiV1StatsGetWithHttpInfo();
+    ApiResponse<StatsResponse> response = apiInstance.GetStatsWithHttpInfo();
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling StatsApi.GetStatsApiV1StatsGetWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling StatsApi.GetStatsWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }

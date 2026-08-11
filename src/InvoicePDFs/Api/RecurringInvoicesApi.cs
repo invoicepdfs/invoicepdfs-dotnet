@@ -33,7 +33,7 @@ namespace InvoicePDFs.Api
         /// <param name="recurringId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>RecurringInvoiceResponse</returns>
-        RecurringInvoiceResponse CancelRecurringInvoiceApiV1RecurringInvoicesRecurringIdDelete(string recurringId, int operationIndex = 0);
+        RecurringInvoiceResponse CancelRecurringInvoice(string recurringId, int operationIndex = 0);
 
         /// <summary>
         /// Cancel Recurring Invoice
@@ -45,7 +45,7 @@ namespace InvoicePDFs.Api
         /// <param name="recurringId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of RecurringInvoiceResponse</returns>
-        ApiResponse<RecurringInvoiceResponse> CancelRecurringInvoiceApiV1RecurringInvoicesRecurringIdDeleteWithHttpInfo(string recurringId, int operationIndex = 0);
+        ApiResponse<RecurringInvoiceResponse> CancelRecurringInvoiceWithHttpInfo(string recurringId, int operationIndex = 0);
         /// <summary>
         /// Create Recurring Invoice
         /// </summary>
@@ -53,7 +53,7 @@ namespace InvoicePDFs.Api
         /// <param name="recurringInvoiceCreateRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>RecurringInvoiceResponse</returns>
-        RecurringInvoiceResponse CreateRecurringInvoiceApiV1RecurringInvoicesPost(RecurringInvoiceCreateRequest recurringInvoiceCreateRequest, int operationIndex = 0);
+        RecurringInvoiceResponse CreateRecurringInvoice(RecurringInvoiceCreateRequest recurringInvoiceCreateRequest, int operationIndex = 0);
 
         /// <summary>
         /// Create Recurring Invoice
@@ -65,7 +65,7 @@ namespace InvoicePDFs.Api
         /// <param name="recurringInvoiceCreateRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of RecurringInvoiceResponse</returns>
-        ApiResponse<RecurringInvoiceResponse> CreateRecurringInvoiceApiV1RecurringInvoicesPostWithHttpInfo(RecurringInvoiceCreateRequest recurringInvoiceCreateRequest, int operationIndex = 0);
+        ApiResponse<RecurringInvoiceResponse> CreateRecurringInvoiceWithHttpInfo(RecurringInvoiceCreateRequest recurringInvoiceCreateRequest, int operationIndex = 0);
         /// <summary>
         /// Get Recurring Invoice
         /// </summary>
@@ -73,7 +73,7 @@ namespace InvoicePDFs.Api
         /// <param name="recurringId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>RecurringInvoiceResponse</returns>
-        RecurringInvoiceResponse GetRecurringInvoiceApiV1RecurringInvoicesRecurringIdGet(string recurringId, int operationIndex = 0);
+        RecurringInvoiceResponse GetRecurringInvoice(string recurringId, int operationIndex = 0);
 
         /// <summary>
         /// Get Recurring Invoice
@@ -85,7 +85,7 @@ namespace InvoicePDFs.Api
         /// <param name="recurringId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of RecurringInvoiceResponse</returns>
-        ApiResponse<RecurringInvoiceResponse> GetRecurringInvoiceApiV1RecurringInvoicesRecurringIdGetWithHttpInfo(string recurringId, int operationIndex = 0);
+        ApiResponse<RecurringInvoiceResponse> GetRecurringInvoiceWithHttpInfo(string recurringId, int operationIndex = 0);
         /// <summary>
         /// List Generated Invoices
         /// </summary>
@@ -95,7 +95,7 @@ namespace InvoicePDFs.Api
         /// <param name="cursor"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>InvoicesListResponse</returns>
-        InvoicesListResponse ListGeneratedInvoicesApiV1RecurringInvoicesRecurringIdInvoicesGet(string recurringId, int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0);
+        InvoicesListResponse ListGeneratedInvoices(string recurringId, int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// List Generated Invoices
@@ -109,7 +109,7 @@ namespace InvoicePDFs.Api
         /// <param name="cursor"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of InvoicesListResponse</returns>
-        ApiResponse<InvoicesListResponse> ListGeneratedInvoicesApiV1RecurringInvoicesRecurringIdInvoicesGetWithHttpInfo(string recurringId, int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0);
+        ApiResponse<InvoicesListResponse> ListGeneratedInvoicesWithHttpInfo(string recurringId, int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0);
         /// <summary>
         /// List Recurring Invoices
         /// </summary>
@@ -119,7 +119,7 @@ namespace InvoicePDFs.Api
         /// <param name="status"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>RecurringInvoicesListResponse</returns>
-        RecurringInvoicesListResponse ListRecurringInvoicesApiV1RecurringInvoicesGet(int? limit = default(int?), string? cursor = default(string?), string? status = default(string?), int operationIndex = 0);
+        RecurringInvoicesListResponse ListRecurringInvoices(int? limit = default(int?), string? cursor = default(string?), string? status = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// List Recurring Invoices
@@ -133,29 +133,7 @@ namespace InvoicePDFs.Api
         /// <param name="status"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of RecurringInvoicesListResponse</returns>
-        ApiResponse<RecurringInvoicesListResponse> ListRecurringInvoicesApiV1RecurringInvoicesGetWithHttpInfo(int? limit = default(int?), string? cursor = default(string?), string? status = default(string?), int operationIndex = 0);
-        /// <summary>
-        /// Patch Recurring Invoice
-        /// </summary>
-        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="recurringId"></param>
-        /// <param name="recurringInvoicePatchRequest"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>RecurringInvoiceResponse</returns>
-        RecurringInvoiceResponse PatchRecurringInvoiceApiV1RecurringInvoicesRecurringIdPatch(string recurringId, RecurringInvoicePatchRequest recurringInvoicePatchRequest, int operationIndex = 0);
-
-        /// <summary>
-        /// Patch Recurring Invoice
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="recurringId"></param>
-        /// <param name="recurringInvoicePatchRequest"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of RecurringInvoiceResponse</returns>
-        ApiResponse<RecurringInvoiceResponse> PatchRecurringInvoiceApiV1RecurringInvoicesRecurringIdPatchWithHttpInfo(string recurringId, RecurringInvoicePatchRequest recurringInvoicePatchRequest, int operationIndex = 0);
+        ApiResponse<RecurringInvoicesListResponse> ListRecurringInvoicesWithHttpInfo(int? limit = default(int?), string? cursor = default(string?), string? status = default(string?), int operationIndex = 0);
         /// <summary>
         /// Pause Recurring Invoice
         /// </summary>
@@ -163,7 +141,7 @@ namespace InvoicePDFs.Api
         /// <param name="recurringId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>RecurringInvoiceResponse</returns>
-        RecurringInvoiceResponse PauseRecurringInvoiceApiV1RecurringInvoicesRecurringIdPausePost(string recurringId, int operationIndex = 0);
+        RecurringInvoiceResponse PauseRecurringInvoice(string recurringId, int operationIndex = 0);
 
         /// <summary>
         /// Pause Recurring Invoice
@@ -175,7 +153,7 @@ namespace InvoicePDFs.Api
         /// <param name="recurringId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of RecurringInvoiceResponse</returns>
-        ApiResponse<RecurringInvoiceResponse> PauseRecurringInvoiceApiV1RecurringInvoicesRecurringIdPausePostWithHttpInfo(string recurringId, int operationIndex = 0);
+        ApiResponse<RecurringInvoiceResponse> PauseRecurringInvoiceWithHttpInfo(string recurringId, int operationIndex = 0);
         /// <summary>
         /// Resume Recurring Invoice
         /// </summary>
@@ -183,7 +161,7 @@ namespace InvoicePDFs.Api
         /// <param name="recurringId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>RecurringInvoiceResponse</returns>
-        RecurringInvoiceResponse ResumeRecurringInvoiceApiV1RecurringInvoicesRecurringIdResumePost(string recurringId, int operationIndex = 0);
+        RecurringInvoiceResponse ResumeRecurringInvoice(string recurringId, int operationIndex = 0);
 
         /// <summary>
         /// Resume Recurring Invoice
@@ -195,7 +173,29 @@ namespace InvoicePDFs.Api
         /// <param name="recurringId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of RecurringInvoiceResponse</returns>
-        ApiResponse<RecurringInvoiceResponse> ResumeRecurringInvoiceApiV1RecurringInvoicesRecurringIdResumePostWithHttpInfo(string recurringId, int operationIndex = 0);
+        ApiResponse<RecurringInvoiceResponse> ResumeRecurringInvoiceWithHttpInfo(string recurringId, int operationIndex = 0);
+        /// <summary>
+        /// Update Recurring Invoice
+        /// </summary>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="recurringId"></param>
+        /// <param name="recurringInvoicePatchRequest"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>RecurringInvoiceResponse</returns>
+        RecurringInvoiceResponse UpdateRecurringInvoice(string recurringId, RecurringInvoicePatchRequest recurringInvoicePatchRequest, int operationIndex = 0);
+
+        /// <summary>
+        /// Update Recurring Invoice
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="recurringId"></param>
+        /// <param name="recurringInvoicePatchRequest"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of RecurringInvoiceResponse</returns>
+        ApiResponse<RecurringInvoiceResponse> UpdateRecurringInvoiceWithHttpInfo(string recurringId, RecurringInvoicePatchRequest recurringInvoicePatchRequest, int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -216,7 +216,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RecurringInvoiceResponse</returns>
-        System.Threading.Tasks.Task<RecurringInvoiceResponse> CancelRecurringInvoiceApiV1RecurringInvoicesRecurringIdDeleteAsync(string recurringId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<RecurringInvoiceResponse> CancelRecurringInvoiceAsync(string recurringId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Cancel Recurring Invoice
@@ -229,7 +229,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RecurringInvoiceResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RecurringInvoiceResponse>> CancelRecurringInvoiceApiV1RecurringInvoicesRecurringIdDeleteWithHttpInfoAsync(string recurringId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<RecurringInvoiceResponse>> CancelRecurringInvoiceWithHttpInfoAsync(string recurringId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Create Recurring Invoice
         /// </summary>
@@ -241,7 +241,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RecurringInvoiceResponse</returns>
-        System.Threading.Tasks.Task<RecurringInvoiceResponse> CreateRecurringInvoiceApiV1RecurringInvoicesPostAsync(RecurringInvoiceCreateRequest recurringInvoiceCreateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<RecurringInvoiceResponse> CreateRecurringInvoiceAsync(RecurringInvoiceCreateRequest recurringInvoiceCreateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Create Recurring Invoice
@@ -254,7 +254,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RecurringInvoiceResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RecurringInvoiceResponse>> CreateRecurringInvoiceApiV1RecurringInvoicesPostWithHttpInfoAsync(RecurringInvoiceCreateRequest recurringInvoiceCreateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<RecurringInvoiceResponse>> CreateRecurringInvoiceWithHttpInfoAsync(RecurringInvoiceCreateRequest recurringInvoiceCreateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Get Recurring Invoice
         /// </summary>
@@ -266,7 +266,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RecurringInvoiceResponse</returns>
-        System.Threading.Tasks.Task<RecurringInvoiceResponse> GetRecurringInvoiceApiV1RecurringInvoicesRecurringIdGetAsync(string recurringId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<RecurringInvoiceResponse> GetRecurringInvoiceAsync(string recurringId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Get Recurring Invoice
@@ -279,7 +279,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RecurringInvoiceResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RecurringInvoiceResponse>> GetRecurringInvoiceApiV1RecurringInvoicesRecurringIdGetWithHttpInfoAsync(string recurringId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<RecurringInvoiceResponse>> GetRecurringInvoiceWithHttpInfoAsync(string recurringId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// List Generated Invoices
         /// </summary>
@@ -293,7 +293,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of InvoicesListResponse</returns>
-        System.Threading.Tasks.Task<InvoicesListResponse> ListGeneratedInvoicesApiV1RecurringInvoicesRecurringIdInvoicesGetAsync(string recurringId, int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<InvoicesListResponse> ListGeneratedInvoicesAsync(string recurringId, int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// List Generated Invoices
@@ -308,7 +308,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (InvoicesListResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InvoicesListResponse>> ListGeneratedInvoicesApiV1RecurringInvoicesRecurringIdInvoicesGetWithHttpInfoAsync(string recurringId, int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<InvoicesListResponse>> ListGeneratedInvoicesWithHttpInfoAsync(string recurringId, int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// List Recurring Invoices
         /// </summary>
@@ -322,7 +322,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RecurringInvoicesListResponse</returns>
-        System.Threading.Tasks.Task<RecurringInvoicesListResponse> ListRecurringInvoicesApiV1RecurringInvoicesGetAsync(int? limit = default(int?), string? cursor = default(string?), string? status = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<RecurringInvoicesListResponse> ListRecurringInvoicesAsync(int? limit = default(int?), string? cursor = default(string?), string? status = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// List Recurring Invoices
@@ -337,34 +337,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RecurringInvoicesListResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RecurringInvoicesListResponse>> ListRecurringInvoicesApiV1RecurringInvoicesGetWithHttpInfoAsync(int? limit = default(int?), string? cursor = default(string?), string? status = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// Patch Recurring Invoice
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="recurringId"></param>
-        /// <param name="recurringInvoicePatchRequest"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of RecurringInvoiceResponse</returns>
-        System.Threading.Tasks.Task<RecurringInvoiceResponse> PatchRecurringInvoiceApiV1RecurringInvoicesRecurringIdPatchAsync(string recurringId, RecurringInvoicePatchRequest recurringInvoicePatchRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-
-        /// <summary>
-        /// Patch Recurring Invoice
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="recurringId"></param>
-        /// <param name="recurringInvoicePatchRequest"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (RecurringInvoiceResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RecurringInvoiceResponse>> PatchRecurringInvoiceApiV1RecurringInvoicesRecurringIdPatchWithHttpInfoAsync(string recurringId, RecurringInvoicePatchRequest recurringInvoicePatchRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<RecurringInvoicesListResponse>> ListRecurringInvoicesWithHttpInfoAsync(int? limit = default(int?), string? cursor = default(string?), string? status = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Pause Recurring Invoice
         /// </summary>
@@ -376,7 +349,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RecurringInvoiceResponse</returns>
-        System.Threading.Tasks.Task<RecurringInvoiceResponse> PauseRecurringInvoiceApiV1RecurringInvoicesRecurringIdPausePostAsync(string recurringId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<RecurringInvoiceResponse> PauseRecurringInvoiceAsync(string recurringId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Pause Recurring Invoice
@@ -389,7 +362,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RecurringInvoiceResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RecurringInvoiceResponse>> PauseRecurringInvoiceApiV1RecurringInvoicesRecurringIdPausePostWithHttpInfoAsync(string recurringId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<RecurringInvoiceResponse>> PauseRecurringInvoiceWithHttpInfoAsync(string recurringId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Resume Recurring Invoice
         /// </summary>
@@ -401,7 +374,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RecurringInvoiceResponse</returns>
-        System.Threading.Tasks.Task<RecurringInvoiceResponse> ResumeRecurringInvoiceApiV1RecurringInvoicesRecurringIdResumePostAsync(string recurringId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<RecurringInvoiceResponse> ResumeRecurringInvoiceAsync(string recurringId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Resume Recurring Invoice
@@ -414,7 +387,34 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RecurringInvoiceResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RecurringInvoiceResponse>> ResumeRecurringInvoiceApiV1RecurringInvoicesRecurringIdResumePostWithHttpInfoAsync(string recurringId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<RecurringInvoiceResponse>> ResumeRecurringInvoiceWithHttpInfoAsync(string recurringId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// Update Recurring Invoice
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="recurringId"></param>
+        /// <param name="recurringInvoicePatchRequest"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of RecurringInvoiceResponse</returns>
+        System.Threading.Tasks.Task<RecurringInvoiceResponse> UpdateRecurringInvoiceAsync(string recurringId, RecurringInvoicePatchRequest recurringInvoicePatchRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Update Recurring Invoice
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="recurringId"></param>
+        /// <param name="recurringInvoicePatchRequest"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (RecurringInvoiceResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RecurringInvoiceResponse>> UpdateRecurringInvoiceWithHttpInfoAsync(string recurringId, RecurringInvoicePatchRequest recurringInvoicePatchRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -542,9 +542,9 @@ namespace InvoicePDFs.Api
         /// <param name="recurringId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>RecurringInvoiceResponse</returns>
-        public RecurringInvoiceResponse CancelRecurringInvoiceApiV1RecurringInvoicesRecurringIdDelete(string recurringId, int operationIndex = 0)
+        public RecurringInvoiceResponse CancelRecurringInvoice(string recurringId, int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<RecurringInvoiceResponse> localVarResponse = CancelRecurringInvoiceApiV1RecurringInvoicesRecurringIdDeleteWithHttpInfo(recurringId);
+            InvoicePDFs.Client.ApiResponse<RecurringInvoiceResponse> localVarResponse = CancelRecurringInvoiceWithHttpInfo(recurringId);
             return localVarResponse.Data;
         }
 
@@ -555,12 +555,12 @@ namespace InvoicePDFs.Api
         /// <param name="recurringId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of RecurringInvoiceResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<RecurringInvoiceResponse> CancelRecurringInvoiceApiV1RecurringInvoicesRecurringIdDeleteWithHttpInfo(string recurringId, int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<RecurringInvoiceResponse> CancelRecurringInvoiceWithHttpInfo(string recurringId, int operationIndex = 0)
         {
             // verify the required parameter 'recurringId' is set
             if (recurringId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'recurringId' when calling RecurringInvoicesApi->CancelRecurringInvoiceApiV1RecurringInvoicesRecurringIdDelete");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'recurringId' when calling RecurringInvoicesApi->CancelRecurringInvoice");
             }
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -587,7 +587,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("recurring_id", InvoicePDFs.Client.ClientUtils.ParameterToString(recurringId)); // path parameter
 
-            localVarRequestOptions.Operation = "RecurringInvoicesApi.CancelRecurringInvoiceApiV1RecurringInvoicesRecurringIdDelete";
+            localVarRequestOptions.Operation = "RecurringInvoicesApi.CancelRecurringInvoice";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -601,7 +601,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Delete<RecurringInvoiceResponse>("/api/v1/recurring-invoices/{recurring_id}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("CancelRecurringInvoiceApiV1RecurringInvoicesRecurringIdDelete", localVarResponse);
+                Exception _exception = this.ExceptionFactory("CancelRecurringInvoice", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -619,9 +619,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RecurringInvoiceResponse</returns>
-        public async System.Threading.Tasks.Task<RecurringInvoiceResponse> CancelRecurringInvoiceApiV1RecurringInvoicesRecurringIdDeleteAsync(string recurringId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<RecurringInvoiceResponse> CancelRecurringInvoiceAsync(string recurringId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<RecurringInvoiceResponse> localVarResponse = await CancelRecurringInvoiceApiV1RecurringInvoicesRecurringIdDeleteWithHttpInfoAsync(recurringId, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<RecurringInvoiceResponse> localVarResponse = await CancelRecurringInvoiceWithHttpInfoAsync(recurringId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -633,12 +633,12 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RecurringInvoiceResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<RecurringInvoiceResponse>> CancelRecurringInvoiceApiV1RecurringInvoicesRecurringIdDeleteWithHttpInfoAsync(string recurringId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<RecurringInvoiceResponse>> CancelRecurringInvoiceWithHttpInfoAsync(string recurringId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'recurringId' is set
             if (recurringId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'recurringId' when calling RecurringInvoicesApi->CancelRecurringInvoiceApiV1RecurringInvoicesRecurringIdDelete");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'recurringId' when calling RecurringInvoicesApi->CancelRecurringInvoice");
             }
 
 
@@ -666,7 +666,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("recurring_id", InvoicePDFs.Client.ClientUtils.ParameterToString(recurringId)); // path parameter
 
-            localVarRequestOptions.Operation = "RecurringInvoicesApi.CancelRecurringInvoiceApiV1RecurringInvoicesRecurringIdDelete";
+            localVarRequestOptions.Operation = "RecurringInvoicesApi.CancelRecurringInvoice";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -681,7 +681,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("CancelRecurringInvoiceApiV1RecurringInvoicesRecurringIdDelete", localVarResponse);
+                Exception _exception = this.ExceptionFactory("CancelRecurringInvoice", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -698,9 +698,9 @@ namespace InvoicePDFs.Api
         /// <param name="recurringInvoiceCreateRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>RecurringInvoiceResponse</returns>
-        public RecurringInvoiceResponse CreateRecurringInvoiceApiV1RecurringInvoicesPost(RecurringInvoiceCreateRequest recurringInvoiceCreateRequest, int operationIndex = 0)
+        public RecurringInvoiceResponse CreateRecurringInvoice(RecurringInvoiceCreateRequest recurringInvoiceCreateRequest, int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<RecurringInvoiceResponse> localVarResponse = CreateRecurringInvoiceApiV1RecurringInvoicesPostWithHttpInfo(recurringInvoiceCreateRequest);
+            InvoicePDFs.Client.ApiResponse<RecurringInvoiceResponse> localVarResponse = CreateRecurringInvoiceWithHttpInfo(recurringInvoiceCreateRequest);
             return localVarResponse.Data;
         }
 
@@ -711,12 +711,12 @@ namespace InvoicePDFs.Api
         /// <param name="recurringInvoiceCreateRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of RecurringInvoiceResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<RecurringInvoiceResponse> CreateRecurringInvoiceApiV1RecurringInvoicesPostWithHttpInfo(RecurringInvoiceCreateRequest recurringInvoiceCreateRequest, int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<RecurringInvoiceResponse> CreateRecurringInvoiceWithHttpInfo(RecurringInvoiceCreateRequest recurringInvoiceCreateRequest, int operationIndex = 0)
         {
             // verify the required parameter 'recurringInvoiceCreateRequest' is set
             if (recurringInvoiceCreateRequest == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'recurringInvoiceCreateRequest' when calling RecurringInvoicesApi->CreateRecurringInvoiceApiV1RecurringInvoicesPost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'recurringInvoiceCreateRequest' when calling RecurringInvoicesApi->CreateRecurringInvoice");
             }
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -744,7 +744,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.Data = recurringInvoiceCreateRequest;
 
-            localVarRequestOptions.Operation = "RecurringInvoicesApi.CreateRecurringInvoiceApiV1RecurringInvoicesPost";
+            localVarRequestOptions.Operation = "RecurringInvoicesApi.CreateRecurringInvoice";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -758,7 +758,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Post<RecurringInvoiceResponse>("/api/v1/recurring-invoices", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("CreateRecurringInvoiceApiV1RecurringInvoicesPost", localVarResponse);
+                Exception _exception = this.ExceptionFactory("CreateRecurringInvoice", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -776,9 +776,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RecurringInvoiceResponse</returns>
-        public async System.Threading.Tasks.Task<RecurringInvoiceResponse> CreateRecurringInvoiceApiV1RecurringInvoicesPostAsync(RecurringInvoiceCreateRequest recurringInvoiceCreateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<RecurringInvoiceResponse> CreateRecurringInvoiceAsync(RecurringInvoiceCreateRequest recurringInvoiceCreateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<RecurringInvoiceResponse> localVarResponse = await CreateRecurringInvoiceApiV1RecurringInvoicesPostWithHttpInfoAsync(recurringInvoiceCreateRequest, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<RecurringInvoiceResponse> localVarResponse = await CreateRecurringInvoiceWithHttpInfoAsync(recurringInvoiceCreateRequest, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -790,12 +790,12 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RecurringInvoiceResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<RecurringInvoiceResponse>> CreateRecurringInvoiceApiV1RecurringInvoicesPostWithHttpInfoAsync(RecurringInvoiceCreateRequest recurringInvoiceCreateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<RecurringInvoiceResponse>> CreateRecurringInvoiceWithHttpInfoAsync(RecurringInvoiceCreateRequest recurringInvoiceCreateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'recurringInvoiceCreateRequest' is set
             if (recurringInvoiceCreateRequest == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'recurringInvoiceCreateRequest' when calling RecurringInvoicesApi->CreateRecurringInvoiceApiV1RecurringInvoicesPost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'recurringInvoiceCreateRequest' when calling RecurringInvoicesApi->CreateRecurringInvoice");
             }
 
 
@@ -824,7 +824,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.Data = recurringInvoiceCreateRequest;
 
-            localVarRequestOptions.Operation = "RecurringInvoicesApi.CreateRecurringInvoiceApiV1RecurringInvoicesPost";
+            localVarRequestOptions.Operation = "RecurringInvoicesApi.CreateRecurringInvoice";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -839,7 +839,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("CreateRecurringInvoiceApiV1RecurringInvoicesPost", localVarResponse);
+                Exception _exception = this.ExceptionFactory("CreateRecurringInvoice", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -856,9 +856,9 @@ namespace InvoicePDFs.Api
         /// <param name="recurringId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>RecurringInvoiceResponse</returns>
-        public RecurringInvoiceResponse GetRecurringInvoiceApiV1RecurringInvoicesRecurringIdGet(string recurringId, int operationIndex = 0)
+        public RecurringInvoiceResponse GetRecurringInvoice(string recurringId, int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<RecurringInvoiceResponse> localVarResponse = GetRecurringInvoiceApiV1RecurringInvoicesRecurringIdGetWithHttpInfo(recurringId);
+            InvoicePDFs.Client.ApiResponse<RecurringInvoiceResponse> localVarResponse = GetRecurringInvoiceWithHttpInfo(recurringId);
             return localVarResponse.Data;
         }
 
@@ -869,12 +869,12 @@ namespace InvoicePDFs.Api
         /// <param name="recurringId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of RecurringInvoiceResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<RecurringInvoiceResponse> GetRecurringInvoiceApiV1RecurringInvoicesRecurringIdGetWithHttpInfo(string recurringId, int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<RecurringInvoiceResponse> GetRecurringInvoiceWithHttpInfo(string recurringId, int operationIndex = 0)
         {
             // verify the required parameter 'recurringId' is set
             if (recurringId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'recurringId' when calling RecurringInvoicesApi->GetRecurringInvoiceApiV1RecurringInvoicesRecurringIdGet");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'recurringId' when calling RecurringInvoicesApi->GetRecurringInvoice");
             }
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -901,7 +901,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("recurring_id", InvoicePDFs.Client.ClientUtils.ParameterToString(recurringId)); // path parameter
 
-            localVarRequestOptions.Operation = "RecurringInvoicesApi.GetRecurringInvoiceApiV1RecurringInvoicesRecurringIdGet";
+            localVarRequestOptions.Operation = "RecurringInvoicesApi.GetRecurringInvoice";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -915,7 +915,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Get<RecurringInvoiceResponse>("/api/v1/recurring-invoices/{recurring_id}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetRecurringInvoiceApiV1RecurringInvoicesRecurringIdGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetRecurringInvoice", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -933,9 +933,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RecurringInvoiceResponse</returns>
-        public async System.Threading.Tasks.Task<RecurringInvoiceResponse> GetRecurringInvoiceApiV1RecurringInvoicesRecurringIdGetAsync(string recurringId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<RecurringInvoiceResponse> GetRecurringInvoiceAsync(string recurringId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<RecurringInvoiceResponse> localVarResponse = await GetRecurringInvoiceApiV1RecurringInvoicesRecurringIdGetWithHttpInfoAsync(recurringId, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<RecurringInvoiceResponse> localVarResponse = await GetRecurringInvoiceWithHttpInfoAsync(recurringId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -947,12 +947,12 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RecurringInvoiceResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<RecurringInvoiceResponse>> GetRecurringInvoiceApiV1RecurringInvoicesRecurringIdGetWithHttpInfoAsync(string recurringId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<RecurringInvoiceResponse>> GetRecurringInvoiceWithHttpInfoAsync(string recurringId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'recurringId' is set
             if (recurringId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'recurringId' when calling RecurringInvoicesApi->GetRecurringInvoiceApiV1RecurringInvoicesRecurringIdGet");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'recurringId' when calling RecurringInvoicesApi->GetRecurringInvoice");
             }
 
 
@@ -980,7 +980,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("recurring_id", InvoicePDFs.Client.ClientUtils.ParameterToString(recurringId)); // path parameter
 
-            localVarRequestOptions.Operation = "RecurringInvoicesApi.GetRecurringInvoiceApiV1RecurringInvoicesRecurringIdGet";
+            localVarRequestOptions.Operation = "RecurringInvoicesApi.GetRecurringInvoice";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -995,7 +995,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetRecurringInvoiceApiV1RecurringInvoicesRecurringIdGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetRecurringInvoice", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1014,9 +1014,9 @@ namespace InvoicePDFs.Api
         /// <param name="cursor"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>InvoicesListResponse</returns>
-        public InvoicesListResponse ListGeneratedInvoicesApiV1RecurringInvoicesRecurringIdInvoicesGet(string recurringId, int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0)
+        public InvoicesListResponse ListGeneratedInvoices(string recurringId, int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<InvoicesListResponse> localVarResponse = ListGeneratedInvoicesApiV1RecurringInvoicesRecurringIdInvoicesGetWithHttpInfo(recurringId, limit, cursor);
+            InvoicePDFs.Client.ApiResponse<InvoicesListResponse> localVarResponse = ListGeneratedInvoicesWithHttpInfo(recurringId, limit, cursor);
             return localVarResponse.Data;
         }
 
@@ -1029,12 +1029,12 @@ namespace InvoicePDFs.Api
         /// <param name="cursor"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of InvoicesListResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<InvoicesListResponse> ListGeneratedInvoicesApiV1RecurringInvoicesRecurringIdInvoicesGetWithHttpInfo(string recurringId, int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<InvoicesListResponse> ListGeneratedInvoicesWithHttpInfo(string recurringId, int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'recurringId' is set
             if (recurringId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'recurringId' when calling RecurringInvoicesApi->ListGeneratedInvoicesApiV1RecurringInvoicesRecurringIdInvoicesGet");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'recurringId' when calling RecurringInvoicesApi->ListGeneratedInvoices");
             }
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -1069,7 +1069,7 @@ namespace InvoicePDFs.Api
                 localVarRequestOptions.QueryParameters.Add(InvoicePDFs.Client.ClientUtils.ParameterToMultiMap("", "cursor", cursor));
             }
 
-            localVarRequestOptions.Operation = "RecurringInvoicesApi.ListGeneratedInvoicesApiV1RecurringInvoicesRecurringIdInvoicesGet";
+            localVarRequestOptions.Operation = "RecurringInvoicesApi.ListGeneratedInvoices";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -1083,7 +1083,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Get<InvoicesListResponse>("/api/v1/recurring-invoices/{recurring_id}/invoices", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListGeneratedInvoicesApiV1RecurringInvoicesRecurringIdInvoicesGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("ListGeneratedInvoices", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1103,9 +1103,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of InvoicesListResponse</returns>
-        public async System.Threading.Tasks.Task<InvoicesListResponse> ListGeneratedInvoicesApiV1RecurringInvoicesRecurringIdInvoicesGetAsync(string recurringId, int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicesListResponse> ListGeneratedInvoicesAsync(string recurringId, int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<InvoicesListResponse> localVarResponse = await ListGeneratedInvoicesApiV1RecurringInvoicesRecurringIdInvoicesGetWithHttpInfoAsync(recurringId, limit, cursor, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<InvoicesListResponse> localVarResponse = await ListGeneratedInvoicesWithHttpInfoAsync(recurringId, limit, cursor, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1119,12 +1119,12 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (InvoicesListResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<InvoicesListResponse>> ListGeneratedInvoicesApiV1RecurringInvoicesRecurringIdInvoicesGetWithHttpInfoAsync(string recurringId, int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<InvoicesListResponse>> ListGeneratedInvoicesWithHttpInfoAsync(string recurringId, int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'recurringId' is set
             if (recurringId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'recurringId' when calling RecurringInvoicesApi->ListGeneratedInvoicesApiV1RecurringInvoicesRecurringIdInvoicesGet");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'recurringId' when calling RecurringInvoicesApi->ListGeneratedInvoices");
             }
 
 
@@ -1160,7 +1160,7 @@ namespace InvoicePDFs.Api
                 localVarRequestOptions.QueryParameters.Add(InvoicePDFs.Client.ClientUtils.ParameterToMultiMap("", "cursor", cursor));
             }
 
-            localVarRequestOptions.Operation = "RecurringInvoicesApi.ListGeneratedInvoicesApiV1RecurringInvoicesRecurringIdInvoicesGet";
+            localVarRequestOptions.Operation = "RecurringInvoicesApi.ListGeneratedInvoices";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -1175,7 +1175,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListGeneratedInvoicesApiV1RecurringInvoicesRecurringIdInvoicesGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("ListGeneratedInvoices", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1194,9 +1194,9 @@ namespace InvoicePDFs.Api
         /// <param name="status"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>RecurringInvoicesListResponse</returns>
-        public RecurringInvoicesListResponse ListRecurringInvoicesApiV1RecurringInvoicesGet(int? limit = default(int?), string? cursor = default(string?), string? status = default(string?), int operationIndex = 0)
+        public RecurringInvoicesListResponse ListRecurringInvoices(int? limit = default(int?), string? cursor = default(string?), string? status = default(string?), int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<RecurringInvoicesListResponse> localVarResponse = ListRecurringInvoicesApiV1RecurringInvoicesGetWithHttpInfo(limit, cursor, status);
+            InvoicePDFs.Client.ApiResponse<RecurringInvoicesListResponse> localVarResponse = ListRecurringInvoicesWithHttpInfo(limit, cursor, status);
             return localVarResponse.Data;
         }
 
@@ -1209,7 +1209,7 @@ namespace InvoicePDFs.Api
         /// <param name="status"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of RecurringInvoicesListResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<RecurringInvoicesListResponse> ListRecurringInvoicesApiV1RecurringInvoicesGetWithHttpInfo(int? limit = default(int?), string? cursor = default(string?), string? status = default(string?), int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<RecurringInvoicesListResponse> ListRecurringInvoicesWithHttpInfo(int? limit = default(int?), string? cursor = default(string?), string? status = default(string?), int operationIndex = 0)
         {
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
 
@@ -1246,7 +1246,7 @@ namespace InvoicePDFs.Api
                 localVarRequestOptions.QueryParameters.Add(InvoicePDFs.Client.ClientUtils.ParameterToMultiMap("", "status", status));
             }
 
-            localVarRequestOptions.Operation = "RecurringInvoicesApi.ListRecurringInvoicesApiV1RecurringInvoicesGet";
+            localVarRequestOptions.Operation = "RecurringInvoicesApi.ListRecurringInvoices";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -1260,7 +1260,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Get<RecurringInvoicesListResponse>("/api/v1/recurring-invoices", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListRecurringInvoicesApiV1RecurringInvoicesGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("ListRecurringInvoices", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1280,9 +1280,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RecurringInvoicesListResponse</returns>
-        public async System.Threading.Tasks.Task<RecurringInvoicesListResponse> ListRecurringInvoicesApiV1RecurringInvoicesGetAsync(int? limit = default(int?), string? cursor = default(string?), string? status = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<RecurringInvoicesListResponse> ListRecurringInvoicesAsync(int? limit = default(int?), string? cursor = default(string?), string? status = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<RecurringInvoicesListResponse> localVarResponse = await ListRecurringInvoicesApiV1RecurringInvoicesGetWithHttpInfoAsync(limit, cursor, status, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<RecurringInvoicesListResponse> localVarResponse = await ListRecurringInvoicesWithHttpInfoAsync(limit, cursor, status, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1296,7 +1296,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RecurringInvoicesListResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<RecurringInvoicesListResponse>> ListRecurringInvoicesApiV1RecurringInvoicesGetWithHttpInfoAsync(int? limit = default(int?), string? cursor = default(string?), string? status = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<RecurringInvoicesListResponse>> ListRecurringInvoicesWithHttpInfoAsync(int? limit = default(int?), string? cursor = default(string?), string? status = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -1334,7 +1334,7 @@ namespace InvoicePDFs.Api
                 localVarRequestOptions.QueryParameters.Add(InvoicePDFs.Client.ClientUtils.ParameterToMultiMap("", "status", status));
             }
 
-            localVarRequestOptions.Operation = "RecurringInvoicesApi.ListRecurringInvoicesApiV1RecurringInvoicesGet";
+            localVarRequestOptions.Operation = "RecurringInvoicesApi.ListRecurringInvoices";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -1349,183 +1349,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListRecurringInvoicesApiV1RecurringInvoicesGet", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
-        /// Patch Recurring Invoice 
-        /// </summary>
-        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="recurringId"></param>
-        /// <param name="recurringInvoicePatchRequest"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>RecurringInvoiceResponse</returns>
-        public RecurringInvoiceResponse PatchRecurringInvoiceApiV1RecurringInvoicesRecurringIdPatch(string recurringId, RecurringInvoicePatchRequest recurringInvoicePatchRequest, int operationIndex = 0)
-        {
-            InvoicePDFs.Client.ApiResponse<RecurringInvoiceResponse> localVarResponse = PatchRecurringInvoiceApiV1RecurringInvoicesRecurringIdPatchWithHttpInfo(recurringId, recurringInvoicePatchRequest);
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Patch Recurring Invoice 
-        /// </summary>
-        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="recurringId"></param>
-        /// <param name="recurringInvoicePatchRequest"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of RecurringInvoiceResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<RecurringInvoiceResponse> PatchRecurringInvoiceApiV1RecurringInvoicesRecurringIdPatchWithHttpInfo(string recurringId, RecurringInvoicePatchRequest recurringInvoicePatchRequest, int operationIndex = 0)
-        {
-            // verify the required parameter 'recurringId' is set
-            if (recurringId == null)
-            {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'recurringId' when calling RecurringInvoicesApi->PatchRecurringInvoiceApiV1RecurringInvoicesRecurringIdPatch");
-            }
-
-            // verify the required parameter 'recurringInvoicePatchRequest' is set
-            if (recurringInvoicePatchRequest == null)
-            {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'recurringInvoicePatchRequest' when calling RecurringInvoicesApi->PatchRecurringInvoiceApiV1RecurringInvoicesRecurringIdPatch");
-            }
-
-            InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-                "application/json"
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var localVarContentType = InvoicePDFs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
-
-            var localVarAccept = InvoicePDFs.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
-
-            localVarRequestOptions.PathParameters.Add("recurring_id", InvoicePDFs.Client.ClientUtils.ParameterToString(recurringId)); // path parameter
-            localVarRequestOptions.Data = recurringInvoicePatchRequest;
-
-            localVarRequestOptions.Operation = "RecurringInvoicesApi.PatchRecurringInvoiceApiV1RecurringInvoicesRecurringIdPatch";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
-            // authentication (HTTPBearer) required
-            // bearer authentication required
-            if (!string.IsNullOrEmpty(this.Configuration.AccessToken) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
-            {
-                localVarRequestOptions.HeaderParameters.Add("Authorization", "Bearer " + this.Configuration.AccessToken);
-            }
-
-            // make the HTTP request
-            var localVarResponse = this.Client.Patch<RecurringInvoiceResponse>("/api/v1/recurring-invoices/{recurring_id}", localVarRequestOptions, this.Configuration);
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("PatchRecurringInvoiceApiV1RecurringInvoicesRecurringIdPatch", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
-        /// Patch Recurring Invoice 
-        /// </summary>
-        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="recurringId"></param>
-        /// <param name="recurringInvoicePatchRequest"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of RecurringInvoiceResponse</returns>
-        public async System.Threading.Tasks.Task<RecurringInvoiceResponse> PatchRecurringInvoiceApiV1RecurringInvoicesRecurringIdPatchAsync(string recurringId, RecurringInvoicePatchRequest recurringInvoicePatchRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            InvoicePDFs.Client.ApiResponse<RecurringInvoiceResponse> localVarResponse = await PatchRecurringInvoiceApiV1RecurringInvoicesRecurringIdPatchWithHttpInfoAsync(recurringId, recurringInvoicePatchRequest, operationIndex, cancellationToken).ConfigureAwait(false);
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Patch Recurring Invoice 
-        /// </summary>
-        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="recurringId"></param>
-        /// <param name="recurringInvoicePatchRequest"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (RecurringInvoiceResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<RecurringInvoiceResponse>> PatchRecurringInvoiceApiV1RecurringInvoicesRecurringIdPatchWithHttpInfoAsync(string recurringId, RecurringInvoicePatchRequest recurringInvoicePatchRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            // verify the required parameter 'recurringId' is set
-            if (recurringId == null)
-            {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'recurringId' when calling RecurringInvoicesApi->PatchRecurringInvoiceApiV1RecurringInvoicesRecurringIdPatch");
-            }
-
-            // verify the required parameter 'recurringInvoicePatchRequest' is set
-            if (recurringInvoicePatchRequest == null)
-            {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'recurringInvoicePatchRequest' when calling RecurringInvoicesApi->PatchRecurringInvoiceApiV1RecurringInvoicesRecurringIdPatch");
-            }
-
-
-            InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-                "application/json"
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var localVarContentType = InvoicePDFs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
-
-            var localVarAccept = InvoicePDFs.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
-
-            localVarRequestOptions.PathParameters.Add("recurring_id", InvoicePDFs.Client.ClientUtils.ParameterToString(recurringId)); // path parameter
-            localVarRequestOptions.Data = recurringInvoicePatchRequest;
-
-            localVarRequestOptions.Operation = "RecurringInvoicesApi.PatchRecurringInvoiceApiV1RecurringInvoicesRecurringIdPatch";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
-            // authentication (HTTPBearer) required
-            // bearer authentication required
-            if (!string.IsNullOrEmpty(this.Configuration.AccessToken) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
-            {
-                localVarRequestOptions.HeaderParameters.Add("Authorization", "Bearer " + this.Configuration.AccessToken);
-            }
-
-            // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PatchAsync<RecurringInvoiceResponse>("/api/v1/recurring-invoices/{recurring_id}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("PatchRecurringInvoiceApiV1RecurringInvoicesRecurringIdPatch", localVarResponse);
+                Exception _exception = this.ExceptionFactory("ListRecurringInvoices", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1542,9 +1366,9 @@ namespace InvoicePDFs.Api
         /// <param name="recurringId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>RecurringInvoiceResponse</returns>
-        public RecurringInvoiceResponse PauseRecurringInvoiceApiV1RecurringInvoicesRecurringIdPausePost(string recurringId, int operationIndex = 0)
+        public RecurringInvoiceResponse PauseRecurringInvoice(string recurringId, int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<RecurringInvoiceResponse> localVarResponse = PauseRecurringInvoiceApiV1RecurringInvoicesRecurringIdPausePostWithHttpInfo(recurringId);
+            InvoicePDFs.Client.ApiResponse<RecurringInvoiceResponse> localVarResponse = PauseRecurringInvoiceWithHttpInfo(recurringId);
             return localVarResponse.Data;
         }
 
@@ -1555,12 +1379,12 @@ namespace InvoicePDFs.Api
         /// <param name="recurringId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of RecurringInvoiceResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<RecurringInvoiceResponse> PauseRecurringInvoiceApiV1RecurringInvoicesRecurringIdPausePostWithHttpInfo(string recurringId, int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<RecurringInvoiceResponse> PauseRecurringInvoiceWithHttpInfo(string recurringId, int operationIndex = 0)
         {
             // verify the required parameter 'recurringId' is set
             if (recurringId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'recurringId' when calling RecurringInvoicesApi->PauseRecurringInvoiceApiV1RecurringInvoicesRecurringIdPausePost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'recurringId' when calling RecurringInvoicesApi->PauseRecurringInvoice");
             }
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -1587,7 +1411,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("recurring_id", InvoicePDFs.Client.ClientUtils.ParameterToString(recurringId)); // path parameter
 
-            localVarRequestOptions.Operation = "RecurringInvoicesApi.PauseRecurringInvoiceApiV1RecurringInvoicesRecurringIdPausePost";
+            localVarRequestOptions.Operation = "RecurringInvoicesApi.PauseRecurringInvoice";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -1601,7 +1425,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Post<RecurringInvoiceResponse>("/api/v1/recurring-invoices/{recurring_id}/pause", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PauseRecurringInvoiceApiV1RecurringInvoicesRecurringIdPausePost", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PauseRecurringInvoice", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1619,9 +1443,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RecurringInvoiceResponse</returns>
-        public async System.Threading.Tasks.Task<RecurringInvoiceResponse> PauseRecurringInvoiceApiV1RecurringInvoicesRecurringIdPausePostAsync(string recurringId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<RecurringInvoiceResponse> PauseRecurringInvoiceAsync(string recurringId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<RecurringInvoiceResponse> localVarResponse = await PauseRecurringInvoiceApiV1RecurringInvoicesRecurringIdPausePostWithHttpInfoAsync(recurringId, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<RecurringInvoiceResponse> localVarResponse = await PauseRecurringInvoiceWithHttpInfoAsync(recurringId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1633,12 +1457,12 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RecurringInvoiceResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<RecurringInvoiceResponse>> PauseRecurringInvoiceApiV1RecurringInvoicesRecurringIdPausePostWithHttpInfoAsync(string recurringId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<RecurringInvoiceResponse>> PauseRecurringInvoiceWithHttpInfoAsync(string recurringId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'recurringId' is set
             if (recurringId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'recurringId' when calling RecurringInvoicesApi->PauseRecurringInvoiceApiV1RecurringInvoicesRecurringIdPausePost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'recurringId' when calling RecurringInvoicesApi->PauseRecurringInvoice");
             }
 
 
@@ -1666,7 +1490,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("recurring_id", InvoicePDFs.Client.ClientUtils.ParameterToString(recurringId)); // path parameter
 
-            localVarRequestOptions.Operation = "RecurringInvoicesApi.PauseRecurringInvoiceApiV1RecurringInvoicesRecurringIdPausePost";
+            localVarRequestOptions.Operation = "RecurringInvoicesApi.PauseRecurringInvoice";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -1681,7 +1505,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PauseRecurringInvoiceApiV1RecurringInvoicesRecurringIdPausePost", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PauseRecurringInvoice", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1698,9 +1522,9 @@ namespace InvoicePDFs.Api
         /// <param name="recurringId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>RecurringInvoiceResponse</returns>
-        public RecurringInvoiceResponse ResumeRecurringInvoiceApiV1RecurringInvoicesRecurringIdResumePost(string recurringId, int operationIndex = 0)
+        public RecurringInvoiceResponse ResumeRecurringInvoice(string recurringId, int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<RecurringInvoiceResponse> localVarResponse = ResumeRecurringInvoiceApiV1RecurringInvoicesRecurringIdResumePostWithHttpInfo(recurringId);
+            InvoicePDFs.Client.ApiResponse<RecurringInvoiceResponse> localVarResponse = ResumeRecurringInvoiceWithHttpInfo(recurringId);
             return localVarResponse.Data;
         }
 
@@ -1711,12 +1535,12 @@ namespace InvoicePDFs.Api
         /// <param name="recurringId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of RecurringInvoiceResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<RecurringInvoiceResponse> ResumeRecurringInvoiceApiV1RecurringInvoicesRecurringIdResumePostWithHttpInfo(string recurringId, int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<RecurringInvoiceResponse> ResumeRecurringInvoiceWithHttpInfo(string recurringId, int operationIndex = 0)
         {
             // verify the required parameter 'recurringId' is set
             if (recurringId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'recurringId' when calling RecurringInvoicesApi->ResumeRecurringInvoiceApiV1RecurringInvoicesRecurringIdResumePost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'recurringId' when calling RecurringInvoicesApi->ResumeRecurringInvoice");
             }
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -1743,7 +1567,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("recurring_id", InvoicePDFs.Client.ClientUtils.ParameterToString(recurringId)); // path parameter
 
-            localVarRequestOptions.Operation = "RecurringInvoicesApi.ResumeRecurringInvoiceApiV1RecurringInvoicesRecurringIdResumePost";
+            localVarRequestOptions.Operation = "RecurringInvoicesApi.ResumeRecurringInvoice";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -1757,7 +1581,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Post<RecurringInvoiceResponse>("/api/v1/recurring-invoices/{recurring_id}/resume", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ResumeRecurringInvoiceApiV1RecurringInvoicesRecurringIdResumePost", localVarResponse);
+                Exception _exception = this.ExceptionFactory("ResumeRecurringInvoice", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1775,9 +1599,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RecurringInvoiceResponse</returns>
-        public async System.Threading.Tasks.Task<RecurringInvoiceResponse> ResumeRecurringInvoiceApiV1RecurringInvoicesRecurringIdResumePostAsync(string recurringId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<RecurringInvoiceResponse> ResumeRecurringInvoiceAsync(string recurringId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<RecurringInvoiceResponse> localVarResponse = await ResumeRecurringInvoiceApiV1RecurringInvoicesRecurringIdResumePostWithHttpInfoAsync(recurringId, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<RecurringInvoiceResponse> localVarResponse = await ResumeRecurringInvoiceWithHttpInfoAsync(recurringId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1789,12 +1613,12 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RecurringInvoiceResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<RecurringInvoiceResponse>> ResumeRecurringInvoiceApiV1RecurringInvoicesRecurringIdResumePostWithHttpInfoAsync(string recurringId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<RecurringInvoiceResponse>> ResumeRecurringInvoiceWithHttpInfoAsync(string recurringId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'recurringId' is set
             if (recurringId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'recurringId' when calling RecurringInvoicesApi->ResumeRecurringInvoiceApiV1RecurringInvoicesRecurringIdResumePost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'recurringId' when calling RecurringInvoicesApi->ResumeRecurringInvoice");
             }
 
 
@@ -1822,7 +1646,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("recurring_id", InvoicePDFs.Client.ClientUtils.ParameterToString(recurringId)); // path parameter
 
-            localVarRequestOptions.Operation = "RecurringInvoicesApi.ResumeRecurringInvoiceApiV1RecurringInvoicesRecurringIdResumePost";
+            localVarRequestOptions.Operation = "RecurringInvoicesApi.ResumeRecurringInvoice";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -1837,7 +1661,183 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ResumeRecurringInvoiceApiV1RecurringInvoicesRecurringIdResumePost", localVarResponse);
+                Exception _exception = this.ExceptionFactory("ResumeRecurringInvoice", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Update Recurring Invoice 
+        /// </summary>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="recurringId"></param>
+        /// <param name="recurringInvoicePatchRequest"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>RecurringInvoiceResponse</returns>
+        public RecurringInvoiceResponse UpdateRecurringInvoice(string recurringId, RecurringInvoicePatchRequest recurringInvoicePatchRequest, int operationIndex = 0)
+        {
+            InvoicePDFs.Client.ApiResponse<RecurringInvoiceResponse> localVarResponse = UpdateRecurringInvoiceWithHttpInfo(recurringId, recurringInvoicePatchRequest);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update Recurring Invoice 
+        /// </summary>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="recurringId"></param>
+        /// <param name="recurringInvoicePatchRequest"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of RecurringInvoiceResponse</returns>
+        public InvoicePDFs.Client.ApiResponse<RecurringInvoiceResponse> UpdateRecurringInvoiceWithHttpInfo(string recurringId, RecurringInvoicePatchRequest recurringInvoicePatchRequest, int operationIndex = 0)
+        {
+            // verify the required parameter 'recurringId' is set
+            if (recurringId == null)
+            {
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'recurringId' when calling RecurringInvoicesApi->UpdateRecurringInvoice");
+            }
+
+            // verify the required parameter 'recurringInvoicePatchRequest' is set
+            if (recurringInvoicePatchRequest == null)
+            {
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'recurringInvoicePatchRequest' when calling RecurringInvoicesApi->UpdateRecurringInvoice");
+            }
+
+            InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = InvoicePDFs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = InvoicePDFs.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("recurring_id", InvoicePDFs.Client.ClientUtils.ParameterToString(recurringId)); // path parameter
+            localVarRequestOptions.Data = recurringInvoicePatchRequest;
+
+            localVarRequestOptions.Operation = "RecurringInvoicesApi.UpdateRecurringInvoice";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (HTTPBearer) required
+            // bearer authentication required
+            if (!string.IsNullOrEmpty(this.Configuration.AccessToken) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Bearer " + this.Configuration.AccessToken);
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Patch<RecurringInvoiceResponse>("/api/v1/recurring-invoices/{recurring_id}", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("UpdateRecurringInvoice", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Update Recurring Invoice 
+        /// </summary>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="recurringId"></param>
+        /// <param name="recurringInvoicePatchRequest"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of RecurringInvoiceResponse</returns>
+        public async System.Threading.Tasks.Task<RecurringInvoiceResponse> UpdateRecurringInvoiceAsync(string recurringId, RecurringInvoicePatchRequest recurringInvoicePatchRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            InvoicePDFs.Client.ApiResponse<RecurringInvoiceResponse> localVarResponse = await UpdateRecurringInvoiceWithHttpInfoAsync(recurringId, recurringInvoicePatchRequest, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update Recurring Invoice 
+        /// </summary>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="recurringId"></param>
+        /// <param name="recurringInvoicePatchRequest"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (RecurringInvoiceResponse)</returns>
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<RecurringInvoiceResponse>> UpdateRecurringInvoiceWithHttpInfoAsync(string recurringId, RecurringInvoicePatchRequest recurringInvoicePatchRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'recurringId' is set
+            if (recurringId == null)
+            {
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'recurringId' when calling RecurringInvoicesApi->UpdateRecurringInvoice");
+            }
+
+            // verify the required parameter 'recurringInvoicePatchRequest' is set
+            if (recurringInvoicePatchRequest == null)
+            {
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'recurringInvoicePatchRequest' when calling RecurringInvoicesApi->UpdateRecurringInvoice");
+            }
+
+
+            InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = InvoicePDFs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = InvoicePDFs.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("recurring_id", InvoicePDFs.Client.ClientUtils.ParameterToString(recurringId)); // path parameter
+            localVarRequestOptions.Data = recurringInvoicePatchRequest;
+
+            localVarRequestOptions.Operation = "RecurringInvoicesApi.UpdateRecurringInvoice";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (HTTPBearer) required
+            // bearer authentication required
+            if (!string.IsNullOrEmpty(this.Configuration.AccessToken) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Bearer " + this.Configuration.AccessToken);
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PatchAsync<RecurringInvoiceResponse>("/api/v1/recurring-invoices/{recurring_id}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("UpdateRecurringInvoice", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

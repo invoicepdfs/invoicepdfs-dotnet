@@ -4,16 +4,16 @@ All URIs are relative to *http://localhost*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
-| [**CancelBatchApiV1BatchesBatchIdCancelPost**](BatchesApi.md#cancelbatchapiv1batchesbatchidcancelpost) | **POST** /api/v1/batches/{batch_id}/cancel | Cancel Batch |
-| [**CreateBatchApiV1BatchesPost**](BatchesApi.md#createbatchapiv1batchespost) | **POST** /api/v1/batches | Create Batch |
-| [**DownloadBatchApiV1BatchesBatchIdDownloadGet**](BatchesApi.md#downloadbatchapiv1batchesbatchiddownloadget) | **GET** /api/v1/batches/{batch_id}/download | Download Batch |
-| [**GetBatchApiV1BatchesBatchIdGet**](BatchesApi.md#getbatchapiv1batchesbatchidget) | **GET** /api/v1/batches/{batch_id} | Get Batch |
-| [**ListBatchItemsApiV1BatchesBatchIdItemsGet**](BatchesApi.md#listbatchitemsapiv1batchesbatchiditemsget) | **GET** /api/v1/batches/{batch_id}/items | List Batch Items |
-| [**ListBatchesApiV1BatchesGet**](BatchesApi.md#listbatchesapiv1batchesget) | **GET** /api/v1/batches | List Batches |
+| [**CancelBatch**](BatchesApi.md#cancelbatch) | **POST** /api/v1/batches/{batch_id}/cancel | Cancel Batch |
+| [**CreateBatch**](BatchesApi.md#createbatch) | **POST** /api/v1/batches | Create Batch |
+| [**DownloadBatch**](BatchesApi.md#downloadbatch) | **GET** /api/v1/batches/{batch_id}/download | Download Batch |
+| [**GetBatch**](BatchesApi.md#getbatch) | **GET** /api/v1/batches/{batch_id} | Get Batch |
+| [**ListBatchItems**](BatchesApi.md#listbatchitems) | **GET** /api/v1/batches/{batch_id}/items | List Batch Items |
+| [**ListBatches**](BatchesApi.md#listbatches) | **GET** /api/v1/batches | List Batches |
 
-<a id="cancelbatchapiv1batchesbatchidcancelpost"></a>
-# **CancelBatchApiV1BatchesBatchIdCancelPost**
-> BatchResponse CancelBatchApiV1BatchesBatchIdCancelPost (string batchId)
+<a id="cancelbatch"></a>
+# **CancelBatch**
+> BatchResponse CancelBatch (string batchId)
 
 Cancel Batch
 
@@ -27,7 +27,7 @@ using InvoicePDFs.Model;
 
 namespace Example
 {
-    public class CancelBatchApiV1BatchesBatchIdCancelPostExample
+    public class CancelBatchExample
     {
         public static void Main()
         {
@@ -42,12 +42,12 @@ namespace Example
             try
             {
                 // Cancel Batch
-                BatchResponse result = apiInstance.CancelBatchApiV1BatchesBatchIdCancelPost(batchId);
+                BatchResponse result = apiInstance.CancelBatch(batchId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling BatchesApi.CancelBatchApiV1BatchesBatchIdCancelPost: " + e.Message);
+                Debug.Print("Exception when calling BatchesApi.CancelBatch: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -56,21 +56,21 @@ namespace Example
 }
 ```
 
-#### Using the CancelBatchApiV1BatchesBatchIdCancelPostWithHttpInfo variant
+#### Using the CancelBatchWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // Cancel Batch
-    ApiResponse<BatchResponse> response = apiInstance.CancelBatchApiV1BatchesBatchIdCancelPostWithHttpInfo(batchId);
+    ApiResponse<BatchResponse> response = apiInstance.CancelBatchWithHttpInfo(batchId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling BatchesApi.CancelBatchApiV1BatchesBatchIdCancelPostWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling BatchesApi.CancelBatchWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -104,9 +104,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="createbatchapiv1batchespost"></a>
-# **CreateBatchApiV1BatchesPost**
-> BatchResponse CreateBatchApiV1BatchesPost (BatchCreateRequest batchCreateRequest)
+<a id="createbatch"></a>
+# **CreateBatch**
+> BatchResponse CreateBatch (BatchCreateRequest batchCreateRequest)
 
 Create Batch
 
@@ -120,7 +120,7 @@ using InvoicePDFs.Model;
 
 namespace Example
 {
-    public class CreateBatchApiV1BatchesPostExample
+    public class CreateBatchExample
     {
         public static void Main()
         {
@@ -135,12 +135,12 @@ namespace Example
             try
             {
                 // Create Batch
-                BatchResponse result = apiInstance.CreateBatchApiV1BatchesPost(batchCreateRequest);
+                BatchResponse result = apiInstance.CreateBatch(batchCreateRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling BatchesApi.CreateBatchApiV1BatchesPost: " + e.Message);
+                Debug.Print("Exception when calling BatchesApi.CreateBatch: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -149,21 +149,21 @@ namespace Example
 }
 ```
 
-#### Using the CreateBatchApiV1BatchesPostWithHttpInfo variant
+#### Using the CreateBatchWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // Create Batch
-    ApiResponse<BatchResponse> response = apiInstance.CreateBatchApiV1BatchesPostWithHttpInfo(batchCreateRequest);
+    ApiResponse<BatchResponse> response = apiInstance.CreateBatchWithHttpInfo(batchCreateRequest);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling BatchesApi.CreateBatchApiV1BatchesPostWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling BatchesApi.CreateBatchWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -197,9 +197,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="downloadbatchapiv1batchesbatchiddownloadget"></a>
-# **DownloadBatchApiV1BatchesBatchIdDownloadGet**
-> Object DownloadBatchApiV1BatchesBatchIdDownloadGet (string batchId)
+<a id="downloadbatch"></a>
+# **DownloadBatch**
+> Object DownloadBatch (string batchId)
 
 Download Batch
 
@@ -213,7 +213,7 @@ using InvoicePDFs.Model;
 
 namespace Example
 {
-    public class DownloadBatchApiV1BatchesBatchIdDownloadGetExample
+    public class DownloadBatchExample
     {
         public static void Main()
         {
@@ -228,12 +228,12 @@ namespace Example
             try
             {
                 // Download Batch
-                Object result = apiInstance.DownloadBatchApiV1BatchesBatchIdDownloadGet(batchId);
+                Object result = apiInstance.DownloadBatch(batchId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling BatchesApi.DownloadBatchApiV1BatchesBatchIdDownloadGet: " + e.Message);
+                Debug.Print("Exception when calling BatchesApi.DownloadBatch: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -242,21 +242,21 @@ namespace Example
 }
 ```
 
-#### Using the DownloadBatchApiV1BatchesBatchIdDownloadGetWithHttpInfo variant
+#### Using the DownloadBatchWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // Download Batch
-    ApiResponse<Object> response = apiInstance.DownloadBatchApiV1BatchesBatchIdDownloadGetWithHttpInfo(batchId);
+    ApiResponse<Object> response = apiInstance.DownloadBatchWithHttpInfo(batchId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling BatchesApi.DownloadBatchApiV1BatchesBatchIdDownloadGetWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling BatchesApi.DownloadBatchWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -290,9 +290,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="getbatchapiv1batchesbatchidget"></a>
-# **GetBatchApiV1BatchesBatchIdGet**
-> BatchResponse GetBatchApiV1BatchesBatchIdGet (string batchId)
+<a id="getbatch"></a>
+# **GetBatch**
+> BatchResponse GetBatch (string batchId)
 
 Get Batch
 
@@ -306,7 +306,7 @@ using InvoicePDFs.Model;
 
 namespace Example
 {
-    public class GetBatchApiV1BatchesBatchIdGetExample
+    public class GetBatchExample
     {
         public static void Main()
         {
@@ -321,12 +321,12 @@ namespace Example
             try
             {
                 // Get Batch
-                BatchResponse result = apiInstance.GetBatchApiV1BatchesBatchIdGet(batchId);
+                BatchResponse result = apiInstance.GetBatch(batchId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling BatchesApi.GetBatchApiV1BatchesBatchIdGet: " + e.Message);
+                Debug.Print("Exception when calling BatchesApi.GetBatch: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -335,21 +335,21 @@ namespace Example
 }
 ```
 
-#### Using the GetBatchApiV1BatchesBatchIdGetWithHttpInfo variant
+#### Using the GetBatchWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // Get Batch
-    ApiResponse<BatchResponse> response = apiInstance.GetBatchApiV1BatchesBatchIdGetWithHttpInfo(batchId);
+    ApiResponse<BatchResponse> response = apiInstance.GetBatchWithHttpInfo(batchId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling BatchesApi.GetBatchApiV1BatchesBatchIdGetWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling BatchesApi.GetBatchWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -383,9 +383,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="listbatchitemsapiv1batchesbatchiditemsget"></a>
-# **ListBatchItemsApiV1BatchesBatchIdItemsGet**
-> BatchItemsListResponse ListBatchItemsApiV1BatchesBatchIdItemsGet (string batchId, int? limit = null, string? cursor = null)
+<a id="listbatchitems"></a>
+# **ListBatchItems**
+> BatchItemsListResponse ListBatchItems (string batchId, int? limit = null, string? cursor = null)
 
 List Batch Items
 
@@ -399,7 +399,7 @@ using InvoicePDFs.Model;
 
 namespace Example
 {
-    public class ListBatchItemsApiV1BatchesBatchIdItemsGetExample
+    public class ListBatchItemsExample
     {
         public static void Main()
         {
@@ -416,12 +416,12 @@ namespace Example
             try
             {
                 // List Batch Items
-                BatchItemsListResponse result = apiInstance.ListBatchItemsApiV1BatchesBatchIdItemsGet(batchId, limit, cursor);
+                BatchItemsListResponse result = apiInstance.ListBatchItems(batchId, limit, cursor);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling BatchesApi.ListBatchItemsApiV1BatchesBatchIdItemsGet: " + e.Message);
+                Debug.Print("Exception when calling BatchesApi.ListBatchItems: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -430,21 +430,21 @@ namespace Example
 }
 ```
 
-#### Using the ListBatchItemsApiV1BatchesBatchIdItemsGetWithHttpInfo variant
+#### Using the ListBatchItemsWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // List Batch Items
-    ApiResponse<BatchItemsListResponse> response = apiInstance.ListBatchItemsApiV1BatchesBatchIdItemsGetWithHttpInfo(batchId, limit, cursor);
+    ApiResponse<BatchItemsListResponse> response = apiInstance.ListBatchItemsWithHttpInfo(batchId, limit, cursor);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling BatchesApi.ListBatchItemsApiV1BatchesBatchIdItemsGetWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling BatchesApi.ListBatchItemsWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -480,9 +480,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="listbatchesapiv1batchesget"></a>
-# **ListBatchesApiV1BatchesGet**
-> BatchesListResponse ListBatchesApiV1BatchesGet (int? limit = null, string? cursor = null)
+<a id="listbatches"></a>
+# **ListBatches**
+> BatchesListResponse ListBatches (int? limit = null, string? cursor = null)
 
 List Batches
 
@@ -496,7 +496,7 @@ using InvoicePDFs.Model;
 
 namespace Example
 {
-    public class ListBatchesApiV1BatchesGetExample
+    public class ListBatchesExample
     {
         public static void Main()
         {
@@ -512,12 +512,12 @@ namespace Example
             try
             {
                 // List Batches
-                BatchesListResponse result = apiInstance.ListBatchesApiV1BatchesGet(limit, cursor);
+                BatchesListResponse result = apiInstance.ListBatches(limit, cursor);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling BatchesApi.ListBatchesApiV1BatchesGet: " + e.Message);
+                Debug.Print("Exception when calling BatchesApi.ListBatches: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -526,21 +526,21 @@ namespace Example
 }
 ```
 
-#### Using the ListBatchesApiV1BatchesGetWithHttpInfo variant
+#### Using the ListBatchesWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // List Batches
-    ApiResponse<BatchesListResponse> response = apiInstance.ListBatchesApiV1BatchesGetWithHttpInfo(limit, cursor);
+    ApiResponse<BatchesListResponse> response = apiInstance.ListBatchesWithHttpInfo(limit, cursor);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling BatchesApi.ListBatchesApiV1BatchesGetWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling BatchesApi.ListBatchesWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }

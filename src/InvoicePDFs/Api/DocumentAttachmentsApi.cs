@@ -23,156 +23,168 @@ namespace InvoicePDFs.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public interface IUsageApiSync : IApiAccessor
+    public interface IDocumentAttachmentsApiSync : IApiAccessor
     {
         #region Synchronous Operations
         /// <summary>
-        /// Get Usage
+        /// Create Document Attachment
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="documentId"></param>
+        /// <param name="invoiceAttachmentCreateRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>UsageResponse</returns>
-        UsageResponse GetUsage(int operationIndex = 0);
+        /// <returns>InvoiceAttachmentResponse</returns>
+        InvoiceAttachmentResponse CreateDocumentAttachment(string documentId, InvoiceAttachmentCreateRequest invoiceAttachmentCreateRequest, int operationIndex = 0);
 
         /// <summary>
-        /// Get Usage
+        /// Create Document Attachment
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="documentId"></param>
+        /// <param name="invoiceAttachmentCreateRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of UsageResponse</returns>
-        ApiResponse<UsageResponse> GetUsageWithHttpInfo(int operationIndex = 0);
+        /// <returns>ApiResponse of InvoiceAttachmentResponse</returns>
+        ApiResponse<InvoiceAttachmentResponse> CreateDocumentAttachmentWithHttpInfo(string documentId, InvoiceAttachmentCreateRequest invoiceAttachmentCreateRequest, int operationIndex = 0);
         /// <summary>
-        /// Get Usage Limits
+        /// Delete Document Attachment
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="documentId"></param>
+        /// <param name="attachmentId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Dictionary&lt;string, Object&gt;</returns>
-        Dictionary<string, Object> GetUsageLimits(int operationIndex = 0);
+        /// <returns>SimpleBoolResponse</returns>
+        SimpleBoolResponse DeleteDocumentAttachment(string documentId, string attachmentId, int operationIndex = 0);
 
         /// <summary>
-        /// Get Usage Limits
+        /// Delete Document Attachment
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="documentId"></param>
+        /// <param name="attachmentId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Dictionary&lt;string, Object&gt;</returns>
-        ApiResponse<Dictionary<string, Object>> GetUsageLimitsWithHttpInfo(int operationIndex = 0);
+        /// <returns>ApiResponse of SimpleBoolResponse</returns>
+        ApiResponse<SimpleBoolResponse> DeleteDocumentAttachmentWithHttpInfo(string documentId, string attachmentId, int operationIndex = 0);
         /// <summary>
-        /// List Usage Events
+        /// List Document Attachments
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="limit"> (optional, default to 50)</param>
-        /// <param name="cursor"> (optional)</param>
+        /// <param name="documentId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Dictionary&lt;string, Object&gt;</returns>
-        Dictionary<string, Object> ListUsageEvents(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0);
+        /// <returns>InvoiceAttachmentsListResponse</returns>
+        InvoiceAttachmentsListResponse ListDocumentAttachments(string documentId, int operationIndex = 0);
 
         /// <summary>
-        /// List Usage Events
+        /// List Document Attachments
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="limit"> (optional, default to 50)</param>
-        /// <param name="cursor"> (optional)</param>
+        /// <param name="documentId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Dictionary&lt;string, Object&gt;</returns>
-        ApiResponse<Dictionary<string, Object>> ListUsageEventsWithHttpInfo(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0);
+        /// <returns>ApiResponse of InvoiceAttachmentsListResponse</returns>
+        ApiResponse<InvoiceAttachmentsListResponse> ListDocumentAttachmentsWithHttpInfo(string documentId, int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public interface IUsageApiAsync : IApiAccessor
+    public interface IDocumentAttachmentsApiAsync : IApiAccessor
     {
         #region Asynchronous Operations
         /// <summary>
-        /// Get Usage
+        /// Create Document Attachment
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="documentId"></param>
+        /// <param name="invoiceAttachmentCreateRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of UsageResponse</returns>
-        System.Threading.Tasks.Task<UsageResponse> GetUsageAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of InvoiceAttachmentResponse</returns>
+        System.Threading.Tasks.Task<InvoiceAttachmentResponse> CreateDocumentAttachmentAsync(string documentId, InvoiceAttachmentCreateRequest invoiceAttachmentCreateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// Get Usage
+        /// Create Document Attachment
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="documentId"></param>
+        /// <param name="invoiceAttachmentCreateRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (UsageResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UsageResponse>> GetUsageWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (InvoiceAttachmentResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<InvoiceAttachmentResponse>> CreateDocumentAttachmentWithHttpInfoAsync(string documentId, InvoiceAttachmentCreateRequest invoiceAttachmentCreateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// Get Usage Limits
+        /// Delete Document Attachment
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="documentId"></param>
+        /// <param name="attachmentId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Dictionary&lt;string, Object&gt;</returns>
-        System.Threading.Tasks.Task<Dictionary<string, Object>> GetUsageLimitsAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of SimpleBoolResponse</returns>
+        System.Threading.Tasks.Task<SimpleBoolResponse> DeleteDocumentAttachmentAsync(string documentId, string attachmentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// Get Usage Limits
+        /// Delete Document Attachment
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="documentId"></param>
+        /// <param name="attachmentId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Dictionary&lt;string, Object&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Dictionary<string, Object>>> GetUsageLimitsWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (SimpleBoolResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<SimpleBoolResponse>> DeleteDocumentAttachmentWithHttpInfoAsync(string documentId, string attachmentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// List Usage Events
+        /// List Document Attachments
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="limit"> (optional, default to 50)</param>
-        /// <param name="cursor"> (optional)</param>
+        /// <param name="documentId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Dictionary&lt;string, Object&gt;</returns>
-        System.Threading.Tasks.Task<Dictionary<string, Object>> ListUsageEventsAsync(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of InvoiceAttachmentsListResponse</returns>
+        System.Threading.Tasks.Task<InvoiceAttachmentsListResponse> ListDocumentAttachmentsAsync(string documentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// List Usage Events
+        /// List Document Attachments
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="limit"> (optional, default to 50)</param>
-        /// <param name="cursor"> (optional)</param>
+        /// <param name="documentId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Dictionary&lt;string, Object&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Dictionary<string, Object>>> ListUsageEventsWithHttpInfoAsync(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (InvoiceAttachmentsListResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<InvoiceAttachmentsListResponse>> ListDocumentAttachmentsWithHttpInfoAsync(string documentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public interface IUsageApi : IUsageApiSync, IUsageApiAsync
+    public interface IDocumentAttachmentsApi : IDocumentAttachmentsApiSync, IDocumentAttachmentsApiAsync
     {
 
     }
@@ -180,23 +192,23 @@ namespace InvoicePDFs.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public partial class UsageApi : IUsageApi
+    public partial class DocumentAttachmentsApi : IDocumentAttachmentsApi
     {
         private InvoicePDFs.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="UsageApi"/> class.
+        /// Initializes a new instance of the <see cref="DocumentAttachmentsApi"/> class.
         /// </summary>
         /// <returns></returns>
-        public UsageApi() : this((string)null)
+        public DocumentAttachmentsApi() : this((string)null)
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="UsageApi"/> class.
+        /// Initializes a new instance of the <see cref="DocumentAttachmentsApi"/> class.
         /// </summary>
         /// <returns></returns>
-        public UsageApi(string basePath)
+        public DocumentAttachmentsApi(string basePath)
         {
             this.Configuration = InvoicePDFs.Client.Configuration.MergeConfigurations(
                 InvoicePDFs.Client.GlobalConfiguration.Instance,
@@ -208,12 +220,12 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="UsageApi"/> class
+        /// Initializes a new instance of the <see cref="DocumentAttachmentsApi"/> class
         /// using Configuration object
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public UsageApi(InvoicePDFs.Client.Configuration configuration)
+        public DocumentAttachmentsApi(InvoicePDFs.Client.Configuration configuration)
         {
             if (configuration == null) throw new ArgumentNullException("configuration");
 
@@ -227,13 +239,13 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="UsageApi"/> class
+        /// Initializes a new instance of the <see cref="DocumentAttachmentsApi"/> class
         /// using a Configuration object and client instance.
         /// </summary>
         /// <param name="client">The client interface for synchronous API access.</param>
         /// <param name="asyncClient">The client interface for asynchronous API access.</param>
         /// <param name="configuration">The configuration object.</param>
-        public UsageApi(InvoicePDFs.Client.ISynchronousClient client, InvoicePDFs.Client.IAsynchronousClient asyncClient, InvoicePDFs.Client.IReadableConfiguration configuration)
+        public DocumentAttachmentsApi(InvoicePDFs.Client.ISynchronousClient client, InvoicePDFs.Client.IAsynchronousClient asyncClient, InvoicePDFs.Client.IReadableConfiguration configuration)
         {
             if (client == null) throw new ArgumentNullException("client");
             if (asyncClient == null) throw new ArgumentNullException("asyncClient");
@@ -287,28 +299,45 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Get Usage 
+        /// Create Document Attachment 
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="documentId"></param>
+        /// <param name="invoiceAttachmentCreateRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>UsageResponse</returns>
-        public UsageResponse GetUsage(int operationIndex = 0)
+        /// <returns>InvoiceAttachmentResponse</returns>
+        public InvoiceAttachmentResponse CreateDocumentAttachment(string documentId, InvoiceAttachmentCreateRequest invoiceAttachmentCreateRequest, int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<UsageResponse> localVarResponse = GetUsageWithHttpInfo();
+            InvoicePDFs.Client.ApiResponse<InvoiceAttachmentResponse> localVarResponse = CreateDocumentAttachmentWithHttpInfo(documentId, invoiceAttachmentCreateRequest);
             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Get Usage 
+        /// Create Document Attachment 
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="documentId"></param>
+        /// <param name="invoiceAttachmentCreateRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of UsageResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<UsageResponse> GetUsageWithHttpInfo(int operationIndex = 0)
+        /// <returns>ApiResponse of InvoiceAttachmentResponse</returns>
+        public InvoicePDFs.Client.ApiResponse<InvoiceAttachmentResponse> CreateDocumentAttachmentWithHttpInfo(string documentId, InvoiceAttachmentCreateRequest invoiceAttachmentCreateRequest, int operationIndex = 0)
         {
+            // verify the required parameter 'documentId' is set
+            if (documentId == null)
+            {
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'documentId' when calling DocumentAttachmentsApi->CreateDocumentAttachment");
+            }
+
+            // verify the required parameter 'invoiceAttachmentCreateRequest' is set
+            if (invoiceAttachmentCreateRequest == null)
+            {
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'invoiceAttachmentCreateRequest' when calling DocumentAttachmentsApi->CreateDocumentAttachment");
+            }
+
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
+                "application/json"
             };
 
             // to determine the Accept header
@@ -328,8 +357,10 @@ namespace InvoicePDFs.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
+            localVarRequestOptions.PathParameters.Add("document_id", InvoicePDFs.Client.ClientUtils.ParameterToString(documentId)); // path parameter
+            localVarRequestOptions.Data = invoiceAttachmentCreateRequest;
 
-            localVarRequestOptions.Operation = "UsageApi.GetUsage";
+            localVarRequestOptions.Operation = "DocumentAttachmentsApi.CreateDocumentAttachment";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -340,10 +371,10 @@ namespace InvoicePDFs.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<UsageResponse>("/api/v1/usage", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<InvoiceAttachmentResponse>("/api/v1/documents/{document_id}/attachments", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetUsage", localVarResponse);
+                Exception _exception = this.ExceptionFactory("CreateDocumentAttachment", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -354,31 +385,48 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Get Usage 
+        /// Create Document Attachment 
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="documentId"></param>
+        /// <param name="invoiceAttachmentCreateRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of UsageResponse</returns>
-        public async System.Threading.Tasks.Task<UsageResponse> GetUsageAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of InvoiceAttachmentResponse</returns>
+        public async System.Threading.Tasks.Task<InvoiceAttachmentResponse> CreateDocumentAttachmentAsync(string documentId, InvoiceAttachmentCreateRequest invoiceAttachmentCreateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<UsageResponse> localVarResponse = await GetUsageWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<InvoiceAttachmentResponse> localVarResponse = await CreateDocumentAttachmentWithHttpInfoAsync(documentId, invoiceAttachmentCreateRequest, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Get Usage 
+        /// Create Document Attachment 
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="documentId"></param>
+        /// <param name="invoiceAttachmentCreateRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (UsageResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<UsageResponse>> GetUsageWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (InvoiceAttachmentResponse)</returns>
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<InvoiceAttachmentResponse>> CreateDocumentAttachmentWithHttpInfoAsync(string documentId, InvoiceAttachmentCreateRequest invoiceAttachmentCreateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
+            // verify the required parameter 'documentId' is set
+            if (documentId == null)
+            {
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'documentId' when calling DocumentAttachmentsApi->CreateDocumentAttachment");
+            }
+
+            // verify the required parameter 'invoiceAttachmentCreateRequest' is set
+            if (invoiceAttachmentCreateRequest == null)
+            {
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'invoiceAttachmentCreateRequest' when calling DocumentAttachmentsApi->CreateDocumentAttachment");
+            }
+
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
+                "application/json"
             };
 
             // to determine the Accept header
@@ -398,8 +446,10 @@ namespace InvoicePDFs.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
+            localVarRequestOptions.PathParameters.Add("document_id", InvoicePDFs.Client.ClientUtils.ParameterToString(documentId)); // path parameter
+            localVarRequestOptions.Data = invoiceAttachmentCreateRequest;
 
-            localVarRequestOptions.Operation = "UsageApi.GetUsage";
+            localVarRequestOptions.Operation = "DocumentAttachmentsApi.CreateDocumentAttachment";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -410,11 +460,11 @@ namespace InvoicePDFs.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<UsageResponse>("/api/v1/usage", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<InvoiceAttachmentResponse>("/api/v1/documents/{document_id}/attachments", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetUsage", localVarResponse);
+                Exception _exception = this.ExceptionFactory("CreateDocumentAttachment", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -425,25 +475,41 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Get Usage Limits 
+        /// Delete Document Attachment 
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="documentId"></param>
+        /// <param name="attachmentId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Dictionary&lt;string, Object&gt;</returns>
-        public Dictionary<string, Object> GetUsageLimits(int operationIndex = 0)
+        /// <returns>SimpleBoolResponse</returns>
+        public SimpleBoolResponse DeleteDocumentAttachment(string documentId, string attachmentId, int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<Dictionary<string, Object>> localVarResponse = GetUsageLimitsWithHttpInfo();
+            InvoicePDFs.Client.ApiResponse<SimpleBoolResponse> localVarResponse = DeleteDocumentAttachmentWithHttpInfo(documentId, attachmentId);
             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Get Usage Limits 
+        /// Delete Document Attachment 
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="documentId"></param>
+        /// <param name="attachmentId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Dictionary&lt;string, Object&gt;</returns>
-        public InvoicePDFs.Client.ApiResponse<Dictionary<string, Object>> GetUsageLimitsWithHttpInfo(int operationIndex = 0)
+        /// <returns>ApiResponse of SimpleBoolResponse</returns>
+        public InvoicePDFs.Client.ApiResponse<SimpleBoolResponse> DeleteDocumentAttachmentWithHttpInfo(string documentId, string attachmentId, int operationIndex = 0)
         {
+            // verify the required parameter 'documentId' is set
+            if (documentId == null)
+            {
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'documentId' when calling DocumentAttachmentsApi->DeleteDocumentAttachment");
+            }
+
+            // verify the required parameter 'attachmentId' is set
+            if (attachmentId == null)
+            {
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'attachmentId' when calling DocumentAttachmentsApi->DeleteDocumentAttachment");
+            }
+
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
@@ -466,8 +532,10 @@ namespace InvoicePDFs.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
+            localVarRequestOptions.PathParameters.Add("document_id", InvoicePDFs.Client.ClientUtils.ParameterToString(documentId)); // path parameter
+            localVarRequestOptions.PathParameters.Add("attachment_id", InvoicePDFs.Client.ClientUtils.ParameterToString(attachmentId)); // path parameter
 
-            localVarRequestOptions.Operation = "UsageApi.GetUsageLimits";
+            localVarRequestOptions.Operation = "DocumentAttachmentsApi.DeleteDocumentAttachment";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -478,10 +546,10 @@ namespace InvoicePDFs.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Dictionary<string, Object>>("/api/v1/usage/limits", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<SimpleBoolResponse>("/api/v1/documents/{document_id}/attachments/{attachment_id}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetUsageLimits", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteDocumentAttachment", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -492,27 +560,43 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Get Usage Limits 
+        /// Delete Document Attachment 
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="documentId"></param>
+        /// <param name="attachmentId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Dictionary&lt;string, Object&gt;</returns>
-        public async System.Threading.Tasks.Task<Dictionary<string, Object>> GetUsageLimitsAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of SimpleBoolResponse</returns>
+        public async System.Threading.Tasks.Task<SimpleBoolResponse> DeleteDocumentAttachmentAsync(string documentId, string attachmentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<Dictionary<string, Object>> localVarResponse = await GetUsageLimitsWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<SimpleBoolResponse> localVarResponse = await DeleteDocumentAttachmentWithHttpInfoAsync(documentId, attachmentId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Get Usage Limits 
+        /// Delete Document Attachment 
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="documentId"></param>
+        /// <param name="attachmentId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Dictionary&lt;string, Object&gt;)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<Dictionary<string, Object>>> GetUsageLimitsWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (SimpleBoolResponse)</returns>
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<SimpleBoolResponse>> DeleteDocumentAttachmentWithHttpInfoAsync(string documentId, string attachmentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
+            // verify the required parameter 'documentId' is set
+            if (documentId == null)
+            {
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'documentId' when calling DocumentAttachmentsApi->DeleteDocumentAttachment");
+            }
+
+            // verify the required parameter 'attachmentId' is set
+            if (attachmentId == null)
+            {
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'attachmentId' when calling DocumentAttachmentsApi->DeleteDocumentAttachment");
+            }
+
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
 
@@ -536,8 +620,10 @@ namespace InvoicePDFs.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
+            localVarRequestOptions.PathParameters.Add("document_id", InvoicePDFs.Client.ClientUtils.ParameterToString(documentId)); // path parameter
+            localVarRequestOptions.PathParameters.Add("attachment_id", InvoicePDFs.Client.ClientUtils.ParameterToString(attachmentId)); // path parameter
 
-            localVarRequestOptions.Operation = "UsageApi.GetUsageLimits";
+            localVarRequestOptions.Operation = "DocumentAttachmentsApi.DeleteDocumentAttachment";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -548,11 +634,11 @@ namespace InvoicePDFs.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Dictionary<string, Object>>("/api/v1/usage/limits", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<SimpleBoolResponse>("/api/v1/documents/{document_id}/attachments/{attachment_id}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetUsageLimits", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteDocumentAttachment", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -563,29 +649,33 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Usage Events 
+        /// List Document Attachments 
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="limit"> (optional, default to 50)</param>
-        /// <param name="cursor"> (optional)</param>
+        /// <param name="documentId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Dictionary&lt;string, Object&gt;</returns>
-        public Dictionary<string, Object> ListUsageEvents(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0)
+        /// <returns>InvoiceAttachmentsListResponse</returns>
+        public InvoiceAttachmentsListResponse ListDocumentAttachments(string documentId, int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<Dictionary<string, Object>> localVarResponse = ListUsageEventsWithHttpInfo(limit, cursor);
+            InvoicePDFs.Client.ApiResponse<InvoiceAttachmentsListResponse> localVarResponse = ListDocumentAttachmentsWithHttpInfo(documentId);
             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// List Usage Events 
+        /// List Document Attachments 
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="limit"> (optional, default to 50)</param>
-        /// <param name="cursor"> (optional)</param>
+        /// <param name="documentId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Dictionary&lt;string, Object&gt;</returns>
-        public InvoicePDFs.Client.ApiResponse<Dictionary<string, Object>> ListUsageEventsWithHttpInfo(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0)
+        /// <returns>ApiResponse of InvoiceAttachmentsListResponse</returns>
+        public InvoicePDFs.Client.ApiResponse<InvoiceAttachmentsListResponse> ListDocumentAttachmentsWithHttpInfo(string documentId, int operationIndex = 0)
         {
+            // verify the required parameter 'documentId' is set
+            if (documentId == null)
+            {
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'documentId' when calling DocumentAttachmentsApi->ListDocumentAttachments");
+            }
+
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
@@ -608,16 +698,9 @@ namespace InvoicePDFs.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            if (limit != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(InvoicePDFs.Client.ClientUtils.ParameterToMultiMap("", "limit", limit));
-            }
-            if (cursor != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(InvoicePDFs.Client.ClientUtils.ParameterToMultiMap("", "cursor", cursor));
-            }
+            localVarRequestOptions.PathParameters.Add("document_id", InvoicePDFs.Client.ClientUtils.ParameterToString(documentId)); // path parameter
 
-            localVarRequestOptions.Operation = "UsageApi.ListUsageEvents";
+            localVarRequestOptions.Operation = "DocumentAttachmentsApi.ListDocumentAttachments";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -628,10 +711,10 @@ namespace InvoicePDFs.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Dictionary<string, Object>>("/api/v1/usage/events", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<InvoiceAttachmentsListResponse>("/api/v1/documents/{document_id}/attachments", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListUsageEvents", localVarResponse);
+                Exception _exception = this.ExceptionFactory("ListDocumentAttachments", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -642,31 +725,35 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Usage Events 
+        /// List Document Attachments 
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="limit"> (optional, default to 50)</param>
-        /// <param name="cursor"> (optional)</param>
+        /// <param name="documentId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Dictionary&lt;string, Object&gt;</returns>
-        public async System.Threading.Tasks.Task<Dictionary<string, Object>> ListUsageEventsAsync(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of InvoiceAttachmentsListResponse</returns>
+        public async System.Threading.Tasks.Task<InvoiceAttachmentsListResponse> ListDocumentAttachmentsAsync(string documentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<Dictionary<string, Object>> localVarResponse = await ListUsageEventsWithHttpInfoAsync(limit, cursor, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<InvoiceAttachmentsListResponse> localVarResponse = await ListDocumentAttachmentsWithHttpInfoAsync(documentId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// List Usage Events 
+        /// List Document Attachments 
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="limit"> (optional, default to 50)</param>
-        /// <param name="cursor"> (optional)</param>
+        /// <param name="documentId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Dictionary&lt;string, Object&gt;)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<Dictionary<string, Object>>> ListUsageEventsWithHttpInfoAsync(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (InvoiceAttachmentsListResponse)</returns>
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<InvoiceAttachmentsListResponse>> ListDocumentAttachmentsWithHttpInfoAsync(string documentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
+            // verify the required parameter 'documentId' is set
+            if (documentId == null)
+            {
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'documentId' when calling DocumentAttachmentsApi->ListDocumentAttachments");
+            }
+
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
 
@@ -690,16 +777,9 @@ namespace InvoicePDFs.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            if (limit != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(InvoicePDFs.Client.ClientUtils.ParameterToMultiMap("", "limit", limit));
-            }
-            if (cursor != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(InvoicePDFs.Client.ClientUtils.ParameterToMultiMap("", "cursor", cursor));
-            }
+            localVarRequestOptions.PathParameters.Add("document_id", InvoicePDFs.Client.ClientUtils.ParameterToString(documentId)); // path parameter
 
-            localVarRequestOptions.Operation = "UsageApi.ListUsageEvents";
+            localVarRequestOptions.Operation = "DocumentAttachmentsApi.ListDocumentAttachments";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -710,11 +790,11 @@ namespace InvoicePDFs.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Dictionary<string, Object>>("/api/v1/usage/events", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<InvoiceAttachmentsListResponse>("/api/v1/documents/{document_id}/attachments", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListUsageEvents", localVarResponse);
+                Exception _exception = this.ExceptionFactory("ListDocumentAttachments", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

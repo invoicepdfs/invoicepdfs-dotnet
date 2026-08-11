@@ -4,16 +4,16 @@ All URIs are relative to *http://localhost*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
-| [**ListCountriesApiV1ReferenceCountriesGet**](ReferenceApi.md#listcountriesapiv1referencecountriesget) | **GET** /api/v1/reference/countries | List Countries |
-| [**ListCurrenciesApiV1ReferenceCurrenciesGet**](ReferenceApi.md#listcurrenciesapiv1referencecurrenciesget) | **GET** /api/v1/reference/currencies | List Currencies |
-| [**ListDocumentTypesApiV1ReferenceDocumentTypesGet**](ReferenceApi.md#listdocumenttypesapiv1referencedocumenttypesget) | **GET** /api/v1/reference/document-types | List Document Types |
-| [**ListLocalesApiV1ReferenceLocalesGet**](ReferenceApi.md#listlocalesapiv1referencelocalesget) | **GET** /api/v1/reference/locales | List Locales |
-| [**ListPageSizesApiV1ReferencePageSizesGet**](ReferenceApi.md#listpagesizesapiv1referencepagesizesget) | **GET** /api/v1/reference/page-sizes | List Page Sizes |
-| [**ListTimezonesApiV1ReferenceTimezonesGet**](ReferenceApi.md#listtimezonesapiv1referencetimezonesget) | **GET** /api/v1/reference/timezones | List Timezones |
+| [**ListCountries**](ReferenceApi.md#listcountries) | **GET** /api/v1/reference/countries | List Countries |
+| [**ListCurrencies**](ReferenceApi.md#listcurrencies) | **GET** /api/v1/reference/currencies | List Currencies |
+| [**ListDocumentTypes**](ReferenceApi.md#listdocumenttypes) | **GET** /api/v1/reference/document-types | List Document Types |
+| [**ListLocales**](ReferenceApi.md#listlocales) | **GET** /api/v1/reference/locales | List Locales |
+| [**ListPageSizes**](ReferenceApi.md#listpagesizes) | **GET** /api/v1/reference/page-sizes | List Page Sizes |
+| [**ListTimezones**](ReferenceApi.md#listtimezones) | **GET** /api/v1/reference/timezones | List Timezones |
 
-<a id="listcountriesapiv1referencecountriesget"></a>
-# **ListCountriesApiV1ReferenceCountriesGet**
-> Dictionary&lt;string, Object&gt; ListCountriesApiV1ReferenceCountriesGet ()
+<a id="listcountries"></a>
+# **ListCountries**
+> Dictionary&lt;string, Object&gt; ListCountries ()
 
 List Countries
 
@@ -27,7 +27,7 @@ using InvoicePDFs.Model;
 
 namespace Example
 {
-    public class ListCountriesApiV1ReferenceCountriesGetExample
+    public class ListCountriesExample
     {
         public static void Main()
         {
@@ -38,12 +38,12 @@ namespace Example
             try
             {
                 // List Countries
-                Dictionary<string, Object> result = apiInstance.ListCountriesApiV1ReferenceCountriesGet();
+                Dictionary<string, Object> result = apiInstance.ListCountries();
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling ReferenceApi.ListCountriesApiV1ReferenceCountriesGet: " + e.Message);
+                Debug.Print("Exception when calling ReferenceApi.ListCountries: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -52,21 +52,21 @@ namespace Example
 }
 ```
 
-#### Using the ListCountriesApiV1ReferenceCountriesGetWithHttpInfo variant
+#### Using the ListCountriesWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // List Countries
-    ApiResponse<Dictionary<string, Object>> response = apiInstance.ListCountriesApiV1ReferenceCountriesGetWithHttpInfo();
+    ApiResponse<Dictionary<string, Object>> response = apiInstance.ListCountriesWithHttpInfo();
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling ReferenceApi.ListCountriesApiV1ReferenceCountriesGetWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling ReferenceApi.ListCountriesWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -95,9 +95,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="listcurrenciesapiv1referencecurrenciesget"></a>
-# **ListCurrenciesApiV1ReferenceCurrenciesGet**
-> Dictionary&lt;string, Object&gt; ListCurrenciesApiV1ReferenceCurrenciesGet ()
+<a id="listcurrencies"></a>
+# **ListCurrencies**
+> Dictionary&lt;string, Object&gt; ListCurrencies ()
 
 List Currencies
 
@@ -111,7 +111,7 @@ using InvoicePDFs.Model;
 
 namespace Example
 {
-    public class ListCurrenciesApiV1ReferenceCurrenciesGetExample
+    public class ListCurrenciesExample
     {
         public static void Main()
         {
@@ -122,12 +122,12 @@ namespace Example
             try
             {
                 // List Currencies
-                Dictionary<string, Object> result = apiInstance.ListCurrenciesApiV1ReferenceCurrenciesGet();
+                Dictionary<string, Object> result = apiInstance.ListCurrencies();
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling ReferenceApi.ListCurrenciesApiV1ReferenceCurrenciesGet: " + e.Message);
+                Debug.Print("Exception when calling ReferenceApi.ListCurrencies: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -136,21 +136,21 @@ namespace Example
 }
 ```
 
-#### Using the ListCurrenciesApiV1ReferenceCurrenciesGetWithHttpInfo variant
+#### Using the ListCurrenciesWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // List Currencies
-    ApiResponse<Dictionary<string, Object>> response = apiInstance.ListCurrenciesApiV1ReferenceCurrenciesGetWithHttpInfo();
+    ApiResponse<Dictionary<string, Object>> response = apiInstance.ListCurrenciesWithHttpInfo();
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling ReferenceApi.ListCurrenciesApiV1ReferenceCurrenciesGetWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling ReferenceApi.ListCurrenciesWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -179,9 +179,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="listdocumenttypesapiv1referencedocumenttypesget"></a>
-# **ListDocumentTypesApiV1ReferenceDocumentTypesGet**
-> Dictionary&lt;string, Object&gt; ListDocumentTypesApiV1ReferenceDocumentTypesGet ()
+<a id="listdocumenttypes"></a>
+# **ListDocumentTypes**
+> Dictionary&lt;string, Object&gt; ListDocumentTypes ()
 
 List Document Types
 
@@ -197,7 +197,7 @@ using InvoicePDFs.Model;
 
 namespace Example
 {
-    public class ListDocumentTypesApiV1ReferenceDocumentTypesGetExample
+    public class ListDocumentTypesExample
     {
         public static void Main()
         {
@@ -208,12 +208,12 @@ namespace Example
             try
             {
                 // List Document Types
-                Dictionary<string, Object> result = apiInstance.ListDocumentTypesApiV1ReferenceDocumentTypesGet();
+                Dictionary<string, Object> result = apiInstance.ListDocumentTypes();
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling ReferenceApi.ListDocumentTypesApiV1ReferenceDocumentTypesGet: " + e.Message);
+                Debug.Print("Exception when calling ReferenceApi.ListDocumentTypes: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -222,21 +222,21 @@ namespace Example
 }
 ```
 
-#### Using the ListDocumentTypesApiV1ReferenceDocumentTypesGetWithHttpInfo variant
+#### Using the ListDocumentTypesWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // List Document Types
-    ApiResponse<Dictionary<string, Object>> response = apiInstance.ListDocumentTypesApiV1ReferenceDocumentTypesGetWithHttpInfo();
+    ApiResponse<Dictionary<string, Object>> response = apiInstance.ListDocumentTypesWithHttpInfo();
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling ReferenceApi.ListDocumentTypesApiV1ReferenceDocumentTypesGetWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling ReferenceApi.ListDocumentTypesWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -265,9 +265,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="listlocalesapiv1referencelocalesget"></a>
-# **ListLocalesApiV1ReferenceLocalesGet**
-> Dictionary&lt;string, Object&gt; ListLocalesApiV1ReferenceLocalesGet ()
+<a id="listlocales"></a>
+# **ListLocales**
+> Dictionary&lt;string, Object&gt; ListLocales ()
 
 List Locales
 
@@ -281,7 +281,7 @@ using InvoicePDFs.Model;
 
 namespace Example
 {
-    public class ListLocalesApiV1ReferenceLocalesGetExample
+    public class ListLocalesExample
     {
         public static void Main()
         {
@@ -292,12 +292,12 @@ namespace Example
             try
             {
                 // List Locales
-                Dictionary<string, Object> result = apiInstance.ListLocalesApiV1ReferenceLocalesGet();
+                Dictionary<string, Object> result = apiInstance.ListLocales();
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling ReferenceApi.ListLocalesApiV1ReferenceLocalesGet: " + e.Message);
+                Debug.Print("Exception when calling ReferenceApi.ListLocales: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -306,21 +306,21 @@ namespace Example
 }
 ```
 
-#### Using the ListLocalesApiV1ReferenceLocalesGetWithHttpInfo variant
+#### Using the ListLocalesWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // List Locales
-    ApiResponse<Dictionary<string, Object>> response = apiInstance.ListLocalesApiV1ReferenceLocalesGetWithHttpInfo();
+    ApiResponse<Dictionary<string, Object>> response = apiInstance.ListLocalesWithHttpInfo();
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling ReferenceApi.ListLocalesApiV1ReferenceLocalesGetWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling ReferenceApi.ListLocalesWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -349,9 +349,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="listpagesizesapiv1referencepagesizesget"></a>
-# **ListPageSizesApiV1ReferencePageSizesGet**
-> Dictionary&lt;string, Object&gt; ListPageSizesApiV1ReferencePageSizesGet ()
+<a id="listpagesizes"></a>
+# **ListPageSizes**
+> Dictionary&lt;string, Object&gt; ListPageSizes ()
 
 List Page Sizes
 
@@ -365,7 +365,7 @@ using InvoicePDFs.Model;
 
 namespace Example
 {
-    public class ListPageSizesApiV1ReferencePageSizesGetExample
+    public class ListPageSizesExample
     {
         public static void Main()
         {
@@ -376,12 +376,12 @@ namespace Example
             try
             {
                 // List Page Sizes
-                Dictionary<string, Object> result = apiInstance.ListPageSizesApiV1ReferencePageSizesGet();
+                Dictionary<string, Object> result = apiInstance.ListPageSizes();
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling ReferenceApi.ListPageSizesApiV1ReferencePageSizesGet: " + e.Message);
+                Debug.Print("Exception when calling ReferenceApi.ListPageSizes: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -390,21 +390,21 @@ namespace Example
 }
 ```
 
-#### Using the ListPageSizesApiV1ReferencePageSizesGetWithHttpInfo variant
+#### Using the ListPageSizesWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // List Page Sizes
-    ApiResponse<Dictionary<string, Object>> response = apiInstance.ListPageSizesApiV1ReferencePageSizesGetWithHttpInfo();
+    ApiResponse<Dictionary<string, Object>> response = apiInstance.ListPageSizesWithHttpInfo();
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling ReferenceApi.ListPageSizesApiV1ReferencePageSizesGetWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling ReferenceApi.ListPageSizesWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -433,9 +433,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="listtimezonesapiv1referencetimezonesget"></a>
-# **ListTimezonesApiV1ReferenceTimezonesGet**
-> Dictionary&lt;string, Object&gt; ListTimezonesApiV1ReferenceTimezonesGet ()
+<a id="listtimezones"></a>
+# **ListTimezones**
+> Dictionary&lt;string, Object&gt; ListTimezones ()
 
 List Timezones
 
@@ -449,7 +449,7 @@ using InvoicePDFs.Model;
 
 namespace Example
 {
-    public class ListTimezonesApiV1ReferenceTimezonesGetExample
+    public class ListTimezonesExample
     {
         public static void Main()
         {
@@ -460,12 +460,12 @@ namespace Example
             try
             {
                 // List Timezones
-                Dictionary<string, Object> result = apiInstance.ListTimezonesApiV1ReferenceTimezonesGet();
+                Dictionary<string, Object> result = apiInstance.ListTimezones();
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling ReferenceApi.ListTimezonesApiV1ReferenceTimezonesGet: " + e.Message);
+                Debug.Print("Exception when calling ReferenceApi.ListTimezones: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -474,21 +474,21 @@ namespace Example
 }
 ```
 
-#### Using the ListTimezonesApiV1ReferenceTimezonesGetWithHttpInfo variant
+#### Using the ListTimezonesWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // List Timezones
-    ApiResponse<Dictionary<string, Object>> response = apiInstance.ListTimezonesApiV1ReferenceTimezonesGetWithHttpInfo();
+    ApiResponse<Dictionary<string, Object>> response = apiInstance.ListTimezonesWithHttpInfo();
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling ReferenceApi.ListTimezonesApiV1ReferenceTimezonesGetWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling ReferenceApi.ListTimezonesWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }

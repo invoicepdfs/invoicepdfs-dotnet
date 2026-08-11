@@ -4,20 +4,20 @@ All URIs are relative to *http://localhost*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
-| [**CreateWebhookEndpointApiV1WebhookEndpointsPost**](WebhooksApi.md#createwebhookendpointapiv1webhookendpointspost) | **POST** /api/v1/webhook-endpoints | Create Webhook Endpoint |
-| [**DeleteWebhookEndpointApiV1WebhookEndpointsEndpointIdDelete**](WebhooksApi.md#deletewebhookendpointapiv1webhookendpointsendpointiddelete) | **DELETE** /api/v1/webhook-endpoints/{endpoint_id} | Delete Webhook Endpoint |
-| [**GetWebhookDeliveryApiV1WebhookDeliveriesDeliveryIdGet**](WebhooksApi.md#getwebhookdeliveryapiv1webhookdeliveriesdeliveryidget) | **GET** /api/v1/webhook-deliveries/{delivery_id} | Get Webhook Delivery |
-| [**GetWebhookEndpointApiV1WebhookEndpointsEndpointIdGet**](WebhooksApi.md#getwebhookendpointapiv1webhookendpointsendpointidget) | **GET** /api/v1/webhook-endpoints/{endpoint_id} | Get Webhook Endpoint |
-| [**ListWebhookDeliveriesApiV1WebhookDeliveriesGet**](WebhooksApi.md#listwebhookdeliveriesapiv1webhookdeliveriesget) | **GET** /api/v1/webhook-deliveries | List Webhook Deliveries |
-| [**ListWebhookEndpointsApiV1WebhookEndpointsGet**](WebhooksApi.md#listwebhookendpointsapiv1webhookendpointsget) | **GET** /api/v1/webhook-endpoints | List Webhook Endpoints |
-| [**RetryWebhookDeliveryApiV1WebhookDeliveriesDeliveryIdRetryPost**](WebhooksApi.md#retrywebhookdeliveryapiv1webhookdeliveriesdeliveryidretrypost) | **POST** /api/v1/webhook-deliveries/{delivery_id}/retry | Retry Webhook Delivery |
-| [**RotateWebhookSecretApiV1WebhookEndpointsEndpointIdRotateSecretPost**](WebhooksApi.md#rotatewebhooksecretapiv1webhookendpointsendpointidrotatesecretpost) | **POST** /api/v1/webhook-endpoints/{endpoint_id}/rotate-secret | Rotate Webhook Secret |
-| [**TestWebhookEndpointApiV1WebhookEndpointsEndpointIdTestPost**](WebhooksApi.md#testwebhookendpointapiv1webhookendpointsendpointidtestpost) | **POST** /api/v1/webhook-endpoints/{endpoint_id}/test | Test Webhook Endpoint |
-| [**UpdateWebhookEndpointApiV1WebhookEndpointsEndpointIdPatch**](WebhooksApi.md#updatewebhookendpointapiv1webhookendpointsendpointidpatch) | **PATCH** /api/v1/webhook-endpoints/{endpoint_id} | Update Webhook Endpoint |
+| [**CreateWebhookEndpoint**](WebhooksApi.md#createwebhookendpoint) | **POST** /api/v1/webhook-endpoints | Create Webhook Endpoint |
+| [**DeleteWebhookEndpoint**](WebhooksApi.md#deletewebhookendpoint) | **DELETE** /api/v1/webhook-endpoints/{endpoint_id} | Delete Webhook Endpoint |
+| [**GetWebhookDelivery**](WebhooksApi.md#getwebhookdelivery) | **GET** /api/v1/webhook-deliveries/{delivery_id} | Get Webhook Delivery |
+| [**GetWebhookEndpoint**](WebhooksApi.md#getwebhookendpoint) | **GET** /api/v1/webhook-endpoints/{endpoint_id} | Get Webhook Endpoint |
+| [**ListWebhookDeliveries**](WebhooksApi.md#listwebhookdeliveries) | **GET** /api/v1/webhook-deliveries | List Webhook Deliveries |
+| [**ListWebhookEndpoints**](WebhooksApi.md#listwebhookendpoints) | **GET** /api/v1/webhook-endpoints | List Webhook Endpoints |
+| [**RetryWebhookDelivery**](WebhooksApi.md#retrywebhookdelivery) | **POST** /api/v1/webhook-deliveries/{delivery_id}/retry | Retry Webhook Delivery |
+| [**RotateWebhookSecret**](WebhooksApi.md#rotatewebhooksecret) | **POST** /api/v1/webhook-endpoints/{endpoint_id}/rotate-secret | Rotate Webhook Secret |
+| [**TestWebhookEndpoint**](WebhooksApi.md#testwebhookendpoint) | **POST** /api/v1/webhook-endpoints/{endpoint_id}/test | Test Webhook Endpoint |
+| [**UpdateWebhookEndpoint**](WebhooksApi.md#updatewebhookendpoint) | **PATCH** /api/v1/webhook-endpoints/{endpoint_id} | Update Webhook Endpoint |
 
-<a id="createwebhookendpointapiv1webhookendpointspost"></a>
-# **CreateWebhookEndpointApiV1WebhookEndpointsPost**
-> WebhookEndpointResponse CreateWebhookEndpointApiV1WebhookEndpointsPost (WebhookEndpointCreateRequest webhookEndpointCreateRequest)
+<a id="createwebhookendpoint"></a>
+# **CreateWebhookEndpoint**
+> WebhookEndpointResponse CreateWebhookEndpoint (WebhookEndpointCreateRequest webhookEndpointCreateRequest)
 
 Create Webhook Endpoint
 
@@ -31,7 +31,7 @@ using InvoicePDFs.Model;
 
 namespace Example
 {
-    public class CreateWebhookEndpointApiV1WebhookEndpointsPostExample
+    public class CreateWebhookEndpointExample
     {
         public static void Main()
         {
@@ -46,12 +46,12 @@ namespace Example
             try
             {
                 // Create Webhook Endpoint
-                WebhookEndpointResponse result = apiInstance.CreateWebhookEndpointApiV1WebhookEndpointsPost(webhookEndpointCreateRequest);
+                WebhookEndpointResponse result = apiInstance.CreateWebhookEndpoint(webhookEndpointCreateRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling WebhooksApi.CreateWebhookEndpointApiV1WebhookEndpointsPost: " + e.Message);
+                Debug.Print("Exception when calling WebhooksApi.CreateWebhookEndpoint: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -60,21 +60,21 @@ namespace Example
 }
 ```
 
-#### Using the CreateWebhookEndpointApiV1WebhookEndpointsPostWithHttpInfo variant
+#### Using the CreateWebhookEndpointWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // Create Webhook Endpoint
-    ApiResponse<WebhookEndpointResponse> response = apiInstance.CreateWebhookEndpointApiV1WebhookEndpointsPostWithHttpInfo(webhookEndpointCreateRequest);
+    ApiResponse<WebhookEndpointResponse> response = apiInstance.CreateWebhookEndpointWithHttpInfo(webhookEndpointCreateRequest);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling WebhooksApi.CreateWebhookEndpointApiV1WebhookEndpointsPostWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling WebhooksApi.CreateWebhookEndpointWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -108,9 +108,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="deletewebhookendpointapiv1webhookendpointsendpointiddelete"></a>
-# **DeleteWebhookEndpointApiV1WebhookEndpointsEndpointIdDelete**
-> SimpleBoolResponse DeleteWebhookEndpointApiV1WebhookEndpointsEndpointIdDelete (string endpointId)
+<a id="deletewebhookendpoint"></a>
+# **DeleteWebhookEndpoint**
+> SimpleBoolResponse DeleteWebhookEndpoint (string endpointId)
 
 Delete Webhook Endpoint
 
@@ -124,7 +124,7 @@ using InvoicePDFs.Model;
 
 namespace Example
 {
-    public class DeleteWebhookEndpointApiV1WebhookEndpointsEndpointIdDeleteExample
+    public class DeleteWebhookEndpointExample
     {
         public static void Main()
         {
@@ -139,12 +139,12 @@ namespace Example
             try
             {
                 // Delete Webhook Endpoint
-                SimpleBoolResponse result = apiInstance.DeleteWebhookEndpointApiV1WebhookEndpointsEndpointIdDelete(endpointId);
+                SimpleBoolResponse result = apiInstance.DeleteWebhookEndpoint(endpointId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling WebhooksApi.DeleteWebhookEndpointApiV1WebhookEndpointsEndpointIdDelete: " + e.Message);
+                Debug.Print("Exception when calling WebhooksApi.DeleteWebhookEndpoint: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -153,21 +153,21 @@ namespace Example
 }
 ```
 
-#### Using the DeleteWebhookEndpointApiV1WebhookEndpointsEndpointIdDeleteWithHttpInfo variant
+#### Using the DeleteWebhookEndpointWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // Delete Webhook Endpoint
-    ApiResponse<SimpleBoolResponse> response = apiInstance.DeleteWebhookEndpointApiV1WebhookEndpointsEndpointIdDeleteWithHttpInfo(endpointId);
+    ApiResponse<SimpleBoolResponse> response = apiInstance.DeleteWebhookEndpointWithHttpInfo(endpointId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling WebhooksApi.DeleteWebhookEndpointApiV1WebhookEndpointsEndpointIdDeleteWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling WebhooksApi.DeleteWebhookEndpointWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -201,9 +201,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="getwebhookdeliveryapiv1webhookdeliveriesdeliveryidget"></a>
-# **GetWebhookDeliveryApiV1WebhookDeliveriesDeliveryIdGet**
-> WebhookDeliveryResponse GetWebhookDeliveryApiV1WebhookDeliveriesDeliveryIdGet (string deliveryId)
+<a id="getwebhookdelivery"></a>
+# **GetWebhookDelivery**
+> WebhookDeliveryResponse GetWebhookDelivery (string deliveryId)
 
 Get Webhook Delivery
 
@@ -217,7 +217,7 @@ using InvoicePDFs.Model;
 
 namespace Example
 {
-    public class GetWebhookDeliveryApiV1WebhookDeliveriesDeliveryIdGetExample
+    public class GetWebhookDeliveryExample
     {
         public static void Main()
         {
@@ -232,12 +232,12 @@ namespace Example
             try
             {
                 // Get Webhook Delivery
-                WebhookDeliveryResponse result = apiInstance.GetWebhookDeliveryApiV1WebhookDeliveriesDeliveryIdGet(deliveryId);
+                WebhookDeliveryResponse result = apiInstance.GetWebhookDelivery(deliveryId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling WebhooksApi.GetWebhookDeliveryApiV1WebhookDeliveriesDeliveryIdGet: " + e.Message);
+                Debug.Print("Exception when calling WebhooksApi.GetWebhookDelivery: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -246,21 +246,21 @@ namespace Example
 }
 ```
 
-#### Using the GetWebhookDeliveryApiV1WebhookDeliveriesDeliveryIdGetWithHttpInfo variant
+#### Using the GetWebhookDeliveryWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // Get Webhook Delivery
-    ApiResponse<WebhookDeliveryResponse> response = apiInstance.GetWebhookDeliveryApiV1WebhookDeliveriesDeliveryIdGetWithHttpInfo(deliveryId);
+    ApiResponse<WebhookDeliveryResponse> response = apiInstance.GetWebhookDeliveryWithHttpInfo(deliveryId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling WebhooksApi.GetWebhookDeliveryApiV1WebhookDeliveriesDeliveryIdGetWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling WebhooksApi.GetWebhookDeliveryWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -294,9 +294,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="getwebhookendpointapiv1webhookendpointsendpointidget"></a>
-# **GetWebhookEndpointApiV1WebhookEndpointsEndpointIdGet**
-> WebhookEndpointResponse GetWebhookEndpointApiV1WebhookEndpointsEndpointIdGet (string endpointId)
+<a id="getwebhookendpoint"></a>
+# **GetWebhookEndpoint**
+> WebhookEndpointResponse GetWebhookEndpoint (string endpointId)
 
 Get Webhook Endpoint
 
@@ -310,7 +310,7 @@ using InvoicePDFs.Model;
 
 namespace Example
 {
-    public class GetWebhookEndpointApiV1WebhookEndpointsEndpointIdGetExample
+    public class GetWebhookEndpointExample
     {
         public static void Main()
         {
@@ -325,12 +325,12 @@ namespace Example
             try
             {
                 // Get Webhook Endpoint
-                WebhookEndpointResponse result = apiInstance.GetWebhookEndpointApiV1WebhookEndpointsEndpointIdGet(endpointId);
+                WebhookEndpointResponse result = apiInstance.GetWebhookEndpoint(endpointId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling WebhooksApi.GetWebhookEndpointApiV1WebhookEndpointsEndpointIdGet: " + e.Message);
+                Debug.Print("Exception when calling WebhooksApi.GetWebhookEndpoint: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -339,21 +339,21 @@ namespace Example
 }
 ```
 
-#### Using the GetWebhookEndpointApiV1WebhookEndpointsEndpointIdGetWithHttpInfo variant
+#### Using the GetWebhookEndpointWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // Get Webhook Endpoint
-    ApiResponse<WebhookEndpointResponse> response = apiInstance.GetWebhookEndpointApiV1WebhookEndpointsEndpointIdGetWithHttpInfo(endpointId);
+    ApiResponse<WebhookEndpointResponse> response = apiInstance.GetWebhookEndpointWithHttpInfo(endpointId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling WebhooksApi.GetWebhookEndpointApiV1WebhookEndpointsEndpointIdGetWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling WebhooksApi.GetWebhookEndpointWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -387,9 +387,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="listwebhookdeliveriesapiv1webhookdeliveriesget"></a>
-# **ListWebhookDeliveriesApiV1WebhookDeliveriesGet**
-> WebhookDeliveriesListResponse ListWebhookDeliveriesApiV1WebhookDeliveriesGet (int? limit = null, string? cursor = null)
+<a id="listwebhookdeliveries"></a>
+# **ListWebhookDeliveries**
+> WebhookDeliveriesListResponse ListWebhookDeliveries (int? limit = null, string? cursor = null)
 
 List Webhook Deliveries
 
@@ -403,7 +403,7 @@ using InvoicePDFs.Model;
 
 namespace Example
 {
-    public class ListWebhookDeliveriesApiV1WebhookDeliveriesGetExample
+    public class ListWebhookDeliveriesExample
     {
         public static void Main()
         {
@@ -419,12 +419,12 @@ namespace Example
             try
             {
                 // List Webhook Deliveries
-                WebhookDeliveriesListResponse result = apiInstance.ListWebhookDeliveriesApiV1WebhookDeliveriesGet(limit, cursor);
+                WebhookDeliveriesListResponse result = apiInstance.ListWebhookDeliveries(limit, cursor);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling WebhooksApi.ListWebhookDeliveriesApiV1WebhookDeliveriesGet: " + e.Message);
+                Debug.Print("Exception when calling WebhooksApi.ListWebhookDeliveries: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -433,21 +433,21 @@ namespace Example
 }
 ```
 
-#### Using the ListWebhookDeliveriesApiV1WebhookDeliveriesGetWithHttpInfo variant
+#### Using the ListWebhookDeliveriesWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // List Webhook Deliveries
-    ApiResponse<WebhookDeliveriesListResponse> response = apiInstance.ListWebhookDeliveriesApiV1WebhookDeliveriesGetWithHttpInfo(limit, cursor);
+    ApiResponse<WebhookDeliveriesListResponse> response = apiInstance.ListWebhookDeliveriesWithHttpInfo(limit, cursor);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling WebhooksApi.ListWebhookDeliveriesApiV1WebhookDeliveriesGetWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling WebhooksApi.ListWebhookDeliveriesWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -482,9 +482,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="listwebhookendpointsapiv1webhookendpointsget"></a>
-# **ListWebhookEndpointsApiV1WebhookEndpointsGet**
-> WebhookEndpointsListResponse ListWebhookEndpointsApiV1WebhookEndpointsGet (int? limit = null, string? cursor = null)
+<a id="listwebhookendpoints"></a>
+# **ListWebhookEndpoints**
+> WebhookEndpointsListResponse ListWebhookEndpoints (int? limit = null, string? cursor = null)
 
 List Webhook Endpoints
 
@@ -498,7 +498,7 @@ using InvoicePDFs.Model;
 
 namespace Example
 {
-    public class ListWebhookEndpointsApiV1WebhookEndpointsGetExample
+    public class ListWebhookEndpointsExample
     {
         public static void Main()
         {
@@ -514,12 +514,12 @@ namespace Example
             try
             {
                 // List Webhook Endpoints
-                WebhookEndpointsListResponse result = apiInstance.ListWebhookEndpointsApiV1WebhookEndpointsGet(limit, cursor);
+                WebhookEndpointsListResponse result = apiInstance.ListWebhookEndpoints(limit, cursor);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling WebhooksApi.ListWebhookEndpointsApiV1WebhookEndpointsGet: " + e.Message);
+                Debug.Print("Exception when calling WebhooksApi.ListWebhookEndpoints: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -528,21 +528,21 @@ namespace Example
 }
 ```
 
-#### Using the ListWebhookEndpointsApiV1WebhookEndpointsGetWithHttpInfo variant
+#### Using the ListWebhookEndpointsWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // List Webhook Endpoints
-    ApiResponse<WebhookEndpointsListResponse> response = apiInstance.ListWebhookEndpointsApiV1WebhookEndpointsGetWithHttpInfo(limit, cursor);
+    ApiResponse<WebhookEndpointsListResponse> response = apiInstance.ListWebhookEndpointsWithHttpInfo(limit, cursor);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling WebhooksApi.ListWebhookEndpointsApiV1WebhookEndpointsGetWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling WebhooksApi.ListWebhookEndpointsWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -577,9 +577,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="retrywebhookdeliveryapiv1webhookdeliveriesdeliveryidretrypost"></a>
-# **RetryWebhookDeliveryApiV1WebhookDeliveriesDeliveryIdRetryPost**
-> WebhookDeliveryResponse RetryWebhookDeliveryApiV1WebhookDeliveriesDeliveryIdRetryPost (string deliveryId)
+<a id="retrywebhookdelivery"></a>
+# **RetryWebhookDelivery**
+> WebhookDeliveryResponse RetryWebhookDelivery (string deliveryId)
 
 Retry Webhook Delivery
 
@@ -593,7 +593,7 @@ using InvoicePDFs.Model;
 
 namespace Example
 {
-    public class RetryWebhookDeliveryApiV1WebhookDeliveriesDeliveryIdRetryPostExample
+    public class RetryWebhookDeliveryExample
     {
         public static void Main()
         {
@@ -608,12 +608,12 @@ namespace Example
             try
             {
                 // Retry Webhook Delivery
-                WebhookDeliveryResponse result = apiInstance.RetryWebhookDeliveryApiV1WebhookDeliveriesDeliveryIdRetryPost(deliveryId);
+                WebhookDeliveryResponse result = apiInstance.RetryWebhookDelivery(deliveryId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling WebhooksApi.RetryWebhookDeliveryApiV1WebhookDeliveriesDeliveryIdRetryPost: " + e.Message);
+                Debug.Print("Exception when calling WebhooksApi.RetryWebhookDelivery: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -622,21 +622,21 @@ namespace Example
 }
 ```
 
-#### Using the RetryWebhookDeliveryApiV1WebhookDeliveriesDeliveryIdRetryPostWithHttpInfo variant
+#### Using the RetryWebhookDeliveryWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // Retry Webhook Delivery
-    ApiResponse<WebhookDeliveryResponse> response = apiInstance.RetryWebhookDeliveryApiV1WebhookDeliveriesDeliveryIdRetryPostWithHttpInfo(deliveryId);
+    ApiResponse<WebhookDeliveryResponse> response = apiInstance.RetryWebhookDeliveryWithHttpInfo(deliveryId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling WebhooksApi.RetryWebhookDeliveryApiV1WebhookDeliveriesDeliveryIdRetryPostWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling WebhooksApi.RetryWebhookDeliveryWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -670,9 +670,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="rotatewebhooksecretapiv1webhookendpointsendpointidrotatesecretpost"></a>
-# **RotateWebhookSecretApiV1WebhookEndpointsEndpointIdRotateSecretPost**
-> WebhookSecretResponse RotateWebhookSecretApiV1WebhookEndpointsEndpointIdRotateSecretPost (string endpointId)
+<a id="rotatewebhooksecret"></a>
+# **RotateWebhookSecret**
+> WebhookSecretResponse RotateWebhookSecret (string endpointId)
 
 Rotate Webhook Secret
 
@@ -686,7 +686,7 @@ using InvoicePDFs.Model;
 
 namespace Example
 {
-    public class RotateWebhookSecretApiV1WebhookEndpointsEndpointIdRotateSecretPostExample
+    public class RotateWebhookSecretExample
     {
         public static void Main()
         {
@@ -701,12 +701,12 @@ namespace Example
             try
             {
                 // Rotate Webhook Secret
-                WebhookSecretResponse result = apiInstance.RotateWebhookSecretApiV1WebhookEndpointsEndpointIdRotateSecretPost(endpointId);
+                WebhookSecretResponse result = apiInstance.RotateWebhookSecret(endpointId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling WebhooksApi.RotateWebhookSecretApiV1WebhookEndpointsEndpointIdRotateSecretPost: " + e.Message);
+                Debug.Print("Exception when calling WebhooksApi.RotateWebhookSecret: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -715,21 +715,21 @@ namespace Example
 }
 ```
 
-#### Using the RotateWebhookSecretApiV1WebhookEndpointsEndpointIdRotateSecretPostWithHttpInfo variant
+#### Using the RotateWebhookSecretWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // Rotate Webhook Secret
-    ApiResponse<WebhookSecretResponse> response = apiInstance.RotateWebhookSecretApiV1WebhookEndpointsEndpointIdRotateSecretPostWithHttpInfo(endpointId);
+    ApiResponse<WebhookSecretResponse> response = apiInstance.RotateWebhookSecretWithHttpInfo(endpointId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling WebhooksApi.RotateWebhookSecretApiV1WebhookEndpointsEndpointIdRotateSecretPostWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling WebhooksApi.RotateWebhookSecretWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -763,9 +763,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="testwebhookendpointapiv1webhookendpointsendpointidtestpost"></a>
-# **TestWebhookEndpointApiV1WebhookEndpointsEndpointIdTestPost**
-> WebhookDeliveryResponse TestWebhookEndpointApiV1WebhookEndpointsEndpointIdTestPost (string endpointId)
+<a id="testwebhookendpoint"></a>
+# **TestWebhookEndpoint**
+> WebhookDeliveryResponse TestWebhookEndpoint (string endpointId)
 
 Test Webhook Endpoint
 
@@ -779,7 +779,7 @@ using InvoicePDFs.Model;
 
 namespace Example
 {
-    public class TestWebhookEndpointApiV1WebhookEndpointsEndpointIdTestPostExample
+    public class TestWebhookEndpointExample
     {
         public static void Main()
         {
@@ -794,12 +794,12 @@ namespace Example
             try
             {
                 // Test Webhook Endpoint
-                WebhookDeliveryResponse result = apiInstance.TestWebhookEndpointApiV1WebhookEndpointsEndpointIdTestPost(endpointId);
+                WebhookDeliveryResponse result = apiInstance.TestWebhookEndpoint(endpointId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling WebhooksApi.TestWebhookEndpointApiV1WebhookEndpointsEndpointIdTestPost: " + e.Message);
+                Debug.Print("Exception when calling WebhooksApi.TestWebhookEndpoint: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -808,21 +808,21 @@ namespace Example
 }
 ```
 
-#### Using the TestWebhookEndpointApiV1WebhookEndpointsEndpointIdTestPostWithHttpInfo variant
+#### Using the TestWebhookEndpointWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // Test Webhook Endpoint
-    ApiResponse<WebhookDeliveryResponse> response = apiInstance.TestWebhookEndpointApiV1WebhookEndpointsEndpointIdTestPostWithHttpInfo(endpointId);
+    ApiResponse<WebhookDeliveryResponse> response = apiInstance.TestWebhookEndpointWithHttpInfo(endpointId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling WebhooksApi.TestWebhookEndpointApiV1WebhookEndpointsEndpointIdTestPostWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling WebhooksApi.TestWebhookEndpointWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -856,9 +856,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="updatewebhookendpointapiv1webhookendpointsendpointidpatch"></a>
-# **UpdateWebhookEndpointApiV1WebhookEndpointsEndpointIdPatch**
-> WebhookEndpointResponse UpdateWebhookEndpointApiV1WebhookEndpointsEndpointIdPatch (string endpointId, WebhookEndpointPatchRequest webhookEndpointPatchRequest)
+<a id="updatewebhookendpoint"></a>
+# **UpdateWebhookEndpoint**
+> WebhookEndpointResponse UpdateWebhookEndpoint (string endpointId, WebhookEndpointPatchRequest webhookEndpointPatchRequest)
 
 Update Webhook Endpoint
 
@@ -872,7 +872,7 @@ using InvoicePDFs.Model;
 
 namespace Example
 {
-    public class UpdateWebhookEndpointApiV1WebhookEndpointsEndpointIdPatchExample
+    public class UpdateWebhookEndpointExample
     {
         public static void Main()
         {
@@ -888,12 +888,12 @@ namespace Example
             try
             {
                 // Update Webhook Endpoint
-                WebhookEndpointResponse result = apiInstance.UpdateWebhookEndpointApiV1WebhookEndpointsEndpointIdPatch(endpointId, webhookEndpointPatchRequest);
+                WebhookEndpointResponse result = apiInstance.UpdateWebhookEndpoint(endpointId, webhookEndpointPatchRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling WebhooksApi.UpdateWebhookEndpointApiV1WebhookEndpointsEndpointIdPatch: " + e.Message);
+                Debug.Print("Exception when calling WebhooksApi.UpdateWebhookEndpoint: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -902,21 +902,21 @@ namespace Example
 }
 ```
 
-#### Using the UpdateWebhookEndpointApiV1WebhookEndpointsEndpointIdPatchWithHttpInfo variant
+#### Using the UpdateWebhookEndpointWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // Update Webhook Endpoint
-    ApiResponse<WebhookEndpointResponse> response = apiInstance.UpdateWebhookEndpointApiV1WebhookEndpointsEndpointIdPatchWithHttpInfo(endpointId, webhookEndpointPatchRequest);
+    ApiResponse<WebhookEndpointResponse> response = apiInstance.UpdateWebhookEndpointWithHttpInfo(endpointId, webhookEndpointPatchRequest);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling WebhooksApi.UpdateWebhookEndpointApiV1WebhookEndpointsEndpointIdPatchWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling WebhooksApi.UpdateWebhookEndpointWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }

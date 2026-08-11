@@ -27,7 +27,7 @@ namespace InvoicePDFs.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Consume Next
+        /// Consume Sequence Number
         /// </summary>
         /// <remarks>
         /// Consume and return the next number, incrementing the counter.
@@ -36,10 +36,10 @@ namespace InvoicePDFs.Api
         /// <param name="sequenceId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>NumberingSequenceResponse</returns>
-        NumberingSequenceResponse ConsumeNextApiV1NumberingSequencesSequenceIdNextPost(string sequenceId, int operationIndex = 0);
+        NumberingSequenceResponse ConsumeSequenceNumber(string sequenceId, int operationIndex = 0);
 
         /// <summary>
-        /// Consume Next
+        /// Consume Sequence Number
         /// </summary>
         /// <remarks>
         /// Consume and return the next number, incrementing the counter.
@@ -48,7 +48,7 @@ namespace InvoicePDFs.Api
         /// <param name="sequenceId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of NumberingSequenceResponse</returns>
-        ApiResponse<NumberingSequenceResponse> ConsumeNextApiV1NumberingSequencesSequenceIdNextPostWithHttpInfo(string sequenceId, int operationIndex = 0);
+        ApiResponse<NumberingSequenceResponse> ConsumeSequenceNumberWithHttpInfo(string sequenceId, int operationIndex = 0);
         /// <summary>
         /// Create Sequence
         /// </summary>
@@ -56,7 +56,7 @@ namespace InvoicePDFs.Api
         /// <param name="numberingSequenceCreateRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>NumberingSequenceResponse</returns>
-        NumberingSequenceResponse CreateSequenceApiV1NumberingSequencesPost(NumberingSequenceCreateRequest numberingSequenceCreateRequest, int operationIndex = 0);
+        NumberingSequenceResponse CreateSequence(NumberingSequenceCreateRequest numberingSequenceCreateRequest, int operationIndex = 0);
 
         /// <summary>
         /// Create Sequence
@@ -68,7 +68,7 @@ namespace InvoicePDFs.Api
         /// <param name="numberingSequenceCreateRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of NumberingSequenceResponse</returns>
-        ApiResponse<NumberingSequenceResponse> CreateSequenceApiV1NumberingSequencesPostWithHttpInfo(NumberingSequenceCreateRequest numberingSequenceCreateRequest, int operationIndex = 0);
+        ApiResponse<NumberingSequenceResponse> CreateSequenceWithHttpInfo(NumberingSequenceCreateRequest numberingSequenceCreateRequest, int operationIndex = 0);
         /// <summary>
         /// Delete Sequence
         /// </summary>
@@ -76,7 +76,7 @@ namespace InvoicePDFs.Api
         /// <param name="sequenceId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>SimpleBoolResponse</returns>
-        SimpleBoolResponse DeleteSequenceApiV1NumberingSequencesSequenceIdDelete(string sequenceId, int operationIndex = 0);
+        SimpleBoolResponse DeleteSequence(string sequenceId, int operationIndex = 0);
 
         /// <summary>
         /// Delete Sequence
@@ -88,7 +88,7 @@ namespace InvoicePDFs.Api
         /// <param name="sequenceId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of SimpleBoolResponse</returns>
-        ApiResponse<SimpleBoolResponse> DeleteSequenceApiV1NumberingSequencesSequenceIdDeleteWithHttpInfo(string sequenceId, int operationIndex = 0);
+        ApiResponse<SimpleBoolResponse> DeleteSequenceWithHttpInfo(string sequenceId, int operationIndex = 0);
         /// <summary>
         /// Get Sequence
         /// </summary>
@@ -96,7 +96,7 @@ namespace InvoicePDFs.Api
         /// <param name="sequenceId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>NumberingSequenceResponse</returns>
-        NumberingSequenceResponse GetSequenceApiV1NumberingSequencesSequenceIdGet(string sequenceId, int operationIndex = 0);
+        NumberingSequenceResponse GetSequence(string sequenceId, int operationIndex = 0);
 
         /// <summary>
         /// Get Sequence
@@ -108,7 +108,7 @@ namespace InvoicePDFs.Api
         /// <param name="sequenceId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of NumberingSequenceResponse</returns>
-        ApiResponse<NumberingSequenceResponse> GetSequenceApiV1NumberingSequencesSequenceIdGetWithHttpInfo(string sequenceId, int operationIndex = 0);
+        ApiResponse<NumberingSequenceResponse> GetSequenceWithHttpInfo(string sequenceId, int operationIndex = 0);
         /// <summary>
         /// List Sequences
         /// </summary>
@@ -117,7 +117,7 @@ namespace InvoicePDFs.Api
         /// <param name="cursor"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>NumberingSequencesListResponse</returns>
-        NumberingSequencesListResponse ListSequencesApiV1NumberingSequencesGet(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0);
+        NumberingSequencesListResponse ListSequences(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// List Sequences
@@ -130,7 +130,7 @@ namespace InvoicePDFs.Api
         /// <param name="cursor"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of NumberingSequencesListResponse</returns>
-        ApiResponse<NumberingSequencesListResponse> ListSequencesApiV1NumberingSequencesGetWithHttpInfo(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0);
+        ApiResponse<NumberingSequencesListResponse> ListSequencesWithHttpInfo(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0);
         /// <summary>
         /// Preview Sequence
         /// </summary>
@@ -138,7 +138,7 @@ namespace InvoicePDFs.Api
         /// <param name="sequenceId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>NumberingSequencePreviewResponse</returns>
-        NumberingSequencePreviewResponse PreviewSequenceApiV1NumberingSequencesSequenceIdPreviewPost(string sequenceId, int operationIndex = 0);
+        NumberingSequencePreviewResponse PreviewSequence(string sequenceId, int operationIndex = 0);
 
         /// <summary>
         /// Preview Sequence
@@ -150,7 +150,7 @@ namespace InvoicePDFs.Api
         /// <param name="sequenceId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of NumberingSequencePreviewResponse</returns>
-        ApiResponse<NumberingSequencePreviewResponse> PreviewSequenceApiV1NumberingSequencesSequenceIdPreviewPostWithHttpInfo(string sequenceId, int operationIndex = 0);
+        ApiResponse<NumberingSequencePreviewResponse> PreviewSequenceWithHttpInfo(string sequenceId, int operationIndex = 0);
         /// <summary>
         /// Update Sequence
         /// </summary>
@@ -159,7 +159,7 @@ namespace InvoicePDFs.Api
         /// <param name="numberingSequencePatchRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>NumberingSequenceResponse</returns>
-        NumberingSequenceResponse UpdateSequenceApiV1NumberingSequencesSequenceIdPatch(string sequenceId, NumberingSequencePatchRequest numberingSequencePatchRequest, int operationIndex = 0);
+        NumberingSequenceResponse UpdateSequence(string sequenceId, NumberingSequencePatchRequest numberingSequencePatchRequest, int operationIndex = 0);
 
         /// <summary>
         /// Update Sequence
@@ -172,7 +172,7 @@ namespace InvoicePDFs.Api
         /// <param name="numberingSequencePatchRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of NumberingSequenceResponse</returns>
-        ApiResponse<NumberingSequenceResponse> UpdateSequenceApiV1NumberingSequencesSequenceIdPatchWithHttpInfo(string sequenceId, NumberingSequencePatchRequest numberingSequencePatchRequest, int operationIndex = 0);
+        ApiResponse<NumberingSequenceResponse> UpdateSequenceWithHttpInfo(string sequenceId, NumberingSequencePatchRequest numberingSequencePatchRequest, int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -183,7 +183,7 @@ namespace InvoicePDFs.Api
     {
         #region Asynchronous Operations
         /// <summary>
-        /// Consume Next
+        /// Consume Sequence Number
         /// </summary>
         /// <remarks>
         /// Consume and return the next number, incrementing the counter.
@@ -193,10 +193,10 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of NumberingSequenceResponse</returns>
-        System.Threading.Tasks.Task<NumberingSequenceResponse> ConsumeNextApiV1NumberingSequencesSequenceIdNextPostAsync(string sequenceId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<NumberingSequenceResponse> ConsumeSequenceNumberAsync(string sequenceId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// Consume Next
+        /// Consume Sequence Number
         /// </summary>
         /// <remarks>
         /// Consume and return the next number, incrementing the counter.
@@ -206,7 +206,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (NumberingSequenceResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<NumberingSequenceResponse>> ConsumeNextApiV1NumberingSequencesSequenceIdNextPostWithHttpInfoAsync(string sequenceId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<NumberingSequenceResponse>> ConsumeSequenceNumberWithHttpInfoAsync(string sequenceId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Create Sequence
         /// </summary>
@@ -218,7 +218,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of NumberingSequenceResponse</returns>
-        System.Threading.Tasks.Task<NumberingSequenceResponse> CreateSequenceApiV1NumberingSequencesPostAsync(NumberingSequenceCreateRequest numberingSequenceCreateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<NumberingSequenceResponse> CreateSequenceAsync(NumberingSequenceCreateRequest numberingSequenceCreateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Create Sequence
@@ -231,7 +231,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (NumberingSequenceResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<NumberingSequenceResponse>> CreateSequenceApiV1NumberingSequencesPostWithHttpInfoAsync(NumberingSequenceCreateRequest numberingSequenceCreateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<NumberingSequenceResponse>> CreateSequenceWithHttpInfoAsync(NumberingSequenceCreateRequest numberingSequenceCreateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Delete Sequence
         /// </summary>
@@ -243,7 +243,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of SimpleBoolResponse</returns>
-        System.Threading.Tasks.Task<SimpleBoolResponse> DeleteSequenceApiV1NumberingSequencesSequenceIdDeleteAsync(string sequenceId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<SimpleBoolResponse> DeleteSequenceAsync(string sequenceId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Delete Sequence
@@ -256,7 +256,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (SimpleBoolResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SimpleBoolResponse>> DeleteSequenceApiV1NumberingSequencesSequenceIdDeleteWithHttpInfoAsync(string sequenceId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<SimpleBoolResponse>> DeleteSequenceWithHttpInfoAsync(string sequenceId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Get Sequence
         /// </summary>
@@ -268,7 +268,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of NumberingSequenceResponse</returns>
-        System.Threading.Tasks.Task<NumberingSequenceResponse> GetSequenceApiV1NumberingSequencesSequenceIdGetAsync(string sequenceId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<NumberingSequenceResponse> GetSequenceAsync(string sequenceId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Get Sequence
@@ -281,7 +281,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (NumberingSequenceResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<NumberingSequenceResponse>> GetSequenceApiV1NumberingSequencesSequenceIdGetWithHttpInfoAsync(string sequenceId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<NumberingSequenceResponse>> GetSequenceWithHttpInfoAsync(string sequenceId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// List Sequences
         /// </summary>
@@ -294,7 +294,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of NumberingSequencesListResponse</returns>
-        System.Threading.Tasks.Task<NumberingSequencesListResponse> ListSequencesApiV1NumberingSequencesGetAsync(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<NumberingSequencesListResponse> ListSequencesAsync(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// List Sequences
@@ -308,7 +308,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (NumberingSequencesListResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<NumberingSequencesListResponse>> ListSequencesApiV1NumberingSequencesGetWithHttpInfoAsync(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<NumberingSequencesListResponse>> ListSequencesWithHttpInfoAsync(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Preview Sequence
         /// </summary>
@@ -320,7 +320,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of NumberingSequencePreviewResponse</returns>
-        System.Threading.Tasks.Task<NumberingSequencePreviewResponse> PreviewSequenceApiV1NumberingSequencesSequenceIdPreviewPostAsync(string sequenceId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<NumberingSequencePreviewResponse> PreviewSequenceAsync(string sequenceId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Preview Sequence
@@ -333,7 +333,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (NumberingSequencePreviewResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<NumberingSequencePreviewResponse>> PreviewSequenceApiV1NumberingSequencesSequenceIdPreviewPostWithHttpInfoAsync(string sequenceId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<NumberingSequencePreviewResponse>> PreviewSequenceWithHttpInfoAsync(string sequenceId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Update Sequence
         /// </summary>
@@ -346,7 +346,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of NumberingSequenceResponse</returns>
-        System.Threading.Tasks.Task<NumberingSequenceResponse> UpdateSequenceApiV1NumberingSequencesSequenceIdPatchAsync(string sequenceId, NumberingSequencePatchRequest numberingSequencePatchRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<NumberingSequenceResponse> UpdateSequenceAsync(string sequenceId, NumberingSequencePatchRequest numberingSequencePatchRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Update Sequence
@@ -360,7 +360,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (NumberingSequenceResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<NumberingSequenceResponse>> UpdateSequenceApiV1NumberingSequencesSequenceIdPatchWithHttpInfoAsync(string sequenceId, NumberingSequencePatchRequest numberingSequencePatchRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<NumberingSequenceResponse>> UpdateSequenceWithHttpInfoAsync(string sequenceId, NumberingSequencePatchRequest numberingSequencePatchRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -482,31 +482,31 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Consume Next Consume and return the next number, incrementing the counter.
+        /// Consume Sequence Number Consume and return the next number, incrementing the counter.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sequenceId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>NumberingSequenceResponse</returns>
-        public NumberingSequenceResponse ConsumeNextApiV1NumberingSequencesSequenceIdNextPost(string sequenceId, int operationIndex = 0)
+        public NumberingSequenceResponse ConsumeSequenceNumber(string sequenceId, int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<NumberingSequenceResponse> localVarResponse = ConsumeNextApiV1NumberingSequencesSequenceIdNextPostWithHttpInfo(sequenceId);
+            InvoicePDFs.Client.ApiResponse<NumberingSequenceResponse> localVarResponse = ConsumeSequenceNumberWithHttpInfo(sequenceId);
             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Consume Next Consume and return the next number, incrementing the counter.
+        /// Consume Sequence Number Consume and return the next number, incrementing the counter.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sequenceId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of NumberingSequenceResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<NumberingSequenceResponse> ConsumeNextApiV1NumberingSequencesSequenceIdNextPostWithHttpInfo(string sequenceId, int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<NumberingSequenceResponse> ConsumeSequenceNumberWithHttpInfo(string sequenceId, int operationIndex = 0)
         {
             // verify the required parameter 'sequenceId' is set
             if (sequenceId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'sequenceId' when calling NumberingSequencesApi->ConsumeNextApiV1NumberingSequencesSequenceIdNextPost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'sequenceId' when calling NumberingSequencesApi->ConsumeSequenceNumber");
             }
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -533,7 +533,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("sequence_id", InvoicePDFs.Client.ClientUtils.ParameterToString(sequenceId)); // path parameter
 
-            localVarRequestOptions.Operation = "NumberingSequencesApi.ConsumeNextApiV1NumberingSequencesSequenceIdNextPost";
+            localVarRequestOptions.Operation = "NumberingSequencesApi.ConsumeSequenceNumber";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -547,7 +547,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Post<NumberingSequenceResponse>("/api/v1/numbering-sequences/{sequence_id}/next", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ConsumeNextApiV1NumberingSequencesSequenceIdNextPost", localVarResponse);
+                Exception _exception = this.ExceptionFactory("ConsumeSequenceNumber", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -558,33 +558,33 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Consume Next Consume and return the next number, incrementing the counter.
+        /// Consume Sequence Number Consume and return the next number, incrementing the counter.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sequenceId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of NumberingSequenceResponse</returns>
-        public async System.Threading.Tasks.Task<NumberingSequenceResponse> ConsumeNextApiV1NumberingSequencesSequenceIdNextPostAsync(string sequenceId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<NumberingSequenceResponse> ConsumeSequenceNumberAsync(string sequenceId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<NumberingSequenceResponse> localVarResponse = await ConsumeNextApiV1NumberingSequencesSequenceIdNextPostWithHttpInfoAsync(sequenceId, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<NumberingSequenceResponse> localVarResponse = await ConsumeSequenceNumberWithHttpInfoAsync(sequenceId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Consume Next Consume and return the next number, incrementing the counter.
+        /// Consume Sequence Number Consume and return the next number, incrementing the counter.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sequenceId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (NumberingSequenceResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<NumberingSequenceResponse>> ConsumeNextApiV1NumberingSequencesSequenceIdNextPostWithHttpInfoAsync(string sequenceId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<NumberingSequenceResponse>> ConsumeSequenceNumberWithHttpInfoAsync(string sequenceId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'sequenceId' is set
             if (sequenceId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'sequenceId' when calling NumberingSequencesApi->ConsumeNextApiV1NumberingSequencesSequenceIdNextPost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'sequenceId' when calling NumberingSequencesApi->ConsumeSequenceNumber");
             }
 
 
@@ -612,7 +612,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("sequence_id", InvoicePDFs.Client.ClientUtils.ParameterToString(sequenceId)); // path parameter
 
-            localVarRequestOptions.Operation = "NumberingSequencesApi.ConsumeNextApiV1NumberingSequencesSequenceIdNextPost";
+            localVarRequestOptions.Operation = "NumberingSequencesApi.ConsumeSequenceNumber";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -627,7 +627,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ConsumeNextApiV1NumberingSequencesSequenceIdNextPost", localVarResponse);
+                Exception _exception = this.ExceptionFactory("ConsumeSequenceNumber", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -644,9 +644,9 @@ namespace InvoicePDFs.Api
         /// <param name="numberingSequenceCreateRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>NumberingSequenceResponse</returns>
-        public NumberingSequenceResponse CreateSequenceApiV1NumberingSequencesPost(NumberingSequenceCreateRequest numberingSequenceCreateRequest, int operationIndex = 0)
+        public NumberingSequenceResponse CreateSequence(NumberingSequenceCreateRequest numberingSequenceCreateRequest, int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<NumberingSequenceResponse> localVarResponse = CreateSequenceApiV1NumberingSequencesPostWithHttpInfo(numberingSequenceCreateRequest);
+            InvoicePDFs.Client.ApiResponse<NumberingSequenceResponse> localVarResponse = CreateSequenceWithHttpInfo(numberingSequenceCreateRequest);
             return localVarResponse.Data;
         }
 
@@ -657,12 +657,12 @@ namespace InvoicePDFs.Api
         /// <param name="numberingSequenceCreateRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of NumberingSequenceResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<NumberingSequenceResponse> CreateSequenceApiV1NumberingSequencesPostWithHttpInfo(NumberingSequenceCreateRequest numberingSequenceCreateRequest, int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<NumberingSequenceResponse> CreateSequenceWithHttpInfo(NumberingSequenceCreateRequest numberingSequenceCreateRequest, int operationIndex = 0)
         {
             // verify the required parameter 'numberingSequenceCreateRequest' is set
             if (numberingSequenceCreateRequest == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'numberingSequenceCreateRequest' when calling NumberingSequencesApi->CreateSequenceApiV1NumberingSequencesPost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'numberingSequenceCreateRequest' when calling NumberingSequencesApi->CreateSequence");
             }
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -690,7 +690,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.Data = numberingSequenceCreateRequest;
 
-            localVarRequestOptions.Operation = "NumberingSequencesApi.CreateSequenceApiV1NumberingSequencesPost";
+            localVarRequestOptions.Operation = "NumberingSequencesApi.CreateSequence";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -704,7 +704,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Post<NumberingSequenceResponse>("/api/v1/numbering-sequences", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("CreateSequenceApiV1NumberingSequencesPost", localVarResponse);
+                Exception _exception = this.ExceptionFactory("CreateSequence", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -722,9 +722,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of NumberingSequenceResponse</returns>
-        public async System.Threading.Tasks.Task<NumberingSequenceResponse> CreateSequenceApiV1NumberingSequencesPostAsync(NumberingSequenceCreateRequest numberingSequenceCreateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<NumberingSequenceResponse> CreateSequenceAsync(NumberingSequenceCreateRequest numberingSequenceCreateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<NumberingSequenceResponse> localVarResponse = await CreateSequenceApiV1NumberingSequencesPostWithHttpInfoAsync(numberingSequenceCreateRequest, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<NumberingSequenceResponse> localVarResponse = await CreateSequenceWithHttpInfoAsync(numberingSequenceCreateRequest, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -736,12 +736,12 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (NumberingSequenceResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<NumberingSequenceResponse>> CreateSequenceApiV1NumberingSequencesPostWithHttpInfoAsync(NumberingSequenceCreateRequest numberingSequenceCreateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<NumberingSequenceResponse>> CreateSequenceWithHttpInfoAsync(NumberingSequenceCreateRequest numberingSequenceCreateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'numberingSequenceCreateRequest' is set
             if (numberingSequenceCreateRequest == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'numberingSequenceCreateRequest' when calling NumberingSequencesApi->CreateSequenceApiV1NumberingSequencesPost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'numberingSequenceCreateRequest' when calling NumberingSequencesApi->CreateSequence");
             }
 
 
@@ -770,7 +770,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.Data = numberingSequenceCreateRequest;
 
-            localVarRequestOptions.Operation = "NumberingSequencesApi.CreateSequenceApiV1NumberingSequencesPost";
+            localVarRequestOptions.Operation = "NumberingSequencesApi.CreateSequence";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -785,7 +785,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("CreateSequenceApiV1NumberingSequencesPost", localVarResponse);
+                Exception _exception = this.ExceptionFactory("CreateSequence", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -802,9 +802,9 @@ namespace InvoicePDFs.Api
         /// <param name="sequenceId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>SimpleBoolResponse</returns>
-        public SimpleBoolResponse DeleteSequenceApiV1NumberingSequencesSequenceIdDelete(string sequenceId, int operationIndex = 0)
+        public SimpleBoolResponse DeleteSequence(string sequenceId, int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<SimpleBoolResponse> localVarResponse = DeleteSequenceApiV1NumberingSequencesSequenceIdDeleteWithHttpInfo(sequenceId);
+            InvoicePDFs.Client.ApiResponse<SimpleBoolResponse> localVarResponse = DeleteSequenceWithHttpInfo(sequenceId);
             return localVarResponse.Data;
         }
 
@@ -815,12 +815,12 @@ namespace InvoicePDFs.Api
         /// <param name="sequenceId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of SimpleBoolResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<SimpleBoolResponse> DeleteSequenceApiV1NumberingSequencesSequenceIdDeleteWithHttpInfo(string sequenceId, int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<SimpleBoolResponse> DeleteSequenceWithHttpInfo(string sequenceId, int operationIndex = 0)
         {
             // verify the required parameter 'sequenceId' is set
             if (sequenceId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'sequenceId' when calling NumberingSequencesApi->DeleteSequenceApiV1NumberingSequencesSequenceIdDelete");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'sequenceId' when calling NumberingSequencesApi->DeleteSequence");
             }
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -847,7 +847,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("sequence_id", InvoicePDFs.Client.ClientUtils.ParameterToString(sequenceId)); // path parameter
 
-            localVarRequestOptions.Operation = "NumberingSequencesApi.DeleteSequenceApiV1NumberingSequencesSequenceIdDelete";
+            localVarRequestOptions.Operation = "NumberingSequencesApi.DeleteSequence";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -861,7 +861,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Delete<SimpleBoolResponse>("/api/v1/numbering-sequences/{sequence_id}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSequenceApiV1NumberingSequencesSequenceIdDelete", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteSequence", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -879,9 +879,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of SimpleBoolResponse</returns>
-        public async System.Threading.Tasks.Task<SimpleBoolResponse> DeleteSequenceApiV1NumberingSequencesSequenceIdDeleteAsync(string sequenceId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<SimpleBoolResponse> DeleteSequenceAsync(string sequenceId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<SimpleBoolResponse> localVarResponse = await DeleteSequenceApiV1NumberingSequencesSequenceIdDeleteWithHttpInfoAsync(sequenceId, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<SimpleBoolResponse> localVarResponse = await DeleteSequenceWithHttpInfoAsync(sequenceId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -893,12 +893,12 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (SimpleBoolResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<SimpleBoolResponse>> DeleteSequenceApiV1NumberingSequencesSequenceIdDeleteWithHttpInfoAsync(string sequenceId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<SimpleBoolResponse>> DeleteSequenceWithHttpInfoAsync(string sequenceId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'sequenceId' is set
             if (sequenceId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'sequenceId' when calling NumberingSequencesApi->DeleteSequenceApiV1NumberingSequencesSequenceIdDelete");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'sequenceId' when calling NumberingSequencesApi->DeleteSequence");
             }
 
 
@@ -926,7 +926,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("sequence_id", InvoicePDFs.Client.ClientUtils.ParameterToString(sequenceId)); // path parameter
 
-            localVarRequestOptions.Operation = "NumberingSequencesApi.DeleteSequenceApiV1NumberingSequencesSequenceIdDelete";
+            localVarRequestOptions.Operation = "NumberingSequencesApi.DeleteSequence";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -941,7 +941,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSequenceApiV1NumberingSequencesSequenceIdDelete", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteSequence", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -958,9 +958,9 @@ namespace InvoicePDFs.Api
         /// <param name="sequenceId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>NumberingSequenceResponse</returns>
-        public NumberingSequenceResponse GetSequenceApiV1NumberingSequencesSequenceIdGet(string sequenceId, int operationIndex = 0)
+        public NumberingSequenceResponse GetSequence(string sequenceId, int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<NumberingSequenceResponse> localVarResponse = GetSequenceApiV1NumberingSequencesSequenceIdGetWithHttpInfo(sequenceId);
+            InvoicePDFs.Client.ApiResponse<NumberingSequenceResponse> localVarResponse = GetSequenceWithHttpInfo(sequenceId);
             return localVarResponse.Data;
         }
 
@@ -971,12 +971,12 @@ namespace InvoicePDFs.Api
         /// <param name="sequenceId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of NumberingSequenceResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<NumberingSequenceResponse> GetSequenceApiV1NumberingSequencesSequenceIdGetWithHttpInfo(string sequenceId, int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<NumberingSequenceResponse> GetSequenceWithHttpInfo(string sequenceId, int operationIndex = 0)
         {
             // verify the required parameter 'sequenceId' is set
             if (sequenceId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'sequenceId' when calling NumberingSequencesApi->GetSequenceApiV1NumberingSequencesSequenceIdGet");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'sequenceId' when calling NumberingSequencesApi->GetSequence");
             }
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -1003,7 +1003,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("sequence_id", InvoicePDFs.Client.ClientUtils.ParameterToString(sequenceId)); // path parameter
 
-            localVarRequestOptions.Operation = "NumberingSequencesApi.GetSequenceApiV1NumberingSequencesSequenceIdGet";
+            localVarRequestOptions.Operation = "NumberingSequencesApi.GetSequence";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -1017,7 +1017,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Get<NumberingSequenceResponse>("/api/v1/numbering-sequences/{sequence_id}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetSequenceApiV1NumberingSequencesSequenceIdGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetSequence", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1035,9 +1035,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of NumberingSequenceResponse</returns>
-        public async System.Threading.Tasks.Task<NumberingSequenceResponse> GetSequenceApiV1NumberingSequencesSequenceIdGetAsync(string sequenceId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<NumberingSequenceResponse> GetSequenceAsync(string sequenceId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<NumberingSequenceResponse> localVarResponse = await GetSequenceApiV1NumberingSequencesSequenceIdGetWithHttpInfoAsync(sequenceId, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<NumberingSequenceResponse> localVarResponse = await GetSequenceWithHttpInfoAsync(sequenceId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1049,12 +1049,12 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (NumberingSequenceResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<NumberingSequenceResponse>> GetSequenceApiV1NumberingSequencesSequenceIdGetWithHttpInfoAsync(string sequenceId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<NumberingSequenceResponse>> GetSequenceWithHttpInfoAsync(string sequenceId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'sequenceId' is set
             if (sequenceId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'sequenceId' when calling NumberingSequencesApi->GetSequenceApiV1NumberingSequencesSequenceIdGet");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'sequenceId' when calling NumberingSequencesApi->GetSequence");
             }
 
 
@@ -1082,7 +1082,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("sequence_id", InvoicePDFs.Client.ClientUtils.ParameterToString(sequenceId)); // path parameter
 
-            localVarRequestOptions.Operation = "NumberingSequencesApi.GetSequenceApiV1NumberingSequencesSequenceIdGet";
+            localVarRequestOptions.Operation = "NumberingSequencesApi.GetSequence";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -1097,7 +1097,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetSequenceApiV1NumberingSequencesSequenceIdGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetSequence", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1115,9 +1115,9 @@ namespace InvoicePDFs.Api
         /// <param name="cursor"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>NumberingSequencesListResponse</returns>
-        public NumberingSequencesListResponse ListSequencesApiV1NumberingSequencesGet(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0)
+        public NumberingSequencesListResponse ListSequences(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<NumberingSequencesListResponse> localVarResponse = ListSequencesApiV1NumberingSequencesGetWithHttpInfo(limit, cursor);
+            InvoicePDFs.Client.ApiResponse<NumberingSequencesListResponse> localVarResponse = ListSequencesWithHttpInfo(limit, cursor);
             return localVarResponse.Data;
         }
 
@@ -1129,7 +1129,7 @@ namespace InvoicePDFs.Api
         /// <param name="cursor"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of NumberingSequencesListResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<NumberingSequencesListResponse> ListSequencesApiV1NumberingSequencesGetWithHttpInfo(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<NumberingSequencesListResponse> ListSequencesWithHttpInfo(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0)
         {
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
 
@@ -1162,7 +1162,7 @@ namespace InvoicePDFs.Api
                 localVarRequestOptions.QueryParameters.Add(InvoicePDFs.Client.ClientUtils.ParameterToMultiMap("", "cursor", cursor));
             }
 
-            localVarRequestOptions.Operation = "NumberingSequencesApi.ListSequencesApiV1NumberingSequencesGet";
+            localVarRequestOptions.Operation = "NumberingSequencesApi.ListSequences";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -1176,7 +1176,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Get<NumberingSequencesListResponse>("/api/v1/numbering-sequences", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListSequencesApiV1NumberingSequencesGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("ListSequences", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1195,9 +1195,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of NumberingSequencesListResponse</returns>
-        public async System.Threading.Tasks.Task<NumberingSequencesListResponse> ListSequencesApiV1NumberingSequencesGetAsync(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<NumberingSequencesListResponse> ListSequencesAsync(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<NumberingSequencesListResponse> localVarResponse = await ListSequencesApiV1NumberingSequencesGetWithHttpInfoAsync(limit, cursor, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<NumberingSequencesListResponse> localVarResponse = await ListSequencesWithHttpInfoAsync(limit, cursor, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1210,7 +1210,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (NumberingSequencesListResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<NumberingSequencesListResponse>> ListSequencesApiV1NumberingSequencesGetWithHttpInfoAsync(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<NumberingSequencesListResponse>> ListSequencesWithHttpInfoAsync(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -1244,7 +1244,7 @@ namespace InvoicePDFs.Api
                 localVarRequestOptions.QueryParameters.Add(InvoicePDFs.Client.ClientUtils.ParameterToMultiMap("", "cursor", cursor));
             }
 
-            localVarRequestOptions.Operation = "NumberingSequencesApi.ListSequencesApiV1NumberingSequencesGet";
+            localVarRequestOptions.Operation = "NumberingSequencesApi.ListSequences";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -1259,7 +1259,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListSequencesApiV1NumberingSequencesGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("ListSequences", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1276,9 +1276,9 @@ namespace InvoicePDFs.Api
         /// <param name="sequenceId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>NumberingSequencePreviewResponse</returns>
-        public NumberingSequencePreviewResponse PreviewSequenceApiV1NumberingSequencesSequenceIdPreviewPost(string sequenceId, int operationIndex = 0)
+        public NumberingSequencePreviewResponse PreviewSequence(string sequenceId, int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<NumberingSequencePreviewResponse> localVarResponse = PreviewSequenceApiV1NumberingSequencesSequenceIdPreviewPostWithHttpInfo(sequenceId);
+            InvoicePDFs.Client.ApiResponse<NumberingSequencePreviewResponse> localVarResponse = PreviewSequenceWithHttpInfo(sequenceId);
             return localVarResponse.Data;
         }
 
@@ -1289,12 +1289,12 @@ namespace InvoicePDFs.Api
         /// <param name="sequenceId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of NumberingSequencePreviewResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<NumberingSequencePreviewResponse> PreviewSequenceApiV1NumberingSequencesSequenceIdPreviewPostWithHttpInfo(string sequenceId, int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<NumberingSequencePreviewResponse> PreviewSequenceWithHttpInfo(string sequenceId, int operationIndex = 0)
         {
             // verify the required parameter 'sequenceId' is set
             if (sequenceId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'sequenceId' when calling NumberingSequencesApi->PreviewSequenceApiV1NumberingSequencesSequenceIdPreviewPost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'sequenceId' when calling NumberingSequencesApi->PreviewSequence");
             }
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -1321,7 +1321,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("sequence_id", InvoicePDFs.Client.ClientUtils.ParameterToString(sequenceId)); // path parameter
 
-            localVarRequestOptions.Operation = "NumberingSequencesApi.PreviewSequenceApiV1NumberingSequencesSequenceIdPreviewPost";
+            localVarRequestOptions.Operation = "NumberingSequencesApi.PreviewSequence";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -1335,7 +1335,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Post<NumberingSequencePreviewResponse>("/api/v1/numbering-sequences/{sequence_id}/preview", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PreviewSequenceApiV1NumberingSequencesSequenceIdPreviewPost", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PreviewSequence", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1353,9 +1353,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of NumberingSequencePreviewResponse</returns>
-        public async System.Threading.Tasks.Task<NumberingSequencePreviewResponse> PreviewSequenceApiV1NumberingSequencesSequenceIdPreviewPostAsync(string sequenceId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<NumberingSequencePreviewResponse> PreviewSequenceAsync(string sequenceId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<NumberingSequencePreviewResponse> localVarResponse = await PreviewSequenceApiV1NumberingSequencesSequenceIdPreviewPostWithHttpInfoAsync(sequenceId, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<NumberingSequencePreviewResponse> localVarResponse = await PreviewSequenceWithHttpInfoAsync(sequenceId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1367,12 +1367,12 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (NumberingSequencePreviewResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<NumberingSequencePreviewResponse>> PreviewSequenceApiV1NumberingSequencesSequenceIdPreviewPostWithHttpInfoAsync(string sequenceId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<NumberingSequencePreviewResponse>> PreviewSequenceWithHttpInfoAsync(string sequenceId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'sequenceId' is set
             if (sequenceId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'sequenceId' when calling NumberingSequencesApi->PreviewSequenceApiV1NumberingSequencesSequenceIdPreviewPost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'sequenceId' when calling NumberingSequencesApi->PreviewSequence");
             }
 
 
@@ -1400,7 +1400,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("sequence_id", InvoicePDFs.Client.ClientUtils.ParameterToString(sequenceId)); // path parameter
 
-            localVarRequestOptions.Operation = "NumberingSequencesApi.PreviewSequenceApiV1NumberingSequencesSequenceIdPreviewPost";
+            localVarRequestOptions.Operation = "NumberingSequencesApi.PreviewSequence";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -1415,7 +1415,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PreviewSequenceApiV1NumberingSequencesSequenceIdPreviewPost", localVarResponse);
+                Exception _exception = this.ExceptionFactory("PreviewSequence", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1433,9 +1433,9 @@ namespace InvoicePDFs.Api
         /// <param name="numberingSequencePatchRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>NumberingSequenceResponse</returns>
-        public NumberingSequenceResponse UpdateSequenceApiV1NumberingSequencesSequenceIdPatch(string sequenceId, NumberingSequencePatchRequest numberingSequencePatchRequest, int operationIndex = 0)
+        public NumberingSequenceResponse UpdateSequence(string sequenceId, NumberingSequencePatchRequest numberingSequencePatchRequest, int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<NumberingSequenceResponse> localVarResponse = UpdateSequenceApiV1NumberingSequencesSequenceIdPatchWithHttpInfo(sequenceId, numberingSequencePatchRequest);
+            InvoicePDFs.Client.ApiResponse<NumberingSequenceResponse> localVarResponse = UpdateSequenceWithHttpInfo(sequenceId, numberingSequencePatchRequest);
             return localVarResponse.Data;
         }
 
@@ -1447,18 +1447,18 @@ namespace InvoicePDFs.Api
         /// <param name="numberingSequencePatchRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of NumberingSequenceResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<NumberingSequenceResponse> UpdateSequenceApiV1NumberingSequencesSequenceIdPatchWithHttpInfo(string sequenceId, NumberingSequencePatchRequest numberingSequencePatchRequest, int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<NumberingSequenceResponse> UpdateSequenceWithHttpInfo(string sequenceId, NumberingSequencePatchRequest numberingSequencePatchRequest, int operationIndex = 0)
         {
             // verify the required parameter 'sequenceId' is set
             if (sequenceId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'sequenceId' when calling NumberingSequencesApi->UpdateSequenceApiV1NumberingSequencesSequenceIdPatch");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'sequenceId' when calling NumberingSequencesApi->UpdateSequence");
             }
 
             // verify the required parameter 'numberingSequencePatchRequest' is set
             if (numberingSequencePatchRequest == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'numberingSequencePatchRequest' when calling NumberingSequencesApi->UpdateSequenceApiV1NumberingSequencesSequenceIdPatch");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'numberingSequencePatchRequest' when calling NumberingSequencesApi->UpdateSequence");
             }
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -1487,7 +1487,7 @@ namespace InvoicePDFs.Api
             localVarRequestOptions.PathParameters.Add("sequence_id", InvoicePDFs.Client.ClientUtils.ParameterToString(sequenceId)); // path parameter
             localVarRequestOptions.Data = numberingSequencePatchRequest;
 
-            localVarRequestOptions.Operation = "NumberingSequencesApi.UpdateSequenceApiV1NumberingSequencesSequenceIdPatch";
+            localVarRequestOptions.Operation = "NumberingSequencesApi.UpdateSequence";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -1501,7 +1501,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Patch<NumberingSequenceResponse>("/api/v1/numbering-sequences/{sequence_id}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSequenceApiV1NumberingSequencesSequenceIdPatch", localVarResponse);
+                Exception _exception = this.ExceptionFactory("UpdateSequence", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1520,9 +1520,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of NumberingSequenceResponse</returns>
-        public async System.Threading.Tasks.Task<NumberingSequenceResponse> UpdateSequenceApiV1NumberingSequencesSequenceIdPatchAsync(string sequenceId, NumberingSequencePatchRequest numberingSequencePatchRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<NumberingSequenceResponse> UpdateSequenceAsync(string sequenceId, NumberingSequencePatchRequest numberingSequencePatchRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<NumberingSequenceResponse> localVarResponse = await UpdateSequenceApiV1NumberingSequencesSequenceIdPatchWithHttpInfoAsync(sequenceId, numberingSequencePatchRequest, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<NumberingSequenceResponse> localVarResponse = await UpdateSequenceWithHttpInfoAsync(sequenceId, numberingSequencePatchRequest, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1535,18 +1535,18 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (NumberingSequenceResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<NumberingSequenceResponse>> UpdateSequenceApiV1NumberingSequencesSequenceIdPatchWithHttpInfoAsync(string sequenceId, NumberingSequencePatchRequest numberingSequencePatchRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<NumberingSequenceResponse>> UpdateSequenceWithHttpInfoAsync(string sequenceId, NumberingSequencePatchRequest numberingSequencePatchRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'sequenceId' is set
             if (sequenceId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'sequenceId' when calling NumberingSequencesApi->UpdateSequenceApiV1NumberingSequencesSequenceIdPatch");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'sequenceId' when calling NumberingSequencesApi->UpdateSequence");
             }
 
             // verify the required parameter 'numberingSequencePatchRequest' is set
             if (numberingSequencePatchRequest == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'numberingSequencePatchRequest' when calling NumberingSequencesApi->UpdateSequenceApiV1NumberingSequencesSequenceIdPatch");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'numberingSequencePatchRequest' when calling NumberingSequencesApi->UpdateSequence");
             }
 
 
@@ -1576,7 +1576,7 @@ namespace InvoicePDFs.Api
             localVarRequestOptions.PathParameters.Add("sequence_id", InvoicePDFs.Client.ClientUtils.ParameterToString(sequenceId)); // path parameter
             localVarRequestOptions.Data = numberingSequencePatchRequest;
 
-            localVarRequestOptions.Operation = "NumberingSequencesApi.UpdateSequenceApiV1NumberingSequencesSequenceIdPatch";
+            localVarRequestOptions.Operation = "NumberingSequencesApi.UpdateSequence";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -1591,7 +1591,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSequenceApiV1NumberingSequencesSequenceIdPatch", localVarResponse);
+                Exception _exception = this.ExceptionFactory("UpdateSequence", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

@@ -33,7 +33,7 @@ namespace InvoicePDFs.Api
         /// <param name="webhookEndpointCreateRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>WebhookEndpointResponse</returns>
-        WebhookEndpointResponse CreateWebhookEndpointApiV1WebhookEndpointsPost(WebhookEndpointCreateRequest webhookEndpointCreateRequest, int operationIndex = 0);
+        WebhookEndpointResponse CreateWebhookEndpoint(WebhookEndpointCreateRequest webhookEndpointCreateRequest, int operationIndex = 0);
 
         /// <summary>
         /// Create Webhook Endpoint
@@ -45,7 +45,7 @@ namespace InvoicePDFs.Api
         /// <param name="webhookEndpointCreateRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of WebhookEndpointResponse</returns>
-        ApiResponse<WebhookEndpointResponse> CreateWebhookEndpointApiV1WebhookEndpointsPostWithHttpInfo(WebhookEndpointCreateRequest webhookEndpointCreateRequest, int operationIndex = 0);
+        ApiResponse<WebhookEndpointResponse> CreateWebhookEndpointWithHttpInfo(WebhookEndpointCreateRequest webhookEndpointCreateRequest, int operationIndex = 0);
         /// <summary>
         /// Delete Webhook Endpoint
         /// </summary>
@@ -53,7 +53,7 @@ namespace InvoicePDFs.Api
         /// <param name="endpointId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>SimpleBoolResponse</returns>
-        SimpleBoolResponse DeleteWebhookEndpointApiV1WebhookEndpointsEndpointIdDelete(string endpointId, int operationIndex = 0);
+        SimpleBoolResponse DeleteWebhookEndpoint(string endpointId, int operationIndex = 0);
 
         /// <summary>
         /// Delete Webhook Endpoint
@@ -65,7 +65,7 @@ namespace InvoicePDFs.Api
         /// <param name="endpointId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of SimpleBoolResponse</returns>
-        ApiResponse<SimpleBoolResponse> DeleteWebhookEndpointApiV1WebhookEndpointsEndpointIdDeleteWithHttpInfo(string endpointId, int operationIndex = 0);
+        ApiResponse<SimpleBoolResponse> DeleteWebhookEndpointWithHttpInfo(string endpointId, int operationIndex = 0);
         /// <summary>
         /// Get Webhook Delivery
         /// </summary>
@@ -73,7 +73,7 @@ namespace InvoicePDFs.Api
         /// <param name="deliveryId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>WebhookDeliveryResponse</returns>
-        WebhookDeliveryResponse GetWebhookDeliveryApiV1WebhookDeliveriesDeliveryIdGet(string deliveryId, int operationIndex = 0);
+        WebhookDeliveryResponse GetWebhookDelivery(string deliveryId, int operationIndex = 0);
 
         /// <summary>
         /// Get Webhook Delivery
@@ -85,7 +85,7 @@ namespace InvoicePDFs.Api
         /// <param name="deliveryId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of WebhookDeliveryResponse</returns>
-        ApiResponse<WebhookDeliveryResponse> GetWebhookDeliveryApiV1WebhookDeliveriesDeliveryIdGetWithHttpInfo(string deliveryId, int operationIndex = 0);
+        ApiResponse<WebhookDeliveryResponse> GetWebhookDeliveryWithHttpInfo(string deliveryId, int operationIndex = 0);
         /// <summary>
         /// Get Webhook Endpoint
         /// </summary>
@@ -93,7 +93,7 @@ namespace InvoicePDFs.Api
         /// <param name="endpointId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>WebhookEndpointResponse</returns>
-        WebhookEndpointResponse GetWebhookEndpointApiV1WebhookEndpointsEndpointIdGet(string endpointId, int operationIndex = 0);
+        WebhookEndpointResponse GetWebhookEndpoint(string endpointId, int operationIndex = 0);
 
         /// <summary>
         /// Get Webhook Endpoint
@@ -105,7 +105,7 @@ namespace InvoicePDFs.Api
         /// <param name="endpointId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of WebhookEndpointResponse</returns>
-        ApiResponse<WebhookEndpointResponse> GetWebhookEndpointApiV1WebhookEndpointsEndpointIdGetWithHttpInfo(string endpointId, int operationIndex = 0);
+        ApiResponse<WebhookEndpointResponse> GetWebhookEndpointWithHttpInfo(string endpointId, int operationIndex = 0);
         /// <summary>
         /// List Webhook Deliveries
         /// </summary>
@@ -114,7 +114,7 @@ namespace InvoicePDFs.Api
         /// <param name="cursor"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>WebhookDeliveriesListResponse</returns>
-        WebhookDeliveriesListResponse ListWebhookDeliveriesApiV1WebhookDeliveriesGet(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0);
+        WebhookDeliveriesListResponse ListWebhookDeliveries(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// List Webhook Deliveries
@@ -127,7 +127,7 @@ namespace InvoicePDFs.Api
         /// <param name="cursor"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of WebhookDeliveriesListResponse</returns>
-        ApiResponse<WebhookDeliveriesListResponse> ListWebhookDeliveriesApiV1WebhookDeliveriesGetWithHttpInfo(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0);
+        ApiResponse<WebhookDeliveriesListResponse> ListWebhookDeliveriesWithHttpInfo(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0);
         /// <summary>
         /// List Webhook Endpoints
         /// </summary>
@@ -136,7 +136,7 @@ namespace InvoicePDFs.Api
         /// <param name="cursor"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>WebhookEndpointsListResponse</returns>
-        WebhookEndpointsListResponse ListWebhookEndpointsApiV1WebhookEndpointsGet(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0);
+        WebhookEndpointsListResponse ListWebhookEndpoints(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// List Webhook Endpoints
@@ -149,7 +149,7 @@ namespace InvoicePDFs.Api
         /// <param name="cursor"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of WebhookEndpointsListResponse</returns>
-        ApiResponse<WebhookEndpointsListResponse> ListWebhookEndpointsApiV1WebhookEndpointsGetWithHttpInfo(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0);
+        ApiResponse<WebhookEndpointsListResponse> ListWebhookEndpointsWithHttpInfo(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0);
         /// <summary>
         /// Retry Webhook Delivery
         /// </summary>
@@ -157,7 +157,7 @@ namespace InvoicePDFs.Api
         /// <param name="deliveryId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>WebhookDeliveryResponse</returns>
-        WebhookDeliveryResponse RetryWebhookDeliveryApiV1WebhookDeliveriesDeliveryIdRetryPost(string deliveryId, int operationIndex = 0);
+        WebhookDeliveryResponse RetryWebhookDelivery(string deliveryId, int operationIndex = 0);
 
         /// <summary>
         /// Retry Webhook Delivery
@@ -169,7 +169,7 @@ namespace InvoicePDFs.Api
         /// <param name="deliveryId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of WebhookDeliveryResponse</returns>
-        ApiResponse<WebhookDeliveryResponse> RetryWebhookDeliveryApiV1WebhookDeliveriesDeliveryIdRetryPostWithHttpInfo(string deliveryId, int operationIndex = 0);
+        ApiResponse<WebhookDeliveryResponse> RetryWebhookDeliveryWithHttpInfo(string deliveryId, int operationIndex = 0);
         /// <summary>
         /// Rotate Webhook Secret
         /// </summary>
@@ -177,7 +177,7 @@ namespace InvoicePDFs.Api
         /// <param name="endpointId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>WebhookSecretResponse</returns>
-        WebhookSecretResponse RotateWebhookSecretApiV1WebhookEndpointsEndpointIdRotateSecretPost(string endpointId, int operationIndex = 0);
+        WebhookSecretResponse RotateWebhookSecret(string endpointId, int operationIndex = 0);
 
         /// <summary>
         /// Rotate Webhook Secret
@@ -189,7 +189,7 @@ namespace InvoicePDFs.Api
         /// <param name="endpointId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of WebhookSecretResponse</returns>
-        ApiResponse<WebhookSecretResponse> RotateWebhookSecretApiV1WebhookEndpointsEndpointIdRotateSecretPostWithHttpInfo(string endpointId, int operationIndex = 0);
+        ApiResponse<WebhookSecretResponse> RotateWebhookSecretWithHttpInfo(string endpointId, int operationIndex = 0);
         /// <summary>
         /// Test Webhook Endpoint
         /// </summary>
@@ -197,7 +197,7 @@ namespace InvoicePDFs.Api
         /// <param name="endpointId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>WebhookDeliveryResponse</returns>
-        WebhookDeliveryResponse TestWebhookEndpointApiV1WebhookEndpointsEndpointIdTestPost(string endpointId, int operationIndex = 0);
+        WebhookDeliveryResponse TestWebhookEndpoint(string endpointId, int operationIndex = 0);
 
         /// <summary>
         /// Test Webhook Endpoint
@@ -209,7 +209,7 @@ namespace InvoicePDFs.Api
         /// <param name="endpointId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of WebhookDeliveryResponse</returns>
-        ApiResponse<WebhookDeliveryResponse> TestWebhookEndpointApiV1WebhookEndpointsEndpointIdTestPostWithHttpInfo(string endpointId, int operationIndex = 0);
+        ApiResponse<WebhookDeliveryResponse> TestWebhookEndpointWithHttpInfo(string endpointId, int operationIndex = 0);
         /// <summary>
         /// Update Webhook Endpoint
         /// </summary>
@@ -218,7 +218,7 @@ namespace InvoicePDFs.Api
         /// <param name="webhookEndpointPatchRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>WebhookEndpointResponse</returns>
-        WebhookEndpointResponse UpdateWebhookEndpointApiV1WebhookEndpointsEndpointIdPatch(string endpointId, WebhookEndpointPatchRequest webhookEndpointPatchRequest, int operationIndex = 0);
+        WebhookEndpointResponse UpdateWebhookEndpoint(string endpointId, WebhookEndpointPatchRequest webhookEndpointPatchRequest, int operationIndex = 0);
 
         /// <summary>
         /// Update Webhook Endpoint
@@ -231,7 +231,7 @@ namespace InvoicePDFs.Api
         /// <param name="webhookEndpointPatchRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of WebhookEndpointResponse</returns>
-        ApiResponse<WebhookEndpointResponse> UpdateWebhookEndpointApiV1WebhookEndpointsEndpointIdPatchWithHttpInfo(string endpointId, WebhookEndpointPatchRequest webhookEndpointPatchRequest, int operationIndex = 0);
+        ApiResponse<WebhookEndpointResponse> UpdateWebhookEndpointWithHttpInfo(string endpointId, WebhookEndpointPatchRequest webhookEndpointPatchRequest, int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -252,7 +252,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of WebhookEndpointResponse</returns>
-        System.Threading.Tasks.Task<WebhookEndpointResponse> CreateWebhookEndpointApiV1WebhookEndpointsPostAsync(WebhookEndpointCreateRequest webhookEndpointCreateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<WebhookEndpointResponse> CreateWebhookEndpointAsync(WebhookEndpointCreateRequest webhookEndpointCreateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Create Webhook Endpoint
@@ -265,7 +265,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (WebhookEndpointResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<WebhookEndpointResponse>> CreateWebhookEndpointApiV1WebhookEndpointsPostWithHttpInfoAsync(WebhookEndpointCreateRequest webhookEndpointCreateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<WebhookEndpointResponse>> CreateWebhookEndpointWithHttpInfoAsync(WebhookEndpointCreateRequest webhookEndpointCreateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Delete Webhook Endpoint
         /// </summary>
@@ -277,7 +277,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of SimpleBoolResponse</returns>
-        System.Threading.Tasks.Task<SimpleBoolResponse> DeleteWebhookEndpointApiV1WebhookEndpointsEndpointIdDeleteAsync(string endpointId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<SimpleBoolResponse> DeleteWebhookEndpointAsync(string endpointId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Delete Webhook Endpoint
@@ -290,7 +290,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (SimpleBoolResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SimpleBoolResponse>> DeleteWebhookEndpointApiV1WebhookEndpointsEndpointIdDeleteWithHttpInfoAsync(string endpointId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<SimpleBoolResponse>> DeleteWebhookEndpointWithHttpInfoAsync(string endpointId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Get Webhook Delivery
         /// </summary>
@@ -302,7 +302,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of WebhookDeliveryResponse</returns>
-        System.Threading.Tasks.Task<WebhookDeliveryResponse> GetWebhookDeliveryApiV1WebhookDeliveriesDeliveryIdGetAsync(string deliveryId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<WebhookDeliveryResponse> GetWebhookDeliveryAsync(string deliveryId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Get Webhook Delivery
@@ -315,7 +315,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (WebhookDeliveryResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<WebhookDeliveryResponse>> GetWebhookDeliveryApiV1WebhookDeliveriesDeliveryIdGetWithHttpInfoAsync(string deliveryId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<WebhookDeliveryResponse>> GetWebhookDeliveryWithHttpInfoAsync(string deliveryId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Get Webhook Endpoint
         /// </summary>
@@ -327,7 +327,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of WebhookEndpointResponse</returns>
-        System.Threading.Tasks.Task<WebhookEndpointResponse> GetWebhookEndpointApiV1WebhookEndpointsEndpointIdGetAsync(string endpointId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<WebhookEndpointResponse> GetWebhookEndpointAsync(string endpointId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Get Webhook Endpoint
@@ -340,7 +340,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (WebhookEndpointResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<WebhookEndpointResponse>> GetWebhookEndpointApiV1WebhookEndpointsEndpointIdGetWithHttpInfoAsync(string endpointId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<WebhookEndpointResponse>> GetWebhookEndpointWithHttpInfoAsync(string endpointId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// List Webhook Deliveries
         /// </summary>
@@ -353,7 +353,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of WebhookDeliveriesListResponse</returns>
-        System.Threading.Tasks.Task<WebhookDeliveriesListResponse> ListWebhookDeliveriesApiV1WebhookDeliveriesGetAsync(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<WebhookDeliveriesListResponse> ListWebhookDeliveriesAsync(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// List Webhook Deliveries
@@ -367,7 +367,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (WebhookDeliveriesListResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<WebhookDeliveriesListResponse>> ListWebhookDeliveriesApiV1WebhookDeliveriesGetWithHttpInfoAsync(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<WebhookDeliveriesListResponse>> ListWebhookDeliveriesWithHttpInfoAsync(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// List Webhook Endpoints
         /// </summary>
@@ -380,7 +380,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of WebhookEndpointsListResponse</returns>
-        System.Threading.Tasks.Task<WebhookEndpointsListResponse> ListWebhookEndpointsApiV1WebhookEndpointsGetAsync(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<WebhookEndpointsListResponse> ListWebhookEndpointsAsync(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// List Webhook Endpoints
@@ -394,7 +394,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (WebhookEndpointsListResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<WebhookEndpointsListResponse>> ListWebhookEndpointsApiV1WebhookEndpointsGetWithHttpInfoAsync(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<WebhookEndpointsListResponse>> ListWebhookEndpointsWithHttpInfoAsync(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Retry Webhook Delivery
         /// </summary>
@@ -406,7 +406,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of WebhookDeliveryResponse</returns>
-        System.Threading.Tasks.Task<WebhookDeliveryResponse> RetryWebhookDeliveryApiV1WebhookDeliveriesDeliveryIdRetryPostAsync(string deliveryId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<WebhookDeliveryResponse> RetryWebhookDeliveryAsync(string deliveryId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Retry Webhook Delivery
@@ -419,7 +419,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (WebhookDeliveryResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<WebhookDeliveryResponse>> RetryWebhookDeliveryApiV1WebhookDeliveriesDeliveryIdRetryPostWithHttpInfoAsync(string deliveryId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<WebhookDeliveryResponse>> RetryWebhookDeliveryWithHttpInfoAsync(string deliveryId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Rotate Webhook Secret
         /// </summary>
@@ -431,7 +431,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of WebhookSecretResponse</returns>
-        System.Threading.Tasks.Task<WebhookSecretResponse> RotateWebhookSecretApiV1WebhookEndpointsEndpointIdRotateSecretPostAsync(string endpointId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<WebhookSecretResponse> RotateWebhookSecretAsync(string endpointId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Rotate Webhook Secret
@@ -444,7 +444,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (WebhookSecretResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<WebhookSecretResponse>> RotateWebhookSecretApiV1WebhookEndpointsEndpointIdRotateSecretPostWithHttpInfoAsync(string endpointId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<WebhookSecretResponse>> RotateWebhookSecretWithHttpInfoAsync(string endpointId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Test Webhook Endpoint
         /// </summary>
@@ -456,7 +456,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of WebhookDeliveryResponse</returns>
-        System.Threading.Tasks.Task<WebhookDeliveryResponse> TestWebhookEndpointApiV1WebhookEndpointsEndpointIdTestPostAsync(string endpointId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<WebhookDeliveryResponse> TestWebhookEndpointAsync(string endpointId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Test Webhook Endpoint
@@ -469,7 +469,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (WebhookDeliveryResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<WebhookDeliveryResponse>> TestWebhookEndpointApiV1WebhookEndpointsEndpointIdTestPostWithHttpInfoAsync(string endpointId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<WebhookDeliveryResponse>> TestWebhookEndpointWithHttpInfoAsync(string endpointId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Update Webhook Endpoint
         /// </summary>
@@ -482,7 +482,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of WebhookEndpointResponse</returns>
-        System.Threading.Tasks.Task<WebhookEndpointResponse> UpdateWebhookEndpointApiV1WebhookEndpointsEndpointIdPatchAsync(string endpointId, WebhookEndpointPatchRequest webhookEndpointPatchRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<WebhookEndpointResponse> UpdateWebhookEndpointAsync(string endpointId, WebhookEndpointPatchRequest webhookEndpointPatchRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Update Webhook Endpoint
@@ -496,7 +496,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (WebhookEndpointResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<WebhookEndpointResponse>> UpdateWebhookEndpointApiV1WebhookEndpointsEndpointIdPatchWithHttpInfoAsync(string endpointId, WebhookEndpointPatchRequest webhookEndpointPatchRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<WebhookEndpointResponse>> UpdateWebhookEndpointWithHttpInfoAsync(string endpointId, WebhookEndpointPatchRequest webhookEndpointPatchRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -624,9 +624,9 @@ namespace InvoicePDFs.Api
         /// <param name="webhookEndpointCreateRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>WebhookEndpointResponse</returns>
-        public WebhookEndpointResponse CreateWebhookEndpointApiV1WebhookEndpointsPost(WebhookEndpointCreateRequest webhookEndpointCreateRequest, int operationIndex = 0)
+        public WebhookEndpointResponse CreateWebhookEndpoint(WebhookEndpointCreateRequest webhookEndpointCreateRequest, int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<WebhookEndpointResponse> localVarResponse = CreateWebhookEndpointApiV1WebhookEndpointsPostWithHttpInfo(webhookEndpointCreateRequest);
+            InvoicePDFs.Client.ApiResponse<WebhookEndpointResponse> localVarResponse = CreateWebhookEndpointWithHttpInfo(webhookEndpointCreateRequest);
             return localVarResponse.Data;
         }
 
@@ -637,12 +637,12 @@ namespace InvoicePDFs.Api
         /// <param name="webhookEndpointCreateRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of WebhookEndpointResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<WebhookEndpointResponse> CreateWebhookEndpointApiV1WebhookEndpointsPostWithHttpInfo(WebhookEndpointCreateRequest webhookEndpointCreateRequest, int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<WebhookEndpointResponse> CreateWebhookEndpointWithHttpInfo(WebhookEndpointCreateRequest webhookEndpointCreateRequest, int operationIndex = 0)
         {
             // verify the required parameter 'webhookEndpointCreateRequest' is set
             if (webhookEndpointCreateRequest == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'webhookEndpointCreateRequest' when calling WebhooksApi->CreateWebhookEndpointApiV1WebhookEndpointsPost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'webhookEndpointCreateRequest' when calling WebhooksApi->CreateWebhookEndpoint");
             }
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -670,7 +670,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.Data = webhookEndpointCreateRequest;
 
-            localVarRequestOptions.Operation = "WebhooksApi.CreateWebhookEndpointApiV1WebhookEndpointsPost";
+            localVarRequestOptions.Operation = "WebhooksApi.CreateWebhookEndpoint";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -684,7 +684,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Post<WebhookEndpointResponse>("/api/v1/webhook-endpoints", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("CreateWebhookEndpointApiV1WebhookEndpointsPost", localVarResponse);
+                Exception _exception = this.ExceptionFactory("CreateWebhookEndpoint", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -702,9 +702,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of WebhookEndpointResponse</returns>
-        public async System.Threading.Tasks.Task<WebhookEndpointResponse> CreateWebhookEndpointApiV1WebhookEndpointsPostAsync(WebhookEndpointCreateRequest webhookEndpointCreateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<WebhookEndpointResponse> CreateWebhookEndpointAsync(WebhookEndpointCreateRequest webhookEndpointCreateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<WebhookEndpointResponse> localVarResponse = await CreateWebhookEndpointApiV1WebhookEndpointsPostWithHttpInfoAsync(webhookEndpointCreateRequest, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<WebhookEndpointResponse> localVarResponse = await CreateWebhookEndpointWithHttpInfoAsync(webhookEndpointCreateRequest, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -716,12 +716,12 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (WebhookEndpointResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<WebhookEndpointResponse>> CreateWebhookEndpointApiV1WebhookEndpointsPostWithHttpInfoAsync(WebhookEndpointCreateRequest webhookEndpointCreateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<WebhookEndpointResponse>> CreateWebhookEndpointWithHttpInfoAsync(WebhookEndpointCreateRequest webhookEndpointCreateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'webhookEndpointCreateRequest' is set
             if (webhookEndpointCreateRequest == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'webhookEndpointCreateRequest' when calling WebhooksApi->CreateWebhookEndpointApiV1WebhookEndpointsPost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'webhookEndpointCreateRequest' when calling WebhooksApi->CreateWebhookEndpoint");
             }
 
 
@@ -750,7 +750,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.Data = webhookEndpointCreateRequest;
 
-            localVarRequestOptions.Operation = "WebhooksApi.CreateWebhookEndpointApiV1WebhookEndpointsPost";
+            localVarRequestOptions.Operation = "WebhooksApi.CreateWebhookEndpoint";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -765,7 +765,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("CreateWebhookEndpointApiV1WebhookEndpointsPost", localVarResponse);
+                Exception _exception = this.ExceptionFactory("CreateWebhookEndpoint", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -782,9 +782,9 @@ namespace InvoicePDFs.Api
         /// <param name="endpointId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>SimpleBoolResponse</returns>
-        public SimpleBoolResponse DeleteWebhookEndpointApiV1WebhookEndpointsEndpointIdDelete(string endpointId, int operationIndex = 0)
+        public SimpleBoolResponse DeleteWebhookEndpoint(string endpointId, int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<SimpleBoolResponse> localVarResponse = DeleteWebhookEndpointApiV1WebhookEndpointsEndpointIdDeleteWithHttpInfo(endpointId);
+            InvoicePDFs.Client.ApiResponse<SimpleBoolResponse> localVarResponse = DeleteWebhookEndpointWithHttpInfo(endpointId);
             return localVarResponse.Data;
         }
 
@@ -795,12 +795,12 @@ namespace InvoicePDFs.Api
         /// <param name="endpointId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of SimpleBoolResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<SimpleBoolResponse> DeleteWebhookEndpointApiV1WebhookEndpointsEndpointIdDeleteWithHttpInfo(string endpointId, int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<SimpleBoolResponse> DeleteWebhookEndpointWithHttpInfo(string endpointId, int operationIndex = 0)
         {
             // verify the required parameter 'endpointId' is set
             if (endpointId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'endpointId' when calling WebhooksApi->DeleteWebhookEndpointApiV1WebhookEndpointsEndpointIdDelete");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'endpointId' when calling WebhooksApi->DeleteWebhookEndpoint");
             }
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -827,7 +827,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("endpoint_id", InvoicePDFs.Client.ClientUtils.ParameterToString(endpointId)); // path parameter
 
-            localVarRequestOptions.Operation = "WebhooksApi.DeleteWebhookEndpointApiV1WebhookEndpointsEndpointIdDelete";
+            localVarRequestOptions.Operation = "WebhooksApi.DeleteWebhookEndpoint";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -841,7 +841,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Delete<SimpleBoolResponse>("/api/v1/webhook-endpoints/{endpoint_id}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteWebhookEndpointApiV1WebhookEndpointsEndpointIdDelete", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteWebhookEndpoint", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -859,9 +859,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of SimpleBoolResponse</returns>
-        public async System.Threading.Tasks.Task<SimpleBoolResponse> DeleteWebhookEndpointApiV1WebhookEndpointsEndpointIdDeleteAsync(string endpointId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<SimpleBoolResponse> DeleteWebhookEndpointAsync(string endpointId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<SimpleBoolResponse> localVarResponse = await DeleteWebhookEndpointApiV1WebhookEndpointsEndpointIdDeleteWithHttpInfoAsync(endpointId, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<SimpleBoolResponse> localVarResponse = await DeleteWebhookEndpointWithHttpInfoAsync(endpointId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -873,12 +873,12 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (SimpleBoolResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<SimpleBoolResponse>> DeleteWebhookEndpointApiV1WebhookEndpointsEndpointIdDeleteWithHttpInfoAsync(string endpointId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<SimpleBoolResponse>> DeleteWebhookEndpointWithHttpInfoAsync(string endpointId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'endpointId' is set
             if (endpointId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'endpointId' when calling WebhooksApi->DeleteWebhookEndpointApiV1WebhookEndpointsEndpointIdDelete");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'endpointId' when calling WebhooksApi->DeleteWebhookEndpoint");
             }
 
 
@@ -906,7 +906,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("endpoint_id", InvoicePDFs.Client.ClientUtils.ParameterToString(endpointId)); // path parameter
 
-            localVarRequestOptions.Operation = "WebhooksApi.DeleteWebhookEndpointApiV1WebhookEndpointsEndpointIdDelete";
+            localVarRequestOptions.Operation = "WebhooksApi.DeleteWebhookEndpoint";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -921,7 +921,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteWebhookEndpointApiV1WebhookEndpointsEndpointIdDelete", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteWebhookEndpoint", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -938,9 +938,9 @@ namespace InvoicePDFs.Api
         /// <param name="deliveryId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>WebhookDeliveryResponse</returns>
-        public WebhookDeliveryResponse GetWebhookDeliveryApiV1WebhookDeliveriesDeliveryIdGet(string deliveryId, int operationIndex = 0)
+        public WebhookDeliveryResponse GetWebhookDelivery(string deliveryId, int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<WebhookDeliveryResponse> localVarResponse = GetWebhookDeliveryApiV1WebhookDeliveriesDeliveryIdGetWithHttpInfo(deliveryId);
+            InvoicePDFs.Client.ApiResponse<WebhookDeliveryResponse> localVarResponse = GetWebhookDeliveryWithHttpInfo(deliveryId);
             return localVarResponse.Data;
         }
 
@@ -951,12 +951,12 @@ namespace InvoicePDFs.Api
         /// <param name="deliveryId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of WebhookDeliveryResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<WebhookDeliveryResponse> GetWebhookDeliveryApiV1WebhookDeliveriesDeliveryIdGetWithHttpInfo(string deliveryId, int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<WebhookDeliveryResponse> GetWebhookDeliveryWithHttpInfo(string deliveryId, int operationIndex = 0)
         {
             // verify the required parameter 'deliveryId' is set
             if (deliveryId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'deliveryId' when calling WebhooksApi->GetWebhookDeliveryApiV1WebhookDeliveriesDeliveryIdGet");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'deliveryId' when calling WebhooksApi->GetWebhookDelivery");
             }
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -983,7 +983,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("delivery_id", InvoicePDFs.Client.ClientUtils.ParameterToString(deliveryId)); // path parameter
 
-            localVarRequestOptions.Operation = "WebhooksApi.GetWebhookDeliveryApiV1WebhookDeliveriesDeliveryIdGet";
+            localVarRequestOptions.Operation = "WebhooksApi.GetWebhookDelivery";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -997,7 +997,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Get<WebhookDeliveryResponse>("/api/v1/webhook-deliveries/{delivery_id}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetWebhookDeliveryApiV1WebhookDeliveriesDeliveryIdGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetWebhookDelivery", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1015,9 +1015,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of WebhookDeliveryResponse</returns>
-        public async System.Threading.Tasks.Task<WebhookDeliveryResponse> GetWebhookDeliveryApiV1WebhookDeliveriesDeliveryIdGetAsync(string deliveryId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<WebhookDeliveryResponse> GetWebhookDeliveryAsync(string deliveryId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<WebhookDeliveryResponse> localVarResponse = await GetWebhookDeliveryApiV1WebhookDeliveriesDeliveryIdGetWithHttpInfoAsync(deliveryId, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<WebhookDeliveryResponse> localVarResponse = await GetWebhookDeliveryWithHttpInfoAsync(deliveryId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1029,12 +1029,12 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (WebhookDeliveryResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<WebhookDeliveryResponse>> GetWebhookDeliveryApiV1WebhookDeliveriesDeliveryIdGetWithHttpInfoAsync(string deliveryId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<WebhookDeliveryResponse>> GetWebhookDeliveryWithHttpInfoAsync(string deliveryId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'deliveryId' is set
             if (deliveryId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'deliveryId' when calling WebhooksApi->GetWebhookDeliveryApiV1WebhookDeliveriesDeliveryIdGet");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'deliveryId' when calling WebhooksApi->GetWebhookDelivery");
             }
 
 
@@ -1062,7 +1062,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("delivery_id", InvoicePDFs.Client.ClientUtils.ParameterToString(deliveryId)); // path parameter
 
-            localVarRequestOptions.Operation = "WebhooksApi.GetWebhookDeliveryApiV1WebhookDeliveriesDeliveryIdGet";
+            localVarRequestOptions.Operation = "WebhooksApi.GetWebhookDelivery";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -1077,7 +1077,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetWebhookDeliveryApiV1WebhookDeliveriesDeliveryIdGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetWebhookDelivery", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1094,9 +1094,9 @@ namespace InvoicePDFs.Api
         /// <param name="endpointId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>WebhookEndpointResponse</returns>
-        public WebhookEndpointResponse GetWebhookEndpointApiV1WebhookEndpointsEndpointIdGet(string endpointId, int operationIndex = 0)
+        public WebhookEndpointResponse GetWebhookEndpoint(string endpointId, int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<WebhookEndpointResponse> localVarResponse = GetWebhookEndpointApiV1WebhookEndpointsEndpointIdGetWithHttpInfo(endpointId);
+            InvoicePDFs.Client.ApiResponse<WebhookEndpointResponse> localVarResponse = GetWebhookEndpointWithHttpInfo(endpointId);
             return localVarResponse.Data;
         }
 
@@ -1107,12 +1107,12 @@ namespace InvoicePDFs.Api
         /// <param name="endpointId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of WebhookEndpointResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<WebhookEndpointResponse> GetWebhookEndpointApiV1WebhookEndpointsEndpointIdGetWithHttpInfo(string endpointId, int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<WebhookEndpointResponse> GetWebhookEndpointWithHttpInfo(string endpointId, int operationIndex = 0)
         {
             // verify the required parameter 'endpointId' is set
             if (endpointId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'endpointId' when calling WebhooksApi->GetWebhookEndpointApiV1WebhookEndpointsEndpointIdGet");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'endpointId' when calling WebhooksApi->GetWebhookEndpoint");
             }
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -1139,7 +1139,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("endpoint_id", InvoicePDFs.Client.ClientUtils.ParameterToString(endpointId)); // path parameter
 
-            localVarRequestOptions.Operation = "WebhooksApi.GetWebhookEndpointApiV1WebhookEndpointsEndpointIdGet";
+            localVarRequestOptions.Operation = "WebhooksApi.GetWebhookEndpoint";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -1153,7 +1153,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Get<WebhookEndpointResponse>("/api/v1/webhook-endpoints/{endpoint_id}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetWebhookEndpointApiV1WebhookEndpointsEndpointIdGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetWebhookEndpoint", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1171,9 +1171,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of WebhookEndpointResponse</returns>
-        public async System.Threading.Tasks.Task<WebhookEndpointResponse> GetWebhookEndpointApiV1WebhookEndpointsEndpointIdGetAsync(string endpointId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<WebhookEndpointResponse> GetWebhookEndpointAsync(string endpointId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<WebhookEndpointResponse> localVarResponse = await GetWebhookEndpointApiV1WebhookEndpointsEndpointIdGetWithHttpInfoAsync(endpointId, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<WebhookEndpointResponse> localVarResponse = await GetWebhookEndpointWithHttpInfoAsync(endpointId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1185,12 +1185,12 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (WebhookEndpointResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<WebhookEndpointResponse>> GetWebhookEndpointApiV1WebhookEndpointsEndpointIdGetWithHttpInfoAsync(string endpointId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<WebhookEndpointResponse>> GetWebhookEndpointWithHttpInfoAsync(string endpointId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'endpointId' is set
             if (endpointId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'endpointId' when calling WebhooksApi->GetWebhookEndpointApiV1WebhookEndpointsEndpointIdGet");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'endpointId' when calling WebhooksApi->GetWebhookEndpoint");
             }
 
 
@@ -1218,7 +1218,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("endpoint_id", InvoicePDFs.Client.ClientUtils.ParameterToString(endpointId)); // path parameter
 
-            localVarRequestOptions.Operation = "WebhooksApi.GetWebhookEndpointApiV1WebhookEndpointsEndpointIdGet";
+            localVarRequestOptions.Operation = "WebhooksApi.GetWebhookEndpoint";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -1233,7 +1233,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetWebhookEndpointApiV1WebhookEndpointsEndpointIdGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetWebhookEndpoint", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1251,9 +1251,9 @@ namespace InvoicePDFs.Api
         /// <param name="cursor"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>WebhookDeliveriesListResponse</returns>
-        public WebhookDeliveriesListResponse ListWebhookDeliveriesApiV1WebhookDeliveriesGet(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0)
+        public WebhookDeliveriesListResponse ListWebhookDeliveries(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<WebhookDeliveriesListResponse> localVarResponse = ListWebhookDeliveriesApiV1WebhookDeliveriesGetWithHttpInfo(limit, cursor);
+            InvoicePDFs.Client.ApiResponse<WebhookDeliveriesListResponse> localVarResponse = ListWebhookDeliveriesWithHttpInfo(limit, cursor);
             return localVarResponse.Data;
         }
 
@@ -1265,7 +1265,7 @@ namespace InvoicePDFs.Api
         /// <param name="cursor"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of WebhookDeliveriesListResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<WebhookDeliveriesListResponse> ListWebhookDeliveriesApiV1WebhookDeliveriesGetWithHttpInfo(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<WebhookDeliveriesListResponse> ListWebhookDeliveriesWithHttpInfo(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0)
         {
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
 
@@ -1298,7 +1298,7 @@ namespace InvoicePDFs.Api
                 localVarRequestOptions.QueryParameters.Add(InvoicePDFs.Client.ClientUtils.ParameterToMultiMap("", "cursor", cursor));
             }
 
-            localVarRequestOptions.Operation = "WebhooksApi.ListWebhookDeliveriesApiV1WebhookDeliveriesGet";
+            localVarRequestOptions.Operation = "WebhooksApi.ListWebhookDeliveries";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -1312,7 +1312,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Get<WebhookDeliveriesListResponse>("/api/v1/webhook-deliveries", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListWebhookDeliveriesApiV1WebhookDeliveriesGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("ListWebhookDeliveries", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1331,9 +1331,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of WebhookDeliveriesListResponse</returns>
-        public async System.Threading.Tasks.Task<WebhookDeliveriesListResponse> ListWebhookDeliveriesApiV1WebhookDeliveriesGetAsync(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<WebhookDeliveriesListResponse> ListWebhookDeliveriesAsync(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<WebhookDeliveriesListResponse> localVarResponse = await ListWebhookDeliveriesApiV1WebhookDeliveriesGetWithHttpInfoAsync(limit, cursor, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<WebhookDeliveriesListResponse> localVarResponse = await ListWebhookDeliveriesWithHttpInfoAsync(limit, cursor, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1346,7 +1346,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (WebhookDeliveriesListResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<WebhookDeliveriesListResponse>> ListWebhookDeliveriesApiV1WebhookDeliveriesGetWithHttpInfoAsync(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<WebhookDeliveriesListResponse>> ListWebhookDeliveriesWithHttpInfoAsync(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -1380,7 +1380,7 @@ namespace InvoicePDFs.Api
                 localVarRequestOptions.QueryParameters.Add(InvoicePDFs.Client.ClientUtils.ParameterToMultiMap("", "cursor", cursor));
             }
 
-            localVarRequestOptions.Operation = "WebhooksApi.ListWebhookDeliveriesApiV1WebhookDeliveriesGet";
+            localVarRequestOptions.Operation = "WebhooksApi.ListWebhookDeliveries";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -1395,7 +1395,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListWebhookDeliveriesApiV1WebhookDeliveriesGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("ListWebhookDeliveries", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1413,9 +1413,9 @@ namespace InvoicePDFs.Api
         /// <param name="cursor"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>WebhookEndpointsListResponse</returns>
-        public WebhookEndpointsListResponse ListWebhookEndpointsApiV1WebhookEndpointsGet(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0)
+        public WebhookEndpointsListResponse ListWebhookEndpoints(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<WebhookEndpointsListResponse> localVarResponse = ListWebhookEndpointsApiV1WebhookEndpointsGetWithHttpInfo(limit, cursor);
+            InvoicePDFs.Client.ApiResponse<WebhookEndpointsListResponse> localVarResponse = ListWebhookEndpointsWithHttpInfo(limit, cursor);
             return localVarResponse.Data;
         }
 
@@ -1427,7 +1427,7 @@ namespace InvoicePDFs.Api
         /// <param name="cursor"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of WebhookEndpointsListResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<WebhookEndpointsListResponse> ListWebhookEndpointsApiV1WebhookEndpointsGetWithHttpInfo(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<WebhookEndpointsListResponse> ListWebhookEndpointsWithHttpInfo(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0)
         {
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
 
@@ -1460,7 +1460,7 @@ namespace InvoicePDFs.Api
                 localVarRequestOptions.QueryParameters.Add(InvoicePDFs.Client.ClientUtils.ParameterToMultiMap("", "cursor", cursor));
             }
 
-            localVarRequestOptions.Operation = "WebhooksApi.ListWebhookEndpointsApiV1WebhookEndpointsGet";
+            localVarRequestOptions.Operation = "WebhooksApi.ListWebhookEndpoints";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -1474,7 +1474,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Get<WebhookEndpointsListResponse>("/api/v1/webhook-endpoints", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListWebhookEndpointsApiV1WebhookEndpointsGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("ListWebhookEndpoints", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1493,9 +1493,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of WebhookEndpointsListResponse</returns>
-        public async System.Threading.Tasks.Task<WebhookEndpointsListResponse> ListWebhookEndpointsApiV1WebhookEndpointsGetAsync(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<WebhookEndpointsListResponse> ListWebhookEndpointsAsync(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<WebhookEndpointsListResponse> localVarResponse = await ListWebhookEndpointsApiV1WebhookEndpointsGetWithHttpInfoAsync(limit, cursor, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<WebhookEndpointsListResponse> localVarResponse = await ListWebhookEndpointsWithHttpInfoAsync(limit, cursor, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1508,7 +1508,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (WebhookEndpointsListResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<WebhookEndpointsListResponse>> ListWebhookEndpointsApiV1WebhookEndpointsGetWithHttpInfoAsync(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<WebhookEndpointsListResponse>> ListWebhookEndpointsWithHttpInfoAsync(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -1542,7 +1542,7 @@ namespace InvoicePDFs.Api
                 localVarRequestOptions.QueryParameters.Add(InvoicePDFs.Client.ClientUtils.ParameterToMultiMap("", "cursor", cursor));
             }
 
-            localVarRequestOptions.Operation = "WebhooksApi.ListWebhookEndpointsApiV1WebhookEndpointsGet";
+            localVarRequestOptions.Operation = "WebhooksApi.ListWebhookEndpoints";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -1557,7 +1557,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListWebhookEndpointsApiV1WebhookEndpointsGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("ListWebhookEndpoints", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1574,9 +1574,9 @@ namespace InvoicePDFs.Api
         /// <param name="deliveryId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>WebhookDeliveryResponse</returns>
-        public WebhookDeliveryResponse RetryWebhookDeliveryApiV1WebhookDeliveriesDeliveryIdRetryPost(string deliveryId, int operationIndex = 0)
+        public WebhookDeliveryResponse RetryWebhookDelivery(string deliveryId, int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<WebhookDeliveryResponse> localVarResponse = RetryWebhookDeliveryApiV1WebhookDeliveriesDeliveryIdRetryPostWithHttpInfo(deliveryId);
+            InvoicePDFs.Client.ApiResponse<WebhookDeliveryResponse> localVarResponse = RetryWebhookDeliveryWithHttpInfo(deliveryId);
             return localVarResponse.Data;
         }
 
@@ -1587,12 +1587,12 @@ namespace InvoicePDFs.Api
         /// <param name="deliveryId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of WebhookDeliveryResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<WebhookDeliveryResponse> RetryWebhookDeliveryApiV1WebhookDeliveriesDeliveryIdRetryPostWithHttpInfo(string deliveryId, int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<WebhookDeliveryResponse> RetryWebhookDeliveryWithHttpInfo(string deliveryId, int operationIndex = 0)
         {
             // verify the required parameter 'deliveryId' is set
             if (deliveryId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'deliveryId' when calling WebhooksApi->RetryWebhookDeliveryApiV1WebhookDeliveriesDeliveryIdRetryPost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'deliveryId' when calling WebhooksApi->RetryWebhookDelivery");
             }
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -1619,7 +1619,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("delivery_id", InvoicePDFs.Client.ClientUtils.ParameterToString(deliveryId)); // path parameter
 
-            localVarRequestOptions.Operation = "WebhooksApi.RetryWebhookDeliveryApiV1WebhookDeliveriesDeliveryIdRetryPost";
+            localVarRequestOptions.Operation = "WebhooksApi.RetryWebhookDelivery";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -1633,7 +1633,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Post<WebhookDeliveryResponse>("/api/v1/webhook-deliveries/{delivery_id}/retry", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("RetryWebhookDeliveryApiV1WebhookDeliveriesDeliveryIdRetryPost", localVarResponse);
+                Exception _exception = this.ExceptionFactory("RetryWebhookDelivery", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1651,9 +1651,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of WebhookDeliveryResponse</returns>
-        public async System.Threading.Tasks.Task<WebhookDeliveryResponse> RetryWebhookDeliveryApiV1WebhookDeliveriesDeliveryIdRetryPostAsync(string deliveryId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<WebhookDeliveryResponse> RetryWebhookDeliveryAsync(string deliveryId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<WebhookDeliveryResponse> localVarResponse = await RetryWebhookDeliveryApiV1WebhookDeliveriesDeliveryIdRetryPostWithHttpInfoAsync(deliveryId, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<WebhookDeliveryResponse> localVarResponse = await RetryWebhookDeliveryWithHttpInfoAsync(deliveryId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1665,12 +1665,12 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (WebhookDeliveryResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<WebhookDeliveryResponse>> RetryWebhookDeliveryApiV1WebhookDeliveriesDeliveryIdRetryPostWithHttpInfoAsync(string deliveryId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<WebhookDeliveryResponse>> RetryWebhookDeliveryWithHttpInfoAsync(string deliveryId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'deliveryId' is set
             if (deliveryId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'deliveryId' when calling WebhooksApi->RetryWebhookDeliveryApiV1WebhookDeliveriesDeliveryIdRetryPost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'deliveryId' when calling WebhooksApi->RetryWebhookDelivery");
             }
 
 
@@ -1698,7 +1698,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("delivery_id", InvoicePDFs.Client.ClientUtils.ParameterToString(deliveryId)); // path parameter
 
-            localVarRequestOptions.Operation = "WebhooksApi.RetryWebhookDeliveryApiV1WebhookDeliveriesDeliveryIdRetryPost";
+            localVarRequestOptions.Operation = "WebhooksApi.RetryWebhookDelivery";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -1713,7 +1713,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("RetryWebhookDeliveryApiV1WebhookDeliveriesDeliveryIdRetryPost", localVarResponse);
+                Exception _exception = this.ExceptionFactory("RetryWebhookDelivery", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1730,9 +1730,9 @@ namespace InvoicePDFs.Api
         /// <param name="endpointId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>WebhookSecretResponse</returns>
-        public WebhookSecretResponse RotateWebhookSecretApiV1WebhookEndpointsEndpointIdRotateSecretPost(string endpointId, int operationIndex = 0)
+        public WebhookSecretResponse RotateWebhookSecret(string endpointId, int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<WebhookSecretResponse> localVarResponse = RotateWebhookSecretApiV1WebhookEndpointsEndpointIdRotateSecretPostWithHttpInfo(endpointId);
+            InvoicePDFs.Client.ApiResponse<WebhookSecretResponse> localVarResponse = RotateWebhookSecretWithHttpInfo(endpointId);
             return localVarResponse.Data;
         }
 
@@ -1743,12 +1743,12 @@ namespace InvoicePDFs.Api
         /// <param name="endpointId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of WebhookSecretResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<WebhookSecretResponse> RotateWebhookSecretApiV1WebhookEndpointsEndpointIdRotateSecretPostWithHttpInfo(string endpointId, int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<WebhookSecretResponse> RotateWebhookSecretWithHttpInfo(string endpointId, int operationIndex = 0)
         {
             // verify the required parameter 'endpointId' is set
             if (endpointId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'endpointId' when calling WebhooksApi->RotateWebhookSecretApiV1WebhookEndpointsEndpointIdRotateSecretPost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'endpointId' when calling WebhooksApi->RotateWebhookSecret");
             }
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -1775,7 +1775,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("endpoint_id", InvoicePDFs.Client.ClientUtils.ParameterToString(endpointId)); // path parameter
 
-            localVarRequestOptions.Operation = "WebhooksApi.RotateWebhookSecretApiV1WebhookEndpointsEndpointIdRotateSecretPost";
+            localVarRequestOptions.Operation = "WebhooksApi.RotateWebhookSecret";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -1789,7 +1789,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Post<WebhookSecretResponse>("/api/v1/webhook-endpoints/{endpoint_id}/rotate-secret", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("RotateWebhookSecretApiV1WebhookEndpointsEndpointIdRotateSecretPost", localVarResponse);
+                Exception _exception = this.ExceptionFactory("RotateWebhookSecret", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1807,9 +1807,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of WebhookSecretResponse</returns>
-        public async System.Threading.Tasks.Task<WebhookSecretResponse> RotateWebhookSecretApiV1WebhookEndpointsEndpointIdRotateSecretPostAsync(string endpointId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<WebhookSecretResponse> RotateWebhookSecretAsync(string endpointId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<WebhookSecretResponse> localVarResponse = await RotateWebhookSecretApiV1WebhookEndpointsEndpointIdRotateSecretPostWithHttpInfoAsync(endpointId, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<WebhookSecretResponse> localVarResponse = await RotateWebhookSecretWithHttpInfoAsync(endpointId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1821,12 +1821,12 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (WebhookSecretResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<WebhookSecretResponse>> RotateWebhookSecretApiV1WebhookEndpointsEndpointIdRotateSecretPostWithHttpInfoAsync(string endpointId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<WebhookSecretResponse>> RotateWebhookSecretWithHttpInfoAsync(string endpointId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'endpointId' is set
             if (endpointId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'endpointId' when calling WebhooksApi->RotateWebhookSecretApiV1WebhookEndpointsEndpointIdRotateSecretPost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'endpointId' when calling WebhooksApi->RotateWebhookSecret");
             }
 
 
@@ -1854,7 +1854,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("endpoint_id", InvoicePDFs.Client.ClientUtils.ParameterToString(endpointId)); // path parameter
 
-            localVarRequestOptions.Operation = "WebhooksApi.RotateWebhookSecretApiV1WebhookEndpointsEndpointIdRotateSecretPost";
+            localVarRequestOptions.Operation = "WebhooksApi.RotateWebhookSecret";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -1869,7 +1869,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("RotateWebhookSecretApiV1WebhookEndpointsEndpointIdRotateSecretPost", localVarResponse);
+                Exception _exception = this.ExceptionFactory("RotateWebhookSecret", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1886,9 +1886,9 @@ namespace InvoicePDFs.Api
         /// <param name="endpointId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>WebhookDeliveryResponse</returns>
-        public WebhookDeliveryResponse TestWebhookEndpointApiV1WebhookEndpointsEndpointIdTestPost(string endpointId, int operationIndex = 0)
+        public WebhookDeliveryResponse TestWebhookEndpoint(string endpointId, int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<WebhookDeliveryResponse> localVarResponse = TestWebhookEndpointApiV1WebhookEndpointsEndpointIdTestPostWithHttpInfo(endpointId);
+            InvoicePDFs.Client.ApiResponse<WebhookDeliveryResponse> localVarResponse = TestWebhookEndpointWithHttpInfo(endpointId);
             return localVarResponse.Data;
         }
 
@@ -1899,12 +1899,12 @@ namespace InvoicePDFs.Api
         /// <param name="endpointId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of WebhookDeliveryResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<WebhookDeliveryResponse> TestWebhookEndpointApiV1WebhookEndpointsEndpointIdTestPostWithHttpInfo(string endpointId, int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<WebhookDeliveryResponse> TestWebhookEndpointWithHttpInfo(string endpointId, int operationIndex = 0)
         {
             // verify the required parameter 'endpointId' is set
             if (endpointId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'endpointId' when calling WebhooksApi->TestWebhookEndpointApiV1WebhookEndpointsEndpointIdTestPost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'endpointId' when calling WebhooksApi->TestWebhookEndpoint");
             }
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -1931,7 +1931,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("endpoint_id", InvoicePDFs.Client.ClientUtils.ParameterToString(endpointId)); // path parameter
 
-            localVarRequestOptions.Operation = "WebhooksApi.TestWebhookEndpointApiV1WebhookEndpointsEndpointIdTestPost";
+            localVarRequestOptions.Operation = "WebhooksApi.TestWebhookEndpoint";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -1945,7 +1945,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Post<WebhookDeliveryResponse>("/api/v1/webhook-endpoints/{endpoint_id}/test", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("TestWebhookEndpointApiV1WebhookEndpointsEndpointIdTestPost", localVarResponse);
+                Exception _exception = this.ExceptionFactory("TestWebhookEndpoint", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1963,9 +1963,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of WebhookDeliveryResponse</returns>
-        public async System.Threading.Tasks.Task<WebhookDeliveryResponse> TestWebhookEndpointApiV1WebhookEndpointsEndpointIdTestPostAsync(string endpointId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<WebhookDeliveryResponse> TestWebhookEndpointAsync(string endpointId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<WebhookDeliveryResponse> localVarResponse = await TestWebhookEndpointApiV1WebhookEndpointsEndpointIdTestPostWithHttpInfoAsync(endpointId, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<WebhookDeliveryResponse> localVarResponse = await TestWebhookEndpointWithHttpInfoAsync(endpointId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1977,12 +1977,12 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (WebhookDeliveryResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<WebhookDeliveryResponse>> TestWebhookEndpointApiV1WebhookEndpointsEndpointIdTestPostWithHttpInfoAsync(string endpointId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<WebhookDeliveryResponse>> TestWebhookEndpointWithHttpInfoAsync(string endpointId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'endpointId' is set
             if (endpointId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'endpointId' when calling WebhooksApi->TestWebhookEndpointApiV1WebhookEndpointsEndpointIdTestPost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'endpointId' when calling WebhooksApi->TestWebhookEndpoint");
             }
 
 
@@ -2010,7 +2010,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("endpoint_id", InvoicePDFs.Client.ClientUtils.ParameterToString(endpointId)); // path parameter
 
-            localVarRequestOptions.Operation = "WebhooksApi.TestWebhookEndpointApiV1WebhookEndpointsEndpointIdTestPost";
+            localVarRequestOptions.Operation = "WebhooksApi.TestWebhookEndpoint";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -2025,7 +2025,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("TestWebhookEndpointApiV1WebhookEndpointsEndpointIdTestPost", localVarResponse);
+                Exception _exception = this.ExceptionFactory("TestWebhookEndpoint", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -2043,9 +2043,9 @@ namespace InvoicePDFs.Api
         /// <param name="webhookEndpointPatchRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>WebhookEndpointResponse</returns>
-        public WebhookEndpointResponse UpdateWebhookEndpointApiV1WebhookEndpointsEndpointIdPatch(string endpointId, WebhookEndpointPatchRequest webhookEndpointPatchRequest, int operationIndex = 0)
+        public WebhookEndpointResponse UpdateWebhookEndpoint(string endpointId, WebhookEndpointPatchRequest webhookEndpointPatchRequest, int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<WebhookEndpointResponse> localVarResponse = UpdateWebhookEndpointApiV1WebhookEndpointsEndpointIdPatchWithHttpInfo(endpointId, webhookEndpointPatchRequest);
+            InvoicePDFs.Client.ApiResponse<WebhookEndpointResponse> localVarResponse = UpdateWebhookEndpointWithHttpInfo(endpointId, webhookEndpointPatchRequest);
             return localVarResponse.Data;
         }
 
@@ -2057,18 +2057,18 @@ namespace InvoicePDFs.Api
         /// <param name="webhookEndpointPatchRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of WebhookEndpointResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<WebhookEndpointResponse> UpdateWebhookEndpointApiV1WebhookEndpointsEndpointIdPatchWithHttpInfo(string endpointId, WebhookEndpointPatchRequest webhookEndpointPatchRequest, int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<WebhookEndpointResponse> UpdateWebhookEndpointWithHttpInfo(string endpointId, WebhookEndpointPatchRequest webhookEndpointPatchRequest, int operationIndex = 0)
         {
             // verify the required parameter 'endpointId' is set
             if (endpointId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'endpointId' when calling WebhooksApi->UpdateWebhookEndpointApiV1WebhookEndpointsEndpointIdPatch");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'endpointId' when calling WebhooksApi->UpdateWebhookEndpoint");
             }
 
             // verify the required parameter 'webhookEndpointPatchRequest' is set
             if (webhookEndpointPatchRequest == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'webhookEndpointPatchRequest' when calling WebhooksApi->UpdateWebhookEndpointApiV1WebhookEndpointsEndpointIdPatch");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'webhookEndpointPatchRequest' when calling WebhooksApi->UpdateWebhookEndpoint");
             }
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -2097,7 +2097,7 @@ namespace InvoicePDFs.Api
             localVarRequestOptions.PathParameters.Add("endpoint_id", InvoicePDFs.Client.ClientUtils.ParameterToString(endpointId)); // path parameter
             localVarRequestOptions.Data = webhookEndpointPatchRequest;
 
-            localVarRequestOptions.Operation = "WebhooksApi.UpdateWebhookEndpointApiV1WebhookEndpointsEndpointIdPatch";
+            localVarRequestOptions.Operation = "WebhooksApi.UpdateWebhookEndpoint";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -2111,7 +2111,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Patch<WebhookEndpointResponse>("/api/v1/webhook-endpoints/{endpoint_id}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateWebhookEndpointApiV1WebhookEndpointsEndpointIdPatch", localVarResponse);
+                Exception _exception = this.ExceptionFactory("UpdateWebhookEndpoint", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -2130,9 +2130,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of WebhookEndpointResponse</returns>
-        public async System.Threading.Tasks.Task<WebhookEndpointResponse> UpdateWebhookEndpointApiV1WebhookEndpointsEndpointIdPatchAsync(string endpointId, WebhookEndpointPatchRequest webhookEndpointPatchRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<WebhookEndpointResponse> UpdateWebhookEndpointAsync(string endpointId, WebhookEndpointPatchRequest webhookEndpointPatchRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<WebhookEndpointResponse> localVarResponse = await UpdateWebhookEndpointApiV1WebhookEndpointsEndpointIdPatchWithHttpInfoAsync(endpointId, webhookEndpointPatchRequest, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<WebhookEndpointResponse> localVarResponse = await UpdateWebhookEndpointWithHttpInfoAsync(endpointId, webhookEndpointPatchRequest, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2145,18 +2145,18 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (WebhookEndpointResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<WebhookEndpointResponse>> UpdateWebhookEndpointApiV1WebhookEndpointsEndpointIdPatchWithHttpInfoAsync(string endpointId, WebhookEndpointPatchRequest webhookEndpointPatchRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<WebhookEndpointResponse>> UpdateWebhookEndpointWithHttpInfoAsync(string endpointId, WebhookEndpointPatchRequest webhookEndpointPatchRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'endpointId' is set
             if (endpointId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'endpointId' when calling WebhooksApi->UpdateWebhookEndpointApiV1WebhookEndpointsEndpointIdPatch");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'endpointId' when calling WebhooksApi->UpdateWebhookEndpoint");
             }
 
             // verify the required parameter 'webhookEndpointPatchRequest' is set
             if (webhookEndpointPatchRequest == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'webhookEndpointPatchRequest' when calling WebhooksApi->UpdateWebhookEndpointApiV1WebhookEndpointsEndpointIdPatch");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'webhookEndpointPatchRequest' when calling WebhooksApi->UpdateWebhookEndpoint");
             }
 
 
@@ -2186,7 +2186,7 @@ namespace InvoicePDFs.Api
             localVarRequestOptions.PathParameters.Add("endpoint_id", InvoicePDFs.Client.ClientUtils.ParameterToString(endpointId)); // path parameter
             localVarRequestOptions.Data = webhookEndpointPatchRequest;
 
-            localVarRequestOptions.Operation = "WebhooksApi.UpdateWebhookEndpointApiV1WebhookEndpointsEndpointIdPatch";
+            localVarRequestOptions.Operation = "WebhooksApi.UpdateWebhookEndpoint";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -2201,7 +2201,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateWebhookEndpointApiV1WebhookEndpointsEndpointIdPatch", localVarResponse);
+                Exception _exception = this.ExceptionFactory("UpdateWebhookEndpoint", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

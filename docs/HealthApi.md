@@ -4,15 +4,15 @@ All URIs are relative to *http://localhost*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
-| [**HealthHealthGet**](HealthApi.md#healthhealthget) | **GET** /health | Health |
-| [**ReadyReadyGet**](HealthApi.md#readyreadyget) | **GET** /ready | Ready |
-| [**VersionVersionGet**](HealthApi.md#versionversionget) | **GET** /version | Version |
+| [**GetHealth**](HealthApi.md#gethealth) | **GET** /health | Get Health |
+| [**GetReadiness**](HealthApi.md#getreadiness) | **GET** /ready | Get Readiness |
+| [**GetVersion**](HealthApi.md#getversion) | **GET** /version | Get Version |
 
-<a id="healthhealthget"></a>
-# **HealthHealthGet**
-> HealthResponse HealthHealthGet ()
+<a id="gethealth"></a>
+# **GetHealth**
+> HealthResponse GetHealth ()
 
-Health
+Get Health
 
 ### Example
 ```csharp
@@ -24,7 +24,7 @@ using InvoicePDFs.Model;
 
 namespace Example
 {
-    public class HealthHealthGetExample
+    public class GetHealthExample
     {
         public static void Main()
         {
@@ -34,13 +34,13 @@ namespace Example
 
             try
             {
-                // Health
-                HealthResponse result = apiInstance.HealthHealthGet();
+                // Get Health
+                HealthResponse result = apiInstance.GetHealth();
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling HealthApi.HealthHealthGet: " + e.Message);
+                Debug.Print("Exception when calling HealthApi.GetHealth: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -49,21 +49,21 @@ namespace Example
 }
 ```
 
-#### Using the HealthHealthGetWithHttpInfo variant
+#### Using the GetHealthWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
-    // Health
-    ApiResponse<HealthResponse> response = apiInstance.HealthHealthGetWithHttpInfo();
+    // Get Health
+    ApiResponse<HealthResponse> response = apiInstance.GetHealthWithHttpInfo();
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling HealthApi.HealthHealthGetWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling HealthApi.GetHealthWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -92,11 +92,11 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="readyreadyget"></a>
-# **ReadyReadyGet**
-> ReadyResponse ReadyReadyGet ()
+<a id="getreadiness"></a>
+# **GetReadiness**
+> ReadyResponse GetReadiness ()
 
-Ready
+Get Readiness
 
 ### Example
 ```csharp
@@ -108,7 +108,7 @@ using InvoicePDFs.Model;
 
 namespace Example
 {
-    public class ReadyReadyGetExample
+    public class GetReadinessExample
     {
         public static void Main()
         {
@@ -118,13 +118,13 @@ namespace Example
 
             try
             {
-                // Ready
-                ReadyResponse result = apiInstance.ReadyReadyGet();
+                // Get Readiness
+                ReadyResponse result = apiInstance.GetReadiness();
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling HealthApi.ReadyReadyGet: " + e.Message);
+                Debug.Print("Exception when calling HealthApi.GetReadiness: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -133,21 +133,21 @@ namespace Example
 }
 ```
 
-#### Using the ReadyReadyGetWithHttpInfo variant
+#### Using the GetReadinessWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
-    // Ready
-    ApiResponse<ReadyResponse> response = apiInstance.ReadyReadyGetWithHttpInfo();
+    // Get Readiness
+    ApiResponse<ReadyResponse> response = apiInstance.GetReadinessWithHttpInfo();
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling HealthApi.ReadyReadyGetWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling HealthApi.GetReadinessWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -176,11 +176,11 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="versionversionget"></a>
-# **VersionVersionGet**
-> VersionResponse VersionVersionGet ()
+<a id="getversion"></a>
+# **GetVersion**
+> VersionResponse GetVersion ()
 
-Version
+Get Version
 
 ### Example
 ```csharp
@@ -192,7 +192,7 @@ using InvoicePDFs.Model;
 
 namespace Example
 {
-    public class VersionVersionGetExample
+    public class GetVersionExample
     {
         public static void Main()
         {
@@ -202,13 +202,13 @@ namespace Example
 
             try
             {
-                // Version
-                VersionResponse result = apiInstance.VersionVersionGet();
+                // Get Version
+                VersionResponse result = apiInstance.GetVersion();
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling HealthApi.VersionVersionGet: " + e.Message);
+                Debug.Print("Exception when calling HealthApi.GetVersion: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -217,21 +217,21 @@ namespace Example
 }
 ```
 
-#### Using the VersionVersionGetWithHttpInfo variant
+#### Using the GetVersionWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
-    // Version
-    ApiResponse<VersionResponse> response = apiInstance.VersionVersionGetWithHttpInfo();
+    // Get Version
+    ApiResponse<VersionResponse> response = apiInstance.GetVersionWithHttpInfo();
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling HealthApi.VersionVersionGetWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling HealthApi.GetVersionWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }

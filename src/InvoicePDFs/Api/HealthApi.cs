@@ -27,15 +27,15 @@ namespace InvoicePDFs.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Health
+        /// Get Health
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>HealthResponse</returns>
-        HealthResponse HealthHealthGet(int operationIndex = 0);
+        HealthResponse GetHealth(int operationIndex = 0);
 
         /// <summary>
-        /// Health
+        /// Get Health
         /// </summary>
         /// <remarks>
         /// 
@@ -43,17 +43,17 @@ namespace InvoicePDFs.Api
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of HealthResponse</returns>
-        ApiResponse<HealthResponse> HealthHealthGetWithHttpInfo(int operationIndex = 0);
+        ApiResponse<HealthResponse> GetHealthWithHttpInfo(int operationIndex = 0);
         /// <summary>
-        /// Ready
+        /// Get Readiness
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ReadyResponse</returns>
-        ReadyResponse ReadyReadyGet(int operationIndex = 0);
+        ReadyResponse GetReadiness(int operationIndex = 0);
 
         /// <summary>
-        /// Ready
+        /// Get Readiness
         /// </summary>
         /// <remarks>
         /// 
@@ -61,17 +61,17 @@ namespace InvoicePDFs.Api
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ReadyResponse</returns>
-        ApiResponse<ReadyResponse> ReadyReadyGetWithHttpInfo(int operationIndex = 0);
+        ApiResponse<ReadyResponse> GetReadinessWithHttpInfo(int operationIndex = 0);
         /// <summary>
-        /// Version
+        /// Get Version
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>VersionResponse</returns>
-        VersionResponse VersionVersionGet(int operationIndex = 0);
+        VersionResponse GetVersion(int operationIndex = 0);
 
         /// <summary>
-        /// Version
+        /// Get Version
         /// </summary>
         /// <remarks>
         /// 
@@ -79,7 +79,7 @@ namespace InvoicePDFs.Api
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of VersionResponse</returns>
-        ApiResponse<VersionResponse> VersionVersionGetWithHttpInfo(int operationIndex = 0);
+        ApiResponse<VersionResponse> GetVersionWithHttpInfo(int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -90,7 +90,7 @@ namespace InvoicePDFs.Api
     {
         #region Asynchronous Operations
         /// <summary>
-        /// Health
+        /// Get Health
         /// </summary>
         /// <remarks>
         /// 
@@ -99,10 +99,10 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of HealthResponse</returns>
-        System.Threading.Tasks.Task<HealthResponse> HealthHealthGetAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<HealthResponse> GetHealthAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// Health
+        /// Get Health
         /// </summary>
         /// <remarks>
         /// 
@@ -111,9 +111,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (HealthResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<HealthResponse>> HealthHealthGetWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<HealthResponse>> GetHealthWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// Ready
+        /// Get Readiness
         /// </summary>
         /// <remarks>
         /// 
@@ -122,10 +122,10 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ReadyResponse</returns>
-        System.Threading.Tasks.Task<ReadyResponse> ReadyReadyGetAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ReadyResponse> GetReadinessAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// Ready
+        /// Get Readiness
         /// </summary>
         /// <remarks>
         /// 
@@ -134,9 +134,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ReadyResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ReadyResponse>> ReadyReadyGetWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ReadyResponse>> GetReadinessWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// Version
+        /// Get Version
         /// </summary>
         /// <remarks>
         /// 
@@ -145,10 +145,10 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VersionResponse</returns>
-        System.Threading.Tasks.Task<VersionResponse> VersionVersionGetAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<VersionResponse> GetVersionAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// Version
+        /// Get Version
         /// </summary>
         /// <remarks>
         /// 
@@ -157,7 +157,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (VersionResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<VersionResponse>> VersionVersionGetWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<VersionResponse>> GetVersionWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -279,24 +279,24 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Health 
+        /// Get Health 
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>HealthResponse</returns>
-        public HealthResponse HealthHealthGet(int operationIndex = 0)
+        public HealthResponse GetHealth(int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<HealthResponse> localVarResponse = HealthHealthGetWithHttpInfo();
+            InvoicePDFs.Client.ApiResponse<HealthResponse> localVarResponse = GetHealthWithHttpInfo();
             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Health 
+        /// Get Health 
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of HealthResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<HealthResponse> HealthHealthGetWithHttpInfo(int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<HealthResponse> GetHealthWithHttpInfo(int operationIndex = 0)
         {
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
 
@@ -321,7 +321,7 @@ namespace InvoicePDFs.Api
             }
 
 
-            localVarRequestOptions.Operation = "HealthApi.HealthHealthGet";
+            localVarRequestOptions.Operation = "HealthApi.GetHealth";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -329,7 +329,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Get<HealthResponse>("/health", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("HealthHealthGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetHealth", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -340,26 +340,26 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Health 
+        /// Get Health 
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of HealthResponse</returns>
-        public async System.Threading.Tasks.Task<HealthResponse> HealthHealthGetAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<HealthResponse> GetHealthAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<HealthResponse> localVarResponse = await HealthHealthGetWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<HealthResponse> localVarResponse = await GetHealthWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Health 
+        /// Get Health 
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (HealthResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<HealthResponse>> HealthHealthGetWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<HealthResponse>> GetHealthWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -385,7 +385,7 @@ namespace InvoicePDFs.Api
             }
 
 
-            localVarRequestOptions.Operation = "HealthApi.HealthHealthGet";
+            localVarRequestOptions.Operation = "HealthApi.GetHealth";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -394,7 +394,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("HealthHealthGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetHealth", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -405,24 +405,24 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Ready 
+        /// Get Readiness 
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ReadyResponse</returns>
-        public ReadyResponse ReadyReadyGet(int operationIndex = 0)
+        public ReadyResponse GetReadiness(int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<ReadyResponse> localVarResponse = ReadyReadyGetWithHttpInfo();
+            InvoicePDFs.Client.ApiResponse<ReadyResponse> localVarResponse = GetReadinessWithHttpInfo();
             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Ready 
+        /// Get Readiness 
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ReadyResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<ReadyResponse> ReadyReadyGetWithHttpInfo(int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<ReadyResponse> GetReadinessWithHttpInfo(int operationIndex = 0)
         {
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
 
@@ -447,7 +447,7 @@ namespace InvoicePDFs.Api
             }
 
 
-            localVarRequestOptions.Operation = "HealthApi.ReadyReadyGet";
+            localVarRequestOptions.Operation = "HealthApi.GetReadiness";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -455,7 +455,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Get<ReadyResponse>("/ready", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadyReadyGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetReadiness", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -466,26 +466,26 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Ready 
+        /// Get Readiness 
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ReadyResponse</returns>
-        public async System.Threading.Tasks.Task<ReadyResponse> ReadyReadyGetAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ReadyResponse> GetReadinessAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<ReadyResponse> localVarResponse = await ReadyReadyGetWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<ReadyResponse> localVarResponse = await GetReadinessWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Ready 
+        /// Get Readiness 
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ReadyResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<ReadyResponse>> ReadyReadyGetWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<ReadyResponse>> GetReadinessWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -511,7 +511,7 @@ namespace InvoicePDFs.Api
             }
 
 
-            localVarRequestOptions.Operation = "HealthApi.ReadyReadyGet";
+            localVarRequestOptions.Operation = "HealthApi.GetReadiness";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -520,7 +520,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadyReadyGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetReadiness", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -531,24 +531,24 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Version 
+        /// Get Version 
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>VersionResponse</returns>
-        public VersionResponse VersionVersionGet(int operationIndex = 0)
+        public VersionResponse GetVersion(int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<VersionResponse> localVarResponse = VersionVersionGetWithHttpInfo();
+            InvoicePDFs.Client.ApiResponse<VersionResponse> localVarResponse = GetVersionWithHttpInfo();
             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Version 
+        /// Get Version 
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of VersionResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<VersionResponse> VersionVersionGetWithHttpInfo(int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<VersionResponse> GetVersionWithHttpInfo(int operationIndex = 0)
         {
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
 
@@ -573,7 +573,7 @@ namespace InvoicePDFs.Api
             }
 
 
-            localVarRequestOptions.Operation = "HealthApi.VersionVersionGet";
+            localVarRequestOptions.Operation = "HealthApi.GetVersion";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -581,7 +581,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Get<VersionResponse>("/version", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("VersionVersionGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetVersion", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -592,26 +592,26 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Version 
+        /// Get Version 
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VersionResponse</returns>
-        public async System.Threading.Tasks.Task<VersionResponse> VersionVersionGetAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<VersionResponse> GetVersionAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<VersionResponse> localVarResponse = await VersionVersionGetWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<VersionResponse> localVarResponse = await GetVersionWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Version 
+        /// Get Version 
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (VersionResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<VersionResponse>> VersionVersionGetWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<VersionResponse>> GetVersionWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -637,7 +637,7 @@ namespace InvoicePDFs.Api
             }
 
 
-            localVarRequestOptions.Operation = "HealthApi.VersionVersionGet";
+            localVarRequestOptions.Operation = "HealthApi.GetVersion";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
@@ -646,7 +646,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("VersionVersionGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetVersion", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

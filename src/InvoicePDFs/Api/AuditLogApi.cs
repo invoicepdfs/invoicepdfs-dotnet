@@ -33,7 +33,7 @@ namespace InvoicePDFs.Api
         /// <param name="auditEventId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AuditEventResponse</returns>
-        AuditEventResponse GetAuditEventApiV1AuditEventsAuditEventIdGet(string auditEventId, int operationIndex = 0);
+        AuditEventResponse GetAuditEvent(string auditEventId, int operationIndex = 0);
 
         /// <summary>
         /// Get Audit Event
@@ -45,7 +45,7 @@ namespace InvoicePDFs.Api
         /// <param name="auditEventId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AuditEventResponse</returns>
-        ApiResponse<AuditEventResponse> GetAuditEventApiV1AuditEventsAuditEventIdGetWithHttpInfo(string auditEventId, int operationIndex = 0);
+        ApiResponse<AuditEventResponse> GetAuditEventWithHttpInfo(string auditEventId, int operationIndex = 0);
         /// <summary>
         /// List Audit Events
         /// </summary>
@@ -57,7 +57,7 @@ namespace InvoicePDFs.Api
         /// <param name="resourceId"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AuditEventsListResponse</returns>
-        AuditEventsListResponse ListAuditEventsApiV1AuditEventsGet(int? limit = default(int?), string? cursor = default(string?), string? action = default(string?), string? resourceType = default(string?), string? resourceId = default(string?), int operationIndex = 0);
+        AuditEventsListResponse ListAuditEvents(int? limit = default(int?), string? cursor = default(string?), string? action = default(string?), string? resourceType = default(string?), string? resourceId = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// List Audit Events
@@ -73,7 +73,7 @@ namespace InvoicePDFs.Api
         /// <param name="resourceId"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AuditEventsListResponse</returns>
-        ApiResponse<AuditEventsListResponse> ListAuditEventsApiV1AuditEventsGetWithHttpInfo(int? limit = default(int?), string? cursor = default(string?), string? action = default(string?), string? resourceType = default(string?), string? resourceId = default(string?), int operationIndex = 0);
+        ApiResponse<AuditEventsListResponse> ListAuditEventsWithHttpInfo(int? limit = default(int?), string? cursor = default(string?), string? action = default(string?), string? resourceType = default(string?), string? resourceId = default(string?), int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -94,7 +94,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AuditEventResponse</returns>
-        System.Threading.Tasks.Task<AuditEventResponse> GetAuditEventApiV1AuditEventsAuditEventIdGetAsync(string auditEventId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AuditEventResponse> GetAuditEventAsync(string auditEventId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Get Audit Event
@@ -107,7 +107,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AuditEventResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AuditEventResponse>> GetAuditEventApiV1AuditEventsAuditEventIdGetWithHttpInfoAsync(string auditEventId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<AuditEventResponse>> GetAuditEventWithHttpInfoAsync(string auditEventId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// List Audit Events
         /// </summary>
@@ -123,7 +123,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AuditEventsListResponse</returns>
-        System.Threading.Tasks.Task<AuditEventsListResponse> ListAuditEventsApiV1AuditEventsGetAsync(int? limit = default(int?), string? cursor = default(string?), string? action = default(string?), string? resourceType = default(string?), string? resourceId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AuditEventsListResponse> ListAuditEventsAsync(int? limit = default(int?), string? cursor = default(string?), string? action = default(string?), string? resourceType = default(string?), string? resourceId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// List Audit Events
@@ -140,7 +140,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AuditEventsListResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AuditEventsListResponse>> ListAuditEventsApiV1AuditEventsGetWithHttpInfoAsync(int? limit = default(int?), string? cursor = default(string?), string? action = default(string?), string? resourceType = default(string?), string? resourceId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<AuditEventsListResponse>> ListAuditEventsWithHttpInfoAsync(int? limit = default(int?), string? cursor = default(string?), string? action = default(string?), string? resourceType = default(string?), string? resourceId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -268,9 +268,9 @@ namespace InvoicePDFs.Api
         /// <param name="auditEventId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AuditEventResponse</returns>
-        public AuditEventResponse GetAuditEventApiV1AuditEventsAuditEventIdGet(string auditEventId, int operationIndex = 0)
+        public AuditEventResponse GetAuditEvent(string auditEventId, int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<AuditEventResponse> localVarResponse = GetAuditEventApiV1AuditEventsAuditEventIdGetWithHttpInfo(auditEventId);
+            InvoicePDFs.Client.ApiResponse<AuditEventResponse> localVarResponse = GetAuditEventWithHttpInfo(auditEventId);
             return localVarResponse.Data;
         }
 
@@ -281,12 +281,12 @@ namespace InvoicePDFs.Api
         /// <param name="auditEventId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AuditEventResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<AuditEventResponse> GetAuditEventApiV1AuditEventsAuditEventIdGetWithHttpInfo(string auditEventId, int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<AuditEventResponse> GetAuditEventWithHttpInfo(string auditEventId, int operationIndex = 0)
         {
             // verify the required parameter 'auditEventId' is set
             if (auditEventId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'auditEventId' when calling AuditLogApi->GetAuditEventApiV1AuditEventsAuditEventIdGet");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'auditEventId' when calling AuditLogApi->GetAuditEvent");
             }
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -313,7 +313,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("audit_event_id", InvoicePDFs.Client.ClientUtils.ParameterToString(auditEventId)); // path parameter
 
-            localVarRequestOptions.Operation = "AuditLogApi.GetAuditEventApiV1AuditEventsAuditEventIdGet";
+            localVarRequestOptions.Operation = "AuditLogApi.GetAuditEvent";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -327,7 +327,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Get<AuditEventResponse>("/api/v1/audit-events/{audit_event_id}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetAuditEventApiV1AuditEventsAuditEventIdGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetAuditEvent", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -345,9 +345,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AuditEventResponse</returns>
-        public async System.Threading.Tasks.Task<AuditEventResponse> GetAuditEventApiV1AuditEventsAuditEventIdGetAsync(string auditEventId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AuditEventResponse> GetAuditEventAsync(string auditEventId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<AuditEventResponse> localVarResponse = await GetAuditEventApiV1AuditEventsAuditEventIdGetWithHttpInfoAsync(auditEventId, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<AuditEventResponse> localVarResponse = await GetAuditEventWithHttpInfoAsync(auditEventId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -359,12 +359,12 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AuditEventResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<AuditEventResponse>> GetAuditEventApiV1AuditEventsAuditEventIdGetWithHttpInfoAsync(string auditEventId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<AuditEventResponse>> GetAuditEventWithHttpInfoAsync(string auditEventId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'auditEventId' is set
             if (auditEventId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'auditEventId' when calling AuditLogApi->GetAuditEventApiV1AuditEventsAuditEventIdGet");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'auditEventId' when calling AuditLogApi->GetAuditEvent");
             }
 
 
@@ -392,7 +392,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("audit_event_id", InvoicePDFs.Client.ClientUtils.ParameterToString(auditEventId)); // path parameter
 
-            localVarRequestOptions.Operation = "AuditLogApi.GetAuditEventApiV1AuditEventsAuditEventIdGet";
+            localVarRequestOptions.Operation = "AuditLogApi.GetAuditEvent";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -407,7 +407,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetAuditEventApiV1AuditEventsAuditEventIdGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetAuditEvent", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -428,9 +428,9 @@ namespace InvoicePDFs.Api
         /// <param name="resourceId"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AuditEventsListResponse</returns>
-        public AuditEventsListResponse ListAuditEventsApiV1AuditEventsGet(int? limit = default(int?), string? cursor = default(string?), string? action = default(string?), string? resourceType = default(string?), string? resourceId = default(string?), int operationIndex = 0)
+        public AuditEventsListResponse ListAuditEvents(int? limit = default(int?), string? cursor = default(string?), string? action = default(string?), string? resourceType = default(string?), string? resourceId = default(string?), int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<AuditEventsListResponse> localVarResponse = ListAuditEventsApiV1AuditEventsGetWithHttpInfo(limit, cursor, action, resourceType, resourceId);
+            InvoicePDFs.Client.ApiResponse<AuditEventsListResponse> localVarResponse = ListAuditEventsWithHttpInfo(limit, cursor, action, resourceType, resourceId);
             return localVarResponse.Data;
         }
 
@@ -445,7 +445,7 @@ namespace InvoicePDFs.Api
         /// <param name="resourceId"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AuditEventsListResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<AuditEventsListResponse> ListAuditEventsApiV1AuditEventsGetWithHttpInfo(int? limit = default(int?), string? cursor = default(string?), string? action = default(string?), string? resourceType = default(string?), string? resourceId = default(string?), int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<AuditEventsListResponse> ListAuditEventsWithHttpInfo(int? limit = default(int?), string? cursor = default(string?), string? action = default(string?), string? resourceType = default(string?), string? resourceId = default(string?), int operationIndex = 0)
         {
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
 
@@ -490,7 +490,7 @@ namespace InvoicePDFs.Api
                 localVarRequestOptions.QueryParameters.Add(InvoicePDFs.Client.ClientUtils.ParameterToMultiMap("", "resource_id", resourceId));
             }
 
-            localVarRequestOptions.Operation = "AuditLogApi.ListAuditEventsApiV1AuditEventsGet";
+            localVarRequestOptions.Operation = "AuditLogApi.ListAuditEvents";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -504,7 +504,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Get<AuditEventsListResponse>("/api/v1/audit-events", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListAuditEventsApiV1AuditEventsGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("ListAuditEvents", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -526,9 +526,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AuditEventsListResponse</returns>
-        public async System.Threading.Tasks.Task<AuditEventsListResponse> ListAuditEventsApiV1AuditEventsGetAsync(int? limit = default(int?), string? cursor = default(string?), string? action = default(string?), string? resourceType = default(string?), string? resourceId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AuditEventsListResponse> ListAuditEventsAsync(int? limit = default(int?), string? cursor = default(string?), string? action = default(string?), string? resourceType = default(string?), string? resourceId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<AuditEventsListResponse> localVarResponse = await ListAuditEventsApiV1AuditEventsGetWithHttpInfoAsync(limit, cursor, action, resourceType, resourceId, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<AuditEventsListResponse> localVarResponse = await ListAuditEventsWithHttpInfoAsync(limit, cursor, action, resourceType, resourceId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -544,7 +544,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AuditEventsListResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<AuditEventsListResponse>> ListAuditEventsApiV1AuditEventsGetWithHttpInfoAsync(int? limit = default(int?), string? cursor = default(string?), string? action = default(string?), string? resourceType = default(string?), string? resourceId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<AuditEventsListResponse>> ListAuditEventsWithHttpInfoAsync(int? limit = default(int?), string? cursor = default(string?), string? action = default(string?), string? resourceType = default(string?), string? resourceId = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -590,7 +590,7 @@ namespace InvoicePDFs.Api
                 localVarRequestOptions.QueryParameters.Add(InvoicePDFs.Client.ClientUtils.ParameterToMultiMap("", "resource_id", resourceId));
             }
 
-            localVarRequestOptions.Operation = "AuditLogApi.ListAuditEventsApiV1AuditEventsGet";
+            localVarRequestOptions.Operation = "AuditLogApi.ListAuditEvents";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -605,7 +605,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListAuditEventsApiV1AuditEventsGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("ListAuditEvents", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

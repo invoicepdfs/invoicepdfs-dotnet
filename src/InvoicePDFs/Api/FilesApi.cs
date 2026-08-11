@@ -33,7 +33,7 @@ namespace InvoicePDFs.Api
         /// <param name="fileId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>SimpleBoolResponse</returns>
-        SimpleBoolResponse DeleteFileApiV1FilesFileIdDelete(string fileId, int operationIndex = 0);
+        SimpleBoolResponse DeleteFile(string fileId, int operationIndex = 0);
 
         /// <summary>
         /// Delete File
@@ -45,7 +45,7 @@ namespace InvoicePDFs.Api
         /// <param name="fileId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of SimpleBoolResponse</returns>
-        ApiResponse<SimpleBoolResponse> DeleteFileApiV1FilesFileIdDeleteWithHttpInfo(string fileId, int operationIndex = 0);
+        ApiResponse<SimpleBoolResponse> DeleteFileWithHttpInfo(string fileId, int operationIndex = 0);
         /// <summary>
         /// Get File
         /// </summary>
@@ -53,7 +53,7 @@ namespace InvoicePDFs.Api
         /// <param name="fileId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>FileResponse</returns>
-        FileResponse GetFileApiV1FilesFileIdGet(string fileId, int operationIndex = 0);
+        FileResponse GetFile(string fileId, int operationIndex = 0);
 
         /// <summary>
         /// Get File
@@ -65,7 +65,7 @@ namespace InvoicePDFs.Api
         /// <param name="fileId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of FileResponse</returns>
-        ApiResponse<FileResponse> GetFileApiV1FilesFileIdGetWithHttpInfo(string fileId, int operationIndex = 0);
+        ApiResponse<FileResponse> GetFileWithHttpInfo(string fileId, int operationIndex = 0);
         /// <summary>
         /// Upload File
         /// </summary>
@@ -74,7 +74,7 @@ namespace InvoicePDFs.Api
         /// <param name="idempotencyKey"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>FileResponse</returns>
-        FileResponse UploadFileApiV1FilesPost(System.IO.Stream file, string? idempotencyKey = default(string?), int operationIndex = 0);
+        FileResponse UploadFile(System.IO.Stream file, string? idempotencyKey = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// Upload File
@@ -87,7 +87,7 @@ namespace InvoicePDFs.Api
         /// <param name="idempotencyKey"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of FileResponse</returns>
-        ApiResponse<FileResponse> UploadFileApiV1FilesPostWithHttpInfo(System.IO.Stream file, string? idempotencyKey = default(string?), int operationIndex = 0);
+        ApiResponse<FileResponse> UploadFileWithHttpInfo(System.IO.Stream file, string? idempotencyKey = default(string?), int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -108,7 +108,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of SimpleBoolResponse</returns>
-        System.Threading.Tasks.Task<SimpleBoolResponse> DeleteFileApiV1FilesFileIdDeleteAsync(string fileId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<SimpleBoolResponse> DeleteFileAsync(string fileId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Delete File
@@ -121,7 +121,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (SimpleBoolResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SimpleBoolResponse>> DeleteFileApiV1FilesFileIdDeleteWithHttpInfoAsync(string fileId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<SimpleBoolResponse>> DeleteFileWithHttpInfoAsync(string fileId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Get File
         /// </summary>
@@ -133,7 +133,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of FileResponse</returns>
-        System.Threading.Tasks.Task<FileResponse> GetFileApiV1FilesFileIdGetAsync(string fileId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<FileResponse> GetFileAsync(string fileId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Get File
@@ -146,7 +146,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (FileResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<FileResponse>> GetFileApiV1FilesFileIdGetWithHttpInfoAsync(string fileId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<FileResponse>> GetFileWithHttpInfoAsync(string fileId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Upload File
         /// </summary>
@@ -159,7 +159,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of FileResponse</returns>
-        System.Threading.Tasks.Task<FileResponse> UploadFileApiV1FilesPostAsync(System.IO.Stream file, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<FileResponse> UploadFileAsync(System.IO.Stream file, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Upload File
@@ -173,7 +173,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (FileResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<FileResponse>> UploadFileApiV1FilesPostWithHttpInfoAsync(System.IO.Stream file, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<FileResponse>> UploadFileWithHttpInfoAsync(System.IO.Stream file, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -301,9 +301,9 @@ namespace InvoicePDFs.Api
         /// <param name="fileId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>SimpleBoolResponse</returns>
-        public SimpleBoolResponse DeleteFileApiV1FilesFileIdDelete(string fileId, int operationIndex = 0)
+        public SimpleBoolResponse DeleteFile(string fileId, int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<SimpleBoolResponse> localVarResponse = DeleteFileApiV1FilesFileIdDeleteWithHttpInfo(fileId);
+            InvoicePDFs.Client.ApiResponse<SimpleBoolResponse> localVarResponse = DeleteFileWithHttpInfo(fileId);
             return localVarResponse.Data;
         }
 
@@ -314,12 +314,12 @@ namespace InvoicePDFs.Api
         /// <param name="fileId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of SimpleBoolResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<SimpleBoolResponse> DeleteFileApiV1FilesFileIdDeleteWithHttpInfo(string fileId, int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<SimpleBoolResponse> DeleteFileWithHttpInfo(string fileId, int operationIndex = 0)
         {
             // verify the required parameter 'fileId' is set
             if (fileId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'fileId' when calling FilesApi->DeleteFileApiV1FilesFileIdDelete");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'fileId' when calling FilesApi->DeleteFile");
             }
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -346,7 +346,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("file_id", InvoicePDFs.Client.ClientUtils.ParameterToString(fileId)); // path parameter
 
-            localVarRequestOptions.Operation = "FilesApi.DeleteFileApiV1FilesFileIdDelete";
+            localVarRequestOptions.Operation = "FilesApi.DeleteFile";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -360,7 +360,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Delete<SimpleBoolResponse>("/api/v1/files/{file_id}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteFileApiV1FilesFileIdDelete", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteFile", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -378,9 +378,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of SimpleBoolResponse</returns>
-        public async System.Threading.Tasks.Task<SimpleBoolResponse> DeleteFileApiV1FilesFileIdDeleteAsync(string fileId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<SimpleBoolResponse> DeleteFileAsync(string fileId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<SimpleBoolResponse> localVarResponse = await DeleteFileApiV1FilesFileIdDeleteWithHttpInfoAsync(fileId, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<SimpleBoolResponse> localVarResponse = await DeleteFileWithHttpInfoAsync(fileId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -392,12 +392,12 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (SimpleBoolResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<SimpleBoolResponse>> DeleteFileApiV1FilesFileIdDeleteWithHttpInfoAsync(string fileId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<SimpleBoolResponse>> DeleteFileWithHttpInfoAsync(string fileId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'fileId' is set
             if (fileId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'fileId' when calling FilesApi->DeleteFileApiV1FilesFileIdDelete");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'fileId' when calling FilesApi->DeleteFile");
             }
 
 
@@ -425,7 +425,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("file_id", InvoicePDFs.Client.ClientUtils.ParameterToString(fileId)); // path parameter
 
-            localVarRequestOptions.Operation = "FilesApi.DeleteFileApiV1FilesFileIdDelete";
+            localVarRequestOptions.Operation = "FilesApi.DeleteFile";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -440,7 +440,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteFileApiV1FilesFileIdDelete", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteFile", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -457,9 +457,9 @@ namespace InvoicePDFs.Api
         /// <param name="fileId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>FileResponse</returns>
-        public FileResponse GetFileApiV1FilesFileIdGet(string fileId, int operationIndex = 0)
+        public FileResponse GetFile(string fileId, int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<FileResponse> localVarResponse = GetFileApiV1FilesFileIdGetWithHttpInfo(fileId);
+            InvoicePDFs.Client.ApiResponse<FileResponse> localVarResponse = GetFileWithHttpInfo(fileId);
             return localVarResponse.Data;
         }
 
@@ -470,12 +470,12 @@ namespace InvoicePDFs.Api
         /// <param name="fileId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of FileResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<FileResponse> GetFileApiV1FilesFileIdGetWithHttpInfo(string fileId, int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<FileResponse> GetFileWithHttpInfo(string fileId, int operationIndex = 0)
         {
             // verify the required parameter 'fileId' is set
             if (fileId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'fileId' when calling FilesApi->GetFileApiV1FilesFileIdGet");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'fileId' when calling FilesApi->GetFile");
             }
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -502,7 +502,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("file_id", InvoicePDFs.Client.ClientUtils.ParameterToString(fileId)); // path parameter
 
-            localVarRequestOptions.Operation = "FilesApi.GetFileApiV1FilesFileIdGet";
+            localVarRequestOptions.Operation = "FilesApi.GetFile";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -516,7 +516,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Get<FileResponse>("/api/v1/files/{file_id}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetFileApiV1FilesFileIdGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetFile", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -534,9 +534,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of FileResponse</returns>
-        public async System.Threading.Tasks.Task<FileResponse> GetFileApiV1FilesFileIdGetAsync(string fileId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<FileResponse> GetFileAsync(string fileId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<FileResponse> localVarResponse = await GetFileApiV1FilesFileIdGetWithHttpInfoAsync(fileId, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<FileResponse> localVarResponse = await GetFileWithHttpInfoAsync(fileId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -548,12 +548,12 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (FileResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<FileResponse>> GetFileApiV1FilesFileIdGetWithHttpInfoAsync(string fileId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<FileResponse>> GetFileWithHttpInfoAsync(string fileId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'fileId' is set
             if (fileId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'fileId' when calling FilesApi->GetFileApiV1FilesFileIdGet");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'fileId' when calling FilesApi->GetFile");
             }
 
 
@@ -581,7 +581,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("file_id", InvoicePDFs.Client.ClientUtils.ParameterToString(fileId)); // path parameter
 
-            localVarRequestOptions.Operation = "FilesApi.GetFileApiV1FilesFileIdGet";
+            localVarRequestOptions.Operation = "FilesApi.GetFile";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -596,7 +596,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetFileApiV1FilesFileIdGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetFile", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -614,9 +614,9 @@ namespace InvoicePDFs.Api
         /// <param name="idempotencyKey"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>FileResponse</returns>
-        public FileResponse UploadFileApiV1FilesPost(System.IO.Stream file, string? idempotencyKey = default(string?), int operationIndex = 0)
+        public FileResponse UploadFile(System.IO.Stream file, string? idempotencyKey = default(string?), int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<FileResponse> localVarResponse = UploadFileApiV1FilesPostWithHttpInfo(file, idempotencyKey);
+            InvoicePDFs.Client.ApiResponse<FileResponse> localVarResponse = UploadFileWithHttpInfo(file, idempotencyKey);
             return localVarResponse.Data;
         }
 
@@ -628,12 +628,12 @@ namespace InvoicePDFs.Api
         /// <param name="idempotencyKey"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of FileResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<FileResponse> UploadFileApiV1FilesPostWithHttpInfo(System.IO.Stream file, string? idempotencyKey = default(string?), int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<FileResponse> UploadFileWithHttpInfo(System.IO.Stream file, string? idempotencyKey = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'file' is set
             if (file == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'file' when calling FilesApi->UploadFileApiV1FilesPost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'file' when calling FilesApi->UploadFile");
             }
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -665,7 +665,7 @@ namespace InvoicePDFs.Api
             }
             localVarRequestOptions.FileParameters.Add("file", file);
 
-            localVarRequestOptions.Operation = "FilesApi.UploadFileApiV1FilesPost";
+            localVarRequestOptions.Operation = "FilesApi.UploadFile";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -679,7 +679,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Post<FileResponse>("/api/v1/files", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UploadFileApiV1FilesPost", localVarResponse);
+                Exception _exception = this.ExceptionFactory("UploadFile", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -698,9 +698,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of FileResponse</returns>
-        public async System.Threading.Tasks.Task<FileResponse> UploadFileApiV1FilesPostAsync(System.IO.Stream file, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<FileResponse> UploadFileAsync(System.IO.Stream file, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<FileResponse> localVarResponse = await UploadFileApiV1FilesPostWithHttpInfoAsync(file, idempotencyKey, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<FileResponse> localVarResponse = await UploadFileWithHttpInfoAsync(file, idempotencyKey, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -713,12 +713,12 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (FileResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<FileResponse>> UploadFileApiV1FilesPostWithHttpInfoAsync(System.IO.Stream file, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<FileResponse>> UploadFileWithHttpInfoAsync(System.IO.Stream file, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'file' is set
             if (file == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'file' when calling FilesApi->UploadFileApiV1FilesPost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'file' when calling FilesApi->UploadFile");
             }
 
 
@@ -751,7 +751,7 @@ namespace InvoicePDFs.Api
             }
             localVarRequestOptions.FileParameters.Add("file", file);
 
-            localVarRequestOptions.Operation = "FilesApi.UploadFileApiV1FilesPost";
+            localVarRequestOptions.Operation = "FilesApi.UploadFile";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -766,7 +766,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UploadFileApiV1FilesPost", localVarResponse);
+                Exception _exception = this.ExceptionFactory("UploadFile", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

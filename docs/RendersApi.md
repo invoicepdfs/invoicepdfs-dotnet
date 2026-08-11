@@ -4,12 +4,12 @@ All URIs are relative to *http://localhost*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
-| [**DownloadRenderApiV1RendersRenderIdDownloadGet**](RendersApi.md#downloadrenderapiv1rendersrenderiddownloadget) | **GET** /api/v1/renders/{render_id}/download | Download Render |
-| [**GetRenderApiV1RendersRenderIdGet**](RendersApi.md#getrenderapiv1rendersrenderidget) | **GET** /api/v1/renders/{render_id} | Get Render |
+| [**DownloadRender**](RendersApi.md#downloadrender) | **GET** /api/v1/renders/{render_id}/download | Download Render |
+| [**GetRender**](RendersApi.md#getrender) | **GET** /api/v1/renders/{render_id} | Get Render |
 
-<a id="downloadrenderapiv1rendersrenderiddownloadget"></a>
-# **DownloadRenderApiV1RendersRenderIdDownloadGet**
-> System.IO.Stream DownloadRenderApiV1RendersRenderIdDownloadGet (string renderId)
+<a id="downloadrender"></a>
+# **DownloadRender**
+> System.IO.Stream DownloadRender (string renderId)
 
 Download Render
 
@@ -23,7 +23,7 @@ using InvoicePDFs.Model;
 
 namespace Example
 {
-    public class DownloadRenderApiV1RendersRenderIdDownloadGetExample
+    public class DownloadRenderExample
     {
         public static void Main()
         {
@@ -38,12 +38,12 @@ namespace Example
             try
             {
                 // Download Render
-                System.IO.Stream result = apiInstance.DownloadRenderApiV1RendersRenderIdDownloadGet(renderId);
+                System.IO.Stream result = apiInstance.DownloadRender(renderId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling RendersApi.DownloadRenderApiV1RendersRenderIdDownloadGet: " + e.Message);
+                Debug.Print("Exception when calling RendersApi.DownloadRender: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -52,21 +52,21 @@ namespace Example
 }
 ```
 
-#### Using the DownloadRenderApiV1RendersRenderIdDownloadGetWithHttpInfo variant
+#### Using the DownloadRenderWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // Download Render
-    ApiResponse<System.IO.Stream> response = apiInstance.DownloadRenderApiV1RendersRenderIdDownloadGetWithHttpInfo(renderId);
+    ApiResponse<System.IO.Stream> response = apiInstance.DownloadRenderWithHttpInfo(renderId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling RendersApi.DownloadRenderApiV1RendersRenderIdDownloadGetWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling RendersApi.DownloadRenderWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -100,9 +100,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="getrenderapiv1rendersrenderidget"></a>
-# **GetRenderApiV1RendersRenderIdGet**
-> Dictionary&lt;string, Object&gt; GetRenderApiV1RendersRenderIdGet (string renderId)
+<a id="getrender"></a>
+# **GetRender**
+> Dictionary&lt;string, Object&gt; GetRender (string renderId)
 
 Get Render
 
@@ -116,7 +116,7 @@ using InvoicePDFs.Model;
 
 namespace Example
 {
-    public class GetRenderApiV1RendersRenderIdGetExample
+    public class GetRenderExample
     {
         public static void Main()
         {
@@ -131,12 +131,12 @@ namespace Example
             try
             {
                 // Get Render
-                Dictionary<string, Object> result = apiInstance.GetRenderApiV1RendersRenderIdGet(renderId);
+                Dictionary<string, Object> result = apiInstance.GetRender(renderId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling RendersApi.GetRenderApiV1RendersRenderIdGet: " + e.Message);
+                Debug.Print("Exception when calling RendersApi.GetRender: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -145,21 +145,21 @@ namespace Example
 }
 ```
 
-#### Using the GetRenderApiV1RendersRenderIdGetWithHttpInfo variant
+#### Using the GetRenderWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // Get Render
-    ApiResponse<Dictionary<string, Object>> response = apiInstance.GetRenderApiV1RendersRenderIdGetWithHttpInfo(renderId);
+    ApiResponse<Dictionary<string, Object>> response = apiInstance.GetRenderWithHttpInfo(renderId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling RendersApi.GetRenderApiV1RendersRenderIdGetWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling RendersApi.GetRenderWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }

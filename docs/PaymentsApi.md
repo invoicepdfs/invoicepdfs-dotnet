@@ -4,17 +4,17 @@ All URIs are relative to *http://localhost*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
-| [**CreatePaymentApiV1DocumentsInvoiceIdPaymentsPost**](PaymentsApi.md#createpaymentapiv1documentsinvoiceidpaymentspost) | **POST** /api/v1/documents/{invoice_id}/payments | Create Payment |
-| [**DeletePaymentApiV1PaymentsPaymentIdDelete**](PaymentsApi.md#deletepaymentapiv1paymentspaymentiddelete) | **DELETE** /api/v1/payments/{payment_id} | Delete Payment |
-| [**GetPaymentApiV1PaymentsPaymentIdGet**](PaymentsApi.md#getpaymentapiv1paymentspaymentidget) | **GET** /api/v1/payments/{payment_id} | Get Payment |
-| [**ListInvoicePaymentsApiV1DocumentsInvoiceIdPaymentsGet**](PaymentsApi.md#listinvoicepaymentsapiv1documentsinvoiceidpaymentsget) | **GET** /api/v1/documents/{invoice_id}/payments | List Invoice Payments |
-| [**UpdatePaymentApiV1PaymentsPaymentIdPatch**](PaymentsApi.md#updatepaymentapiv1paymentspaymentidpatch) | **PATCH** /api/v1/payments/{payment_id} | Update Payment |
+| [**CreateDocumentPayment**](PaymentsApi.md#createdocumentpayment) | **POST** /api/v1/documents/{document_id}/payments | Create Document Payment |
+| [**DeletePayment**](PaymentsApi.md#deletepayment) | **DELETE** /api/v1/payments/{payment_id} | Delete Payment |
+| [**GetPayment**](PaymentsApi.md#getpayment) | **GET** /api/v1/payments/{payment_id} | Get Payment |
+| [**ListDocumentPayments**](PaymentsApi.md#listdocumentpayments) | **GET** /api/v1/documents/{document_id}/payments | List Document Payments |
+| [**UpdatePayment**](PaymentsApi.md#updatepayment) | **PATCH** /api/v1/payments/{payment_id} | Update Payment |
 
-<a id="createpaymentapiv1documentsinvoiceidpaymentspost"></a>
-# **CreatePaymentApiV1DocumentsInvoiceIdPaymentsPost**
-> PaymentResponse CreatePaymentApiV1DocumentsInvoiceIdPaymentsPost (string invoiceId, PaymentCreateRequest paymentCreateRequest)
+<a id="createdocumentpayment"></a>
+# **CreateDocumentPayment**
+> PaymentResponse CreateDocumentPayment (string documentId, PaymentCreateRequest paymentCreateRequest)
 
-Create Payment
+Create Document Payment
 
 ### Example
 ```csharp
@@ -26,7 +26,7 @@ using InvoicePDFs.Model;
 
 namespace Example
 {
-    public class CreatePaymentApiV1DocumentsInvoiceIdPaymentsPostExample
+    public class CreateDocumentPaymentExample
     {
         public static void Main()
         {
@@ -36,18 +36,18 @@ namespace Example
             config.AccessToken = "YOUR_BEARER_TOKEN";
 
             var apiInstance = new PaymentsApi(config);
-            var invoiceId = "invoiceId_example";  // string | 
+            var documentId = "documentId_example";  // string | 
             var paymentCreateRequest = new PaymentCreateRequest(); // PaymentCreateRequest | 
 
             try
             {
-                // Create Payment
-                PaymentResponse result = apiInstance.CreatePaymentApiV1DocumentsInvoiceIdPaymentsPost(invoiceId, paymentCreateRequest);
+                // Create Document Payment
+                PaymentResponse result = apiInstance.CreateDocumentPayment(documentId, paymentCreateRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling PaymentsApi.CreatePaymentApiV1DocumentsInvoiceIdPaymentsPost: " + e.Message);
+                Debug.Print("Exception when calling PaymentsApi.CreateDocumentPayment: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -56,21 +56,21 @@ namespace Example
 }
 ```
 
-#### Using the CreatePaymentApiV1DocumentsInvoiceIdPaymentsPostWithHttpInfo variant
+#### Using the CreateDocumentPaymentWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
-    // Create Payment
-    ApiResponse<PaymentResponse> response = apiInstance.CreatePaymentApiV1DocumentsInvoiceIdPaymentsPostWithHttpInfo(invoiceId, paymentCreateRequest);
+    // Create Document Payment
+    ApiResponse<PaymentResponse> response = apiInstance.CreateDocumentPaymentWithHttpInfo(documentId, paymentCreateRequest);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling PaymentsApi.CreatePaymentApiV1DocumentsInvoiceIdPaymentsPostWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling PaymentsApi.CreateDocumentPaymentWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -80,7 +80,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **invoiceId** | **string** |  |  |
+| **documentId** | **string** |  |  |
 | **paymentCreateRequest** | [**PaymentCreateRequest**](PaymentCreateRequest.md) |  |  |
 
 ### Return type
@@ -105,9 +105,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="deletepaymentapiv1paymentspaymentiddelete"></a>
-# **DeletePaymentApiV1PaymentsPaymentIdDelete**
-> SimpleBoolResponse DeletePaymentApiV1PaymentsPaymentIdDelete (string paymentId)
+<a id="deletepayment"></a>
+# **DeletePayment**
+> SimpleBoolResponse DeletePayment (string paymentId)
 
 Delete Payment
 
@@ -121,7 +121,7 @@ using InvoicePDFs.Model;
 
 namespace Example
 {
-    public class DeletePaymentApiV1PaymentsPaymentIdDeleteExample
+    public class DeletePaymentExample
     {
         public static void Main()
         {
@@ -136,12 +136,12 @@ namespace Example
             try
             {
                 // Delete Payment
-                SimpleBoolResponse result = apiInstance.DeletePaymentApiV1PaymentsPaymentIdDelete(paymentId);
+                SimpleBoolResponse result = apiInstance.DeletePayment(paymentId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling PaymentsApi.DeletePaymentApiV1PaymentsPaymentIdDelete: " + e.Message);
+                Debug.Print("Exception when calling PaymentsApi.DeletePayment: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -150,21 +150,21 @@ namespace Example
 }
 ```
 
-#### Using the DeletePaymentApiV1PaymentsPaymentIdDeleteWithHttpInfo variant
+#### Using the DeletePaymentWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // Delete Payment
-    ApiResponse<SimpleBoolResponse> response = apiInstance.DeletePaymentApiV1PaymentsPaymentIdDeleteWithHttpInfo(paymentId);
+    ApiResponse<SimpleBoolResponse> response = apiInstance.DeletePaymentWithHttpInfo(paymentId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling PaymentsApi.DeletePaymentApiV1PaymentsPaymentIdDeleteWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling PaymentsApi.DeletePaymentWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -198,9 +198,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="getpaymentapiv1paymentspaymentidget"></a>
-# **GetPaymentApiV1PaymentsPaymentIdGet**
-> PaymentResponse GetPaymentApiV1PaymentsPaymentIdGet (string paymentId)
+<a id="getpayment"></a>
+# **GetPayment**
+> PaymentResponse GetPayment (string paymentId)
 
 Get Payment
 
@@ -214,7 +214,7 @@ using InvoicePDFs.Model;
 
 namespace Example
 {
-    public class GetPaymentApiV1PaymentsPaymentIdGetExample
+    public class GetPaymentExample
     {
         public static void Main()
         {
@@ -229,12 +229,12 @@ namespace Example
             try
             {
                 // Get Payment
-                PaymentResponse result = apiInstance.GetPaymentApiV1PaymentsPaymentIdGet(paymentId);
+                PaymentResponse result = apiInstance.GetPayment(paymentId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling PaymentsApi.GetPaymentApiV1PaymentsPaymentIdGet: " + e.Message);
+                Debug.Print("Exception when calling PaymentsApi.GetPayment: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -243,21 +243,21 @@ namespace Example
 }
 ```
 
-#### Using the GetPaymentApiV1PaymentsPaymentIdGetWithHttpInfo variant
+#### Using the GetPaymentWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // Get Payment
-    ApiResponse<PaymentResponse> response = apiInstance.GetPaymentApiV1PaymentsPaymentIdGetWithHttpInfo(paymentId);
+    ApiResponse<PaymentResponse> response = apiInstance.GetPaymentWithHttpInfo(paymentId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling PaymentsApi.GetPaymentApiV1PaymentsPaymentIdGetWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling PaymentsApi.GetPaymentWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -291,11 +291,11 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="listinvoicepaymentsapiv1documentsinvoiceidpaymentsget"></a>
-# **ListInvoicePaymentsApiV1DocumentsInvoiceIdPaymentsGet**
-> PaymentsListResponse ListInvoicePaymentsApiV1DocumentsInvoiceIdPaymentsGet (string invoiceId, int? limit = null, string? cursor = null)
+<a id="listdocumentpayments"></a>
+# **ListDocumentPayments**
+> PaymentsListResponse ListDocumentPayments (string documentId, int? limit = null, string? cursor = null)
 
-List Invoice Payments
+List Document Payments
 
 ### Example
 ```csharp
@@ -307,7 +307,7 @@ using InvoicePDFs.Model;
 
 namespace Example
 {
-    public class ListInvoicePaymentsApiV1DocumentsInvoiceIdPaymentsGetExample
+    public class ListDocumentPaymentsExample
     {
         public static void Main()
         {
@@ -317,19 +317,19 @@ namespace Example
             config.AccessToken = "YOUR_BEARER_TOKEN";
 
             var apiInstance = new PaymentsApi(config);
-            var invoiceId = "invoiceId_example";  // string | 
+            var documentId = "documentId_example";  // string | 
             var limit = 50;  // int? |  (optional)  (default to 50)
             var cursor = "cursor_example";  // string? |  (optional) 
 
             try
             {
-                // List Invoice Payments
-                PaymentsListResponse result = apiInstance.ListInvoicePaymentsApiV1DocumentsInvoiceIdPaymentsGet(invoiceId, limit, cursor);
+                // List Document Payments
+                PaymentsListResponse result = apiInstance.ListDocumentPayments(documentId, limit, cursor);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling PaymentsApi.ListInvoicePaymentsApiV1DocumentsInvoiceIdPaymentsGet: " + e.Message);
+                Debug.Print("Exception when calling PaymentsApi.ListDocumentPayments: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -338,21 +338,21 @@ namespace Example
 }
 ```
 
-#### Using the ListInvoicePaymentsApiV1DocumentsInvoiceIdPaymentsGetWithHttpInfo variant
+#### Using the ListDocumentPaymentsWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
-    // List Invoice Payments
-    ApiResponse<PaymentsListResponse> response = apiInstance.ListInvoicePaymentsApiV1DocumentsInvoiceIdPaymentsGetWithHttpInfo(invoiceId, limit, cursor);
+    // List Document Payments
+    ApiResponse<PaymentsListResponse> response = apiInstance.ListDocumentPaymentsWithHttpInfo(documentId, limit, cursor);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling PaymentsApi.ListInvoicePaymentsApiV1DocumentsInvoiceIdPaymentsGetWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling PaymentsApi.ListDocumentPaymentsWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -362,7 +362,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **invoiceId** | **string** |  |  |
+| **documentId** | **string** |  |  |
 | **limit** | **int?** |  | [optional] [default to 50] |
 | **cursor** | **string?** |  | [optional]  |
 
@@ -388,9 +388,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="updatepaymentapiv1paymentspaymentidpatch"></a>
-# **UpdatePaymentApiV1PaymentsPaymentIdPatch**
-> PaymentResponse UpdatePaymentApiV1PaymentsPaymentIdPatch (string paymentId, PaymentPatchRequest paymentPatchRequest)
+<a id="updatepayment"></a>
+# **UpdatePayment**
+> PaymentResponse UpdatePayment (string paymentId, PaymentPatchRequest paymentPatchRequest)
 
 Update Payment
 
@@ -404,7 +404,7 @@ using InvoicePDFs.Model;
 
 namespace Example
 {
-    public class UpdatePaymentApiV1PaymentsPaymentIdPatchExample
+    public class UpdatePaymentExample
     {
         public static void Main()
         {
@@ -420,12 +420,12 @@ namespace Example
             try
             {
                 // Update Payment
-                PaymentResponse result = apiInstance.UpdatePaymentApiV1PaymentsPaymentIdPatch(paymentId, paymentPatchRequest);
+                PaymentResponse result = apiInstance.UpdatePayment(paymentId, paymentPatchRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling PaymentsApi.UpdatePaymentApiV1PaymentsPaymentIdPatch: " + e.Message);
+                Debug.Print("Exception when calling PaymentsApi.UpdatePayment: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -434,21 +434,21 @@ namespace Example
 }
 ```
 
-#### Using the UpdatePaymentApiV1PaymentsPaymentIdPatchWithHttpInfo variant
+#### Using the UpdatePaymentWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // Update Payment
-    ApiResponse<PaymentResponse> response = apiInstance.UpdatePaymentApiV1PaymentsPaymentIdPatchWithHttpInfo(paymentId, paymentPatchRequest);
+    ApiResponse<PaymentResponse> response = apiInstance.UpdatePaymentWithHttpInfo(paymentId, paymentPatchRequest);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling PaymentsApi.UpdatePaymentApiV1PaymentsPaymentIdPatchWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling PaymentsApi.UpdatePaymentWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }

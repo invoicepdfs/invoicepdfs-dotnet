@@ -4,12 +4,12 @@ All URIs are relative to *http://localhost*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
-| [**GetDeliveryApiV1DeliveriesDeliveryIdGet**](DeliveriesApi.md#getdeliveryapiv1deliveriesdeliveryidget) | **GET** /api/v1/deliveries/{delivery_id} | Get Delivery |
-| [**RetryDeliveryApiV1DeliveriesDeliveryIdRetryPost**](DeliveriesApi.md#retrydeliveryapiv1deliveriesdeliveryidretrypost) | **POST** /api/v1/deliveries/{delivery_id}/retry | Retry Delivery |
+| [**GetDelivery**](DeliveriesApi.md#getdelivery) | **GET** /api/v1/deliveries/{delivery_id} | Get Delivery |
+| [**RetryDelivery**](DeliveriesApi.md#retrydelivery) | **POST** /api/v1/deliveries/{delivery_id}/retry | Retry Delivery |
 
-<a id="getdeliveryapiv1deliveriesdeliveryidget"></a>
-# **GetDeliveryApiV1DeliveriesDeliveryIdGet**
-> DeliveryResponse GetDeliveryApiV1DeliveriesDeliveryIdGet (string deliveryId)
+<a id="getdelivery"></a>
+# **GetDelivery**
+> DeliveryResponse GetDelivery (string deliveryId)
 
 Get Delivery
 
@@ -23,7 +23,7 @@ using InvoicePDFs.Model;
 
 namespace Example
 {
-    public class GetDeliveryApiV1DeliveriesDeliveryIdGetExample
+    public class GetDeliveryExample
     {
         public static void Main()
         {
@@ -38,12 +38,12 @@ namespace Example
             try
             {
                 // Get Delivery
-                DeliveryResponse result = apiInstance.GetDeliveryApiV1DeliveriesDeliveryIdGet(deliveryId);
+                DeliveryResponse result = apiInstance.GetDelivery(deliveryId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling DeliveriesApi.GetDeliveryApiV1DeliveriesDeliveryIdGet: " + e.Message);
+                Debug.Print("Exception when calling DeliveriesApi.GetDelivery: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -52,21 +52,21 @@ namespace Example
 }
 ```
 
-#### Using the GetDeliveryApiV1DeliveriesDeliveryIdGetWithHttpInfo variant
+#### Using the GetDeliveryWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // Get Delivery
-    ApiResponse<DeliveryResponse> response = apiInstance.GetDeliveryApiV1DeliveriesDeliveryIdGetWithHttpInfo(deliveryId);
+    ApiResponse<DeliveryResponse> response = apiInstance.GetDeliveryWithHttpInfo(deliveryId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling DeliveriesApi.GetDeliveryApiV1DeliveriesDeliveryIdGetWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling DeliveriesApi.GetDeliveryWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -100,9 +100,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="retrydeliveryapiv1deliveriesdeliveryidretrypost"></a>
-# **RetryDeliveryApiV1DeliveriesDeliveryIdRetryPost**
-> DeliveryResponse RetryDeliveryApiV1DeliveriesDeliveryIdRetryPost (string deliveryId)
+<a id="retrydelivery"></a>
+# **RetryDelivery**
+> DeliveryResponse RetryDelivery (string deliveryId)
 
 Retry Delivery
 
@@ -116,7 +116,7 @@ using InvoicePDFs.Model;
 
 namespace Example
 {
-    public class RetryDeliveryApiV1DeliveriesDeliveryIdRetryPostExample
+    public class RetryDeliveryExample
     {
         public static void Main()
         {
@@ -131,12 +131,12 @@ namespace Example
             try
             {
                 // Retry Delivery
-                DeliveryResponse result = apiInstance.RetryDeliveryApiV1DeliveriesDeliveryIdRetryPost(deliveryId);
+                DeliveryResponse result = apiInstance.RetryDelivery(deliveryId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling DeliveriesApi.RetryDeliveryApiV1DeliveriesDeliveryIdRetryPost: " + e.Message);
+                Debug.Print("Exception when calling DeliveriesApi.RetryDelivery: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -145,21 +145,21 @@ namespace Example
 }
 ```
 
-#### Using the RetryDeliveryApiV1DeliveriesDeliveryIdRetryPostWithHttpInfo variant
+#### Using the RetryDeliveryWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // Retry Delivery
-    ApiResponse<DeliveryResponse> response = apiInstance.RetryDeliveryApiV1DeliveriesDeliveryIdRetryPostWithHttpInfo(deliveryId);
+    ApiResponse<DeliveryResponse> response = apiInstance.RetryDeliveryWithHttpInfo(deliveryId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling DeliveriesApi.RetryDeliveryApiV1DeliveriesDeliveryIdRetryPostWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling DeliveriesApi.RetryDeliveryWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }

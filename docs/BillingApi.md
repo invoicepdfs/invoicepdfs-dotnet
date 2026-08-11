@@ -4,16 +4,16 @@ All URIs are relative to *http://localhost*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
-| [**CreateCheckoutApiV1BillingCheckoutSessionPost**](BillingApi.md#createcheckoutapiv1billingcheckoutsessionpost) | **POST** /api/v1/billing/checkout-session | Create Checkout |
-| [**CreatePortalApiV1BillingPortalSessionPost**](BillingApi.md#createportalapiv1billingportalsessionpost) | **POST** /api/v1/billing/portal-session | Create Portal |
-| [**GetSubscriptionApiV1BillingSubscriptionGet**](BillingApi.md#getsubscriptionapiv1billingsubscriptionget) | **GET** /api/v1/billing/subscription | Get Subscription |
-| [**ListPlansApiV1BillingPlansGet**](BillingApi.md#listplansapiv1billingplansget) | **GET** /api/v1/billing/plans | List Plans |
+| [**CreateCheckoutSession**](BillingApi.md#createcheckoutsession) | **POST** /api/v1/billing/checkout-session | Create Checkout Session |
+| [**CreatePortalSession**](BillingApi.md#createportalsession) | **POST** /api/v1/billing/portal-session | Create Portal Session |
+| [**GetSubscription**](BillingApi.md#getsubscription) | **GET** /api/v1/billing/subscription | Get Subscription |
+| [**ListPlans**](BillingApi.md#listplans) | **GET** /api/v1/billing/plans | List Plans |
 
-<a id="createcheckoutapiv1billingcheckoutsessionpost"></a>
-# **CreateCheckoutApiV1BillingCheckoutSessionPost**
-> BillingCheckoutResponse CreateCheckoutApiV1BillingCheckoutSessionPost (BillingCheckoutRequest billingCheckoutRequest)
+<a id="createcheckoutsession"></a>
+# **CreateCheckoutSession**
+> BillingCheckoutResponse CreateCheckoutSession (BillingCheckoutRequest billingCheckoutRequest)
 
-Create Checkout
+Create Checkout Session
 
 Create a Stripe Checkout session for a subscription.
 
@@ -27,7 +27,7 @@ using InvoicePDFs.Model;
 
 namespace Example
 {
-    public class CreateCheckoutApiV1BillingCheckoutSessionPostExample
+    public class CreateCheckoutSessionExample
     {
         public static void Main()
         {
@@ -41,13 +41,13 @@ namespace Example
 
             try
             {
-                // Create Checkout
-                BillingCheckoutResponse result = apiInstance.CreateCheckoutApiV1BillingCheckoutSessionPost(billingCheckoutRequest);
+                // Create Checkout Session
+                BillingCheckoutResponse result = apiInstance.CreateCheckoutSession(billingCheckoutRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling BillingApi.CreateCheckoutApiV1BillingCheckoutSessionPost: " + e.Message);
+                Debug.Print("Exception when calling BillingApi.CreateCheckoutSession: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -56,21 +56,21 @@ namespace Example
 }
 ```
 
-#### Using the CreateCheckoutApiV1BillingCheckoutSessionPostWithHttpInfo variant
+#### Using the CreateCheckoutSessionWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
-    // Create Checkout
-    ApiResponse<BillingCheckoutResponse> response = apiInstance.CreateCheckoutApiV1BillingCheckoutSessionPostWithHttpInfo(billingCheckoutRequest);
+    // Create Checkout Session
+    ApiResponse<BillingCheckoutResponse> response = apiInstance.CreateCheckoutSessionWithHttpInfo(billingCheckoutRequest);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling BillingApi.CreateCheckoutApiV1BillingCheckoutSessionPostWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling BillingApi.CreateCheckoutSessionWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -104,11 +104,11 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="createportalapiv1billingportalsessionpost"></a>
-# **CreatePortalApiV1BillingPortalSessionPost**
-> BillingPortalResponse CreatePortalApiV1BillingPortalSessionPost ()
+<a id="createportalsession"></a>
+# **CreatePortalSession**
+> BillingPortalResponse CreatePortalSession ()
 
-Create Portal
+Create Portal Session
 
 Create a Stripe Customer Portal session for self-service management.
 
@@ -122,7 +122,7 @@ using InvoicePDFs.Model;
 
 namespace Example
 {
-    public class CreatePortalApiV1BillingPortalSessionPostExample
+    public class CreatePortalSessionExample
     {
         public static void Main()
         {
@@ -135,13 +135,13 @@ namespace Example
 
             try
             {
-                // Create Portal
-                BillingPortalResponse result = apiInstance.CreatePortalApiV1BillingPortalSessionPost();
+                // Create Portal Session
+                BillingPortalResponse result = apiInstance.CreatePortalSession();
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling BillingApi.CreatePortalApiV1BillingPortalSessionPost: " + e.Message);
+                Debug.Print("Exception when calling BillingApi.CreatePortalSession: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -150,21 +150,21 @@ namespace Example
 }
 ```
 
-#### Using the CreatePortalApiV1BillingPortalSessionPostWithHttpInfo variant
+#### Using the CreatePortalSessionWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
-    // Create Portal
-    ApiResponse<BillingPortalResponse> response = apiInstance.CreatePortalApiV1BillingPortalSessionPostWithHttpInfo();
+    // Create Portal Session
+    ApiResponse<BillingPortalResponse> response = apiInstance.CreatePortalSessionWithHttpInfo();
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling BillingApi.CreatePortalApiV1BillingPortalSessionPostWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling BillingApi.CreatePortalSessionWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -193,9 +193,9 @@ This endpoint does not need any parameter.
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="getsubscriptionapiv1billingsubscriptionget"></a>
-# **GetSubscriptionApiV1BillingSubscriptionGet**
-> BillingSubscriptionResponse GetSubscriptionApiV1BillingSubscriptionGet ()
+<a id="getsubscription"></a>
+# **GetSubscription**
+> BillingSubscriptionResponse GetSubscription ()
 
 Get Subscription
 
@@ -211,7 +211,7 @@ using InvoicePDFs.Model;
 
 namespace Example
 {
-    public class GetSubscriptionApiV1BillingSubscriptionGetExample
+    public class GetSubscriptionExample
     {
         public static void Main()
         {
@@ -225,12 +225,12 @@ namespace Example
             try
             {
                 // Get Subscription
-                BillingSubscriptionResponse result = apiInstance.GetSubscriptionApiV1BillingSubscriptionGet();
+                BillingSubscriptionResponse result = apiInstance.GetSubscription();
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling BillingApi.GetSubscriptionApiV1BillingSubscriptionGet: " + e.Message);
+                Debug.Print("Exception when calling BillingApi.GetSubscription: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -239,21 +239,21 @@ namespace Example
 }
 ```
 
-#### Using the GetSubscriptionApiV1BillingSubscriptionGetWithHttpInfo variant
+#### Using the GetSubscriptionWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // Get Subscription
-    ApiResponse<BillingSubscriptionResponse> response = apiInstance.GetSubscriptionApiV1BillingSubscriptionGetWithHttpInfo();
+    ApiResponse<BillingSubscriptionResponse> response = apiInstance.GetSubscriptionWithHttpInfo();
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling BillingApi.GetSubscriptionApiV1BillingSubscriptionGetWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling BillingApi.GetSubscriptionWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -282,9 +282,9 @@ This endpoint does not need any parameter.
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="listplansapiv1billingplansget"></a>
-# **ListPlansApiV1BillingPlansGet**
-> BillingPlansListResponse ListPlansApiV1BillingPlansGet ()
+<a id="listplans"></a>
+# **ListPlans**
+> BillingPlansListResponse ListPlans ()
 
 List Plans
 
@@ -300,7 +300,7 @@ using InvoicePDFs.Model;
 
 namespace Example
 {
-    public class ListPlansApiV1BillingPlansGetExample
+    public class ListPlansExample
     {
         public static void Main()
         {
@@ -314,12 +314,12 @@ namespace Example
             try
             {
                 // List Plans
-                BillingPlansListResponse result = apiInstance.ListPlansApiV1BillingPlansGet();
+                BillingPlansListResponse result = apiInstance.ListPlans();
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling BillingApi.ListPlansApiV1BillingPlansGet: " + e.Message);
+                Debug.Print("Exception when calling BillingApi.ListPlans: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -328,21 +328,21 @@ namespace Example
 }
 ```
 
-#### Using the ListPlansApiV1BillingPlansGetWithHttpInfo variant
+#### Using the ListPlansWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // List Plans
-    ApiResponse<BillingPlansListResponse> response = apiInstance.ListPlansApiV1BillingPlansGetWithHttpInfo();
+    ApiResponse<BillingPlansListResponse> response = apiInstance.ListPlansWithHttpInfo();
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling BillingApi.ListPlansApiV1BillingPlansGetWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling BillingApi.ListPlansWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }

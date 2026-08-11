@@ -4,15 +4,15 @@ All URIs are relative to *http://localhost*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
-| [**CreateTaxRateApiV1TaxRatesPost**](TaxRatesApi.md#createtaxrateapiv1taxratespost) | **POST** /api/v1/tax-rates | Create Tax Rate |
-| [**DeleteTaxRateApiV1TaxRatesTaxRateIdDelete**](TaxRatesApi.md#deletetaxrateapiv1taxratestaxrateiddelete) | **DELETE** /api/v1/tax-rates/{tax_rate_id} | Delete Tax Rate |
-| [**GetTaxRateApiV1TaxRatesTaxRateIdGet**](TaxRatesApi.md#gettaxrateapiv1taxratestaxrateidget) | **GET** /api/v1/tax-rates/{tax_rate_id} | Get Tax Rate |
-| [**ListTaxRatesApiV1TaxRatesGet**](TaxRatesApi.md#listtaxratesapiv1taxratesget) | **GET** /api/v1/tax-rates | List Tax Rates |
-| [**UpdateTaxRateApiV1TaxRatesTaxRateIdPatch**](TaxRatesApi.md#updatetaxrateapiv1taxratestaxrateidpatch) | **PATCH** /api/v1/tax-rates/{tax_rate_id} | Update Tax Rate |
+| [**CreateTaxRate**](TaxRatesApi.md#createtaxrate) | **POST** /api/v1/tax-rates | Create Tax Rate |
+| [**DeleteTaxRate**](TaxRatesApi.md#deletetaxrate) | **DELETE** /api/v1/tax-rates/{tax_rate_id} | Delete Tax Rate |
+| [**GetTaxRate**](TaxRatesApi.md#gettaxrate) | **GET** /api/v1/tax-rates/{tax_rate_id} | Get Tax Rate |
+| [**ListTaxRates**](TaxRatesApi.md#listtaxrates) | **GET** /api/v1/tax-rates | List Tax Rates |
+| [**UpdateTaxRate**](TaxRatesApi.md#updatetaxrate) | **PATCH** /api/v1/tax-rates/{tax_rate_id} | Update Tax Rate |
 
-<a id="createtaxrateapiv1taxratespost"></a>
-# **CreateTaxRateApiV1TaxRatesPost**
-> TaxRateResponse CreateTaxRateApiV1TaxRatesPost (TaxRateCreateRequest taxRateCreateRequest)
+<a id="createtaxrate"></a>
+# **CreateTaxRate**
+> TaxRateResponse CreateTaxRate (TaxRateCreateRequest taxRateCreateRequest)
 
 Create Tax Rate
 
@@ -26,7 +26,7 @@ using InvoicePDFs.Model;
 
 namespace Example
 {
-    public class CreateTaxRateApiV1TaxRatesPostExample
+    public class CreateTaxRateExample
     {
         public static void Main()
         {
@@ -41,12 +41,12 @@ namespace Example
             try
             {
                 // Create Tax Rate
-                TaxRateResponse result = apiInstance.CreateTaxRateApiV1TaxRatesPost(taxRateCreateRequest);
+                TaxRateResponse result = apiInstance.CreateTaxRate(taxRateCreateRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling TaxRatesApi.CreateTaxRateApiV1TaxRatesPost: " + e.Message);
+                Debug.Print("Exception when calling TaxRatesApi.CreateTaxRate: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -55,21 +55,21 @@ namespace Example
 }
 ```
 
-#### Using the CreateTaxRateApiV1TaxRatesPostWithHttpInfo variant
+#### Using the CreateTaxRateWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // Create Tax Rate
-    ApiResponse<TaxRateResponse> response = apiInstance.CreateTaxRateApiV1TaxRatesPostWithHttpInfo(taxRateCreateRequest);
+    ApiResponse<TaxRateResponse> response = apiInstance.CreateTaxRateWithHttpInfo(taxRateCreateRequest);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling TaxRatesApi.CreateTaxRateApiV1TaxRatesPostWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling TaxRatesApi.CreateTaxRateWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -103,9 +103,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="deletetaxrateapiv1taxratestaxrateiddelete"></a>
-# **DeleteTaxRateApiV1TaxRatesTaxRateIdDelete**
-> SimpleBoolResponse DeleteTaxRateApiV1TaxRatesTaxRateIdDelete (string taxRateId)
+<a id="deletetaxrate"></a>
+# **DeleteTaxRate**
+> SimpleBoolResponse DeleteTaxRate (string taxRateId)
 
 Delete Tax Rate
 
@@ -119,7 +119,7 @@ using InvoicePDFs.Model;
 
 namespace Example
 {
-    public class DeleteTaxRateApiV1TaxRatesTaxRateIdDeleteExample
+    public class DeleteTaxRateExample
     {
         public static void Main()
         {
@@ -134,12 +134,12 @@ namespace Example
             try
             {
                 // Delete Tax Rate
-                SimpleBoolResponse result = apiInstance.DeleteTaxRateApiV1TaxRatesTaxRateIdDelete(taxRateId);
+                SimpleBoolResponse result = apiInstance.DeleteTaxRate(taxRateId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling TaxRatesApi.DeleteTaxRateApiV1TaxRatesTaxRateIdDelete: " + e.Message);
+                Debug.Print("Exception when calling TaxRatesApi.DeleteTaxRate: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -148,21 +148,21 @@ namespace Example
 }
 ```
 
-#### Using the DeleteTaxRateApiV1TaxRatesTaxRateIdDeleteWithHttpInfo variant
+#### Using the DeleteTaxRateWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // Delete Tax Rate
-    ApiResponse<SimpleBoolResponse> response = apiInstance.DeleteTaxRateApiV1TaxRatesTaxRateIdDeleteWithHttpInfo(taxRateId);
+    ApiResponse<SimpleBoolResponse> response = apiInstance.DeleteTaxRateWithHttpInfo(taxRateId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling TaxRatesApi.DeleteTaxRateApiV1TaxRatesTaxRateIdDeleteWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling TaxRatesApi.DeleteTaxRateWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -196,9 +196,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="gettaxrateapiv1taxratestaxrateidget"></a>
-# **GetTaxRateApiV1TaxRatesTaxRateIdGet**
-> TaxRateResponse GetTaxRateApiV1TaxRatesTaxRateIdGet (string taxRateId)
+<a id="gettaxrate"></a>
+# **GetTaxRate**
+> TaxRateResponse GetTaxRate (string taxRateId)
 
 Get Tax Rate
 
@@ -212,7 +212,7 @@ using InvoicePDFs.Model;
 
 namespace Example
 {
-    public class GetTaxRateApiV1TaxRatesTaxRateIdGetExample
+    public class GetTaxRateExample
     {
         public static void Main()
         {
@@ -227,12 +227,12 @@ namespace Example
             try
             {
                 // Get Tax Rate
-                TaxRateResponse result = apiInstance.GetTaxRateApiV1TaxRatesTaxRateIdGet(taxRateId);
+                TaxRateResponse result = apiInstance.GetTaxRate(taxRateId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling TaxRatesApi.GetTaxRateApiV1TaxRatesTaxRateIdGet: " + e.Message);
+                Debug.Print("Exception when calling TaxRatesApi.GetTaxRate: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -241,21 +241,21 @@ namespace Example
 }
 ```
 
-#### Using the GetTaxRateApiV1TaxRatesTaxRateIdGetWithHttpInfo variant
+#### Using the GetTaxRateWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // Get Tax Rate
-    ApiResponse<TaxRateResponse> response = apiInstance.GetTaxRateApiV1TaxRatesTaxRateIdGetWithHttpInfo(taxRateId);
+    ApiResponse<TaxRateResponse> response = apiInstance.GetTaxRateWithHttpInfo(taxRateId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling TaxRatesApi.GetTaxRateApiV1TaxRatesTaxRateIdGetWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling TaxRatesApi.GetTaxRateWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -289,9 +289,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="listtaxratesapiv1taxratesget"></a>
-# **ListTaxRatesApiV1TaxRatesGet**
-> TaxRatesListResponse ListTaxRatesApiV1TaxRatesGet (int? limit = null, string? cursor = null)
+<a id="listtaxrates"></a>
+# **ListTaxRates**
+> TaxRatesListResponse ListTaxRates (int? limit = null, string? cursor = null)
 
 List Tax Rates
 
@@ -305,7 +305,7 @@ using InvoicePDFs.Model;
 
 namespace Example
 {
-    public class ListTaxRatesApiV1TaxRatesGetExample
+    public class ListTaxRatesExample
     {
         public static void Main()
         {
@@ -321,12 +321,12 @@ namespace Example
             try
             {
                 // List Tax Rates
-                TaxRatesListResponse result = apiInstance.ListTaxRatesApiV1TaxRatesGet(limit, cursor);
+                TaxRatesListResponse result = apiInstance.ListTaxRates(limit, cursor);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling TaxRatesApi.ListTaxRatesApiV1TaxRatesGet: " + e.Message);
+                Debug.Print("Exception when calling TaxRatesApi.ListTaxRates: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -335,21 +335,21 @@ namespace Example
 }
 ```
 
-#### Using the ListTaxRatesApiV1TaxRatesGetWithHttpInfo variant
+#### Using the ListTaxRatesWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // List Tax Rates
-    ApiResponse<TaxRatesListResponse> response = apiInstance.ListTaxRatesApiV1TaxRatesGetWithHttpInfo(limit, cursor);
+    ApiResponse<TaxRatesListResponse> response = apiInstance.ListTaxRatesWithHttpInfo(limit, cursor);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling TaxRatesApi.ListTaxRatesApiV1TaxRatesGetWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling TaxRatesApi.ListTaxRatesWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -384,9 +384,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="updatetaxrateapiv1taxratestaxrateidpatch"></a>
-# **UpdateTaxRateApiV1TaxRatesTaxRateIdPatch**
-> TaxRateResponse UpdateTaxRateApiV1TaxRatesTaxRateIdPatch (string taxRateId, TaxRatePatchRequest taxRatePatchRequest)
+<a id="updatetaxrate"></a>
+# **UpdateTaxRate**
+> TaxRateResponse UpdateTaxRate (string taxRateId, TaxRatePatchRequest taxRatePatchRequest)
 
 Update Tax Rate
 
@@ -400,7 +400,7 @@ using InvoicePDFs.Model;
 
 namespace Example
 {
-    public class UpdateTaxRateApiV1TaxRatesTaxRateIdPatchExample
+    public class UpdateTaxRateExample
     {
         public static void Main()
         {
@@ -416,12 +416,12 @@ namespace Example
             try
             {
                 // Update Tax Rate
-                TaxRateResponse result = apiInstance.UpdateTaxRateApiV1TaxRatesTaxRateIdPatch(taxRateId, taxRatePatchRequest);
+                TaxRateResponse result = apiInstance.UpdateTaxRate(taxRateId, taxRatePatchRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling TaxRatesApi.UpdateTaxRateApiV1TaxRatesTaxRateIdPatch: " + e.Message);
+                Debug.Print("Exception when calling TaxRatesApi.UpdateTaxRate: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -430,21 +430,21 @@ namespace Example
 }
 ```
 
-#### Using the UpdateTaxRateApiV1TaxRatesTaxRateIdPatchWithHttpInfo variant
+#### Using the UpdateTaxRateWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // Update Tax Rate
-    ApiResponse<TaxRateResponse> response = apiInstance.UpdateTaxRateApiV1TaxRatesTaxRateIdPatchWithHttpInfo(taxRateId, taxRatePatchRequest);
+    ApiResponse<TaxRateResponse> response = apiInstance.UpdateTaxRateWithHttpInfo(taxRateId, taxRatePatchRequest);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling TaxRatesApi.UpdateTaxRateApiV1TaxRatesTaxRateIdPatchWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling TaxRatesApi.UpdateTaxRateWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }

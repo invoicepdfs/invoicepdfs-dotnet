@@ -4,12 +4,12 @@ All URIs are relative to *http://localhost*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
-| [**GetAuditEventApiV1AuditEventsAuditEventIdGet**](AuditLogApi.md#getauditeventapiv1auditeventsauditeventidget) | **GET** /api/v1/audit-events/{audit_event_id} | Get Audit Event |
-| [**ListAuditEventsApiV1AuditEventsGet**](AuditLogApi.md#listauditeventsapiv1auditeventsget) | **GET** /api/v1/audit-events | List Audit Events |
+| [**GetAuditEvent**](AuditLogApi.md#getauditevent) | **GET** /api/v1/audit-events/{audit_event_id} | Get Audit Event |
+| [**ListAuditEvents**](AuditLogApi.md#listauditevents) | **GET** /api/v1/audit-events | List Audit Events |
 
-<a id="getauditeventapiv1auditeventsauditeventidget"></a>
-# **GetAuditEventApiV1AuditEventsAuditEventIdGet**
-> AuditEventResponse GetAuditEventApiV1AuditEventsAuditEventIdGet (string auditEventId)
+<a id="getauditevent"></a>
+# **GetAuditEvent**
+> AuditEventResponse GetAuditEvent (string auditEventId)
 
 Get Audit Event
 
@@ -23,7 +23,7 @@ using InvoicePDFs.Model;
 
 namespace Example
 {
-    public class GetAuditEventApiV1AuditEventsAuditEventIdGetExample
+    public class GetAuditEventExample
     {
         public static void Main()
         {
@@ -38,12 +38,12 @@ namespace Example
             try
             {
                 // Get Audit Event
-                AuditEventResponse result = apiInstance.GetAuditEventApiV1AuditEventsAuditEventIdGet(auditEventId);
+                AuditEventResponse result = apiInstance.GetAuditEvent(auditEventId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuditLogApi.GetAuditEventApiV1AuditEventsAuditEventIdGet: " + e.Message);
+                Debug.Print("Exception when calling AuditLogApi.GetAuditEvent: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -52,21 +52,21 @@ namespace Example
 }
 ```
 
-#### Using the GetAuditEventApiV1AuditEventsAuditEventIdGetWithHttpInfo variant
+#### Using the GetAuditEventWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // Get Audit Event
-    ApiResponse<AuditEventResponse> response = apiInstance.GetAuditEventApiV1AuditEventsAuditEventIdGetWithHttpInfo(auditEventId);
+    ApiResponse<AuditEventResponse> response = apiInstance.GetAuditEventWithHttpInfo(auditEventId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling AuditLogApi.GetAuditEventApiV1AuditEventsAuditEventIdGetWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling AuditLogApi.GetAuditEventWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -100,9 +100,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="listauditeventsapiv1auditeventsget"></a>
-# **ListAuditEventsApiV1AuditEventsGet**
-> AuditEventsListResponse ListAuditEventsApiV1AuditEventsGet (int? limit = null, string? cursor = null, string? action = null, string? resourceType = null, string? resourceId = null)
+<a id="listauditevents"></a>
+# **ListAuditEvents**
+> AuditEventsListResponse ListAuditEvents (int? limit = null, string? cursor = null, string? action = null, string? resourceType = null, string? resourceId = null)
 
 List Audit Events
 
@@ -116,7 +116,7 @@ using InvoicePDFs.Model;
 
 namespace Example
 {
-    public class ListAuditEventsApiV1AuditEventsGetExample
+    public class ListAuditEventsExample
     {
         public static void Main()
         {
@@ -135,12 +135,12 @@ namespace Example
             try
             {
                 // List Audit Events
-                AuditEventsListResponse result = apiInstance.ListAuditEventsApiV1AuditEventsGet(limit, cursor, action, resourceType, resourceId);
+                AuditEventsListResponse result = apiInstance.ListAuditEvents(limit, cursor, action, resourceType, resourceId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuditLogApi.ListAuditEventsApiV1AuditEventsGet: " + e.Message);
+                Debug.Print("Exception when calling AuditLogApi.ListAuditEvents: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -149,21 +149,21 @@ namespace Example
 }
 ```
 
-#### Using the ListAuditEventsApiV1AuditEventsGetWithHttpInfo variant
+#### Using the ListAuditEventsWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // List Audit Events
-    ApiResponse<AuditEventsListResponse> response = apiInstance.ListAuditEventsApiV1AuditEventsGetWithHttpInfo(limit, cursor, action, resourceType, resourceId);
+    ApiResponse<AuditEventsListResponse> response = apiInstance.ListAuditEventsWithHttpInfo(limit, cursor, action, resourceType, resourceId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling AuditLogApi.ListAuditEventsApiV1AuditEventsGetWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling AuditLogApi.ListAuditEventsWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }

@@ -4,13 +4,13 @@ All URIs are relative to *http://localhost*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
-| [**DeleteFileApiV1FilesFileIdDelete**](FilesApi.md#deletefileapiv1filesfileiddelete) | **DELETE** /api/v1/files/{file_id} | Delete File |
-| [**GetFileApiV1FilesFileIdGet**](FilesApi.md#getfileapiv1filesfileidget) | **GET** /api/v1/files/{file_id} | Get File |
-| [**UploadFileApiV1FilesPost**](FilesApi.md#uploadfileapiv1filespost) | **POST** /api/v1/files | Upload File |
+| [**DeleteFile**](FilesApi.md#deletefile) | **DELETE** /api/v1/files/{file_id} | Delete File |
+| [**GetFile**](FilesApi.md#getfile) | **GET** /api/v1/files/{file_id} | Get File |
+| [**UploadFile**](FilesApi.md#uploadfile) | **POST** /api/v1/files | Upload File |
 
-<a id="deletefileapiv1filesfileiddelete"></a>
-# **DeleteFileApiV1FilesFileIdDelete**
-> SimpleBoolResponse DeleteFileApiV1FilesFileIdDelete (string fileId)
+<a id="deletefile"></a>
+# **DeleteFile**
+> SimpleBoolResponse DeleteFile (string fileId)
 
 Delete File
 
@@ -24,7 +24,7 @@ using InvoicePDFs.Model;
 
 namespace Example
 {
-    public class DeleteFileApiV1FilesFileIdDeleteExample
+    public class DeleteFileExample
     {
         public static void Main()
         {
@@ -39,12 +39,12 @@ namespace Example
             try
             {
                 // Delete File
-                SimpleBoolResponse result = apiInstance.DeleteFileApiV1FilesFileIdDelete(fileId);
+                SimpleBoolResponse result = apiInstance.DeleteFile(fileId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling FilesApi.DeleteFileApiV1FilesFileIdDelete: " + e.Message);
+                Debug.Print("Exception when calling FilesApi.DeleteFile: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -53,21 +53,21 @@ namespace Example
 }
 ```
 
-#### Using the DeleteFileApiV1FilesFileIdDeleteWithHttpInfo variant
+#### Using the DeleteFileWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // Delete File
-    ApiResponse<SimpleBoolResponse> response = apiInstance.DeleteFileApiV1FilesFileIdDeleteWithHttpInfo(fileId);
+    ApiResponse<SimpleBoolResponse> response = apiInstance.DeleteFileWithHttpInfo(fileId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling FilesApi.DeleteFileApiV1FilesFileIdDeleteWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling FilesApi.DeleteFileWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -101,9 +101,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="getfileapiv1filesfileidget"></a>
-# **GetFileApiV1FilesFileIdGet**
-> FileResponse GetFileApiV1FilesFileIdGet (string fileId)
+<a id="getfile"></a>
+# **GetFile**
+> FileResponse GetFile (string fileId)
 
 Get File
 
@@ -117,7 +117,7 @@ using InvoicePDFs.Model;
 
 namespace Example
 {
-    public class GetFileApiV1FilesFileIdGetExample
+    public class GetFileExample
     {
         public static void Main()
         {
@@ -132,12 +132,12 @@ namespace Example
             try
             {
                 // Get File
-                FileResponse result = apiInstance.GetFileApiV1FilesFileIdGet(fileId);
+                FileResponse result = apiInstance.GetFile(fileId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling FilesApi.GetFileApiV1FilesFileIdGet: " + e.Message);
+                Debug.Print("Exception when calling FilesApi.GetFile: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -146,21 +146,21 @@ namespace Example
 }
 ```
 
-#### Using the GetFileApiV1FilesFileIdGetWithHttpInfo variant
+#### Using the GetFileWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // Get File
-    ApiResponse<FileResponse> response = apiInstance.GetFileApiV1FilesFileIdGetWithHttpInfo(fileId);
+    ApiResponse<FileResponse> response = apiInstance.GetFileWithHttpInfo(fileId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling FilesApi.GetFileApiV1FilesFileIdGetWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling FilesApi.GetFileWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -194,9 +194,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="uploadfileapiv1filespost"></a>
-# **UploadFileApiV1FilesPost**
-> FileResponse UploadFileApiV1FilesPost (System.IO.Stream file, string? idempotencyKey = null)
+<a id="uploadfile"></a>
+# **UploadFile**
+> FileResponse UploadFile (System.IO.Stream file, string? idempotencyKey = null)
 
 Upload File
 
@@ -210,7 +210,7 @@ using InvoicePDFs.Model;
 
 namespace Example
 {
-    public class UploadFileApiV1FilesPostExample
+    public class UploadFileExample
     {
         public static void Main()
         {
@@ -226,12 +226,12 @@ namespace Example
             try
             {
                 // Upload File
-                FileResponse result = apiInstance.UploadFileApiV1FilesPost(file, idempotencyKey);
+                FileResponse result = apiInstance.UploadFile(file, idempotencyKey);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling FilesApi.UploadFileApiV1FilesPost: " + e.Message);
+                Debug.Print("Exception when calling FilesApi.UploadFile: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -240,21 +240,21 @@ namespace Example
 }
 ```
 
-#### Using the UploadFileApiV1FilesPostWithHttpInfo variant
+#### Using the UploadFileWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // Upload File
-    ApiResponse<FileResponse> response = apiInstance.UploadFileApiV1FilesPostWithHttpInfo(file, idempotencyKey);
+    ApiResponse<FileResponse> response = apiInstance.UploadFileWithHttpInfo(file, idempotencyKey);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling FilesApi.UploadFileApiV1FilesPostWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling FilesApi.UploadFileWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }

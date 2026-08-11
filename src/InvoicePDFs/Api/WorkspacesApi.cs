@@ -27,7 +27,7 @@ namespace InvoicePDFs.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Create Member
+        /// Add Workspace Member
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId"></param>
@@ -35,10 +35,10 @@ namespace InvoicePDFs.Api
         /// <param name="idempotencyKey"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>WorkspaceMembersListResponse</returns>
-        WorkspaceMembersListResponse CreateMemberApiV1WorkspacesWorkspaceIdMembersPost(string workspaceId, WorkspaceMemberCreateRequest workspaceMemberCreateRequest, string? idempotencyKey = default(string?), int operationIndex = 0);
+        WorkspaceMembersListResponse AddWorkspaceMember(string workspaceId, WorkspaceMemberCreateRequest workspaceMemberCreateRequest, string? idempotencyKey = default(string?), int operationIndex = 0);
 
         /// <summary>
-        /// Create Member
+        /// Add Workspace Member
         /// </summary>
         /// <remarks>
         /// 
@@ -49,7 +49,7 @@ namespace InvoicePDFs.Api
         /// <param name="idempotencyKey"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of WorkspaceMembersListResponse</returns>
-        ApiResponse<WorkspaceMembersListResponse> CreateMemberApiV1WorkspacesWorkspaceIdMembersPostWithHttpInfo(string workspaceId, WorkspaceMemberCreateRequest workspaceMemberCreateRequest, string? idempotencyKey = default(string?), int operationIndex = 0);
+        ApiResponse<WorkspaceMembersListResponse> AddWorkspaceMemberWithHttpInfo(string workspaceId, WorkspaceMemberCreateRequest workspaceMemberCreateRequest, string? idempotencyKey = default(string?), int operationIndex = 0);
         /// <summary>
         /// Create Workspace
         /// </summary>
@@ -58,7 +58,7 @@ namespace InvoicePDFs.Api
         /// <param name="idempotencyKey"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>WorkspaceResponse</returns>
-        WorkspaceResponse CreateWorkspaceApiV1WorkspacesPost(WorkspaceCreateRequest workspaceCreateRequest, string? idempotencyKey = default(string?), int operationIndex = 0);
+        WorkspaceResponse CreateWorkspace(WorkspaceCreateRequest workspaceCreateRequest, string? idempotencyKey = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// Create Workspace
@@ -71,29 +71,7 @@ namespace InvoicePDFs.Api
         /// <param name="idempotencyKey"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of WorkspaceResponse</returns>
-        ApiResponse<WorkspaceResponse> CreateWorkspaceApiV1WorkspacesPostWithHttpInfo(WorkspaceCreateRequest workspaceCreateRequest, string? idempotencyKey = default(string?), int operationIndex = 0);
-        /// <summary>
-        /// Delete Member
-        /// </summary>
-        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="workspaceId"></param>
-        /// <param name="memberId"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>SimpleBoolResponse</returns>
-        SimpleBoolResponse DeleteMemberApiV1WorkspacesWorkspaceIdMembersMemberIdDelete(string workspaceId, string memberId, int operationIndex = 0);
-
-        /// <summary>
-        /// Delete Member
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="workspaceId"></param>
-        /// <param name="memberId"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of SimpleBoolResponse</returns>
-        ApiResponse<SimpleBoolResponse> DeleteMemberApiV1WorkspacesWorkspaceIdMembersMemberIdDeleteWithHttpInfo(string workspaceId, string memberId, int operationIndex = 0);
+        ApiResponse<WorkspaceResponse> CreateWorkspaceWithHttpInfo(WorkspaceCreateRequest workspaceCreateRequest, string? idempotencyKey = default(string?), int operationIndex = 0);
         /// <summary>
         /// Delete Workspace
         /// </summary>
@@ -101,7 +79,7 @@ namespace InvoicePDFs.Api
         /// <param name="workspaceId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>SimpleBoolResponse</returns>
-        SimpleBoolResponse DeleteWorkspaceApiV1WorkspacesWorkspaceIdDelete(string workspaceId, int operationIndex = 0);
+        SimpleBoolResponse DeleteWorkspace(string workspaceId, int operationIndex = 0);
 
         /// <summary>
         /// Delete Workspace
@@ -113,7 +91,7 @@ namespace InvoicePDFs.Api
         /// <param name="workspaceId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of SimpleBoolResponse</returns>
-        ApiResponse<SimpleBoolResponse> DeleteWorkspaceApiV1WorkspacesWorkspaceIdDeleteWithHttpInfo(string workspaceId, int operationIndex = 0);
+        ApiResponse<SimpleBoolResponse> DeleteWorkspaceWithHttpInfo(string workspaceId, int operationIndex = 0);
         /// <summary>
         /// Get Workspace
         /// </summary>
@@ -121,7 +99,7 @@ namespace InvoicePDFs.Api
         /// <param name="workspaceId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>WorkspaceResponse</returns>
-        WorkspaceResponse GetWorkspaceApiV1WorkspacesWorkspaceIdGet(string workspaceId, int operationIndex = 0);
+        WorkspaceResponse GetWorkspace(string workspaceId, int operationIndex = 0);
 
         /// <summary>
         /// Get Workspace
@@ -133,18 +111,18 @@ namespace InvoicePDFs.Api
         /// <param name="workspaceId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of WorkspaceResponse</returns>
-        ApiResponse<WorkspaceResponse> GetWorkspaceApiV1WorkspacesWorkspaceIdGetWithHttpInfo(string workspaceId, int operationIndex = 0);
+        ApiResponse<WorkspaceResponse> GetWorkspaceWithHttpInfo(string workspaceId, int operationIndex = 0);
         /// <summary>
-        /// List Members
+        /// List Workspace Members
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>WorkspaceMembersListResponse</returns>
-        WorkspaceMembersListResponse ListMembersApiV1WorkspacesWorkspaceIdMembersGet(string workspaceId, int operationIndex = 0);
+        WorkspaceMembersListResponse ListWorkspaceMembers(string workspaceId, int operationIndex = 0);
 
         /// <summary>
-        /// List Members
+        /// List Workspace Members
         /// </summary>
         /// <remarks>
         /// 
@@ -153,7 +131,7 @@ namespace InvoicePDFs.Api
         /// <param name="workspaceId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of WorkspaceMembersListResponse</returns>
-        ApiResponse<WorkspaceMembersListResponse> ListMembersApiV1WorkspacesWorkspaceIdMembersGetWithHttpInfo(string workspaceId, int operationIndex = 0);
+        ApiResponse<WorkspaceMembersListResponse> ListWorkspaceMembersWithHttpInfo(string workspaceId, int operationIndex = 0);
         /// <summary>
         /// List Workspaces
         /// </summary>
@@ -162,7 +140,7 @@ namespace InvoicePDFs.Api
         /// <param name="cursor"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>WorkspacesListResponse</returns>
-        WorkspacesListResponse ListWorkspacesApiV1WorkspacesGet(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0);
+        WorkspacesListResponse ListWorkspaces(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// List Workspaces
@@ -175,20 +153,19 @@ namespace InvoicePDFs.Api
         /// <param name="cursor"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of WorkspacesListResponse</returns>
-        ApiResponse<WorkspacesListResponse> ListWorkspacesApiV1WorkspacesGetWithHttpInfo(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0);
+        ApiResponse<WorkspacesListResponse> ListWorkspacesWithHttpInfo(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0);
         /// <summary>
-        /// Patch Member
+        /// Remove Workspace Member
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId"></param>
         /// <param name="memberId"></param>
-        /// <param name="workspaceMemberPatchRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>WorkspaceMemberOut</returns>
-        WorkspaceMemberOut PatchMemberApiV1WorkspacesWorkspaceIdMembersMemberIdPatch(string workspaceId, string memberId, WorkspaceMemberPatchRequest workspaceMemberPatchRequest, int operationIndex = 0);
+        /// <returns>SimpleBoolResponse</returns>
+        SimpleBoolResponse RemoveWorkspaceMember(string workspaceId, string memberId, int operationIndex = 0);
 
         /// <summary>
-        /// Patch Member
+        /// Remove Workspace Member
         /// </summary>
         /// <remarks>
         /// 
@@ -196,12 +173,11 @@ namespace InvoicePDFs.Api
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId"></param>
         /// <param name="memberId"></param>
-        /// <param name="workspaceMemberPatchRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of WorkspaceMemberOut</returns>
-        ApiResponse<WorkspaceMemberOut> PatchMemberApiV1WorkspacesWorkspaceIdMembersMemberIdPatchWithHttpInfo(string workspaceId, string memberId, WorkspaceMemberPatchRequest workspaceMemberPatchRequest, int operationIndex = 0);
+        /// <returns>ApiResponse of SimpleBoolResponse</returns>
+        ApiResponse<SimpleBoolResponse> RemoveWorkspaceMemberWithHttpInfo(string workspaceId, string memberId, int operationIndex = 0);
         /// <summary>
-        /// Patch Workspace
+        /// Update Workspace
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId"></param>
@@ -209,10 +185,10 @@ namespace InvoicePDFs.Api
         /// <param name="idempotencyKey"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>WorkspaceResponse</returns>
-        WorkspaceResponse PatchWorkspaceApiV1WorkspacesWorkspaceIdPatch(string workspaceId, WorkspacePatchRequest workspacePatchRequest, string? idempotencyKey = default(string?), int operationIndex = 0);
+        WorkspaceResponse UpdateWorkspace(string workspaceId, WorkspacePatchRequest workspacePatchRequest, string? idempotencyKey = default(string?), int operationIndex = 0);
 
         /// <summary>
-        /// Patch Workspace
+        /// Update Workspace
         /// </summary>
         /// <remarks>
         /// 
@@ -223,7 +199,31 @@ namespace InvoicePDFs.Api
         /// <param name="idempotencyKey"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of WorkspaceResponse</returns>
-        ApiResponse<WorkspaceResponse> PatchWorkspaceApiV1WorkspacesWorkspaceIdPatchWithHttpInfo(string workspaceId, WorkspacePatchRequest workspacePatchRequest, string? idempotencyKey = default(string?), int operationIndex = 0);
+        ApiResponse<WorkspaceResponse> UpdateWorkspaceWithHttpInfo(string workspaceId, WorkspacePatchRequest workspacePatchRequest, string? idempotencyKey = default(string?), int operationIndex = 0);
+        /// <summary>
+        /// Update Workspace Member
+        /// </summary>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="workspaceId"></param>
+        /// <param name="memberId"></param>
+        /// <param name="workspaceMemberPatchRequest"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>WorkspaceMemberOut</returns>
+        WorkspaceMemberOut UpdateWorkspaceMember(string workspaceId, string memberId, WorkspaceMemberPatchRequest workspaceMemberPatchRequest, int operationIndex = 0);
+
+        /// <summary>
+        /// Update Workspace Member
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="workspaceId"></param>
+        /// <param name="memberId"></param>
+        /// <param name="workspaceMemberPatchRequest"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of WorkspaceMemberOut</returns>
+        ApiResponse<WorkspaceMemberOut> UpdateWorkspaceMemberWithHttpInfo(string workspaceId, string memberId, WorkspaceMemberPatchRequest workspaceMemberPatchRequest, int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -234,7 +234,7 @@ namespace InvoicePDFs.Api
     {
         #region Asynchronous Operations
         /// <summary>
-        /// Create Member
+        /// Add Workspace Member
         /// </summary>
         /// <remarks>
         /// 
@@ -246,10 +246,10 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of WorkspaceMembersListResponse</returns>
-        System.Threading.Tasks.Task<WorkspaceMembersListResponse> CreateMemberApiV1WorkspacesWorkspaceIdMembersPostAsync(string workspaceId, WorkspaceMemberCreateRequest workspaceMemberCreateRequest, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<WorkspaceMembersListResponse> AddWorkspaceMemberAsync(string workspaceId, WorkspaceMemberCreateRequest workspaceMemberCreateRequest, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// Create Member
+        /// Add Workspace Member
         /// </summary>
         /// <remarks>
         /// 
@@ -261,7 +261,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (WorkspaceMembersListResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<WorkspaceMembersListResponse>> CreateMemberApiV1WorkspacesWorkspaceIdMembersPostWithHttpInfoAsync(string workspaceId, WorkspaceMemberCreateRequest workspaceMemberCreateRequest, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<WorkspaceMembersListResponse>> AddWorkspaceMemberWithHttpInfoAsync(string workspaceId, WorkspaceMemberCreateRequest workspaceMemberCreateRequest, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Create Workspace
         /// </summary>
@@ -274,7 +274,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of WorkspaceResponse</returns>
-        System.Threading.Tasks.Task<WorkspaceResponse> CreateWorkspaceApiV1WorkspacesPostAsync(WorkspaceCreateRequest workspaceCreateRequest, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<WorkspaceResponse> CreateWorkspaceAsync(WorkspaceCreateRequest workspaceCreateRequest, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Create Workspace
@@ -288,34 +288,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (WorkspaceResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<WorkspaceResponse>> CreateWorkspaceApiV1WorkspacesPostWithHttpInfoAsync(WorkspaceCreateRequest workspaceCreateRequest, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// Delete Member
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="workspaceId"></param>
-        /// <param name="memberId"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of SimpleBoolResponse</returns>
-        System.Threading.Tasks.Task<SimpleBoolResponse> DeleteMemberApiV1WorkspacesWorkspaceIdMembersMemberIdDeleteAsync(string workspaceId, string memberId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-
-        /// <summary>
-        /// Delete Member
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="workspaceId"></param>
-        /// <param name="memberId"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (SimpleBoolResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SimpleBoolResponse>> DeleteMemberApiV1WorkspacesWorkspaceIdMembersMemberIdDeleteWithHttpInfoAsync(string workspaceId, string memberId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<WorkspaceResponse>> CreateWorkspaceWithHttpInfoAsync(WorkspaceCreateRequest workspaceCreateRequest, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Delete Workspace
         /// </summary>
@@ -327,7 +300,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of SimpleBoolResponse</returns>
-        System.Threading.Tasks.Task<SimpleBoolResponse> DeleteWorkspaceApiV1WorkspacesWorkspaceIdDeleteAsync(string workspaceId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<SimpleBoolResponse> DeleteWorkspaceAsync(string workspaceId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Delete Workspace
@@ -340,7 +313,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (SimpleBoolResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SimpleBoolResponse>> DeleteWorkspaceApiV1WorkspacesWorkspaceIdDeleteWithHttpInfoAsync(string workspaceId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<SimpleBoolResponse>> DeleteWorkspaceWithHttpInfoAsync(string workspaceId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Get Workspace
         /// </summary>
@@ -352,7 +325,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of WorkspaceResponse</returns>
-        System.Threading.Tasks.Task<WorkspaceResponse> GetWorkspaceApiV1WorkspacesWorkspaceIdGetAsync(string workspaceId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<WorkspaceResponse> GetWorkspaceAsync(string workspaceId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Get Workspace
@@ -365,9 +338,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (WorkspaceResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<WorkspaceResponse>> GetWorkspaceApiV1WorkspacesWorkspaceIdGetWithHttpInfoAsync(string workspaceId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<WorkspaceResponse>> GetWorkspaceWithHttpInfoAsync(string workspaceId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// List Members
+        /// List Workspace Members
         /// </summary>
         /// <remarks>
         /// 
@@ -377,10 +350,10 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of WorkspaceMembersListResponse</returns>
-        System.Threading.Tasks.Task<WorkspaceMembersListResponse> ListMembersApiV1WorkspacesWorkspaceIdMembersGetAsync(string workspaceId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<WorkspaceMembersListResponse> ListWorkspaceMembersAsync(string workspaceId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// List Members
+        /// List Workspace Members
         /// </summary>
         /// <remarks>
         /// 
@@ -390,7 +363,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (WorkspaceMembersListResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<WorkspaceMembersListResponse>> ListMembersApiV1WorkspacesWorkspaceIdMembersGetWithHttpInfoAsync(string workspaceId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<WorkspaceMembersListResponse>> ListWorkspaceMembersWithHttpInfoAsync(string workspaceId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// List Workspaces
         /// </summary>
@@ -403,7 +376,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of WorkspacesListResponse</returns>
-        System.Threading.Tasks.Task<WorkspacesListResponse> ListWorkspacesApiV1WorkspacesGetAsync(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<WorkspacesListResponse> ListWorkspacesAsync(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// List Workspaces
@@ -417,9 +390,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (WorkspacesListResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<WorkspacesListResponse>> ListWorkspacesApiV1WorkspacesGetWithHttpInfoAsync(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<WorkspacesListResponse>> ListWorkspacesWithHttpInfoAsync(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// Patch Member
+        /// Remove Workspace Member
         /// </summary>
         /// <remarks>
         /// 
@@ -427,14 +400,13 @@ namespace InvoicePDFs.Api
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId"></param>
         /// <param name="memberId"></param>
-        /// <param name="workspaceMemberPatchRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of WorkspaceMemberOut</returns>
-        System.Threading.Tasks.Task<WorkspaceMemberOut> PatchMemberApiV1WorkspacesWorkspaceIdMembersMemberIdPatchAsync(string workspaceId, string memberId, WorkspaceMemberPatchRequest workspaceMemberPatchRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of SimpleBoolResponse</returns>
+        System.Threading.Tasks.Task<SimpleBoolResponse> RemoveWorkspaceMemberAsync(string workspaceId, string memberId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// Patch Member
+        /// Remove Workspace Member
         /// </summary>
         /// <remarks>
         /// 
@@ -442,13 +414,12 @@ namespace InvoicePDFs.Api
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId"></param>
         /// <param name="memberId"></param>
-        /// <param name="workspaceMemberPatchRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (WorkspaceMemberOut)</returns>
-        System.Threading.Tasks.Task<ApiResponse<WorkspaceMemberOut>> PatchMemberApiV1WorkspacesWorkspaceIdMembersMemberIdPatchWithHttpInfoAsync(string workspaceId, string memberId, WorkspaceMemberPatchRequest workspaceMemberPatchRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (SimpleBoolResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<SimpleBoolResponse>> RemoveWorkspaceMemberWithHttpInfoAsync(string workspaceId, string memberId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// Patch Workspace
+        /// Update Workspace
         /// </summary>
         /// <remarks>
         /// 
@@ -460,10 +431,10 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of WorkspaceResponse</returns>
-        System.Threading.Tasks.Task<WorkspaceResponse> PatchWorkspaceApiV1WorkspacesWorkspaceIdPatchAsync(string workspaceId, WorkspacePatchRequest workspacePatchRequest, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<WorkspaceResponse> UpdateWorkspaceAsync(string workspaceId, WorkspacePatchRequest workspacePatchRequest, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// Patch Workspace
+        /// Update Workspace
         /// </summary>
         /// <remarks>
         /// 
@@ -475,7 +446,36 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (WorkspaceResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<WorkspaceResponse>> PatchWorkspaceApiV1WorkspacesWorkspaceIdPatchWithHttpInfoAsync(string workspaceId, WorkspacePatchRequest workspacePatchRequest, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<WorkspaceResponse>> UpdateWorkspaceWithHttpInfoAsync(string workspaceId, WorkspacePatchRequest workspacePatchRequest, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// Update Workspace Member
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="workspaceId"></param>
+        /// <param name="memberId"></param>
+        /// <param name="workspaceMemberPatchRequest"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of WorkspaceMemberOut</returns>
+        System.Threading.Tasks.Task<WorkspaceMemberOut> UpdateWorkspaceMemberAsync(string workspaceId, string memberId, WorkspaceMemberPatchRequest workspaceMemberPatchRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Update Workspace Member
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="workspaceId"></param>
+        /// <param name="memberId"></param>
+        /// <param name="workspaceMemberPatchRequest"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (WorkspaceMemberOut)</returns>
+        System.Threading.Tasks.Task<ApiResponse<WorkspaceMemberOut>> UpdateWorkspaceMemberWithHttpInfoAsync(string workspaceId, string memberId, WorkspaceMemberPatchRequest workspaceMemberPatchRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -597,7 +597,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Create Member 
+        /// Add Workspace Member 
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId"></param>
@@ -605,14 +605,14 @@ namespace InvoicePDFs.Api
         /// <param name="idempotencyKey"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>WorkspaceMembersListResponse</returns>
-        public WorkspaceMembersListResponse CreateMemberApiV1WorkspacesWorkspaceIdMembersPost(string workspaceId, WorkspaceMemberCreateRequest workspaceMemberCreateRequest, string? idempotencyKey = default(string?), int operationIndex = 0)
+        public WorkspaceMembersListResponse AddWorkspaceMember(string workspaceId, WorkspaceMemberCreateRequest workspaceMemberCreateRequest, string? idempotencyKey = default(string?), int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<WorkspaceMembersListResponse> localVarResponse = CreateMemberApiV1WorkspacesWorkspaceIdMembersPostWithHttpInfo(workspaceId, workspaceMemberCreateRequest, idempotencyKey);
+            InvoicePDFs.Client.ApiResponse<WorkspaceMembersListResponse> localVarResponse = AddWorkspaceMemberWithHttpInfo(workspaceId, workspaceMemberCreateRequest, idempotencyKey);
             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Create Member 
+        /// Add Workspace Member 
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId"></param>
@@ -620,18 +620,18 @@ namespace InvoicePDFs.Api
         /// <param name="idempotencyKey"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of WorkspaceMembersListResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<WorkspaceMembersListResponse> CreateMemberApiV1WorkspacesWorkspaceIdMembersPostWithHttpInfo(string workspaceId, WorkspaceMemberCreateRequest workspaceMemberCreateRequest, string? idempotencyKey = default(string?), int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<WorkspaceMembersListResponse> AddWorkspaceMemberWithHttpInfo(string workspaceId, WorkspaceMemberCreateRequest workspaceMemberCreateRequest, string? idempotencyKey = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'workspaceId' is set
             if (workspaceId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'workspaceId' when calling WorkspacesApi->CreateMemberApiV1WorkspacesWorkspaceIdMembersPost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'workspaceId' when calling WorkspacesApi->AddWorkspaceMember");
             }
 
             // verify the required parameter 'workspaceMemberCreateRequest' is set
             if (workspaceMemberCreateRequest == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'workspaceMemberCreateRequest' when calling WorkspacesApi->CreateMemberApiV1WorkspacesWorkspaceIdMembersPost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'workspaceMemberCreateRequest' when calling WorkspacesApi->AddWorkspaceMember");
             }
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -664,7 +664,7 @@ namespace InvoicePDFs.Api
             }
             localVarRequestOptions.Data = workspaceMemberCreateRequest;
 
-            localVarRequestOptions.Operation = "WorkspacesApi.CreateMemberApiV1WorkspacesWorkspaceIdMembersPost";
+            localVarRequestOptions.Operation = "WorkspacesApi.AddWorkspaceMember";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -678,7 +678,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Post<WorkspaceMembersListResponse>("/api/v1/workspaces/{workspace_id}/members", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("CreateMemberApiV1WorkspacesWorkspaceIdMembersPost", localVarResponse);
+                Exception _exception = this.ExceptionFactory("AddWorkspaceMember", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -689,7 +689,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Create Member 
+        /// Add Workspace Member 
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId"></param>
@@ -698,14 +698,14 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of WorkspaceMembersListResponse</returns>
-        public async System.Threading.Tasks.Task<WorkspaceMembersListResponse> CreateMemberApiV1WorkspacesWorkspaceIdMembersPostAsync(string workspaceId, WorkspaceMemberCreateRequest workspaceMemberCreateRequest, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<WorkspaceMembersListResponse> AddWorkspaceMemberAsync(string workspaceId, WorkspaceMemberCreateRequest workspaceMemberCreateRequest, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<WorkspaceMembersListResponse> localVarResponse = await CreateMemberApiV1WorkspacesWorkspaceIdMembersPostWithHttpInfoAsync(workspaceId, workspaceMemberCreateRequest, idempotencyKey, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<WorkspaceMembersListResponse> localVarResponse = await AddWorkspaceMemberWithHttpInfoAsync(workspaceId, workspaceMemberCreateRequest, idempotencyKey, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Create Member 
+        /// Add Workspace Member 
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId"></param>
@@ -714,18 +714,18 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (WorkspaceMembersListResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<WorkspaceMembersListResponse>> CreateMemberApiV1WorkspacesWorkspaceIdMembersPostWithHttpInfoAsync(string workspaceId, WorkspaceMemberCreateRequest workspaceMemberCreateRequest, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<WorkspaceMembersListResponse>> AddWorkspaceMemberWithHttpInfoAsync(string workspaceId, WorkspaceMemberCreateRequest workspaceMemberCreateRequest, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'workspaceId' is set
             if (workspaceId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'workspaceId' when calling WorkspacesApi->CreateMemberApiV1WorkspacesWorkspaceIdMembersPost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'workspaceId' when calling WorkspacesApi->AddWorkspaceMember");
             }
 
             // verify the required parameter 'workspaceMemberCreateRequest' is set
             if (workspaceMemberCreateRequest == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'workspaceMemberCreateRequest' when calling WorkspacesApi->CreateMemberApiV1WorkspacesWorkspaceIdMembersPost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'workspaceMemberCreateRequest' when calling WorkspacesApi->AddWorkspaceMember");
             }
 
 
@@ -759,7 +759,7 @@ namespace InvoicePDFs.Api
             }
             localVarRequestOptions.Data = workspaceMemberCreateRequest;
 
-            localVarRequestOptions.Operation = "WorkspacesApi.CreateMemberApiV1WorkspacesWorkspaceIdMembersPost";
+            localVarRequestOptions.Operation = "WorkspacesApi.AddWorkspaceMember";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -774,7 +774,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("CreateMemberApiV1WorkspacesWorkspaceIdMembersPost", localVarResponse);
+                Exception _exception = this.ExceptionFactory("AddWorkspaceMember", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -792,9 +792,9 @@ namespace InvoicePDFs.Api
         /// <param name="idempotencyKey"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>WorkspaceResponse</returns>
-        public WorkspaceResponse CreateWorkspaceApiV1WorkspacesPost(WorkspaceCreateRequest workspaceCreateRequest, string? idempotencyKey = default(string?), int operationIndex = 0)
+        public WorkspaceResponse CreateWorkspace(WorkspaceCreateRequest workspaceCreateRequest, string? idempotencyKey = default(string?), int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<WorkspaceResponse> localVarResponse = CreateWorkspaceApiV1WorkspacesPostWithHttpInfo(workspaceCreateRequest, idempotencyKey);
+            InvoicePDFs.Client.ApiResponse<WorkspaceResponse> localVarResponse = CreateWorkspaceWithHttpInfo(workspaceCreateRequest, idempotencyKey);
             return localVarResponse.Data;
         }
 
@@ -806,12 +806,12 @@ namespace InvoicePDFs.Api
         /// <param name="idempotencyKey"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of WorkspaceResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<WorkspaceResponse> CreateWorkspaceApiV1WorkspacesPostWithHttpInfo(WorkspaceCreateRequest workspaceCreateRequest, string? idempotencyKey = default(string?), int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<WorkspaceResponse> CreateWorkspaceWithHttpInfo(WorkspaceCreateRequest workspaceCreateRequest, string? idempotencyKey = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'workspaceCreateRequest' is set
             if (workspaceCreateRequest == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'workspaceCreateRequest' when calling WorkspacesApi->CreateWorkspaceApiV1WorkspacesPost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'workspaceCreateRequest' when calling WorkspacesApi->CreateWorkspace");
             }
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -843,7 +843,7 @@ namespace InvoicePDFs.Api
             }
             localVarRequestOptions.Data = workspaceCreateRequest;
 
-            localVarRequestOptions.Operation = "WorkspacesApi.CreateWorkspaceApiV1WorkspacesPost";
+            localVarRequestOptions.Operation = "WorkspacesApi.CreateWorkspace";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -857,7 +857,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Post<WorkspaceResponse>("/api/v1/workspaces", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("CreateWorkspaceApiV1WorkspacesPost", localVarResponse);
+                Exception _exception = this.ExceptionFactory("CreateWorkspace", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -876,9 +876,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of WorkspaceResponse</returns>
-        public async System.Threading.Tasks.Task<WorkspaceResponse> CreateWorkspaceApiV1WorkspacesPostAsync(WorkspaceCreateRequest workspaceCreateRequest, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<WorkspaceResponse> CreateWorkspaceAsync(WorkspaceCreateRequest workspaceCreateRequest, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<WorkspaceResponse> localVarResponse = await CreateWorkspaceApiV1WorkspacesPostWithHttpInfoAsync(workspaceCreateRequest, idempotencyKey, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<WorkspaceResponse> localVarResponse = await CreateWorkspaceWithHttpInfoAsync(workspaceCreateRequest, idempotencyKey, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -891,12 +891,12 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (WorkspaceResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<WorkspaceResponse>> CreateWorkspaceApiV1WorkspacesPostWithHttpInfoAsync(WorkspaceCreateRequest workspaceCreateRequest, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<WorkspaceResponse>> CreateWorkspaceWithHttpInfoAsync(WorkspaceCreateRequest workspaceCreateRequest, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'workspaceCreateRequest' is set
             if (workspaceCreateRequest == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'workspaceCreateRequest' when calling WorkspacesApi->CreateWorkspaceApiV1WorkspacesPost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'workspaceCreateRequest' when calling WorkspacesApi->CreateWorkspace");
             }
 
 
@@ -929,7 +929,7 @@ namespace InvoicePDFs.Api
             }
             localVarRequestOptions.Data = workspaceCreateRequest;
 
-            localVarRequestOptions.Operation = "WorkspacesApi.CreateWorkspaceApiV1WorkspacesPost";
+            localVarRequestOptions.Operation = "WorkspacesApi.CreateWorkspace";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -944,181 +944,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("CreateWorkspaceApiV1WorkspacesPost", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
-        /// Delete Member 
-        /// </summary>
-        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="workspaceId"></param>
-        /// <param name="memberId"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>SimpleBoolResponse</returns>
-        public SimpleBoolResponse DeleteMemberApiV1WorkspacesWorkspaceIdMembersMemberIdDelete(string workspaceId, string memberId, int operationIndex = 0)
-        {
-            InvoicePDFs.Client.ApiResponse<SimpleBoolResponse> localVarResponse = DeleteMemberApiV1WorkspacesWorkspaceIdMembersMemberIdDeleteWithHttpInfo(workspaceId, memberId);
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Delete Member 
-        /// </summary>
-        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="workspaceId"></param>
-        /// <param name="memberId"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of SimpleBoolResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<SimpleBoolResponse> DeleteMemberApiV1WorkspacesWorkspaceIdMembersMemberIdDeleteWithHttpInfo(string workspaceId, string memberId, int operationIndex = 0)
-        {
-            // verify the required parameter 'workspaceId' is set
-            if (workspaceId == null)
-            {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'workspaceId' when calling WorkspacesApi->DeleteMemberApiV1WorkspacesWorkspaceIdMembersMemberIdDelete");
-            }
-
-            // verify the required parameter 'memberId' is set
-            if (memberId == null)
-            {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'memberId' when calling WorkspacesApi->DeleteMemberApiV1WorkspacesWorkspaceIdMembersMemberIdDelete");
-            }
-
-            InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var localVarContentType = InvoicePDFs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
-
-            var localVarAccept = InvoicePDFs.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
-
-            localVarRequestOptions.PathParameters.Add("workspace_id", InvoicePDFs.Client.ClientUtils.ParameterToString(workspaceId)); // path parameter
-            localVarRequestOptions.PathParameters.Add("member_id", InvoicePDFs.Client.ClientUtils.ParameterToString(memberId)); // path parameter
-
-            localVarRequestOptions.Operation = "WorkspacesApi.DeleteMemberApiV1WorkspacesWorkspaceIdMembersMemberIdDelete";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
-            // authentication (HTTPBearer) required
-            // bearer authentication required
-            if (!string.IsNullOrEmpty(this.Configuration.AccessToken) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
-            {
-                localVarRequestOptions.HeaderParameters.Add("Authorization", "Bearer " + this.Configuration.AccessToken);
-            }
-
-            // make the HTTP request
-            var localVarResponse = this.Client.Delete<SimpleBoolResponse>("/api/v1/workspaces/{workspace_id}/members/{member_id}", localVarRequestOptions, this.Configuration);
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("DeleteMemberApiV1WorkspacesWorkspaceIdMembersMemberIdDelete", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
-        /// Delete Member 
-        /// </summary>
-        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="workspaceId"></param>
-        /// <param name="memberId"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of SimpleBoolResponse</returns>
-        public async System.Threading.Tasks.Task<SimpleBoolResponse> DeleteMemberApiV1WorkspacesWorkspaceIdMembersMemberIdDeleteAsync(string workspaceId, string memberId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            InvoicePDFs.Client.ApiResponse<SimpleBoolResponse> localVarResponse = await DeleteMemberApiV1WorkspacesWorkspaceIdMembersMemberIdDeleteWithHttpInfoAsync(workspaceId, memberId, operationIndex, cancellationToken).ConfigureAwait(false);
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Delete Member 
-        /// </summary>
-        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="workspaceId"></param>
-        /// <param name="memberId"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (SimpleBoolResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<SimpleBoolResponse>> DeleteMemberApiV1WorkspacesWorkspaceIdMembersMemberIdDeleteWithHttpInfoAsync(string workspaceId, string memberId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            // verify the required parameter 'workspaceId' is set
-            if (workspaceId == null)
-            {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'workspaceId' when calling WorkspacesApi->DeleteMemberApiV1WorkspacesWorkspaceIdMembersMemberIdDelete");
-            }
-
-            // verify the required parameter 'memberId' is set
-            if (memberId == null)
-            {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'memberId' when calling WorkspacesApi->DeleteMemberApiV1WorkspacesWorkspaceIdMembersMemberIdDelete");
-            }
-
-
-            InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var localVarContentType = InvoicePDFs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
-
-            var localVarAccept = InvoicePDFs.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
-
-            localVarRequestOptions.PathParameters.Add("workspace_id", InvoicePDFs.Client.ClientUtils.ParameterToString(workspaceId)); // path parameter
-            localVarRequestOptions.PathParameters.Add("member_id", InvoicePDFs.Client.ClientUtils.ParameterToString(memberId)); // path parameter
-
-            localVarRequestOptions.Operation = "WorkspacesApi.DeleteMemberApiV1WorkspacesWorkspaceIdMembersMemberIdDelete";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
-            // authentication (HTTPBearer) required
-            // bearer authentication required
-            if (!string.IsNullOrEmpty(this.Configuration.AccessToken) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
-            {
-                localVarRequestOptions.HeaderParameters.Add("Authorization", "Bearer " + this.Configuration.AccessToken);
-            }
-
-            // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<SimpleBoolResponse>("/api/v1/workspaces/{workspace_id}/members/{member_id}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("DeleteMemberApiV1WorkspacesWorkspaceIdMembersMemberIdDelete", localVarResponse);
+                Exception _exception = this.ExceptionFactory("CreateWorkspace", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1135,9 +961,9 @@ namespace InvoicePDFs.Api
         /// <param name="workspaceId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>SimpleBoolResponse</returns>
-        public SimpleBoolResponse DeleteWorkspaceApiV1WorkspacesWorkspaceIdDelete(string workspaceId, int operationIndex = 0)
+        public SimpleBoolResponse DeleteWorkspace(string workspaceId, int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<SimpleBoolResponse> localVarResponse = DeleteWorkspaceApiV1WorkspacesWorkspaceIdDeleteWithHttpInfo(workspaceId);
+            InvoicePDFs.Client.ApiResponse<SimpleBoolResponse> localVarResponse = DeleteWorkspaceWithHttpInfo(workspaceId);
             return localVarResponse.Data;
         }
 
@@ -1148,12 +974,12 @@ namespace InvoicePDFs.Api
         /// <param name="workspaceId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of SimpleBoolResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<SimpleBoolResponse> DeleteWorkspaceApiV1WorkspacesWorkspaceIdDeleteWithHttpInfo(string workspaceId, int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<SimpleBoolResponse> DeleteWorkspaceWithHttpInfo(string workspaceId, int operationIndex = 0)
         {
             // verify the required parameter 'workspaceId' is set
             if (workspaceId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'workspaceId' when calling WorkspacesApi->DeleteWorkspaceApiV1WorkspacesWorkspaceIdDelete");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'workspaceId' when calling WorkspacesApi->DeleteWorkspace");
             }
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -1180,7 +1006,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("workspace_id", InvoicePDFs.Client.ClientUtils.ParameterToString(workspaceId)); // path parameter
 
-            localVarRequestOptions.Operation = "WorkspacesApi.DeleteWorkspaceApiV1WorkspacesWorkspaceIdDelete";
+            localVarRequestOptions.Operation = "WorkspacesApi.DeleteWorkspace";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -1194,7 +1020,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Delete<SimpleBoolResponse>("/api/v1/workspaces/{workspace_id}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteWorkspaceApiV1WorkspacesWorkspaceIdDelete", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteWorkspace", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1212,9 +1038,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of SimpleBoolResponse</returns>
-        public async System.Threading.Tasks.Task<SimpleBoolResponse> DeleteWorkspaceApiV1WorkspacesWorkspaceIdDeleteAsync(string workspaceId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<SimpleBoolResponse> DeleteWorkspaceAsync(string workspaceId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<SimpleBoolResponse> localVarResponse = await DeleteWorkspaceApiV1WorkspacesWorkspaceIdDeleteWithHttpInfoAsync(workspaceId, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<SimpleBoolResponse> localVarResponse = await DeleteWorkspaceWithHttpInfoAsync(workspaceId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1226,12 +1052,12 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (SimpleBoolResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<SimpleBoolResponse>> DeleteWorkspaceApiV1WorkspacesWorkspaceIdDeleteWithHttpInfoAsync(string workspaceId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<SimpleBoolResponse>> DeleteWorkspaceWithHttpInfoAsync(string workspaceId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'workspaceId' is set
             if (workspaceId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'workspaceId' when calling WorkspacesApi->DeleteWorkspaceApiV1WorkspacesWorkspaceIdDelete");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'workspaceId' when calling WorkspacesApi->DeleteWorkspace");
             }
 
 
@@ -1259,7 +1085,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("workspace_id", InvoicePDFs.Client.ClientUtils.ParameterToString(workspaceId)); // path parameter
 
-            localVarRequestOptions.Operation = "WorkspacesApi.DeleteWorkspaceApiV1WorkspacesWorkspaceIdDelete";
+            localVarRequestOptions.Operation = "WorkspacesApi.DeleteWorkspace";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -1274,7 +1100,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteWorkspaceApiV1WorkspacesWorkspaceIdDelete", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteWorkspace", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1291,9 +1117,9 @@ namespace InvoicePDFs.Api
         /// <param name="workspaceId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>WorkspaceResponse</returns>
-        public WorkspaceResponse GetWorkspaceApiV1WorkspacesWorkspaceIdGet(string workspaceId, int operationIndex = 0)
+        public WorkspaceResponse GetWorkspace(string workspaceId, int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<WorkspaceResponse> localVarResponse = GetWorkspaceApiV1WorkspacesWorkspaceIdGetWithHttpInfo(workspaceId);
+            InvoicePDFs.Client.ApiResponse<WorkspaceResponse> localVarResponse = GetWorkspaceWithHttpInfo(workspaceId);
             return localVarResponse.Data;
         }
 
@@ -1304,12 +1130,12 @@ namespace InvoicePDFs.Api
         /// <param name="workspaceId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of WorkspaceResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<WorkspaceResponse> GetWorkspaceApiV1WorkspacesWorkspaceIdGetWithHttpInfo(string workspaceId, int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<WorkspaceResponse> GetWorkspaceWithHttpInfo(string workspaceId, int operationIndex = 0)
         {
             // verify the required parameter 'workspaceId' is set
             if (workspaceId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'workspaceId' when calling WorkspacesApi->GetWorkspaceApiV1WorkspacesWorkspaceIdGet");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'workspaceId' when calling WorkspacesApi->GetWorkspace");
             }
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -1336,7 +1162,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("workspace_id", InvoicePDFs.Client.ClientUtils.ParameterToString(workspaceId)); // path parameter
 
-            localVarRequestOptions.Operation = "WorkspacesApi.GetWorkspaceApiV1WorkspacesWorkspaceIdGet";
+            localVarRequestOptions.Operation = "WorkspacesApi.GetWorkspace";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -1350,7 +1176,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Get<WorkspaceResponse>("/api/v1/workspaces/{workspace_id}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetWorkspaceApiV1WorkspacesWorkspaceIdGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetWorkspace", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1368,9 +1194,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of WorkspaceResponse</returns>
-        public async System.Threading.Tasks.Task<WorkspaceResponse> GetWorkspaceApiV1WorkspacesWorkspaceIdGetAsync(string workspaceId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<WorkspaceResponse> GetWorkspaceAsync(string workspaceId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<WorkspaceResponse> localVarResponse = await GetWorkspaceApiV1WorkspacesWorkspaceIdGetWithHttpInfoAsync(workspaceId, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<WorkspaceResponse> localVarResponse = await GetWorkspaceWithHttpInfoAsync(workspaceId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1382,12 +1208,12 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (WorkspaceResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<WorkspaceResponse>> GetWorkspaceApiV1WorkspacesWorkspaceIdGetWithHttpInfoAsync(string workspaceId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<WorkspaceResponse>> GetWorkspaceWithHttpInfoAsync(string workspaceId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'workspaceId' is set
             if (workspaceId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'workspaceId' when calling WorkspacesApi->GetWorkspaceApiV1WorkspacesWorkspaceIdGet");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'workspaceId' when calling WorkspacesApi->GetWorkspace");
             }
 
 
@@ -1415,7 +1241,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("workspace_id", InvoicePDFs.Client.ClientUtils.ParameterToString(workspaceId)); // path parameter
 
-            localVarRequestOptions.Operation = "WorkspacesApi.GetWorkspaceApiV1WorkspacesWorkspaceIdGet";
+            localVarRequestOptions.Operation = "WorkspacesApi.GetWorkspace";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -1430,7 +1256,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetWorkspaceApiV1WorkspacesWorkspaceIdGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetWorkspace", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1441,31 +1267,31 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Members 
+        /// List Workspace Members 
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>WorkspaceMembersListResponse</returns>
-        public WorkspaceMembersListResponse ListMembersApiV1WorkspacesWorkspaceIdMembersGet(string workspaceId, int operationIndex = 0)
+        public WorkspaceMembersListResponse ListWorkspaceMembers(string workspaceId, int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<WorkspaceMembersListResponse> localVarResponse = ListMembersApiV1WorkspacesWorkspaceIdMembersGetWithHttpInfo(workspaceId);
+            InvoicePDFs.Client.ApiResponse<WorkspaceMembersListResponse> localVarResponse = ListWorkspaceMembersWithHttpInfo(workspaceId);
             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// List Members 
+        /// List Workspace Members 
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of WorkspaceMembersListResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<WorkspaceMembersListResponse> ListMembersApiV1WorkspacesWorkspaceIdMembersGetWithHttpInfo(string workspaceId, int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<WorkspaceMembersListResponse> ListWorkspaceMembersWithHttpInfo(string workspaceId, int operationIndex = 0)
         {
             // verify the required parameter 'workspaceId' is set
             if (workspaceId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'workspaceId' when calling WorkspacesApi->ListMembersApiV1WorkspacesWorkspaceIdMembersGet");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'workspaceId' when calling WorkspacesApi->ListWorkspaceMembers");
             }
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -1492,7 +1318,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("workspace_id", InvoicePDFs.Client.ClientUtils.ParameterToString(workspaceId)); // path parameter
 
-            localVarRequestOptions.Operation = "WorkspacesApi.ListMembersApiV1WorkspacesWorkspaceIdMembersGet";
+            localVarRequestOptions.Operation = "WorkspacesApi.ListWorkspaceMembers";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -1506,7 +1332,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Get<WorkspaceMembersListResponse>("/api/v1/workspaces/{workspace_id}/members", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListMembersApiV1WorkspacesWorkspaceIdMembersGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("ListWorkspaceMembers", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1517,33 +1343,33 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Members 
+        /// List Workspace Members 
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of WorkspaceMembersListResponse</returns>
-        public async System.Threading.Tasks.Task<WorkspaceMembersListResponse> ListMembersApiV1WorkspacesWorkspaceIdMembersGetAsync(string workspaceId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<WorkspaceMembersListResponse> ListWorkspaceMembersAsync(string workspaceId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<WorkspaceMembersListResponse> localVarResponse = await ListMembersApiV1WorkspacesWorkspaceIdMembersGetWithHttpInfoAsync(workspaceId, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<WorkspaceMembersListResponse> localVarResponse = await ListWorkspaceMembersWithHttpInfoAsync(workspaceId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// List Members 
+        /// List Workspace Members 
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (WorkspaceMembersListResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<WorkspaceMembersListResponse>> ListMembersApiV1WorkspacesWorkspaceIdMembersGetWithHttpInfoAsync(string workspaceId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<WorkspaceMembersListResponse>> ListWorkspaceMembersWithHttpInfoAsync(string workspaceId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'workspaceId' is set
             if (workspaceId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'workspaceId' when calling WorkspacesApi->ListMembersApiV1WorkspacesWorkspaceIdMembersGet");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'workspaceId' when calling WorkspacesApi->ListWorkspaceMembers");
             }
 
 
@@ -1571,7 +1397,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("workspace_id", InvoicePDFs.Client.ClientUtils.ParameterToString(workspaceId)); // path parameter
 
-            localVarRequestOptions.Operation = "WorkspacesApi.ListMembersApiV1WorkspacesWorkspaceIdMembersGet";
+            localVarRequestOptions.Operation = "WorkspacesApi.ListWorkspaceMembers";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -1586,7 +1412,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListMembersApiV1WorkspacesWorkspaceIdMembersGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("ListWorkspaceMembers", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1604,9 +1430,9 @@ namespace InvoicePDFs.Api
         /// <param name="cursor"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>WorkspacesListResponse</returns>
-        public WorkspacesListResponse ListWorkspacesApiV1WorkspacesGet(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0)
+        public WorkspacesListResponse ListWorkspaces(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<WorkspacesListResponse> localVarResponse = ListWorkspacesApiV1WorkspacesGetWithHttpInfo(limit, cursor);
+            InvoicePDFs.Client.ApiResponse<WorkspacesListResponse> localVarResponse = ListWorkspacesWithHttpInfo(limit, cursor);
             return localVarResponse.Data;
         }
 
@@ -1618,7 +1444,7 @@ namespace InvoicePDFs.Api
         /// <param name="cursor"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of WorkspacesListResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<WorkspacesListResponse> ListWorkspacesApiV1WorkspacesGetWithHttpInfo(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<WorkspacesListResponse> ListWorkspacesWithHttpInfo(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0)
         {
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
 
@@ -1651,7 +1477,7 @@ namespace InvoicePDFs.Api
                 localVarRequestOptions.QueryParameters.Add(InvoicePDFs.Client.ClientUtils.ParameterToMultiMap("", "cursor", cursor));
             }
 
-            localVarRequestOptions.Operation = "WorkspacesApi.ListWorkspacesApiV1WorkspacesGet";
+            localVarRequestOptions.Operation = "WorkspacesApi.ListWorkspaces";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -1665,7 +1491,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Get<WorkspacesListResponse>("/api/v1/workspaces", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListWorkspacesApiV1WorkspacesGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("ListWorkspaces", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1684,9 +1510,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of WorkspacesListResponse</returns>
-        public async System.Threading.Tasks.Task<WorkspacesListResponse> ListWorkspacesApiV1WorkspacesGetAsync(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<WorkspacesListResponse> ListWorkspacesAsync(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<WorkspacesListResponse> localVarResponse = await ListWorkspacesApiV1WorkspacesGetWithHttpInfoAsync(limit, cursor, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<WorkspacesListResponse> localVarResponse = await ListWorkspacesWithHttpInfoAsync(limit, cursor, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1699,7 +1525,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (WorkspacesListResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<WorkspacesListResponse>> ListWorkspacesApiV1WorkspacesGetWithHttpInfoAsync(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<WorkspacesListResponse>> ListWorkspacesWithHttpInfoAsync(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -1733,7 +1559,7 @@ namespace InvoicePDFs.Api
                 localVarRequestOptions.QueryParameters.Add(InvoicePDFs.Client.ClientUtils.ParameterToMultiMap("", "cursor", cursor));
             }
 
-            localVarRequestOptions.Operation = "WorkspacesApi.ListWorkspacesApiV1WorkspacesGet";
+            localVarRequestOptions.Operation = "WorkspacesApi.ListWorkspaces";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -1748,7 +1574,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListWorkspacesApiV1WorkspacesGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("ListWorkspaces", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1759,53 +1585,44 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Patch Member 
+        /// Remove Workspace Member 
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId"></param>
         /// <param name="memberId"></param>
-        /// <param name="workspaceMemberPatchRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>WorkspaceMemberOut</returns>
-        public WorkspaceMemberOut PatchMemberApiV1WorkspacesWorkspaceIdMembersMemberIdPatch(string workspaceId, string memberId, WorkspaceMemberPatchRequest workspaceMemberPatchRequest, int operationIndex = 0)
+        /// <returns>SimpleBoolResponse</returns>
+        public SimpleBoolResponse RemoveWorkspaceMember(string workspaceId, string memberId, int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<WorkspaceMemberOut> localVarResponse = PatchMemberApiV1WorkspacesWorkspaceIdMembersMemberIdPatchWithHttpInfo(workspaceId, memberId, workspaceMemberPatchRequest);
+            InvoicePDFs.Client.ApiResponse<SimpleBoolResponse> localVarResponse = RemoveWorkspaceMemberWithHttpInfo(workspaceId, memberId);
             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Patch Member 
+        /// Remove Workspace Member 
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId"></param>
         /// <param name="memberId"></param>
-        /// <param name="workspaceMemberPatchRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of WorkspaceMemberOut</returns>
-        public InvoicePDFs.Client.ApiResponse<WorkspaceMemberOut> PatchMemberApiV1WorkspacesWorkspaceIdMembersMemberIdPatchWithHttpInfo(string workspaceId, string memberId, WorkspaceMemberPatchRequest workspaceMemberPatchRequest, int operationIndex = 0)
+        /// <returns>ApiResponse of SimpleBoolResponse</returns>
+        public InvoicePDFs.Client.ApiResponse<SimpleBoolResponse> RemoveWorkspaceMemberWithHttpInfo(string workspaceId, string memberId, int operationIndex = 0)
         {
             // verify the required parameter 'workspaceId' is set
             if (workspaceId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'workspaceId' when calling WorkspacesApi->PatchMemberApiV1WorkspacesWorkspaceIdMembersMemberIdPatch");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'workspaceId' when calling WorkspacesApi->RemoveWorkspaceMember");
             }
 
             // verify the required parameter 'memberId' is set
             if (memberId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'memberId' when calling WorkspacesApi->PatchMemberApiV1WorkspacesWorkspaceIdMembersMemberIdPatch");
-            }
-
-            // verify the required parameter 'workspaceMemberPatchRequest' is set
-            if (workspaceMemberPatchRequest == null)
-            {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'workspaceMemberPatchRequest' when calling WorkspacesApi->PatchMemberApiV1WorkspacesWorkspaceIdMembersMemberIdPatch");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'memberId' when calling WorkspacesApi->RemoveWorkspaceMember");
             }
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
-                "application/json"
             };
 
             // to determine the Accept header
@@ -1827,9 +1644,8 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("workspace_id", InvoicePDFs.Client.ClientUtils.ParameterToString(workspaceId)); // path parameter
             localVarRequestOptions.PathParameters.Add("member_id", InvoicePDFs.Client.ClientUtils.ParameterToString(memberId)); // path parameter
-            localVarRequestOptions.Data = workspaceMemberPatchRequest;
 
-            localVarRequestOptions.Operation = "WorkspacesApi.PatchMemberApiV1WorkspacesWorkspaceIdMembersMemberIdPatch";
+            localVarRequestOptions.Operation = "WorkspacesApi.RemoveWorkspaceMember";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -1840,10 +1656,10 @@ namespace InvoicePDFs.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Patch<WorkspaceMemberOut>("/api/v1/workspaces/{workspace_id}/members/{member_id}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<SimpleBoolResponse>("/api/v1/workspaces/{workspace_id}/members/{member_id}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PatchMemberApiV1WorkspacesWorkspaceIdMembersMemberIdPatch", localVarResponse);
+                Exception _exception = this.ExceptionFactory("RemoveWorkspaceMember", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1854,56 +1670,47 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Patch Member 
+        /// Remove Workspace Member 
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId"></param>
         /// <param name="memberId"></param>
-        /// <param name="workspaceMemberPatchRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of WorkspaceMemberOut</returns>
-        public async System.Threading.Tasks.Task<WorkspaceMemberOut> PatchMemberApiV1WorkspacesWorkspaceIdMembersMemberIdPatchAsync(string workspaceId, string memberId, WorkspaceMemberPatchRequest workspaceMemberPatchRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of SimpleBoolResponse</returns>
+        public async System.Threading.Tasks.Task<SimpleBoolResponse> RemoveWorkspaceMemberAsync(string workspaceId, string memberId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<WorkspaceMemberOut> localVarResponse = await PatchMemberApiV1WorkspacesWorkspaceIdMembersMemberIdPatchWithHttpInfoAsync(workspaceId, memberId, workspaceMemberPatchRequest, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<SimpleBoolResponse> localVarResponse = await RemoveWorkspaceMemberWithHttpInfoAsync(workspaceId, memberId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Patch Member 
+        /// Remove Workspace Member 
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId"></param>
         /// <param name="memberId"></param>
-        /// <param name="workspaceMemberPatchRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (WorkspaceMemberOut)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<WorkspaceMemberOut>> PatchMemberApiV1WorkspacesWorkspaceIdMembersMemberIdPatchWithHttpInfoAsync(string workspaceId, string memberId, WorkspaceMemberPatchRequest workspaceMemberPatchRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (SimpleBoolResponse)</returns>
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<SimpleBoolResponse>> RemoveWorkspaceMemberWithHttpInfoAsync(string workspaceId, string memberId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'workspaceId' is set
             if (workspaceId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'workspaceId' when calling WorkspacesApi->PatchMemberApiV1WorkspacesWorkspaceIdMembersMemberIdPatch");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'workspaceId' when calling WorkspacesApi->RemoveWorkspaceMember");
             }
 
             // verify the required parameter 'memberId' is set
             if (memberId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'memberId' when calling WorkspacesApi->PatchMemberApiV1WorkspacesWorkspaceIdMembersMemberIdPatch");
-            }
-
-            // verify the required parameter 'workspaceMemberPatchRequest' is set
-            if (workspaceMemberPatchRequest == null)
-            {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'workspaceMemberPatchRequest' when calling WorkspacesApi->PatchMemberApiV1WorkspacesWorkspaceIdMembersMemberIdPatch");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'memberId' when calling WorkspacesApi->RemoveWorkspaceMember");
             }
 
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
-                "application/json"
             };
 
             // to determine the Accept header
@@ -1925,9 +1732,8 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("workspace_id", InvoicePDFs.Client.ClientUtils.ParameterToString(workspaceId)); // path parameter
             localVarRequestOptions.PathParameters.Add("member_id", InvoicePDFs.Client.ClientUtils.ParameterToString(memberId)); // path parameter
-            localVarRequestOptions.Data = workspaceMemberPatchRequest;
 
-            localVarRequestOptions.Operation = "WorkspacesApi.PatchMemberApiV1WorkspacesWorkspaceIdMembersMemberIdPatch";
+            localVarRequestOptions.Operation = "WorkspacesApi.RemoveWorkspaceMember";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -1938,11 +1744,11 @@ namespace InvoicePDFs.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PatchAsync<WorkspaceMemberOut>("/api/v1/workspaces/{workspace_id}/members/{member_id}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<SimpleBoolResponse>("/api/v1/workspaces/{workspace_id}/members/{member_id}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PatchMemberApiV1WorkspacesWorkspaceIdMembersMemberIdPatch", localVarResponse);
+                Exception _exception = this.ExceptionFactory("RemoveWorkspaceMember", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1953,7 +1759,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Patch Workspace 
+        /// Update Workspace 
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId"></param>
@@ -1961,14 +1767,14 @@ namespace InvoicePDFs.Api
         /// <param name="idempotencyKey"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>WorkspaceResponse</returns>
-        public WorkspaceResponse PatchWorkspaceApiV1WorkspacesWorkspaceIdPatch(string workspaceId, WorkspacePatchRequest workspacePatchRequest, string? idempotencyKey = default(string?), int operationIndex = 0)
+        public WorkspaceResponse UpdateWorkspace(string workspaceId, WorkspacePatchRequest workspacePatchRequest, string? idempotencyKey = default(string?), int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<WorkspaceResponse> localVarResponse = PatchWorkspaceApiV1WorkspacesWorkspaceIdPatchWithHttpInfo(workspaceId, workspacePatchRequest, idempotencyKey);
+            InvoicePDFs.Client.ApiResponse<WorkspaceResponse> localVarResponse = UpdateWorkspaceWithHttpInfo(workspaceId, workspacePatchRequest, idempotencyKey);
             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Patch Workspace 
+        /// Update Workspace 
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId"></param>
@@ -1976,18 +1782,18 @@ namespace InvoicePDFs.Api
         /// <param name="idempotencyKey"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of WorkspaceResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<WorkspaceResponse> PatchWorkspaceApiV1WorkspacesWorkspaceIdPatchWithHttpInfo(string workspaceId, WorkspacePatchRequest workspacePatchRequest, string? idempotencyKey = default(string?), int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<WorkspaceResponse> UpdateWorkspaceWithHttpInfo(string workspaceId, WorkspacePatchRequest workspacePatchRequest, string? idempotencyKey = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'workspaceId' is set
             if (workspaceId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'workspaceId' when calling WorkspacesApi->PatchWorkspaceApiV1WorkspacesWorkspaceIdPatch");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'workspaceId' when calling WorkspacesApi->UpdateWorkspace");
             }
 
             // verify the required parameter 'workspacePatchRequest' is set
             if (workspacePatchRequest == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'workspacePatchRequest' when calling WorkspacesApi->PatchWorkspaceApiV1WorkspacesWorkspaceIdPatch");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'workspacePatchRequest' when calling WorkspacesApi->UpdateWorkspace");
             }
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -2020,7 +1826,7 @@ namespace InvoicePDFs.Api
             }
             localVarRequestOptions.Data = workspacePatchRequest;
 
-            localVarRequestOptions.Operation = "WorkspacesApi.PatchWorkspaceApiV1WorkspacesWorkspaceIdPatch";
+            localVarRequestOptions.Operation = "WorkspacesApi.UpdateWorkspace";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -2034,7 +1840,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Patch<WorkspaceResponse>("/api/v1/workspaces/{workspace_id}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PatchWorkspaceApiV1WorkspacesWorkspaceIdPatch", localVarResponse);
+                Exception _exception = this.ExceptionFactory("UpdateWorkspace", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -2045,7 +1851,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Patch Workspace 
+        /// Update Workspace 
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId"></param>
@@ -2054,14 +1860,14 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of WorkspaceResponse</returns>
-        public async System.Threading.Tasks.Task<WorkspaceResponse> PatchWorkspaceApiV1WorkspacesWorkspaceIdPatchAsync(string workspaceId, WorkspacePatchRequest workspacePatchRequest, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<WorkspaceResponse> UpdateWorkspaceAsync(string workspaceId, WorkspacePatchRequest workspacePatchRequest, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<WorkspaceResponse> localVarResponse = await PatchWorkspaceApiV1WorkspacesWorkspaceIdPatchWithHttpInfoAsync(workspaceId, workspacePatchRequest, idempotencyKey, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<WorkspaceResponse> localVarResponse = await UpdateWorkspaceWithHttpInfoAsync(workspaceId, workspacePatchRequest, idempotencyKey, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Patch Workspace 
+        /// Update Workspace 
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId"></param>
@@ -2070,18 +1876,18 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (WorkspaceResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<WorkspaceResponse>> PatchWorkspaceApiV1WorkspacesWorkspaceIdPatchWithHttpInfoAsync(string workspaceId, WorkspacePatchRequest workspacePatchRequest, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<WorkspaceResponse>> UpdateWorkspaceWithHttpInfoAsync(string workspaceId, WorkspacePatchRequest workspacePatchRequest, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'workspaceId' is set
             if (workspaceId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'workspaceId' when calling WorkspacesApi->PatchWorkspaceApiV1WorkspacesWorkspaceIdPatch");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'workspaceId' when calling WorkspacesApi->UpdateWorkspace");
             }
 
             // verify the required parameter 'workspacePatchRequest' is set
             if (workspacePatchRequest == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'workspacePatchRequest' when calling WorkspacesApi->PatchWorkspaceApiV1WorkspacesWorkspaceIdPatch");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'workspacePatchRequest' when calling WorkspacesApi->UpdateWorkspace");
             }
 
 
@@ -2115,7 +1921,7 @@ namespace InvoicePDFs.Api
             }
             localVarRequestOptions.Data = workspacePatchRequest;
 
-            localVarRequestOptions.Operation = "WorkspacesApi.PatchWorkspaceApiV1WorkspacesWorkspaceIdPatch";
+            localVarRequestOptions.Operation = "WorkspacesApi.UpdateWorkspace";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -2130,7 +1936,201 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PatchWorkspaceApiV1WorkspacesWorkspaceIdPatch", localVarResponse);
+                Exception _exception = this.ExceptionFactory("UpdateWorkspace", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Update Workspace Member 
+        /// </summary>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="workspaceId"></param>
+        /// <param name="memberId"></param>
+        /// <param name="workspaceMemberPatchRequest"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>WorkspaceMemberOut</returns>
+        public WorkspaceMemberOut UpdateWorkspaceMember(string workspaceId, string memberId, WorkspaceMemberPatchRequest workspaceMemberPatchRequest, int operationIndex = 0)
+        {
+            InvoicePDFs.Client.ApiResponse<WorkspaceMemberOut> localVarResponse = UpdateWorkspaceMemberWithHttpInfo(workspaceId, memberId, workspaceMemberPatchRequest);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update Workspace Member 
+        /// </summary>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="workspaceId"></param>
+        /// <param name="memberId"></param>
+        /// <param name="workspaceMemberPatchRequest"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of WorkspaceMemberOut</returns>
+        public InvoicePDFs.Client.ApiResponse<WorkspaceMemberOut> UpdateWorkspaceMemberWithHttpInfo(string workspaceId, string memberId, WorkspaceMemberPatchRequest workspaceMemberPatchRequest, int operationIndex = 0)
+        {
+            // verify the required parameter 'workspaceId' is set
+            if (workspaceId == null)
+            {
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'workspaceId' when calling WorkspacesApi->UpdateWorkspaceMember");
+            }
+
+            // verify the required parameter 'memberId' is set
+            if (memberId == null)
+            {
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'memberId' when calling WorkspacesApi->UpdateWorkspaceMember");
+            }
+
+            // verify the required parameter 'workspaceMemberPatchRequest' is set
+            if (workspaceMemberPatchRequest == null)
+            {
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'workspaceMemberPatchRequest' when calling WorkspacesApi->UpdateWorkspaceMember");
+            }
+
+            InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = InvoicePDFs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = InvoicePDFs.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("workspace_id", InvoicePDFs.Client.ClientUtils.ParameterToString(workspaceId)); // path parameter
+            localVarRequestOptions.PathParameters.Add("member_id", InvoicePDFs.Client.ClientUtils.ParameterToString(memberId)); // path parameter
+            localVarRequestOptions.Data = workspaceMemberPatchRequest;
+
+            localVarRequestOptions.Operation = "WorkspacesApi.UpdateWorkspaceMember";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (HTTPBearer) required
+            // bearer authentication required
+            if (!string.IsNullOrEmpty(this.Configuration.AccessToken) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Bearer " + this.Configuration.AccessToken);
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Patch<WorkspaceMemberOut>("/api/v1/workspaces/{workspace_id}/members/{member_id}", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("UpdateWorkspaceMember", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Update Workspace Member 
+        /// </summary>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="workspaceId"></param>
+        /// <param name="memberId"></param>
+        /// <param name="workspaceMemberPatchRequest"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of WorkspaceMemberOut</returns>
+        public async System.Threading.Tasks.Task<WorkspaceMemberOut> UpdateWorkspaceMemberAsync(string workspaceId, string memberId, WorkspaceMemberPatchRequest workspaceMemberPatchRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            InvoicePDFs.Client.ApiResponse<WorkspaceMemberOut> localVarResponse = await UpdateWorkspaceMemberWithHttpInfoAsync(workspaceId, memberId, workspaceMemberPatchRequest, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update Workspace Member 
+        /// </summary>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="workspaceId"></param>
+        /// <param name="memberId"></param>
+        /// <param name="workspaceMemberPatchRequest"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (WorkspaceMemberOut)</returns>
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<WorkspaceMemberOut>> UpdateWorkspaceMemberWithHttpInfoAsync(string workspaceId, string memberId, WorkspaceMemberPatchRequest workspaceMemberPatchRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'workspaceId' is set
+            if (workspaceId == null)
+            {
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'workspaceId' when calling WorkspacesApi->UpdateWorkspaceMember");
+            }
+
+            // verify the required parameter 'memberId' is set
+            if (memberId == null)
+            {
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'memberId' when calling WorkspacesApi->UpdateWorkspaceMember");
+            }
+
+            // verify the required parameter 'workspaceMemberPatchRequest' is set
+            if (workspaceMemberPatchRequest == null)
+            {
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'workspaceMemberPatchRequest' when calling WorkspacesApi->UpdateWorkspaceMember");
+            }
+
+
+            InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = InvoicePDFs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = InvoicePDFs.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("workspace_id", InvoicePDFs.Client.ClientUtils.ParameterToString(workspaceId)); // path parameter
+            localVarRequestOptions.PathParameters.Add("member_id", InvoicePDFs.Client.ClientUtils.ParameterToString(memberId)); // path parameter
+            localVarRequestOptions.Data = workspaceMemberPatchRequest;
+
+            localVarRequestOptions.Operation = "WorkspacesApi.UpdateWorkspaceMember";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (HTTPBearer) required
+            // bearer authentication required
+            if (!string.IsNullOrEmpty(this.Configuration.AccessToken) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Bearer " + this.Configuration.AccessToken);
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PatchAsync<WorkspaceMemberOut>("/api/v1/workspaces/{workspace_id}/members/{member_id}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("UpdateWorkspaceMember", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

@@ -33,7 +33,7 @@ namespace InvoicePDFs.Api
         /// <param name="templateCreateRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CustomTemplateResponse</returns>
-        CustomTemplateResponse CreateTemplateApiV1TemplatesCustomPost(TemplateCreateRequest templateCreateRequest, int operationIndex = 0);
+        CustomTemplateResponse CreateTemplate(TemplateCreateRequest templateCreateRequest, int operationIndex = 0);
 
         /// <summary>
         /// Create Template
@@ -45,7 +45,7 @@ namespace InvoicePDFs.Api
         /// <param name="templateCreateRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CustomTemplateResponse</returns>
-        ApiResponse<CustomTemplateResponse> CreateTemplateApiV1TemplatesCustomPostWithHttpInfo(TemplateCreateRequest templateCreateRequest, int operationIndex = 0);
+        ApiResponse<CustomTemplateResponse> CreateTemplateWithHttpInfo(TemplateCreateRequest templateCreateRequest, int operationIndex = 0);
         /// <summary>
         /// Delete Template
         /// </summary>
@@ -53,7 +53,7 @@ namespace InvoicePDFs.Api
         /// <param name="templateId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns></returns>
-        void DeleteTemplateApiV1TemplatesCustomTemplateIdDelete(string templateId, int operationIndex = 0);
+        void DeleteTemplate(string templateId, int operationIndex = 0);
 
         /// <summary>
         /// Delete Template
@@ -65,7 +65,7 @@ namespace InvoicePDFs.Api
         /// <param name="templateId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteTemplateApiV1TemplatesCustomTemplateIdDeleteWithHttpInfo(string templateId, int operationIndex = 0);
+        ApiResponse<Object> DeleteTemplateWithHttpInfo(string templateId, int operationIndex = 0);
         /// <summary>
         /// Duplicate Template
         /// </summary>
@@ -73,7 +73,7 @@ namespace InvoicePDFs.Api
         /// <param name="templateId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CustomTemplateResponse</returns>
-        CustomTemplateResponse DuplicateTemplateApiV1TemplatesCustomTemplateIdDuplicatePost(string templateId, int operationIndex = 0);
+        CustomTemplateResponse DuplicateTemplate(string templateId, int operationIndex = 0);
 
         /// <summary>
         /// Duplicate Template
@@ -85,7 +85,7 @@ namespace InvoicePDFs.Api
         /// <param name="templateId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CustomTemplateResponse</returns>
-        ApiResponse<CustomTemplateResponse> DuplicateTemplateApiV1TemplatesCustomTemplateIdDuplicatePostWithHttpInfo(string templateId, int operationIndex = 0);
+        ApiResponse<CustomTemplateResponse> DuplicateTemplateWithHttpInfo(string templateId, int operationIndex = 0);
         /// <summary>
         /// Get Builtin Template
         /// </summary>
@@ -93,7 +93,7 @@ namespace InvoicePDFs.Api
         /// <param name="templateId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>TemplateDetailResponse</returns>
-        TemplateDetailResponse GetBuiltinTemplateApiV1TemplatesBuiltinTemplateIdGet(string templateId, int operationIndex = 0);
+        TemplateDetailResponse GetBuiltinTemplate(string templateId, int operationIndex = 0);
 
         /// <summary>
         /// Get Builtin Template
@@ -105,7 +105,7 @@ namespace InvoicePDFs.Api
         /// <param name="templateId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of TemplateDetailResponse</returns>
-        ApiResponse<TemplateDetailResponse> GetBuiltinTemplateApiV1TemplatesBuiltinTemplateIdGetWithHttpInfo(string templateId, int operationIndex = 0);
+        ApiResponse<TemplateDetailResponse> GetBuiltinTemplateWithHttpInfo(string templateId, int operationIndex = 0);
         /// <summary>
         /// Get Custom Template
         /// </summary>
@@ -113,7 +113,7 @@ namespace InvoicePDFs.Api
         /// <param name="templateId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CustomTemplateResponse</returns>
-        CustomTemplateResponse GetCustomTemplateApiV1TemplatesCustomTemplateIdGet(string templateId, int operationIndex = 0);
+        CustomTemplateResponse GetCustomTemplate(string templateId, int operationIndex = 0);
 
         /// <summary>
         /// Get Custom Template
@@ -125,7 +125,7 @@ namespace InvoicePDFs.Api
         /// <param name="templateId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CustomTemplateResponse</returns>
-        ApiResponse<CustomTemplateResponse> GetCustomTemplateApiV1TemplatesCustomTemplateIdGetWithHttpInfo(string templateId, int operationIndex = 0);
+        ApiResponse<CustomTemplateResponse> GetCustomTemplateWithHttpInfo(string templateId, int operationIndex = 0);
         /// <summary>
         /// Get Template
         /// </summary>
@@ -133,7 +133,7 @@ namespace InvoicePDFs.Api
         /// <param name="templateId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>TemplateDetailResponse</returns>
-        TemplateDetailResponse GetTemplateApiV1TemplatesTemplateIdGet(string templateId, int operationIndex = 0);
+        TemplateDetailResponse GetTemplate(string templateId, int operationIndex = 0);
 
         /// <summary>
         /// Get Template
@@ -145,7 +145,7 @@ namespace InvoicePDFs.Api
         /// <param name="templateId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of TemplateDetailResponse</returns>
-        ApiResponse<TemplateDetailResponse> GetTemplateApiV1TemplatesTemplateIdGetWithHttpInfo(string templateId, int operationIndex = 0);
+        ApiResponse<TemplateDetailResponse> GetTemplateWithHttpInfo(string templateId, int operationIndex = 0);
         /// <summary>
         /// List Custom Templates
         /// </summary>
@@ -154,7 +154,7 @@ namespace InvoicePDFs.Api
         /// <param name="cursor"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CustomTemplatesListResponse</returns>
-        CustomTemplatesListResponse ListCustomTemplatesApiV1TemplatesCustomGet(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0);
+        CustomTemplatesListResponse ListCustomTemplates(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// List Custom Templates
@@ -167,83 +167,17 @@ namespace InvoicePDFs.Api
         /// <param name="cursor"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CustomTemplatesListResponse</returns>
-        ApiResponse<CustomTemplatesListResponse> ListCustomTemplatesApiV1TemplatesCustomGetWithHttpInfo(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0);
+        ApiResponse<CustomTemplatesListResponse> ListCustomTemplatesWithHttpInfo(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0);
         /// <summary>
-        /// Patch Template
-        /// </summary>
-        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="templateId"></param>
-        /// <param name="templatePatchRequest"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>CustomTemplateResponse</returns>
-        CustomTemplateResponse PatchTemplateApiV1TemplatesCustomTemplateIdPatch(string templateId, TemplatePatchRequest templatePatchRequest, int operationIndex = 0);
-
-        /// <summary>
-        /// Patch Template
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="templateId"></param>
-        /// <param name="templatePatchRequest"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of CustomTemplateResponse</returns>
-        ApiResponse<CustomTemplateResponse> PatchTemplateApiV1TemplatesCustomTemplateIdPatchWithHttpInfo(string templateId, TemplatePatchRequest templatePatchRequest, int operationIndex = 0);
-        /// <summary>
-        /// Preview Template
-        /// </summary>
-        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="templateId"></param>
-        /// <param name="appSchemasV1DocumentRenderRequest"></param>
-        /// <param name="idempotencyKey"> (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Object</returns>
-        Object PreviewTemplateApiV1TemplatesTemplateIdPreviewPost(string templateId, AppSchemasV1DocumentRenderRequest appSchemasV1DocumentRenderRequest, string? idempotencyKey = default(string?), int operationIndex = 0);
-
-        /// <summary>
-        /// Preview Template
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="templateId"></param>
-        /// <param name="appSchemasV1DocumentRenderRequest"></param>
-        /// <param name="idempotencyKey"> (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Object</returns>
-        ApiResponse<Object> PreviewTemplateApiV1TemplatesTemplateIdPreviewPostWithHttpInfo(string templateId, AppSchemasV1DocumentRenderRequest appSchemasV1DocumentRenderRequest, string? idempotencyKey = default(string?), int operationIndex = 0);
-        /// <summary>
-        /// Publish Template
-        /// </summary>
-        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="templateId"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>CustomTemplateResponse</returns>
-        CustomTemplateResponse PublishTemplateApiV1TemplatesCustomTemplateIdPublishPost(string templateId, int operationIndex = 0);
-
-        /// <summary>
-        /// Publish Template
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="templateId"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of CustomTemplateResponse</returns>
-        ApiResponse<CustomTemplateResponse> PublishTemplateApiV1TemplatesCustomTemplateIdPublishPostWithHttpInfo(string templateId, int operationIndex = 0);
-        /// <summary>
-        /// Templates
+        /// List Templates
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>TemplatesListResponse</returns>
-        TemplatesListResponse TemplatesApiV1TemplatesGet(int operationIndex = 0);
+        TemplatesListResponse ListTemplates(int operationIndex = 0);
 
         /// <summary>
-        /// Templates
+        /// List Templates
         /// </summary>
         /// <remarks>
         /// 
@@ -251,7 +185,73 @@ namespace InvoicePDFs.Api
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of TemplatesListResponse</returns>
-        ApiResponse<TemplatesListResponse> TemplatesApiV1TemplatesGetWithHttpInfo(int operationIndex = 0);
+        ApiResponse<TemplatesListResponse> ListTemplatesWithHttpInfo(int operationIndex = 0);
+        /// <summary>
+        /// Preview Template
+        /// </summary>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="templateId"></param>
+        /// <param name="documentRenderRequest"></param>
+        /// <param name="idempotencyKey"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>Object</returns>
+        Object PreviewTemplate(string templateId, DocumentRenderRequest documentRenderRequest, string? idempotencyKey = default(string?), int operationIndex = 0);
+
+        /// <summary>
+        /// Preview Template
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="templateId"></param>
+        /// <param name="documentRenderRequest"></param>
+        /// <param name="idempotencyKey"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> PreviewTemplateWithHttpInfo(string templateId, DocumentRenderRequest documentRenderRequest, string? idempotencyKey = default(string?), int operationIndex = 0);
+        /// <summary>
+        /// Publish Template
+        /// </summary>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="templateId"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>CustomTemplateResponse</returns>
+        CustomTemplateResponse PublishTemplate(string templateId, int operationIndex = 0);
+
+        /// <summary>
+        /// Publish Template
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="templateId"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of CustomTemplateResponse</returns>
+        ApiResponse<CustomTemplateResponse> PublishTemplateWithHttpInfo(string templateId, int operationIndex = 0);
+        /// <summary>
+        /// Update Template
+        /// </summary>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="templateId"></param>
+        /// <param name="templatePatchRequest"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>CustomTemplateResponse</returns>
+        CustomTemplateResponse UpdateTemplate(string templateId, TemplatePatchRequest templatePatchRequest, int operationIndex = 0);
+
+        /// <summary>
+        /// Update Template
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="templateId"></param>
+        /// <param name="templatePatchRequest"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of CustomTemplateResponse</returns>
+        ApiResponse<CustomTemplateResponse> UpdateTemplateWithHttpInfo(string templateId, TemplatePatchRequest templatePatchRequest, int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -272,7 +272,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CustomTemplateResponse</returns>
-        System.Threading.Tasks.Task<CustomTemplateResponse> CreateTemplateApiV1TemplatesCustomPostAsync(TemplateCreateRequest templateCreateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<CustomTemplateResponse> CreateTemplateAsync(TemplateCreateRequest templateCreateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Create Template
@@ -285,7 +285,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CustomTemplateResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CustomTemplateResponse>> CreateTemplateApiV1TemplatesCustomPostWithHttpInfoAsync(TemplateCreateRequest templateCreateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<CustomTemplateResponse>> CreateTemplateWithHttpInfoAsync(TemplateCreateRequest templateCreateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Delete Template
         /// </summary>
@@ -297,7 +297,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DeleteTemplateApiV1TemplatesCustomTemplateIdDeleteAsync(string templateId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task DeleteTemplateAsync(string templateId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Delete Template
@@ -310,7 +310,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTemplateApiV1TemplatesCustomTemplateIdDeleteWithHttpInfoAsync(string templateId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTemplateWithHttpInfoAsync(string templateId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Duplicate Template
         /// </summary>
@@ -322,7 +322,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CustomTemplateResponse</returns>
-        System.Threading.Tasks.Task<CustomTemplateResponse> DuplicateTemplateApiV1TemplatesCustomTemplateIdDuplicatePostAsync(string templateId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<CustomTemplateResponse> DuplicateTemplateAsync(string templateId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Duplicate Template
@@ -335,7 +335,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CustomTemplateResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CustomTemplateResponse>> DuplicateTemplateApiV1TemplatesCustomTemplateIdDuplicatePostWithHttpInfoAsync(string templateId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<CustomTemplateResponse>> DuplicateTemplateWithHttpInfoAsync(string templateId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Get Builtin Template
         /// </summary>
@@ -347,7 +347,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of TemplateDetailResponse</returns>
-        System.Threading.Tasks.Task<TemplateDetailResponse> GetBuiltinTemplateApiV1TemplatesBuiltinTemplateIdGetAsync(string templateId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<TemplateDetailResponse> GetBuiltinTemplateAsync(string templateId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Get Builtin Template
@@ -360,7 +360,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (TemplateDetailResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TemplateDetailResponse>> GetBuiltinTemplateApiV1TemplatesBuiltinTemplateIdGetWithHttpInfoAsync(string templateId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<TemplateDetailResponse>> GetBuiltinTemplateWithHttpInfoAsync(string templateId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Get Custom Template
         /// </summary>
@@ -372,7 +372,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CustomTemplateResponse</returns>
-        System.Threading.Tasks.Task<CustomTemplateResponse> GetCustomTemplateApiV1TemplatesCustomTemplateIdGetAsync(string templateId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<CustomTemplateResponse> GetCustomTemplateAsync(string templateId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Get Custom Template
@@ -385,7 +385,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CustomTemplateResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CustomTemplateResponse>> GetCustomTemplateApiV1TemplatesCustomTemplateIdGetWithHttpInfoAsync(string templateId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<CustomTemplateResponse>> GetCustomTemplateWithHttpInfoAsync(string templateId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Get Template
         /// </summary>
@@ -397,7 +397,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of TemplateDetailResponse</returns>
-        System.Threading.Tasks.Task<TemplateDetailResponse> GetTemplateApiV1TemplatesTemplateIdGetAsync(string templateId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<TemplateDetailResponse> GetTemplateAsync(string templateId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Get Template
@@ -410,7 +410,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (TemplateDetailResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TemplateDetailResponse>> GetTemplateApiV1TemplatesTemplateIdGetWithHttpInfoAsync(string templateId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<TemplateDetailResponse>> GetTemplateWithHttpInfoAsync(string templateId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// List Custom Templates
         /// </summary>
@@ -423,7 +423,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CustomTemplatesListResponse</returns>
-        System.Threading.Tasks.Task<CustomTemplatesListResponse> ListCustomTemplatesApiV1TemplatesCustomGetAsync(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<CustomTemplatesListResponse> ListCustomTemplatesAsync(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// List Custom Templates
@@ -437,90 +437,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CustomTemplatesListResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CustomTemplatesListResponse>> ListCustomTemplatesApiV1TemplatesCustomGetWithHttpInfoAsync(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<CustomTemplatesListResponse>> ListCustomTemplatesWithHttpInfoAsync(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// Patch Template
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="templateId"></param>
-        /// <param name="templatePatchRequest"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of CustomTemplateResponse</returns>
-        System.Threading.Tasks.Task<CustomTemplateResponse> PatchTemplateApiV1TemplatesCustomTemplateIdPatchAsync(string templateId, TemplatePatchRequest templatePatchRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-
-        /// <summary>
-        /// Patch Template
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="templateId"></param>
-        /// <param name="templatePatchRequest"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (CustomTemplateResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CustomTemplateResponse>> PatchTemplateApiV1TemplatesCustomTemplateIdPatchWithHttpInfoAsync(string templateId, TemplatePatchRequest templatePatchRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// Preview Template
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="templateId"></param>
-        /// <param name="appSchemasV1DocumentRenderRequest"></param>
-        /// <param name="idempotencyKey"> (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> PreviewTemplateApiV1TemplatesTemplateIdPreviewPostAsync(string templateId, AppSchemasV1DocumentRenderRequest appSchemasV1DocumentRenderRequest, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-
-        /// <summary>
-        /// Preview Template
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="templateId"></param>
-        /// <param name="appSchemasV1DocumentRenderRequest"></param>
-        /// <param name="idempotencyKey"> (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> PreviewTemplateApiV1TemplatesTemplateIdPreviewPostWithHttpInfoAsync(string templateId, AppSchemasV1DocumentRenderRequest appSchemasV1DocumentRenderRequest, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// Publish Template
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="templateId"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of CustomTemplateResponse</returns>
-        System.Threading.Tasks.Task<CustomTemplateResponse> PublishTemplateApiV1TemplatesCustomTemplateIdPublishPostAsync(string templateId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-
-        /// <summary>
-        /// Publish Template
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="templateId"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (CustomTemplateResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CustomTemplateResponse>> PublishTemplateApiV1TemplatesCustomTemplateIdPublishPostWithHttpInfoAsync(string templateId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// Templates
+        /// List Templates
         /// </summary>
         /// <remarks>
         /// 
@@ -529,10 +448,10 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of TemplatesListResponse</returns>
-        System.Threading.Tasks.Task<TemplatesListResponse> TemplatesApiV1TemplatesGetAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<TemplatesListResponse> ListTemplatesAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// Templates
+        /// List Templates
         /// </summary>
         /// <remarks>
         /// 
@@ -541,7 +460,88 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (TemplatesListResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TemplatesListResponse>> TemplatesApiV1TemplatesGetWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<TemplatesListResponse>> ListTemplatesWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// Preview Template
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="templateId"></param>
+        /// <param name="documentRenderRequest"></param>
+        /// <param name="idempotencyKey"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> PreviewTemplateAsync(string templateId, DocumentRenderRequest documentRenderRequest, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Preview Template
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="templateId"></param>
+        /// <param name="documentRenderRequest"></param>
+        /// <param name="idempotencyKey"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> PreviewTemplateWithHttpInfoAsync(string templateId, DocumentRenderRequest documentRenderRequest, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// Publish Template
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="templateId"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of CustomTemplateResponse</returns>
+        System.Threading.Tasks.Task<CustomTemplateResponse> PublishTemplateAsync(string templateId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Publish Template
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="templateId"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (CustomTemplateResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CustomTemplateResponse>> PublishTemplateWithHttpInfoAsync(string templateId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// Update Template
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="templateId"></param>
+        /// <param name="templatePatchRequest"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of CustomTemplateResponse</returns>
+        System.Threading.Tasks.Task<CustomTemplateResponse> UpdateTemplateAsync(string templateId, TemplatePatchRequest templatePatchRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Update Template
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="templateId"></param>
+        /// <param name="templatePatchRequest"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (CustomTemplateResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CustomTemplateResponse>> UpdateTemplateWithHttpInfoAsync(string templateId, TemplatePatchRequest templatePatchRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -669,9 +669,9 @@ namespace InvoicePDFs.Api
         /// <param name="templateCreateRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CustomTemplateResponse</returns>
-        public CustomTemplateResponse CreateTemplateApiV1TemplatesCustomPost(TemplateCreateRequest templateCreateRequest, int operationIndex = 0)
+        public CustomTemplateResponse CreateTemplate(TemplateCreateRequest templateCreateRequest, int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<CustomTemplateResponse> localVarResponse = CreateTemplateApiV1TemplatesCustomPostWithHttpInfo(templateCreateRequest);
+            InvoicePDFs.Client.ApiResponse<CustomTemplateResponse> localVarResponse = CreateTemplateWithHttpInfo(templateCreateRequest);
             return localVarResponse.Data;
         }
 
@@ -682,12 +682,12 @@ namespace InvoicePDFs.Api
         /// <param name="templateCreateRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CustomTemplateResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<CustomTemplateResponse> CreateTemplateApiV1TemplatesCustomPostWithHttpInfo(TemplateCreateRequest templateCreateRequest, int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<CustomTemplateResponse> CreateTemplateWithHttpInfo(TemplateCreateRequest templateCreateRequest, int operationIndex = 0)
         {
             // verify the required parameter 'templateCreateRequest' is set
             if (templateCreateRequest == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'templateCreateRequest' when calling TemplatesApi->CreateTemplateApiV1TemplatesCustomPost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'templateCreateRequest' when calling TemplatesApi->CreateTemplate");
             }
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -715,7 +715,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.Data = templateCreateRequest;
 
-            localVarRequestOptions.Operation = "TemplatesApi.CreateTemplateApiV1TemplatesCustomPost";
+            localVarRequestOptions.Operation = "TemplatesApi.CreateTemplate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -729,7 +729,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Post<CustomTemplateResponse>("/api/v1/templates/custom", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("CreateTemplateApiV1TemplatesCustomPost", localVarResponse);
+                Exception _exception = this.ExceptionFactory("CreateTemplate", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -747,9 +747,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CustomTemplateResponse</returns>
-        public async System.Threading.Tasks.Task<CustomTemplateResponse> CreateTemplateApiV1TemplatesCustomPostAsync(TemplateCreateRequest templateCreateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CustomTemplateResponse> CreateTemplateAsync(TemplateCreateRequest templateCreateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<CustomTemplateResponse> localVarResponse = await CreateTemplateApiV1TemplatesCustomPostWithHttpInfoAsync(templateCreateRequest, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<CustomTemplateResponse> localVarResponse = await CreateTemplateWithHttpInfoAsync(templateCreateRequest, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -761,12 +761,12 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CustomTemplateResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<CustomTemplateResponse>> CreateTemplateApiV1TemplatesCustomPostWithHttpInfoAsync(TemplateCreateRequest templateCreateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<CustomTemplateResponse>> CreateTemplateWithHttpInfoAsync(TemplateCreateRequest templateCreateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'templateCreateRequest' is set
             if (templateCreateRequest == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'templateCreateRequest' when calling TemplatesApi->CreateTemplateApiV1TemplatesCustomPost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'templateCreateRequest' when calling TemplatesApi->CreateTemplate");
             }
 
 
@@ -795,7 +795,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.Data = templateCreateRequest;
 
-            localVarRequestOptions.Operation = "TemplatesApi.CreateTemplateApiV1TemplatesCustomPost";
+            localVarRequestOptions.Operation = "TemplatesApi.CreateTemplate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -810,7 +810,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("CreateTemplateApiV1TemplatesCustomPost", localVarResponse);
+                Exception _exception = this.ExceptionFactory("CreateTemplate", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -827,9 +827,9 @@ namespace InvoicePDFs.Api
         /// <param name="templateId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns></returns>
-        public void DeleteTemplateApiV1TemplatesCustomTemplateIdDelete(string templateId, int operationIndex = 0)
+        public void DeleteTemplate(string templateId, int operationIndex = 0)
         {
-            DeleteTemplateApiV1TemplatesCustomTemplateIdDeleteWithHttpInfo(templateId);
+            DeleteTemplateWithHttpInfo(templateId);
         }
 
         /// <summary>
@@ -839,12 +839,12 @@ namespace InvoicePDFs.Api
         /// <param name="templateId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public InvoicePDFs.Client.ApiResponse<Object> DeleteTemplateApiV1TemplatesCustomTemplateIdDeleteWithHttpInfo(string templateId, int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<Object> DeleteTemplateWithHttpInfo(string templateId, int operationIndex = 0)
         {
             // verify the required parameter 'templateId' is set
             if (templateId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'templateId' when calling TemplatesApi->DeleteTemplateApiV1TemplatesCustomTemplateIdDelete");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'templateId' when calling TemplatesApi->DeleteTemplate");
             }
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -871,7 +871,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("template_id", InvoicePDFs.Client.ClientUtils.ParameterToString(templateId)); // path parameter
 
-            localVarRequestOptions.Operation = "TemplatesApi.DeleteTemplateApiV1TemplatesCustomTemplateIdDelete";
+            localVarRequestOptions.Operation = "TemplatesApi.DeleteTemplate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -885,7 +885,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Delete<Object>("/api/v1/templates/custom/{template_id}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteTemplateApiV1TemplatesCustomTemplateIdDelete", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteTemplate", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -903,9 +903,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeleteTemplateApiV1TemplatesCustomTemplateIdDeleteAsync(string templateId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task DeleteTemplateAsync(string templateId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            await DeleteTemplateApiV1TemplatesCustomTemplateIdDeleteWithHttpInfoAsync(templateId, operationIndex, cancellationToken).ConfigureAwait(false);
+            await DeleteTemplateWithHttpInfoAsync(templateId, operationIndex, cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -916,12 +916,12 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<Object>> DeleteTemplateApiV1TemplatesCustomTemplateIdDeleteWithHttpInfoAsync(string templateId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<Object>> DeleteTemplateWithHttpInfoAsync(string templateId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'templateId' is set
             if (templateId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'templateId' when calling TemplatesApi->DeleteTemplateApiV1TemplatesCustomTemplateIdDelete");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'templateId' when calling TemplatesApi->DeleteTemplate");
             }
 
 
@@ -949,7 +949,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("template_id", InvoicePDFs.Client.ClientUtils.ParameterToString(templateId)); // path parameter
 
-            localVarRequestOptions.Operation = "TemplatesApi.DeleteTemplateApiV1TemplatesCustomTemplateIdDelete";
+            localVarRequestOptions.Operation = "TemplatesApi.DeleteTemplate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -964,7 +964,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteTemplateApiV1TemplatesCustomTemplateIdDelete", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteTemplate", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -981,9 +981,9 @@ namespace InvoicePDFs.Api
         /// <param name="templateId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CustomTemplateResponse</returns>
-        public CustomTemplateResponse DuplicateTemplateApiV1TemplatesCustomTemplateIdDuplicatePost(string templateId, int operationIndex = 0)
+        public CustomTemplateResponse DuplicateTemplate(string templateId, int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<CustomTemplateResponse> localVarResponse = DuplicateTemplateApiV1TemplatesCustomTemplateIdDuplicatePostWithHttpInfo(templateId);
+            InvoicePDFs.Client.ApiResponse<CustomTemplateResponse> localVarResponse = DuplicateTemplateWithHttpInfo(templateId);
             return localVarResponse.Data;
         }
 
@@ -994,12 +994,12 @@ namespace InvoicePDFs.Api
         /// <param name="templateId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CustomTemplateResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<CustomTemplateResponse> DuplicateTemplateApiV1TemplatesCustomTemplateIdDuplicatePostWithHttpInfo(string templateId, int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<CustomTemplateResponse> DuplicateTemplateWithHttpInfo(string templateId, int operationIndex = 0)
         {
             // verify the required parameter 'templateId' is set
             if (templateId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'templateId' when calling TemplatesApi->DuplicateTemplateApiV1TemplatesCustomTemplateIdDuplicatePost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'templateId' when calling TemplatesApi->DuplicateTemplate");
             }
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -1026,7 +1026,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("template_id", InvoicePDFs.Client.ClientUtils.ParameterToString(templateId)); // path parameter
 
-            localVarRequestOptions.Operation = "TemplatesApi.DuplicateTemplateApiV1TemplatesCustomTemplateIdDuplicatePost";
+            localVarRequestOptions.Operation = "TemplatesApi.DuplicateTemplate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -1040,7 +1040,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Post<CustomTemplateResponse>("/api/v1/templates/custom/{template_id}/duplicate", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DuplicateTemplateApiV1TemplatesCustomTemplateIdDuplicatePost", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DuplicateTemplate", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1058,9 +1058,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CustomTemplateResponse</returns>
-        public async System.Threading.Tasks.Task<CustomTemplateResponse> DuplicateTemplateApiV1TemplatesCustomTemplateIdDuplicatePostAsync(string templateId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CustomTemplateResponse> DuplicateTemplateAsync(string templateId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<CustomTemplateResponse> localVarResponse = await DuplicateTemplateApiV1TemplatesCustomTemplateIdDuplicatePostWithHttpInfoAsync(templateId, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<CustomTemplateResponse> localVarResponse = await DuplicateTemplateWithHttpInfoAsync(templateId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1072,12 +1072,12 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CustomTemplateResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<CustomTemplateResponse>> DuplicateTemplateApiV1TemplatesCustomTemplateIdDuplicatePostWithHttpInfoAsync(string templateId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<CustomTemplateResponse>> DuplicateTemplateWithHttpInfoAsync(string templateId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'templateId' is set
             if (templateId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'templateId' when calling TemplatesApi->DuplicateTemplateApiV1TemplatesCustomTemplateIdDuplicatePost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'templateId' when calling TemplatesApi->DuplicateTemplate");
             }
 
 
@@ -1105,7 +1105,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("template_id", InvoicePDFs.Client.ClientUtils.ParameterToString(templateId)); // path parameter
 
-            localVarRequestOptions.Operation = "TemplatesApi.DuplicateTemplateApiV1TemplatesCustomTemplateIdDuplicatePost";
+            localVarRequestOptions.Operation = "TemplatesApi.DuplicateTemplate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -1120,7 +1120,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DuplicateTemplateApiV1TemplatesCustomTemplateIdDuplicatePost", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DuplicateTemplate", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1137,9 +1137,9 @@ namespace InvoicePDFs.Api
         /// <param name="templateId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>TemplateDetailResponse</returns>
-        public TemplateDetailResponse GetBuiltinTemplateApiV1TemplatesBuiltinTemplateIdGet(string templateId, int operationIndex = 0)
+        public TemplateDetailResponse GetBuiltinTemplate(string templateId, int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<TemplateDetailResponse> localVarResponse = GetBuiltinTemplateApiV1TemplatesBuiltinTemplateIdGetWithHttpInfo(templateId);
+            InvoicePDFs.Client.ApiResponse<TemplateDetailResponse> localVarResponse = GetBuiltinTemplateWithHttpInfo(templateId);
             return localVarResponse.Data;
         }
 
@@ -1150,12 +1150,12 @@ namespace InvoicePDFs.Api
         /// <param name="templateId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of TemplateDetailResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<TemplateDetailResponse> GetBuiltinTemplateApiV1TemplatesBuiltinTemplateIdGetWithHttpInfo(string templateId, int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<TemplateDetailResponse> GetBuiltinTemplateWithHttpInfo(string templateId, int operationIndex = 0)
         {
             // verify the required parameter 'templateId' is set
             if (templateId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'templateId' when calling TemplatesApi->GetBuiltinTemplateApiV1TemplatesBuiltinTemplateIdGet");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'templateId' when calling TemplatesApi->GetBuiltinTemplate");
             }
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -1182,7 +1182,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("template_id", InvoicePDFs.Client.ClientUtils.ParameterToString(templateId)); // path parameter
 
-            localVarRequestOptions.Operation = "TemplatesApi.GetBuiltinTemplateApiV1TemplatesBuiltinTemplateIdGet";
+            localVarRequestOptions.Operation = "TemplatesApi.GetBuiltinTemplate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -1196,7 +1196,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Get<TemplateDetailResponse>("/api/v1/templates/builtin/{template_id}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetBuiltinTemplateApiV1TemplatesBuiltinTemplateIdGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetBuiltinTemplate", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1214,9 +1214,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of TemplateDetailResponse</returns>
-        public async System.Threading.Tasks.Task<TemplateDetailResponse> GetBuiltinTemplateApiV1TemplatesBuiltinTemplateIdGetAsync(string templateId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<TemplateDetailResponse> GetBuiltinTemplateAsync(string templateId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<TemplateDetailResponse> localVarResponse = await GetBuiltinTemplateApiV1TemplatesBuiltinTemplateIdGetWithHttpInfoAsync(templateId, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<TemplateDetailResponse> localVarResponse = await GetBuiltinTemplateWithHttpInfoAsync(templateId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1228,12 +1228,12 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (TemplateDetailResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<TemplateDetailResponse>> GetBuiltinTemplateApiV1TemplatesBuiltinTemplateIdGetWithHttpInfoAsync(string templateId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<TemplateDetailResponse>> GetBuiltinTemplateWithHttpInfoAsync(string templateId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'templateId' is set
             if (templateId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'templateId' when calling TemplatesApi->GetBuiltinTemplateApiV1TemplatesBuiltinTemplateIdGet");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'templateId' when calling TemplatesApi->GetBuiltinTemplate");
             }
 
 
@@ -1261,7 +1261,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("template_id", InvoicePDFs.Client.ClientUtils.ParameterToString(templateId)); // path parameter
 
-            localVarRequestOptions.Operation = "TemplatesApi.GetBuiltinTemplateApiV1TemplatesBuiltinTemplateIdGet";
+            localVarRequestOptions.Operation = "TemplatesApi.GetBuiltinTemplate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -1276,7 +1276,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetBuiltinTemplateApiV1TemplatesBuiltinTemplateIdGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetBuiltinTemplate", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1293,9 +1293,9 @@ namespace InvoicePDFs.Api
         /// <param name="templateId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CustomTemplateResponse</returns>
-        public CustomTemplateResponse GetCustomTemplateApiV1TemplatesCustomTemplateIdGet(string templateId, int operationIndex = 0)
+        public CustomTemplateResponse GetCustomTemplate(string templateId, int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<CustomTemplateResponse> localVarResponse = GetCustomTemplateApiV1TemplatesCustomTemplateIdGetWithHttpInfo(templateId);
+            InvoicePDFs.Client.ApiResponse<CustomTemplateResponse> localVarResponse = GetCustomTemplateWithHttpInfo(templateId);
             return localVarResponse.Data;
         }
 
@@ -1306,12 +1306,12 @@ namespace InvoicePDFs.Api
         /// <param name="templateId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CustomTemplateResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<CustomTemplateResponse> GetCustomTemplateApiV1TemplatesCustomTemplateIdGetWithHttpInfo(string templateId, int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<CustomTemplateResponse> GetCustomTemplateWithHttpInfo(string templateId, int operationIndex = 0)
         {
             // verify the required parameter 'templateId' is set
             if (templateId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'templateId' when calling TemplatesApi->GetCustomTemplateApiV1TemplatesCustomTemplateIdGet");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'templateId' when calling TemplatesApi->GetCustomTemplate");
             }
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -1338,7 +1338,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("template_id", InvoicePDFs.Client.ClientUtils.ParameterToString(templateId)); // path parameter
 
-            localVarRequestOptions.Operation = "TemplatesApi.GetCustomTemplateApiV1TemplatesCustomTemplateIdGet";
+            localVarRequestOptions.Operation = "TemplatesApi.GetCustomTemplate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -1352,7 +1352,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Get<CustomTemplateResponse>("/api/v1/templates/custom/{template_id}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetCustomTemplateApiV1TemplatesCustomTemplateIdGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetCustomTemplate", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1370,9 +1370,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CustomTemplateResponse</returns>
-        public async System.Threading.Tasks.Task<CustomTemplateResponse> GetCustomTemplateApiV1TemplatesCustomTemplateIdGetAsync(string templateId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CustomTemplateResponse> GetCustomTemplateAsync(string templateId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<CustomTemplateResponse> localVarResponse = await GetCustomTemplateApiV1TemplatesCustomTemplateIdGetWithHttpInfoAsync(templateId, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<CustomTemplateResponse> localVarResponse = await GetCustomTemplateWithHttpInfoAsync(templateId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1384,12 +1384,12 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CustomTemplateResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<CustomTemplateResponse>> GetCustomTemplateApiV1TemplatesCustomTemplateIdGetWithHttpInfoAsync(string templateId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<CustomTemplateResponse>> GetCustomTemplateWithHttpInfoAsync(string templateId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'templateId' is set
             if (templateId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'templateId' when calling TemplatesApi->GetCustomTemplateApiV1TemplatesCustomTemplateIdGet");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'templateId' when calling TemplatesApi->GetCustomTemplate");
             }
 
 
@@ -1417,7 +1417,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("template_id", InvoicePDFs.Client.ClientUtils.ParameterToString(templateId)); // path parameter
 
-            localVarRequestOptions.Operation = "TemplatesApi.GetCustomTemplateApiV1TemplatesCustomTemplateIdGet";
+            localVarRequestOptions.Operation = "TemplatesApi.GetCustomTemplate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -1432,7 +1432,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetCustomTemplateApiV1TemplatesCustomTemplateIdGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetCustomTemplate", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1449,9 +1449,9 @@ namespace InvoicePDFs.Api
         /// <param name="templateId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>TemplateDetailResponse</returns>
-        public TemplateDetailResponse GetTemplateApiV1TemplatesTemplateIdGet(string templateId, int operationIndex = 0)
+        public TemplateDetailResponse GetTemplate(string templateId, int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<TemplateDetailResponse> localVarResponse = GetTemplateApiV1TemplatesTemplateIdGetWithHttpInfo(templateId);
+            InvoicePDFs.Client.ApiResponse<TemplateDetailResponse> localVarResponse = GetTemplateWithHttpInfo(templateId);
             return localVarResponse.Data;
         }
 
@@ -1462,12 +1462,12 @@ namespace InvoicePDFs.Api
         /// <param name="templateId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of TemplateDetailResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<TemplateDetailResponse> GetTemplateApiV1TemplatesTemplateIdGetWithHttpInfo(string templateId, int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<TemplateDetailResponse> GetTemplateWithHttpInfo(string templateId, int operationIndex = 0)
         {
             // verify the required parameter 'templateId' is set
             if (templateId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'templateId' when calling TemplatesApi->GetTemplateApiV1TemplatesTemplateIdGet");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'templateId' when calling TemplatesApi->GetTemplate");
             }
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -1494,7 +1494,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("template_id", InvoicePDFs.Client.ClientUtils.ParameterToString(templateId)); // path parameter
 
-            localVarRequestOptions.Operation = "TemplatesApi.GetTemplateApiV1TemplatesTemplateIdGet";
+            localVarRequestOptions.Operation = "TemplatesApi.GetTemplate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -1508,7 +1508,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Get<TemplateDetailResponse>("/api/v1/templates/{template_id}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetTemplateApiV1TemplatesTemplateIdGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetTemplate", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1526,9 +1526,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of TemplateDetailResponse</returns>
-        public async System.Threading.Tasks.Task<TemplateDetailResponse> GetTemplateApiV1TemplatesTemplateIdGetAsync(string templateId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<TemplateDetailResponse> GetTemplateAsync(string templateId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<TemplateDetailResponse> localVarResponse = await GetTemplateApiV1TemplatesTemplateIdGetWithHttpInfoAsync(templateId, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<TemplateDetailResponse> localVarResponse = await GetTemplateWithHttpInfoAsync(templateId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1540,12 +1540,12 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (TemplateDetailResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<TemplateDetailResponse>> GetTemplateApiV1TemplatesTemplateIdGetWithHttpInfoAsync(string templateId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<TemplateDetailResponse>> GetTemplateWithHttpInfoAsync(string templateId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'templateId' is set
             if (templateId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'templateId' when calling TemplatesApi->GetTemplateApiV1TemplatesTemplateIdGet");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'templateId' when calling TemplatesApi->GetTemplate");
             }
 
 
@@ -1573,7 +1573,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("template_id", InvoicePDFs.Client.ClientUtils.ParameterToString(templateId)); // path parameter
 
-            localVarRequestOptions.Operation = "TemplatesApi.GetTemplateApiV1TemplatesTemplateIdGet";
+            localVarRequestOptions.Operation = "TemplatesApi.GetTemplate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -1588,7 +1588,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetTemplateApiV1TemplatesTemplateIdGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetTemplate", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1606,9 +1606,9 @@ namespace InvoicePDFs.Api
         /// <param name="cursor"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CustomTemplatesListResponse</returns>
-        public CustomTemplatesListResponse ListCustomTemplatesApiV1TemplatesCustomGet(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0)
+        public CustomTemplatesListResponse ListCustomTemplates(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<CustomTemplatesListResponse> localVarResponse = ListCustomTemplatesApiV1TemplatesCustomGetWithHttpInfo(limit, cursor);
+            InvoicePDFs.Client.ApiResponse<CustomTemplatesListResponse> localVarResponse = ListCustomTemplatesWithHttpInfo(limit, cursor);
             return localVarResponse.Data;
         }
 
@@ -1620,7 +1620,7 @@ namespace InvoicePDFs.Api
         /// <param name="cursor"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CustomTemplatesListResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<CustomTemplatesListResponse> ListCustomTemplatesApiV1TemplatesCustomGetWithHttpInfo(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<CustomTemplatesListResponse> ListCustomTemplatesWithHttpInfo(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0)
         {
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
 
@@ -1653,7 +1653,7 @@ namespace InvoicePDFs.Api
                 localVarRequestOptions.QueryParameters.Add(InvoicePDFs.Client.ClientUtils.ParameterToMultiMap("", "cursor", cursor));
             }
 
-            localVarRequestOptions.Operation = "TemplatesApi.ListCustomTemplatesApiV1TemplatesCustomGet";
+            localVarRequestOptions.Operation = "TemplatesApi.ListCustomTemplates";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -1667,7 +1667,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Get<CustomTemplatesListResponse>("/api/v1/templates/custom", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListCustomTemplatesApiV1TemplatesCustomGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("ListCustomTemplates", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1686,9 +1686,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CustomTemplatesListResponse</returns>
-        public async System.Threading.Tasks.Task<CustomTemplatesListResponse> ListCustomTemplatesApiV1TemplatesCustomGetAsync(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CustomTemplatesListResponse> ListCustomTemplatesAsync(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<CustomTemplatesListResponse> localVarResponse = await ListCustomTemplatesApiV1TemplatesCustomGetWithHttpInfoAsync(limit, cursor, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<CustomTemplatesListResponse> localVarResponse = await ListCustomTemplatesWithHttpInfoAsync(limit, cursor, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1701,7 +1701,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CustomTemplatesListResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<CustomTemplatesListResponse>> ListCustomTemplatesApiV1TemplatesCustomGetWithHttpInfoAsync(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<CustomTemplatesListResponse>> ListCustomTemplatesWithHttpInfoAsync(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -1735,7 +1735,7 @@ namespace InvoicePDFs.Api
                 localVarRequestOptions.QueryParameters.Add(InvoicePDFs.Client.ClientUtils.ParameterToMultiMap("", "cursor", cursor));
             }
 
-            localVarRequestOptions.Operation = "TemplatesApi.ListCustomTemplatesApiV1TemplatesCustomGet";
+            localVarRequestOptions.Operation = "TemplatesApi.ListCustomTemplates";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -1750,7 +1750,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListCustomTemplatesApiV1TemplatesCustomGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("ListCustomTemplates", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1761,544 +1761,24 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Patch Template 
-        /// </summary>
-        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="templateId"></param>
-        /// <param name="templatePatchRequest"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>CustomTemplateResponse</returns>
-        public CustomTemplateResponse PatchTemplateApiV1TemplatesCustomTemplateIdPatch(string templateId, TemplatePatchRequest templatePatchRequest, int operationIndex = 0)
-        {
-            InvoicePDFs.Client.ApiResponse<CustomTemplateResponse> localVarResponse = PatchTemplateApiV1TemplatesCustomTemplateIdPatchWithHttpInfo(templateId, templatePatchRequest);
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Patch Template 
-        /// </summary>
-        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="templateId"></param>
-        /// <param name="templatePatchRequest"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of CustomTemplateResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<CustomTemplateResponse> PatchTemplateApiV1TemplatesCustomTemplateIdPatchWithHttpInfo(string templateId, TemplatePatchRequest templatePatchRequest, int operationIndex = 0)
-        {
-            // verify the required parameter 'templateId' is set
-            if (templateId == null)
-            {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'templateId' when calling TemplatesApi->PatchTemplateApiV1TemplatesCustomTemplateIdPatch");
-            }
-
-            // verify the required parameter 'templatePatchRequest' is set
-            if (templatePatchRequest == null)
-            {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'templatePatchRequest' when calling TemplatesApi->PatchTemplateApiV1TemplatesCustomTemplateIdPatch");
-            }
-
-            InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-                "application/json"
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var localVarContentType = InvoicePDFs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
-
-            var localVarAccept = InvoicePDFs.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
-
-            localVarRequestOptions.PathParameters.Add("template_id", InvoicePDFs.Client.ClientUtils.ParameterToString(templateId)); // path parameter
-            localVarRequestOptions.Data = templatePatchRequest;
-
-            localVarRequestOptions.Operation = "TemplatesApi.PatchTemplateApiV1TemplatesCustomTemplateIdPatch";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
-            // authentication (HTTPBearer) required
-            // bearer authentication required
-            if (!string.IsNullOrEmpty(this.Configuration.AccessToken) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
-            {
-                localVarRequestOptions.HeaderParameters.Add("Authorization", "Bearer " + this.Configuration.AccessToken);
-            }
-
-            // make the HTTP request
-            var localVarResponse = this.Client.Patch<CustomTemplateResponse>("/api/v1/templates/custom/{template_id}", localVarRequestOptions, this.Configuration);
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("PatchTemplateApiV1TemplatesCustomTemplateIdPatch", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
-        /// Patch Template 
-        /// </summary>
-        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="templateId"></param>
-        /// <param name="templatePatchRequest"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of CustomTemplateResponse</returns>
-        public async System.Threading.Tasks.Task<CustomTemplateResponse> PatchTemplateApiV1TemplatesCustomTemplateIdPatchAsync(string templateId, TemplatePatchRequest templatePatchRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            InvoicePDFs.Client.ApiResponse<CustomTemplateResponse> localVarResponse = await PatchTemplateApiV1TemplatesCustomTemplateIdPatchWithHttpInfoAsync(templateId, templatePatchRequest, operationIndex, cancellationToken).ConfigureAwait(false);
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Patch Template 
-        /// </summary>
-        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="templateId"></param>
-        /// <param name="templatePatchRequest"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (CustomTemplateResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<CustomTemplateResponse>> PatchTemplateApiV1TemplatesCustomTemplateIdPatchWithHttpInfoAsync(string templateId, TemplatePatchRequest templatePatchRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            // verify the required parameter 'templateId' is set
-            if (templateId == null)
-            {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'templateId' when calling TemplatesApi->PatchTemplateApiV1TemplatesCustomTemplateIdPatch");
-            }
-
-            // verify the required parameter 'templatePatchRequest' is set
-            if (templatePatchRequest == null)
-            {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'templatePatchRequest' when calling TemplatesApi->PatchTemplateApiV1TemplatesCustomTemplateIdPatch");
-            }
-
-
-            InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-                "application/json"
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var localVarContentType = InvoicePDFs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
-
-            var localVarAccept = InvoicePDFs.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
-
-            localVarRequestOptions.PathParameters.Add("template_id", InvoicePDFs.Client.ClientUtils.ParameterToString(templateId)); // path parameter
-            localVarRequestOptions.Data = templatePatchRequest;
-
-            localVarRequestOptions.Operation = "TemplatesApi.PatchTemplateApiV1TemplatesCustomTemplateIdPatch";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
-            // authentication (HTTPBearer) required
-            // bearer authentication required
-            if (!string.IsNullOrEmpty(this.Configuration.AccessToken) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
-            {
-                localVarRequestOptions.HeaderParameters.Add("Authorization", "Bearer " + this.Configuration.AccessToken);
-            }
-
-            // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PatchAsync<CustomTemplateResponse>("/api/v1/templates/custom/{template_id}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("PatchTemplateApiV1TemplatesCustomTemplateIdPatch", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
-        /// Preview Template 
-        /// </summary>
-        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="templateId"></param>
-        /// <param name="appSchemasV1DocumentRenderRequest"></param>
-        /// <param name="idempotencyKey"> (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Object</returns>
-        public Object PreviewTemplateApiV1TemplatesTemplateIdPreviewPost(string templateId, AppSchemasV1DocumentRenderRequest appSchemasV1DocumentRenderRequest, string? idempotencyKey = default(string?), int operationIndex = 0)
-        {
-            InvoicePDFs.Client.ApiResponse<Object> localVarResponse = PreviewTemplateApiV1TemplatesTemplateIdPreviewPostWithHttpInfo(templateId, appSchemasV1DocumentRenderRequest, idempotencyKey);
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Preview Template 
-        /// </summary>
-        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="templateId"></param>
-        /// <param name="appSchemasV1DocumentRenderRequest"></param>
-        /// <param name="idempotencyKey"> (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Object</returns>
-        public InvoicePDFs.Client.ApiResponse<Object> PreviewTemplateApiV1TemplatesTemplateIdPreviewPostWithHttpInfo(string templateId, AppSchemasV1DocumentRenderRequest appSchemasV1DocumentRenderRequest, string? idempotencyKey = default(string?), int operationIndex = 0)
-        {
-            // verify the required parameter 'templateId' is set
-            if (templateId == null)
-            {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'templateId' when calling TemplatesApi->PreviewTemplateApiV1TemplatesTemplateIdPreviewPost");
-            }
-
-            // verify the required parameter 'appSchemasV1DocumentRenderRequest' is set
-            if (appSchemasV1DocumentRenderRequest == null)
-            {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'appSchemasV1DocumentRenderRequest' when calling TemplatesApi->PreviewTemplateApiV1TemplatesTemplateIdPreviewPost");
-            }
-
-            InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-                "application/json"
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var localVarContentType = InvoicePDFs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
-
-            var localVarAccept = InvoicePDFs.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
-
-            localVarRequestOptions.PathParameters.Add("template_id", InvoicePDFs.Client.ClientUtils.ParameterToString(templateId)); // path parameter
-            if (idempotencyKey != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Idempotency-Key", InvoicePDFs.Client.ClientUtils.ParameterToString(idempotencyKey)); // header parameter
-            }
-            localVarRequestOptions.Data = appSchemasV1DocumentRenderRequest;
-
-            localVarRequestOptions.Operation = "TemplatesApi.PreviewTemplateApiV1TemplatesTemplateIdPreviewPost";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
-            // authentication (HTTPBearer) required
-            // bearer authentication required
-            if (!string.IsNullOrEmpty(this.Configuration.AccessToken) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
-            {
-                localVarRequestOptions.HeaderParameters.Add("Authorization", "Bearer " + this.Configuration.AccessToken);
-            }
-
-            // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/api/v1/templates/{template_id}/preview", localVarRequestOptions, this.Configuration);
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("PreviewTemplateApiV1TemplatesTemplateIdPreviewPost", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
-        /// Preview Template 
-        /// </summary>
-        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="templateId"></param>
-        /// <param name="appSchemasV1DocumentRenderRequest"></param>
-        /// <param name="idempotencyKey"> (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> PreviewTemplateApiV1TemplatesTemplateIdPreviewPostAsync(string templateId, AppSchemasV1DocumentRenderRequest appSchemasV1DocumentRenderRequest, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            InvoicePDFs.Client.ApiResponse<Object> localVarResponse = await PreviewTemplateApiV1TemplatesTemplateIdPreviewPostWithHttpInfoAsync(templateId, appSchemasV1DocumentRenderRequest, idempotencyKey, operationIndex, cancellationToken).ConfigureAwait(false);
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Preview Template 
-        /// </summary>
-        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="templateId"></param>
-        /// <param name="appSchemasV1DocumentRenderRequest"></param>
-        /// <param name="idempotencyKey"> (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<Object>> PreviewTemplateApiV1TemplatesTemplateIdPreviewPostWithHttpInfoAsync(string templateId, AppSchemasV1DocumentRenderRequest appSchemasV1DocumentRenderRequest, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            // verify the required parameter 'templateId' is set
-            if (templateId == null)
-            {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'templateId' when calling TemplatesApi->PreviewTemplateApiV1TemplatesTemplateIdPreviewPost");
-            }
-
-            // verify the required parameter 'appSchemasV1DocumentRenderRequest' is set
-            if (appSchemasV1DocumentRenderRequest == null)
-            {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'appSchemasV1DocumentRenderRequest' when calling TemplatesApi->PreviewTemplateApiV1TemplatesTemplateIdPreviewPost");
-            }
-
-
-            InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-                "application/json"
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var localVarContentType = InvoicePDFs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
-
-            var localVarAccept = InvoicePDFs.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
-
-            localVarRequestOptions.PathParameters.Add("template_id", InvoicePDFs.Client.ClientUtils.ParameterToString(templateId)); // path parameter
-            if (idempotencyKey != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Idempotency-Key", InvoicePDFs.Client.ClientUtils.ParameterToString(idempotencyKey)); // header parameter
-            }
-            localVarRequestOptions.Data = appSchemasV1DocumentRenderRequest;
-
-            localVarRequestOptions.Operation = "TemplatesApi.PreviewTemplateApiV1TemplatesTemplateIdPreviewPost";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
-            // authentication (HTTPBearer) required
-            // bearer authentication required
-            if (!string.IsNullOrEmpty(this.Configuration.AccessToken) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
-            {
-                localVarRequestOptions.HeaderParameters.Add("Authorization", "Bearer " + this.Configuration.AccessToken);
-            }
-
-            // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/api/v1/templates/{template_id}/preview", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("PreviewTemplateApiV1TemplatesTemplateIdPreviewPost", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
-        /// Publish Template 
-        /// </summary>
-        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="templateId"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>CustomTemplateResponse</returns>
-        public CustomTemplateResponse PublishTemplateApiV1TemplatesCustomTemplateIdPublishPost(string templateId, int operationIndex = 0)
-        {
-            InvoicePDFs.Client.ApiResponse<CustomTemplateResponse> localVarResponse = PublishTemplateApiV1TemplatesCustomTemplateIdPublishPostWithHttpInfo(templateId);
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Publish Template 
-        /// </summary>
-        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="templateId"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of CustomTemplateResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<CustomTemplateResponse> PublishTemplateApiV1TemplatesCustomTemplateIdPublishPostWithHttpInfo(string templateId, int operationIndex = 0)
-        {
-            // verify the required parameter 'templateId' is set
-            if (templateId == null)
-            {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'templateId' when calling TemplatesApi->PublishTemplateApiV1TemplatesCustomTemplateIdPublishPost");
-            }
-
-            InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var localVarContentType = InvoicePDFs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
-
-            var localVarAccept = InvoicePDFs.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
-
-            localVarRequestOptions.PathParameters.Add("template_id", InvoicePDFs.Client.ClientUtils.ParameterToString(templateId)); // path parameter
-
-            localVarRequestOptions.Operation = "TemplatesApi.PublishTemplateApiV1TemplatesCustomTemplateIdPublishPost";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
-            // authentication (HTTPBearer) required
-            // bearer authentication required
-            if (!string.IsNullOrEmpty(this.Configuration.AccessToken) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
-            {
-                localVarRequestOptions.HeaderParameters.Add("Authorization", "Bearer " + this.Configuration.AccessToken);
-            }
-
-            // make the HTTP request
-            var localVarResponse = this.Client.Post<CustomTemplateResponse>("/api/v1/templates/custom/{template_id}/publish", localVarRequestOptions, this.Configuration);
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("PublishTemplateApiV1TemplatesCustomTemplateIdPublishPost", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
-        /// Publish Template 
-        /// </summary>
-        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="templateId"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of CustomTemplateResponse</returns>
-        public async System.Threading.Tasks.Task<CustomTemplateResponse> PublishTemplateApiV1TemplatesCustomTemplateIdPublishPostAsync(string templateId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            InvoicePDFs.Client.ApiResponse<CustomTemplateResponse> localVarResponse = await PublishTemplateApiV1TemplatesCustomTemplateIdPublishPostWithHttpInfoAsync(templateId, operationIndex, cancellationToken).ConfigureAwait(false);
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Publish Template 
-        /// </summary>
-        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="templateId"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (CustomTemplateResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<CustomTemplateResponse>> PublishTemplateApiV1TemplatesCustomTemplateIdPublishPostWithHttpInfoAsync(string templateId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            // verify the required parameter 'templateId' is set
-            if (templateId == null)
-            {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'templateId' when calling TemplatesApi->PublishTemplateApiV1TemplatesCustomTemplateIdPublishPost");
-            }
-
-
-            InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var localVarContentType = InvoicePDFs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
-
-            var localVarAccept = InvoicePDFs.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
-
-            localVarRequestOptions.PathParameters.Add("template_id", InvoicePDFs.Client.ClientUtils.ParameterToString(templateId)); // path parameter
-
-            localVarRequestOptions.Operation = "TemplatesApi.PublishTemplateApiV1TemplatesCustomTemplateIdPublishPost";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
-            // authentication (HTTPBearer) required
-            // bearer authentication required
-            if (!string.IsNullOrEmpty(this.Configuration.AccessToken) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
-            {
-                localVarRequestOptions.HeaderParameters.Add("Authorization", "Bearer " + this.Configuration.AccessToken);
-            }
-
-            // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<CustomTemplateResponse>("/api/v1/templates/custom/{template_id}/publish", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("PublishTemplateApiV1TemplatesCustomTemplateIdPublishPost", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
-        /// Templates 
+        /// List Templates 
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>TemplatesListResponse</returns>
-        public TemplatesListResponse TemplatesApiV1TemplatesGet(int operationIndex = 0)
+        public TemplatesListResponse ListTemplates(int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<TemplatesListResponse> localVarResponse = TemplatesApiV1TemplatesGetWithHttpInfo();
+            InvoicePDFs.Client.ApiResponse<TemplatesListResponse> localVarResponse = ListTemplatesWithHttpInfo();
             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Templates 
+        /// List Templates 
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of TemplatesListResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<TemplatesListResponse> TemplatesApiV1TemplatesGetWithHttpInfo(int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<TemplatesListResponse> ListTemplatesWithHttpInfo(int operationIndex = 0)
         {
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
 
@@ -2323,7 +1803,7 @@ namespace InvoicePDFs.Api
             }
 
 
-            localVarRequestOptions.Operation = "TemplatesApi.TemplatesApiV1TemplatesGet";
+            localVarRequestOptions.Operation = "TemplatesApi.ListTemplates";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -2337,7 +1817,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Get<TemplatesListResponse>("/api/v1/templates", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("TemplatesApiV1TemplatesGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("ListTemplates", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -2348,26 +1828,26 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Templates 
+        /// List Templates 
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of TemplatesListResponse</returns>
-        public async System.Threading.Tasks.Task<TemplatesListResponse> TemplatesApiV1TemplatesGetAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<TemplatesListResponse> ListTemplatesAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<TemplatesListResponse> localVarResponse = await TemplatesApiV1TemplatesGetWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<TemplatesListResponse> localVarResponse = await ListTemplatesWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Templates 
+        /// List Templates 
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (TemplatesListResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<TemplatesListResponse>> TemplatesApiV1TemplatesGetWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<TemplatesListResponse>> ListTemplatesWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -2393,7 +1873,7 @@ namespace InvoicePDFs.Api
             }
 
 
-            localVarRequestOptions.Operation = "TemplatesApi.TemplatesApiV1TemplatesGet";
+            localVarRequestOptions.Operation = "TemplatesApi.ListTemplates";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -2408,7 +1888,527 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("TemplatesApiV1TemplatesGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("ListTemplates", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Preview Template 
+        /// </summary>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="templateId"></param>
+        /// <param name="documentRenderRequest"></param>
+        /// <param name="idempotencyKey"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>Object</returns>
+        public Object PreviewTemplate(string templateId, DocumentRenderRequest documentRenderRequest, string? idempotencyKey = default(string?), int operationIndex = 0)
+        {
+            InvoicePDFs.Client.ApiResponse<Object> localVarResponse = PreviewTemplateWithHttpInfo(templateId, documentRenderRequest, idempotencyKey);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Preview Template 
+        /// </summary>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="templateId"></param>
+        /// <param name="documentRenderRequest"></param>
+        /// <param name="idempotencyKey"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of Object</returns>
+        public InvoicePDFs.Client.ApiResponse<Object> PreviewTemplateWithHttpInfo(string templateId, DocumentRenderRequest documentRenderRequest, string? idempotencyKey = default(string?), int operationIndex = 0)
+        {
+            // verify the required parameter 'templateId' is set
+            if (templateId == null)
+            {
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'templateId' when calling TemplatesApi->PreviewTemplate");
+            }
+
+            // verify the required parameter 'documentRenderRequest' is set
+            if (documentRenderRequest == null)
+            {
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'documentRenderRequest' when calling TemplatesApi->PreviewTemplate");
+            }
+
+            InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = InvoicePDFs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = InvoicePDFs.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("template_id", InvoicePDFs.Client.ClientUtils.ParameterToString(templateId)); // path parameter
+            if (idempotencyKey != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Idempotency-Key", InvoicePDFs.Client.ClientUtils.ParameterToString(idempotencyKey)); // header parameter
+            }
+            localVarRequestOptions.Data = documentRenderRequest;
+
+            localVarRequestOptions.Operation = "TemplatesApi.PreviewTemplate";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (HTTPBearer) required
+            // bearer authentication required
+            if (!string.IsNullOrEmpty(this.Configuration.AccessToken) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Bearer " + this.Configuration.AccessToken);
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<Object>("/api/v1/templates/{template_id}/preview", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("PreviewTemplate", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Preview Template 
+        /// </summary>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="templateId"></param>
+        /// <param name="documentRenderRequest"></param>
+        /// <param name="idempotencyKey"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> PreviewTemplateAsync(string templateId, DocumentRenderRequest documentRenderRequest, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            InvoicePDFs.Client.ApiResponse<Object> localVarResponse = await PreviewTemplateWithHttpInfoAsync(templateId, documentRenderRequest, idempotencyKey, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Preview Template 
+        /// </summary>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="templateId"></param>
+        /// <param name="documentRenderRequest"></param>
+        /// <param name="idempotencyKey"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<Object>> PreviewTemplateWithHttpInfoAsync(string templateId, DocumentRenderRequest documentRenderRequest, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'templateId' is set
+            if (templateId == null)
+            {
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'templateId' when calling TemplatesApi->PreviewTemplate");
+            }
+
+            // verify the required parameter 'documentRenderRequest' is set
+            if (documentRenderRequest == null)
+            {
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'documentRenderRequest' when calling TemplatesApi->PreviewTemplate");
+            }
+
+
+            InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = InvoicePDFs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = InvoicePDFs.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("template_id", InvoicePDFs.Client.ClientUtils.ParameterToString(templateId)); // path parameter
+            if (idempotencyKey != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Idempotency-Key", InvoicePDFs.Client.ClientUtils.ParameterToString(idempotencyKey)); // header parameter
+            }
+            localVarRequestOptions.Data = documentRenderRequest;
+
+            localVarRequestOptions.Operation = "TemplatesApi.PreviewTemplate";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (HTTPBearer) required
+            // bearer authentication required
+            if (!string.IsNullOrEmpty(this.Configuration.AccessToken) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Bearer " + this.Configuration.AccessToken);
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/api/v1/templates/{template_id}/preview", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("PreviewTemplate", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Publish Template 
+        /// </summary>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="templateId"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>CustomTemplateResponse</returns>
+        public CustomTemplateResponse PublishTemplate(string templateId, int operationIndex = 0)
+        {
+            InvoicePDFs.Client.ApiResponse<CustomTemplateResponse> localVarResponse = PublishTemplateWithHttpInfo(templateId);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Publish Template 
+        /// </summary>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="templateId"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of CustomTemplateResponse</returns>
+        public InvoicePDFs.Client.ApiResponse<CustomTemplateResponse> PublishTemplateWithHttpInfo(string templateId, int operationIndex = 0)
+        {
+            // verify the required parameter 'templateId' is set
+            if (templateId == null)
+            {
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'templateId' when calling TemplatesApi->PublishTemplate");
+            }
+
+            InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = InvoicePDFs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = InvoicePDFs.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("template_id", InvoicePDFs.Client.ClientUtils.ParameterToString(templateId)); // path parameter
+
+            localVarRequestOptions.Operation = "TemplatesApi.PublishTemplate";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (HTTPBearer) required
+            // bearer authentication required
+            if (!string.IsNullOrEmpty(this.Configuration.AccessToken) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Bearer " + this.Configuration.AccessToken);
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<CustomTemplateResponse>("/api/v1/templates/custom/{template_id}/publish", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("PublishTemplate", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Publish Template 
+        /// </summary>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="templateId"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of CustomTemplateResponse</returns>
+        public async System.Threading.Tasks.Task<CustomTemplateResponse> PublishTemplateAsync(string templateId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            InvoicePDFs.Client.ApiResponse<CustomTemplateResponse> localVarResponse = await PublishTemplateWithHttpInfoAsync(templateId, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Publish Template 
+        /// </summary>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="templateId"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (CustomTemplateResponse)</returns>
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<CustomTemplateResponse>> PublishTemplateWithHttpInfoAsync(string templateId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'templateId' is set
+            if (templateId == null)
+            {
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'templateId' when calling TemplatesApi->PublishTemplate");
+            }
+
+
+            InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = InvoicePDFs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = InvoicePDFs.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("template_id", InvoicePDFs.Client.ClientUtils.ParameterToString(templateId)); // path parameter
+
+            localVarRequestOptions.Operation = "TemplatesApi.PublishTemplate";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (HTTPBearer) required
+            // bearer authentication required
+            if (!string.IsNullOrEmpty(this.Configuration.AccessToken) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Bearer " + this.Configuration.AccessToken);
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PostAsync<CustomTemplateResponse>("/api/v1/templates/custom/{template_id}/publish", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("PublishTemplate", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Update Template 
+        /// </summary>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="templateId"></param>
+        /// <param name="templatePatchRequest"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>CustomTemplateResponse</returns>
+        public CustomTemplateResponse UpdateTemplate(string templateId, TemplatePatchRequest templatePatchRequest, int operationIndex = 0)
+        {
+            InvoicePDFs.Client.ApiResponse<CustomTemplateResponse> localVarResponse = UpdateTemplateWithHttpInfo(templateId, templatePatchRequest);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update Template 
+        /// </summary>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="templateId"></param>
+        /// <param name="templatePatchRequest"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of CustomTemplateResponse</returns>
+        public InvoicePDFs.Client.ApiResponse<CustomTemplateResponse> UpdateTemplateWithHttpInfo(string templateId, TemplatePatchRequest templatePatchRequest, int operationIndex = 0)
+        {
+            // verify the required parameter 'templateId' is set
+            if (templateId == null)
+            {
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'templateId' when calling TemplatesApi->UpdateTemplate");
+            }
+
+            // verify the required parameter 'templatePatchRequest' is set
+            if (templatePatchRequest == null)
+            {
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'templatePatchRequest' when calling TemplatesApi->UpdateTemplate");
+            }
+
+            InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = InvoicePDFs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = InvoicePDFs.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("template_id", InvoicePDFs.Client.ClientUtils.ParameterToString(templateId)); // path parameter
+            localVarRequestOptions.Data = templatePatchRequest;
+
+            localVarRequestOptions.Operation = "TemplatesApi.UpdateTemplate";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (HTTPBearer) required
+            // bearer authentication required
+            if (!string.IsNullOrEmpty(this.Configuration.AccessToken) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Bearer " + this.Configuration.AccessToken);
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Patch<CustomTemplateResponse>("/api/v1/templates/custom/{template_id}", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("UpdateTemplate", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Update Template 
+        /// </summary>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="templateId"></param>
+        /// <param name="templatePatchRequest"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of CustomTemplateResponse</returns>
+        public async System.Threading.Tasks.Task<CustomTemplateResponse> UpdateTemplateAsync(string templateId, TemplatePatchRequest templatePatchRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            InvoicePDFs.Client.ApiResponse<CustomTemplateResponse> localVarResponse = await UpdateTemplateWithHttpInfoAsync(templateId, templatePatchRequest, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update Template 
+        /// </summary>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="templateId"></param>
+        /// <param name="templatePatchRequest"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (CustomTemplateResponse)</returns>
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<CustomTemplateResponse>> UpdateTemplateWithHttpInfoAsync(string templateId, TemplatePatchRequest templatePatchRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'templateId' is set
+            if (templateId == null)
+            {
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'templateId' when calling TemplatesApi->UpdateTemplate");
+            }
+
+            // verify the required parameter 'templatePatchRequest' is set
+            if (templatePatchRequest == null)
+            {
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'templatePatchRequest' when calling TemplatesApi->UpdateTemplate");
+            }
+
+
+            InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = InvoicePDFs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = InvoicePDFs.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("template_id", InvoicePDFs.Client.ClientUtils.ParameterToString(templateId)); // path parameter
+            localVarRequestOptions.Data = templatePatchRequest;
+
+            localVarRequestOptions.Operation = "TemplatesApi.UpdateTemplate";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (HTTPBearer) required
+            // bearer authentication required
+            if (!string.IsNullOrEmpty(this.Configuration.AccessToken) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Bearer " + this.Configuration.AccessToken);
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PatchAsync<CustomTemplateResponse>("/api/v1/templates/custom/{template_id}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("UpdateTemplate", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

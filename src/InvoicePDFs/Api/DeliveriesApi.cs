@@ -33,7 +33,7 @@ namespace InvoicePDFs.Api
         /// <param name="deliveryId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>DeliveryResponse</returns>
-        DeliveryResponse GetDeliveryApiV1DeliveriesDeliveryIdGet(string deliveryId, int operationIndex = 0);
+        DeliveryResponse GetDelivery(string deliveryId, int operationIndex = 0);
 
         /// <summary>
         /// Get Delivery
@@ -45,7 +45,7 @@ namespace InvoicePDFs.Api
         /// <param name="deliveryId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of DeliveryResponse</returns>
-        ApiResponse<DeliveryResponse> GetDeliveryApiV1DeliveriesDeliveryIdGetWithHttpInfo(string deliveryId, int operationIndex = 0);
+        ApiResponse<DeliveryResponse> GetDeliveryWithHttpInfo(string deliveryId, int operationIndex = 0);
         /// <summary>
         /// Retry Delivery
         /// </summary>
@@ -53,7 +53,7 @@ namespace InvoicePDFs.Api
         /// <param name="deliveryId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>DeliveryResponse</returns>
-        DeliveryResponse RetryDeliveryApiV1DeliveriesDeliveryIdRetryPost(string deliveryId, int operationIndex = 0);
+        DeliveryResponse RetryDelivery(string deliveryId, int operationIndex = 0);
 
         /// <summary>
         /// Retry Delivery
@@ -65,7 +65,7 @@ namespace InvoicePDFs.Api
         /// <param name="deliveryId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of DeliveryResponse</returns>
-        ApiResponse<DeliveryResponse> RetryDeliveryApiV1DeliveriesDeliveryIdRetryPostWithHttpInfo(string deliveryId, int operationIndex = 0);
+        ApiResponse<DeliveryResponse> RetryDeliveryWithHttpInfo(string deliveryId, int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -86,7 +86,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of DeliveryResponse</returns>
-        System.Threading.Tasks.Task<DeliveryResponse> GetDeliveryApiV1DeliveriesDeliveryIdGetAsync(string deliveryId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<DeliveryResponse> GetDeliveryAsync(string deliveryId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Get Delivery
@@ -99,7 +99,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (DeliveryResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DeliveryResponse>> GetDeliveryApiV1DeliveriesDeliveryIdGetWithHttpInfoAsync(string deliveryId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<DeliveryResponse>> GetDeliveryWithHttpInfoAsync(string deliveryId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Retry Delivery
         /// </summary>
@@ -111,7 +111,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of DeliveryResponse</returns>
-        System.Threading.Tasks.Task<DeliveryResponse> RetryDeliveryApiV1DeliveriesDeliveryIdRetryPostAsync(string deliveryId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<DeliveryResponse> RetryDeliveryAsync(string deliveryId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Retry Delivery
@@ -124,7 +124,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (DeliveryResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DeliveryResponse>> RetryDeliveryApiV1DeliveriesDeliveryIdRetryPostWithHttpInfoAsync(string deliveryId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<DeliveryResponse>> RetryDeliveryWithHttpInfoAsync(string deliveryId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -252,9 +252,9 @@ namespace InvoicePDFs.Api
         /// <param name="deliveryId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>DeliveryResponse</returns>
-        public DeliveryResponse GetDeliveryApiV1DeliveriesDeliveryIdGet(string deliveryId, int operationIndex = 0)
+        public DeliveryResponse GetDelivery(string deliveryId, int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<DeliveryResponse> localVarResponse = GetDeliveryApiV1DeliveriesDeliveryIdGetWithHttpInfo(deliveryId);
+            InvoicePDFs.Client.ApiResponse<DeliveryResponse> localVarResponse = GetDeliveryWithHttpInfo(deliveryId);
             return localVarResponse.Data;
         }
 
@@ -265,12 +265,12 @@ namespace InvoicePDFs.Api
         /// <param name="deliveryId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of DeliveryResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<DeliveryResponse> GetDeliveryApiV1DeliveriesDeliveryIdGetWithHttpInfo(string deliveryId, int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<DeliveryResponse> GetDeliveryWithHttpInfo(string deliveryId, int operationIndex = 0)
         {
             // verify the required parameter 'deliveryId' is set
             if (deliveryId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'deliveryId' when calling DeliveriesApi->GetDeliveryApiV1DeliveriesDeliveryIdGet");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'deliveryId' when calling DeliveriesApi->GetDelivery");
             }
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -297,7 +297,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("delivery_id", InvoicePDFs.Client.ClientUtils.ParameterToString(deliveryId)); // path parameter
 
-            localVarRequestOptions.Operation = "DeliveriesApi.GetDeliveryApiV1DeliveriesDeliveryIdGet";
+            localVarRequestOptions.Operation = "DeliveriesApi.GetDelivery";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -311,7 +311,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Get<DeliveryResponse>("/api/v1/deliveries/{delivery_id}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetDeliveryApiV1DeliveriesDeliveryIdGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetDelivery", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -329,9 +329,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of DeliveryResponse</returns>
-        public async System.Threading.Tasks.Task<DeliveryResponse> GetDeliveryApiV1DeliveriesDeliveryIdGetAsync(string deliveryId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<DeliveryResponse> GetDeliveryAsync(string deliveryId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<DeliveryResponse> localVarResponse = await GetDeliveryApiV1DeliveriesDeliveryIdGetWithHttpInfoAsync(deliveryId, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<DeliveryResponse> localVarResponse = await GetDeliveryWithHttpInfoAsync(deliveryId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -343,12 +343,12 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (DeliveryResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<DeliveryResponse>> GetDeliveryApiV1DeliveriesDeliveryIdGetWithHttpInfoAsync(string deliveryId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<DeliveryResponse>> GetDeliveryWithHttpInfoAsync(string deliveryId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'deliveryId' is set
             if (deliveryId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'deliveryId' when calling DeliveriesApi->GetDeliveryApiV1DeliveriesDeliveryIdGet");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'deliveryId' when calling DeliveriesApi->GetDelivery");
             }
 
 
@@ -376,7 +376,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("delivery_id", InvoicePDFs.Client.ClientUtils.ParameterToString(deliveryId)); // path parameter
 
-            localVarRequestOptions.Operation = "DeliveriesApi.GetDeliveryApiV1DeliveriesDeliveryIdGet";
+            localVarRequestOptions.Operation = "DeliveriesApi.GetDelivery";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -391,7 +391,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetDeliveryApiV1DeliveriesDeliveryIdGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetDelivery", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -408,9 +408,9 @@ namespace InvoicePDFs.Api
         /// <param name="deliveryId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>DeliveryResponse</returns>
-        public DeliveryResponse RetryDeliveryApiV1DeliveriesDeliveryIdRetryPost(string deliveryId, int operationIndex = 0)
+        public DeliveryResponse RetryDelivery(string deliveryId, int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<DeliveryResponse> localVarResponse = RetryDeliveryApiV1DeliveriesDeliveryIdRetryPostWithHttpInfo(deliveryId);
+            InvoicePDFs.Client.ApiResponse<DeliveryResponse> localVarResponse = RetryDeliveryWithHttpInfo(deliveryId);
             return localVarResponse.Data;
         }
 
@@ -421,12 +421,12 @@ namespace InvoicePDFs.Api
         /// <param name="deliveryId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of DeliveryResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<DeliveryResponse> RetryDeliveryApiV1DeliveriesDeliveryIdRetryPostWithHttpInfo(string deliveryId, int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<DeliveryResponse> RetryDeliveryWithHttpInfo(string deliveryId, int operationIndex = 0)
         {
             // verify the required parameter 'deliveryId' is set
             if (deliveryId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'deliveryId' when calling DeliveriesApi->RetryDeliveryApiV1DeliveriesDeliveryIdRetryPost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'deliveryId' when calling DeliveriesApi->RetryDelivery");
             }
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -453,7 +453,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("delivery_id", InvoicePDFs.Client.ClientUtils.ParameterToString(deliveryId)); // path parameter
 
-            localVarRequestOptions.Operation = "DeliveriesApi.RetryDeliveryApiV1DeliveriesDeliveryIdRetryPost";
+            localVarRequestOptions.Operation = "DeliveriesApi.RetryDelivery";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -467,7 +467,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Post<DeliveryResponse>("/api/v1/deliveries/{delivery_id}/retry", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("RetryDeliveryApiV1DeliveriesDeliveryIdRetryPost", localVarResponse);
+                Exception _exception = this.ExceptionFactory("RetryDelivery", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -485,9 +485,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of DeliveryResponse</returns>
-        public async System.Threading.Tasks.Task<DeliveryResponse> RetryDeliveryApiV1DeliveriesDeliveryIdRetryPostAsync(string deliveryId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<DeliveryResponse> RetryDeliveryAsync(string deliveryId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<DeliveryResponse> localVarResponse = await RetryDeliveryApiV1DeliveriesDeliveryIdRetryPostWithHttpInfoAsync(deliveryId, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<DeliveryResponse> localVarResponse = await RetryDeliveryWithHttpInfoAsync(deliveryId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -499,12 +499,12 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (DeliveryResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<DeliveryResponse>> RetryDeliveryApiV1DeliveriesDeliveryIdRetryPostWithHttpInfoAsync(string deliveryId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<DeliveryResponse>> RetryDeliveryWithHttpInfoAsync(string deliveryId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'deliveryId' is set
             if (deliveryId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'deliveryId' when calling DeliveriesApi->RetryDeliveryApiV1DeliveriesDeliveryIdRetryPost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'deliveryId' when calling DeliveriesApi->RetryDelivery");
             }
 
 
@@ -532,7 +532,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("delivery_id", InvoicePDFs.Client.ClientUtils.ParameterToString(deliveryId)); // path parameter
 
-            localVarRequestOptions.Operation = "DeliveriesApi.RetryDeliveryApiV1DeliveriesDeliveryIdRetryPost";
+            localVarRequestOptions.Operation = "DeliveriesApi.RetryDelivery";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -547,7 +547,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("RetryDeliveryApiV1DeliveriesDeliveryIdRetryPost", localVarResponse);
+                Exception _exception = this.ExceptionFactory("RetryDelivery", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

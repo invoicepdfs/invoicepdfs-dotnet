@@ -4,13 +4,13 @@ All URIs are relative to *http://localhost*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
-| [**CreateTemplateVersionApiV1TemplatesTemplateIdVersionsPost**](TemplateVersionsApi.md#createtemplateversionapiv1templatestemplateidversionspost) | **POST** /api/v1/templates/{template_id}/versions | Create Template Version |
-| [**GetTemplateVersionApiV1TemplatesTemplateIdVersionsVersionGet**](TemplateVersionsApi.md#gettemplateversionapiv1templatestemplateidversionsversionget) | **GET** /api/v1/templates/{template_id}/versions/{version} | Get Template Version |
-| [**ListTemplateVersionsApiV1TemplatesTemplateIdVersionsGet**](TemplateVersionsApi.md#listtemplateversionsapiv1templatestemplateidversionsget) | **GET** /api/v1/templates/{template_id}/versions | List Template Versions |
+| [**CreateTemplateVersion**](TemplateVersionsApi.md#createtemplateversion) | **POST** /api/v1/templates/{template_id}/versions | Create Template Version |
+| [**GetTemplateVersion**](TemplateVersionsApi.md#gettemplateversion) | **GET** /api/v1/templates/{template_id}/versions/{version} | Get Template Version |
+| [**ListTemplateVersions**](TemplateVersionsApi.md#listtemplateversions) | **GET** /api/v1/templates/{template_id}/versions | List Template Versions |
 
-<a id="createtemplateversionapiv1templatestemplateidversionspost"></a>
-# **CreateTemplateVersionApiV1TemplatesTemplateIdVersionsPost**
-> TemplateVersionResponse CreateTemplateVersionApiV1TemplatesTemplateIdVersionsPost (string templateId, TemplateVersionCreateRequest templateVersionCreateRequest)
+<a id="createtemplateversion"></a>
+# **CreateTemplateVersion**
+> TemplateVersionResponse CreateTemplateVersion (string templateId, TemplateVersionCreateRequest templateVersionCreateRequest)
 
 Create Template Version
 
@@ -24,7 +24,7 @@ using InvoicePDFs.Model;
 
 namespace Example
 {
-    public class CreateTemplateVersionApiV1TemplatesTemplateIdVersionsPostExample
+    public class CreateTemplateVersionExample
     {
         public static void Main()
         {
@@ -40,12 +40,12 @@ namespace Example
             try
             {
                 // Create Template Version
-                TemplateVersionResponse result = apiInstance.CreateTemplateVersionApiV1TemplatesTemplateIdVersionsPost(templateId, templateVersionCreateRequest);
+                TemplateVersionResponse result = apiInstance.CreateTemplateVersion(templateId, templateVersionCreateRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling TemplateVersionsApi.CreateTemplateVersionApiV1TemplatesTemplateIdVersionsPost: " + e.Message);
+                Debug.Print("Exception when calling TemplateVersionsApi.CreateTemplateVersion: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -54,21 +54,21 @@ namespace Example
 }
 ```
 
-#### Using the CreateTemplateVersionApiV1TemplatesTemplateIdVersionsPostWithHttpInfo variant
+#### Using the CreateTemplateVersionWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // Create Template Version
-    ApiResponse<TemplateVersionResponse> response = apiInstance.CreateTemplateVersionApiV1TemplatesTemplateIdVersionsPostWithHttpInfo(templateId, templateVersionCreateRequest);
+    ApiResponse<TemplateVersionResponse> response = apiInstance.CreateTemplateVersionWithHttpInfo(templateId, templateVersionCreateRequest);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling TemplateVersionsApi.CreateTemplateVersionApiV1TemplatesTemplateIdVersionsPostWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling TemplateVersionsApi.CreateTemplateVersionWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -103,9 +103,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="gettemplateversionapiv1templatestemplateidversionsversionget"></a>
-# **GetTemplateVersionApiV1TemplatesTemplateIdVersionsVersionGet**
-> TemplateVersionResponse GetTemplateVersionApiV1TemplatesTemplateIdVersionsVersionGet (string templateId, int version)
+<a id="gettemplateversion"></a>
+# **GetTemplateVersion**
+> TemplateVersionResponse GetTemplateVersion (string templateId, int version)
 
 Get Template Version
 
@@ -119,7 +119,7 @@ using InvoicePDFs.Model;
 
 namespace Example
 {
-    public class GetTemplateVersionApiV1TemplatesTemplateIdVersionsVersionGetExample
+    public class GetTemplateVersionExample
     {
         public static void Main()
         {
@@ -135,12 +135,12 @@ namespace Example
             try
             {
                 // Get Template Version
-                TemplateVersionResponse result = apiInstance.GetTemplateVersionApiV1TemplatesTemplateIdVersionsVersionGet(templateId, version);
+                TemplateVersionResponse result = apiInstance.GetTemplateVersion(templateId, version);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling TemplateVersionsApi.GetTemplateVersionApiV1TemplatesTemplateIdVersionsVersionGet: " + e.Message);
+                Debug.Print("Exception when calling TemplateVersionsApi.GetTemplateVersion: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -149,21 +149,21 @@ namespace Example
 }
 ```
 
-#### Using the GetTemplateVersionApiV1TemplatesTemplateIdVersionsVersionGetWithHttpInfo variant
+#### Using the GetTemplateVersionWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // Get Template Version
-    ApiResponse<TemplateVersionResponse> response = apiInstance.GetTemplateVersionApiV1TemplatesTemplateIdVersionsVersionGetWithHttpInfo(templateId, version);
+    ApiResponse<TemplateVersionResponse> response = apiInstance.GetTemplateVersionWithHttpInfo(templateId, version);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling TemplateVersionsApi.GetTemplateVersionApiV1TemplatesTemplateIdVersionsVersionGetWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling TemplateVersionsApi.GetTemplateVersionWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -198,9 +198,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="listtemplateversionsapiv1templatestemplateidversionsget"></a>
-# **ListTemplateVersionsApiV1TemplatesTemplateIdVersionsGet**
-> TemplateVersionsListResponse ListTemplateVersionsApiV1TemplatesTemplateIdVersionsGet (string templateId)
+<a id="listtemplateversions"></a>
+# **ListTemplateVersions**
+> TemplateVersionsListResponse ListTemplateVersions (string templateId)
 
 List Template Versions
 
@@ -214,7 +214,7 @@ using InvoicePDFs.Model;
 
 namespace Example
 {
-    public class ListTemplateVersionsApiV1TemplatesTemplateIdVersionsGetExample
+    public class ListTemplateVersionsExample
     {
         public static void Main()
         {
@@ -229,12 +229,12 @@ namespace Example
             try
             {
                 // List Template Versions
-                TemplateVersionsListResponse result = apiInstance.ListTemplateVersionsApiV1TemplatesTemplateIdVersionsGet(templateId);
+                TemplateVersionsListResponse result = apiInstance.ListTemplateVersions(templateId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling TemplateVersionsApi.ListTemplateVersionsApiV1TemplatesTemplateIdVersionsGet: " + e.Message);
+                Debug.Print("Exception when calling TemplateVersionsApi.ListTemplateVersions: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -243,21 +243,21 @@ namespace Example
 }
 ```
 
-#### Using the ListTemplateVersionsApiV1TemplatesTemplateIdVersionsGetWithHttpInfo variant
+#### Using the ListTemplateVersionsWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // List Template Versions
-    ApiResponse<TemplateVersionsListResponse> response = apiInstance.ListTemplateVersionsApiV1TemplatesTemplateIdVersionsGetWithHttpInfo(templateId);
+    ApiResponse<TemplateVersionsListResponse> response = apiInstance.ListTemplateVersionsWithHttpInfo(templateId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling TemplateVersionsApi.ListTemplateVersionsApiV1TemplatesTemplateIdVersionsGetWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling TemplateVersionsApi.ListTemplateVersionsWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }

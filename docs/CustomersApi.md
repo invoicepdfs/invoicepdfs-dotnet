@@ -4,15 +4,15 @@ All URIs are relative to *http://localhost*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
-| [**CreateCustomerApiV1CustomersPost**](CustomersApi.md#createcustomerapiv1customerspost) | **POST** /api/v1/customers | Create Customer |
-| [**DeleteCustomerApiV1CustomersCustomerIdDelete**](CustomersApi.md#deletecustomerapiv1customerscustomeriddelete) | **DELETE** /api/v1/customers/{customer_id} | Delete Customer |
-| [**GetCustomerApiV1CustomersCustomerIdGet**](CustomersApi.md#getcustomerapiv1customerscustomeridget) | **GET** /api/v1/customers/{customer_id} | Get Customer |
-| [**ListCustomersApiV1CustomersGet**](CustomersApi.md#listcustomersapiv1customersget) | **GET** /api/v1/customers | List Customers |
-| [**PatchCustomerApiV1CustomersCustomerIdPatch**](CustomersApi.md#patchcustomerapiv1customerscustomeridpatch) | **PATCH** /api/v1/customers/{customer_id} | Patch Customer |
+| [**CreateCustomer**](CustomersApi.md#createcustomer) | **POST** /api/v1/customers | Create Customer |
+| [**DeleteCustomer**](CustomersApi.md#deletecustomer) | **DELETE** /api/v1/customers/{customer_id} | Delete Customer |
+| [**GetCustomer**](CustomersApi.md#getcustomer) | **GET** /api/v1/customers/{customer_id} | Get Customer |
+| [**ListCustomers**](CustomersApi.md#listcustomers) | **GET** /api/v1/customers | List Customers |
+| [**UpdateCustomer**](CustomersApi.md#updatecustomer) | **PATCH** /api/v1/customers/{customer_id} | Update Customer |
 
-<a id="createcustomerapiv1customerspost"></a>
-# **CreateCustomerApiV1CustomersPost**
-> CustomerResponse CreateCustomerApiV1CustomersPost (CustomerCreate customerCreate, string? idempotencyKey = null)
+<a id="createcustomer"></a>
+# **CreateCustomer**
+> CustomerResponse CreateCustomer (CustomerCreate customerCreate, string? idempotencyKey = null)
 
 Create Customer
 
@@ -26,7 +26,7 @@ using InvoicePDFs.Model;
 
 namespace Example
 {
-    public class CreateCustomerApiV1CustomersPostExample
+    public class CreateCustomerExample
     {
         public static void Main()
         {
@@ -42,12 +42,12 @@ namespace Example
             try
             {
                 // Create Customer
-                CustomerResponse result = apiInstance.CreateCustomerApiV1CustomersPost(customerCreate, idempotencyKey);
+                CustomerResponse result = apiInstance.CreateCustomer(customerCreate, idempotencyKey);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling CustomersApi.CreateCustomerApiV1CustomersPost: " + e.Message);
+                Debug.Print("Exception when calling CustomersApi.CreateCustomer: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -56,21 +56,21 @@ namespace Example
 }
 ```
 
-#### Using the CreateCustomerApiV1CustomersPostWithHttpInfo variant
+#### Using the CreateCustomerWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // Create Customer
-    ApiResponse<CustomerResponse> response = apiInstance.CreateCustomerApiV1CustomersPostWithHttpInfo(customerCreate, idempotencyKey);
+    ApiResponse<CustomerResponse> response = apiInstance.CreateCustomerWithHttpInfo(customerCreate, idempotencyKey);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling CustomersApi.CreateCustomerApiV1CustomersPostWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling CustomersApi.CreateCustomerWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -105,9 +105,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="deletecustomerapiv1customerscustomeriddelete"></a>
-# **DeleteCustomerApiV1CustomersCustomerIdDelete**
-> SimpleBoolResponse DeleteCustomerApiV1CustomersCustomerIdDelete (string customerId)
+<a id="deletecustomer"></a>
+# **DeleteCustomer**
+> SimpleBoolResponse DeleteCustomer (string customerId)
 
 Delete Customer
 
@@ -121,7 +121,7 @@ using InvoicePDFs.Model;
 
 namespace Example
 {
-    public class DeleteCustomerApiV1CustomersCustomerIdDeleteExample
+    public class DeleteCustomerExample
     {
         public static void Main()
         {
@@ -136,12 +136,12 @@ namespace Example
             try
             {
                 // Delete Customer
-                SimpleBoolResponse result = apiInstance.DeleteCustomerApiV1CustomersCustomerIdDelete(customerId);
+                SimpleBoolResponse result = apiInstance.DeleteCustomer(customerId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling CustomersApi.DeleteCustomerApiV1CustomersCustomerIdDelete: " + e.Message);
+                Debug.Print("Exception when calling CustomersApi.DeleteCustomer: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -150,21 +150,21 @@ namespace Example
 }
 ```
 
-#### Using the DeleteCustomerApiV1CustomersCustomerIdDeleteWithHttpInfo variant
+#### Using the DeleteCustomerWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // Delete Customer
-    ApiResponse<SimpleBoolResponse> response = apiInstance.DeleteCustomerApiV1CustomersCustomerIdDeleteWithHttpInfo(customerId);
+    ApiResponse<SimpleBoolResponse> response = apiInstance.DeleteCustomerWithHttpInfo(customerId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling CustomersApi.DeleteCustomerApiV1CustomersCustomerIdDeleteWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling CustomersApi.DeleteCustomerWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -198,9 +198,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="getcustomerapiv1customerscustomeridget"></a>
-# **GetCustomerApiV1CustomersCustomerIdGet**
-> CustomerResponse GetCustomerApiV1CustomersCustomerIdGet (string customerId)
+<a id="getcustomer"></a>
+# **GetCustomer**
+> CustomerResponse GetCustomer (string customerId)
 
 Get Customer
 
@@ -214,7 +214,7 @@ using InvoicePDFs.Model;
 
 namespace Example
 {
-    public class GetCustomerApiV1CustomersCustomerIdGetExample
+    public class GetCustomerExample
     {
         public static void Main()
         {
@@ -229,12 +229,12 @@ namespace Example
             try
             {
                 // Get Customer
-                CustomerResponse result = apiInstance.GetCustomerApiV1CustomersCustomerIdGet(customerId);
+                CustomerResponse result = apiInstance.GetCustomer(customerId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling CustomersApi.GetCustomerApiV1CustomersCustomerIdGet: " + e.Message);
+                Debug.Print("Exception when calling CustomersApi.GetCustomer: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -243,21 +243,21 @@ namespace Example
 }
 ```
 
-#### Using the GetCustomerApiV1CustomersCustomerIdGetWithHttpInfo variant
+#### Using the GetCustomerWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // Get Customer
-    ApiResponse<CustomerResponse> response = apiInstance.GetCustomerApiV1CustomersCustomerIdGetWithHttpInfo(customerId);
+    ApiResponse<CustomerResponse> response = apiInstance.GetCustomerWithHttpInfo(customerId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling CustomersApi.GetCustomerApiV1CustomersCustomerIdGetWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling CustomersApi.GetCustomerWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -291,9 +291,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="listcustomersapiv1customersget"></a>
-# **ListCustomersApiV1CustomersGet**
-> CustomersListResponse ListCustomersApiV1CustomersGet (int? limit = null, string? cursor = null)
+<a id="listcustomers"></a>
+# **ListCustomers**
+> CustomersListResponse ListCustomers (int? limit = null, string? cursor = null)
 
 List Customers
 
@@ -307,7 +307,7 @@ using InvoicePDFs.Model;
 
 namespace Example
 {
-    public class ListCustomersApiV1CustomersGetExample
+    public class ListCustomersExample
     {
         public static void Main()
         {
@@ -323,12 +323,12 @@ namespace Example
             try
             {
                 // List Customers
-                CustomersListResponse result = apiInstance.ListCustomersApiV1CustomersGet(limit, cursor);
+                CustomersListResponse result = apiInstance.ListCustomers(limit, cursor);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling CustomersApi.ListCustomersApiV1CustomersGet: " + e.Message);
+                Debug.Print("Exception when calling CustomersApi.ListCustomers: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -337,21 +337,21 @@ namespace Example
 }
 ```
 
-#### Using the ListCustomersApiV1CustomersGetWithHttpInfo variant
+#### Using the ListCustomersWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // List Customers
-    ApiResponse<CustomersListResponse> response = apiInstance.ListCustomersApiV1CustomersGetWithHttpInfo(limit, cursor);
+    ApiResponse<CustomersListResponse> response = apiInstance.ListCustomersWithHttpInfo(limit, cursor);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling CustomersApi.ListCustomersApiV1CustomersGetWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling CustomersApi.ListCustomersWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -386,11 +386,11 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="patchcustomerapiv1customerscustomeridpatch"></a>
-# **PatchCustomerApiV1CustomersCustomerIdPatch**
-> CustomerResponse PatchCustomerApiV1CustomersCustomerIdPatch (string customerId, CustomerPatch customerPatch, string? idempotencyKey = null)
+<a id="updatecustomer"></a>
+# **UpdateCustomer**
+> CustomerResponse UpdateCustomer (string customerId, CustomerPatch customerPatch, string? idempotencyKey = null)
 
-Patch Customer
+Update Customer
 
 ### Example
 ```csharp
@@ -402,7 +402,7 @@ using InvoicePDFs.Model;
 
 namespace Example
 {
-    public class PatchCustomerApiV1CustomersCustomerIdPatchExample
+    public class UpdateCustomerExample
     {
         public static void Main()
         {
@@ -418,13 +418,13 @@ namespace Example
 
             try
             {
-                // Patch Customer
-                CustomerResponse result = apiInstance.PatchCustomerApiV1CustomersCustomerIdPatch(customerId, customerPatch, idempotencyKey);
+                // Update Customer
+                CustomerResponse result = apiInstance.UpdateCustomer(customerId, customerPatch, idempotencyKey);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling CustomersApi.PatchCustomerApiV1CustomersCustomerIdPatch: " + e.Message);
+                Debug.Print("Exception when calling CustomersApi.UpdateCustomer: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -433,21 +433,21 @@ namespace Example
 }
 ```
 
-#### Using the PatchCustomerApiV1CustomersCustomerIdPatchWithHttpInfo variant
+#### Using the UpdateCustomerWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
-    // Patch Customer
-    ApiResponse<CustomerResponse> response = apiInstance.PatchCustomerApiV1CustomersCustomerIdPatchWithHttpInfo(customerId, customerPatch, idempotencyKey);
+    // Update Customer
+    ApiResponse<CustomerResponse> response = apiInstance.UpdateCustomerWithHttpInfo(customerId, customerPatch, idempotencyKey);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling CustomersApi.PatchCustomerApiV1CustomersCustomerIdPatchWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling CustomersApi.UpdateCustomerWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }

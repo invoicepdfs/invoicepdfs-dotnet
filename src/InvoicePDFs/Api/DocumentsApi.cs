@@ -33,7 +33,7 @@ namespace InvoicePDFs.Api
         /// <param name="documentId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>DocumentResponse</returns>
-        DocumentResponse ArchiveDocumentApiV1DocumentsDocumentIdArchivePost(string documentId, int operationIndex = 0);
+        DocumentResponse ArchiveDocument(string documentId, int operationIndex = 0);
 
         /// <summary>
         /// Archive Document
@@ -45,7 +45,7 @@ namespace InvoicePDFs.Api
         /// <param name="documentId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of DocumentResponse</returns>
-        ApiResponse<DocumentResponse> ArchiveDocumentApiV1DocumentsDocumentIdArchivePostWithHttpInfo(string documentId, int operationIndex = 0);
+        ApiResponse<DocumentResponse> ArchiveDocumentWithHttpInfo(string documentId, int operationIndex = 0);
         /// <summary>
         /// Calculate Document
         /// </summary>
@@ -53,7 +53,7 @@ namespace InvoicePDFs.Api
         /// <param name="documentCalculateRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>DocumentCalculateResponse</returns>
-        DocumentCalculateResponse CalculateDocumentApiV1DocumentsCalculatePost(DocumentCalculateRequest documentCalculateRequest, int operationIndex = 0);
+        DocumentCalculateResponse CalculateDocument(DocumentCalculateRequest documentCalculateRequest, int operationIndex = 0);
 
         /// <summary>
         /// Calculate Document
@@ -65,7 +65,7 @@ namespace InvoicePDFs.Api
         /// <param name="documentCalculateRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of DocumentCalculateResponse</returns>
-        ApiResponse<DocumentCalculateResponse> CalculateDocumentApiV1DocumentsCalculatePostWithHttpInfo(DocumentCalculateRequest documentCalculateRequest, int operationIndex = 0);
+        ApiResponse<DocumentCalculateResponse> CalculateDocumentWithHttpInfo(DocumentCalculateRequest documentCalculateRequest, int operationIndex = 0);
         /// <summary>
         /// Create Document
         /// </summary>
@@ -74,7 +74,7 @@ namespace InvoicePDFs.Api
         /// <param name="idempotencyKey"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>DocumentResponse</returns>
-        DocumentResponse CreateDocumentApiV1DocumentsPost(DocumentCreateRequest documentCreateRequest, string? idempotencyKey = default(string?), int operationIndex = 0);
+        DocumentResponse CreateDocument(DocumentCreateRequest documentCreateRequest, string? idempotencyKey = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// Create Document
@@ -87,7 +87,31 @@ namespace InvoicePDFs.Api
         /// <param name="idempotencyKey"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of DocumentResponse</returns>
-        ApiResponse<DocumentResponse> CreateDocumentApiV1DocumentsPostWithHttpInfo(DocumentCreateRequest documentCreateRequest, string? idempotencyKey = default(string?), int operationIndex = 0);
+        ApiResponse<DocumentResponse> CreateDocumentWithHttpInfo(DocumentCreateRequest documentCreateRequest, string? idempotencyKey = default(string?), int operationIndex = 0);
+        /// <summary>
+        /// Create Document Render
+        /// </summary>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="documentId"></param>
+        /// <param name="documentRenderOptions"></param>
+        /// <param name="idempotencyKey"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>Object</returns>
+        Object CreateDocumentRender(string documentId, DocumentRenderOptions documentRenderOptions, string? idempotencyKey = default(string?), int operationIndex = 0);
+
+        /// <summary>
+        /// Create Document Render
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="documentId"></param>
+        /// <param name="documentRenderOptions"></param>
+        /// <param name="idempotencyKey"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> CreateDocumentRenderWithHttpInfo(string documentId, DocumentRenderOptions documentRenderOptions, string? idempotencyKey = default(string?), int operationIndex = 0);
         /// <summary>
         /// Delete Document
         /// </summary>
@@ -95,7 +119,7 @@ namespace InvoicePDFs.Api
         /// <param name="documentId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>SimpleBoolResponse</returns>
-        SimpleBoolResponse DeleteDocumentApiV1DocumentsDocumentIdDelete(string documentId, int operationIndex = 0);
+        SimpleBoolResponse DeleteDocument(string documentId, int operationIndex = 0);
 
         /// <summary>
         /// Delete Document
@@ -107,7 +131,7 @@ namespace InvoicePDFs.Api
         /// <param name="documentId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of SimpleBoolResponse</returns>
-        ApiResponse<SimpleBoolResponse> DeleteDocumentApiV1DocumentsDocumentIdDeleteWithHttpInfo(string documentId, int operationIndex = 0);
+        ApiResponse<SimpleBoolResponse> DeleteDocumentWithHttpInfo(string documentId, int operationIndex = 0);
         /// <summary>
         /// Duplicate Document
         /// </summary>
@@ -115,7 +139,7 @@ namespace InvoicePDFs.Api
         /// <param name="documentId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>DocumentResponse</returns>
-        DocumentResponse DuplicateDocumentApiV1DocumentsDocumentIdDuplicatePost(string documentId, int operationIndex = 0);
+        DocumentResponse DuplicateDocument(string documentId, int operationIndex = 0);
 
         /// <summary>
         /// Duplicate Document
@@ -127,7 +151,7 @@ namespace InvoicePDFs.Api
         /// <param name="documentId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of DocumentResponse</returns>
-        ApiResponse<DocumentResponse> DuplicateDocumentApiV1DocumentsDocumentIdDuplicatePostWithHttpInfo(string documentId, int operationIndex = 0);
+        ApiResponse<DocumentResponse> DuplicateDocumentWithHttpInfo(string documentId, int operationIndex = 0);
         /// <summary>
         /// Finalize Document
         /// </summary>
@@ -135,7 +159,7 @@ namespace InvoicePDFs.Api
         /// <param name="documentId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>DocumentResponse</returns>
-        DocumentResponse FinalizeDocumentApiV1DocumentsDocumentIdFinalizePost(string documentId, int operationIndex = 0);
+        DocumentResponse FinalizeDocument(string documentId, int operationIndex = 0);
 
         /// <summary>
         /// Finalize Document
@@ -147,7 +171,7 @@ namespace InvoicePDFs.Api
         /// <param name="documentId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of DocumentResponse</returns>
-        ApiResponse<DocumentResponse> FinalizeDocumentApiV1DocumentsDocumentIdFinalizePostWithHttpInfo(string documentId, int operationIndex = 0);
+        ApiResponse<DocumentResponse> FinalizeDocumentWithHttpInfo(string documentId, int operationIndex = 0);
         /// <summary>
         /// Get Document
         /// </summary>
@@ -155,7 +179,7 @@ namespace InvoicePDFs.Api
         /// <param name="documentId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>DocumentResponse</returns>
-        DocumentResponse GetDocumentApiV1DocumentsDocumentIdGet(string documentId, int operationIndex = 0);
+        DocumentResponse GetDocument(string documentId, int operationIndex = 0);
 
         /// <summary>
         /// Get Document
@@ -167,7 +191,7 @@ namespace InvoicePDFs.Api
         /// <param name="documentId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of DocumentResponse</returns>
-        ApiResponse<DocumentResponse> GetDocumentApiV1DocumentsDocumentIdGetWithHttpInfo(string documentId, int operationIndex = 0);
+        ApiResponse<DocumentResponse> GetDocumentWithHttpInfo(string documentId, int operationIndex = 0);
         /// <summary>
         /// List Document Deliveries
         /// </summary>
@@ -177,7 +201,7 @@ namespace InvoicePDFs.Api
         /// <param name="cursor"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>DeliveriesListResponse</returns>
-        DeliveriesListResponse ListDocumentDeliveriesApiV1DocumentsDocumentIdDeliveriesGet(string documentId, int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0);
+        DeliveriesListResponse ListDocumentDeliveries(string documentId, int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// List Document Deliveries
@@ -191,7 +215,7 @@ namespace InvoicePDFs.Api
         /// <param name="cursor"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of DeliveriesListResponse</returns>
-        ApiResponse<DeliveriesListResponse> ListDocumentDeliveriesApiV1DocumentsDocumentIdDeliveriesGetWithHttpInfo(string documentId, int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0);
+        ApiResponse<DeliveriesListResponse> ListDocumentDeliveriesWithHttpInfo(string documentId, int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0);
         /// <summary>
         /// List Documents
         /// </summary>
@@ -202,7 +226,7 @@ namespace InvoicePDFs.Api
         /// <param name="status"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>DocumentsListResponse</returns>
-        DocumentsListResponse ListDocumentsApiV1DocumentsGet(int? limit = default(int?), string? cursor = default(string?), string? documentType = default(string?), string? status = default(string?), int operationIndex = 0);
+        DocumentsListResponse ListDocuments(int? limit = default(int?), string? cursor = default(string?), string? documentType = default(string?), string? status = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// List Documents
@@ -217,7 +241,7 @@ namespace InvoicePDFs.Api
         /// <param name="status"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of DocumentsListResponse</returns>
-        ApiResponse<DocumentsListResponse> ListDocumentsApiV1DocumentsGetWithHttpInfo(int? limit = default(int?), string? cursor = default(string?), string? documentType = default(string?), string? status = default(string?), int operationIndex = 0);
+        ApiResponse<DocumentsListResponse> ListDocumentsWithHttpInfo(int? limit = default(int?), string? cursor = default(string?), string? documentType = default(string?), string? status = default(string?), int operationIndex = 0);
         /// <summary>
         /// Mark Paid
         /// </summary>
@@ -225,7 +249,7 @@ namespace InvoicePDFs.Api
         /// <param name="documentId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>DocumentResponse</returns>
-        DocumentResponse MarkPaidApiV1DocumentsDocumentIdMarkPaidPost(string documentId, int operationIndex = 0);
+        DocumentResponse MarkPaid(string documentId, int operationIndex = 0);
 
         /// <summary>
         /// Mark Paid
@@ -237,7 +261,7 @@ namespace InvoicePDFs.Api
         /// <param name="documentId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of DocumentResponse</returns>
-        ApiResponse<DocumentResponse> MarkPaidApiV1DocumentsDocumentIdMarkPaidPostWithHttpInfo(string documentId, int operationIndex = 0);
+        ApiResponse<DocumentResponse> MarkPaidWithHttpInfo(string documentId, int operationIndex = 0);
         /// <summary>
         /// Mark Sent
         /// </summary>
@@ -245,7 +269,7 @@ namespace InvoicePDFs.Api
         /// <param name="documentId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>DocumentResponse</returns>
-        DocumentResponse MarkSentApiV1DocumentsDocumentIdMarkSentPost(string documentId, int operationIndex = 0);
+        DocumentResponse MarkSent(string documentId, int operationIndex = 0);
 
         /// <summary>
         /// Mark Sent
@@ -257,7 +281,7 @@ namespace InvoicePDFs.Api
         /// <param name="documentId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of DocumentResponse</returns>
-        ApiResponse<DocumentResponse> MarkSentApiV1DocumentsDocumentIdMarkSentPostWithHttpInfo(string documentId, int operationIndex = 0);
+        ApiResponse<DocumentResponse> MarkSentWithHttpInfo(string documentId, int operationIndex = 0);
         /// <summary>
         /// Mark Unpaid
         /// </summary>
@@ -265,7 +289,7 @@ namespace InvoicePDFs.Api
         /// <param name="documentId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>DocumentResponse</returns>
-        DocumentResponse MarkUnpaidApiV1DocumentsDocumentIdMarkUnpaidPost(string documentId, int operationIndex = 0);
+        DocumentResponse MarkUnpaid(string documentId, int operationIndex = 0);
 
         /// <summary>
         /// Mark Unpaid
@@ -277,39 +301,16 @@ namespace InvoicePDFs.Api
         /// <param name="documentId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of DocumentResponse</returns>
-        ApiResponse<DocumentResponse> MarkUnpaidApiV1DocumentsDocumentIdMarkUnpaidPostWithHttpInfo(string documentId, int operationIndex = 0);
-        /// <summary>
-        /// Patch Document
-        /// </summary>
-        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documentId"></param>
-        /// <param name="documentPatchRequest"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>DocumentResponse</returns>
-        DocumentResponse PatchDocumentApiV1DocumentsDocumentIdPatch(string documentId, DocumentPatchRequest documentPatchRequest, int operationIndex = 0);
-
-        /// <summary>
-        /// Patch Document
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documentId"></param>
-        /// <param name="documentPatchRequest"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of DocumentResponse</returns>
-        ApiResponse<DocumentResponse> PatchDocumentApiV1DocumentsDocumentIdPatchWithHttpInfo(string documentId, DocumentPatchRequest documentPatchRequest, int operationIndex = 0);
+        ApiResponse<DocumentResponse> MarkUnpaidWithHttpInfo(string documentId, int operationIndex = 0);
         /// <summary>
         /// Render Document
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documentId"></param>
-        /// <param name="appDocumentsSchemasDocumentRenderRequest"></param>
+        /// <param name="documentRenderRequest"></param>
         /// <param name="idempotencyKey"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>Object</returns>
-        Object RenderDocumentApiV1DocumentsDocumentIdRendersPost(string documentId, AppDocumentsSchemasDocumentRenderRequest appDocumentsSchemasDocumentRenderRequest, string? idempotencyKey = default(string?), int operationIndex = 0);
+        Object RenderDocument(DocumentRenderRequest documentRenderRequest, string? idempotencyKey = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// Render Document
@@ -318,34 +319,11 @@ namespace InvoicePDFs.Api
         /// 
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documentId"></param>
-        /// <param name="appDocumentsSchemasDocumentRenderRequest"></param>
+        /// <param name="documentRenderRequest"></param>
         /// <param name="idempotencyKey"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Object</returns>
-        ApiResponse<Object> RenderDocumentApiV1DocumentsDocumentIdRendersPostWithHttpInfo(string documentId, AppDocumentsSchemasDocumentRenderRequest appDocumentsSchemasDocumentRenderRequest, string? idempotencyKey = default(string?), int operationIndex = 0);
-        /// <summary>
-        /// Render Document
-        /// </summary>
-        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appSchemasV1DocumentRenderRequest"></param>
-        /// <param name="idempotencyKey"> (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Object</returns>
-        Object RenderDocumentApiV1DocumentsRenderPost(AppSchemasV1DocumentRenderRequest appSchemasV1DocumentRenderRequest, string? idempotencyKey = default(string?), int operationIndex = 0);
-
-        /// <summary>
-        /// Render Document
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appSchemasV1DocumentRenderRequest"></param>
-        /// <param name="idempotencyKey"> (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Object</returns>
-        ApiResponse<Object> RenderDocumentApiV1DocumentsRenderPostWithHttpInfo(AppSchemasV1DocumentRenderRequest appSchemasV1DocumentRenderRequest, string? idempotencyKey = default(string?), int operationIndex = 0);
+        ApiResponse<Object> RenderDocumentWithHttpInfo(DocumentRenderRequest documentRenderRequest, string? idempotencyKey = default(string?), int operationIndex = 0);
         /// <summary>
         /// Restore Document
         /// </summary>
@@ -353,7 +331,7 @@ namespace InvoicePDFs.Api
         /// <param name="documentId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>DocumentResponse</returns>
-        DocumentResponse RestoreDocumentApiV1DocumentsDocumentIdRestorePost(string documentId, int operationIndex = 0);
+        DocumentResponse RestoreDocument(string documentId, int operationIndex = 0);
 
         /// <summary>
         /// Restore Document
@@ -365,7 +343,7 @@ namespace InvoicePDFs.Api
         /// <param name="documentId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of DocumentResponse</returns>
-        ApiResponse<DocumentResponse> RestoreDocumentApiV1DocumentsDocumentIdRestorePostWithHttpInfo(string documentId, int operationIndex = 0);
+        ApiResponse<DocumentResponse> RestoreDocumentWithHttpInfo(string documentId, int operationIndex = 0);
         /// <summary>
         /// Send Document
         /// </summary>
@@ -374,7 +352,7 @@ namespace InvoicePDFs.Api
         /// <param name="deliverySendRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>DeliveryResponse</returns>
-        DeliveryResponse SendDocumentApiV1DocumentsDocumentIdSendPost(string documentId, DeliverySendRequest deliverySendRequest, int operationIndex = 0);
+        DeliveryResponse SendDocument(string documentId, DeliverySendRequest deliverySendRequest, int operationIndex = 0);
 
         /// <summary>
         /// Send Document
@@ -387,7 +365,29 @@ namespace InvoicePDFs.Api
         /// <param name="deliverySendRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of DeliveryResponse</returns>
-        ApiResponse<DeliveryResponse> SendDocumentApiV1DocumentsDocumentIdSendPostWithHttpInfo(string documentId, DeliverySendRequest deliverySendRequest, int operationIndex = 0);
+        ApiResponse<DeliveryResponse> SendDocumentWithHttpInfo(string documentId, DeliverySendRequest deliverySendRequest, int operationIndex = 0);
+        /// <summary>
+        /// Update Document
+        /// </summary>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="documentId"></param>
+        /// <param name="documentPatchRequest"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>DocumentResponse</returns>
+        DocumentResponse UpdateDocument(string documentId, DocumentPatchRequest documentPatchRequest, int operationIndex = 0);
+
+        /// <summary>
+        /// Update Document
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="documentId"></param>
+        /// <param name="documentPatchRequest"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of DocumentResponse</returns>
+        ApiResponse<DocumentResponse> UpdateDocumentWithHttpInfo(string documentId, DocumentPatchRequest documentPatchRequest, int operationIndex = 0);
         /// <summary>
         /// Validate Document
         /// </summary>
@@ -395,7 +395,7 @@ namespace InvoicePDFs.Api
         /// <param name="documentValidateRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>DocumentValidateResponse</returns>
-        DocumentValidateResponse ValidateDocumentApiV1DocumentsValidatePost(DocumentValidateRequest documentValidateRequest, int operationIndex = 0);
+        DocumentValidateResponse ValidateDocument(DocumentValidateRequest documentValidateRequest, int operationIndex = 0);
 
         /// <summary>
         /// Validate Document
@@ -407,7 +407,7 @@ namespace InvoicePDFs.Api
         /// <param name="documentValidateRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of DocumentValidateResponse</returns>
-        ApiResponse<DocumentValidateResponse> ValidateDocumentApiV1DocumentsValidatePostWithHttpInfo(DocumentValidateRequest documentValidateRequest, int operationIndex = 0);
+        ApiResponse<DocumentValidateResponse> ValidateDocumentWithHttpInfo(DocumentValidateRequest documentValidateRequest, int operationIndex = 0);
         /// <summary>
         /// Void Document
         /// </summary>
@@ -415,7 +415,7 @@ namespace InvoicePDFs.Api
         /// <param name="documentId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>DocumentResponse</returns>
-        DocumentResponse VoidDocumentApiV1DocumentsDocumentIdVoidPost(string documentId, int operationIndex = 0);
+        DocumentResponse VoidDocument(string documentId, int operationIndex = 0);
 
         /// <summary>
         /// Void Document
@@ -427,7 +427,7 @@ namespace InvoicePDFs.Api
         /// <param name="documentId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of DocumentResponse</returns>
-        ApiResponse<DocumentResponse> VoidDocumentApiV1DocumentsDocumentIdVoidPostWithHttpInfo(string documentId, int operationIndex = 0);
+        ApiResponse<DocumentResponse> VoidDocumentWithHttpInfo(string documentId, int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -448,7 +448,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of DocumentResponse</returns>
-        System.Threading.Tasks.Task<DocumentResponse> ArchiveDocumentApiV1DocumentsDocumentIdArchivePostAsync(string documentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<DocumentResponse> ArchiveDocumentAsync(string documentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Archive Document
@@ -461,7 +461,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (DocumentResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DocumentResponse>> ArchiveDocumentApiV1DocumentsDocumentIdArchivePostWithHttpInfoAsync(string documentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<DocumentResponse>> ArchiveDocumentWithHttpInfoAsync(string documentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Calculate Document
         /// </summary>
@@ -473,7 +473,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of DocumentCalculateResponse</returns>
-        System.Threading.Tasks.Task<DocumentCalculateResponse> CalculateDocumentApiV1DocumentsCalculatePostAsync(DocumentCalculateRequest documentCalculateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<DocumentCalculateResponse> CalculateDocumentAsync(DocumentCalculateRequest documentCalculateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Calculate Document
@@ -486,7 +486,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (DocumentCalculateResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DocumentCalculateResponse>> CalculateDocumentApiV1DocumentsCalculatePostWithHttpInfoAsync(DocumentCalculateRequest documentCalculateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<DocumentCalculateResponse>> CalculateDocumentWithHttpInfoAsync(DocumentCalculateRequest documentCalculateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Create Document
         /// </summary>
@@ -499,7 +499,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of DocumentResponse</returns>
-        System.Threading.Tasks.Task<DocumentResponse> CreateDocumentApiV1DocumentsPostAsync(DocumentCreateRequest documentCreateRequest, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<DocumentResponse> CreateDocumentAsync(DocumentCreateRequest documentCreateRequest, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Create Document
@@ -513,7 +513,36 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (DocumentResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DocumentResponse>> CreateDocumentApiV1DocumentsPostWithHttpInfoAsync(DocumentCreateRequest documentCreateRequest, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<DocumentResponse>> CreateDocumentWithHttpInfoAsync(DocumentCreateRequest documentCreateRequest, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// Create Document Render
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="documentId"></param>
+        /// <param name="documentRenderOptions"></param>
+        /// <param name="idempotencyKey"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> CreateDocumentRenderAsync(string documentId, DocumentRenderOptions documentRenderOptions, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Create Document Render
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="documentId"></param>
+        /// <param name="documentRenderOptions"></param>
+        /// <param name="idempotencyKey"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> CreateDocumentRenderWithHttpInfoAsync(string documentId, DocumentRenderOptions documentRenderOptions, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Delete Document
         /// </summary>
@@ -525,7 +554,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of SimpleBoolResponse</returns>
-        System.Threading.Tasks.Task<SimpleBoolResponse> DeleteDocumentApiV1DocumentsDocumentIdDeleteAsync(string documentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<SimpleBoolResponse> DeleteDocumentAsync(string documentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Delete Document
@@ -538,7 +567,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (SimpleBoolResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SimpleBoolResponse>> DeleteDocumentApiV1DocumentsDocumentIdDeleteWithHttpInfoAsync(string documentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<SimpleBoolResponse>> DeleteDocumentWithHttpInfoAsync(string documentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Duplicate Document
         /// </summary>
@@ -550,7 +579,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of DocumentResponse</returns>
-        System.Threading.Tasks.Task<DocumentResponse> DuplicateDocumentApiV1DocumentsDocumentIdDuplicatePostAsync(string documentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<DocumentResponse> DuplicateDocumentAsync(string documentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Duplicate Document
@@ -563,7 +592,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (DocumentResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DocumentResponse>> DuplicateDocumentApiV1DocumentsDocumentIdDuplicatePostWithHttpInfoAsync(string documentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<DocumentResponse>> DuplicateDocumentWithHttpInfoAsync(string documentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Finalize Document
         /// </summary>
@@ -575,7 +604,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of DocumentResponse</returns>
-        System.Threading.Tasks.Task<DocumentResponse> FinalizeDocumentApiV1DocumentsDocumentIdFinalizePostAsync(string documentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<DocumentResponse> FinalizeDocumentAsync(string documentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Finalize Document
@@ -588,7 +617,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (DocumentResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DocumentResponse>> FinalizeDocumentApiV1DocumentsDocumentIdFinalizePostWithHttpInfoAsync(string documentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<DocumentResponse>> FinalizeDocumentWithHttpInfoAsync(string documentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Get Document
         /// </summary>
@@ -600,7 +629,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of DocumentResponse</returns>
-        System.Threading.Tasks.Task<DocumentResponse> GetDocumentApiV1DocumentsDocumentIdGetAsync(string documentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<DocumentResponse> GetDocumentAsync(string documentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Get Document
@@ -613,7 +642,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (DocumentResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DocumentResponse>> GetDocumentApiV1DocumentsDocumentIdGetWithHttpInfoAsync(string documentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<DocumentResponse>> GetDocumentWithHttpInfoAsync(string documentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// List Document Deliveries
         /// </summary>
@@ -627,7 +656,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of DeliveriesListResponse</returns>
-        System.Threading.Tasks.Task<DeliveriesListResponse> ListDocumentDeliveriesApiV1DocumentsDocumentIdDeliveriesGetAsync(string documentId, int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<DeliveriesListResponse> ListDocumentDeliveriesAsync(string documentId, int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// List Document Deliveries
@@ -642,7 +671,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (DeliveriesListResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DeliveriesListResponse>> ListDocumentDeliveriesApiV1DocumentsDocumentIdDeliveriesGetWithHttpInfoAsync(string documentId, int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<DeliveriesListResponse>> ListDocumentDeliveriesWithHttpInfoAsync(string documentId, int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// List Documents
         /// </summary>
@@ -657,7 +686,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of DocumentsListResponse</returns>
-        System.Threading.Tasks.Task<DocumentsListResponse> ListDocumentsApiV1DocumentsGetAsync(int? limit = default(int?), string? cursor = default(string?), string? documentType = default(string?), string? status = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<DocumentsListResponse> ListDocumentsAsync(int? limit = default(int?), string? cursor = default(string?), string? documentType = default(string?), string? status = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// List Documents
@@ -673,7 +702,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (DocumentsListResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DocumentsListResponse>> ListDocumentsApiV1DocumentsGetWithHttpInfoAsync(int? limit = default(int?), string? cursor = default(string?), string? documentType = default(string?), string? status = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<DocumentsListResponse>> ListDocumentsWithHttpInfoAsync(int? limit = default(int?), string? cursor = default(string?), string? documentType = default(string?), string? status = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Mark Paid
         /// </summary>
@@ -685,7 +714,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of DocumentResponse</returns>
-        System.Threading.Tasks.Task<DocumentResponse> MarkPaidApiV1DocumentsDocumentIdMarkPaidPostAsync(string documentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<DocumentResponse> MarkPaidAsync(string documentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Mark Paid
@@ -698,7 +727,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (DocumentResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DocumentResponse>> MarkPaidApiV1DocumentsDocumentIdMarkPaidPostWithHttpInfoAsync(string documentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<DocumentResponse>> MarkPaidWithHttpInfoAsync(string documentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Mark Sent
         /// </summary>
@@ -710,7 +739,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of DocumentResponse</returns>
-        System.Threading.Tasks.Task<DocumentResponse> MarkSentApiV1DocumentsDocumentIdMarkSentPostAsync(string documentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<DocumentResponse> MarkSentAsync(string documentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Mark Sent
@@ -723,7 +752,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (DocumentResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DocumentResponse>> MarkSentApiV1DocumentsDocumentIdMarkSentPostWithHttpInfoAsync(string documentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<DocumentResponse>> MarkSentWithHttpInfoAsync(string documentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Mark Unpaid
         /// </summary>
@@ -735,7 +764,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of DocumentResponse</returns>
-        System.Threading.Tasks.Task<DocumentResponse> MarkUnpaidApiV1DocumentsDocumentIdMarkUnpaidPostAsync(string documentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<DocumentResponse> MarkUnpaidAsync(string documentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Mark Unpaid
@@ -748,34 +777,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (DocumentResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DocumentResponse>> MarkUnpaidApiV1DocumentsDocumentIdMarkUnpaidPostWithHttpInfoAsync(string documentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// Patch Document
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documentId"></param>
-        /// <param name="documentPatchRequest"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of DocumentResponse</returns>
-        System.Threading.Tasks.Task<DocumentResponse> PatchDocumentApiV1DocumentsDocumentIdPatchAsync(string documentId, DocumentPatchRequest documentPatchRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-
-        /// <summary>
-        /// Patch Document
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documentId"></param>
-        /// <param name="documentPatchRequest"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (DocumentResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DocumentResponse>> PatchDocumentApiV1DocumentsDocumentIdPatchWithHttpInfoAsync(string documentId, DocumentPatchRequest documentPatchRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<DocumentResponse>> MarkUnpaidWithHttpInfoAsync(string documentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Render Document
         /// </summary>
@@ -783,13 +785,12 @@ namespace InvoicePDFs.Api
         /// 
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documentId"></param>
-        /// <param name="appDocumentsSchemasDocumentRenderRequest"></param>
+        /// <param name="documentRenderRequest"></param>
         /// <param name="idempotencyKey"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> RenderDocumentApiV1DocumentsDocumentIdRendersPostAsync(string documentId, AppDocumentsSchemasDocumentRenderRequest appDocumentsSchemasDocumentRenderRequest, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<Object> RenderDocumentAsync(DocumentRenderRequest documentRenderRequest, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Render Document
@@ -798,40 +799,12 @@ namespace InvoicePDFs.Api
         /// 
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documentId"></param>
-        /// <param name="appDocumentsSchemasDocumentRenderRequest"></param>
+        /// <param name="documentRenderRequest"></param>
         /// <param name="idempotencyKey"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> RenderDocumentApiV1DocumentsDocumentIdRendersPostWithHttpInfoAsync(string documentId, AppDocumentsSchemasDocumentRenderRequest appDocumentsSchemasDocumentRenderRequest, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// Render Document
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appSchemasV1DocumentRenderRequest"></param>
-        /// <param name="idempotencyKey"> (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> RenderDocumentApiV1DocumentsRenderPostAsync(AppSchemasV1DocumentRenderRequest appSchemasV1DocumentRenderRequest, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-
-        /// <summary>
-        /// Render Document
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appSchemasV1DocumentRenderRequest"></param>
-        /// <param name="idempotencyKey"> (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> RenderDocumentApiV1DocumentsRenderPostWithHttpInfoAsync(AppSchemasV1DocumentRenderRequest appSchemasV1DocumentRenderRequest, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> RenderDocumentWithHttpInfoAsync(DocumentRenderRequest documentRenderRequest, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Restore Document
         /// </summary>
@@ -843,7 +816,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of DocumentResponse</returns>
-        System.Threading.Tasks.Task<DocumentResponse> RestoreDocumentApiV1DocumentsDocumentIdRestorePostAsync(string documentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<DocumentResponse> RestoreDocumentAsync(string documentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Restore Document
@@ -856,7 +829,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (DocumentResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DocumentResponse>> RestoreDocumentApiV1DocumentsDocumentIdRestorePostWithHttpInfoAsync(string documentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<DocumentResponse>> RestoreDocumentWithHttpInfoAsync(string documentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Send Document
         /// </summary>
@@ -869,7 +842,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of DeliveryResponse</returns>
-        System.Threading.Tasks.Task<DeliveryResponse> SendDocumentApiV1DocumentsDocumentIdSendPostAsync(string documentId, DeliverySendRequest deliverySendRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<DeliveryResponse> SendDocumentAsync(string documentId, DeliverySendRequest deliverySendRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Send Document
@@ -883,7 +856,34 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (DeliveryResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DeliveryResponse>> SendDocumentApiV1DocumentsDocumentIdSendPostWithHttpInfoAsync(string documentId, DeliverySendRequest deliverySendRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<DeliveryResponse>> SendDocumentWithHttpInfoAsync(string documentId, DeliverySendRequest deliverySendRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// Update Document
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="documentId"></param>
+        /// <param name="documentPatchRequest"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of DocumentResponse</returns>
+        System.Threading.Tasks.Task<DocumentResponse> UpdateDocumentAsync(string documentId, DocumentPatchRequest documentPatchRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Update Document
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="documentId"></param>
+        /// <param name="documentPatchRequest"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (DocumentResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DocumentResponse>> UpdateDocumentWithHttpInfoAsync(string documentId, DocumentPatchRequest documentPatchRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Validate Document
         /// </summary>
@@ -895,7 +895,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of DocumentValidateResponse</returns>
-        System.Threading.Tasks.Task<DocumentValidateResponse> ValidateDocumentApiV1DocumentsValidatePostAsync(DocumentValidateRequest documentValidateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<DocumentValidateResponse> ValidateDocumentAsync(DocumentValidateRequest documentValidateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Validate Document
@@ -908,7 +908,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (DocumentValidateResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DocumentValidateResponse>> ValidateDocumentApiV1DocumentsValidatePostWithHttpInfoAsync(DocumentValidateRequest documentValidateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<DocumentValidateResponse>> ValidateDocumentWithHttpInfoAsync(DocumentValidateRequest documentValidateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Void Document
         /// </summary>
@@ -920,7 +920,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of DocumentResponse</returns>
-        System.Threading.Tasks.Task<DocumentResponse> VoidDocumentApiV1DocumentsDocumentIdVoidPostAsync(string documentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<DocumentResponse> VoidDocumentAsync(string documentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Void Document
@@ -933,7 +933,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (DocumentResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DocumentResponse>> VoidDocumentApiV1DocumentsDocumentIdVoidPostWithHttpInfoAsync(string documentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<DocumentResponse>> VoidDocumentWithHttpInfoAsync(string documentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -1061,9 +1061,9 @@ namespace InvoicePDFs.Api
         /// <param name="documentId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>DocumentResponse</returns>
-        public DocumentResponse ArchiveDocumentApiV1DocumentsDocumentIdArchivePost(string documentId, int operationIndex = 0)
+        public DocumentResponse ArchiveDocument(string documentId, int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<DocumentResponse> localVarResponse = ArchiveDocumentApiV1DocumentsDocumentIdArchivePostWithHttpInfo(documentId);
+            InvoicePDFs.Client.ApiResponse<DocumentResponse> localVarResponse = ArchiveDocumentWithHttpInfo(documentId);
             return localVarResponse.Data;
         }
 
@@ -1074,12 +1074,12 @@ namespace InvoicePDFs.Api
         /// <param name="documentId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of DocumentResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<DocumentResponse> ArchiveDocumentApiV1DocumentsDocumentIdArchivePostWithHttpInfo(string documentId, int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<DocumentResponse> ArchiveDocumentWithHttpInfo(string documentId, int operationIndex = 0)
         {
             // verify the required parameter 'documentId' is set
             if (documentId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'documentId' when calling DocumentsApi->ArchiveDocumentApiV1DocumentsDocumentIdArchivePost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'documentId' when calling DocumentsApi->ArchiveDocument");
             }
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -1106,7 +1106,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("document_id", InvoicePDFs.Client.ClientUtils.ParameterToString(documentId)); // path parameter
 
-            localVarRequestOptions.Operation = "DocumentsApi.ArchiveDocumentApiV1DocumentsDocumentIdArchivePost";
+            localVarRequestOptions.Operation = "DocumentsApi.ArchiveDocument";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -1120,7 +1120,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Post<DocumentResponse>("/api/v1/documents/{document_id}/archive", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ArchiveDocumentApiV1DocumentsDocumentIdArchivePost", localVarResponse);
+                Exception _exception = this.ExceptionFactory("ArchiveDocument", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1138,9 +1138,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of DocumentResponse</returns>
-        public async System.Threading.Tasks.Task<DocumentResponse> ArchiveDocumentApiV1DocumentsDocumentIdArchivePostAsync(string documentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<DocumentResponse> ArchiveDocumentAsync(string documentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<DocumentResponse> localVarResponse = await ArchiveDocumentApiV1DocumentsDocumentIdArchivePostWithHttpInfoAsync(documentId, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<DocumentResponse> localVarResponse = await ArchiveDocumentWithHttpInfoAsync(documentId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1152,12 +1152,12 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (DocumentResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<DocumentResponse>> ArchiveDocumentApiV1DocumentsDocumentIdArchivePostWithHttpInfoAsync(string documentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<DocumentResponse>> ArchiveDocumentWithHttpInfoAsync(string documentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'documentId' is set
             if (documentId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'documentId' when calling DocumentsApi->ArchiveDocumentApiV1DocumentsDocumentIdArchivePost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'documentId' when calling DocumentsApi->ArchiveDocument");
             }
 
 
@@ -1185,7 +1185,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("document_id", InvoicePDFs.Client.ClientUtils.ParameterToString(documentId)); // path parameter
 
-            localVarRequestOptions.Operation = "DocumentsApi.ArchiveDocumentApiV1DocumentsDocumentIdArchivePost";
+            localVarRequestOptions.Operation = "DocumentsApi.ArchiveDocument";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -1200,7 +1200,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ArchiveDocumentApiV1DocumentsDocumentIdArchivePost", localVarResponse);
+                Exception _exception = this.ExceptionFactory("ArchiveDocument", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1217,9 +1217,9 @@ namespace InvoicePDFs.Api
         /// <param name="documentCalculateRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>DocumentCalculateResponse</returns>
-        public DocumentCalculateResponse CalculateDocumentApiV1DocumentsCalculatePost(DocumentCalculateRequest documentCalculateRequest, int operationIndex = 0)
+        public DocumentCalculateResponse CalculateDocument(DocumentCalculateRequest documentCalculateRequest, int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<DocumentCalculateResponse> localVarResponse = CalculateDocumentApiV1DocumentsCalculatePostWithHttpInfo(documentCalculateRequest);
+            InvoicePDFs.Client.ApiResponse<DocumentCalculateResponse> localVarResponse = CalculateDocumentWithHttpInfo(documentCalculateRequest);
             return localVarResponse.Data;
         }
 
@@ -1230,12 +1230,12 @@ namespace InvoicePDFs.Api
         /// <param name="documentCalculateRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of DocumentCalculateResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<DocumentCalculateResponse> CalculateDocumentApiV1DocumentsCalculatePostWithHttpInfo(DocumentCalculateRequest documentCalculateRequest, int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<DocumentCalculateResponse> CalculateDocumentWithHttpInfo(DocumentCalculateRequest documentCalculateRequest, int operationIndex = 0)
         {
             // verify the required parameter 'documentCalculateRequest' is set
             if (documentCalculateRequest == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'documentCalculateRequest' when calling DocumentsApi->CalculateDocumentApiV1DocumentsCalculatePost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'documentCalculateRequest' when calling DocumentsApi->CalculateDocument");
             }
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -1263,7 +1263,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.Data = documentCalculateRequest;
 
-            localVarRequestOptions.Operation = "DocumentsApi.CalculateDocumentApiV1DocumentsCalculatePost";
+            localVarRequestOptions.Operation = "DocumentsApi.CalculateDocument";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -1277,7 +1277,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Post<DocumentCalculateResponse>("/api/v1/documents/calculate", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("CalculateDocumentApiV1DocumentsCalculatePost", localVarResponse);
+                Exception _exception = this.ExceptionFactory("CalculateDocument", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1295,9 +1295,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of DocumentCalculateResponse</returns>
-        public async System.Threading.Tasks.Task<DocumentCalculateResponse> CalculateDocumentApiV1DocumentsCalculatePostAsync(DocumentCalculateRequest documentCalculateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<DocumentCalculateResponse> CalculateDocumentAsync(DocumentCalculateRequest documentCalculateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<DocumentCalculateResponse> localVarResponse = await CalculateDocumentApiV1DocumentsCalculatePostWithHttpInfoAsync(documentCalculateRequest, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<DocumentCalculateResponse> localVarResponse = await CalculateDocumentWithHttpInfoAsync(documentCalculateRequest, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1309,12 +1309,12 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (DocumentCalculateResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<DocumentCalculateResponse>> CalculateDocumentApiV1DocumentsCalculatePostWithHttpInfoAsync(DocumentCalculateRequest documentCalculateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<DocumentCalculateResponse>> CalculateDocumentWithHttpInfoAsync(DocumentCalculateRequest documentCalculateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'documentCalculateRequest' is set
             if (documentCalculateRequest == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'documentCalculateRequest' when calling DocumentsApi->CalculateDocumentApiV1DocumentsCalculatePost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'documentCalculateRequest' when calling DocumentsApi->CalculateDocument");
             }
 
 
@@ -1343,7 +1343,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.Data = documentCalculateRequest;
 
-            localVarRequestOptions.Operation = "DocumentsApi.CalculateDocumentApiV1DocumentsCalculatePost";
+            localVarRequestOptions.Operation = "DocumentsApi.CalculateDocument";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -1358,7 +1358,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("CalculateDocumentApiV1DocumentsCalculatePost", localVarResponse);
+                Exception _exception = this.ExceptionFactory("CalculateDocument", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1376,9 +1376,9 @@ namespace InvoicePDFs.Api
         /// <param name="idempotencyKey"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>DocumentResponse</returns>
-        public DocumentResponse CreateDocumentApiV1DocumentsPost(DocumentCreateRequest documentCreateRequest, string? idempotencyKey = default(string?), int operationIndex = 0)
+        public DocumentResponse CreateDocument(DocumentCreateRequest documentCreateRequest, string? idempotencyKey = default(string?), int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<DocumentResponse> localVarResponse = CreateDocumentApiV1DocumentsPostWithHttpInfo(documentCreateRequest, idempotencyKey);
+            InvoicePDFs.Client.ApiResponse<DocumentResponse> localVarResponse = CreateDocumentWithHttpInfo(documentCreateRequest, idempotencyKey);
             return localVarResponse.Data;
         }
 
@@ -1390,12 +1390,12 @@ namespace InvoicePDFs.Api
         /// <param name="idempotencyKey"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of DocumentResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<DocumentResponse> CreateDocumentApiV1DocumentsPostWithHttpInfo(DocumentCreateRequest documentCreateRequest, string? idempotencyKey = default(string?), int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<DocumentResponse> CreateDocumentWithHttpInfo(DocumentCreateRequest documentCreateRequest, string? idempotencyKey = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'documentCreateRequest' is set
             if (documentCreateRequest == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'documentCreateRequest' when calling DocumentsApi->CreateDocumentApiV1DocumentsPost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'documentCreateRequest' when calling DocumentsApi->CreateDocument");
             }
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -1427,7 +1427,7 @@ namespace InvoicePDFs.Api
             }
             localVarRequestOptions.Data = documentCreateRequest;
 
-            localVarRequestOptions.Operation = "DocumentsApi.CreateDocumentApiV1DocumentsPost";
+            localVarRequestOptions.Operation = "DocumentsApi.CreateDocument";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -1441,7 +1441,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Post<DocumentResponse>("/api/v1/documents", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("CreateDocumentApiV1DocumentsPost", localVarResponse);
+                Exception _exception = this.ExceptionFactory("CreateDocument", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1460,9 +1460,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of DocumentResponse</returns>
-        public async System.Threading.Tasks.Task<DocumentResponse> CreateDocumentApiV1DocumentsPostAsync(DocumentCreateRequest documentCreateRequest, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<DocumentResponse> CreateDocumentAsync(DocumentCreateRequest documentCreateRequest, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<DocumentResponse> localVarResponse = await CreateDocumentApiV1DocumentsPostWithHttpInfoAsync(documentCreateRequest, idempotencyKey, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<DocumentResponse> localVarResponse = await CreateDocumentWithHttpInfoAsync(documentCreateRequest, idempotencyKey, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1475,12 +1475,12 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (DocumentResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<DocumentResponse>> CreateDocumentApiV1DocumentsPostWithHttpInfoAsync(DocumentCreateRequest documentCreateRequest, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<DocumentResponse>> CreateDocumentWithHttpInfoAsync(DocumentCreateRequest documentCreateRequest, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'documentCreateRequest' is set
             if (documentCreateRequest == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'documentCreateRequest' when calling DocumentsApi->CreateDocumentApiV1DocumentsPost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'documentCreateRequest' when calling DocumentsApi->CreateDocument");
             }
 
 
@@ -1513,7 +1513,7 @@ namespace InvoicePDFs.Api
             }
             localVarRequestOptions.Data = documentCreateRequest;
 
-            localVarRequestOptions.Operation = "DocumentsApi.CreateDocumentApiV1DocumentsPost";
+            localVarRequestOptions.Operation = "DocumentsApi.CreateDocument";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -1528,7 +1528,195 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("CreateDocumentApiV1DocumentsPost", localVarResponse);
+                Exception _exception = this.ExceptionFactory("CreateDocument", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Create Document Render 
+        /// </summary>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="documentId"></param>
+        /// <param name="documentRenderOptions"></param>
+        /// <param name="idempotencyKey"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>Object</returns>
+        public Object CreateDocumentRender(string documentId, DocumentRenderOptions documentRenderOptions, string? idempotencyKey = default(string?), int operationIndex = 0)
+        {
+            InvoicePDFs.Client.ApiResponse<Object> localVarResponse = CreateDocumentRenderWithHttpInfo(documentId, documentRenderOptions, idempotencyKey);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create Document Render 
+        /// </summary>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="documentId"></param>
+        /// <param name="documentRenderOptions"></param>
+        /// <param name="idempotencyKey"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of Object</returns>
+        public InvoicePDFs.Client.ApiResponse<Object> CreateDocumentRenderWithHttpInfo(string documentId, DocumentRenderOptions documentRenderOptions, string? idempotencyKey = default(string?), int operationIndex = 0)
+        {
+            // verify the required parameter 'documentId' is set
+            if (documentId == null)
+            {
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'documentId' when calling DocumentsApi->CreateDocumentRender");
+            }
+
+            // verify the required parameter 'documentRenderOptions' is set
+            if (documentRenderOptions == null)
+            {
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'documentRenderOptions' when calling DocumentsApi->CreateDocumentRender");
+            }
+
+            InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = InvoicePDFs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = InvoicePDFs.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("document_id", InvoicePDFs.Client.ClientUtils.ParameterToString(documentId)); // path parameter
+            if (idempotencyKey != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Idempotency-Key", InvoicePDFs.Client.ClientUtils.ParameterToString(idempotencyKey)); // header parameter
+            }
+            localVarRequestOptions.Data = documentRenderOptions;
+
+            localVarRequestOptions.Operation = "DocumentsApi.CreateDocumentRender";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (HTTPBearer) required
+            // bearer authentication required
+            if (!string.IsNullOrEmpty(this.Configuration.AccessToken) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Bearer " + this.Configuration.AccessToken);
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<Object>("/api/v1/documents/{document_id}/renders", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("CreateDocumentRender", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Create Document Render 
+        /// </summary>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="documentId"></param>
+        /// <param name="documentRenderOptions"></param>
+        /// <param name="idempotencyKey"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> CreateDocumentRenderAsync(string documentId, DocumentRenderOptions documentRenderOptions, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            InvoicePDFs.Client.ApiResponse<Object> localVarResponse = await CreateDocumentRenderWithHttpInfoAsync(documentId, documentRenderOptions, idempotencyKey, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create Document Render 
+        /// </summary>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="documentId"></param>
+        /// <param name="documentRenderOptions"></param>
+        /// <param name="idempotencyKey"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<Object>> CreateDocumentRenderWithHttpInfoAsync(string documentId, DocumentRenderOptions documentRenderOptions, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'documentId' is set
+            if (documentId == null)
+            {
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'documentId' when calling DocumentsApi->CreateDocumentRender");
+            }
+
+            // verify the required parameter 'documentRenderOptions' is set
+            if (documentRenderOptions == null)
+            {
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'documentRenderOptions' when calling DocumentsApi->CreateDocumentRender");
+            }
+
+
+            InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = InvoicePDFs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = InvoicePDFs.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("document_id", InvoicePDFs.Client.ClientUtils.ParameterToString(documentId)); // path parameter
+            if (idempotencyKey != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Idempotency-Key", InvoicePDFs.Client.ClientUtils.ParameterToString(idempotencyKey)); // header parameter
+            }
+            localVarRequestOptions.Data = documentRenderOptions;
+
+            localVarRequestOptions.Operation = "DocumentsApi.CreateDocumentRender";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (HTTPBearer) required
+            // bearer authentication required
+            if (!string.IsNullOrEmpty(this.Configuration.AccessToken) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Bearer " + this.Configuration.AccessToken);
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/api/v1/documents/{document_id}/renders", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("CreateDocumentRender", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1545,9 +1733,9 @@ namespace InvoicePDFs.Api
         /// <param name="documentId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>SimpleBoolResponse</returns>
-        public SimpleBoolResponse DeleteDocumentApiV1DocumentsDocumentIdDelete(string documentId, int operationIndex = 0)
+        public SimpleBoolResponse DeleteDocument(string documentId, int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<SimpleBoolResponse> localVarResponse = DeleteDocumentApiV1DocumentsDocumentIdDeleteWithHttpInfo(documentId);
+            InvoicePDFs.Client.ApiResponse<SimpleBoolResponse> localVarResponse = DeleteDocumentWithHttpInfo(documentId);
             return localVarResponse.Data;
         }
 
@@ -1558,12 +1746,12 @@ namespace InvoicePDFs.Api
         /// <param name="documentId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of SimpleBoolResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<SimpleBoolResponse> DeleteDocumentApiV1DocumentsDocumentIdDeleteWithHttpInfo(string documentId, int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<SimpleBoolResponse> DeleteDocumentWithHttpInfo(string documentId, int operationIndex = 0)
         {
             // verify the required parameter 'documentId' is set
             if (documentId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'documentId' when calling DocumentsApi->DeleteDocumentApiV1DocumentsDocumentIdDelete");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'documentId' when calling DocumentsApi->DeleteDocument");
             }
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -1590,7 +1778,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("document_id", InvoicePDFs.Client.ClientUtils.ParameterToString(documentId)); // path parameter
 
-            localVarRequestOptions.Operation = "DocumentsApi.DeleteDocumentApiV1DocumentsDocumentIdDelete";
+            localVarRequestOptions.Operation = "DocumentsApi.DeleteDocument";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -1604,7 +1792,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Delete<SimpleBoolResponse>("/api/v1/documents/{document_id}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteDocumentApiV1DocumentsDocumentIdDelete", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteDocument", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1622,9 +1810,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of SimpleBoolResponse</returns>
-        public async System.Threading.Tasks.Task<SimpleBoolResponse> DeleteDocumentApiV1DocumentsDocumentIdDeleteAsync(string documentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<SimpleBoolResponse> DeleteDocumentAsync(string documentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<SimpleBoolResponse> localVarResponse = await DeleteDocumentApiV1DocumentsDocumentIdDeleteWithHttpInfoAsync(documentId, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<SimpleBoolResponse> localVarResponse = await DeleteDocumentWithHttpInfoAsync(documentId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1636,12 +1824,12 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (SimpleBoolResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<SimpleBoolResponse>> DeleteDocumentApiV1DocumentsDocumentIdDeleteWithHttpInfoAsync(string documentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<SimpleBoolResponse>> DeleteDocumentWithHttpInfoAsync(string documentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'documentId' is set
             if (documentId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'documentId' when calling DocumentsApi->DeleteDocumentApiV1DocumentsDocumentIdDelete");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'documentId' when calling DocumentsApi->DeleteDocument");
             }
 
 
@@ -1669,7 +1857,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("document_id", InvoicePDFs.Client.ClientUtils.ParameterToString(documentId)); // path parameter
 
-            localVarRequestOptions.Operation = "DocumentsApi.DeleteDocumentApiV1DocumentsDocumentIdDelete";
+            localVarRequestOptions.Operation = "DocumentsApi.DeleteDocument";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -1684,7 +1872,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteDocumentApiV1DocumentsDocumentIdDelete", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteDocument", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1701,9 +1889,9 @@ namespace InvoicePDFs.Api
         /// <param name="documentId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>DocumentResponse</returns>
-        public DocumentResponse DuplicateDocumentApiV1DocumentsDocumentIdDuplicatePost(string documentId, int operationIndex = 0)
+        public DocumentResponse DuplicateDocument(string documentId, int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<DocumentResponse> localVarResponse = DuplicateDocumentApiV1DocumentsDocumentIdDuplicatePostWithHttpInfo(documentId);
+            InvoicePDFs.Client.ApiResponse<DocumentResponse> localVarResponse = DuplicateDocumentWithHttpInfo(documentId);
             return localVarResponse.Data;
         }
 
@@ -1714,12 +1902,12 @@ namespace InvoicePDFs.Api
         /// <param name="documentId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of DocumentResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<DocumentResponse> DuplicateDocumentApiV1DocumentsDocumentIdDuplicatePostWithHttpInfo(string documentId, int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<DocumentResponse> DuplicateDocumentWithHttpInfo(string documentId, int operationIndex = 0)
         {
             // verify the required parameter 'documentId' is set
             if (documentId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'documentId' when calling DocumentsApi->DuplicateDocumentApiV1DocumentsDocumentIdDuplicatePost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'documentId' when calling DocumentsApi->DuplicateDocument");
             }
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -1746,7 +1934,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("document_id", InvoicePDFs.Client.ClientUtils.ParameterToString(documentId)); // path parameter
 
-            localVarRequestOptions.Operation = "DocumentsApi.DuplicateDocumentApiV1DocumentsDocumentIdDuplicatePost";
+            localVarRequestOptions.Operation = "DocumentsApi.DuplicateDocument";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -1760,7 +1948,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Post<DocumentResponse>("/api/v1/documents/{document_id}/duplicate", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DuplicateDocumentApiV1DocumentsDocumentIdDuplicatePost", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DuplicateDocument", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1778,9 +1966,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of DocumentResponse</returns>
-        public async System.Threading.Tasks.Task<DocumentResponse> DuplicateDocumentApiV1DocumentsDocumentIdDuplicatePostAsync(string documentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<DocumentResponse> DuplicateDocumentAsync(string documentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<DocumentResponse> localVarResponse = await DuplicateDocumentApiV1DocumentsDocumentIdDuplicatePostWithHttpInfoAsync(documentId, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<DocumentResponse> localVarResponse = await DuplicateDocumentWithHttpInfoAsync(documentId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1792,12 +1980,12 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (DocumentResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<DocumentResponse>> DuplicateDocumentApiV1DocumentsDocumentIdDuplicatePostWithHttpInfoAsync(string documentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<DocumentResponse>> DuplicateDocumentWithHttpInfoAsync(string documentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'documentId' is set
             if (documentId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'documentId' when calling DocumentsApi->DuplicateDocumentApiV1DocumentsDocumentIdDuplicatePost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'documentId' when calling DocumentsApi->DuplicateDocument");
             }
 
 
@@ -1825,7 +2013,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("document_id", InvoicePDFs.Client.ClientUtils.ParameterToString(documentId)); // path parameter
 
-            localVarRequestOptions.Operation = "DocumentsApi.DuplicateDocumentApiV1DocumentsDocumentIdDuplicatePost";
+            localVarRequestOptions.Operation = "DocumentsApi.DuplicateDocument";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -1840,7 +2028,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DuplicateDocumentApiV1DocumentsDocumentIdDuplicatePost", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DuplicateDocument", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1857,9 +2045,9 @@ namespace InvoicePDFs.Api
         /// <param name="documentId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>DocumentResponse</returns>
-        public DocumentResponse FinalizeDocumentApiV1DocumentsDocumentIdFinalizePost(string documentId, int operationIndex = 0)
+        public DocumentResponse FinalizeDocument(string documentId, int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<DocumentResponse> localVarResponse = FinalizeDocumentApiV1DocumentsDocumentIdFinalizePostWithHttpInfo(documentId);
+            InvoicePDFs.Client.ApiResponse<DocumentResponse> localVarResponse = FinalizeDocumentWithHttpInfo(documentId);
             return localVarResponse.Data;
         }
 
@@ -1870,12 +2058,12 @@ namespace InvoicePDFs.Api
         /// <param name="documentId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of DocumentResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<DocumentResponse> FinalizeDocumentApiV1DocumentsDocumentIdFinalizePostWithHttpInfo(string documentId, int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<DocumentResponse> FinalizeDocumentWithHttpInfo(string documentId, int operationIndex = 0)
         {
             // verify the required parameter 'documentId' is set
             if (documentId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'documentId' when calling DocumentsApi->FinalizeDocumentApiV1DocumentsDocumentIdFinalizePost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'documentId' when calling DocumentsApi->FinalizeDocument");
             }
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -1902,7 +2090,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("document_id", InvoicePDFs.Client.ClientUtils.ParameterToString(documentId)); // path parameter
 
-            localVarRequestOptions.Operation = "DocumentsApi.FinalizeDocumentApiV1DocumentsDocumentIdFinalizePost";
+            localVarRequestOptions.Operation = "DocumentsApi.FinalizeDocument";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -1916,7 +2104,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Post<DocumentResponse>("/api/v1/documents/{document_id}/finalize", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("FinalizeDocumentApiV1DocumentsDocumentIdFinalizePost", localVarResponse);
+                Exception _exception = this.ExceptionFactory("FinalizeDocument", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1934,9 +2122,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of DocumentResponse</returns>
-        public async System.Threading.Tasks.Task<DocumentResponse> FinalizeDocumentApiV1DocumentsDocumentIdFinalizePostAsync(string documentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<DocumentResponse> FinalizeDocumentAsync(string documentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<DocumentResponse> localVarResponse = await FinalizeDocumentApiV1DocumentsDocumentIdFinalizePostWithHttpInfoAsync(documentId, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<DocumentResponse> localVarResponse = await FinalizeDocumentWithHttpInfoAsync(documentId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1948,12 +2136,12 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (DocumentResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<DocumentResponse>> FinalizeDocumentApiV1DocumentsDocumentIdFinalizePostWithHttpInfoAsync(string documentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<DocumentResponse>> FinalizeDocumentWithHttpInfoAsync(string documentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'documentId' is set
             if (documentId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'documentId' when calling DocumentsApi->FinalizeDocumentApiV1DocumentsDocumentIdFinalizePost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'documentId' when calling DocumentsApi->FinalizeDocument");
             }
 
 
@@ -1981,7 +2169,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("document_id", InvoicePDFs.Client.ClientUtils.ParameterToString(documentId)); // path parameter
 
-            localVarRequestOptions.Operation = "DocumentsApi.FinalizeDocumentApiV1DocumentsDocumentIdFinalizePost";
+            localVarRequestOptions.Operation = "DocumentsApi.FinalizeDocument";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -1996,7 +2184,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("FinalizeDocumentApiV1DocumentsDocumentIdFinalizePost", localVarResponse);
+                Exception _exception = this.ExceptionFactory("FinalizeDocument", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -2013,9 +2201,9 @@ namespace InvoicePDFs.Api
         /// <param name="documentId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>DocumentResponse</returns>
-        public DocumentResponse GetDocumentApiV1DocumentsDocumentIdGet(string documentId, int operationIndex = 0)
+        public DocumentResponse GetDocument(string documentId, int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<DocumentResponse> localVarResponse = GetDocumentApiV1DocumentsDocumentIdGetWithHttpInfo(documentId);
+            InvoicePDFs.Client.ApiResponse<DocumentResponse> localVarResponse = GetDocumentWithHttpInfo(documentId);
             return localVarResponse.Data;
         }
 
@@ -2026,12 +2214,12 @@ namespace InvoicePDFs.Api
         /// <param name="documentId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of DocumentResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<DocumentResponse> GetDocumentApiV1DocumentsDocumentIdGetWithHttpInfo(string documentId, int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<DocumentResponse> GetDocumentWithHttpInfo(string documentId, int operationIndex = 0)
         {
             // verify the required parameter 'documentId' is set
             if (documentId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'documentId' when calling DocumentsApi->GetDocumentApiV1DocumentsDocumentIdGet");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'documentId' when calling DocumentsApi->GetDocument");
             }
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -2058,7 +2246,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("document_id", InvoicePDFs.Client.ClientUtils.ParameterToString(documentId)); // path parameter
 
-            localVarRequestOptions.Operation = "DocumentsApi.GetDocumentApiV1DocumentsDocumentIdGet";
+            localVarRequestOptions.Operation = "DocumentsApi.GetDocument";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -2072,7 +2260,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Get<DocumentResponse>("/api/v1/documents/{document_id}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetDocumentApiV1DocumentsDocumentIdGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetDocument", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -2090,9 +2278,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of DocumentResponse</returns>
-        public async System.Threading.Tasks.Task<DocumentResponse> GetDocumentApiV1DocumentsDocumentIdGetAsync(string documentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<DocumentResponse> GetDocumentAsync(string documentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<DocumentResponse> localVarResponse = await GetDocumentApiV1DocumentsDocumentIdGetWithHttpInfoAsync(documentId, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<DocumentResponse> localVarResponse = await GetDocumentWithHttpInfoAsync(documentId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2104,12 +2292,12 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (DocumentResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<DocumentResponse>> GetDocumentApiV1DocumentsDocumentIdGetWithHttpInfoAsync(string documentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<DocumentResponse>> GetDocumentWithHttpInfoAsync(string documentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'documentId' is set
             if (documentId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'documentId' when calling DocumentsApi->GetDocumentApiV1DocumentsDocumentIdGet");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'documentId' when calling DocumentsApi->GetDocument");
             }
 
 
@@ -2137,7 +2325,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("document_id", InvoicePDFs.Client.ClientUtils.ParameterToString(documentId)); // path parameter
 
-            localVarRequestOptions.Operation = "DocumentsApi.GetDocumentApiV1DocumentsDocumentIdGet";
+            localVarRequestOptions.Operation = "DocumentsApi.GetDocument";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -2152,7 +2340,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetDocumentApiV1DocumentsDocumentIdGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetDocument", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -2171,9 +2359,9 @@ namespace InvoicePDFs.Api
         /// <param name="cursor"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>DeliveriesListResponse</returns>
-        public DeliveriesListResponse ListDocumentDeliveriesApiV1DocumentsDocumentIdDeliveriesGet(string documentId, int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0)
+        public DeliveriesListResponse ListDocumentDeliveries(string documentId, int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<DeliveriesListResponse> localVarResponse = ListDocumentDeliveriesApiV1DocumentsDocumentIdDeliveriesGetWithHttpInfo(documentId, limit, cursor);
+            InvoicePDFs.Client.ApiResponse<DeliveriesListResponse> localVarResponse = ListDocumentDeliveriesWithHttpInfo(documentId, limit, cursor);
             return localVarResponse.Data;
         }
 
@@ -2186,12 +2374,12 @@ namespace InvoicePDFs.Api
         /// <param name="cursor"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of DeliveriesListResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<DeliveriesListResponse> ListDocumentDeliveriesApiV1DocumentsDocumentIdDeliveriesGetWithHttpInfo(string documentId, int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<DeliveriesListResponse> ListDocumentDeliveriesWithHttpInfo(string documentId, int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'documentId' is set
             if (documentId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'documentId' when calling DocumentsApi->ListDocumentDeliveriesApiV1DocumentsDocumentIdDeliveriesGet");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'documentId' when calling DocumentsApi->ListDocumentDeliveries");
             }
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -2226,7 +2414,7 @@ namespace InvoicePDFs.Api
                 localVarRequestOptions.QueryParameters.Add(InvoicePDFs.Client.ClientUtils.ParameterToMultiMap("", "cursor", cursor));
             }
 
-            localVarRequestOptions.Operation = "DocumentsApi.ListDocumentDeliveriesApiV1DocumentsDocumentIdDeliveriesGet";
+            localVarRequestOptions.Operation = "DocumentsApi.ListDocumentDeliveries";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -2240,7 +2428,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Get<DeliveriesListResponse>("/api/v1/documents/{document_id}/deliveries", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListDocumentDeliveriesApiV1DocumentsDocumentIdDeliveriesGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("ListDocumentDeliveries", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -2260,9 +2448,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of DeliveriesListResponse</returns>
-        public async System.Threading.Tasks.Task<DeliveriesListResponse> ListDocumentDeliveriesApiV1DocumentsDocumentIdDeliveriesGetAsync(string documentId, int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<DeliveriesListResponse> ListDocumentDeliveriesAsync(string documentId, int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<DeliveriesListResponse> localVarResponse = await ListDocumentDeliveriesApiV1DocumentsDocumentIdDeliveriesGetWithHttpInfoAsync(documentId, limit, cursor, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<DeliveriesListResponse> localVarResponse = await ListDocumentDeliveriesWithHttpInfoAsync(documentId, limit, cursor, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2276,12 +2464,12 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (DeliveriesListResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<DeliveriesListResponse>> ListDocumentDeliveriesApiV1DocumentsDocumentIdDeliveriesGetWithHttpInfoAsync(string documentId, int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<DeliveriesListResponse>> ListDocumentDeliveriesWithHttpInfoAsync(string documentId, int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'documentId' is set
             if (documentId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'documentId' when calling DocumentsApi->ListDocumentDeliveriesApiV1DocumentsDocumentIdDeliveriesGet");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'documentId' when calling DocumentsApi->ListDocumentDeliveries");
             }
 
 
@@ -2317,7 +2505,7 @@ namespace InvoicePDFs.Api
                 localVarRequestOptions.QueryParameters.Add(InvoicePDFs.Client.ClientUtils.ParameterToMultiMap("", "cursor", cursor));
             }
 
-            localVarRequestOptions.Operation = "DocumentsApi.ListDocumentDeliveriesApiV1DocumentsDocumentIdDeliveriesGet";
+            localVarRequestOptions.Operation = "DocumentsApi.ListDocumentDeliveries";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -2332,7 +2520,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListDocumentDeliveriesApiV1DocumentsDocumentIdDeliveriesGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("ListDocumentDeliveries", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -2352,9 +2540,9 @@ namespace InvoicePDFs.Api
         /// <param name="status"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>DocumentsListResponse</returns>
-        public DocumentsListResponse ListDocumentsApiV1DocumentsGet(int? limit = default(int?), string? cursor = default(string?), string? documentType = default(string?), string? status = default(string?), int operationIndex = 0)
+        public DocumentsListResponse ListDocuments(int? limit = default(int?), string? cursor = default(string?), string? documentType = default(string?), string? status = default(string?), int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<DocumentsListResponse> localVarResponse = ListDocumentsApiV1DocumentsGetWithHttpInfo(limit, cursor, documentType, status);
+            InvoicePDFs.Client.ApiResponse<DocumentsListResponse> localVarResponse = ListDocumentsWithHttpInfo(limit, cursor, documentType, status);
             return localVarResponse.Data;
         }
 
@@ -2368,7 +2556,7 @@ namespace InvoicePDFs.Api
         /// <param name="status"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of DocumentsListResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<DocumentsListResponse> ListDocumentsApiV1DocumentsGetWithHttpInfo(int? limit = default(int?), string? cursor = default(string?), string? documentType = default(string?), string? status = default(string?), int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<DocumentsListResponse> ListDocumentsWithHttpInfo(int? limit = default(int?), string? cursor = default(string?), string? documentType = default(string?), string? status = default(string?), int operationIndex = 0)
         {
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
 
@@ -2409,7 +2597,7 @@ namespace InvoicePDFs.Api
                 localVarRequestOptions.QueryParameters.Add(InvoicePDFs.Client.ClientUtils.ParameterToMultiMap("", "status", status));
             }
 
-            localVarRequestOptions.Operation = "DocumentsApi.ListDocumentsApiV1DocumentsGet";
+            localVarRequestOptions.Operation = "DocumentsApi.ListDocuments";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -2423,7 +2611,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Get<DocumentsListResponse>("/api/v1/documents", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListDocumentsApiV1DocumentsGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("ListDocuments", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -2444,9 +2632,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of DocumentsListResponse</returns>
-        public async System.Threading.Tasks.Task<DocumentsListResponse> ListDocumentsApiV1DocumentsGetAsync(int? limit = default(int?), string? cursor = default(string?), string? documentType = default(string?), string? status = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<DocumentsListResponse> ListDocumentsAsync(int? limit = default(int?), string? cursor = default(string?), string? documentType = default(string?), string? status = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<DocumentsListResponse> localVarResponse = await ListDocumentsApiV1DocumentsGetWithHttpInfoAsync(limit, cursor, documentType, status, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<DocumentsListResponse> localVarResponse = await ListDocumentsWithHttpInfoAsync(limit, cursor, documentType, status, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2461,7 +2649,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (DocumentsListResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<DocumentsListResponse>> ListDocumentsApiV1DocumentsGetWithHttpInfoAsync(int? limit = default(int?), string? cursor = default(string?), string? documentType = default(string?), string? status = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<DocumentsListResponse>> ListDocumentsWithHttpInfoAsync(int? limit = default(int?), string? cursor = default(string?), string? documentType = default(string?), string? status = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -2503,7 +2691,7 @@ namespace InvoicePDFs.Api
                 localVarRequestOptions.QueryParameters.Add(InvoicePDFs.Client.ClientUtils.ParameterToMultiMap("", "status", status));
             }
 
-            localVarRequestOptions.Operation = "DocumentsApi.ListDocumentsApiV1DocumentsGet";
+            localVarRequestOptions.Operation = "DocumentsApi.ListDocuments";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -2518,7 +2706,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListDocumentsApiV1DocumentsGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("ListDocuments", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -2535,9 +2723,9 @@ namespace InvoicePDFs.Api
         /// <param name="documentId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>DocumentResponse</returns>
-        public DocumentResponse MarkPaidApiV1DocumentsDocumentIdMarkPaidPost(string documentId, int operationIndex = 0)
+        public DocumentResponse MarkPaid(string documentId, int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<DocumentResponse> localVarResponse = MarkPaidApiV1DocumentsDocumentIdMarkPaidPostWithHttpInfo(documentId);
+            InvoicePDFs.Client.ApiResponse<DocumentResponse> localVarResponse = MarkPaidWithHttpInfo(documentId);
             return localVarResponse.Data;
         }
 
@@ -2548,12 +2736,12 @@ namespace InvoicePDFs.Api
         /// <param name="documentId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of DocumentResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<DocumentResponse> MarkPaidApiV1DocumentsDocumentIdMarkPaidPostWithHttpInfo(string documentId, int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<DocumentResponse> MarkPaidWithHttpInfo(string documentId, int operationIndex = 0)
         {
             // verify the required parameter 'documentId' is set
             if (documentId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'documentId' when calling DocumentsApi->MarkPaidApiV1DocumentsDocumentIdMarkPaidPost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'documentId' when calling DocumentsApi->MarkPaid");
             }
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -2580,7 +2768,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("document_id", InvoicePDFs.Client.ClientUtils.ParameterToString(documentId)); // path parameter
 
-            localVarRequestOptions.Operation = "DocumentsApi.MarkPaidApiV1DocumentsDocumentIdMarkPaidPost";
+            localVarRequestOptions.Operation = "DocumentsApi.MarkPaid";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -2594,7 +2782,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Post<DocumentResponse>("/api/v1/documents/{document_id}/mark-paid", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("MarkPaidApiV1DocumentsDocumentIdMarkPaidPost", localVarResponse);
+                Exception _exception = this.ExceptionFactory("MarkPaid", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -2612,9 +2800,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of DocumentResponse</returns>
-        public async System.Threading.Tasks.Task<DocumentResponse> MarkPaidApiV1DocumentsDocumentIdMarkPaidPostAsync(string documentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<DocumentResponse> MarkPaidAsync(string documentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<DocumentResponse> localVarResponse = await MarkPaidApiV1DocumentsDocumentIdMarkPaidPostWithHttpInfoAsync(documentId, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<DocumentResponse> localVarResponse = await MarkPaidWithHttpInfoAsync(documentId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2626,12 +2814,12 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (DocumentResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<DocumentResponse>> MarkPaidApiV1DocumentsDocumentIdMarkPaidPostWithHttpInfoAsync(string documentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<DocumentResponse>> MarkPaidWithHttpInfoAsync(string documentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'documentId' is set
             if (documentId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'documentId' when calling DocumentsApi->MarkPaidApiV1DocumentsDocumentIdMarkPaidPost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'documentId' when calling DocumentsApi->MarkPaid");
             }
 
 
@@ -2659,7 +2847,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("document_id", InvoicePDFs.Client.ClientUtils.ParameterToString(documentId)); // path parameter
 
-            localVarRequestOptions.Operation = "DocumentsApi.MarkPaidApiV1DocumentsDocumentIdMarkPaidPost";
+            localVarRequestOptions.Operation = "DocumentsApi.MarkPaid";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -2674,7 +2862,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("MarkPaidApiV1DocumentsDocumentIdMarkPaidPost", localVarResponse);
+                Exception _exception = this.ExceptionFactory("MarkPaid", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -2691,9 +2879,9 @@ namespace InvoicePDFs.Api
         /// <param name="documentId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>DocumentResponse</returns>
-        public DocumentResponse MarkSentApiV1DocumentsDocumentIdMarkSentPost(string documentId, int operationIndex = 0)
+        public DocumentResponse MarkSent(string documentId, int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<DocumentResponse> localVarResponse = MarkSentApiV1DocumentsDocumentIdMarkSentPostWithHttpInfo(documentId);
+            InvoicePDFs.Client.ApiResponse<DocumentResponse> localVarResponse = MarkSentWithHttpInfo(documentId);
             return localVarResponse.Data;
         }
 
@@ -2704,12 +2892,12 @@ namespace InvoicePDFs.Api
         /// <param name="documentId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of DocumentResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<DocumentResponse> MarkSentApiV1DocumentsDocumentIdMarkSentPostWithHttpInfo(string documentId, int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<DocumentResponse> MarkSentWithHttpInfo(string documentId, int operationIndex = 0)
         {
             // verify the required parameter 'documentId' is set
             if (documentId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'documentId' when calling DocumentsApi->MarkSentApiV1DocumentsDocumentIdMarkSentPost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'documentId' when calling DocumentsApi->MarkSent");
             }
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -2736,7 +2924,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("document_id", InvoicePDFs.Client.ClientUtils.ParameterToString(documentId)); // path parameter
 
-            localVarRequestOptions.Operation = "DocumentsApi.MarkSentApiV1DocumentsDocumentIdMarkSentPost";
+            localVarRequestOptions.Operation = "DocumentsApi.MarkSent";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -2750,7 +2938,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Post<DocumentResponse>("/api/v1/documents/{document_id}/mark-sent", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("MarkSentApiV1DocumentsDocumentIdMarkSentPost", localVarResponse);
+                Exception _exception = this.ExceptionFactory("MarkSent", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -2768,9 +2956,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of DocumentResponse</returns>
-        public async System.Threading.Tasks.Task<DocumentResponse> MarkSentApiV1DocumentsDocumentIdMarkSentPostAsync(string documentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<DocumentResponse> MarkSentAsync(string documentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<DocumentResponse> localVarResponse = await MarkSentApiV1DocumentsDocumentIdMarkSentPostWithHttpInfoAsync(documentId, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<DocumentResponse> localVarResponse = await MarkSentWithHttpInfoAsync(documentId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2782,12 +2970,12 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (DocumentResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<DocumentResponse>> MarkSentApiV1DocumentsDocumentIdMarkSentPostWithHttpInfoAsync(string documentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<DocumentResponse>> MarkSentWithHttpInfoAsync(string documentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'documentId' is set
             if (documentId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'documentId' when calling DocumentsApi->MarkSentApiV1DocumentsDocumentIdMarkSentPost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'documentId' when calling DocumentsApi->MarkSent");
             }
 
 
@@ -2815,7 +3003,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("document_id", InvoicePDFs.Client.ClientUtils.ParameterToString(documentId)); // path parameter
 
-            localVarRequestOptions.Operation = "DocumentsApi.MarkSentApiV1DocumentsDocumentIdMarkSentPost";
+            localVarRequestOptions.Operation = "DocumentsApi.MarkSent";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -2830,7 +3018,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("MarkSentApiV1DocumentsDocumentIdMarkSentPost", localVarResponse);
+                Exception _exception = this.ExceptionFactory("MarkSent", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -2847,9 +3035,9 @@ namespace InvoicePDFs.Api
         /// <param name="documentId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>DocumentResponse</returns>
-        public DocumentResponse MarkUnpaidApiV1DocumentsDocumentIdMarkUnpaidPost(string documentId, int operationIndex = 0)
+        public DocumentResponse MarkUnpaid(string documentId, int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<DocumentResponse> localVarResponse = MarkUnpaidApiV1DocumentsDocumentIdMarkUnpaidPostWithHttpInfo(documentId);
+            InvoicePDFs.Client.ApiResponse<DocumentResponse> localVarResponse = MarkUnpaidWithHttpInfo(documentId);
             return localVarResponse.Data;
         }
 
@@ -2860,12 +3048,12 @@ namespace InvoicePDFs.Api
         /// <param name="documentId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of DocumentResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<DocumentResponse> MarkUnpaidApiV1DocumentsDocumentIdMarkUnpaidPostWithHttpInfo(string documentId, int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<DocumentResponse> MarkUnpaidWithHttpInfo(string documentId, int operationIndex = 0)
         {
             // verify the required parameter 'documentId' is set
             if (documentId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'documentId' when calling DocumentsApi->MarkUnpaidApiV1DocumentsDocumentIdMarkUnpaidPost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'documentId' when calling DocumentsApi->MarkUnpaid");
             }
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -2892,7 +3080,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("document_id", InvoicePDFs.Client.ClientUtils.ParameterToString(documentId)); // path parameter
 
-            localVarRequestOptions.Operation = "DocumentsApi.MarkUnpaidApiV1DocumentsDocumentIdMarkUnpaidPost";
+            localVarRequestOptions.Operation = "DocumentsApi.MarkUnpaid";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -2906,7 +3094,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Post<DocumentResponse>("/api/v1/documents/{document_id}/mark-unpaid", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("MarkUnpaidApiV1DocumentsDocumentIdMarkUnpaidPost", localVarResponse);
+                Exception _exception = this.ExceptionFactory("MarkUnpaid", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -2924,9 +3112,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of DocumentResponse</returns>
-        public async System.Threading.Tasks.Task<DocumentResponse> MarkUnpaidApiV1DocumentsDocumentIdMarkUnpaidPostAsync(string documentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<DocumentResponse> MarkUnpaidAsync(string documentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<DocumentResponse> localVarResponse = await MarkUnpaidApiV1DocumentsDocumentIdMarkUnpaidPostWithHttpInfoAsync(documentId, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<DocumentResponse> localVarResponse = await MarkUnpaidWithHttpInfoAsync(documentId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2938,12 +3126,12 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (DocumentResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<DocumentResponse>> MarkUnpaidApiV1DocumentsDocumentIdMarkUnpaidPostWithHttpInfoAsync(string documentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<DocumentResponse>> MarkUnpaidWithHttpInfoAsync(string documentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'documentId' is set
             if (documentId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'documentId' when calling DocumentsApi->MarkUnpaidApiV1DocumentsDocumentIdMarkUnpaidPost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'documentId' when calling DocumentsApi->MarkUnpaid");
             }
 
 
@@ -2971,7 +3159,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("document_id", InvoicePDFs.Client.ClientUtils.ParameterToString(documentId)); // path parameter
 
-            localVarRequestOptions.Operation = "DocumentsApi.MarkUnpaidApiV1DocumentsDocumentIdMarkUnpaidPost";
+            localVarRequestOptions.Operation = "DocumentsApi.MarkUnpaid";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -2986,183 +3174,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("MarkUnpaidApiV1DocumentsDocumentIdMarkUnpaidPost", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
-        /// Patch Document 
-        /// </summary>
-        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documentId"></param>
-        /// <param name="documentPatchRequest"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>DocumentResponse</returns>
-        public DocumentResponse PatchDocumentApiV1DocumentsDocumentIdPatch(string documentId, DocumentPatchRequest documentPatchRequest, int operationIndex = 0)
-        {
-            InvoicePDFs.Client.ApiResponse<DocumentResponse> localVarResponse = PatchDocumentApiV1DocumentsDocumentIdPatchWithHttpInfo(documentId, documentPatchRequest);
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Patch Document 
-        /// </summary>
-        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documentId"></param>
-        /// <param name="documentPatchRequest"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of DocumentResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<DocumentResponse> PatchDocumentApiV1DocumentsDocumentIdPatchWithHttpInfo(string documentId, DocumentPatchRequest documentPatchRequest, int operationIndex = 0)
-        {
-            // verify the required parameter 'documentId' is set
-            if (documentId == null)
-            {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'documentId' when calling DocumentsApi->PatchDocumentApiV1DocumentsDocumentIdPatch");
-            }
-
-            // verify the required parameter 'documentPatchRequest' is set
-            if (documentPatchRequest == null)
-            {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'documentPatchRequest' when calling DocumentsApi->PatchDocumentApiV1DocumentsDocumentIdPatch");
-            }
-
-            InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-                "application/json"
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var localVarContentType = InvoicePDFs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
-
-            var localVarAccept = InvoicePDFs.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
-
-            localVarRequestOptions.PathParameters.Add("document_id", InvoicePDFs.Client.ClientUtils.ParameterToString(documentId)); // path parameter
-            localVarRequestOptions.Data = documentPatchRequest;
-
-            localVarRequestOptions.Operation = "DocumentsApi.PatchDocumentApiV1DocumentsDocumentIdPatch";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
-            // authentication (HTTPBearer) required
-            // bearer authentication required
-            if (!string.IsNullOrEmpty(this.Configuration.AccessToken) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
-            {
-                localVarRequestOptions.HeaderParameters.Add("Authorization", "Bearer " + this.Configuration.AccessToken);
-            }
-
-            // make the HTTP request
-            var localVarResponse = this.Client.Patch<DocumentResponse>("/api/v1/documents/{document_id}", localVarRequestOptions, this.Configuration);
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("PatchDocumentApiV1DocumentsDocumentIdPatch", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
-        /// Patch Document 
-        /// </summary>
-        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documentId"></param>
-        /// <param name="documentPatchRequest"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of DocumentResponse</returns>
-        public async System.Threading.Tasks.Task<DocumentResponse> PatchDocumentApiV1DocumentsDocumentIdPatchAsync(string documentId, DocumentPatchRequest documentPatchRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            InvoicePDFs.Client.ApiResponse<DocumentResponse> localVarResponse = await PatchDocumentApiV1DocumentsDocumentIdPatchWithHttpInfoAsync(documentId, documentPatchRequest, operationIndex, cancellationToken).ConfigureAwait(false);
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Patch Document 
-        /// </summary>
-        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documentId"></param>
-        /// <param name="documentPatchRequest"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (DocumentResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<DocumentResponse>> PatchDocumentApiV1DocumentsDocumentIdPatchWithHttpInfoAsync(string documentId, DocumentPatchRequest documentPatchRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            // verify the required parameter 'documentId' is set
-            if (documentId == null)
-            {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'documentId' when calling DocumentsApi->PatchDocumentApiV1DocumentsDocumentIdPatch");
-            }
-
-            // verify the required parameter 'documentPatchRequest' is set
-            if (documentPatchRequest == null)
-            {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'documentPatchRequest' when calling DocumentsApi->PatchDocumentApiV1DocumentsDocumentIdPatch");
-            }
-
-
-            InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-                "application/json"
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var localVarContentType = InvoicePDFs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
-
-            var localVarAccept = InvoicePDFs.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
-
-            localVarRequestOptions.PathParameters.Add("document_id", InvoicePDFs.Client.ClientUtils.ParameterToString(documentId)); // path parameter
-            localVarRequestOptions.Data = documentPatchRequest;
-
-            localVarRequestOptions.Operation = "DocumentsApi.PatchDocumentApiV1DocumentsDocumentIdPatch";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
-            // authentication (HTTPBearer) required
-            // bearer authentication required
-            if (!string.IsNullOrEmpty(this.Configuration.AccessToken) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
-            {
-                localVarRequestOptions.HeaderParameters.Add("Authorization", "Bearer " + this.Configuration.AccessToken);
-            }
-
-            // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PatchAsync<DocumentResponse>("/api/v1/documents/{document_id}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("PatchDocumentApiV1DocumentsDocumentIdPatch", localVarResponse);
+                Exception _exception = this.ExceptionFactory("MarkUnpaid", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -3176,14 +3188,13 @@ namespace InvoicePDFs.Api
         /// Render Document 
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documentId"></param>
-        /// <param name="appDocumentsSchemasDocumentRenderRequest"></param>
+        /// <param name="documentRenderRequest"></param>
         /// <param name="idempotencyKey"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>Object</returns>
-        public Object RenderDocumentApiV1DocumentsDocumentIdRendersPost(string documentId, AppDocumentsSchemasDocumentRenderRequest appDocumentsSchemasDocumentRenderRequest, string? idempotencyKey = default(string?), int operationIndex = 0)
+        public Object RenderDocument(DocumentRenderRequest documentRenderRequest, string? idempotencyKey = default(string?), int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<Object> localVarResponse = RenderDocumentApiV1DocumentsDocumentIdRendersPostWithHttpInfo(documentId, appDocumentsSchemasDocumentRenderRequest, idempotencyKey);
+            InvoicePDFs.Client.ApiResponse<Object> localVarResponse = RenderDocumentWithHttpInfo(documentRenderRequest, idempotencyKey);
             return localVarResponse.Data;
         }
 
@@ -3191,203 +3202,16 @@ namespace InvoicePDFs.Api
         /// Render Document 
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documentId"></param>
-        /// <param name="appDocumentsSchemasDocumentRenderRequest"></param>
+        /// <param name="documentRenderRequest"></param>
         /// <param name="idempotencyKey"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Object</returns>
-        public InvoicePDFs.Client.ApiResponse<Object> RenderDocumentApiV1DocumentsDocumentIdRendersPostWithHttpInfo(string documentId, AppDocumentsSchemasDocumentRenderRequest appDocumentsSchemasDocumentRenderRequest, string? idempotencyKey = default(string?), int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<Object> RenderDocumentWithHttpInfo(DocumentRenderRequest documentRenderRequest, string? idempotencyKey = default(string?), int operationIndex = 0)
         {
-            // verify the required parameter 'documentId' is set
-            if (documentId == null)
+            // verify the required parameter 'documentRenderRequest' is set
+            if (documentRenderRequest == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'documentId' when calling DocumentsApi->RenderDocumentApiV1DocumentsDocumentIdRendersPost");
-            }
-
-            // verify the required parameter 'appDocumentsSchemasDocumentRenderRequest' is set
-            if (appDocumentsSchemasDocumentRenderRequest == null)
-            {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'appDocumentsSchemasDocumentRenderRequest' when calling DocumentsApi->RenderDocumentApiV1DocumentsDocumentIdRendersPost");
-            }
-
-            InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-                "application/json"
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var localVarContentType = InvoicePDFs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
-
-            var localVarAccept = InvoicePDFs.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
-
-            localVarRequestOptions.PathParameters.Add("document_id", InvoicePDFs.Client.ClientUtils.ParameterToString(documentId)); // path parameter
-            if (idempotencyKey != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Idempotency-Key", InvoicePDFs.Client.ClientUtils.ParameterToString(idempotencyKey)); // header parameter
-            }
-            localVarRequestOptions.Data = appDocumentsSchemasDocumentRenderRequest;
-
-            localVarRequestOptions.Operation = "DocumentsApi.RenderDocumentApiV1DocumentsDocumentIdRendersPost";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
-            // authentication (HTTPBearer) required
-            // bearer authentication required
-            if (!string.IsNullOrEmpty(this.Configuration.AccessToken) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
-            {
-                localVarRequestOptions.HeaderParameters.Add("Authorization", "Bearer " + this.Configuration.AccessToken);
-            }
-
-            // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/api/v1/documents/{document_id}/renders", localVarRequestOptions, this.Configuration);
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("RenderDocumentApiV1DocumentsDocumentIdRendersPost", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
-        /// Render Document 
-        /// </summary>
-        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documentId"></param>
-        /// <param name="appDocumentsSchemasDocumentRenderRequest"></param>
-        /// <param name="idempotencyKey"> (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> RenderDocumentApiV1DocumentsDocumentIdRendersPostAsync(string documentId, AppDocumentsSchemasDocumentRenderRequest appDocumentsSchemasDocumentRenderRequest, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            InvoicePDFs.Client.ApiResponse<Object> localVarResponse = await RenderDocumentApiV1DocumentsDocumentIdRendersPostWithHttpInfoAsync(documentId, appDocumentsSchemasDocumentRenderRequest, idempotencyKey, operationIndex, cancellationToken).ConfigureAwait(false);
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Render Document 
-        /// </summary>
-        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documentId"></param>
-        /// <param name="appDocumentsSchemasDocumentRenderRequest"></param>
-        /// <param name="idempotencyKey"> (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<Object>> RenderDocumentApiV1DocumentsDocumentIdRendersPostWithHttpInfoAsync(string documentId, AppDocumentsSchemasDocumentRenderRequest appDocumentsSchemasDocumentRenderRequest, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            // verify the required parameter 'documentId' is set
-            if (documentId == null)
-            {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'documentId' when calling DocumentsApi->RenderDocumentApiV1DocumentsDocumentIdRendersPost");
-            }
-
-            // verify the required parameter 'appDocumentsSchemasDocumentRenderRequest' is set
-            if (appDocumentsSchemasDocumentRenderRequest == null)
-            {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'appDocumentsSchemasDocumentRenderRequest' when calling DocumentsApi->RenderDocumentApiV1DocumentsDocumentIdRendersPost");
-            }
-
-
-            InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-                "application/json"
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var localVarContentType = InvoicePDFs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
-
-            var localVarAccept = InvoicePDFs.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
-
-            localVarRequestOptions.PathParameters.Add("document_id", InvoicePDFs.Client.ClientUtils.ParameterToString(documentId)); // path parameter
-            if (idempotencyKey != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Idempotency-Key", InvoicePDFs.Client.ClientUtils.ParameterToString(idempotencyKey)); // header parameter
-            }
-            localVarRequestOptions.Data = appDocumentsSchemasDocumentRenderRequest;
-
-            localVarRequestOptions.Operation = "DocumentsApi.RenderDocumentApiV1DocumentsDocumentIdRendersPost";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
-            // authentication (HTTPBearer) required
-            // bearer authentication required
-            if (!string.IsNullOrEmpty(this.Configuration.AccessToken) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
-            {
-                localVarRequestOptions.HeaderParameters.Add("Authorization", "Bearer " + this.Configuration.AccessToken);
-            }
-
-            // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/api/v1/documents/{document_id}/renders", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("RenderDocumentApiV1DocumentsDocumentIdRendersPost", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
-        /// Render Document 
-        /// </summary>
-        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appSchemasV1DocumentRenderRequest"></param>
-        /// <param name="idempotencyKey"> (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Object</returns>
-        public Object RenderDocumentApiV1DocumentsRenderPost(AppSchemasV1DocumentRenderRequest appSchemasV1DocumentRenderRequest, string? idempotencyKey = default(string?), int operationIndex = 0)
-        {
-            InvoicePDFs.Client.ApiResponse<Object> localVarResponse = RenderDocumentApiV1DocumentsRenderPostWithHttpInfo(appSchemasV1DocumentRenderRequest, idempotencyKey);
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Render Document 
-        /// </summary>
-        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appSchemasV1DocumentRenderRequest"></param>
-        /// <param name="idempotencyKey"> (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Object</returns>
-        public InvoicePDFs.Client.ApiResponse<Object> RenderDocumentApiV1DocumentsRenderPostWithHttpInfo(AppSchemasV1DocumentRenderRequest appSchemasV1DocumentRenderRequest, string? idempotencyKey = default(string?), int operationIndex = 0)
-        {
-            // verify the required parameter 'appSchemasV1DocumentRenderRequest' is set
-            if (appSchemasV1DocumentRenderRequest == null)
-            {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'appSchemasV1DocumentRenderRequest' when calling DocumentsApi->RenderDocumentApiV1DocumentsRenderPost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'documentRenderRequest' when calling DocumentsApi->RenderDocument");
             }
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -3417,9 +3241,9 @@ namespace InvoicePDFs.Api
             {
                 localVarRequestOptions.HeaderParameters.Add("Idempotency-Key", InvoicePDFs.Client.ClientUtils.ParameterToString(idempotencyKey)); // header parameter
             }
-            localVarRequestOptions.Data = appSchemasV1DocumentRenderRequest;
+            localVarRequestOptions.Data = documentRenderRequest;
 
-            localVarRequestOptions.Operation = "DocumentsApi.RenderDocumentApiV1DocumentsRenderPost";
+            localVarRequestOptions.Operation = "DocumentsApi.RenderDocument";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -3433,7 +3257,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Post<Object>("/api/v1/documents/render", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("RenderDocumentApiV1DocumentsRenderPost", localVarResponse);
+                Exception _exception = this.ExceptionFactory("RenderDocument", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -3447,14 +3271,14 @@ namespace InvoicePDFs.Api
         /// Render Document 
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appSchemasV1DocumentRenderRequest"></param>
+        /// <param name="documentRenderRequest"></param>
         /// <param name="idempotencyKey"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> RenderDocumentApiV1DocumentsRenderPostAsync(AppSchemasV1DocumentRenderRequest appSchemasV1DocumentRenderRequest, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Object> RenderDocumentAsync(DocumentRenderRequest documentRenderRequest, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<Object> localVarResponse = await RenderDocumentApiV1DocumentsRenderPostWithHttpInfoAsync(appSchemasV1DocumentRenderRequest, idempotencyKey, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<Object> localVarResponse = await RenderDocumentWithHttpInfoAsync(documentRenderRequest, idempotencyKey, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -3462,17 +3286,17 @@ namespace InvoicePDFs.Api
         /// Render Document 
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="appSchemasV1DocumentRenderRequest"></param>
+        /// <param name="documentRenderRequest"></param>
         /// <param name="idempotencyKey"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<Object>> RenderDocumentApiV1DocumentsRenderPostWithHttpInfoAsync(AppSchemasV1DocumentRenderRequest appSchemasV1DocumentRenderRequest, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<Object>> RenderDocumentWithHttpInfoAsync(DocumentRenderRequest documentRenderRequest, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            // verify the required parameter 'appSchemasV1DocumentRenderRequest' is set
-            if (appSchemasV1DocumentRenderRequest == null)
+            // verify the required parameter 'documentRenderRequest' is set
+            if (documentRenderRequest == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'appSchemasV1DocumentRenderRequest' when calling DocumentsApi->RenderDocumentApiV1DocumentsRenderPost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'documentRenderRequest' when calling DocumentsApi->RenderDocument");
             }
 
 
@@ -3503,9 +3327,9 @@ namespace InvoicePDFs.Api
             {
                 localVarRequestOptions.HeaderParameters.Add("Idempotency-Key", InvoicePDFs.Client.ClientUtils.ParameterToString(idempotencyKey)); // header parameter
             }
-            localVarRequestOptions.Data = appSchemasV1DocumentRenderRequest;
+            localVarRequestOptions.Data = documentRenderRequest;
 
-            localVarRequestOptions.Operation = "DocumentsApi.RenderDocumentApiV1DocumentsRenderPost";
+            localVarRequestOptions.Operation = "DocumentsApi.RenderDocument";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -3520,7 +3344,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("RenderDocumentApiV1DocumentsRenderPost", localVarResponse);
+                Exception _exception = this.ExceptionFactory("RenderDocument", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -3537,9 +3361,9 @@ namespace InvoicePDFs.Api
         /// <param name="documentId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>DocumentResponse</returns>
-        public DocumentResponse RestoreDocumentApiV1DocumentsDocumentIdRestorePost(string documentId, int operationIndex = 0)
+        public DocumentResponse RestoreDocument(string documentId, int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<DocumentResponse> localVarResponse = RestoreDocumentApiV1DocumentsDocumentIdRestorePostWithHttpInfo(documentId);
+            InvoicePDFs.Client.ApiResponse<DocumentResponse> localVarResponse = RestoreDocumentWithHttpInfo(documentId);
             return localVarResponse.Data;
         }
 
@@ -3550,12 +3374,12 @@ namespace InvoicePDFs.Api
         /// <param name="documentId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of DocumentResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<DocumentResponse> RestoreDocumentApiV1DocumentsDocumentIdRestorePostWithHttpInfo(string documentId, int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<DocumentResponse> RestoreDocumentWithHttpInfo(string documentId, int operationIndex = 0)
         {
             // verify the required parameter 'documentId' is set
             if (documentId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'documentId' when calling DocumentsApi->RestoreDocumentApiV1DocumentsDocumentIdRestorePost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'documentId' when calling DocumentsApi->RestoreDocument");
             }
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -3582,7 +3406,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("document_id", InvoicePDFs.Client.ClientUtils.ParameterToString(documentId)); // path parameter
 
-            localVarRequestOptions.Operation = "DocumentsApi.RestoreDocumentApiV1DocumentsDocumentIdRestorePost";
+            localVarRequestOptions.Operation = "DocumentsApi.RestoreDocument";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -3596,7 +3420,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Post<DocumentResponse>("/api/v1/documents/{document_id}/restore", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("RestoreDocumentApiV1DocumentsDocumentIdRestorePost", localVarResponse);
+                Exception _exception = this.ExceptionFactory("RestoreDocument", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -3614,9 +3438,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of DocumentResponse</returns>
-        public async System.Threading.Tasks.Task<DocumentResponse> RestoreDocumentApiV1DocumentsDocumentIdRestorePostAsync(string documentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<DocumentResponse> RestoreDocumentAsync(string documentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<DocumentResponse> localVarResponse = await RestoreDocumentApiV1DocumentsDocumentIdRestorePostWithHttpInfoAsync(documentId, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<DocumentResponse> localVarResponse = await RestoreDocumentWithHttpInfoAsync(documentId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -3628,12 +3452,12 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (DocumentResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<DocumentResponse>> RestoreDocumentApiV1DocumentsDocumentIdRestorePostWithHttpInfoAsync(string documentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<DocumentResponse>> RestoreDocumentWithHttpInfoAsync(string documentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'documentId' is set
             if (documentId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'documentId' when calling DocumentsApi->RestoreDocumentApiV1DocumentsDocumentIdRestorePost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'documentId' when calling DocumentsApi->RestoreDocument");
             }
 
 
@@ -3661,7 +3485,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("document_id", InvoicePDFs.Client.ClientUtils.ParameterToString(documentId)); // path parameter
 
-            localVarRequestOptions.Operation = "DocumentsApi.RestoreDocumentApiV1DocumentsDocumentIdRestorePost";
+            localVarRequestOptions.Operation = "DocumentsApi.RestoreDocument";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -3676,7 +3500,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("RestoreDocumentApiV1DocumentsDocumentIdRestorePost", localVarResponse);
+                Exception _exception = this.ExceptionFactory("RestoreDocument", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -3694,9 +3518,9 @@ namespace InvoicePDFs.Api
         /// <param name="deliverySendRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>DeliveryResponse</returns>
-        public DeliveryResponse SendDocumentApiV1DocumentsDocumentIdSendPost(string documentId, DeliverySendRequest deliverySendRequest, int operationIndex = 0)
+        public DeliveryResponse SendDocument(string documentId, DeliverySendRequest deliverySendRequest, int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<DeliveryResponse> localVarResponse = SendDocumentApiV1DocumentsDocumentIdSendPostWithHttpInfo(documentId, deliverySendRequest);
+            InvoicePDFs.Client.ApiResponse<DeliveryResponse> localVarResponse = SendDocumentWithHttpInfo(documentId, deliverySendRequest);
             return localVarResponse.Data;
         }
 
@@ -3708,18 +3532,18 @@ namespace InvoicePDFs.Api
         /// <param name="deliverySendRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of DeliveryResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<DeliveryResponse> SendDocumentApiV1DocumentsDocumentIdSendPostWithHttpInfo(string documentId, DeliverySendRequest deliverySendRequest, int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<DeliveryResponse> SendDocumentWithHttpInfo(string documentId, DeliverySendRequest deliverySendRequest, int operationIndex = 0)
         {
             // verify the required parameter 'documentId' is set
             if (documentId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'documentId' when calling DocumentsApi->SendDocumentApiV1DocumentsDocumentIdSendPost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'documentId' when calling DocumentsApi->SendDocument");
             }
 
             // verify the required parameter 'deliverySendRequest' is set
             if (deliverySendRequest == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'deliverySendRequest' when calling DocumentsApi->SendDocumentApiV1DocumentsDocumentIdSendPost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'deliverySendRequest' when calling DocumentsApi->SendDocument");
             }
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -3748,7 +3572,7 @@ namespace InvoicePDFs.Api
             localVarRequestOptions.PathParameters.Add("document_id", InvoicePDFs.Client.ClientUtils.ParameterToString(documentId)); // path parameter
             localVarRequestOptions.Data = deliverySendRequest;
 
-            localVarRequestOptions.Operation = "DocumentsApi.SendDocumentApiV1DocumentsDocumentIdSendPost";
+            localVarRequestOptions.Operation = "DocumentsApi.SendDocument";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -3762,7 +3586,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Post<DeliveryResponse>("/api/v1/documents/{document_id}/send", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("SendDocumentApiV1DocumentsDocumentIdSendPost", localVarResponse);
+                Exception _exception = this.ExceptionFactory("SendDocument", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -3781,9 +3605,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of DeliveryResponse</returns>
-        public async System.Threading.Tasks.Task<DeliveryResponse> SendDocumentApiV1DocumentsDocumentIdSendPostAsync(string documentId, DeliverySendRequest deliverySendRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<DeliveryResponse> SendDocumentAsync(string documentId, DeliverySendRequest deliverySendRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<DeliveryResponse> localVarResponse = await SendDocumentApiV1DocumentsDocumentIdSendPostWithHttpInfoAsync(documentId, deliverySendRequest, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<DeliveryResponse> localVarResponse = await SendDocumentWithHttpInfoAsync(documentId, deliverySendRequest, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -3796,18 +3620,18 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (DeliveryResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<DeliveryResponse>> SendDocumentApiV1DocumentsDocumentIdSendPostWithHttpInfoAsync(string documentId, DeliverySendRequest deliverySendRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<DeliveryResponse>> SendDocumentWithHttpInfoAsync(string documentId, DeliverySendRequest deliverySendRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'documentId' is set
             if (documentId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'documentId' when calling DocumentsApi->SendDocumentApiV1DocumentsDocumentIdSendPost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'documentId' when calling DocumentsApi->SendDocument");
             }
 
             // verify the required parameter 'deliverySendRequest' is set
             if (deliverySendRequest == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'deliverySendRequest' when calling DocumentsApi->SendDocumentApiV1DocumentsDocumentIdSendPost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'deliverySendRequest' when calling DocumentsApi->SendDocument");
             }
 
 
@@ -3837,7 +3661,7 @@ namespace InvoicePDFs.Api
             localVarRequestOptions.PathParameters.Add("document_id", InvoicePDFs.Client.ClientUtils.ParameterToString(documentId)); // path parameter
             localVarRequestOptions.Data = deliverySendRequest;
 
-            localVarRequestOptions.Operation = "DocumentsApi.SendDocumentApiV1DocumentsDocumentIdSendPost";
+            localVarRequestOptions.Operation = "DocumentsApi.SendDocument";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -3852,7 +3676,183 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("SendDocumentApiV1DocumentsDocumentIdSendPost", localVarResponse);
+                Exception _exception = this.ExceptionFactory("SendDocument", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Update Document 
+        /// </summary>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="documentId"></param>
+        /// <param name="documentPatchRequest"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>DocumentResponse</returns>
+        public DocumentResponse UpdateDocument(string documentId, DocumentPatchRequest documentPatchRequest, int operationIndex = 0)
+        {
+            InvoicePDFs.Client.ApiResponse<DocumentResponse> localVarResponse = UpdateDocumentWithHttpInfo(documentId, documentPatchRequest);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update Document 
+        /// </summary>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="documentId"></param>
+        /// <param name="documentPatchRequest"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of DocumentResponse</returns>
+        public InvoicePDFs.Client.ApiResponse<DocumentResponse> UpdateDocumentWithHttpInfo(string documentId, DocumentPatchRequest documentPatchRequest, int operationIndex = 0)
+        {
+            // verify the required parameter 'documentId' is set
+            if (documentId == null)
+            {
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'documentId' when calling DocumentsApi->UpdateDocument");
+            }
+
+            // verify the required parameter 'documentPatchRequest' is set
+            if (documentPatchRequest == null)
+            {
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'documentPatchRequest' when calling DocumentsApi->UpdateDocument");
+            }
+
+            InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = InvoicePDFs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = InvoicePDFs.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("document_id", InvoicePDFs.Client.ClientUtils.ParameterToString(documentId)); // path parameter
+            localVarRequestOptions.Data = documentPatchRequest;
+
+            localVarRequestOptions.Operation = "DocumentsApi.UpdateDocument";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (HTTPBearer) required
+            // bearer authentication required
+            if (!string.IsNullOrEmpty(this.Configuration.AccessToken) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Bearer " + this.Configuration.AccessToken);
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Patch<DocumentResponse>("/api/v1/documents/{document_id}", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("UpdateDocument", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Update Document 
+        /// </summary>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="documentId"></param>
+        /// <param name="documentPatchRequest"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of DocumentResponse</returns>
+        public async System.Threading.Tasks.Task<DocumentResponse> UpdateDocumentAsync(string documentId, DocumentPatchRequest documentPatchRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            InvoicePDFs.Client.ApiResponse<DocumentResponse> localVarResponse = await UpdateDocumentWithHttpInfoAsync(documentId, documentPatchRequest, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update Document 
+        /// </summary>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="documentId"></param>
+        /// <param name="documentPatchRequest"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (DocumentResponse)</returns>
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<DocumentResponse>> UpdateDocumentWithHttpInfoAsync(string documentId, DocumentPatchRequest documentPatchRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'documentId' is set
+            if (documentId == null)
+            {
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'documentId' when calling DocumentsApi->UpdateDocument");
+            }
+
+            // verify the required parameter 'documentPatchRequest' is set
+            if (documentPatchRequest == null)
+            {
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'documentPatchRequest' when calling DocumentsApi->UpdateDocument");
+            }
+
+
+            InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = InvoicePDFs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = InvoicePDFs.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("document_id", InvoicePDFs.Client.ClientUtils.ParameterToString(documentId)); // path parameter
+            localVarRequestOptions.Data = documentPatchRequest;
+
+            localVarRequestOptions.Operation = "DocumentsApi.UpdateDocument";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (HTTPBearer) required
+            // bearer authentication required
+            if (!string.IsNullOrEmpty(this.Configuration.AccessToken) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Bearer " + this.Configuration.AccessToken);
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PatchAsync<DocumentResponse>("/api/v1/documents/{document_id}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("UpdateDocument", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -3869,9 +3869,9 @@ namespace InvoicePDFs.Api
         /// <param name="documentValidateRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>DocumentValidateResponse</returns>
-        public DocumentValidateResponse ValidateDocumentApiV1DocumentsValidatePost(DocumentValidateRequest documentValidateRequest, int operationIndex = 0)
+        public DocumentValidateResponse ValidateDocument(DocumentValidateRequest documentValidateRequest, int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<DocumentValidateResponse> localVarResponse = ValidateDocumentApiV1DocumentsValidatePostWithHttpInfo(documentValidateRequest);
+            InvoicePDFs.Client.ApiResponse<DocumentValidateResponse> localVarResponse = ValidateDocumentWithHttpInfo(documentValidateRequest);
             return localVarResponse.Data;
         }
 
@@ -3882,12 +3882,12 @@ namespace InvoicePDFs.Api
         /// <param name="documentValidateRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of DocumentValidateResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<DocumentValidateResponse> ValidateDocumentApiV1DocumentsValidatePostWithHttpInfo(DocumentValidateRequest documentValidateRequest, int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<DocumentValidateResponse> ValidateDocumentWithHttpInfo(DocumentValidateRequest documentValidateRequest, int operationIndex = 0)
         {
             // verify the required parameter 'documentValidateRequest' is set
             if (documentValidateRequest == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'documentValidateRequest' when calling DocumentsApi->ValidateDocumentApiV1DocumentsValidatePost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'documentValidateRequest' when calling DocumentsApi->ValidateDocument");
             }
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -3915,7 +3915,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.Data = documentValidateRequest;
 
-            localVarRequestOptions.Operation = "DocumentsApi.ValidateDocumentApiV1DocumentsValidatePost";
+            localVarRequestOptions.Operation = "DocumentsApi.ValidateDocument";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -3929,7 +3929,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Post<DocumentValidateResponse>("/api/v1/documents/validate", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ValidateDocumentApiV1DocumentsValidatePost", localVarResponse);
+                Exception _exception = this.ExceptionFactory("ValidateDocument", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -3947,9 +3947,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of DocumentValidateResponse</returns>
-        public async System.Threading.Tasks.Task<DocumentValidateResponse> ValidateDocumentApiV1DocumentsValidatePostAsync(DocumentValidateRequest documentValidateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<DocumentValidateResponse> ValidateDocumentAsync(DocumentValidateRequest documentValidateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<DocumentValidateResponse> localVarResponse = await ValidateDocumentApiV1DocumentsValidatePostWithHttpInfoAsync(documentValidateRequest, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<DocumentValidateResponse> localVarResponse = await ValidateDocumentWithHttpInfoAsync(documentValidateRequest, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -3961,12 +3961,12 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (DocumentValidateResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<DocumentValidateResponse>> ValidateDocumentApiV1DocumentsValidatePostWithHttpInfoAsync(DocumentValidateRequest documentValidateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<DocumentValidateResponse>> ValidateDocumentWithHttpInfoAsync(DocumentValidateRequest documentValidateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'documentValidateRequest' is set
             if (documentValidateRequest == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'documentValidateRequest' when calling DocumentsApi->ValidateDocumentApiV1DocumentsValidatePost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'documentValidateRequest' when calling DocumentsApi->ValidateDocument");
             }
 
 
@@ -3995,7 +3995,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.Data = documentValidateRequest;
 
-            localVarRequestOptions.Operation = "DocumentsApi.ValidateDocumentApiV1DocumentsValidatePost";
+            localVarRequestOptions.Operation = "DocumentsApi.ValidateDocument";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -4010,7 +4010,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ValidateDocumentApiV1DocumentsValidatePost", localVarResponse);
+                Exception _exception = this.ExceptionFactory("ValidateDocument", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -4027,9 +4027,9 @@ namespace InvoicePDFs.Api
         /// <param name="documentId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>DocumentResponse</returns>
-        public DocumentResponse VoidDocumentApiV1DocumentsDocumentIdVoidPost(string documentId, int operationIndex = 0)
+        public DocumentResponse VoidDocument(string documentId, int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<DocumentResponse> localVarResponse = VoidDocumentApiV1DocumentsDocumentIdVoidPostWithHttpInfo(documentId);
+            InvoicePDFs.Client.ApiResponse<DocumentResponse> localVarResponse = VoidDocumentWithHttpInfo(documentId);
             return localVarResponse.Data;
         }
 
@@ -4040,12 +4040,12 @@ namespace InvoicePDFs.Api
         /// <param name="documentId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of DocumentResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<DocumentResponse> VoidDocumentApiV1DocumentsDocumentIdVoidPostWithHttpInfo(string documentId, int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<DocumentResponse> VoidDocumentWithHttpInfo(string documentId, int operationIndex = 0)
         {
             // verify the required parameter 'documentId' is set
             if (documentId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'documentId' when calling DocumentsApi->VoidDocumentApiV1DocumentsDocumentIdVoidPost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'documentId' when calling DocumentsApi->VoidDocument");
             }
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -4072,7 +4072,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("document_id", InvoicePDFs.Client.ClientUtils.ParameterToString(documentId)); // path parameter
 
-            localVarRequestOptions.Operation = "DocumentsApi.VoidDocumentApiV1DocumentsDocumentIdVoidPost";
+            localVarRequestOptions.Operation = "DocumentsApi.VoidDocument";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -4086,7 +4086,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Post<DocumentResponse>("/api/v1/documents/{document_id}/void", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("VoidDocumentApiV1DocumentsDocumentIdVoidPost", localVarResponse);
+                Exception _exception = this.ExceptionFactory("VoidDocument", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -4104,9 +4104,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of DocumentResponse</returns>
-        public async System.Threading.Tasks.Task<DocumentResponse> VoidDocumentApiV1DocumentsDocumentIdVoidPostAsync(string documentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<DocumentResponse> VoidDocumentAsync(string documentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<DocumentResponse> localVarResponse = await VoidDocumentApiV1DocumentsDocumentIdVoidPostWithHttpInfoAsync(documentId, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<DocumentResponse> localVarResponse = await VoidDocumentWithHttpInfoAsync(documentId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -4118,12 +4118,12 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (DocumentResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<DocumentResponse>> VoidDocumentApiV1DocumentsDocumentIdVoidPostWithHttpInfoAsync(string documentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<DocumentResponse>> VoidDocumentWithHttpInfoAsync(string documentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'documentId' is set
             if (documentId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'documentId' when calling DocumentsApi->VoidDocumentApiV1DocumentsDocumentIdVoidPost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'documentId' when calling DocumentsApi->VoidDocument");
             }
 
 
@@ -4151,7 +4151,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("document_id", InvoicePDFs.Client.ClientUtils.ParameterToString(documentId)); // path parameter
 
-            localVarRequestOptions.Operation = "DocumentsApi.VoidDocumentApiV1DocumentsDocumentIdVoidPost";
+            localVarRequestOptions.Operation = "DocumentsApi.VoidDocument";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -4166,7 +4166,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("VoidDocumentApiV1DocumentsDocumentIdVoidPost", localVarResponse);
+                Exception _exception = this.ExceptionFactory("VoidDocument", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

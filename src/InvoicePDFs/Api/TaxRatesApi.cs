@@ -33,7 +33,7 @@ namespace InvoicePDFs.Api
         /// <param name="taxRateCreateRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>TaxRateResponse</returns>
-        TaxRateResponse CreateTaxRateApiV1TaxRatesPost(TaxRateCreateRequest taxRateCreateRequest, int operationIndex = 0);
+        TaxRateResponse CreateTaxRate(TaxRateCreateRequest taxRateCreateRequest, int operationIndex = 0);
 
         /// <summary>
         /// Create Tax Rate
@@ -45,7 +45,7 @@ namespace InvoicePDFs.Api
         /// <param name="taxRateCreateRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of TaxRateResponse</returns>
-        ApiResponse<TaxRateResponse> CreateTaxRateApiV1TaxRatesPostWithHttpInfo(TaxRateCreateRequest taxRateCreateRequest, int operationIndex = 0);
+        ApiResponse<TaxRateResponse> CreateTaxRateWithHttpInfo(TaxRateCreateRequest taxRateCreateRequest, int operationIndex = 0);
         /// <summary>
         /// Delete Tax Rate
         /// </summary>
@@ -53,7 +53,7 @@ namespace InvoicePDFs.Api
         /// <param name="taxRateId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>SimpleBoolResponse</returns>
-        SimpleBoolResponse DeleteTaxRateApiV1TaxRatesTaxRateIdDelete(string taxRateId, int operationIndex = 0);
+        SimpleBoolResponse DeleteTaxRate(string taxRateId, int operationIndex = 0);
 
         /// <summary>
         /// Delete Tax Rate
@@ -65,7 +65,7 @@ namespace InvoicePDFs.Api
         /// <param name="taxRateId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of SimpleBoolResponse</returns>
-        ApiResponse<SimpleBoolResponse> DeleteTaxRateApiV1TaxRatesTaxRateIdDeleteWithHttpInfo(string taxRateId, int operationIndex = 0);
+        ApiResponse<SimpleBoolResponse> DeleteTaxRateWithHttpInfo(string taxRateId, int operationIndex = 0);
         /// <summary>
         /// Get Tax Rate
         /// </summary>
@@ -73,7 +73,7 @@ namespace InvoicePDFs.Api
         /// <param name="taxRateId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>TaxRateResponse</returns>
-        TaxRateResponse GetTaxRateApiV1TaxRatesTaxRateIdGet(string taxRateId, int operationIndex = 0);
+        TaxRateResponse GetTaxRate(string taxRateId, int operationIndex = 0);
 
         /// <summary>
         /// Get Tax Rate
@@ -85,7 +85,7 @@ namespace InvoicePDFs.Api
         /// <param name="taxRateId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of TaxRateResponse</returns>
-        ApiResponse<TaxRateResponse> GetTaxRateApiV1TaxRatesTaxRateIdGetWithHttpInfo(string taxRateId, int operationIndex = 0);
+        ApiResponse<TaxRateResponse> GetTaxRateWithHttpInfo(string taxRateId, int operationIndex = 0);
         /// <summary>
         /// List Tax Rates
         /// </summary>
@@ -94,7 +94,7 @@ namespace InvoicePDFs.Api
         /// <param name="cursor"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>TaxRatesListResponse</returns>
-        TaxRatesListResponse ListTaxRatesApiV1TaxRatesGet(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0);
+        TaxRatesListResponse ListTaxRates(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// List Tax Rates
@@ -107,7 +107,7 @@ namespace InvoicePDFs.Api
         /// <param name="cursor"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of TaxRatesListResponse</returns>
-        ApiResponse<TaxRatesListResponse> ListTaxRatesApiV1TaxRatesGetWithHttpInfo(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0);
+        ApiResponse<TaxRatesListResponse> ListTaxRatesWithHttpInfo(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0);
         /// <summary>
         /// Update Tax Rate
         /// </summary>
@@ -116,7 +116,7 @@ namespace InvoicePDFs.Api
         /// <param name="taxRatePatchRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>TaxRateResponse</returns>
-        TaxRateResponse UpdateTaxRateApiV1TaxRatesTaxRateIdPatch(string taxRateId, TaxRatePatchRequest taxRatePatchRequest, int operationIndex = 0);
+        TaxRateResponse UpdateTaxRate(string taxRateId, TaxRatePatchRequest taxRatePatchRequest, int operationIndex = 0);
 
         /// <summary>
         /// Update Tax Rate
@@ -129,7 +129,7 @@ namespace InvoicePDFs.Api
         /// <param name="taxRatePatchRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of TaxRateResponse</returns>
-        ApiResponse<TaxRateResponse> UpdateTaxRateApiV1TaxRatesTaxRateIdPatchWithHttpInfo(string taxRateId, TaxRatePatchRequest taxRatePatchRequest, int operationIndex = 0);
+        ApiResponse<TaxRateResponse> UpdateTaxRateWithHttpInfo(string taxRateId, TaxRatePatchRequest taxRatePatchRequest, int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -150,7 +150,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of TaxRateResponse</returns>
-        System.Threading.Tasks.Task<TaxRateResponse> CreateTaxRateApiV1TaxRatesPostAsync(TaxRateCreateRequest taxRateCreateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<TaxRateResponse> CreateTaxRateAsync(TaxRateCreateRequest taxRateCreateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Create Tax Rate
@@ -163,7 +163,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (TaxRateResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TaxRateResponse>> CreateTaxRateApiV1TaxRatesPostWithHttpInfoAsync(TaxRateCreateRequest taxRateCreateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<TaxRateResponse>> CreateTaxRateWithHttpInfoAsync(TaxRateCreateRequest taxRateCreateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Delete Tax Rate
         /// </summary>
@@ -175,7 +175,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of SimpleBoolResponse</returns>
-        System.Threading.Tasks.Task<SimpleBoolResponse> DeleteTaxRateApiV1TaxRatesTaxRateIdDeleteAsync(string taxRateId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<SimpleBoolResponse> DeleteTaxRateAsync(string taxRateId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Delete Tax Rate
@@ -188,7 +188,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (SimpleBoolResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SimpleBoolResponse>> DeleteTaxRateApiV1TaxRatesTaxRateIdDeleteWithHttpInfoAsync(string taxRateId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<SimpleBoolResponse>> DeleteTaxRateWithHttpInfoAsync(string taxRateId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Get Tax Rate
         /// </summary>
@@ -200,7 +200,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of TaxRateResponse</returns>
-        System.Threading.Tasks.Task<TaxRateResponse> GetTaxRateApiV1TaxRatesTaxRateIdGetAsync(string taxRateId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<TaxRateResponse> GetTaxRateAsync(string taxRateId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Get Tax Rate
@@ -213,7 +213,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (TaxRateResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TaxRateResponse>> GetTaxRateApiV1TaxRatesTaxRateIdGetWithHttpInfoAsync(string taxRateId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<TaxRateResponse>> GetTaxRateWithHttpInfoAsync(string taxRateId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// List Tax Rates
         /// </summary>
@@ -226,7 +226,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of TaxRatesListResponse</returns>
-        System.Threading.Tasks.Task<TaxRatesListResponse> ListTaxRatesApiV1TaxRatesGetAsync(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<TaxRatesListResponse> ListTaxRatesAsync(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// List Tax Rates
@@ -240,7 +240,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (TaxRatesListResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TaxRatesListResponse>> ListTaxRatesApiV1TaxRatesGetWithHttpInfoAsync(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<TaxRatesListResponse>> ListTaxRatesWithHttpInfoAsync(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Update Tax Rate
         /// </summary>
@@ -253,7 +253,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of TaxRateResponse</returns>
-        System.Threading.Tasks.Task<TaxRateResponse> UpdateTaxRateApiV1TaxRatesTaxRateIdPatchAsync(string taxRateId, TaxRatePatchRequest taxRatePatchRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<TaxRateResponse> UpdateTaxRateAsync(string taxRateId, TaxRatePatchRequest taxRatePatchRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Update Tax Rate
@@ -267,7 +267,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (TaxRateResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TaxRateResponse>> UpdateTaxRateApiV1TaxRatesTaxRateIdPatchWithHttpInfoAsync(string taxRateId, TaxRatePatchRequest taxRatePatchRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<TaxRateResponse>> UpdateTaxRateWithHttpInfoAsync(string taxRateId, TaxRatePatchRequest taxRatePatchRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -395,9 +395,9 @@ namespace InvoicePDFs.Api
         /// <param name="taxRateCreateRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>TaxRateResponse</returns>
-        public TaxRateResponse CreateTaxRateApiV1TaxRatesPost(TaxRateCreateRequest taxRateCreateRequest, int operationIndex = 0)
+        public TaxRateResponse CreateTaxRate(TaxRateCreateRequest taxRateCreateRequest, int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<TaxRateResponse> localVarResponse = CreateTaxRateApiV1TaxRatesPostWithHttpInfo(taxRateCreateRequest);
+            InvoicePDFs.Client.ApiResponse<TaxRateResponse> localVarResponse = CreateTaxRateWithHttpInfo(taxRateCreateRequest);
             return localVarResponse.Data;
         }
 
@@ -408,12 +408,12 @@ namespace InvoicePDFs.Api
         /// <param name="taxRateCreateRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of TaxRateResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<TaxRateResponse> CreateTaxRateApiV1TaxRatesPostWithHttpInfo(TaxRateCreateRequest taxRateCreateRequest, int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<TaxRateResponse> CreateTaxRateWithHttpInfo(TaxRateCreateRequest taxRateCreateRequest, int operationIndex = 0)
         {
             // verify the required parameter 'taxRateCreateRequest' is set
             if (taxRateCreateRequest == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'taxRateCreateRequest' when calling TaxRatesApi->CreateTaxRateApiV1TaxRatesPost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'taxRateCreateRequest' when calling TaxRatesApi->CreateTaxRate");
             }
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -441,7 +441,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.Data = taxRateCreateRequest;
 
-            localVarRequestOptions.Operation = "TaxRatesApi.CreateTaxRateApiV1TaxRatesPost";
+            localVarRequestOptions.Operation = "TaxRatesApi.CreateTaxRate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -455,7 +455,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Post<TaxRateResponse>("/api/v1/tax-rates", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("CreateTaxRateApiV1TaxRatesPost", localVarResponse);
+                Exception _exception = this.ExceptionFactory("CreateTaxRate", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -473,9 +473,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of TaxRateResponse</returns>
-        public async System.Threading.Tasks.Task<TaxRateResponse> CreateTaxRateApiV1TaxRatesPostAsync(TaxRateCreateRequest taxRateCreateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<TaxRateResponse> CreateTaxRateAsync(TaxRateCreateRequest taxRateCreateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<TaxRateResponse> localVarResponse = await CreateTaxRateApiV1TaxRatesPostWithHttpInfoAsync(taxRateCreateRequest, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<TaxRateResponse> localVarResponse = await CreateTaxRateWithHttpInfoAsync(taxRateCreateRequest, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -487,12 +487,12 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (TaxRateResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<TaxRateResponse>> CreateTaxRateApiV1TaxRatesPostWithHttpInfoAsync(TaxRateCreateRequest taxRateCreateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<TaxRateResponse>> CreateTaxRateWithHttpInfoAsync(TaxRateCreateRequest taxRateCreateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'taxRateCreateRequest' is set
             if (taxRateCreateRequest == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'taxRateCreateRequest' when calling TaxRatesApi->CreateTaxRateApiV1TaxRatesPost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'taxRateCreateRequest' when calling TaxRatesApi->CreateTaxRate");
             }
 
 
@@ -521,7 +521,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.Data = taxRateCreateRequest;
 
-            localVarRequestOptions.Operation = "TaxRatesApi.CreateTaxRateApiV1TaxRatesPost";
+            localVarRequestOptions.Operation = "TaxRatesApi.CreateTaxRate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -536,7 +536,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("CreateTaxRateApiV1TaxRatesPost", localVarResponse);
+                Exception _exception = this.ExceptionFactory("CreateTaxRate", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -553,9 +553,9 @@ namespace InvoicePDFs.Api
         /// <param name="taxRateId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>SimpleBoolResponse</returns>
-        public SimpleBoolResponse DeleteTaxRateApiV1TaxRatesTaxRateIdDelete(string taxRateId, int operationIndex = 0)
+        public SimpleBoolResponse DeleteTaxRate(string taxRateId, int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<SimpleBoolResponse> localVarResponse = DeleteTaxRateApiV1TaxRatesTaxRateIdDeleteWithHttpInfo(taxRateId);
+            InvoicePDFs.Client.ApiResponse<SimpleBoolResponse> localVarResponse = DeleteTaxRateWithHttpInfo(taxRateId);
             return localVarResponse.Data;
         }
 
@@ -566,12 +566,12 @@ namespace InvoicePDFs.Api
         /// <param name="taxRateId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of SimpleBoolResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<SimpleBoolResponse> DeleteTaxRateApiV1TaxRatesTaxRateIdDeleteWithHttpInfo(string taxRateId, int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<SimpleBoolResponse> DeleteTaxRateWithHttpInfo(string taxRateId, int operationIndex = 0)
         {
             // verify the required parameter 'taxRateId' is set
             if (taxRateId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'taxRateId' when calling TaxRatesApi->DeleteTaxRateApiV1TaxRatesTaxRateIdDelete");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'taxRateId' when calling TaxRatesApi->DeleteTaxRate");
             }
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -598,7 +598,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("tax_rate_id", InvoicePDFs.Client.ClientUtils.ParameterToString(taxRateId)); // path parameter
 
-            localVarRequestOptions.Operation = "TaxRatesApi.DeleteTaxRateApiV1TaxRatesTaxRateIdDelete";
+            localVarRequestOptions.Operation = "TaxRatesApi.DeleteTaxRate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -612,7 +612,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Delete<SimpleBoolResponse>("/api/v1/tax-rates/{tax_rate_id}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteTaxRateApiV1TaxRatesTaxRateIdDelete", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteTaxRate", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -630,9 +630,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of SimpleBoolResponse</returns>
-        public async System.Threading.Tasks.Task<SimpleBoolResponse> DeleteTaxRateApiV1TaxRatesTaxRateIdDeleteAsync(string taxRateId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<SimpleBoolResponse> DeleteTaxRateAsync(string taxRateId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<SimpleBoolResponse> localVarResponse = await DeleteTaxRateApiV1TaxRatesTaxRateIdDeleteWithHttpInfoAsync(taxRateId, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<SimpleBoolResponse> localVarResponse = await DeleteTaxRateWithHttpInfoAsync(taxRateId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -644,12 +644,12 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (SimpleBoolResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<SimpleBoolResponse>> DeleteTaxRateApiV1TaxRatesTaxRateIdDeleteWithHttpInfoAsync(string taxRateId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<SimpleBoolResponse>> DeleteTaxRateWithHttpInfoAsync(string taxRateId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'taxRateId' is set
             if (taxRateId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'taxRateId' when calling TaxRatesApi->DeleteTaxRateApiV1TaxRatesTaxRateIdDelete");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'taxRateId' when calling TaxRatesApi->DeleteTaxRate");
             }
 
 
@@ -677,7 +677,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("tax_rate_id", InvoicePDFs.Client.ClientUtils.ParameterToString(taxRateId)); // path parameter
 
-            localVarRequestOptions.Operation = "TaxRatesApi.DeleteTaxRateApiV1TaxRatesTaxRateIdDelete";
+            localVarRequestOptions.Operation = "TaxRatesApi.DeleteTaxRate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -692,7 +692,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteTaxRateApiV1TaxRatesTaxRateIdDelete", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DeleteTaxRate", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -709,9 +709,9 @@ namespace InvoicePDFs.Api
         /// <param name="taxRateId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>TaxRateResponse</returns>
-        public TaxRateResponse GetTaxRateApiV1TaxRatesTaxRateIdGet(string taxRateId, int operationIndex = 0)
+        public TaxRateResponse GetTaxRate(string taxRateId, int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<TaxRateResponse> localVarResponse = GetTaxRateApiV1TaxRatesTaxRateIdGetWithHttpInfo(taxRateId);
+            InvoicePDFs.Client.ApiResponse<TaxRateResponse> localVarResponse = GetTaxRateWithHttpInfo(taxRateId);
             return localVarResponse.Data;
         }
 
@@ -722,12 +722,12 @@ namespace InvoicePDFs.Api
         /// <param name="taxRateId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of TaxRateResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<TaxRateResponse> GetTaxRateApiV1TaxRatesTaxRateIdGetWithHttpInfo(string taxRateId, int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<TaxRateResponse> GetTaxRateWithHttpInfo(string taxRateId, int operationIndex = 0)
         {
             // verify the required parameter 'taxRateId' is set
             if (taxRateId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'taxRateId' when calling TaxRatesApi->GetTaxRateApiV1TaxRatesTaxRateIdGet");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'taxRateId' when calling TaxRatesApi->GetTaxRate");
             }
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -754,7 +754,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("tax_rate_id", InvoicePDFs.Client.ClientUtils.ParameterToString(taxRateId)); // path parameter
 
-            localVarRequestOptions.Operation = "TaxRatesApi.GetTaxRateApiV1TaxRatesTaxRateIdGet";
+            localVarRequestOptions.Operation = "TaxRatesApi.GetTaxRate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -768,7 +768,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Get<TaxRateResponse>("/api/v1/tax-rates/{tax_rate_id}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetTaxRateApiV1TaxRatesTaxRateIdGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetTaxRate", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -786,9 +786,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of TaxRateResponse</returns>
-        public async System.Threading.Tasks.Task<TaxRateResponse> GetTaxRateApiV1TaxRatesTaxRateIdGetAsync(string taxRateId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<TaxRateResponse> GetTaxRateAsync(string taxRateId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<TaxRateResponse> localVarResponse = await GetTaxRateApiV1TaxRatesTaxRateIdGetWithHttpInfoAsync(taxRateId, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<TaxRateResponse> localVarResponse = await GetTaxRateWithHttpInfoAsync(taxRateId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -800,12 +800,12 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (TaxRateResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<TaxRateResponse>> GetTaxRateApiV1TaxRatesTaxRateIdGetWithHttpInfoAsync(string taxRateId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<TaxRateResponse>> GetTaxRateWithHttpInfoAsync(string taxRateId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'taxRateId' is set
             if (taxRateId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'taxRateId' when calling TaxRatesApi->GetTaxRateApiV1TaxRatesTaxRateIdGet");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'taxRateId' when calling TaxRatesApi->GetTaxRate");
             }
 
 
@@ -833,7 +833,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("tax_rate_id", InvoicePDFs.Client.ClientUtils.ParameterToString(taxRateId)); // path parameter
 
-            localVarRequestOptions.Operation = "TaxRatesApi.GetTaxRateApiV1TaxRatesTaxRateIdGet";
+            localVarRequestOptions.Operation = "TaxRatesApi.GetTaxRate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -848,7 +848,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetTaxRateApiV1TaxRatesTaxRateIdGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetTaxRate", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -866,9 +866,9 @@ namespace InvoicePDFs.Api
         /// <param name="cursor"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>TaxRatesListResponse</returns>
-        public TaxRatesListResponse ListTaxRatesApiV1TaxRatesGet(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0)
+        public TaxRatesListResponse ListTaxRates(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<TaxRatesListResponse> localVarResponse = ListTaxRatesApiV1TaxRatesGetWithHttpInfo(limit, cursor);
+            InvoicePDFs.Client.ApiResponse<TaxRatesListResponse> localVarResponse = ListTaxRatesWithHttpInfo(limit, cursor);
             return localVarResponse.Data;
         }
 
@@ -880,7 +880,7 @@ namespace InvoicePDFs.Api
         /// <param name="cursor"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of TaxRatesListResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<TaxRatesListResponse> ListTaxRatesApiV1TaxRatesGetWithHttpInfo(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<TaxRatesListResponse> ListTaxRatesWithHttpInfo(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0)
         {
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
 
@@ -913,7 +913,7 @@ namespace InvoicePDFs.Api
                 localVarRequestOptions.QueryParameters.Add(InvoicePDFs.Client.ClientUtils.ParameterToMultiMap("", "cursor", cursor));
             }
 
-            localVarRequestOptions.Operation = "TaxRatesApi.ListTaxRatesApiV1TaxRatesGet";
+            localVarRequestOptions.Operation = "TaxRatesApi.ListTaxRates";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -927,7 +927,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Get<TaxRatesListResponse>("/api/v1/tax-rates", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListTaxRatesApiV1TaxRatesGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("ListTaxRates", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -946,9 +946,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of TaxRatesListResponse</returns>
-        public async System.Threading.Tasks.Task<TaxRatesListResponse> ListTaxRatesApiV1TaxRatesGetAsync(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<TaxRatesListResponse> ListTaxRatesAsync(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<TaxRatesListResponse> localVarResponse = await ListTaxRatesApiV1TaxRatesGetWithHttpInfoAsync(limit, cursor, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<TaxRatesListResponse> localVarResponse = await ListTaxRatesWithHttpInfoAsync(limit, cursor, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -961,7 +961,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (TaxRatesListResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<TaxRatesListResponse>> ListTaxRatesApiV1TaxRatesGetWithHttpInfoAsync(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<TaxRatesListResponse>> ListTaxRatesWithHttpInfoAsync(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -995,7 +995,7 @@ namespace InvoicePDFs.Api
                 localVarRequestOptions.QueryParameters.Add(InvoicePDFs.Client.ClientUtils.ParameterToMultiMap("", "cursor", cursor));
             }
 
-            localVarRequestOptions.Operation = "TaxRatesApi.ListTaxRatesApiV1TaxRatesGet";
+            localVarRequestOptions.Operation = "TaxRatesApi.ListTaxRates";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -1010,7 +1010,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListTaxRatesApiV1TaxRatesGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("ListTaxRates", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1028,9 +1028,9 @@ namespace InvoicePDFs.Api
         /// <param name="taxRatePatchRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>TaxRateResponse</returns>
-        public TaxRateResponse UpdateTaxRateApiV1TaxRatesTaxRateIdPatch(string taxRateId, TaxRatePatchRequest taxRatePatchRequest, int operationIndex = 0)
+        public TaxRateResponse UpdateTaxRate(string taxRateId, TaxRatePatchRequest taxRatePatchRequest, int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<TaxRateResponse> localVarResponse = UpdateTaxRateApiV1TaxRatesTaxRateIdPatchWithHttpInfo(taxRateId, taxRatePatchRequest);
+            InvoicePDFs.Client.ApiResponse<TaxRateResponse> localVarResponse = UpdateTaxRateWithHttpInfo(taxRateId, taxRatePatchRequest);
             return localVarResponse.Data;
         }
 
@@ -1042,18 +1042,18 @@ namespace InvoicePDFs.Api
         /// <param name="taxRatePatchRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of TaxRateResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<TaxRateResponse> UpdateTaxRateApiV1TaxRatesTaxRateIdPatchWithHttpInfo(string taxRateId, TaxRatePatchRequest taxRatePatchRequest, int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<TaxRateResponse> UpdateTaxRateWithHttpInfo(string taxRateId, TaxRatePatchRequest taxRatePatchRequest, int operationIndex = 0)
         {
             // verify the required parameter 'taxRateId' is set
             if (taxRateId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'taxRateId' when calling TaxRatesApi->UpdateTaxRateApiV1TaxRatesTaxRateIdPatch");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'taxRateId' when calling TaxRatesApi->UpdateTaxRate");
             }
 
             // verify the required parameter 'taxRatePatchRequest' is set
             if (taxRatePatchRequest == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'taxRatePatchRequest' when calling TaxRatesApi->UpdateTaxRateApiV1TaxRatesTaxRateIdPatch");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'taxRatePatchRequest' when calling TaxRatesApi->UpdateTaxRate");
             }
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -1082,7 +1082,7 @@ namespace InvoicePDFs.Api
             localVarRequestOptions.PathParameters.Add("tax_rate_id", InvoicePDFs.Client.ClientUtils.ParameterToString(taxRateId)); // path parameter
             localVarRequestOptions.Data = taxRatePatchRequest;
 
-            localVarRequestOptions.Operation = "TaxRatesApi.UpdateTaxRateApiV1TaxRatesTaxRateIdPatch";
+            localVarRequestOptions.Operation = "TaxRatesApi.UpdateTaxRate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -1096,7 +1096,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Patch<TaxRateResponse>("/api/v1/tax-rates/{tax_rate_id}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateTaxRateApiV1TaxRatesTaxRateIdPatch", localVarResponse);
+                Exception _exception = this.ExceptionFactory("UpdateTaxRate", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1115,9 +1115,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of TaxRateResponse</returns>
-        public async System.Threading.Tasks.Task<TaxRateResponse> UpdateTaxRateApiV1TaxRatesTaxRateIdPatchAsync(string taxRateId, TaxRatePatchRequest taxRatePatchRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<TaxRateResponse> UpdateTaxRateAsync(string taxRateId, TaxRatePatchRequest taxRatePatchRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<TaxRateResponse> localVarResponse = await UpdateTaxRateApiV1TaxRatesTaxRateIdPatchWithHttpInfoAsync(taxRateId, taxRatePatchRequest, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<TaxRateResponse> localVarResponse = await UpdateTaxRateWithHttpInfoAsync(taxRateId, taxRatePatchRequest, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1130,18 +1130,18 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (TaxRateResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<TaxRateResponse>> UpdateTaxRateApiV1TaxRatesTaxRateIdPatchWithHttpInfoAsync(string taxRateId, TaxRatePatchRequest taxRatePatchRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<TaxRateResponse>> UpdateTaxRateWithHttpInfoAsync(string taxRateId, TaxRatePatchRequest taxRatePatchRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'taxRateId' is set
             if (taxRateId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'taxRateId' when calling TaxRatesApi->UpdateTaxRateApiV1TaxRatesTaxRateIdPatch");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'taxRateId' when calling TaxRatesApi->UpdateTaxRate");
             }
 
             // verify the required parameter 'taxRatePatchRequest' is set
             if (taxRatePatchRequest == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'taxRatePatchRequest' when calling TaxRatesApi->UpdateTaxRateApiV1TaxRatesTaxRateIdPatch");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'taxRatePatchRequest' when calling TaxRatesApi->UpdateTaxRate");
             }
 
 
@@ -1171,7 +1171,7 @@ namespace InvoicePDFs.Api
             localVarRequestOptions.PathParameters.Add("tax_rate_id", InvoicePDFs.Client.ClientUtils.ParameterToString(taxRateId)); // path parameter
             localVarRequestOptions.Data = taxRatePatchRequest;
 
-            localVarRequestOptions.Operation = "TaxRatesApi.UpdateTaxRateApiV1TaxRatesTaxRateIdPatch";
+            localVarRequestOptions.Operation = "TaxRatesApi.UpdateTaxRate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -1186,7 +1186,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateTaxRateApiV1TaxRatesTaxRateIdPatch", localVarResponse);
+                Exception _exception = this.ExceptionFactory("UpdateTaxRate", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

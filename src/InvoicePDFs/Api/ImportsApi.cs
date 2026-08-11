@@ -33,7 +33,7 @@ namespace InvoicePDFs.Api
         /// <param name="importId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ImportResponse</returns>
-        ImportResponse CancelImportApiV1ImportsImportIdCancelPost(string importId, int operationIndex = 0);
+        ImportResponse CancelImport(string importId, int operationIndex = 0);
 
         /// <summary>
         /// Cancel Import
@@ -45,7 +45,7 @@ namespace InvoicePDFs.Api
         /// <param name="importId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ImportResponse</returns>
-        ApiResponse<ImportResponse> CancelImportApiV1ImportsImportIdCancelPostWithHttpInfo(string importId, int operationIndex = 0);
+        ApiResponse<ImportResponse> CancelImportWithHttpInfo(string importId, int operationIndex = 0);
         /// <summary>
         /// Confirm Import
         /// </summary>
@@ -53,7 +53,7 @@ namespace InvoicePDFs.Api
         /// <param name="importId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ImportResponse</returns>
-        ImportResponse ConfirmImportApiV1ImportsImportIdConfirmPost(string importId, int operationIndex = 0);
+        ImportResponse ConfirmImport(string importId, int operationIndex = 0);
 
         /// <summary>
         /// Confirm Import
@@ -65,7 +65,7 @@ namespace InvoicePDFs.Api
         /// <param name="importId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ImportResponse</returns>
-        ApiResponse<ImportResponse> ConfirmImportApiV1ImportsImportIdConfirmPostWithHttpInfo(string importId, int operationIndex = 0);
+        ApiResponse<ImportResponse> ConfirmImportWithHttpInfo(string importId, int operationIndex = 0);
         /// <summary>
         /// Create Import
         /// </summary>
@@ -73,7 +73,7 @@ namespace InvoicePDFs.Api
         /// <param name="importCreateRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ImportResponse</returns>
-        ImportResponse CreateImportApiV1ImportsPost(ImportCreateRequest importCreateRequest, int operationIndex = 0);
+        ImportResponse CreateImport(ImportCreateRequest importCreateRequest, int operationIndex = 0);
 
         /// <summary>
         /// Create Import
@@ -85,7 +85,7 @@ namespace InvoicePDFs.Api
         /// <param name="importCreateRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ImportResponse</returns>
-        ApiResponse<ImportResponse> CreateImportApiV1ImportsPostWithHttpInfo(ImportCreateRequest importCreateRequest, int operationIndex = 0);
+        ApiResponse<ImportResponse> CreateImportWithHttpInfo(ImportCreateRequest importCreateRequest, int operationIndex = 0);
         /// <summary>
         /// Get Import
         /// </summary>
@@ -93,7 +93,7 @@ namespace InvoicePDFs.Api
         /// <param name="importId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ImportResponse</returns>
-        ImportResponse GetImportApiV1ImportsImportIdGet(string importId, int operationIndex = 0);
+        ImportResponse GetImport(string importId, int operationIndex = 0);
 
         /// <summary>
         /// Get Import
@@ -105,7 +105,7 @@ namespace InvoicePDFs.Api
         /// <param name="importId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ImportResponse</returns>
-        ApiResponse<ImportResponse> GetImportApiV1ImportsImportIdGetWithHttpInfo(string importId, int operationIndex = 0);
+        ApiResponse<ImportResponse> GetImportWithHttpInfo(string importId, int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -126,7 +126,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ImportResponse</returns>
-        System.Threading.Tasks.Task<ImportResponse> CancelImportApiV1ImportsImportIdCancelPostAsync(string importId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ImportResponse> CancelImportAsync(string importId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Cancel Import
@@ -139,7 +139,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ImportResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ImportResponse>> CancelImportApiV1ImportsImportIdCancelPostWithHttpInfoAsync(string importId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ImportResponse>> CancelImportWithHttpInfoAsync(string importId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Confirm Import
         /// </summary>
@@ -151,7 +151,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ImportResponse</returns>
-        System.Threading.Tasks.Task<ImportResponse> ConfirmImportApiV1ImportsImportIdConfirmPostAsync(string importId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ImportResponse> ConfirmImportAsync(string importId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Confirm Import
@@ -164,7 +164,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ImportResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ImportResponse>> ConfirmImportApiV1ImportsImportIdConfirmPostWithHttpInfoAsync(string importId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ImportResponse>> ConfirmImportWithHttpInfoAsync(string importId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Create Import
         /// </summary>
@@ -176,7 +176,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ImportResponse</returns>
-        System.Threading.Tasks.Task<ImportResponse> CreateImportApiV1ImportsPostAsync(ImportCreateRequest importCreateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ImportResponse> CreateImportAsync(ImportCreateRequest importCreateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Create Import
@@ -189,7 +189,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ImportResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ImportResponse>> CreateImportApiV1ImportsPostWithHttpInfoAsync(ImportCreateRequest importCreateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ImportResponse>> CreateImportWithHttpInfoAsync(ImportCreateRequest importCreateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Get Import
         /// </summary>
@@ -201,7 +201,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ImportResponse</returns>
-        System.Threading.Tasks.Task<ImportResponse> GetImportApiV1ImportsImportIdGetAsync(string importId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ImportResponse> GetImportAsync(string importId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Get Import
@@ -214,7 +214,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ImportResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ImportResponse>> GetImportApiV1ImportsImportIdGetWithHttpInfoAsync(string importId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ImportResponse>> GetImportWithHttpInfoAsync(string importId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -342,9 +342,9 @@ namespace InvoicePDFs.Api
         /// <param name="importId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ImportResponse</returns>
-        public ImportResponse CancelImportApiV1ImportsImportIdCancelPost(string importId, int operationIndex = 0)
+        public ImportResponse CancelImport(string importId, int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<ImportResponse> localVarResponse = CancelImportApiV1ImportsImportIdCancelPostWithHttpInfo(importId);
+            InvoicePDFs.Client.ApiResponse<ImportResponse> localVarResponse = CancelImportWithHttpInfo(importId);
             return localVarResponse.Data;
         }
 
@@ -355,12 +355,12 @@ namespace InvoicePDFs.Api
         /// <param name="importId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ImportResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<ImportResponse> CancelImportApiV1ImportsImportIdCancelPostWithHttpInfo(string importId, int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<ImportResponse> CancelImportWithHttpInfo(string importId, int operationIndex = 0)
         {
             // verify the required parameter 'importId' is set
             if (importId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'importId' when calling ImportsApi->CancelImportApiV1ImportsImportIdCancelPost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'importId' when calling ImportsApi->CancelImport");
             }
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -387,7 +387,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("import_id", InvoicePDFs.Client.ClientUtils.ParameterToString(importId)); // path parameter
 
-            localVarRequestOptions.Operation = "ImportsApi.CancelImportApiV1ImportsImportIdCancelPost";
+            localVarRequestOptions.Operation = "ImportsApi.CancelImport";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -401,7 +401,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Post<ImportResponse>("/api/v1/imports/{import_id}/cancel", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("CancelImportApiV1ImportsImportIdCancelPost", localVarResponse);
+                Exception _exception = this.ExceptionFactory("CancelImport", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -419,9 +419,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ImportResponse</returns>
-        public async System.Threading.Tasks.Task<ImportResponse> CancelImportApiV1ImportsImportIdCancelPostAsync(string importId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ImportResponse> CancelImportAsync(string importId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<ImportResponse> localVarResponse = await CancelImportApiV1ImportsImportIdCancelPostWithHttpInfoAsync(importId, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<ImportResponse> localVarResponse = await CancelImportWithHttpInfoAsync(importId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -433,12 +433,12 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ImportResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<ImportResponse>> CancelImportApiV1ImportsImportIdCancelPostWithHttpInfoAsync(string importId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<ImportResponse>> CancelImportWithHttpInfoAsync(string importId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'importId' is set
             if (importId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'importId' when calling ImportsApi->CancelImportApiV1ImportsImportIdCancelPost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'importId' when calling ImportsApi->CancelImport");
             }
 
 
@@ -466,7 +466,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("import_id", InvoicePDFs.Client.ClientUtils.ParameterToString(importId)); // path parameter
 
-            localVarRequestOptions.Operation = "ImportsApi.CancelImportApiV1ImportsImportIdCancelPost";
+            localVarRequestOptions.Operation = "ImportsApi.CancelImport";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -481,7 +481,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("CancelImportApiV1ImportsImportIdCancelPost", localVarResponse);
+                Exception _exception = this.ExceptionFactory("CancelImport", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -498,9 +498,9 @@ namespace InvoicePDFs.Api
         /// <param name="importId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ImportResponse</returns>
-        public ImportResponse ConfirmImportApiV1ImportsImportIdConfirmPost(string importId, int operationIndex = 0)
+        public ImportResponse ConfirmImport(string importId, int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<ImportResponse> localVarResponse = ConfirmImportApiV1ImportsImportIdConfirmPostWithHttpInfo(importId);
+            InvoicePDFs.Client.ApiResponse<ImportResponse> localVarResponse = ConfirmImportWithHttpInfo(importId);
             return localVarResponse.Data;
         }
 
@@ -511,12 +511,12 @@ namespace InvoicePDFs.Api
         /// <param name="importId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ImportResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<ImportResponse> ConfirmImportApiV1ImportsImportIdConfirmPostWithHttpInfo(string importId, int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<ImportResponse> ConfirmImportWithHttpInfo(string importId, int operationIndex = 0)
         {
             // verify the required parameter 'importId' is set
             if (importId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'importId' when calling ImportsApi->ConfirmImportApiV1ImportsImportIdConfirmPost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'importId' when calling ImportsApi->ConfirmImport");
             }
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -543,7 +543,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("import_id", InvoicePDFs.Client.ClientUtils.ParameterToString(importId)); // path parameter
 
-            localVarRequestOptions.Operation = "ImportsApi.ConfirmImportApiV1ImportsImportIdConfirmPost";
+            localVarRequestOptions.Operation = "ImportsApi.ConfirmImport";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -557,7 +557,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Post<ImportResponse>("/api/v1/imports/{import_id}/confirm", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ConfirmImportApiV1ImportsImportIdConfirmPost", localVarResponse);
+                Exception _exception = this.ExceptionFactory("ConfirmImport", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -575,9 +575,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ImportResponse</returns>
-        public async System.Threading.Tasks.Task<ImportResponse> ConfirmImportApiV1ImportsImportIdConfirmPostAsync(string importId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ImportResponse> ConfirmImportAsync(string importId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<ImportResponse> localVarResponse = await ConfirmImportApiV1ImportsImportIdConfirmPostWithHttpInfoAsync(importId, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<ImportResponse> localVarResponse = await ConfirmImportWithHttpInfoAsync(importId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -589,12 +589,12 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ImportResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<ImportResponse>> ConfirmImportApiV1ImportsImportIdConfirmPostWithHttpInfoAsync(string importId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<ImportResponse>> ConfirmImportWithHttpInfoAsync(string importId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'importId' is set
             if (importId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'importId' when calling ImportsApi->ConfirmImportApiV1ImportsImportIdConfirmPost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'importId' when calling ImportsApi->ConfirmImport");
             }
 
 
@@ -622,7 +622,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("import_id", InvoicePDFs.Client.ClientUtils.ParameterToString(importId)); // path parameter
 
-            localVarRequestOptions.Operation = "ImportsApi.ConfirmImportApiV1ImportsImportIdConfirmPost";
+            localVarRequestOptions.Operation = "ImportsApi.ConfirmImport";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -637,7 +637,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ConfirmImportApiV1ImportsImportIdConfirmPost", localVarResponse);
+                Exception _exception = this.ExceptionFactory("ConfirmImport", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -654,9 +654,9 @@ namespace InvoicePDFs.Api
         /// <param name="importCreateRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ImportResponse</returns>
-        public ImportResponse CreateImportApiV1ImportsPost(ImportCreateRequest importCreateRequest, int operationIndex = 0)
+        public ImportResponse CreateImport(ImportCreateRequest importCreateRequest, int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<ImportResponse> localVarResponse = CreateImportApiV1ImportsPostWithHttpInfo(importCreateRequest);
+            InvoicePDFs.Client.ApiResponse<ImportResponse> localVarResponse = CreateImportWithHttpInfo(importCreateRequest);
             return localVarResponse.Data;
         }
 
@@ -667,12 +667,12 @@ namespace InvoicePDFs.Api
         /// <param name="importCreateRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ImportResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<ImportResponse> CreateImportApiV1ImportsPostWithHttpInfo(ImportCreateRequest importCreateRequest, int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<ImportResponse> CreateImportWithHttpInfo(ImportCreateRequest importCreateRequest, int operationIndex = 0)
         {
             // verify the required parameter 'importCreateRequest' is set
             if (importCreateRequest == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'importCreateRequest' when calling ImportsApi->CreateImportApiV1ImportsPost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'importCreateRequest' when calling ImportsApi->CreateImport");
             }
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -700,7 +700,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.Data = importCreateRequest;
 
-            localVarRequestOptions.Operation = "ImportsApi.CreateImportApiV1ImportsPost";
+            localVarRequestOptions.Operation = "ImportsApi.CreateImport";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -714,7 +714,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Post<ImportResponse>("/api/v1/imports", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("CreateImportApiV1ImportsPost", localVarResponse);
+                Exception _exception = this.ExceptionFactory("CreateImport", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -732,9 +732,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ImportResponse</returns>
-        public async System.Threading.Tasks.Task<ImportResponse> CreateImportApiV1ImportsPostAsync(ImportCreateRequest importCreateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ImportResponse> CreateImportAsync(ImportCreateRequest importCreateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<ImportResponse> localVarResponse = await CreateImportApiV1ImportsPostWithHttpInfoAsync(importCreateRequest, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<ImportResponse> localVarResponse = await CreateImportWithHttpInfoAsync(importCreateRequest, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -746,12 +746,12 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ImportResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<ImportResponse>> CreateImportApiV1ImportsPostWithHttpInfoAsync(ImportCreateRequest importCreateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<ImportResponse>> CreateImportWithHttpInfoAsync(ImportCreateRequest importCreateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'importCreateRequest' is set
             if (importCreateRequest == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'importCreateRequest' when calling ImportsApi->CreateImportApiV1ImportsPost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'importCreateRequest' when calling ImportsApi->CreateImport");
             }
 
 
@@ -780,7 +780,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.Data = importCreateRequest;
 
-            localVarRequestOptions.Operation = "ImportsApi.CreateImportApiV1ImportsPost";
+            localVarRequestOptions.Operation = "ImportsApi.CreateImport";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -795,7 +795,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("CreateImportApiV1ImportsPost", localVarResponse);
+                Exception _exception = this.ExceptionFactory("CreateImport", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -812,9 +812,9 @@ namespace InvoicePDFs.Api
         /// <param name="importId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ImportResponse</returns>
-        public ImportResponse GetImportApiV1ImportsImportIdGet(string importId, int operationIndex = 0)
+        public ImportResponse GetImport(string importId, int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<ImportResponse> localVarResponse = GetImportApiV1ImportsImportIdGetWithHttpInfo(importId);
+            InvoicePDFs.Client.ApiResponse<ImportResponse> localVarResponse = GetImportWithHttpInfo(importId);
             return localVarResponse.Data;
         }
 
@@ -825,12 +825,12 @@ namespace InvoicePDFs.Api
         /// <param name="importId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ImportResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<ImportResponse> GetImportApiV1ImportsImportIdGetWithHttpInfo(string importId, int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<ImportResponse> GetImportWithHttpInfo(string importId, int operationIndex = 0)
         {
             // verify the required parameter 'importId' is set
             if (importId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'importId' when calling ImportsApi->GetImportApiV1ImportsImportIdGet");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'importId' when calling ImportsApi->GetImport");
             }
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -857,7 +857,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("import_id", InvoicePDFs.Client.ClientUtils.ParameterToString(importId)); // path parameter
 
-            localVarRequestOptions.Operation = "ImportsApi.GetImportApiV1ImportsImportIdGet";
+            localVarRequestOptions.Operation = "ImportsApi.GetImport";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -871,7 +871,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Get<ImportResponse>("/api/v1/imports/{import_id}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetImportApiV1ImportsImportIdGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetImport", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -889,9 +889,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ImportResponse</returns>
-        public async System.Threading.Tasks.Task<ImportResponse> GetImportApiV1ImportsImportIdGetAsync(string importId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ImportResponse> GetImportAsync(string importId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<ImportResponse> localVarResponse = await GetImportApiV1ImportsImportIdGetWithHttpInfoAsync(importId, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<ImportResponse> localVarResponse = await GetImportWithHttpInfoAsync(importId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -903,12 +903,12 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ImportResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<ImportResponse>> GetImportApiV1ImportsImportIdGetWithHttpInfoAsync(string importId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<ImportResponse>> GetImportWithHttpInfoAsync(string importId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'importId' is set
             if (importId == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'importId' when calling ImportsApi->GetImportApiV1ImportsImportIdGet");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'importId' when calling ImportsApi->GetImport");
             }
 
 
@@ -936,7 +936,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.PathParameters.Add("import_id", InvoicePDFs.Client.ClientUtils.ParameterToString(importId)); // path parameter
 
-            localVarRequestOptions.Operation = "ImportsApi.GetImportApiV1ImportsImportIdGet";
+            localVarRequestOptions.Operation = "ImportsApi.GetImport";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -951,7 +951,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetImportApiV1ImportsImportIdGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetImport", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

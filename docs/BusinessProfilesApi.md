@@ -4,15 +4,15 @@ All URIs are relative to *http://localhost*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
-| [**CreateBusinessProfileApiV1BusinessProfilesPost**](BusinessProfilesApi.md#createbusinessprofileapiv1businessprofilespost) | **POST** /api/v1/business-profiles | Create Business Profile |
-| [**DeleteBusinessProfileApiV1BusinessProfilesBusinessProfileIdDelete**](BusinessProfilesApi.md#deletebusinessprofileapiv1businessprofilesbusinessprofileiddelete) | **DELETE** /api/v1/business-profiles/{business_profile_id} | Delete Business Profile |
-| [**GetBusinessProfileApiV1BusinessProfilesBusinessProfileIdGet**](BusinessProfilesApi.md#getbusinessprofileapiv1businessprofilesbusinessprofileidget) | **GET** /api/v1/business-profiles/{business_profile_id} | Get Business Profile |
-| [**ListBusinessProfilesApiV1BusinessProfilesGet**](BusinessProfilesApi.md#listbusinessprofilesapiv1businessprofilesget) | **GET** /api/v1/business-profiles | List Business Profiles |
-| [**PatchBusinessProfileApiV1BusinessProfilesBusinessProfileIdPatch**](BusinessProfilesApi.md#patchbusinessprofileapiv1businessprofilesbusinessprofileidpatch) | **PATCH** /api/v1/business-profiles/{business_profile_id} | Patch Business Profile |
+| [**CreateBusinessProfile**](BusinessProfilesApi.md#createbusinessprofile) | **POST** /api/v1/business-profiles | Create Business Profile |
+| [**DeleteBusinessProfile**](BusinessProfilesApi.md#deletebusinessprofile) | **DELETE** /api/v1/business-profiles/{business_profile_id} | Delete Business Profile |
+| [**GetBusinessProfile**](BusinessProfilesApi.md#getbusinessprofile) | **GET** /api/v1/business-profiles/{business_profile_id} | Get Business Profile |
+| [**ListBusinessProfiles**](BusinessProfilesApi.md#listbusinessprofiles) | **GET** /api/v1/business-profiles | List Business Profiles |
+| [**UpdateBusinessProfile**](BusinessProfilesApi.md#updatebusinessprofile) | **PATCH** /api/v1/business-profiles/{business_profile_id} | Update Business Profile |
 
-<a id="createbusinessprofileapiv1businessprofilespost"></a>
-# **CreateBusinessProfileApiV1BusinessProfilesPost**
-> BusinessProfileResponse CreateBusinessProfileApiV1BusinessProfilesPost (BusinessProfileCreate businessProfileCreate, string? idempotencyKey = null)
+<a id="createbusinessprofile"></a>
+# **CreateBusinessProfile**
+> BusinessProfileResponse CreateBusinessProfile (BusinessProfileCreate businessProfileCreate, string? idempotencyKey = null)
 
 Create Business Profile
 
@@ -26,7 +26,7 @@ using InvoicePDFs.Model;
 
 namespace Example
 {
-    public class CreateBusinessProfileApiV1BusinessProfilesPostExample
+    public class CreateBusinessProfileExample
     {
         public static void Main()
         {
@@ -42,12 +42,12 @@ namespace Example
             try
             {
                 // Create Business Profile
-                BusinessProfileResponse result = apiInstance.CreateBusinessProfileApiV1BusinessProfilesPost(businessProfileCreate, idempotencyKey);
+                BusinessProfileResponse result = apiInstance.CreateBusinessProfile(businessProfileCreate, idempotencyKey);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling BusinessProfilesApi.CreateBusinessProfileApiV1BusinessProfilesPost: " + e.Message);
+                Debug.Print("Exception when calling BusinessProfilesApi.CreateBusinessProfile: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -56,21 +56,21 @@ namespace Example
 }
 ```
 
-#### Using the CreateBusinessProfileApiV1BusinessProfilesPostWithHttpInfo variant
+#### Using the CreateBusinessProfileWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // Create Business Profile
-    ApiResponse<BusinessProfileResponse> response = apiInstance.CreateBusinessProfileApiV1BusinessProfilesPostWithHttpInfo(businessProfileCreate, idempotencyKey);
+    ApiResponse<BusinessProfileResponse> response = apiInstance.CreateBusinessProfileWithHttpInfo(businessProfileCreate, idempotencyKey);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling BusinessProfilesApi.CreateBusinessProfileApiV1BusinessProfilesPostWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling BusinessProfilesApi.CreateBusinessProfileWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -105,9 +105,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="deletebusinessprofileapiv1businessprofilesbusinessprofileiddelete"></a>
-# **DeleteBusinessProfileApiV1BusinessProfilesBusinessProfileIdDelete**
-> SimpleBoolResponse DeleteBusinessProfileApiV1BusinessProfilesBusinessProfileIdDelete (string businessProfileId)
+<a id="deletebusinessprofile"></a>
+# **DeleteBusinessProfile**
+> SimpleBoolResponse DeleteBusinessProfile (string businessProfileId)
 
 Delete Business Profile
 
@@ -121,7 +121,7 @@ using InvoicePDFs.Model;
 
 namespace Example
 {
-    public class DeleteBusinessProfileApiV1BusinessProfilesBusinessProfileIdDeleteExample
+    public class DeleteBusinessProfileExample
     {
         public static void Main()
         {
@@ -136,12 +136,12 @@ namespace Example
             try
             {
                 // Delete Business Profile
-                SimpleBoolResponse result = apiInstance.DeleteBusinessProfileApiV1BusinessProfilesBusinessProfileIdDelete(businessProfileId);
+                SimpleBoolResponse result = apiInstance.DeleteBusinessProfile(businessProfileId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling BusinessProfilesApi.DeleteBusinessProfileApiV1BusinessProfilesBusinessProfileIdDelete: " + e.Message);
+                Debug.Print("Exception when calling BusinessProfilesApi.DeleteBusinessProfile: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -150,21 +150,21 @@ namespace Example
 }
 ```
 
-#### Using the DeleteBusinessProfileApiV1BusinessProfilesBusinessProfileIdDeleteWithHttpInfo variant
+#### Using the DeleteBusinessProfileWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // Delete Business Profile
-    ApiResponse<SimpleBoolResponse> response = apiInstance.DeleteBusinessProfileApiV1BusinessProfilesBusinessProfileIdDeleteWithHttpInfo(businessProfileId);
+    ApiResponse<SimpleBoolResponse> response = apiInstance.DeleteBusinessProfileWithHttpInfo(businessProfileId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling BusinessProfilesApi.DeleteBusinessProfileApiV1BusinessProfilesBusinessProfileIdDeleteWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling BusinessProfilesApi.DeleteBusinessProfileWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -198,9 +198,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="getbusinessprofileapiv1businessprofilesbusinessprofileidget"></a>
-# **GetBusinessProfileApiV1BusinessProfilesBusinessProfileIdGet**
-> BusinessProfileResponse GetBusinessProfileApiV1BusinessProfilesBusinessProfileIdGet (string businessProfileId)
+<a id="getbusinessprofile"></a>
+# **GetBusinessProfile**
+> BusinessProfileResponse GetBusinessProfile (string businessProfileId)
 
 Get Business Profile
 
@@ -214,7 +214,7 @@ using InvoicePDFs.Model;
 
 namespace Example
 {
-    public class GetBusinessProfileApiV1BusinessProfilesBusinessProfileIdGetExample
+    public class GetBusinessProfileExample
     {
         public static void Main()
         {
@@ -229,12 +229,12 @@ namespace Example
             try
             {
                 // Get Business Profile
-                BusinessProfileResponse result = apiInstance.GetBusinessProfileApiV1BusinessProfilesBusinessProfileIdGet(businessProfileId);
+                BusinessProfileResponse result = apiInstance.GetBusinessProfile(businessProfileId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling BusinessProfilesApi.GetBusinessProfileApiV1BusinessProfilesBusinessProfileIdGet: " + e.Message);
+                Debug.Print("Exception when calling BusinessProfilesApi.GetBusinessProfile: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -243,21 +243,21 @@ namespace Example
 }
 ```
 
-#### Using the GetBusinessProfileApiV1BusinessProfilesBusinessProfileIdGetWithHttpInfo variant
+#### Using the GetBusinessProfileWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // Get Business Profile
-    ApiResponse<BusinessProfileResponse> response = apiInstance.GetBusinessProfileApiV1BusinessProfilesBusinessProfileIdGetWithHttpInfo(businessProfileId);
+    ApiResponse<BusinessProfileResponse> response = apiInstance.GetBusinessProfileWithHttpInfo(businessProfileId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling BusinessProfilesApi.GetBusinessProfileApiV1BusinessProfilesBusinessProfileIdGetWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling BusinessProfilesApi.GetBusinessProfileWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -291,9 +291,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="listbusinessprofilesapiv1businessprofilesget"></a>
-# **ListBusinessProfilesApiV1BusinessProfilesGet**
-> BusinessProfilesListResponse ListBusinessProfilesApiV1BusinessProfilesGet (int? limit = null, string? cursor = null)
+<a id="listbusinessprofiles"></a>
+# **ListBusinessProfiles**
+> BusinessProfilesListResponse ListBusinessProfiles (int? limit = null, string? cursor = null)
 
 List Business Profiles
 
@@ -307,7 +307,7 @@ using InvoicePDFs.Model;
 
 namespace Example
 {
-    public class ListBusinessProfilesApiV1BusinessProfilesGetExample
+    public class ListBusinessProfilesExample
     {
         public static void Main()
         {
@@ -323,12 +323,12 @@ namespace Example
             try
             {
                 // List Business Profiles
-                BusinessProfilesListResponse result = apiInstance.ListBusinessProfilesApiV1BusinessProfilesGet(limit, cursor);
+                BusinessProfilesListResponse result = apiInstance.ListBusinessProfiles(limit, cursor);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling BusinessProfilesApi.ListBusinessProfilesApiV1BusinessProfilesGet: " + e.Message);
+                Debug.Print("Exception when calling BusinessProfilesApi.ListBusinessProfiles: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -337,21 +337,21 @@ namespace Example
 }
 ```
 
-#### Using the ListBusinessProfilesApiV1BusinessProfilesGetWithHttpInfo variant
+#### Using the ListBusinessProfilesWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // List Business Profiles
-    ApiResponse<BusinessProfilesListResponse> response = apiInstance.ListBusinessProfilesApiV1BusinessProfilesGetWithHttpInfo(limit, cursor);
+    ApiResponse<BusinessProfilesListResponse> response = apiInstance.ListBusinessProfilesWithHttpInfo(limit, cursor);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling BusinessProfilesApi.ListBusinessProfilesApiV1BusinessProfilesGetWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling BusinessProfilesApi.ListBusinessProfilesWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -386,11 +386,11 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="patchbusinessprofileapiv1businessprofilesbusinessprofileidpatch"></a>
-# **PatchBusinessProfileApiV1BusinessProfilesBusinessProfileIdPatch**
-> BusinessProfileResponse PatchBusinessProfileApiV1BusinessProfilesBusinessProfileIdPatch (string businessProfileId, BusinessProfilePatch businessProfilePatch, string? idempotencyKey = null)
+<a id="updatebusinessprofile"></a>
+# **UpdateBusinessProfile**
+> BusinessProfileResponse UpdateBusinessProfile (string businessProfileId, BusinessProfilePatch businessProfilePatch, string? idempotencyKey = null)
 
-Patch Business Profile
+Update Business Profile
 
 ### Example
 ```csharp
@@ -402,7 +402,7 @@ using InvoicePDFs.Model;
 
 namespace Example
 {
-    public class PatchBusinessProfileApiV1BusinessProfilesBusinessProfileIdPatchExample
+    public class UpdateBusinessProfileExample
     {
         public static void Main()
         {
@@ -418,13 +418,13 @@ namespace Example
 
             try
             {
-                // Patch Business Profile
-                BusinessProfileResponse result = apiInstance.PatchBusinessProfileApiV1BusinessProfilesBusinessProfileIdPatch(businessProfileId, businessProfilePatch, idempotencyKey);
+                // Update Business Profile
+                BusinessProfileResponse result = apiInstance.UpdateBusinessProfile(businessProfileId, businessProfilePatch, idempotencyKey);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling BusinessProfilesApi.PatchBusinessProfileApiV1BusinessProfilesBusinessProfileIdPatch: " + e.Message);
+                Debug.Print("Exception when calling BusinessProfilesApi.UpdateBusinessProfile: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -433,21 +433,21 @@ namespace Example
 }
 ```
 
-#### Using the PatchBusinessProfileApiV1BusinessProfilesBusinessProfileIdPatchWithHttpInfo variant
+#### Using the UpdateBusinessProfileWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
-    // Patch Business Profile
-    ApiResponse<BusinessProfileResponse> response = apiInstance.PatchBusinessProfileApiV1BusinessProfilesBusinessProfileIdPatchWithHttpInfo(businessProfileId, businessProfilePatch, idempotencyKey);
+    // Update Business Profile
+    ApiResponse<BusinessProfileResponse> response = apiInstance.UpdateBusinessProfileWithHttpInfo(businessProfileId, businessProfilePatch, idempotencyKey);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling BusinessProfilesApi.PatchBusinessProfileApiV1BusinessProfilesBusinessProfileIdPatchWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling BusinessProfilesApi.UpdateBusinessProfileWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }

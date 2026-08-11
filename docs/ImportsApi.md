@@ -4,14 +4,14 @@ All URIs are relative to *http://localhost*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
-| [**CancelImportApiV1ImportsImportIdCancelPost**](ImportsApi.md#cancelimportapiv1importsimportidcancelpost) | **POST** /api/v1/imports/{import_id}/cancel | Cancel Import |
-| [**ConfirmImportApiV1ImportsImportIdConfirmPost**](ImportsApi.md#confirmimportapiv1importsimportidconfirmpost) | **POST** /api/v1/imports/{import_id}/confirm | Confirm Import |
-| [**CreateImportApiV1ImportsPost**](ImportsApi.md#createimportapiv1importspost) | **POST** /api/v1/imports | Create Import |
-| [**GetImportApiV1ImportsImportIdGet**](ImportsApi.md#getimportapiv1importsimportidget) | **GET** /api/v1/imports/{import_id} | Get Import |
+| [**CancelImport**](ImportsApi.md#cancelimport) | **POST** /api/v1/imports/{import_id}/cancel | Cancel Import |
+| [**ConfirmImport**](ImportsApi.md#confirmimport) | **POST** /api/v1/imports/{import_id}/confirm | Confirm Import |
+| [**CreateImport**](ImportsApi.md#createimport) | **POST** /api/v1/imports | Create Import |
+| [**GetImport**](ImportsApi.md#getimport) | **GET** /api/v1/imports/{import_id} | Get Import |
 
-<a id="cancelimportapiv1importsimportidcancelpost"></a>
-# **CancelImportApiV1ImportsImportIdCancelPost**
-> ImportResponse CancelImportApiV1ImportsImportIdCancelPost (string importId)
+<a id="cancelimport"></a>
+# **CancelImport**
+> ImportResponse CancelImport (string importId)
 
 Cancel Import
 
@@ -25,7 +25,7 @@ using InvoicePDFs.Model;
 
 namespace Example
 {
-    public class CancelImportApiV1ImportsImportIdCancelPostExample
+    public class CancelImportExample
     {
         public static void Main()
         {
@@ -40,12 +40,12 @@ namespace Example
             try
             {
                 // Cancel Import
-                ImportResponse result = apiInstance.CancelImportApiV1ImportsImportIdCancelPost(importId);
+                ImportResponse result = apiInstance.CancelImport(importId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling ImportsApi.CancelImportApiV1ImportsImportIdCancelPost: " + e.Message);
+                Debug.Print("Exception when calling ImportsApi.CancelImport: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -54,21 +54,21 @@ namespace Example
 }
 ```
 
-#### Using the CancelImportApiV1ImportsImportIdCancelPostWithHttpInfo variant
+#### Using the CancelImportWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // Cancel Import
-    ApiResponse<ImportResponse> response = apiInstance.CancelImportApiV1ImportsImportIdCancelPostWithHttpInfo(importId);
+    ApiResponse<ImportResponse> response = apiInstance.CancelImportWithHttpInfo(importId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling ImportsApi.CancelImportApiV1ImportsImportIdCancelPostWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling ImportsApi.CancelImportWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -102,9 +102,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="confirmimportapiv1importsimportidconfirmpost"></a>
-# **ConfirmImportApiV1ImportsImportIdConfirmPost**
-> ImportResponse ConfirmImportApiV1ImportsImportIdConfirmPost (string importId)
+<a id="confirmimport"></a>
+# **ConfirmImport**
+> ImportResponse ConfirmImport (string importId)
 
 Confirm Import
 
@@ -118,7 +118,7 @@ using InvoicePDFs.Model;
 
 namespace Example
 {
-    public class ConfirmImportApiV1ImportsImportIdConfirmPostExample
+    public class ConfirmImportExample
     {
         public static void Main()
         {
@@ -133,12 +133,12 @@ namespace Example
             try
             {
                 // Confirm Import
-                ImportResponse result = apiInstance.ConfirmImportApiV1ImportsImportIdConfirmPost(importId);
+                ImportResponse result = apiInstance.ConfirmImport(importId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling ImportsApi.ConfirmImportApiV1ImportsImportIdConfirmPost: " + e.Message);
+                Debug.Print("Exception when calling ImportsApi.ConfirmImport: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -147,21 +147,21 @@ namespace Example
 }
 ```
 
-#### Using the ConfirmImportApiV1ImportsImportIdConfirmPostWithHttpInfo variant
+#### Using the ConfirmImportWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // Confirm Import
-    ApiResponse<ImportResponse> response = apiInstance.ConfirmImportApiV1ImportsImportIdConfirmPostWithHttpInfo(importId);
+    ApiResponse<ImportResponse> response = apiInstance.ConfirmImportWithHttpInfo(importId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling ImportsApi.ConfirmImportApiV1ImportsImportIdConfirmPostWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling ImportsApi.ConfirmImportWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -195,9 +195,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="createimportapiv1importspost"></a>
-# **CreateImportApiV1ImportsPost**
-> ImportResponse CreateImportApiV1ImportsPost (ImportCreateRequest importCreateRequest)
+<a id="createimport"></a>
+# **CreateImport**
+> ImportResponse CreateImport (ImportCreateRequest importCreateRequest)
 
 Create Import
 
@@ -211,7 +211,7 @@ using InvoicePDFs.Model;
 
 namespace Example
 {
-    public class CreateImportApiV1ImportsPostExample
+    public class CreateImportExample
     {
         public static void Main()
         {
@@ -226,12 +226,12 @@ namespace Example
             try
             {
                 // Create Import
-                ImportResponse result = apiInstance.CreateImportApiV1ImportsPost(importCreateRequest);
+                ImportResponse result = apiInstance.CreateImport(importCreateRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling ImportsApi.CreateImportApiV1ImportsPost: " + e.Message);
+                Debug.Print("Exception when calling ImportsApi.CreateImport: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -240,21 +240,21 @@ namespace Example
 }
 ```
 
-#### Using the CreateImportApiV1ImportsPostWithHttpInfo variant
+#### Using the CreateImportWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // Create Import
-    ApiResponse<ImportResponse> response = apiInstance.CreateImportApiV1ImportsPostWithHttpInfo(importCreateRequest);
+    ApiResponse<ImportResponse> response = apiInstance.CreateImportWithHttpInfo(importCreateRequest);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling ImportsApi.CreateImportApiV1ImportsPostWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling ImportsApi.CreateImportWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -288,9 +288,9 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="getimportapiv1importsimportidget"></a>
-# **GetImportApiV1ImportsImportIdGet**
-> ImportResponse GetImportApiV1ImportsImportIdGet (string importId)
+<a id="getimport"></a>
+# **GetImport**
+> ImportResponse GetImport (string importId)
 
 Get Import
 
@@ -304,7 +304,7 @@ using InvoicePDFs.Model;
 
 namespace Example
 {
-    public class GetImportApiV1ImportsImportIdGetExample
+    public class GetImportExample
     {
         public static void Main()
         {
@@ -319,12 +319,12 @@ namespace Example
             try
             {
                 // Get Import
-                ImportResponse result = apiInstance.GetImportApiV1ImportsImportIdGet(importId);
+                ImportResponse result = apiInstance.GetImport(importId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling ImportsApi.GetImportApiV1ImportsImportIdGet: " + e.Message);
+                Debug.Print("Exception when calling ImportsApi.GetImport: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -333,21 +333,21 @@ namespace Example
 }
 ```
 
-#### Using the GetImportApiV1ImportsImportIdGetWithHttpInfo variant
+#### Using the GetImportWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // Get Import
-    ApiResponse<ImportResponse> response = apiInstance.GetImportApiV1ImportsImportIdGetWithHttpInfo(importId);
+    ApiResponse<ImportResponse> response = apiInstance.GetImportWithHttpInfo(importId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling ImportsApi.GetImportApiV1ImportsImportIdGetWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling ImportsApi.GetImportWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }

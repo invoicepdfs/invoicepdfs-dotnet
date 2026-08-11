@@ -34,7 +34,7 @@ namespace InvoicePDFs.Api
         /// <param name="limit"> (optional, default to 100)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiRequestLogsListResponse</returns>
-        ApiRequestLogsListResponse ListLogsApiV1LogsGet(string? status = default(string?), int? limit = default(int?), int operationIndex = 0);
+        ApiRequestLogsListResponse ListLogs(string? status = default(string?), int? limit = default(int?), int operationIndex = 0);
 
         /// <summary>
         /// List Logs
@@ -47,7 +47,7 @@ namespace InvoicePDFs.Api
         /// <param name="limit"> (optional, default to 100)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ApiRequestLogsListResponse</returns>
-        ApiResponse<ApiRequestLogsListResponse> ListLogsApiV1LogsGetWithHttpInfo(string? status = default(string?), int? limit = default(int?), int operationIndex = 0);
+        ApiResponse<ApiRequestLogsListResponse> ListLogsWithHttpInfo(string? status = default(string?), int? limit = default(int?), int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -69,7 +69,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiRequestLogsListResponse</returns>
-        System.Threading.Tasks.Task<ApiRequestLogsListResponse> ListLogsApiV1LogsGetAsync(string? status = default(string?), int? limit = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiRequestLogsListResponse> ListLogsAsync(string? status = default(string?), int? limit = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// List Logs
@@ -83,7 +83,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ApiRequestLogsListResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiRequestLogsListResponse>> ListLogsApiV1LogsGetWithHttpInfoAsync(string? status = default(string?), int? limit = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ApiRequestLogsListResponse>> ListLogsWithHttpInfoAsync(string? status = default(string?), int? limit = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -212,9 +212,9 @@ namespace InvoicePDFs.Api
         /// <param name="limit"> (optional, default to 100)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiRequestLogsListResponse</returns>
-        public ApiRequestLogsListResponse ListLogsApiV1LogsGet(string? status = default(string?), int? limit = default(int?), int operationIndex = 0)
+        public ApiRequestLogsListResponse ListLogs(string? status = default(string?), int? limit = default(int?), int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<ApiRequestLogsListResponse> localVarResponse = ListLogsApiV1LogsGetWithHttpInfo(status, limit);
+            InvoicePDFs.Client.ApiResponse<ApiRequestLogsListResponse> localVarResponse = ListLogsWithHttpInfo(status, limit);
             return localVarResponse.Data;
         }
 
@@ -226,7 +226,7 @@ namespace InvoicePDFs.Api
         /// <param name="limit"> (optional, default to 100)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ApiRequestLogsListResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<ApiRequestLogsListResponse> ListLogsApiV1LogsGetWithHttpInfo(string? status = default(string?), int? limit = default(int?), int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<ApiRequestLogsListResponse> ListLogsWithHttpInfo(string? status = default(string?), int? limit = default(int?), int operationIndex = 0)
         {
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
 
@@ -259,7 +259,7 @@ namespace InvoicePDFs.Api
                 localVarRequestOptions.QueryParameters.Add(InvoicePDFs.Client.ClientUtils.ParameterToMultiMap("", "limit", limit));
             }
 
-            localVarRequestOptions.Operation = "LogsApi.ListLogsApiV1LogsGet";
+            localVarRequestOptions.Operation = "LogsApi.ListLogs";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -273,7 +273,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Get<ApiRequestLogsListResponse>("/api/v1/logs", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListLogsApiV1LogsGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("ListLogs", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -292,9 +292,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiRequestLogsListResponse</returns>
-        public async System.Threading.Tasks.Task<ApiRequestLogsListResponse> ListLogsApiV1LogsGetAsync(string? status = default(string?), int? limit = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ApiRequestLogsListResponse> ListLogsAsync(string? status = default(string?), int? limit = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<ApiRequestLogsListResponse> localVarResponse = await ListLogsApiV1LogsGetWithHttpInfoAsync(status, limit, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<ApiRequestLogsListResponse> localVarResponse = await ListLogsWithHttpInfoAsync(status, limit, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -307,7 +307,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ApiRequestLogsListResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<ApiRequestLogsListResponse>> ListLogsApiV1LogsGetWithHttpInfoAsync(string? status = default(string?), int? limit = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<ApiRequestLogsListResponse>> ListLogsWithHttpInfoAsync(string? status = default(string?), int? limit = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -341,7 +341,7 @@ namespace InvoicePDFs.Api
                 localVarRequestOptions.QueryParameters.Add(InvoicePDFs.Client.ClientUtils.ParameterToMultiMap("", "limit", limit));
             }
 
-            localVarRequestOptions.Operation = "LogsApi.ListLogsApiV1LogsGet";
+            localVarRequestOptions.Operation = "LogsApi.ListLogs";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -356,7 +356,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListLogsApiV1LogsGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("ListLogs", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

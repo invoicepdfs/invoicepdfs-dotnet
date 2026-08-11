@@ -27,7 +27,7 @@ namespace InvoicePDFs.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Create Checkout
+        /// Create Checkout Session
         /// </summary>
         /// <remarks>
         /// Create a Stripe Checkout session for a subscription.
@@ -36,10 +36,10 @@ namespace InvoicePDFs.Api
         /// <param name="billingCheckoutRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>BillingCheckoutResponse</returns>
-        BillingCheckoutResponse CreateCheckoutApiV1BillingCheckoutSessionPost(BillingCheckoutRequest billingCheckoutRequest, int operationIndex = 0);
+        BillingCheckoutResponse CreateCheckoutSession(BillingCheckoutRequest billingCheckoutRequest, int operationIndex = 0);
 
         /// <summary>
-        /// Create Checkout
+        /// Create Checkout Session
         /// </summary>
         /// <remarks>
         /// Create a Stripe Checkout session for a subscription.
@@ -48,9 +48,9 @@ namespace InvoicePDFs.Api
         /// <param name="billingCheckoutRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of BillingCheckoutResponse</returns>
-        ApiResponse<BillingCheckoutResponse> CreateCheckoutApiV1BillingCheckoutSessionPostWithHttpInfo(BillingCheckoutRequest billingCheckoutRequest, int operationIndex = 0);
+        ApiResponse<BillingCheckoutResponse> CreateCheckoutSessionWithHttpInfo(BillingCheckoutRequest billingCheckoutRequest, int operationIndex = 0);
         /// <summary>
-        /// Create Portal
+        /// Create Portal Session
         /// </summary>
         /// <remarks>
         /// Create a Stripe Customer Portal session for self-service management.
@@ -58,10 +58,10 @@ namespace InvoicePDFs.Api
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>BillingPortalResponse</returns>
-        BillingPortalResponse CreatePortalApiV1BillingPortalSessionPost(int operationIndex = 0);
+        BillingPortalResponse CreatePortalSession(int operationIndex = 0);
 
         /// <summary>
-        /// Create Portal
+        /// Create Portal Session
         /// </summary>
         /// <remarks>
         /// Create a Stripe Customer Portal session for self-service management.
@@ -69,7 +69,7 @@ namespace InvoicePDFs.Api
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of BillingPortalResponse</returns>
-        ApiResponse<BillingPortalResponse> CreatePortalApiV1BillingPortalSessionPostWithHttpInfo(int operationIndex = 0);
+        ApiResponse<BillingPortalResponse> CreatePortalSessionWithHttpInfo(int operationIndex = 0);
         /// <summary>
         /// Get Subscription
         /// </summary>
@@ -79,7 +79,7 @@ namespace InvoicePDFs.Api
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>BillingSubscriptionResponse</returns>
-        BillingSubscriptionResponse GetSubscriptionApiV1BillingSubscriptionGet(int operationIndex = 0);
+        BillingSubscriptionResponse GetSubscription(int operationIndex = 0);
 
         /// <summary>
         /// Get Subscription
@@ -90,7 +90,7 @@ namespace InvoicePDFs.Api
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of BillingSubscriptionResponse</returns>
-        ApiResponse<BillingSubscriptionResponse> GetSubscriptionApiV1BillingSubscriptionGetWithHttpInfo(int operationIndex = 0);
+        ApiResponse<BillingSubscriptionResponse> GetSubscriptionWithHttpInfo(int operationIndex = 0);
         /// <summary>
         /// List Plans
         /// </summary>
@@ -100,7 +100,7 @@ namespace InvoicePDFs.Api
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>BillingPlansListResponse</returns>
-        BillingPlansListResponse ListPlansApiV1BillingPlansGet(int operationIndex = 0);
+        BillingPlansListResponse ListPlans(int operationIndex = 0);
 
         /// <summary>
         /// List Plans
@@ -111,7 +111,7 @@ namespace InvoicePDFs.Api
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of BillingPlansListResponse</returns>
-        ApiResponse<BillingPlansListResponse> ListPlansApiV1BillingPlansGetWithHttpInfo(int operationIndex = 0);
+        ApiResponse<BillingPlansListResponse> ListPlansWithHttpInfo(int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -122,7 +122,7 @@ namespace InvoicePDFs.Api
     {
         #region Asynchronous Operations
         /// <summary>
-        /// Create Checkout
+        /// Create Checkout Session
         /// </summary>
         /// <remarks>
         /// Create a Stripe Checkout session for a subscription.
@@ -132,10 +132,10 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of BillingCheckoutResponse</returns>
-        System.Threading.Tasks.Task<BillingCheckoutResponse> CreateCheckoutApiV1BillingCheckoutSessionPostAsync(BillingCheckoutRequest billingCheckoutRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<BillingCheckoutResponse> CreateCheckoutSessionAsync(BillingCheckoutRequest billingCheckoutRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// Create Checkout
+        /// Create Checkout Session
         /// </summary>
         /// <remarks>
         /// Create a Stripe Checkout session for a subscription.
@@ -145,9 +145,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (BillingCheckoutResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<BillingCheckoutResponse>> CreateCheckoutApiV1BillingCheckoutSessionPostWithHttpInfoAsync(BillingCheckoutRequest billingCheckoutRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<BillingCheckoutResponse>> CreateCheckoutSessionWithHttpInfoAsync(BillingCheckoutRequest billingCheckoutRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// Create Portal
+        /// Create Portal Session
         /// </summary>
         /// <remarks>
         /// Create a Stripe Customer Portal session for self-service management.
@@ -156,10 +156,10 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of BillingPortalResponse</returns>
-        System.Threading.Tasks.Task<BillingPortalResponse> CreatePortalApiV1BillingPortalSessionPostAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<BillingPortalResponse> CreatePortalSessionAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// Create Portal
+        /// Create Portal Session
         /// </summary>
         /// <remarks>
         /// Create a Stripe Customer Portal session for self-service management.
@@ -168,7 +168,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (BillingPortalResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<BillingPortalResponse>> CreatePortalApiV1BillingPortalSessionPostWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<BillingPortalResponse>> CreatePortalSessionWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Get Subscription
         /// </summary>
@@ -179,7 +179,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of BillingSubscriptionResponse</returns>
-        System.Threading.Tasks.Task<BillingSubscriptionResponse> GetSubscriptionApiV1BillingSubscriptionGetAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<BillingSubscriptionResponse> GetSubscriptionAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Get Subscription
@@ -191,7 +191,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (BillingSubscriptionResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<BillingSubscriptionResponse>> GetSubscriptionApiV1BillingSubscriptionGetWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<BillingSubscriptionResponse>> GetSubscriptionWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// List Plans
         /// </summary>
@@ -202,7 +202,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of BillingPlansListResponse</returns>
-        System.Threading.Tasks.Task<BillingPlansListResponse> ListPlansApiV1BillingPlansGetAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<BillingPlansListResponse> ListPlansAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// List Plans
@@ -214,7 +214,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (BillingPlansListResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<BillingPlansListResponse>> ListPlansApiV1BillingPlansGetWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<BillingPlansListResponse>> ListPlansWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -336,31 +336,31 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Create Checkout Create a Stripe Checkout session for a subscription.
+        /// Create Checkout Session Create a Stripe Checkout session for a subscription.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="billingCheckoutRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>BillingCheckoutResponse</returns>
-        public BillingCheckoutResponse CreateCheckoutApiV1BillingCheckoutSessionPost(BillingCheckoutRequest billingCheckoutRequest, int operationIndex = 0)
+        public BillingCheckoutResponse CreateCheckoutSession(BillingCheckoutRequest billingCheckoutRequest, int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<BillingCheckoutResponse> localVarResponse = CreateCheckoutApiV1BillingCheckoutSessionPostWithHttpInfo(billingCheckoutRequest);
+            InvoicePDFs.Client.ApiResponse<BillingCheckoutResponse> localVarResponse = CreateCheckoutSessionWithHttpInfo(billingCheckoutRequest);
             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Create Checkout Create a Stripe Checkout session for a subscription.
+        /// Create Checkout Session Create a Stripe Checkout session for a subscription.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="billingCheckoutRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of BillingCheckoutResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<BillingCheckoutResponse> CreateCheckoutApiV1BillingCheckoutSessionPostWithHttpInfo(BillingCheckoutRequest billingCheckoutRequest, int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<BillingCheckoutResponse> CreateCheckoutSessionWithHttpInfo(BillingCheckoutRequest billingCheckoutRequest, int operationIndex = 0)
         {
             // verify the required parameter 'billingCheckoutRequest' is set
             if (billingCheckoutRequest == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'billingCheckoutRequest' when calling BillingApi->CreateCheckoutApiV1BillingCheckoutSessionPost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'billingCheckoutRequest' when calling BillingApi->CreateCheckoutSession");
             }
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -388,7 +388,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.Data = billingCheckoutRequest;
 
-            localVarRequestOptions.Operation = "BillingApi.CreateCheckoutApiV1BillingCheckoutSessionPost";
+            localVarRequestOptions.Operation = "BillingApi.CreateCheckoutSession";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -402,7 +402,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Post<BillingCheckoutResponse>("/api/v1/billing/checkout-session", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("CreateCheckoutApiV1BillingCheckoutSessionPost", localVarResponse);
+                Exception _exception = this.ExceptionFactory("CreateCheckoutSession", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -413,33 +413,33 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Create Checkout Create a Stripe Checkout session for a subscription.
+        /// Create Checkout Session Create a Stripe Checkout session for a subscription.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="billingCheckoutRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of BillingCheckoutResponse</returns>
-        public async System.Threading.Tasks.Task<BillingCheckoutResponse> CreateCheckoutApiV1BillingCheckoutSessionPostAsync(BillingCheckoutRequest billingCheckoutRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<BillingCheckoutResponse> CreateCheckoutSessionAsync(BillingCheckoutRequest billingCheckoutRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<BillingCheckoutResponse> localVarResponse = await CreateCheckoutApiV1BillingCheckoutSessionPostWithHttpInfoAsync(billingCheckoutRequest, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<BillingCheckoutResponse> localVarResponse = await CreateCheckoutSessionWithHttpInfoAsync(billingCheckoutRequest, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Create Checkout Create a Stripe Checkout session for a subscription.
+        /// Create Checkout Session Create a Stripe Checkout session for a subscription.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="billingCheckoutRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (BillingCheckoutResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<BillingCheckoutResponse>> CreateCheckoutApiV1BillingCheckoutSessionPostWithHttpInfoAsync(BillingCheckoutRequest billingCheckoutRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<BillingCheckoutResponse>> CreateCheckoutSessionWithHttpInfoAsync(BillingCheckoutRequest billingCheckoutRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'billingCheckoutRequest' is set
             if (billingCheckoutRequest == null)
             {
-                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'billingCheckoutRequest' when calling BillingApi->CreateCheckoutApiV1BillingCheckoutSessionPost");
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'billingCheckoutRequest' when calling BillingApi->CreateCheckoutSession");
             }
 
 
@@ -468,7 +468,7 @@ namespace InvoicePDFs.Api
 
             localVarRequestOptions.Data = billingCheckoutRequest;
 
-            localVarRequestOptions.Operation = "BillingApi.CreateCheckoutApiV1BillingCheckoutSessionPost";
+            localVarRequestOptions.Operation = "BillingApi.CreateCheckoutSession";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -483,7 +483,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("CreateCheckoutApiV1BillingCheckoutSessionPost", localVarResponse);
+                Exception _exception = this.ExceptionFactory("CreateCheckoutSession", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -494,24 +494,24 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Create Portal Create a Stripe Customer Portal session for self-service management.
+        /// Create Portal Session Create a Stripe Customer Portal session for self-service management.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>BillingPortalResponse</returns>
-        public BillingPortalResponse CreatePortalApiV1BillingPortalSessionPost(int operationIndex = 0)
+        public BillingPortalResponse CreatePortalSession(int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<BillingPortalResponse> localVarResponse = CreatePortalApiV1BillingPortalSessionPostWithHttpInfo();
+            InvoicePDFs.Client.ApiResponse<BillingPortalResponse> localVarResponse = CreatePortalSessionWithHttpInfo();
             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Create Portal Create a Stripe Customer Portal session for self-service management.
+        /// Create Portal Session Create a Stripe Customer Portal session for self-service management.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of BillingPortalResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<BillingPortalResponse> CreatePortalApiV1BillingPortalSessionPostWithHttpInfo(int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<BillingPortalResponse> CreatePortalSessionWithHttpInfo(int operationIndex = 0)
         {
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
 
@@ -536,7 +536,7 @@ namespace InvoicePDFs.Api
             }
 
 
-            localVarRequestOptions.Operation = "BillingApi.CreatePortalApiV1BillingPortalSessionPost";
+            localVarRequestOptions.Operation = "BillingApi.CreatePortalSession";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -550,7 +550,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Post<BillingPortalResponse>("/api/v1/billing/portal-session", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("CreatePortalApiV1BillingPortalSessionPost", localVarResponse);
+                Exception _exception = this.ExceptionFactory("CreatePortalSession", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -561,26 +561,26 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Create Portal Create a Stripe Customer Portal session for self-service management.
+        /// Create Portal Session Create a Stripe Customer Portal session for self-service management.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of BillingPortalResponse</returns>
-        public async System.Threading.Tasks.Task<BillingPortalResponse> CreatePortalApiV1BillingPortalSessionPostAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<BillingPortalResponse> CreatePortalSessionAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<BillingPortalResponse> localVarResponse = await CreatePortalApiV1BillingPortalSessionPostWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<BillingPortalResponse> localVarResponse = await CreatePortalSessionWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Create Portal Create a Stripe Customer Portal session for self-service management.
+        /// Create Portal Session Create a Stripe Customer Portal session for self-service management.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (BillingPortalResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<BillingPortalResponse>> CreatePortalApiV1BillingPortalSessionPostWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<BillingPortalResponse>> CreatePortalSessionWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -606,7 +606,7 @@ namespace InvoicePDFs.Api
             }
 
 
-            localVarRequestOptions.Operation = "BillingApi.CreatePortalApiV1BillingPortalSessionPost";
+            localVarRequestOptions.Operation = "BillingApi.CreatePortalSession";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -621,7 +621,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("CreatePortalApiV1BillingPortalSessionPost", localVarResponse);
+                Exception _exception = this.ExceptionFactory("CreatePortalSession", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -637,9 +637,9 @@ namespace InvoicePDFs.Api
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>BillingSubscriptionResponse</returns>
-        public BillingSubscriptionResponse GetSubscriptionApiV1BillingSubscriptionGet(int operationIndex = 0)
+        public BillingSubscriptionResponse GetSubscription(int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<BillingSubscriptionResponse> localVarResponse = GetSubscriptionApiV1BillingSubscriptionGetWithHttpInfo();
+            InvoicePDFs.Client.ApiResponse<BillingSubscriptionResponse> localVarResponse = GetSubscriptionWithHttpInfo();
             return localVarResponse.Data;
         }
 
@@ -649,7 +649,7 @@ namespace InvoicePDFs.Api
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of BillingSubscriptionResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<BillingSubscriptionResponse> GetSubscriptionApiV1BillingSubscriptionGetWithHttpInfo(int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<BillingSubscriptionResponse> GetSubscriptionWithHttpInfo(int operationIndex = 0)
         {
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
 
@@ -674,7 +674,7 @@ namespace InvoicePDFs.Api
             }
 
 
-            localVarRequestOptions.Operation = "BillingApi.GetSubscriptionApiV1BillingSubscriptionGet";
+            localVarRequestOptions.Operation = "BillingApi.GetSubscription";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -688,7 +688,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Get<BillingSubscriptionResponse>("/api/v1/billing/subscription", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetSubscriptionApiV1BillingSubscriptionGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetSubscription", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -705,9 +705,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of BillingSubscriptionResponse</returns>
-        public async System.Threading.Tasks.Task<BillingSubscriptionResponse> GetSubscriptionApiV1BillingSubscriptionGetAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<BillingSubscriptionResponse> GetSubscriptionAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<BillingSubscriptionResponse> localVarResponse = await GetSubscriptionApiV1BillingSubscriptionGetWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<BillingSubscriptionResponse> localVarResponse = await GetSubscriptionWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -718,7 +718,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (BillingSubscriptionResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<BillingSubscriptionResponse>> GetSubscriptionApiV1BillingSubscriptionGetWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<BillingSubscriptionResponse>> GetSubscriptionWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -744,7 +744,7 @@ namespace InvoicePDFs.Api
             }
 
 
-            localVarRequestOptions.Operation = "BillingApi.GetSubscriptionApiV1BillingSubscriptionGet";
+            localVarRequestOptions.Operation = "BillingApi.GetSubscription";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -759,7 +759,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetSubscriptionApiV1BillingSubscriptionGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetSubscription", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -775,9 +775,9 @@ namespace InvoicePDFs.Api
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>BillingPlansListResponse</returns>
-        public BillingPlansListResponse ListPlansApiV1BillingPlansGet(int operationIndex = 0)
+        public BillingPlansListResponse ListPlans(int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<BillingPlansListResponse> localVarResponse = ListPlansApiV1BillingPlansGetWithHttpInfo();
+            InvoicePDFs.Client.ApiResponse<BillingPlansListResponse> localVarResponse = ListPlansWithHttpInfo();
             return localVarResponse.Data;
         }
 
@@ -787,7 +787,7 @@ namespace InvoicePDFs.Api
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of BillingPlansListResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<BillingPlansListResponse> ListPlansApiV1BillingPlansGetWithHttpInfo(int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<BillingPlansListResponse> ListPlansWithHttpInfo(int operationIndex = 0)
         {
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
 
@@ -812,7 +812,7 @@ namespace InvoicePDFs.Api
             }
 
 
-            localVarRequestOptions.Operation = "BillingApi.ListPlansApiV1BillingPlansGet";
+            localVarRequestOptions.Operation = "BillingApi.ListPlans";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -826,7 +826,7 @@ namespace InvoicePDFs.Api
             var localVarResponse = this.Client.Get<BillingPlansListResponse>("/api/v1/billing/plans", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListPlansApiV1BillingPlansGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("ListPlans", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -843,9 +843,9 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of BillingPlansListResponse</returns>
-        public async System.Threading.Tasks.Task<BillingPlansListResponse> ListPlansApiV1BillingPlansGetAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<BillingPlansListResponse> ListPlansAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<BillingPlansListResponse> localVarResponse = await ListPlansApiV1BillingPlansGetWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<BillingPlansListResponse> localVarResponse = await ListPlansWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -856,7 +856,7 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (BillingPlansListResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<BillingPlansListResponse>> ListPlansApiV1BillingPlansGetWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<BillingPlansListResponse>> ListPlansWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -882,7 +882,7 @@ namespace InvoicePDFs.Api
             }
 
 
-            localVarRequestOptions.Operation = "BillingApi.ListPlansApiV1BillingPlansGet";
+            localVarRequestOptions.Operation = "BillingApi.ListPlans";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (HTTPBearer) required
@@ -897,7 +897,7 @@ namespace InvoicePDFs.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListPlansApiV1BillingPlansGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("ListPlans", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

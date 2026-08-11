@@ -16,8 +16,6 @@ docs/ApiKeyRotateResponse.md
 docs/ApiKeysApi.md
 docs/ApiRequestLogOut.md
 docs/ApiRequestLogsListResponse.md
-docs/AppDocumentsSchemasDocumentRenderRequest.md
-docs/AppSchemasV1DocumentRenderRequest.md
 docs/AuditEventOut.md
 docs/AuditEventResponse.md
 docs/AuditEventsListResponse.md
@@ -85,6 +83,7 @@ docs/DeliveriesListResponse.md
 docs/DeliveryOut.md
 docs/DeliveryResponse.md
 docs/DeliverySendRequest.md
+docs/DocumentAttachmentsApi.md
 docs/DocumentBrandingInput.md
 docs/DocumentCalculateRequest.md
 docs/DocumentCalculateResponse.md
@@ -99,6 +98,8 @@ docs/DocumentOutputOptions.md
 docs/DocumentPartyInput.md
 docs/DocumentPatchRequest.md
 docs/DocumentPaymentInput.md
+docs/DocumentRenderOptions.md
+docs/DocumentRenderRequest.md
 docs/DocumentResponse.md
 docs/DocumentShippingInput.md
 docs/DocumentTemplateRef.md
@@ -118,7 +119,6 @@ docs/ImportsApi.md
 docs/InvoiceAttachmentCreateRequest.md
 docs/InvoiceAttachmentOut.md
 docs/InvoiceAttachmentResponse.md
-docs/InvoiceAttachmentsApi.md
 docs/InvoiceAttachmentsListResponse.md
 docs/InvoiceBankAccountInput.md
 docs/InvoiceBrandingInput.md
@@ -218,7 +218,9 @@ docs/WorkspaceResponse.md
 docs/WorkspacesApi.md
 docs/WorkspacesListResponse.md
 git_push.sh
+src/InvoicePDFs.Test/Api/DocumentAttachmentsApiTests.cs
 src/InvoicePDFs.Test/InvoicePDFs.Test.csproj
+src/InvoicePDFs.Test/Model/DocumentRenderOptionsTests.cs
 src/InvoicePDFs/Api/ApiKeysApi.cs
 src/InvoicePDFs/Api/AuditLogApi.cs
 src/InvoicePDFs/Api/AuthApi.cs
@@ -228,11 +230,11 @@ src/InvoicePDFs/Api/BrandingProfilesApi.cs
 src/InvoicePDFs/Api/BusinessProfilesApi.cs
 src/InvoicePDFs/Api/CustomersApi.cs
 src/InvoicePDFs/Api/DeliveriesApi.cs
+src/InvoicePDFs/Api/DocumentAttachmentsApi.cs
 src/InvoicePDFs/Api/DocumentsApi.cs
 src/InvoicePDFs/Api/FilesApi.cs
 src/InvoicePDFs/Api/HealthApi.cs
 src/InvoicePDFs/Api/ImportsApi.cs
-src/InvoicePDFs/Api/InvoiceAttachmentsApi.cs
 src/InvoicePDFs/Api/JobsApi.cs
 src/InvoicePDFs/Api/LogsApi.cs
 src/InvoicePDFs/Api/NumberingSequencesApi.cs
@@ -278,8 +280,6 @@ src/InvoicePDFs/Model/ApiKeyRevokeResponse.cs
 src/InvoicePDFs/Model/ApiKeyRotateResponse.cs
 src/InvoicePDFs/Model/ApiRequestLogOut.cs
 src/InvoicePDFs/Model/ApiRequestLogsListResponse.cs
-src/InvoicePDFs/Model/AppDocumentsSchemasDocumentRenderRequest.cs
-src/InvoicePDFs/Model/AppSchemasV1DocumentRenderRequest.cs
 src/InvoicePDFs/Model/AuditEventOut.cs
 src/InvoicePDFs/Model/AuditEventResponse.cs
 src/InvoicePDFs/Model/AuditEventsListResponse.cs
@@ -353,6 +353,8 @@ src/InvoicePDFs/Model/DocumentOutputOptions.cs
 src/InvoicePDFs/Model/DocumentPartyInput.cs
 src/InvoicePDFs/Model/DocumentPatchRequest.cs
 src/InvoicePDFs/Model/DocumentPaymentInput.cs
+src/InvoicePDFs/Model/DocumentRenderOptions.cs
+src/InvoicePDFs/Model/DocumentRenderRequest.cs
 src/InvoicePDFs/Model/DocumentResponse.cs
 src/InvoicePDFs/Model/DocumentShippingInput.cs
 src/InvoicePDFs/Model/DocumentTemplateRef.cs
