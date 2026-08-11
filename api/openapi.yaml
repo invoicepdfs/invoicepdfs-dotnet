@@ -11680,6 +11680,7 @@ components:
           details: "{}"
           message: Request validation failed
           request_id: request_id
+          status: 422
       properties:
         error:
           $ref: '#/components/schemas/ApiErrorResponse_error'
@@ -11693,7 +11694,12 @@ components:
         details: "{}"
         message: Request validation failed
         request_id: request_id
+        status: 422
       properties:
+        status:
+          description: "HTTP status, mirroring the response status line."
+          example: 422
+          type: integer
         code:
           example: unprocessable_entity
           type: string
@@ -11711,6 +11717,7 @@ components:
       required:
       - code
       - message
+      - status
       type: object
   securitySchemes:
     HTTPBearer:

@@ -39,12 +39,14 @@ namespace InvoicePDFs.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ApiErrorResponseError" /> class.
         /// </summary>
+        /// <param name="status">HTTP status, mirroring the response status line. (required).</param>
         /// <param name="code">code (required).</param>
         /// <param name="message">message (required).</param>
         /// <param name="requestId">Trace id for this request; also returned as X-Trace-Id..</param>
         /// <param name="details">Error-specific context. Validation failures carry &#x60;fields&#x60;..</param>
-        public ApiErrorResponseError(string code = default(string), string message = default(string), string requestId = default(string), Object details = default(Object))
+        public ApiErrorResponseError(int status = default(int), string code = default(string), string message = default(string), string requestId = default(string), Object details = default(Object))
         {
+            this.Status = status;
             // to ensure "code" is required (not null)
             if (code == null)
             {
@@ -60,6 +62,14 @@ namespace InvoicePDFs.Model
             this.RequestId = requestId;
             this.Details = details;
         }
+
+        /// <summary>
+        /// HTTP status, mirroring the response status line.
+        /// </summary>
+        /// <value>HTTP status, mirroring the response status line.</value>
+        /// <example>422</example>
+        [DataMember(Name = "status", IsRequired = true, EmitDefaultValue = true)]
+        public int Status { get; set; }
 
         /// <summary>
         /// Gets or Sets Code
@@ -97,6 +107,7 @@ namespace InvoicePDFs.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class ApiErrorResponseError {\n");
+            sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  Code: ").Append(Code).Append("\n");
             sb.Append("  Message: ").Append(Message).Append("\n");
             sb.Append("  RequestId: ").Append(RequestId).Append("\n");
