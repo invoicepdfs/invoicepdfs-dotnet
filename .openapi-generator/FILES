@@ -2,6 +2,8 @@
 InvoicePDFs.sln
 api/openapi.yaml
 appveyor.yml
+docs/ApiErrorResponse.md
+docs/ApiErrorResponseError.md
 docs/ApiKeyCreateRequest.md
 docs/ApiKeyCreateResponse.md
 docs/ApiKeyCreated.md
@@ -107,7 +109,6 @@ docs/DocumentsListResponse.md
 docs/FileOut.md
 docs/FileResponse.md
 docs/FilesApi.md
-docs/HTTPValidationError.md
 docs/HealthApi.md
 docs/HealthResponse.md
 docs/ImportCreateRequest.md
@@ -139,7 +140,6 @@ docs/JobResponse.md
 docs/JobsApi.md
 docs/LineItemDiscountInput.md
 docs/LineItemTaxInput.md
-docs/LocationInner.md
 docs/LogsApi.md
 docs/Money.md
 docs/MoneyOut.md
@@ -196,7 +196,6 @@ docs/UsageData.md
 docs/UsagePeriod.md
 docs/UsageRenders.md
 docs/UsageResponse.md
-docs/ValidationError.md
 docs/VersionResponse.md
 docs/WebhookDeliveriesListResponse.md
 docs/WebhookDeliveryOut.md
@@ -220,6 +219,8 @@ docs/WorkspacesApi.md
 docs/WorkspacesListResponse.md
 git_push.sh
 src/InvoicePDFs.Test/InvoicePDFs.Test.csproj
+src/InvoicePDFs.Test/Model/ApiErrorResponseErrorTests.cs
+src/InvoicePDFs.Test/Model/ApiErrorResponseTests.cs
 src/InvoicePDFs/Api/ApiKeysApi.cs
 src/InvoicePDFs/Api/AuditLogApi.cs
 src/InvoicePDFs/Api/AuthApi.cs
@@ -266,6 +267,8 @@ src/InvoicePDFs/Client/RequestOptions.cs
 src/InvoicePDFs/Client/RetryConfiguration.cs
 src/InvoicePDFs/InvoicePDFs.csproj
 src/InvoicePDFs/Model/AbstractOpenAPISchema.cs
+src/InvoicePDFs/Model/ApiErrorResponse.cs
+src/InvoicePDFs/Model/ApiErrorResponseError.cs
 src/InvoicePDFs/Model/ApiKeyCreateRequest.cs
 src/InvoicePDFs/Model/ApiKeyCreateResponse.cs
 src/InvoicePDFs/Model/ApiKeyCreated.cs
@@ -360,7 +363,6 @@ src/InvoicePDFs/Model/DocumentValidateResponse.cs
 src/InvoicePDFs/Model/DocumentsListResponse.cs
 src/InvoicePDFs/Model/FileOut.cs
 src/InvoicePDFs/Model/FileResponse.cs
-src/InvoicePDFs/Model/HTTPValidationError.cs
 src/InvoicePDFs/Model/HealthResponse.cs
 src/InvoicePDFs/Model/ImportCreateRequest.cs
 src/InvoicePDFs/Model/ImportOut.cs
@@ -388,7 +390,6 @@ src/InvoicePDFs/Model/JobProgressOut.cs
 src/InvoicePDFs/Model/JobResponse.cs
 src/InvoicePDFs/Model/LineItemDiscountInput.cs
 src/InvoicePDFs/Model/LineItemTaxInput.cs
-src/InvoicePDFs/Model/LocationInner.cs
 src/InvoicePDFs/Model/Money.cs
 src/InvoicePDFs/Model/MoneyOut.cs
 src/InvoicePDFs/Model/NumberingSequenceCreateRequest.cs
@@ -434,7 +435,6 @@ src/InvoicePDFs/Model/UsageData.cs
 src/InvoicePDFs/Model/UsagePeriod.cs
 src/InvoicePDFs/Model/UsageRenders.cs
 src/InvoicePDFs/Model/UsageResponse.cs
-src/InvoicePDFs/Model/ValidationError.cs
 src/InvoicePDFs/Model/VersionResponse.cs
 src/InvoicePDFs/Model/WebhookDeliveriesListResponse.cs
 src/InvoicePDFs/Model/WebhookDeliveryOut.cs
