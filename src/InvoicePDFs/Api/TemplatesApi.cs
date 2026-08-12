@@ -194,8 +194,8 @@ namespace InvoicePDFs.Api
         /// <param name="documentRenderRequest"></param>
         /// <param name="idempotencyKey"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Object</returns>
-        Object PreviewTemplate(string templateId, DocumentRenderRequest documentRenderRequest, string? idempotencyKey = default(string?), int operationIndex = 0);
+        /// <returns>RenderResponse</returns>
+        RenderResponse PreviewTemplate(string templateId, DocumentRenderRequest documentRenderRequest, string? idempotencyKey = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// Preview Template
@@ -208,8 +208,8 @@ namespace InvoicePDFs.Api
         /// <param name="documentRenderRequest"></param>
         /// <param name="idempotencyKey"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Object</returns>
-        ApiResponse<Object> PreviewTemplateWithHttpInfo(string templateId, DocumentRenderRequest documentRenderRequest, string? idempotencyKey = default(string?), int operationIndex = 0);
+        /// <returns>ApiResponse of RenderResponse</returns>
+        ApiResponse<RenderResponse> PreviewTemplateWithHttpInfo(string templateId, DocumentRenderRequest documentRenderRequest, string? idempotencyKey = default(string?), int operationIndex = 0);
         /// <summary>
         /// Publish Template
         /// </summary>
@@ -473,8 +473,8 @@ namespace InvoicePDFs.Api
         /// <param name="idempotencyKey"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> PreviewTemplateAsync(string templateId, DocumentRenderRequest documentRenderRequest, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of RenderResponse</returns>
+        System.Threading.Tasks.Task<RenderResponse> PreviewTemplateAsync(string templateId, DocumentRenderRequest documentRenderRequest, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Preview Template
@@ -488,8 +488,8 @@ namespace InvoicePDFs.Api
         /// <param name="idempotencyKey"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> PreviewTemplateWithHttpInfoAsync(string templateId, DocumentRenderRequest documentRenderRequest, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (RenderResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RenderResponse>> PreviewTemplateWithHttpInfoAsync(string templateId, DocumentRenderRequest documentRenderRequest, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Publish Template
         /// </summary>
@@ -1906,10 +1906,10 @@ namespace InvoicePDFs.Api
         /// <param name="documentRenderRequest"></param>
         /// <param name="idempotencyKey"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Object</returns>
-        public Object PreviewTemplate(string templateId, DocumentRenderRequest documentRenderRequest, string? idempotencyKey = default(string?), int operationIndex = 0)
+        /// <returns>RenderResponse</returns>
+        public RenderResponse PreviewTemplate(string templateId, DocumentRenderRequest documentRenderRequest, string? idempotencyKey = default(string?), int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<Object> localVarResponse = PreviewTemplateWithHttpInfo(templateId, documentRenderRequest, idempotencyKey);
+            InvoicePDFs.Client.ApiResponse<RenderResponse> localVarResponse = PreviewTemplateWithHttpInfo(templateId, documentRenderRequest, idempotencyKey);
             return localVarResponse.Data;
         }
 
@@ -1921,8 +1921,8 @@ namespace InvoicePDFs.Api
         /// <param name="documentRenderRequest"></param>
         /// <param name="idempotencyKey"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Object</returns>
-        public InvoicePDFs.Client.ApiResponse<Object> PreviewTemplateWithHttpInfo(string templateId, DocumentRenderRequest documentRenderRequest, string? idempotencyKey = default(string?), int operationIndex = 0)
+        /// <returns>ApiResponse of RenderResponse</returns>
+        public InvoicePDFs.Client.ApiResponse<RenderResponse> PreviewTemplateWithHttpInfo(string templateId, DocumentRenderRequest documentRenderRequest, string? idempotencyKey = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'templateId' is set
             if (templateId == null)
@@ -1944,7 +1944,8 @@ namespace InvoicePDFs.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
-                "application/json"
+                "application/json",
+                "application/pdf"
             };
 
             var localVarContentType = InvoicePDFs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -1977,7 +1978,7 @@ namespace InvoicePDFs.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/api/v1/templates/{template_id}/preview", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<RenderResponse>("/api/v1/templates/{template_id}/preview", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("PreviewTemplate", localVarResponse);
@@ -1999,10 +2000,10 @@ namespace InvoicePDFs.Api
         /// <param name="idempotencyKey"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> PreviewTemplateAsync(string templateId, DocumentRenderRequest documentRenderRequest, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of RenderResponse</returns>
+        public async System.Threading.Tasks.Task<RenderResponse> PreviewTemplateAsync(string templateId, DocumentRenderRequest documentRenderRequest, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<Object> localVarResponse = await PreviewTemplateWithHttpInfoAsync(templateId, documentRenderRequest, idempotencyKey, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<RenderResponse> localVarResponse = await PreviewTemplateWithHttpInfoAsync(templateId, documentRenderRequest, idempotencyKey, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2015,8 +2016,8 @@ namespace InvoicePDFs.Api
         /// <param name="idempotencyKey"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<Object>> PreviewTemplateWithHttpInfoAsync(string templateId, DocumentRenderRequest documentRenderRequest, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (RenderResponse)</returns>
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<RenderResponse>> PreviewTemplateWithHttpInfoAsync(string templateId, DocumentRenderRequest documentRenderRequest, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'templateId' is set
             if (templateId == null)
@@ -2039,7 +2040,8 @@ namespace InvoicePDFs.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
-                "application/json"
+                "application/json",
+                "application/pdf"
             };
 
             var localVarContentType = InvoicePDFs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -2072,7 +2074,7 @@ namespace InvoicePDFs.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/api/v1/templates/{template_id}/preview", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<RenderResponse>("/api/v1/templates/{template_id}/preview", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {

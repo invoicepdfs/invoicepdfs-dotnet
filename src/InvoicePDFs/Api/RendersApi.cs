@@ -52,8 +52,8 @@ namespace InvoicePDFs.Api
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="renderId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Dictionary&lt;string, Object&gt;</returns>
-        Dictionary<string, Object> GetRender(string renderId, int operationIndex = 0);
+        /// <returns>RenderResponse</returns>
+        RenderResponse GetRender(string renderId, int operationIndex = 0);
 
         /// <summary>
         /// Get Render
@@ -64,8 +64,8 @@ namespace InvoicePDFs.Api
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="renderId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Dictionary&lt;string, Object&gt;</returns>
-        ApiResponse<Dictionary<string, Object>> GetRenderWithHttpInfo(string renderId, int operationIndex = 0);
+        /// <returns>ApiResponse of RenderResponse</returns>
+        ApiResponse<RenderResponse> GetRenderWithHttpInfo(string renderId, int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -110,8 +110,8 @@ namespace InvoicePDFs.Api
         /// <param name="renderId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Dictionary&lt;string, Object&gt;</returns>
-        System.Threading.Tasks.Task<Dictionary<string, Object>> GetRenderAsync(string renderId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of RenderResponse</returns>
+        System.Threading.Tasks.Task<RenderResponse> GetRenderAsync(string renderId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Get Render
@@ -123,8 +123,8 @@ namespace InvoicePDFs.Api
         /// <param name="renderId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Dictionary&lt;string, Object&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Dictionary<string, Object>>> GetRenderWithHttpInfoAsync(string renderId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (RenderResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RenderResponse>> GetRenderWithHttpInfoAsync(string renderId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -409,10 +409,10 @@ namespace InvoicePDFs.Api
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="renderId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Dictionary&lt;string, Object&gt;</returns>
-        public Dictionary<string, Object> GetRender(string renderId, int operationIndex = 0)
+        /// <returns>RenderResponse</returns>
+        public RenderResponse GetRender(string renderId, int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<Dictionary<string, Object>> localVarResponse = GetRenderWithHttpInfo(renderId);
+            InvoicePDFs.Client.ApiResponse<RenderResponse> localVarResponse = GetRenderWithHttpInfo(renderId);
             return localVarResponse.Data;
         }
 
@@ -422,8 +422,8 @@ namespace InvoicePDFs.Api
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="renderId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Dictionary&lt;string, Object&gt;</returns>
-        public InvoicePDFs.Client.ApiResponse<Dictionary<string, Object>> GetRenderWithHttpInfo(string renderId, int operationIndex = 0)
+        /// <returns>ApiResponse of RenderResponse</returns>
+        public InvoicePDFs.Client.ApiResponse<RenderResponse> GetRenderWithHttpInfo(string renderId, int operationIndex = 0)
         {
             // verify the required parameter 'renderId' is set
             if (renderId == null)
@@ -466,7 +466,7 @@ namespace InvoicePDFs.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Dictionary<string, Object>>("/api/v1/renders/{render_id}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<RenderResponse>("/api/v1/renders/{render_id}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("GetRender", localVarResponse);
@@ -486,10 +486,10 @@ namespace InvoicePDFs.Api
         /// <param name="renderId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Dictionary&lt;string, Object&gt;</returns>
-        public async System.Threading.Tasks.Task<Dictionary<string, Object>> GetRenderAsync(string renderId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of RenderResponse</returns>
+        public async System.Threading.Tasks.Task<RenderResponse> GetRenderAsync(string renderId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<Dictionary<string, Object>> localVarResponse = await GetRenderWithHttpInfoAsync(renderId, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<RenderResponse> localVarResponse = await GetRenderWithHttpInfoAsync(renderId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -500,8 +500,8 @@ namespace InvoicePDFs.Api
         /// <param name="renderId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Dictionary&lt;string, Object&gt;)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<Dictionary<string, Object>>> GetRenderWithHttpInfoAsync(string renderId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (RenderResponse)</returns>
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<RenderResponse>> GetRenderWithHttpInfoAsync(string renderId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'renderId' is set
             if (renderId == null)
@@ -545,7 +545,7 @@ namespace InvoicePDFs.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Dictionary<string, Object>>("/api/v1/renders/{render_id}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<RenderResponse>("/api/v1/renders/{render_id}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {

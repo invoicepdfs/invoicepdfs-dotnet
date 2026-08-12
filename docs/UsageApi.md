@@ -97,7 +97,7 @@ This endpoint does not need any parameter.
 
 <a id="getusagelimits"></a>
 # **GetUsageLimits**
-> Dictionary&lt;string, Object&gt; GetUsageLimits ()
+> UsageLimitsResponse GetUsageLimits ()
 
 Get Usage Limits
 
@@ -125,7 +125,7 @@ namespace Example
             try
             {
                 // Get Usage Limits
-                Dictionary<string, Object> result = apiInstance.GetUsageLimits();
+                UsageLimitsResponse result = apiInstance.GetUsageLimits();
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -146,7 +146,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Get Usage Limits
-    ApiResponse<Dictionary<string, Object>> response = apiInstance.GetUsageLimitsWithHttpInfo();
+    ApiResponse<UsageLimitsResponse> response = apiInstance.GetUsageLimitsWithHttpInfo();
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -163,7 +163,7 @@ catch (ApiException e)
 This endpoint does not need any parameter.
 ### Return type
 
-**Dictionary<string, Object>**
+[**UsageLimitsResponse**](UsageLimitsResponse.md)
 
 ### Authorization
 
@@ -184,7 +184,7 @@ This endpoint does not need any parameter.
 
 <a id="listusageevents"></a>
 # **ListUsageEvents**
-> Dictionary&lt;string, Object&gt; ListUsageEvents (int? limit = null, string? cursor = null)
+> UsageEventsListResponse ListUsageEvents (int? limit = null, string? cursor = null)
 
 List Usage Events
 
@@ -214,7 +214,7 @@ namespace Example
             try
             {
                 // List Usage Events
-                Dictionary<string, Object> result = apiInstance.ListUsageEvents(limit, cursor);
+                UsageEventsListResponse result = apiInstance.ListUsageEvents(limit, cursor);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -235,7 +235,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // List Usage Events
-    ApiResponse<Dictionary<string, Object>> response = apiInstance.ListUsageEventsWithHttpInfo(limit, cursor);
+    ApiResponse<UsageEventsListResponse> response = apiInstance.ListUsageEventsWithHttpInfo(limit, cursor);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -257,7 +257,7 @@ catch (ApiException e)
 
 ### Return type
 
-**Dictionary<string, Object>**
+[**UsageEventsListResponse**](UsageEventsListResponse.md)
 
 ### Authorization
 

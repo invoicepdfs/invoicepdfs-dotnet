@@ -102,7 +102,7 @@ catch (ApiException e)
 
 <a id="getrender"></a>
 # **GetRender**
-> Dictionary&lt;string, Object&gt; GetRender (string renderId)
+> RenderResponse GetRender (string renderId)
 
 Get Render
 
@@ -131,7 +131,7 @@ namespace Example
             try
             {
                 // Get Render
-                Dictionary<string, Object> result = apiInstance.GetRender(renderId);
+                RenderResponse result = apiInstance.GetRender(renderId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -152,7 +152,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Get Render
-    ApiResponse<Dictionary<string, Object>> response = apiInstance.GetRenderWithHttpInfo(renderId);
+    ApiResponse<RenderResponse> response = apiInstance.GetRenderWithHttpInfo(renderId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -173,7 +173,7 @@ catch (ApiException e)
 
 ### Return type
 
-**Dictionary<string, Object>**
+[**RenderResponse**](RenderResponse.md)
 
 ### Authorization
 

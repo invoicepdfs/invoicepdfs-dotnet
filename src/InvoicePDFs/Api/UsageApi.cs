@@ -49,8 +49,8 @@ namespace InvoicePDFs.Api
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Dictionary&lt;string, Object&gt;</returns>
-        Dictionary<string, Object> GetUsageLimits(int operationIndex = 0);
+        /// <returns>UsageLimitsResponse</returns>
+        UsageLimitsResponse GetUsageLimits(int operationIndex = 0);
 
         /// <summary>
         /// Get Usage Limits
@@ -60,8 +60,8 @@ namespace InvoicePDFs.Api
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Dictionary&lt;string, Object&gt;</returns>
-        ApiResponse<Dictionary<string, Object>> GetUsageLimitsWithHttpInfo(int operationIndex = 0);
+        /// <returns>ApiResponse of UsageLimitsResponse</returns>
+        ApiResponse<UsageLimitsResponse> GetUsageLimitsWithHttpInfo(int operationIndex = 0);
         /// <summary>
         /// List Usage Events
         /// </summary>
@@ -69,8 +69,8 @@ namespace InvoicePDFs.Api
         /// <param name="limit"> (optional, default to 50)</param>
         /// <param name="cursor"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Dictionary&lt;string, Object&gt;</returns>
-        Dictionary<string, Object> ListUsageEvents(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0);
+        /// <returns>UsageEventsListResponse</returns>
+        UsageEventsListResponse ListUsageEvents(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// List Usage Events
@@ -82,8 +82,8 @@ namespace InvoicePDFs.Api
         /// <param name="limit"> (optional, default to 50)</param>
         /// <param name="cursor"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Dictionary&lt;string, Object&gt;</returns>
-        ApiResponse<Dictionary<string, Object>> ListUsageEventsWithHttpInfo(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0);
+        /// <returns>ApiResponse of UsageEventsListResponse</returns>
+        ApiResponse<UsageEventsListResponse> ListUsageEventsWithHttpInfo(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -125,8 +125,8 @@ namespace InvoicePDFs.Api
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Dictionary&lt;string, Object&gt;</returns>
-        System.Threading.Tasks.Task<Dictionary<string, Object>> GetUsageLimitsAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of UsageLimitsResponse</returns>
+        System.Threading.Tasks.Task<UsageLimitsResponse> GetUsageLimitsAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Get Usage Limits
@@ -137,8 +137,8 @@ namespace InvoicePDFs.Api
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Dictionary&lt;string, Object&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Dictionary<string, Object>>> GetUsageLimitsWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (UsageLimitsResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<UsageLimitsResponse>> GetUsageLimitsWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// List Usage Events
         /// </summary>
@@ -150,8 +150,8 @@ namespace InvoicePDFs.Api
         /// <param name="cursor"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Dictionary&lt;string, Object&gt;</returns>
-        System.Threading.Tasks.Task<Dictionary<string, Object>> ListUsageEventsAsync(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of UsageEventsListResponse</returns>
+        System.Threading.Tasks.Task<UsageEventsListResponse> ListUsageEventsAsync(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// List Usage Events
@@ -164,8 +164,8 @@ namespace InvoicePDFs.Api
         /// <param name="cursor"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Dictionary&lt;string, Object&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Dictionary<string, Object>>> ListUsageEventsWithHttpInfoAsync(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (UsageEventsListResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<UsageEventsListResponse>> ListUsageEventsWithHttpInfoAsync(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -429,10 +429,10 @@ namespace InvoicePDFs.Api
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Dictionary&lt;string, Object&gt;</returns>
-        public Dictionary<string, Object> GetUsageLimits(int operationIndex = 0)
+        /// <returns>UsageLimitsResponse</returns>
+        public UsageLimitsResponse GetUsageLimits(int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<Dictionary<string, Object>> localVarResponse = GetUsageLimitsWithHttpInfo();
+            InvoicePDFs.Client.ApiResponse<UsageLimitsResponse> localVarResponse = GetUsageLimitsWithHttpInfo();
             return localVarResponse.Data;
         }
 
@@ -441,8 +441,8 @@ namespace InvoicePDFs.Api
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Dictionary&lt;string, Object&gt;</returns>
-        public InvoicePDFs.Client.ApiResponse<Dictionary<string, Object>> GetUsageLimitsWithHttpInfo(int operationIndex = 0)
+        /// <returns>ApiResponse of UsageLimitsResponse</returns>
+        public InvoicePDFs.Client.ApiResponse<UsageLimitsResponse> GetUsageLimitsWithHttpInfo(int operationIndex = 0)
         {
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
 
@@ -478,7 +478,7 @@ namespace InvoicePDFs.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Dictionary<string, Object>>("/api/v1/usage/limits", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<UsageLimitsResponse>("/api/v1/usage/limits", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("GetUsageLimits", localVarResponse);
@@ -497,10 +497,10 @@ namespace InvoicePDFs.Api
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Dictionary&lt;string, Object&gt;</returns>
-        public async System.Threading.Tasks.Task<Dictionary<string, Object>> GetUsageLimitsAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of UsageLimitsResponse</returns>
+        public async System.Threading.Tasks.Task<UsageLimitsResponse> GetUsageLimitsAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<Dictionary<string, Object>> localVarResponse = await GetUsageLimitsWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<UsageLimitsResponse> localVarResponse = await GetUsageLimitsWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -510,8 +510,8 @@ namespace InvoicePDFs.Api
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Dictionary&lt;string, Object&gt;)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<Dictionary<string, Object>>> GetUsageLimitsWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (UsageLimitsResponse)</returns>
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<UsageLimitsResponse>> GetUsageLimitsWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -548,7 +548,7 @@ namespace InvoicePDFs.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Dictionary<string, Object>>("/api/v1/usage/limits", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<UsageLimitsResponse>("/api/v1/usage/limits", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -569,10 +569,10 @@ namespace InvoicePDFs.Api
         /// <param name="limit"> (optional, default to 50)</param>
         /// <param name="cursor"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Dictionary&lt;string, Object&gt;</returns>
-        public Dictionary<string, Object> ListUsageEvents(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0)
+        /// <returns>UsageEventsListResponse</returns>
+        public UsageEventsListResponse ListUsageEvents(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<Dictionary<string, Object>> localVarResponse = ListUsageEventsWithHttpInfo(limit, cursor);
+            InvoicePDFs.Client.ApiResponse<UsageEventsListResponse> localVarResponse = ListUsageEventsWithHttpInfo(limit, cursor);
             return localVarResponse.Data;
         }
 
@@ -583,8 +583,8 @@ namespace InvoicePDFs.Api
         /// <param name="limit"> (optional, default to 50)</param>
         /// <param name="cursor"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Dictionary&lt;string, Object&gt;</returns>
-        public InvoicePDFs.Client.ApiResponse<Dictionary<string, Object>> ListUsageEventsWithHttpInfo(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0)
+        /// <returns>ApiResponse of UsageEventsListResponse</returns>
+        public InvoicePDFs.Client.ApiResponse<UsageEventsListResponse> ListUsageEventsWithHttpInfo(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0)
         {
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
 
@@ -628,7 +628,7 @@ namespace InvoicePDFs.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Dictionary<string, Object>>("/api/v1/usage/events", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<UsageEventsListResponse>("/api/v1/usage/events", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ListUsageEvents", localVarResponse);
@@ -649,10 +649,10 @@ namespace InvoicePDFs.Api
         /// <param name="cursor"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Dictionary&lt;string, Object&gt;</returns>
-        public async System.Threading.Tasks.Task<Dictionary<string, Object>> ListUsageEventsAsync(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of UsageEventsListResponse</returns>
+        public async System.Threading.Tasks.Task<UsageEventsListResponse> ListUsageEventsAsync(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<Dictionary<string, Object>> localVarResponse = await ListUsageEventsWithHttpInfoAsync(limit, cursor, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<UsageEventsListResponse> localVarResponse = await ListUsageEventsWithHttpInfoAsync(limit, cursor, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -664,8 +664,8 @@ namespace InvoicePDFs.Api
         /// <param name="cursor"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Dictionary&lt;string, Object&gt;)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<Dictionary<string, Object>>> ListUsageEventsWithHttpInfoAsync(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (UsageEventsListResponse)</returns>
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<UsageEventsListResponse>> ListUsageEventsWithHttpInfoAsync(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
@@ -710,7 +710,7 @@ namespace InvoicePDFs.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Dictionary<string, Object>>("/api/v1/usage/events", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<UsageEventsListResponse>("/api/v1/usage/events", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {

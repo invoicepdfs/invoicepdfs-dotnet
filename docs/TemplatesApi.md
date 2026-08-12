@@ -754,7 +754,7 @@ This endpoint does not need any parameter.
 
 <a id="previewtemplate"></a>
 # **PreviewTemplate**
-> Object PreviewTemplate (string templateId, DocumentRenderRequest documentRenderRequest, string? idempotencyKey = null)
+> RenderResponse PreviewTemplate (string templateId, DocumentRenderRequest documentRenderRequest, string? idempotencyKey = null)
 
 Preview Template
 
@@ -785,7 +785,7 @@ namespace Example
             try
             {
                 // Preview Template
-                Object result = apiInstance.PreviewTemplate(templateId, documentRenderRequest, idempotencyKey);
+                RenderResponse result = apiInstance.PreviewTemplate(templateId, documentRenderRequest, idempotencyKey);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -806,7 +806,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Preview Template
-    ApiResponse<Object> response = apiInstance.PreviewTemplateWithHttpInfo(templateId, documentRenderRequest, idempotencyKey);
+    ApiResponse<RenderResponse> response = apiInstance.PreviewTemplateWithHttpInfo(templateId, documentRenderRequest, idempotencyKey);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -829,7 +829,7 @@ catch (ApiException e)
 
 ### Return type
 
-**Object**
+[**RenderResponse**](RenderResponse.md)
 
 ### Authorization
 
@@ -838,13 +838,13 @@ catch (ApiException e)
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Accept**: application/json, application/pdf
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Successful Response |  -  |
+| **200** | The rendered preview. Returns the PDF itself instead when &#x60;output.delivery&#x60; is &#x60;binary&#x60; or the request sends &#x60;Accept: application/pdf&#x60;. |  -  |
 | **422** | Validation Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

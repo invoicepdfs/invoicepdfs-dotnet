@@ -72,8 +72,8 @@ namespace InvoicePDFs.Api
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="batchId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Object</returns>
-        Object DownloadBatch(string batchId, int operationIndex = 0);
+        /// <returns>System.IO.Stream</returns>
+        System.IO.Stream DownloadBatch(string batchId, int operationIndex = 0);
 
         /// <summary>
         /// Download Batch
@@ -84,8 +84,8 @@ namespace InvoicePDFs.Api
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="batchId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Object</returns>
-        ApiResponse<Object> DownloadBatchWithHttpInfo(string batchId, int operationIndex = 0);
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        ApiResponse<System.IO.Stream> DownloadBatchWithHttpInfo(string batchId, int operationIndex = 0);
         /// <summary>
         /// Get Batch
         /// </summary>
@@ -221,8 +221,8 @@ namespace InvoicePDFs.Api
         /// <param name="batchId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> DownloadBatchAsync(string batchId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of System.IO.Stream</returns>
+        System.Threading.Tasks.Task<System.IO.Stream> DownloadBatchAsync(string batchId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Download Batch
@@ -234,8 +234,8 @@ namespace InvoicePDFs.Api
         /// <param name="batchId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DownloadBatchWithHttpInfoAsync(string batchId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> DownloadBatchWithHttpInfoAsync(string batchId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Get Batch
         /// </summary>
@@ -757,10 +757,10 @@ namespace InvoicePDFs.Api
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="batchId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Object</returns>
-        public Object DownloadBatch(string batchId, int operationIndex = 0)
+        /// <returns>System.IO.Stream</returns>
+        public System.IO.Stream DownloadBatch(string batchId, int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<Object> localVarResponse = DownloadBatchWithHttpInfo(batchId);
+            InvoicePDFs.Client.ApiResponse<System.IO.Stream> localVarResponse = DownloadBatchWithHttpInfo(batchId);
             return localVarResponse.Data;
         }
 
@@ -770,8 +770,8 @@ namespace InvoicePDFs.Api
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="batchId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Object</returns>
-        public InvoicePDFs.Client.ApiResponse<Object> DownloadBatchWithHttpInfo(string batchId, int operationIndex = 0)
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        public InvoicePDFs.Client.ApiResponse<System.IO.Stream> DownloadBatchWithHttpInfo(string batchId, int operationIndex = 0)
         {
             // verify the required parameter 'batchId' is set
             if (batchId == null)
@@ -786,6 +786,7 @@ namespace InvoicePDFs.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+                "application/zip",
                 "application/json"
             };
 
@@ -814,7 +815,7 @@ namespace InvoicePDFs.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Object>("/api/v1/batches/{batch_id}/download", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<System.IO.Stream>("/api/v1/batches/{batch_id}/download", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("DownloadBatch", localVarResponse);
@@ -834,10 +835,10 @@ namespace InvoicePDFs.Api
         /// <param name="batchId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> DownloadBatchAsync(string batchId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of System.IO.Stream</returns>
+        public async System.Threading.Tasks.Task<System.IO.Stream> DownloadBatchAsync(string batchId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<Object> localVarResponse = await DownloadBatchWithHttpInfoAsync(batchId, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<System.IO.Stream> localVarResponse = await DownloadBatchWithHttpInfoAsync(batchId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -848,8 +849,8 @@ namespace InvoicePDFs.Api
         /// <param name="batchId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<Object>> DownloadBatchWithHttpInfoAsync(string batchId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<System.IO.Stream>> DownloadBatchWithHttpInfoAsync(string batchId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'batchId' is set
             if (batchId == null)
@@ -865,6 +866,7 @@ namespace InvoicePDFs.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+                "application/zip",
                 "application/json"
             };
 
@@ -893,7 +895,7 @@ namespace InvoicePDFs.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Object>("/api/v1/batches/{batch_id}/download", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<System.IO.Stream>("/api/v1/batches/{batch_id}/download", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {

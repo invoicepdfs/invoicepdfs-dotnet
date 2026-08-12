@@ -13,7 +13,7 @@ All URIs are relative to *http://localhost*
 
 <a id="listcountries"></a>
 # **ListCountries**
-> Dictionary&lt;string, Object&gt; ListCountries ()
+> CountriesListResponse ListCountries ()
 
 List Countries
 
@@ -38,7 +38,7 @@ namespace Example
             try
             {
                 // List Countries
-                Dictionary<string, Object> result = apiInstance.ListCountries();
+                CountriesListResponse result = apiInstance.ListCountries();
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -59,7 +59,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // List Countries
-    ApiResponse<Dictionary<string, Object>> response = apiInstance.ListCountriesWithHttpInfo();
+    ApiResponse<CountriesListResponse> response = apiInstance.ListCountriesWithHttpInfo();
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -76,7 +76,7 @@ catch (ApiException e)
 This endpoint does not need any parameter.
 ### Return type
 
-**Dictionary<string, Object>**
+[**CountriesListResponse**](CountriesListResponse.md)
 
 ### Authorization
 
@@ -97,7 +97,7 @@ No authorization required
 
 <a id="listcurrencies"></a>
 # **ListCurrencies**
-> Dictionary&lt;string, Object&gt; ListCurrencies ()
+> CurrenciesListResponse ListCurrencies ()
 
 List Currencies
 
@@ -122,7 +122,7 @@ namespace Example
             try
             {
                 // List Currencies
-                Dictionary<string, Object> result = apiInstance.ListCurrencies();
+                CurrenciesListResponse result = apiInstance.ListCurrencies();
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -143,7 +143,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // List Currencies
-    ApiResponse<Dictionary<string, Object>> response = apiInstance.ListCurrenciesWithHttpInfo();
+    ApiResponse<CurrenciesListResponse> response = apiInstance.ListCurrenciesWithHttpInfo();
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -160,7 +160,7 @@ catch (ApiException e)
 This endpoint does not need any parameter.
 ### Return type
 
-**Dictionary<string, Object>**
+[**CurrenciesListResponse**](CurrenciesListResponse.md)
 
 ### Authorization
 
@@ -181,7 +181,7 @@ No authorization required
 
 <a id="listdocumenttypes"></a>
 # **ListDocumentTypes**
-> Dictionary&lt;string, Object&gt; ListDocumentTypes ()
+> DocumentTypesListResponse ListDocumentTypes ()
 
 List Document Types
 
@@ -208,7 +208,7 @@ namespace Example
             try
             {
                 // List Document Types
-                Dictionary<string, Object> result = apiInstance.ListDocumentTypes();
+                DocumentTypesListResponse result = apiInstance.ListDocumentTypes();
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -229,7 +229,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // List Document Types
-    ApiResponse<Dictionary<string, Object>> response = apiInstance.ListDocumentTypesWithHttpInfo();
+    ApiResponse<DocumentTypesListResponse> response = apiInstance.ListDocumentTypesWithHttpInfo();
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -246,7 +246,7 @@ catch (ApiException e)
 This endpoint does not need any parameter.
 ### Return type
 
-**Dictionary<string, Object>**
+[**DocumentTypesListResponse**](DocumentTypesListResponse.md)
 
 ### Authorization
 
@@ -267,7 +267,7 @@ No authorization required
 
 <a id="listlocales"></a>
 # **ListLocales**
-> Dictionary&lt;string, Object&gt; ListLocales ()
+> LocalesListResponse ListLocales ()
 
 List Locales
 
@@ -292,7 +292,7 @@ namespace Example
             try
             {
                 // List Locales
-                Dictionary<string, Object> result = apiInstance.ListLocales();
+                LocalesListResponse result = apiInstance.ListLocales();
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -313,7 +313,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // List Locales
-    ApiResponse<Dictionary<string, Object>> response = apiInstance.ListLocalesWithHttpInfo();
+    ApiResponse<LocalesListResponse> response = apiInstance.ListLocalesWithHttpInfo();
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -330,7 +330,7 @@ catch (ApiException e)
 This endpoint does not need any parameter.
 ### Return type
 
-**Dictionary<string, Object>**
+[**LocalesListResponse**](LocalesListResponse.md)
 
 ### Authorization
 
@@ -351,7 +351,7 @@ No authorization required
 
 <a id="listpagesizes"></a>
 # **ListPageSizes**
-> Dictionary&lt;string, Object&gt; ListPageSizes ()
+> PageSizesListResponse ListPageSizes ()
 
 List Page Sizes
 
@@ -376,7 +376,7 @@ namespace Example
             try
             {
                 // List Page Sizes
-                Dictionary<string, Object> result = apiInstance.ListPageSizes();
+                PageSizesListResponse result = apiInstance.ListPageSizes();
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -397,7 +397,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // List Page Sizes
-    ApiResponse<Dictionary<string, Object>> response = apiInstance.ListPageSizesWithHttpInfo();
+    ApiResponse<PageSizesListResponse> response = apiInstance.ListPageSizesWithHttpInfo();
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -414,7 +414,7 @@ catch (ApiException e)
 This endpoint does not need any parameter.
 ### Return type
 
-**Dictionary<string, Object>**
+[**PageSizesListResponse**](PageSizesListResponse.md)
 
 ### Authorization
 
@@ -435,7 +435,7 @@ No authorization required
 
 <a id="listtimezones"></a>
 # **ListTimezones**
-> Dictionary&lt;string, Object&gt; ListTimezones ()
+> TimezonesListResponse ListTimezones ()
 
 List Timezones
 
@@ -460,7 +460,7 @@ namespace Example
             try
             {
                 // List Timezones
-                Dictionary<string, Object> result = apiInstance.ListTimezones();
+                TimezonesListResponse result = apiInstance.ListTimezones();
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -481,7 +481,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // List Timezones
-    ApiResponse<Dictionary<string, Object>> response = apiInstance.ListTimezonesWithHttpInfo();
+    ApiResponse<TimezonesListResponse> response = apiInstance.ListTimezonesWithHttpInfo();
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -498,7 +498,7 @@ catch (ApiException e)
 This endpoint does not need any parameter.
 ### Return type
 
-**Dictionary<string, Object>**
+[**TimezonesListResponse**](TimezonesListResponse.md)
 
 ### Authorization
 

@@ -96,8 +96,8 @@ namespace InvoicePDFs.Api
         /// <param name="documentRenderOptions"></param>
         /// <param name="idempotencyKey"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Object</returns>
-        Object CreateDocumentRender(string documentId, DocumentRenderOptions documentRenderOptions, string? idempotencyKey = default(string?), int operationIndex = 0);
+        /// <returns>RenderResponse</returns>
+        RenderResponse CreateDocumentRender(string documentId, DocumentRenderOptions documentRenderOptions, string? idempotencyKey = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// Create Document Render
@@ -110,8 +110,8 @@ namespace InvoicePDFs.Api
         /// <param name="documentRenderOptions"></param>
         /// <param name="idempotencyKey"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Object</returns>
-        ApiResponse<Object> CreateDocumentRenderWithHttpInfo(string documentId, DocumentRenderOptions documentRenderOptions, string? idempotencyKey = default(string?), int operationIndex = 0);
+        /// <returns>ApiResponse of RenderResponse</returns>
+        ApiResponse<RenderResponse> CreateDocumentRenderWithHttpInfo(string documentId, DocumentRenderOptions documentRenderOptions, string? idempotencyKey = default(string?), int operationIndex = 0);
         /// <summary>
         /// Delete Document
         /// </summary>
@@ -309,8 +309,8 @@ namespace InvoicePDFs.Api
         /// <param name="documentRenderRequest"></param>
         /// <param name="idempotencyKey"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Object</returns>
-        Object RenderDocument(DocumentRenderRequest documentRenderRequest, string? idempotencyKey = default(string?), int operationIndex = 0);
+        /// <returns>RenderResponse</returns>
+        RenderResponse RenderDocument(DocumentRenderRequest documentRenderRequest, string? idempotencyKey = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// Render Document
@@ -322,8 +322,8 @@ namespace InvoicePDFs.Api
         /// <param name="documentRenderRequest"></param>
         /// <param name="idempotencyKey"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Object</returns>
-        ApiResponse<Object> RenderDocumentWithHttpInfo(DocumentRenderRequest documentRenderRequest, string? idempotencyKey = default(string?), int operationIndex = 0);
+        /// <returns>ApiResponse of RenderResponse</returns>
+        ApiResponse<RenderResponse> RenderDocumentWithHttpInfo(DocumentRenderRequest documentRenderRequest, string? idempotencyKey = default(string?), int operationIndex = 0);
         /// <summary>
         /// Restore Document
         /// </summary>
@@ -526,8 +526,8 @@ namespace InvoicePDFs.Api
         /// <param name="idempotencyKey"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> CreateDocumentRenderAsync(string documentId, DocumentRenderOptions documentRenderOptions, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of RenderResponse</returns>
+        System.Threading.Tasks.Task<RenderResponse> CreateDocumentRenderAsync(string documentId, DocumentRenderOptions documentRenderOptions, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Create Document Render
@@ -541,8 +541,8 @@ namespace InvoicePDFs.Api
         /// <param name="idempotencyKey"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> CreateDocumentRenderWithHttpInfoAsync(string documentId, DocumentRenderOptions documentRenderOptions, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (RenderResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RenderResponse>> CreateDocumentRenderWithHttpInfoAsync(string documentId, DocumentRenderOptions documentRenderOptions, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Delete Document
         /// </summary>
@@ -789,8 +789,8 @@ namespace InvoicePDFs.Api
         /// <param name="idempotencyKey"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> RenderDocumentAsync(DocumentRenderRequest documentRenderRequest, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of RenderResponse</returns>
+        System.Threading.Tasks.Task<RenderResponse> RenderDocumentAsync(DocumentRenderRequest documentRenderRequest, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Render Document
@@ -803,8 +803,8 @@ namespace InvoicePDFs.Api
         /// <param name="idempotencyKey"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> RenderDocumentWithHttpInfoAsync(DocumentRenderRequest documentRenderRequest, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (RenderResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RenderResponse>> RenderDocumentWithHttpInfoAsync(DocumentRenderRequest documentRenderRequest, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Restore Document
         /// </summary>
@@ -1546,10 +1546,10 @@ namespace InvoicePDFs.Api
         /// <param name="documentRenderOptions"></param>
         /// <param name="idempotencyKey"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Object</returns>
-        public Object CreateDocumentRender(string documentId, DocumentRenderOptions documentRenderOptions, string? idempotencyKey = default(string?), int operationIndex = 0)
+        /// <returns>RenderResponse</returns>
+        public RenderResponse CreateDocumentRender(string documentId, DocumentRenderOptions documentRenderOptions, string? idempotencyKey = default(string?), int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<Object> localVarResponse = CreateDocumentRenderWithHttpInfo(documentId, documentRenderOptions, idempotencyKey);
+            InvoicePDFs.Client.ApiResponse<RenderResponse> localVarResponse = CreateDocumentRenderWithHttpInfo(documentId, documentRenderOptions, idempotencyKey);
             return localVarResponse.Data;
         }
 
@@ -1561,8 +1561,8 @@ namespace InvoicePDFs.Api
         /// <param name="documentRenderOptions"></param>
         /// <param name="idempotencyKey"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Object</returns>
-        public InvoicePDFs.Client.ApiResponse<Object> CreateDocumentRenderWithHttpInfo(string documentId, DocumentRenderOptions documentRenderOptions, string? idempotencyKey = default(string?), int operationIndex = 0)
+        /// <returns>ApiResponse of RenderResponse</returns>
+        public InvoicePDFs.Client.ApiResponse<RenderResponse> CreateDocumentRenderWithHttpInfo(string documentId, DocumentRenderOptions documentRenderOptions, string? idempotencyKey = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'documentId' is set
             if (documentId == null)
@@ -1617,7 +1617,7 @@ namespace InvoicePDFs.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/api/v1/documents/{document_id}/renders", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<RenderResponse>("/api/v1/documents/{document_id}/renders", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("CreateDocumentRender", localVarResponse);
@@ -1639,10 +1639,10 @@ namespace InvoicePDFs.Api
         /// <param name="idempotencyKey"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> CreateDocumentRenderAsync(string documentId, DocumentRenderOptions documentRenderOptions, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of RenderResponse</returns>
+        public async System.Threading.Tasks.Task<RenderResponse> CreateDocumentRenderAsync(string documentId, DocumentRenderOptions documentRenderOptions, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<Object> localVarResponse = await CreateDocumentRenderWithHttpInfoAsync(documentId, documentRenderOptions, idempotencyKey, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<RenderResponse> localVarResponse = await CreateDocumentRenderWithHttpInfoAsync(documentId, documentRenderOptions, idempotencyKey, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1655,8 +1655,8 @@ namespace InvoicePDFs.Api
         /// <param name="idempotencyKey"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<Object>> CreateDocumentRenderWithHttpInfoAsync(string documentId, DocumentRenderOptions documentRenderOptions, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (RenderResponse)</returns>
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<RenderResponse>> CreateDocumentRenderWithHttpInfoAsync(string documentId, DocumentRenderOptions documentRenderOptions, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'documentId' is set
             if (documentId == null)
@@ -1712,7 +1712,7 @@ namespace InvoicePDFs.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/api/v1/documents/{document_id}/renders", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<RenderResponse>("/api/v1/documents/{document_id}/renders", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -3191,10 +3191,10 @@ namespace InvoicePDFs.Api
         /// <param name="documentRenderRequest"></param>
         /// <param name="idempotencyKey"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Object</returns>
-        public Object RenderDocument(DocumentRenderRequest documentRenderRequest, string? idempotencyKey = default(string?), int operationIndex = 0)
+        /// <returns>RenderResponse</returns>
+        public RenderResponse RenderDocument(DocumentRenderRequest documentRenderRequest, string? idempotencyKey = default(string?), int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<Object> localVarResponse = RenderDocumentWithHttpInfo(documentRenderRequest, idempotencyKey);
+            InvoicePDFs.Client.ApiResponse<RenderResponse> localVarResponse = RenderDocumentWithHttpInfo(documentRenderRequest, idempotencyKey);
             return localVarResponse.Data;
         }
 
@@ -3205,8 +3205,8 @@ namespace InvoicePDFs.Api
         /// <param name="documentRenderRequest"></param>
         /// <param name="idempotencyKey"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Object</returns>
-        public InvoicePDFs.Client.ApiResponse<Object> RenderDocumentWithHttpInfo(DocumentRenderRequest documentRenderRequest, string? idempotencyKey = default(string?), int operationIndex = 0)
+        /// <returns>ApiResponse of RenderResponse</returns>
+        public InvoicePDFs.Client.ApiResponse<RenderResponse> RenderDocumentWithHttpInfo(DocumentRenderRequest documentRenderRequest, string? idempotencyKey = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'documentRenderRequest' is set
             if (documentRenderRequest == null)
@@ -3222,7 +3222,8 @@ namespace InvoicePDFs.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
-                "application/json"
+                "application/json",
+                "application/pdf"
             };
 
             var localVarContentType = InvoicePDFs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -3254,7 +3255,7 @@ namespace InvoicePDFs.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/api/v1/documents/render", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<RenderResponse>("/api/v1/documents/render", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("RenderDocument", localVarResponse);
@@ -3275,10 +3276,10 @@ namespace InvoicePDFs.Api
         /// <param name="idempotencyKey"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> RenderDocumentAsync(DocumentRenderRequest documentRenderRequest, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of RenderResponse</returns>
+        public async System.Threading.Tasks.Task<RenderResponse> RenderDocumentAsync(DocumentRenderRequest documentRenderRequest, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<Object> localVarResponse = await RenderDocumentWithHttpInfoAsync(documentRenderRequest, idempotencyKey, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<RenderResponse> localVarResponse = await RenderDocumentWithHttpInfoAsync(documentRenderRequest, idempotencyKey, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -3290,8 +3291,8 @@ namespace InvoicePDFs.Api
         /// <param name="idempotencyKey"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<Object>> RenderDocumentWithHttpInfoAsync(DocumentRenderRequest documentRenderRequest, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (RenderResponse)</returns>
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<RenderResponse>> RenderDocumentWithHttpInfoAsync(DocumentRenderRequest documentRenderRequest, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'documentRenderRequest' is set
             if (documentRenderRequest == null)
@@ -3308,7 +3309,8 @@ namespace InvoicePDFs.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
-                "application/json"
+                "application/json",
+                "application/pdf"
             };
 
             var localVarContentType = InvoicePDFs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -3340,7 +3342,7 @@ namespace InvoicePDFs.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/api/v1/documents/render", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<RenderResponse>("/api/v1/documents/render", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {

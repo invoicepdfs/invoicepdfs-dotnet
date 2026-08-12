@@ -199,7 +199,7 @@ catch (ApiException e)
 
 <a id="downloadbatch"></a>
 # **DownloadBatch**
-> Object DownloadBatch (string batchId)
+> System.IO.Stream DownloadBatch (string batchId)
 
 Download Batch
 
@@ -228,7 +228,7 @@ namespace Example
             try
             {
                 // Download Batch
-                Object result = apiInstance.DownloadBatch(batchId);
+                System.IO.Stream result = apiInstance.DownloadBatch(batchId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -249,7 +249,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Download Batch
-    ApiResponse<Object> response = apiInstance.DownloadBatchWithHttpInfo(batchId);
+    ApiResponse<System.IO.Stream> response = apiInstance.DownloadBatchWithHttpInfo(batchId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -270,7 +270,7 @@ catch (ApiException e)
 
 ### Return type
 
-**Object**
+**System.IO.Stream**
 
 ### Authorization
 
@@ -279,13 +279,13 @@ catch (ApiException e)
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: application/zip, application/json
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Successful Response |  -  |
+| **200** | ZIP archive of every completed render in the batch |  -  |
 | **422** | Validation Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
