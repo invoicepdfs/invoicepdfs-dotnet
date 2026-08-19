@@ -39,12 +39,14 @@ namespace InvoicePDFs.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="InvoiceTotalsOut" /> class.
         /// </summary>
+        /// <param name="grossSubtotal">grossSubtotal.</param>
         /// <param name="subtotal">subtotal (required).</param>
         /// <param name="discountTotal">discountTotal (required).</param>
+        /// <param name="documentDiscountTotal">documentDiscountTotal.</param>
         /// <param name="taxTotal">taxTotal (required).</param>
         /// <param name="shippingTotal">shippingTotal (required).</param>
         /// <param name="total">total (required).</param>
-        public InvoiceTotalsOut(MoneyOut subtotal = default(MoneyOut), MoneyOut discountTotal = default(MoneyOut), MoneyOut taxTotal = default(MoneyOut), MoneyOut shippingTotal = default(MoneyOut), MoneyOut total = default(MoneyOut))
+        public InvoiceTotalsOut(MoneyOut grossSubtotal = default(MoneyOut), MoneyOut subtotal = default(MoneyOut), MoneyOut discountTotal = default(MoneyOut), MoneyOut documentDiscountTotal = default(MoneyOut), MoneyOut taxTotal = default(MoneyOut), MoneyOut shippingTotal = default(MoneyOut), MoneyOut total = default(MoneyOut))
         {
             // to ensure "subtotal" is required (not null)
             if (subtotal == null)
@@ -76,7 +78,15 @@ namespace InvoicePDFs.Model
                 throw new ArgumentNullException("total is a required property for InvoiceTotalsOut and cannot be null");
             }
             this.Total = total;
+            this.GrossSubtotal = grossSubtotal;
+            this.DocumentDiscountTotal = documentDiscountTotal;
         }
+
+        /// <summary>
+        /// Gets or Sets GrossSubtotal
+        /// </summary>
+        [DataMember(Name = "gross_subtotal", EmitDefaultValue = false)]
+        public MoneyOut GrossSubtotal { get; set; }
 
         /// <summary>
         /// Gets or Sets Subtotal
@@ -89,6 +99,12 @@ namespace InvoicePDFs.Model
         /// </summary>
         [DataMember(Name = "discount_total", IsRequired = true, EmitDefaultValue = true)]
         public MoneyOut DiscountTotal { get; set; }
+
+        /// <summary>
+        /// Gets or Sets DocumentDiscountTotal
+        /// </summary>
+        [DataMember(Name = "document_discount_total", EmitDefaultValue = false)]
+        public MoneyOut DocumentDiscountTotal { get; set; }
 
         /// <summary>
         /// Gets or Sets TaxTotal
@@ -116,8 +132,10 @@ namespace InvoicePDFs.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class InvoiceTotalsOut {\n");
+            sb.Append("  GrossSubtotal: ").Append(GrossSubtotal).Append("\n");
             sb.Append("  Subtotal: ").Append(Subtotal).Append("\n");
             sb.Append("  DiscountTotal: ").Append(DiscountTotal).Append("\n");
+            sb.Append("  DocumentDiscountTotal: ").Append(DocumentDiscountTotal).Append("\n");
             sb.Append("  TaxTotal: ").Append(TaxTotal).Append("\n");
             sb.Append("  ShippingTotal: ").Append(ShippingTotal).Append("\n");
             sb.Append("  Total: ").Append(Total).Append("\n");

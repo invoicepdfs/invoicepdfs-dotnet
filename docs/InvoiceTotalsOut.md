@@ -4,8 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**GrossSubtotal** | [**MoneyOut**](MoneyOut.md) |  | [optional] 
 **Subtotal** | [**MoneyOut**](MoneyOut.md) |  | 
 **DiscountTotal** | [**MoneyOut**](MoneyOut.md) |  | 
+**DocumentDiscountTotal** | [**MoneyOut**](MoneyOut.md) |  | [optional] 
 **TaxTotal** | [**MoneyOut**](MoneyOut.md) |  | 
 **ShippingTotal** | [**MoneyOut**](MoneyOut.md) |  | 
 **Total** | [**MoneyOut**](MoneyOut.md) |  | 
