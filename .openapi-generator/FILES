@@ -241,8 +241,6 @@ docs/WorkspacesApi.md
 docs/WorkspacesListResponse.md
 git_push.sh
 src/InvoicePDFs.Test/InvoicePDFs.Test.csproj
-src/InvoicePDFs.Test/Model/NumberingNextOutTests.cs
-src/InvoicePDFs.Test/Model/NumberingNextResponseTests.cs
 src/InvoicePDFs/Api/ApiKeysApi.cs
 src/InvoicePDFs/Api/AuditLogApi.cs
 src/InvoicePDFs/Api/AuthApi.cs
