@@ -41,10 +41,11 @@ namespace InvoicePDFs.Model
         /// </summary>
         /// <param name="subtotal">subtotal (required).</param>
         /// <param name="discountTotal">discountTotal (required).</param>
+        /// <param name="documentDiscountTotal">documentDiscountTotal.</param>
         /// <param name="taxTotal">taxTotal (required).</param>
         /// <param name="shippingTotal">shippingTotal (required).</param>
         /// <param name="total">total (required).</param>
-        public CalculationBreakdown(Money subtotal = default(Money), Money discountTotal = default(Money), Money taxTotal = default(Money), Money shippingTotal = default(Money), Money total = default(Money))
+        public CalculationBreakdown(Money subtotal = default(Money), Money discountTotal = default(Money), Money documentDiscountTotal = default(Money), Money taxTotal = default(Money), Money shippingTotal = default(Money), Money total = default(Money))
         {
             // to ensure "subtotal" is required (not null)
             if (subtotal == null)
@@ -76,6 +77,7 @@ namespace InvoicePDFs.Model
                 throw new ArgumentNullException("total is a required property for CalculationBreakdown and cannot be null");
             }
             this.Total = total;
+            this.DocumentDiscountTotal = documentDiscountTotal;
         }
 
         /// <summary>
@@ -89,6 +91,12 @@ namespace InvoicePDFs.Model
         /// </summary>
         [DataMember(Name = "discount_total", IsRequired = true, EmitDefaultValue = true)]
         public Money DiscountTotal { get; set; }
+
+        /// <summary>
+        /// Gets or Sets DocumentDiscountTotal
+        /// </summary>
+        [DataMember(Name = "document_discount_total", EmitDefaultValue = false)]
+        public Money DocumentDiscountTotal { get; set; }
 
         /// <summary>
         /// Gets or Sets TaxTotal
@@ -118,6 +126,7 @@ namespace InvoicePDFs.Model
             sb.Append("class CalculationBreakdown {\n");
             sb.Append("  Subtotal: ").Append(Subtotal).Append("\n");
             sb.Append("  DiscountTotal: ").Append(DiscountTotal).Append("\n");
+            sb.Append("  DocumentDiscountTotal: ").Append(DocumentDiscountTotal).Append("\n");
             sb.Append("  TaxTotal: ").Append(TaxTotal).Append("\n");
             sb.Append("  ShippingTotal: ").Append(ShippingTotal).Append("\n");
             sb.Append("  Total: ").Append(Total).Append("\n");

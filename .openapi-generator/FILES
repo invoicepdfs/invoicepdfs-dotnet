@@ -151,6 +151,8 @@ docs/LocalesListResponse.md
 docs/LogsApi.md
 docs/Money.md
 docs/MoneyOut.md
+docs/NumberingNextOut.md
+docs/NumberingNextResponse.md
 docs/NumberingSequenceCreateRequest.md
 docs/NumberingSequenceOut.md
 docs/NumberingSequencePatchRequest.md
@@ -239,6 +241,8 @@ docs/WorkspacesApi.md
 docs/WorkspacesListResponse.md
 git_push.sh
 src/InvoicePDFs.Test/InvoicePDFs.Test.csproj
+src/InvoicePDFs.Test/Model/NumberingNextOutTests.cs
+src/InvoicePDFs.Test/Model/NumberingNextResponseTests.cs
 src/InvoicePDFs/Api/ApiKeysApi.cs
 src/InvoicePDFs/Api/AuditLogApi.cs
 src/InvoicePDFs/Api/AuthApi.cs
@@ -418,6 +422,8 @@ src/InvoicePDFs/Model/LocaleOut.cs
 src/InvoicePDFs/Model/LocalesListResponse.cs
 src/InvoicePDFs/Model/Money.cs
 src/InvoicePDFs/Model/MoneyOut.cs
+src/InvoicePDFs/Model/NumberingNextOut.cs
+src/InvoicePDFs/Model/NumberingNextResponse.cs
 src/InvoicePDFs/Model/NumberingSequenceCreateRequest.cs
 src/InvoicePDFs/Model/NumberingSequenceOut.cs
 src/InvoicePDFs/Model/NumberingSequencePatchRequest.cs

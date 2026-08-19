@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Subtotal** | [**Money**](Money.md) |  | 
 **DiscountTotal** | [**Money**](Money.md) |  | 
+**DocumentDiscountTotal** | [**Money**](Money.md) |  | [optional] 
 **TaxTotal** | [**Money**](Money.md) |  | 
 **ShippingTotal** | [**Money**](Money.md) |  | 
 **Total** | [**Money**](Money.md) |  | 

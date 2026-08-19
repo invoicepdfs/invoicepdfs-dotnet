@@ -14,7 +14,7 @@ All URIs are relative to *http://localhost*
 
 <a id="consumesequencenumber"></a>
 # **ConsumeSequenceNumber**
-> NumberingSequenceResponse ConsumeSequenceNumber (string sequenceId)
+> NumberingNextResponse ConsumeSequenceNumber (string sequenceId)
 
 Consume Sequence Number
 
@@ -45,7 +45,7 @@ namespace Example
             try
             {
                 // Consume Sequence Number
-                NumberingSequenceResponse result = apiInstance.ConsumeSequenceNumber(sequenceId);
+                NumberingNextResponse result = apiInstance.ConsumeSequenceNumber(sequenceId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -66,7 +66,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Consume Sequence Number
-    ApiResponse<NumberingSequenceResponse> response = apiInstance.ConsumeSequenceNumberWithHttpInfo(sequenceId);
+    ApiResponse<NumberingNextResponse> response = apiInstance.ConsumeSequenceNumberWithHttpInfo(sequenceId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -87,7 +87,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**NumberingSequenceResponse**](NumberingSequenceResponse.md)
+[**NumberingNextResponse**](NumberingNextResponse.md)
 
 ### Authorization
 
