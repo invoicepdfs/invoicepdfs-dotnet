@@ -46,7 +46,9 @@ namespace InvoicePDFs.Model
         /// <param name="taxTotal">taxTotal (required).</param>
         /// <param name="shippingTotal">shippingTotal (required).</param>
         /// <param name="total">total (required).</param>
-        public InvoiceTotalsOut(MoneyOut grossSubtotal = default(MoneyOut), MoneyOut subtotal = default(MoneyOut), MoneyOut discountTotal = default(MoneyOut), MoneyOut documentDiscountTotal = default(MoneyOut), MoneyOut taxTotal = default(MoneyOut), MoneyOut shippingTotal = default(MoneyOut), MoneyOut total = default(MoneyOut))
+        /// <param name="recomputedTotal">recomputedTotal.</param>
+        /// <param name="totalsDrift">totalsDrift.</param>
+        public InvoiceTotalsOut(MoneyOut grossSubtotal = default(MoneyOut), MoneyOut subtotal = default(MoneyOut), MoneyOut discountTotal = default(MoneyOut), MoneyOut documentDiscountTotal = default(MoneyOut), MoneyOut taxTotal = default(MoneyOut), MoneyOut shippingTotal = default(MoneyOut), MoneyOut total = default(MoneyOut), MoneyOut recomputedTotal = default(MoneyOut), MoneyOut totalsDrift = default(MoneyOut))
         {
             // to ensure "subtotal" is required (not null)
             if (subtotal == null)
@@ -80,6 +82,8 @@ namespace InvoicePDFs.Model
             this.Total = total;
             this.GrossSubtotal = grossSubtotal;
             this.DocumentDiscountTotal = documentDiscountTotal;
+            this.RecomputedTotal = recomputedTotal;
+            this.TotalsDrift = totalsDrift;
         }
 
         /// <summary>
@@ -125,6 +129,18 @@ namespace InvoicePDFs.Model
         public MoneyOut Total { get; set; }
 
         /// <summary>
+        /// Gets or Sets RecomputedTotal
+        /// </summary>
+        [DataMember(Name = "recomputed_total", EmitDefaultValue = true)]
+        public MoneyOut RecomputedTotal { get; set; }
+
+        /// <summary>
+        /// Gets or Sets TotalsDrift
+        /// </summary>
+        [DataMember(Name = "totals_drift", EmitDefaultValue = true)]
+        public MoneyOut TotalsDrift { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -139,6 +155,8 @@ namespace InvoicePDFs.Model
             sb.Append("  TaxTotal: ").Append(TaxTotal).Append("\n");
             sb.Append("  ShippingTotal: ").Append(ShippingTotal).Append("\n");
             sb.Append("  Total: ").Append(Total).Append("\n");
+            sb.Append("  RecomputedTotal: ").Append(RecomputedTotal).Append("\n");
+            sb.Append("  TotalsDrift: ").Append(TotalsDrift).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

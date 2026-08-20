@@ -11,6 +11,8 @@ Name | Type | Description | Notes
 **TaxTotal** | [**MoneyOut**](MoneyOut.md) |  | 
 **ShippingTotal** | [**MoneyOut**](MoneyOut.md) |  | 
 **Total** | [**MoneyOut**](MoneyOut.md) |  | 
+**RecomputedTotal** | [**MoneyOut**](MoneyOut.md) |  | [optional] 
+**TotalsDrift** | [**MoneyOut**](MoneyOut.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
