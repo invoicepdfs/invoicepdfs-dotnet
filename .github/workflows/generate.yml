@@ -29,12 +29,27 @@ jobs:
             "https://api.github.com/repos/invoicepdfs/invoicepdfs-openapi/contents/openapi-3.0.json?ref=main" \
             -o openapi.json
 
+      # This generator's default is a literal 1.0.0, and unlike typescript-fetch and
+      # java it does not fall back to the spec's version — so the package declared
+      # 1.0.0 while the API was on 0.3.0. Take it from the spec, which the API repo
+      # bumps on release, instead of hardcoding it here where it would drift again.
+      - name: Read package version from the spec
+        id: spec
+        run: |
+          version=$(jq -er .info.version openapi.json)
+          if [ -z "$version" ] || [ "$version" = "null" ]; then
+            echo "::error::Could not read info.version from the spec."
+            exit 1
+          fi
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+          echo "Packaging as $version"
+
       - name: Generate client (csharp)
         run: |
           docker run --rm -v "${{ github.workspace }}:/local" \
             openapitools/openapi-generator-cli:v7.7.0 generate \
             -i /local/openapi.json -g csharp -o /local \
-            --additional-properties="packageName=InvoicePDFs"
+            --additional-properties="packageName=InvoicePDFs,packageVersion=${{ steps.spec.outputs.version }}"
 
       - name: Commit regenerated client
         run: |
