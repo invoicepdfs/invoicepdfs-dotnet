@@ -7250,6 +7250,7 @@ components:
             value: "10"
           shipping:
             amount: "9.99"
+            taxable: false
             description: Shipping
           currency: USD
           payment:
@@ -7414,6 +7415,7 @@ components:
           value: "10"
         shipping:
           amount: "9.99"
+          taxable: false
           description: Shipping
         terms:
         - type: term
@@ -7683,6 +7685,7 @@ components:
           value: "10"
         shipping:
           amount: "9.99"
+          taxable: false
           description: Shipping
         currency: USD
         payment:
@@ -8129,6 +8132,7 @@ components:
           value: "10"
         shipping:
           amount: "9.99"
+          taxable: false
           description: Shipping
         terms:
         - type: term
@@ -8408,6 +8412,7 @@ components:
             value: "10"
           shipping:
             amount: "9.99"
+            taxable: false
             description: Shipping
           currency: USD
           payment:
@@ -8529,6 +8534,7 @@ components:
     DocumentShippingInput:
       example:
         amount: "9.99"
+        taxable: false
         description: Shipping
       properties:
         description:
@@ -8539,6 +8545,10 @@ components:
           example: "9.99"
           title: Amount
           type: string
+        taxable:
+          default: false
+          title: Taxable
+          type: boolean
       required:
       - amount
       title: DocumentShippingInput
@@ -8744,6 +8754,7 @@ components:
             value: "10"
           shipping:
             amount: "9.99"
+            taxable: false
             description: Shipping
           currency: USD
           payment:
@@ -9364,6 +9375,7 @@ components:
           value: "10"
         shipping:
           amount: "9.99"
+          taxable: false
           description: Shipping
         terms:
         - type: term
@@ -9734,6 +9746,7 @@ components:
     InvoiceShippingInput:
       example:
         amount: "9.99"
+        taxable: false
         description: Shipping
       properties:
         description:
@@ -9744,6 +9757,10 @@ components:
           example: "9.99"
           title: Amount
           type: string
+        taxable:
+          default: false
+          title: Taxable
+          type: boolean
       required:
       - amount
       title: InvoiceShippingInput
@@ -10744,6 +10761,7 @@ components:
             value: "10"
           shipping:
             amount: "9.99"
+            taxable: false
             description: Shipping
           terms:
           - type: term
@@ -10981,6 +10999,7 @@ components:
             value: "10"
           shipping:
             amount: "9.99"
+            taxable: false
             description: Shipping
           terms:
           - type: term

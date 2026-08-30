@@ -71,5 +71,14 @@ namespace InvoicePDFs.Test.Model
         {
             // TODO unit test for the property 'Amount'
         }
+
+        /// <summary>
+        /// Test the property 'Taxable'
+        /// </summary>
+        [Fact]
+        public void TaxableTest()
+        {
+            // TODO unit test for the property 'Taxable'
+        }
     }
 }

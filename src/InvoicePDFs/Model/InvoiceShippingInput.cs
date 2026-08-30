@@ -41,7 +41,8 @@ namespace InvoicePDFs.Model
         /// </summary>
         /// <param name="description">description (default to &quot;Shipping&quot;).</param>
         /// <param name="amount">amount (required).</param>
-        public InvoiceShippingInput(string description = @"Shipping", string amount = default(string))
+        /// <param name="taxable">taxable (default to false).</param>
+        public InvoiceShippingInput(string description = @"Shipping", string amount = default(string), bool taxable = false)
         {
             // to ensure "amount" is required (not null)
             if (amount == null)
@@ -51,6 +52,7 @@ namespace InvoicePDFs.Model
             this.Amount = amount;
             // use default value if no "description" provided
             this.Description = description ?? @"Shipping";
+            this.Taxable = taxable;
         }
 
         /// <summary>
@@ -67,6 +69,12 @@ namespace InvoicePDFs.Model
         public string Amount { get; set; }
 
         /// <summary>
+        /// Gets or Sets Taxable
+        /// </summary>
+        [DataMember(Name = "taxable", EmitDefaultValue = true)]
+        public bool Taxable { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -76,6 +84,7 @@ namespace InvoicePDFs.Model
             sb.Append("class InvoiceShippingInput {\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  Amount: ").Append(Amount).Append("\n");
+            sb.Append("  Taxable: ").Append(Taxable).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
