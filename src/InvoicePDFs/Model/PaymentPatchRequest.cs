@@ -39,7 +39,7 @@ namespace InvoicePDFs.Model
         /// <param name="method">method.</param>
         /// <param name="reference">reference.</param>
         /// <param name="notes">notes.</param>
-        public PaymentPatchRequest(string amount = default(string), DateTime? paidAt = default(DateTime?), string method = default(string), string reference = default(string), string notes = default(string))
+        public PaymentPatchRequest(string amount = default(string), DateTime paidAt = default(DateTime), string method = default(string), string reference = default(string), string notes = default(string))
         {
             this.Amount = amount;
             this.PaidAt = paidAt;
@@ -51,14 +51,14 @@ namespace InvoicePDFs.Model
         /// <summary>
         /// Gets or Sets Amount
         /// </summary>
-        [DataMember(Name = "amount", EmitDefaultValue = true)]
+        [DataMember(Name = "amount", EmitDefaultValue = false)]
         public string Amount { get; set; }
 
         /// <summary>
         /// Gets or Sets PaidAt
         /// </summary>
-        [DataMember(Name = "paid_at", EmitDefaultValue = true)]
-        public DateTime? PaidAt { get; set; }
+        [DataMember(Name = "paid_at", EmitDefaultValue = false)]
+        public DateTime PaidAt { get; set; }
 
         /// <summary>
         /// Gets or Sets Method

@@ -47,7 +47,7 @@ namespace InvoicePDFs.Model
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
-        [DataMember(Name = "name", EmitDefaultValue = true)]
+        [DataMember(Name = "name", EmitDefaultValue = false)]
         public string Name { get; set; }
 
         /// <summary>
@@ -59,7 +59,7 @@ namespace InvoicePDFs.Model
         /// <summary>
         /// Gets or Sets Config
         /// </summary>
-        [DataMember(Name = "config", EmitDefaultValue = true)]
+        [DataMember(Name = "config", EmitDefaultValue = false)]
         public Dictionary<string, Object> Config { get; set; }
 
         /// <summary>

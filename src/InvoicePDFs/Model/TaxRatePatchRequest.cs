@@ -39,7 +39,7 @@ namespace InvoicePDFs.Model
         /// <param name="inclusive">inclusive.</param>
         /// <param name="jurisdiction">jurisdiction.</param>
         /// <param name="isActive">isActive.</param>
-        public TaxRatePatchRequest(string name = default(string), string rate = default(string), bool? inclusive = default(bool?), string jurisdiction = default(string), bool? isActive = default(bool?))
+        public TaxRatePatchRequest(string name = default(string), string rate = default(string), bool inclusive = default(bool), string jurisdiction = default(string), bool isActive = default(bool))
         {
             this.Name = name;
             this.Rate = rate;
@@ -51,20 +51,20 @@ namespace InvoicePDFs.Model
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
-        [DataMember(Name = "name", EmitDefaultValue = true)]
+        [DataMember(Name = "name", EmitDefaultValue = false)]
         public string Name { get; set; }
 
         /// <summary>
         /// Gets or Sets Rate
         /// </summary>
-        [DataMember(Name = "rate", EmitDefaultValue = true)]
+        [DataMember(Name = "rate", EmitDefaultValue = false)]
         public string Rate { get; set; }
 
         /// <summary>
         /// Gets or Sets Inclusive
         /// </summary>
         [DataMember(Name = "inclusive", EmitDefaultValue = true)]
-        public bool? Inclusive { get; set; }
+        public bool Inclusive { get; set; }
 
         /// <summary>
         /// Gets or Sets Jurisdiction
@@ -76,7 +76,7 @@ namespace InvoicePDFs.Model
         /// Gets or Sets IsActive
         /// </summary>
         [DataMember(Name = "is_active", EmitDefaultValue = true)]
-        public bool? IsActive { get; set; }
+        public bool IsActive { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

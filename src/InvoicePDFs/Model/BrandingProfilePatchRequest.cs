@@ -42,7 +42,7 @@ namespace InvoicePDFs.Model
         /// <param name="footerText">footerText.</param>
         /// <param name="hideInvoicepdfsBranding">hideInvoicepdfsBranding.</param>
         /// <param name="isDefault">isDefault.</param>
-        public BrandingProfilePatchRequest(string name = default(string), string primaryColor = default(string), string accentColor = default(string), string fontFamily = default(string), string headerText = default(string), string footerText = default(string), bool? hideInvoicepdfsBranding = default(bool?), bool? isDefault = default(bool?))
+        public BrandingProfilePatchRequest(string name = default(string), string primaryColor = default(string), string accentColor = default(string), string fontFamily = default(string), string headerText = default(string), string footerText = default(string), bool hideInvoicepdfsBranding = default(bool), bool isDefault = default(bool))
         {
             this.Name = name;
             this.PrimaryColor = primaryColor;
@@ -57,19 +57,19 @@ namespace InvoicePDFs.Model
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
-        [DataMember(Name = "name", EmitDefaultValue = true)]
+        [DataMember(Name = "name", EmitDefaultValue = false)]
         public string Name { get; set; }
 
         /// <summary>
         /// Gets or Sets PrimaryColor
         /// </summary>
-        [DataMember(Name = "primary_color", EmitDefaultValue = true)]
+        [DataMember(Name = "primary_color", EmitDefaultValue = false)]
         public string PrimaryColor { get; set; }
 
         /// <summary>
         /// Gets or Sets AccentColor
         /// </summary>
-        [DataMember(Name = "accent_color", EmitDefaultValue = true)]
+        [DataMember(Name = "accent_color", EmitDefaultValue = false)]
         public string AccentColor { get; set; }
 
         /// <summary>
@@ -87,20 +87,20 @@ namespace InvoicePDFs.Model
         /// <summary>
         /// Gets or Sets FooterText
         /// </summary>
-        [DataMember(Name = "footer_text", EmitDefaultValue = true)]
+        [DataMember(Name = "footer_text", EmitDefaultValue = false)]
         public string FooterText { get; set; }
 
         /// <summary>
         /// Gets or Sets HideInvoicepdfsBranding
         /// </summary>
         [DataMember(Name = "hide_invoicepdfs_branding", EmitDefaultValue = true)]
-        public bool? HideInvoicepdfsBranding { get; set; }
+        public bool HideInvoicepdfsBranding { get; set; }
 
         /// <summary>
         /// Gets or Sets IsDefault
         /// </summary>
         [DataMember(Name = "is_default", EmitDefaultValue = true)]
-        public bool? IsDefault { get; set; }
+        public bool IsDefault { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

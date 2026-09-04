@@ -63,7 +63,7 @@ namespace InvoicePDFs.Model
         /// <summary>
         /// Gets or Sets LegalName
         /// </summary>
-        [DataMember(Name = "legal_name", EmitDefaultValue = true)]
+        [DataMember(Name = "legal_name", EmitDefaultValue = false)]
         public string LegalName { get; set; }
 
         /// <summary>

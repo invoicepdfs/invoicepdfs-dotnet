@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Amount** | **string** |  | [optional] 
-**PaidAt** | **DateTime?** |  | [optional] 
+**PaidAt** | **DateTime** |  | [optional] 
 **Method** | **string** |  | [optional] 
 **Reference** | **string** |  | [optional] 
 **Notes** | **string** |  | [optional] 

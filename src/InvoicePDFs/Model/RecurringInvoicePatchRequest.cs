@@ -41,7 +41,7 @@ namespace InvoicePDFs.Model
         /// <param name="numberingSequenceId">numberingSequenceId.</param>
         /// <param name="autoFinalize">autoFinalize.</param>
         /// <param name="invoiceTemplate">invoiceTemplate.</param>
-        public RecurringInvoicePatchRequest(string frequency = default(string), int? interval = default(int?), DateOnly endDate = default(DateOnly), int? maxOccurrences = default(int?), string numberingSequenceId = default(string), bool? autoFinalize = default(bool?), InvoiceDraftRequest invoiceTemplate = default(InvoiceDraftRequest))
+        public RecurringInvoicePatchRequest(string frequency = default(string), int interval = default(int), DateOnly endDate = default(DateOnly), int? maxOccurrences = default(int?), string numberingSequenceId = default(string), bool autoFinalize = default(bool), InvoiceDraftRequest invoiceTemplate = default(InvoiceDraftRequest))
         {
             this.Frequency = frequency;
             this.Interval = interval;
@@ -55,14 +55,14 @@ namespace InvoicePDFs.Model
         /// <summary>
         /// Gets or Sets Frequency
         /// </summary>
-        [DataMember(Name = "frequency", EmitDefaultValue = true)]
+        [DataMember(Name = "frequency", EmitDefaultValue = false)]
         public string Frequency { get; set; }
 
         /// <summary>
         /// Gets or Sets Interval
         /// </summary>
-        [DataMember(Name = "interval", EmitDefaultValue = true)]
-        public int? Interval { get; set; }
+        [DataMember(Name = "interval", EmitDefaultValue = false)]
+        public int Interval { get; set; }
 
         /// <summary>
         /// Gets or Sets EndDate
@@ -86,12 +86,12 @@ namespace InvoicePDFs.Model
         /// Gets or Sets AutoFinalize
         /// </summary>
         [DataMember(Name = "auto_finalize", EmitDefaultValue = true)]
-        public bool? AutoFinalize { get; set; }
+        public bool AutoFinalize { get; set; }
 
         /// <summary>
         /// Gets or Sets InvoiceTemplate
         /// </summary>
-        [DataMember(Name = "invoice_template", EmitDefaultValue = true)]
+        [DataMember(Name = "invoice_template", EmitDefaultValue = false)]
         public InvoiceDraftRequest InvoiceTemplate { get; set; }
 
         /// <summary>
@@ -129,8 +129,8 @@ namespace InvoicePDFs.Model
         /// <returns>Validation Result</returns>
         IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            // Interval (int?) minimum
-            if (this.Interval < (int?)1)
+            // Interval (int) minimum
+            if (this.Interval < (int)1)
             {
                 yield return new ValidationResult("Invalid value for Interval, must be a value greater than or equal to 1.", new [] { "Interval" });
             }

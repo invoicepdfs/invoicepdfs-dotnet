@@ -60,7 +60,7 @@ namespace InvoicePDFs.Model
         /// <summary>
         /// Gets or Sets Role
         /// </summary>
-        [DataMember(Name = "role", EmitDefaultValue = true)]
+        [DataMember(Name = "role", EmitDefaultValue = false)]
         public RoleEnum? Role { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="WorkspaceMemberPatchRequest" /> class.

@@ -38,7 +38,7 @@ namespace InvoicePDFs.Model
         /// <param name="description">description.</param>
         /// <param name="events">events.</param>
         /// <param name="isActive">isActive.</param>
-        public WebhookEndpointPatchRequest(string url = default(string), string description = default(string), List<string> events = default(List<string>), bool? isActive = default(bool?))
+        public WebhookEndpointPatchRequest(string url = default(string), string description = default(string), List<string> events = default(List<string>), bool isActive = default(bool))
         {
             this.Url = url;
             this.Description = description;
@@ -49,7 +49,7 @@ namespace InvoicePDFs.Model
         /// <summary>
         /// Gets or Sets Url
         /// </summary>
-        [DataMember(Name = "url", EmitDefaultValue = true)]
+        [DataMember(Name = "url", EmitDefaultValue = false)]
         public string Url { get; set; }
 
         /// <summary>
@@ -61,14 +61,14 @@ namespace InvoicePDFs.Model
         /// <summary>
         /// Gets or Sets Events
         /// </summary>
-        [DataMember(Name = "events", EmitDefaultValue = true)]
+        [DataMember(Name = "events", EmitDefaultValue = false)]
         public List<string> Events { get; set; }
 
         /// <summary>
         /// Gets or Sets IsActive
         /// </summary>
         [DataMember(Name = "is_active", EmitDefaultValue = true)]
-        public bool? IsActive { get; set; }
+        public bool IsActive { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

@@ -60,7 +60,7 @@ namespace InvoicePDFs.Model
         /// <summary>
         /// Gets or Sets Reset
         /// </summary>
-        [DataMember(Name = "reset", EmitDefaultValue = true)]
+        [DataMember(Name = "reset", EmitDefaultValue = false)]
         public ResetEnum? Reset { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="NumberingSequencePatchRequest" /> class.
@@ -71,7 +71,7 @@ namespace InvoicePDFs.Model
         /// <param name="padding">padding.</param>
         /// <param name="nextNumber">nextNumber.</param>
         /// <param name="reset">reset.</param>
-        public NumberingSequencePatchRequest(string name = default(string), string prefix = default(string), string datePattern = default(string), int? padding = default(int?), int? nextNumber = default(int?), ResetEnum? reset = default(ResetEnum?))
+        public NumberingSequencePatchRequest(string name = default(string), string prefix = default(string), string datePattern = default(string), int padding = default(int), int nextNumber = default(int), ResetEnum? reset = default(ResetEnum?))
         {
             this.Name = name;
             this.Prefix = prefix;
@@ -84,32 +84,32 @@ namespace InvoicePDFs.Model
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
-        [DataMember(Name = "name", EmitDefaultValue = true)]
+        [DataMember(Name = "name", EmitDefaultValue = false)]
         public string Name { get; set; }
 
         /// <summary>
         /// Gets or Sets Prefix
         /// </summary>
-        [DataMember(Name = "prefix", EmitDefaultValue = true)]
+        [DataMember(Name = "prefix", EmitDefaultValue = false)]
         public string Prefix { get; set; }
 
         /// <summary>
         /// Gets or Sets DatePattern
         /// </summary>
-        [DataMember(Name = "date_pattern", EmitDefaultValue = true)]
+        [DataMember(Name = "date_pattern", EmitDefaultValue = false)]
         public string DatePattern { get; set; }
 
         /// <summary>
         /// Gets or Sets Padding
         /// </summary>
-        [DataMember(Name = "padding", EmitDefaultValue = true)]
-        public int? Padding { get; set; }
+        [DataMember(Name = "padding", EmitDefaultValue = false)]
+        public int Padding { get; set; }
 
         /// <summary>
         /// Gets or Sets NextNumber
         /// </summary>
-        [DataMember(Name = "next_number", EmitDefaultValue = true)]
-        public int? NextNumber { get; set; }
+        [DataMember(Name = "next_number", EmitDefaultValue = false)]
+        public int NextNumber { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -145,20 +145,20 @@ namespace InvoicePDFs.Model
         /// <returns>Validation Result</returns>
         IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            // Padding (int?) maximum
-            if (this.Padding > (int?)10)
+            // Padding (int) maximum
+            if (this.Padding > (int)10)
             {
                 yield return new ValidationResult("Invalid value for Padding, must be a value less than or equal to 10.", new [] { "Padding" });
             }
 
-            // Padding (int?) minimum
-            if (this.Padding < (int?)1)
+            // Padding (int) minimum
+            if (this.Padding < (int)1)
             {
                 yield return new ValidationResult("Invalid value for Padding, must be a value greater than or equal to 1.", new [] { "Padding" });
             }
 
-            // NextNumber (int?) minimum
-            if (this.NextNumber < (int?)1)
+            // NextNumber (int) minimum
+            if (this.NextNumber < (int)1)
             {
                 yield return new ValidationResult("Invalid value for NextNumber, must be a value greater than or equal to 1.", new [] { "NextNumber" });
             }
