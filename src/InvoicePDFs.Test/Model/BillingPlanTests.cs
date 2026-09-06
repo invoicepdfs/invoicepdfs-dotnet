@@ -91,6 +91,24 @@ namespace InvoicePDFs.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'PriceCents'
+        /// </summary>
+        [Fact]
+        public void PriceCentsTest()
+        {
+            // TODO unit test for the property 'PriceCents'
+        }
+
+        /// <summary>
+        /// Test the property 'PriceCentsAnnual'
+        /// </summary>
+        [Fact]
+        public void PriceCentsAnnualTest()
+        {
+            // TODO unit test for the property 'PriceCentsAnnual'
+        }
+
+        /// <summary>
         /// Test the property 'MonthlyRenderQuota'
         /// </summary>
         [Fact]

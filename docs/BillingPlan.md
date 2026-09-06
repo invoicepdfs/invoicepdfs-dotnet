@@ -8,6 +8,8 @@ Name | Type | Description | Notes
 **Name** | **string** |  | 
 **PriceId** | **string** |  | 
 **PriceIdAnnual** | **string** |  | [optional] 
+**PriceCents** | **int?** |  | [optional] 
+**PriceCentsAnnual** | **int?** |  | [optional] 
 **MonthlyRenderQuota** | **int** |  | 
 **AllowBrandingRemoval** | **bool** |  | [optional] [default to false]
 **OveragePriceMillicents** | **int?** |  | [optional] 

@@ -43,10 +43,12 @@ namespace InvoicePDFs.Model
         /// <param name="name">name (required).</param>
         /// <param name="priceId">priceId (required).</param>
         /// <param name="priceIdAnnual">priceIdAnnual.</param>
+        /// <param name="priceCents">priceCents.</param>
+        /// <param name="priceCentsAnnual">priceCentsAnnual.</param>
         /// <param name="monthlyRenderQuota">monthlyRenderQuota (required).</param>
         /// <param name="allowBrandingRemoval">allowBrandingRemoval (default to false).</param>
         /// <param name="overagePriceMillicents">overagePriceMillicents.</param>
-        public BillingPlan(string id = default(string), string name = default(string), string priceId = default(string), string priceIdAnnual = default(string), int monthlyRenderQuota = default(int), bool allowBrandingRemoval = false, int? overagePriceMillicents = default(int?))
+        public BillingPlan(string id = default(string), string name = default(string), string priceId = default(string), string priceIdAnnual = default(string), int? priceCents = default(int?), int? priceCentsAnnual = default(int?), int monthlyRenderQuota = default(int), bool allowBrandingRemoval = false, int? overagePriceMillicents = default(int?))
         {
             // to ensure "id" is required (not null)
             if (id == null)
@@ -68,6 +70,8 @@ namespace InvoicePDFs.Model
             this.PriceId = priceId;
             this.MonthlyRenderQuota = monthlyRenderQuota;
             this.PriceIdAnnual = priceIdAnnual;
+            this.PriceCents = priceCents;
+            this.PriceCentsAnnual = priceCentsAnnual;
             this.AllowBrandingRemoval = allowBrandingRemoval;
             this.OveragePriceMillicents = overagePriceMillicents;
         }
@@ -95,6 +99,18 @@ namespace InvoicePDFs.Model
         /// </summary>
         [DataMember(Name = "price_id_annual", EmitDefaultValue = true)]
         public string PriceIdAnnual { get; set; }
+
+        /// <summary>
+        /// Gets or Sets PriceCents
+        /// </summary>
+        [DataMember(Name = "price_cents", EmitDefaultValue = true)]
+        public int? PriceCents { get; set; }
+
+        /// <summary>
+        /// Gets or Sets PriceCentsAnnual
+        /// </summary>
+        [DataMember(Name = "price_cents_annual", EmitDefaultValue = true)]
+        public int? PriceCentsAnnual { get; set; }
 
         /// <summary>
         /// Gets or Sets MonthlyRenderQuota
@@ -126,6 +142,8 @@ namespace InvoicePDFs.Model
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  PriceId: ").Append(PriceId).Append("\n");
             sb.Append("  PriceIdAnnual: ").Append(PriceIdAnnual).Append("\n");
+            sb.Append("  PriceCents: ").Append(PriceCents).Append("\n");
+            sb.Append("  PriceCentsAnnual: ").Append(PriceCentsAnnual).Append("\n");
             sb.Append("  MonthlyRenderQuota: ").Append(MonthlyRenderQuota).Append("\n");
             sb.Append("  AllowBrandingRemoval: ").Append(AllowBrandingRemoval).Append("\n");
             sb.Append("  OveragePriceMillicents: ").Append(OveragePriceMillicents).Append("\n");
