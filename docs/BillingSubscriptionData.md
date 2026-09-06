@@ -10,6 +10,9 @@ Name | Type | Description | Notes
 **PlanName** | **string** |  | 
 **StripeConfigured** | **bool** |  | [optional] [default to false]
 **HasBillingAccount** | **bool** |  | [optional] [default to false]
+**OverageEnabled** | **bool** |  | [optional] [default to false]
+**OverageAvailable** | **bool** |  | [optional] [default to false]
+**OveragePriceMillicents** | **int?** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

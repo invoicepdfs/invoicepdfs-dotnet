@@ -26,56 +26,57 @@ using OpenAPIDateConverter = InvoicePDFs.Client.OpenAPIDateConverter;
 namespace InvoicePDFs.Model
 {
     /// <summary>
-    /// UsageLimitsData
+    /// Renders past the quota this period, and what they cost.
     /// </summary>
-    [DataContract(Name = "UsageLimitsData")]
-    public partial class UsageLimitsData : IValidatableObject
+    [DataContract(Name = "UsageOverage")]
+    public partial class UsageOverage : IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="UsageLimitsData" /> class.
+        /// Initializes a new instance of the <see cref="UsageOverage" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
-        protected UsageLimitsData() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="UsageLimitsData" /> class.
-        /// </summary>
-        /// <param name="renders">renders (required).</param>
-        /// <param name="rateLimit">rateLimit (required).</param>
-        /// <param name="overage">overage.</param>
-        public UsageLimitsData(UsageRenderLimits renders = default(UsageRenderLimits), UsageRateLimit rateLimit = default(UsageRateLimit), UsageOverage overage = default(UsageOverage))
+        /// <param name="enabled">enabled (default to false).</param>
+        /// <param name="available">available (default to false).</param>
+        /// <param name="renders">renders (default to 0).</param>
+        /// <param name="priceMillicents">priceMillicents.</param>
+        /// <param name="estimatedCostCents">estimatedCostCents (default to 0).</param>
+        public UsageOverage(bool enabled = false, bool available = false, int renders = 0, int? priceMillicents = default(int?), int estimatedCostCents = 0)
         {
-            // to ensure "renders" is required (not null)
-            if (renders == null)
-            {
-                throw new ArgumentNullException("renders is a required property for UsageLimitsData and cannot be null");
-            }
+            this.Enabled = enabled;
+            this.Available = available;
             this.Renders = renders;
-            // to ensure "rateLimit" is required (not null)
-            if (rateLimit == null)
-            {
-                throw new ArgumentNullException("rateLimit is a required property for UsageLimitsData and cannot be null");
-            }
-            this.RateLimit = rateLimit;
-            this.Overage = overage;
+            this.PriceMillicents = priceMillicents;
+            this.EstimatedCostCents = estimatedCostCents;
         }
+
+        /// <summary>
+        /// Gets or Sets Enabled
+        /// </summary>
+        [DataMember(Name = "enabled", EmitDefaultValue = true)]
+        public bool Enabled { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Available
+        /// </summary>
+        [DataMember(Name = "available", EmitDefaultValue = true)]
+        public bool Available { get; set; }
 
         /// <summary>
         /// Gets or Sets Renders
         /// </summary>
-        [DataMember(Name = "renders", IsRequired = true, EmitDefaultValue = true)]
-        public UsageRenderLimits Renders { get; set; }
+        [DataMember(Name = "renders", EmitDefaultValue = false)]
+        public int Renders { get; set; }
 
         /// <summary>
-        /// Gets or Sets RateLimit
+        /// Gets or Sets PriceMillicents
         /// </summary>
-        [DataMember(Name = "rate_limit", IsRequired = true, EmitDefaultValue = true)]
-        public UsageRateLimit RateLimit { get; set; }
+        [DataMember(Name = "price_millicents", EmitDefaultValue = true)]
+        public int? PriceMillicents { get; set; }
 
         /// <summary>
-        /// Gets or Sets Overage
+        /// Gets or Sets EstimatedCostCents
         /// </summary>
-        [DataMember(Name = "overage", EmitDefaultValue = false)]
-        public UsageOverage Overage { get; set; }
+        [DataMember(Name = "estimated_cost_cents", EmitDefaultValue = false)]
+        public int EstimatedCostCents { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -84,10 +85,12 @@ namespace InvoicePDFs.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class UsageLimitsData {\n");
+            sb.Append("class UsageOverage {\n");
+            sb.Append("  Enabled: ").Append(Enabled).Append("\n");
+            sb.Append("  Available: ").Append(Available).Append("\n");
             sb.Append("  Renders: ").Append(Renders).Append("\n");
-            sb.Append("  RateLimit: ").Append(RateLimit).Append("\n");
-            sb.Append("  Overage: ").Append(Overage).Append("\n");
+            sb.Append("  PriceMillicents: ").Append(PriceMillicents).Append("\n");
+            sb.Append("  EstimatedCostCents: ").Append(EstimatedCostCents).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

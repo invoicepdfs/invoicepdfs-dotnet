@@ -1,12 +1,12 @@
-# InvoicePDFs.Model.UsageLimitsData
+# InvoicePDFs.Model.BillingOverageData
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Renders** | [**UsageRenderLimits**](UsageRenderLimits.md) |  | 
-**RateLimit** | [**UsageRateLimit**](UsageRateLimit.md) |  | 
-**Overage** | [**UsageOverage**](UsageOverage.md) |  | [optional] 
+**OverageEnabled** | **bool** |  | 
+**OverageAvailable** | **bool** |  | 
+**OveragePriceMillicents** | **int?** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

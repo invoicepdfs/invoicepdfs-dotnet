@@ -1,12 +1,10 @@
-# InvoicePDFs.Model.UsageLimitsData
+# InvoicePDFs.Model.BillingOverageRequest
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Renders** | [**UsageRenderLimits**](UsageRenderLimits.md) |  | 
-**RateLimit** | [**UsageRateLimit**](UsageRateLimit.md) |  | 
-**Overage** | [**UsageOverage**](UsageOverage.md) |  | [optional] 
+**Enabled** | **bool** | Whether renders past the monthly quota should be billed | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

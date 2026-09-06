@@ -98,5 +98,17 @@ namespace InvoicePDFs.Test.Api
             //var response = instance.ListPlans();
             //Assert.IsType<BillingPlansListResponse>(response);
         }
+
+        /// <summary>
+        /// Test UpdateOverageSettings
+        /// </summary>
+        [Fact]
+        public void UpdateOverageSettingsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //BillingOverageRequest billingOverageRequest = null;
+            //var response = instance.UpdateOverageSettings(billingOverageRequest);
+            //Assert.IsType<BillingOverageResponse>(response);
+        }
     }
 }

@@ -82,12 +82,39 @@ namespace InvoicePDFs.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'PriceIdAnnual'
+        /// </summary>
+        [Fact]
+        public void PriceIdAnnualTest()
+        {
+            // TODO unit test for the property 'PriceIdAnnual'
+        }
+
+        /// <summary>
         /// Test the property 'MonthlyRenderQuota'
         /// </summary>
         [Fact]
         public void MonthlyRenderQuotaTest()
         {
             // TODO unit test for the property 'MonthlyRenderQuota'
+        }
+
+        /// <summary>
+        /// Test the property 'AllowBrandingRemoval'
+        /// </summary>
+        [Fact]
+        public void AllowBrandingRemovalTest()
+        {
+            // TODO unit test for the property 'AllowBrandingRemoval'
+        }
+
+        /// <summary>
+        /// Test the property 'OveragePriceMillicents'
+        /// </summary>
+        [Fact]
+        public void OveragePriceMillicentsTest()
+        {
+            // TODO unit test for the property 'OveragePriceMillicents'
         }
     }
 }

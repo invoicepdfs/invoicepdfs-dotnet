@@ -49,6 +49,9 @@ docs/BillingApi.md
 docs/BillingCheckoutData.md
 docs/BillingCheckoutRequest.md
 docs/BillingCheckoutResponse.md
+docs/BillingOverageData.md
+docs/BillingOverageRequest.md
+docs/BillingOverageResponse.md
 docs/BillingPlan.md
 docs/BillingPlansListResponse.md
 docs/BillingPortalData.md
@@ -213,6 +216,7 @@ docs/UsageEventOut.md
 docs/UsageEventsListResponse.md
 docs/UsageLimitsData.md
 docs/UsageLimitsResponse.md
+docs/UsageOverage.md
 docs/UsagePeriod.md
 docs/UsageRateLimit.md
 docs/UsageRenderLimits.md
@@ -311,6 +315,9 @@ src/InvoicePDFs.Test/Model/BatchesListResponseTests.cs
 src/InvoicePDFs.Test/Model/BillingCheckoutDataTests.cs
 src/InvoicePDFs.Test/Model/BillingCheckoutRequestTests.cs
 src/InvoicePDFs.Test/Model/BillingCheckoutResponseTests.cs
+src/InvoicePDFs.Test/Model/BillingOverageDataTests.cs
+src/InvoicePDFs.Test/Model/BillingOverageRequestTests.cs
+src/InvoicePDFs.Test/Model/BillingOverageResponseTests.cs
 src/InvoicePDFs.Test/Model/BillingPlanTests.cs
 src/InvoicePDFs.Test/Model/BillingPlansListResponseTests.cs
 src/InvoicePDFs.Test/Model/BillingPortalDataTests.cs
@@ -454,6 +461,7 @@ src/InvoicePDFs.Test/Model/UsageEventOutTests.cs
 src/InvoicePDFs.Test/Model/UsageEventsListResponseTests.cs
 src/InvoicePDFs.Test/Model/UsageLimitsDataTests.cs
 src/InvoicePDFs.Test/Model/UsageLimitsResponseTests.cs
+src/InvoicePDFs.Test/Model/UsageOverageTests.cs
 src/InvoicePDFs.Test/Model/UsagePeriodTests.cs
 src/InvoicePDFs.Test/Model/UsageRateLimitTests.cs
 src/InvoicePDFs.Test/Model/UsageRenderLimitsTests.cs
@@ -566,6 +574,9 @@ src/InvoicePDFs/Model/BatchesListResponse.cs
 src/InvoicePDFs/Model/BillingCheckoutData.cs
 src/InvoicePDFs/Model/BillingCheckoutRequest.cs
 src/InvoicePDFs/Model/BillingCheckoutResponse.cs
+src/InvoicePDFs/Model/BillingOverageData.cs
+src/InvoicePDFs/Model/BillingOverageRequest.cs
+src/InvoicePDFs/Model/BillingOverageResponse.cs
 src/InvoicePDFs/Model/BillingPlan.cs
 src/InvoicePDFs/Model/BillingPlansListResponse.cs
 src/InvoicePDFs/Model/BillingPortalData.cs
@@ -709,6 +720,7 @@ src/InvoicePDFs/Model/UsageEventOut.cs
 src/InvoicePDFs/Model/UsageEventsListResponse.cs
 src/InvoicePDFs/Model/UsageLimitsData.cs
 src/InvoicePDFs/Model/UsageLimitsResponse.cs
+src/InvoicePDFs/Model/UsageOverage.cs
 src/InvoicePDFs/Model/UsagePeriod.cs
 src/InvoicePDFs/Model/UsageRateLimit.cs
 src/InvoicePDFs/Model/UsageRenderLimits.cs

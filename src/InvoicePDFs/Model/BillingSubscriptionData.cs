@@ -45,7 +45,10 @@ namespace InvoicePDFs.Model
         /// <param name="planName">planName (required).</param>
         /// <param name="stripeConfigured">stripeConfigured (default to false).</param>
         /// <param name="hasBillingAccount">hasBillingAccount (default to false).</param>
-        public BillingSubscriptionData(string subscriptionId = default(string), string status = default(string), string planId = default(string), string planName = default(string), bool stripeConfigured = false, bool hasBillingAccount = false)
+        /// <param name="overageEnabled">overageEnabled (default to false).</param>
+        /// <param name="overageAvailable">overageAvailable (default to false).</param>
+        /// <param name="overagePriceMillicents">overagePriceMillicents.</param>
+        public BillingSubscriptionData(string subscriptionId = default(string), string status = default(string), string planId = default(string), string planName = default(string), bool stripeConfigured = false, bool hasBillingAccount = false, bool overageEnabled = false, bool overageAvailable = false, int? overagePriceMillicents = default(int?))
         {
             // to ensure "planId" is required (not null)
             if (planId == null)
@@ -63,6 +66,9 @@ namespace InvoicePDFs.Model
             this.Status = status;
             this.StripeConfigured = stripeConfigured;
             this.HasBillingAccount = hasBillingAccount;
+            this.OverageEnabled = overageEnabled;
+            this.OverageAvailable = overageAvailable;
+            this.OveragePriceMillicents = overagePriceMillicents;
         }
 
         /// <summary>
@@ -102,6 +108,24 @@ namespace InvoicePDFs.Model
         public bool HasBillingAccount { get; set; }
 
         /// <summary>
+        /// Gets or Sets OverageEnabled
+        /// </summary>
+        [DataMember(Name = "overage_enabled", EmitDefaultValue = true)]
+        public bool OverageEnabled { get; set; }
+
+        /// <summary>
+        /// Gets or Sets OverageAvailable
+        /// </summary>
+        [DataMember(Name = "overage_available", EmitDefaultValue = true)]
+        public bool OverageAvailable { get; set; }
+
+        /// <summary>
+        /// Gets or Sets OveragePriceMillicents
+        /// </summary>
+        [DataMember(Name = "overage_price_millicents", EmitDefaultValue = true)]
+        public int? OveragePriceMillicents { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -115,6 +139,9 @@ namespace InvoicePDFs.Model
             sb.Append("  PlanName: ").Append(PlanName).Append("\n");
             sb.Append("  StripeConfigured: ").Append(StripeConfigured).Append("\n");
             sb.Append("  HasBillingAccount: ").Append(HasBillingAccount).Append("\n");
+            sb.Append("  OverageEnabled: ").Append(OverageEnabled).Append("\n");
+            sb.Append("  OverageAvailable: ").Append(OverageAvailable).Append("\n");
+            sb.Append("  OveragePriceMillicents: ").Append(OveragePriceMillicents).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

@@ -112,6 +112,29 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of BillingPlansListResponse</returns>
         ApiResponse<BillingPlansListResponse> ListPlansWithHttpInfo(int operationIndex = 0);
+        /// <summary>
+        /// Update Overage Settings
+        /// </summary>
+        /// <remarks>
+        /// Turn overage billing on or off for this account.  Off by default and stays off until asked: past the quota the API returns 429, which is a limit the customer can see coming. Overage replaces that limit with a charge, and nobody should meet that decision on an invoice.
+        /// </remarks>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="billingOverageRequest"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>BillingOverageResponse</returns>
+        BillingOverageResponse UpdateOverageSettings(BillingOverageRequest billingOverageRequest, int operationIndex = 0);
+
+        /// <summary>
+        /// Update Overage Settings
+        /// </summary>
+        /// <remarks>
+        /// Turn overage billing on or off for this account.  Off by default and stays off until asked: past the quota the API returns 429, which is a limit the customer can see coming. Overage replaces that limit with a charge, and nobody should meet that decision on an invoice.
+        /// </remarks>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="billingOverageRequest"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of BillingOverageResponse</returns>
+        ApiResponse<BillingOverageResponse> UpdateOverageSettingsWithHttpInfo(BillingOverageRequest billingOverageRequest, int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -215,6 +238,31 @@ namespace InvoicePDFs.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (BillingPlansListResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<BillingPlansListResponse>> ListPlansWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// Update Overage Settings
+        /// </summary>
+        /// <remarks>
+        /// Turn overage billing on or off for this account.  Off by default and stays off until asked: past the quota the API returns 429, which is a limit the customer can see coming. Overage replaces that limit with a charge, and nobody should meet that decision on an invoice.
+        /// </remarks>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="billingOverageRequest"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of BillingOverageResponse</returns>
+        System.Threading.Tasks.Task<BillingOverageResponse> UpdateOverageSettingsAsync(BillingOverageRequest billingOverageRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Update Overage Settings
+        /// </summary>
+        /// <remarks>
+        /// Turn overage billing on or off for this account.  Off by default and stays off until asked: past the quota the API returns 429, which is a limit the customer can see coming. Overage replaces that limit with a charge, and nobody should meet that decision on an invoice.
+        /// </remarks>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="billingOverageRequest"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (BillingOverageResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<BillingOverageResponse>> UpdateOverageSettingsWithHttpInfoAsync(BillingOverageRequest billingOverageRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -898,6 +946,164 @@ namespace InvoicePDFs.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ListPlans", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Update Overage Settings Turn overage billing on or off for this account.  Off by default and stays off until asked: past the quota the API returns 429, which is a limit the customer can see coming. Overage replaces that limit with a charge, and nobody should meet that decision on an invoice.
+        /// </summary>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="billingOverageRequest"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>BillingOverageResponse</returns>
+        public BillingOverageResponse UpdateOverageSettings(BillingOverageRequest billingOverageRequest, int operationIndex = 0)
+        {
+            InvoicePDFs.Client.ApiResponse<BillingOverageResponse> localVarResponse = UpdateOverageSettingsWithHttpInfo(billingOverageRequest);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update Overage Settings Turn overage billing on or off for this account.  Off by default and stays off until asked: past the quota the API returns 429, which is a limit the customer can see coming. Overage replaces that limit with a charge, and nobody should meet that decision on an invoice.
+        /// </summary>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="billingOverageRequest"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of BillingOverageResponse</returns>
+        public InvoicePDFs.Client.ApiResponse<BillingOverageResponse> UpdateOverageSettingsWithHttpInfo(BillingOverageRequest billingOverageRequest, int operationIndex = 0)
+        {
+            // verify the required parameter 'billingOverageRequest' is set
+            if (billingOverageRequest == null)
+            {
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'billingOverageRequest' when calling BillingApi->UpdateOverageSettings");
+            }
+
+            InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = InvoicePDFs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = InvoicePDFs.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = billingOverageRequest;
+
+            localVarRequestOptions.Operation = "BillingApi.UpdateOverageSettings";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (HTTPBearer) required
+            // bearer authentication required
+            if (!string.IsNullOrEmpty(this.Configuration.AccessToken) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Bearer " + this.Configuration.AccessToken);
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Patch<BillingOverageResponse>("/api/v1/billing/overage", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("UpdateOverageSettings", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Update Overage Settings Turn overage billing on or off for this account.  Off by default and stays off until asked: past the quota the API returns 429, which is a limit the customer can see coming. Overage replaces that limit with a charge, and nobody should meet that decision on an invoice.
+        /// </summary>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="billingOverageRequest"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of BillingOverageResponse</returns>
+        public async System.Threading.Tasks.Task<BillingOverageResponse> UpdateOverageSettingsAsync(BillingOverageRequest billingOverageRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            InvoicePDFs.Client.ApiResponse<BillingOverageResponse> localVarResponse = await UpdateOverageSettingsWithHttpInfoAsync(billingOverageRequest, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update Overage Settings Turn overage billing on or off for this account.  Off by default and stays off until asked: past the quota the API returns 429, which is a limit the customer can see coming. Overage replaces that limit with a charge, and nobody should meet that decision on an invoice.
+        /// </summary>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="billingOverageRequest"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (BillingOverageResponse)</returns>
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<BillingOverageResponse>> UpdateOverageSettingsWithHttpInfoAsync(BillingOverageRequest billingOverageRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'billingOverageRequest' is set
+            if (billingOverageRequest == null)
+            {
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'billingOverageRequest' when calling BillingApi->UpdateOverageSettings");
+            }
+
+
+            InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = InvoicePDFs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = InvoicePDFs.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = billingOverageRequest;
+
+            localVarRequestOptions.Operation = "BillingApi.UpdateOverageSettings";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (HTTPBearer) required
+            // bearer authentication required
+            if (!string.IsNullOrEmpty(this.Configuration.AccessToken) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Bearer " + this.Configuration.AccessToken);
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PatchAsync<BillingOverageResponse>("/api/v1/billing/overage", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("UpdateOverageSettings", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

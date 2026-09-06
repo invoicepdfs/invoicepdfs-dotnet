@@ -98,5 +98,14 @@ namespace InvoicePDFs.Test.Model
         {
             // TODO unit test for the property 'FooterText'
         }
+
+        /// <summary>
+        /// Test the property 'HideInvoicepdfsBranding'
+        /// </summary>
+        [Fact]
+        public void HideInvoicepdfsBrandingTest()
+        {
+            // TODO unit test for the property 'HideInvoicepdfsBranding'
+        }
     }
 }

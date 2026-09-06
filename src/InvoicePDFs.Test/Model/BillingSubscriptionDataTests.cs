@@ -107,5 +107,32 @@ namespace InvoicePDFs.Test.Model
         {
             // TODO unit test for the property 'HasBillingAccount'
         }
+
+        /// <summary>
+        /// Test the property 'OverageEnabled'
+        /// </summary>
+        [Fact]
+        public void OverageEnabledTest()
+        {
+            // TODO unit test for the property 'OverageEnabled'
+        }
+
+        /// <summary>
+        /// Test the property 'OverageAvailable'
+        /// </summary>
+        [Fact]
+        public void OverageAvailableTest()
+        {
+            // TODO unit test for the property 'OverageAvailable'
+        }
+
+        /// <summary>
+        /// Test the property 'OveragePriceMillicents'
+        /// </summary>
+        [Fact]
+        public void OveragePriceMillicentsTest()
+        {
+            // TODO unit test for the property 'OveragePriceMillicents'
+        }
     }
 }
