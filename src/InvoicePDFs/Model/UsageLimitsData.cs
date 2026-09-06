@@ -41,8 +41,9 @@ namespace InvoicePDFs.Model
         /// </summary>
         /// <param name="renders">renders (required).</param>
         /// <param name="rateLimit">rateLimit (required).</param>
+        /// <param name="apiLogRetention">apiLogRetention (default to 0).</param>
         /// <param name="overage">overage.</param>
-        public UsageLimitsData(UsageRenderLimits renders = default(UsageRenderLimits), UsageRateLimit rateLimit = default(UsageRateLimit), UsageOverage overage = default(UsageOverage))
+        public UsageLimitsData(UsageRenderLimits renders = default(UsageRenderLimits), UsageRateLimit rateLimit = default(UsageRateLimit), int apiLogRetention = 0, UsageOverage overage = default(UsageOverage))
         {
             // to ensure "renders" is required (not null)
             if (renders == null)
@@ -56,6 +57,7 @@ namespace InvoicePDFs.Model
                 throw new ArgumentNullException("rateLimit is a required property for UsageLimitsData and cannot be null");
             }
             this.RateLimit = rateLimit;
+            this.ApiLogRetention = apiLogRetention;
             this.Overage = overage;
         }
 
@@ -70,6 +72,12 @@ namespace InvoicePDFs.Model
         /// </summary>
         [DataMember(Name = "rate_limit", IsRequired = true, EmitDefaultValue = true)]
         public UsageRateLimit RateLimit { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ApiLogRetention
+        /// </summary>
+        [DataMember(Name = "api_log_retention", EmitDefaultValue = false)]
+        public int ApiLogRetention { get; set; }
 
         /// <summary>
         /// Gets or Sets Overage
@@ -87,6 +95,7 @@ namespace InvoicePDFs.Model
             sb.Append("class UsageLimitsData {\n");
             sb.Append("  Renders: ").Append(Renders).Append("\n");
             sb.Append("  RateLimit: ").Append(RateLimit).Append("\n");
+            sb.Append("  ApiLogRetention: ").Append(ApiLogRetention).Append("\n");
             sb.Append("  Overage: ").Append(Overage).Append("\n");
             sb.Append("}\n");
             return sb.ToString();

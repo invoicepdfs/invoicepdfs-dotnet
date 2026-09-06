@@ -73,6 +73,15 @@ namespace InvoicePDFs.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'ApiLogRetention'
+        /// </summary>
+        [Fact]
+        public void ApiLogRetentionTest()
+        {
+            // TODO unit test for the property 'ApiLogRetention'
+        }
+
+        /// <summary>
         /// Test the property 'Overage'
         /// </summary>
         [Fact]

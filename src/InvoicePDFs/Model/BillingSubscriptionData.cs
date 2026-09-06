@@ -48,7 +48,8 @@ namespace InvoicePDFs.Model
         /// <param name="overageEnabled">overageEnabled (default to false).</param>
         /// <param name="overageAvailable">overageAvailable (default to false).</param>
         /// <param name="overagePriceMillicents">overagePriceMillicents.</param>
-        public BillingSubscriptionData(string subscriptionId = default(string), string status = default(string), string planId = default(string), string planName = default(string), bool stripeConfigured = false, bool hasBillingAccount = false, bool overageEnabled = false, bool overageAvailable = false, int? overagePriceMillicents = default(int?))
+        /// <param name="allowBrandingRemoval">allowBrandingRemoval (default to false).</param>
+        public BillingSubscriptionData(string subscriptionId = default(string), string status = default(string), string planId = default(string), string planName = default(string), bool stripeConfigured = false, bool hasBillingAccount = false, bool overageEnabled = false, bool overageAvailable = false, int? overagePriceMillicents = default(int?), bool allowBrandingRemoval = false)
         {
             // to ensure "planId" is required (not null)
             if (planId == null)
@@ -69,6 +70,7 @@ namespace InvoicePDFs.Model
             this.OverageEnabled = overageEnabled;
             this.OverageAvailable = overageAvailable;
             this.OveragePriceMillicents = overagePriceMillicents;
+            this.AllowBrandingRemoval = allowBrandingRemoval;
         }
 
         /// <summary>
@@ -126,6 +128,12 @@ namespace InvoicePDFs.Model
         public int? OveragePriceMillicents { get; set; }
 
         /// <summary>
+        /// Gets or Sets AllowBrandingRemoval
+        /// </summary>
+        [DataMember(Name = "allow_branding_removal", EmitDefaultValue = true)]
+        public bool AllowBrandingRemoval { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -142,6 +150,7 @@ namespace InvoicePDFs.Model
             sb.Append("  OverageEnabled: ").Append(OverageEnabled).Append("\n");
             sb.Append("  OverageAvailable: ").Append(OverageAvailable).Append("\n");
             sb.Append("  OveragePriceMillicents: ").Append(OveragePriceMillicents).Append("\n");
+            sb.Append("  AllowBrandingRemoval: ").Append(AllowBrandingRemoval).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

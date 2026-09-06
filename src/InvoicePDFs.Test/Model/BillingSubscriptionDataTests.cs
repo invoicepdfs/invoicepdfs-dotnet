@@ -134,5 +134,14 @@ namespace InvoicePDFs.Test.Model
         {
             // TODO unit test for the property 'OveragePriceMillicents'
         }
+
+        /// <summary>
+        /// Test the property 'AllowBrandingRemoval'
+        /// </summary>
+        [Fact]
+        public void AllowBrandingRemovalTest()
+        {
+            // TODO unit test for the property 'AllowBrandingRemoval'
+        }
     }
 }

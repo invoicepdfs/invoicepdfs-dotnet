@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **OverageEnabled** | **bool** |  | [optional] [default to false]
 **OverageAvailable** | **bool** |  | [optional] [default to false]
 **OveragePriceMillicents** | **int?** |  | [optional] 
+**AllowBrandingRemoval** | **bool** |  | [optional] [default to false]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
