@@ -47,13 +47,14 @@ namespace InvoicePDFs.Model
         /// <param name="buyer">buyer (required).</param>
         /// <param name="shipTo">shipTo.</param>
         /// <param name="buyerReference">buyerReference.</param>
+        /// <param name="precedingInvoiceNumber">precedingInvoiceNumber.</param>
         /// <param name="lineItems">lineItems (required).</param>
         /// <param name="discounts">discounts.</param>
         /// <param name="shipping">shipping.</param>
         /// <param name="customFields">customFields.</param>
         /// <param name="payment">payment.</param>
         /// <param name="branding">branding.</param>
-        public DocumentInvoiceDataInput(string invoiceNumber = default(string), DateOnly issueDate = default(DateOnly), DateOnly dueDate = default(DateOnly), string currency = default(string), DocumentPartyInput seller = default(DocumentPartyInput), DocumentPartyInput buyer = default(DocumentPartyInput), DocumentPartyInput shipTo = default(DocumentPartyInput), string buyerReference = default(string), List<DocumentLineItemInput> lineItems = default(List<DocumentLineItemInput>), List<DocumentDiscountInput> discounts = default(List<DocumentDiscountInput>), DocumentShippingInput shipping = default(DocumentShippingInput), List<DocumentCustomFieldInput> customFields = default(List<DocumentCustomFieldInput>), DocumentPaymentInput payment = default(DocumentPaymentInput), DocumentBrandingInput branding = default(DocumentBrandingInput))
+        public DocumentInvoiceDataInput(string invoiceNumber = default(string), DateOnly issueDate = default(DateOnly), DateOnly dueDate = default(DateOnly), string currency = default(string), DocumentPartyInput seller = default(DocumentPartyInput), DocumentPartyInput buyer = default(DocumentPartyInput), DocumentPartyInput shipTo = default(DocumentPartyInput), string buyerReference = default(string), string precedingInvoiceNumber = default(string), List<DocumentLineItemInput> lineItems = default(List<DocumentLineItemInput>), List<DocumentDiscountInput> discounts = default(List<DocumentDiscountInput>), DocumentShippingInput shipping = default(DocumentShippingInput), List<DocumentCustomFieldInput> customFields = default(List<DocumentCustomFieldInput>), DocumentPaymentInput payment = default(DocumentPaymentInput), DocumentBrandingInput branding = default(DocumentBrandingInput))
         {
             // to ensure "invoiceNumber" is required (not null)
             if (invoiceNumber == null)
@@ -94,6 +95,7 @@ namespace InvoicePDFs.Model
             this.DueDate = dueDate;
             this.ShipTo = shipTo;
             this.BuyerReference = buyerReference;
+            this.PrecedingInvoiceNumber = precedingInvoiceNumber;
             this.Discounts = discounts;
             this.Shipping = shipping;
             this.CustomFields = customFields;
@@ -153,6 +155,12 @@ namespace InvoicePDFs.Model
         public string BuyerReference { get; set; }
 
         /// <summary>
+        /// Gets or Sets PrecedingInvoiceNumber
+        /// </summary>
+        [DataMember(Name = "preceding_invoice_number", EmitDefaultValue = true)]
+        public string PrecedingInvoiceNumber { get; set; }
+
+        /// <summary>
         /// Gets or Sets LineItems
         /// </summary>
         [DataMember(Name = "line_items", IsRequired = true, EmitDefaultValue = true)]
@@ -204,6 +212,7 @@ namespace InvoicePDFs.Model
             sb.Append("  Buyer: ").Append(Buyer).Append("\n");
             sb.Append("  ShipTo: ").Append(ShipTo).Append("\n");
             sb.Append("  BuyerReference: ").Append(BuyerReference).Append("\n");
+            sb.Append("  PrecedingInvoiceNumber: ").Append(PrecedingInvoiceNumber).Append("\n");
             sb.Append("  LineItems: ").Append(LineItems).Append("\n");
             sb.Append("  Discounts: ").Append(Discounts).Append("\n");
             sb.Append("  Shipping: ").Append(Shipping).Append("\n");

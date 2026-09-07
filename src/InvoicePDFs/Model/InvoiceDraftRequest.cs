@@ -103,6 +103,8 @@ namespace InvoicePDFs.Model
         /// <param name="businessProfileId">businessProfileId (required).</param>
         /// <param name="customerId">customerId (required).</param>
         /// <param name="shipTo">shipTo.</param>
+        /// <param name="buyerReference">buyerReference.</param>
+        /// <param name="precedingInvoiceNumber">precedingInvoiceNumber.</param>
         /// <param name="lineItems">lineItems (required).</param>
         /// <param name="discounts">discounts.</param>
         /// <param name="shipping">shipping.</param>
@@ -111,7 +113,7 @@ namespace InvoicePDFs.Model
         /// <param name="customFields">customFields.</param>
         /// <param name="payment">payment.</param>
         /// <param name="branding">branding.</param>
-        public InvoiceDraftRequest(string invoiceNumber = default(string), DocumentTypeEnum? documentType = DocumentTypeEnum.Invoice, DateOnly issueDate = default(DateOnly), DateOnly dueDate = default(DateOnly), string currency = default(string), string locale = default(string), string businessProfileId = default(string), string customerId = default(string), PostalAddress shipTo = default(PostalAddress), List<InvoiceLineItemInput> lineItems = default(List<InvoiceLineItemInput>), List<InvoiceDiscountInput> discounts = default(List<InvoiceDiscountInput>), InvoiceShippingInput shipping = default(InvoiceShippingInput), List<InvoiceNoteInput> notes = default(List<InvoiceNoteInput>), List<InvoiceTermInput> terms = default(List<InvoiceTermInput>), List<InvoiceCustomFieldInput> customFields = default(List<InvoiceCustomFieldInput>), InvoicePaymentInput payment = default(InvoicePaymentInput), InvoiceBrandingInput branding = default(InvoiceBrandingInput))
+        public InvoiceDraftRequest(string invoiceNumber = default(string), DocumentTypeEnum? documentType = DocumentTypeEnum.Invoice, DateOnly issueDate = default(DateOnly), DateOnly dueDate = default(DateOnly), string currency = default(string), string locale = default(string), string businessProfileId = default(string), string customerId = default(string), PostalAddress shipTo = default(PostalAddress), string buyerReference = default(string), string precedingInvoiceNumber = default(string), List<InvoiceLineItemInput> lineItems = default(List<InvoiceLineItemInput>), List<InvoiceDiscountInput> discounts = default(List<InvoiceDiscountInput>), InvoiceShippingInput shipping = default(InvoiceShippingInput), List<InvoiceNoteInput> notes = default(List<InvoiceNoteInput>), List<InvoiceTermInput> terms = default(List<InvoiceTermInput>), List<InvoiceCustomFieldInput> customFields = default(List<InvoiceCustomFieldInput>), InvoicePaymentInput payment = default(InvoicePaymentInput), InvoiceBrandingInput branding = default(InvoiceBrandingInput))
         {
             // to ensure "invoiceNumber" is required (not null)
             if (invoiceNumber == null)
@@ -153,6 +155,8 @@ namespace InvoicePDFs.Model
             this.DueDate = dueDate;
             this.Locale = locale;
             this.ShipTo = shipTo;
+            this.BuyerReference = buyerReference;
+            this.PrecedingInvoiceNumber = precedingInvoiceNumber;
             this.Discounts = discounts;
             this.Shipping = shipping;
             this.Notes = notes;
@@ -214,6 +218,18 @@ namespace InvoicePDFs.Model
         /// </summary>
         [DataMember(Name = "ship_to", EmitDefaultValue = true)]
         public PostalAddress ShipTo { get; set; }
+
+        /// <summary>
+        /// Gets or Sets BuyerReference
+        /// </summary>
+        [DataMember(Name = "buyer_reference", EmitDefaultValue = true)]
+        public string BuyerReference { get; set; }
+
+        /// <summary>
+        /// Gets or Sets PrecedingInvoiceNumber
+        /// </summary>
+        [DataMember(Name = "preceding_invoice_number", EmitDefaultValue = true)]
+        public string PrecedingInvoiceNumber { get; set; }
 
         /// <summary>
         /// Gets or Sets LineItems
@@ -280,6 +296,8 @@ namespace InvoicePDFs.Model
             sb.Append("  BusinessProfileId: ").Append(BusinessProfileId).Append("\n");
             sb.Append("  CustomerId: ").Append(CustomerId).Append("\n");
             sb.Append("  ShipTo: ").Append(ShipTo).Append("\n");
+            sb.Append("  BuyerReference: ").Append(BuyerReference).Append("\n");
+            sb.Append("  PrecedingInvoiceNumber: ").Append(PrecedingInvoiceNumber).Append("\n");
             sb.Append("  LineItems: ").Append(LineItems).Append("\n");
             sb.Append("  Discounts: ").Append(Discounts).Append("\n");
             sb.Append("  Shipping: ").Append(Shipping).Append("\n");

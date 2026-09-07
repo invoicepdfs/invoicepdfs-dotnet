@@ -7491,6 +7491,7 @@ components:
               bank_name: bank_name
               routing_number: routing_number
               swift: swift
+          preceding_invoice_number: preceding_invoice_number
           invoice_number: INV-2026-001
           ship_to:
             website: website
@@ -7978,6 +7979,7 @@ components:
             bank_name: bank_name
             routing_number: routing_number
             swift: swift
+        preceding_invoice_number: preceding_invoice_number
         invoice_number: INV-2026-001
         ship_to:
           website: website
@@ -8029,6 +8031,9 @@ components:
         ship_to:
           $ref: '#/components/schemas/DocumentPartyInput'
         buyer_reference:
+          nullable: true
+          type: string
+        preceding_invoice_number:
           nullable: true
           type: string
         line_items:
@@ -8783,6 +8788,7 @@ components:
               bank_name: bank_name
               routing_number: routing_number
               swift: swift
+          preceding_invoice_number: preceding_invoice_number
           invoice_number: INV-2026-001
           ship_to:
             website: website
@@ -9154,6 +9160,7 @@ components:
               bank_name: bank_name
               routing_number: routing_number
               swift: swift
+          preceding_invoice_number: preceding_invoice_number
           invoice_number: INV-2026-001
           ship_to:
             website: website
@@ -9751,6 +9758,7 @@ components:
           quantity: "2"
           name: Web Development
           description: description
+          unit_code: unit_code
           discount:
             reason: reason
             type: percentage
@@ -9778,6 +9786,7 @@ components:
           quantity: "2"
           name: Web Development
           description: description
+          unit_code: unit_code
           discount:
             reason: reason
             type: percentage
@@ -9802,6 +9811,7 @@ components:
           unit_price: "150.00"
           sku: sku
         locale: locale
+        buyer_reference: buyer_reference
         business_profile_id: bp_01ABC
         issue_date: 2026-07-20
         discounts:
@@ -9834,6 +9844,7 @@ components:
             bank_name: bank_name
             routing_number: routing_number
             swift: swift
+        preceding_invoice_number: preceding_invoice_number
         customer_id: cus_01XYZ
         invoice_number: INV-2026-001
         ship_to:
@@ -9887,6 +9898,12 @@ components:
           type: string
         ship_to:
           $ref: '#/components/schemas/PostalAddress'
+        buyer_reference:
+          nullable: true
+          type: string
+        preceding_invoice_number:
+          nullable: true
+          type: string
         line_items:
           items:
             $ref: '#/components/schemas/InvoiceLineItemInput'
@@ -9933,6 +9950,7 @@ components:
         quantity: "2"
         name: Web Development
         description: description
+        unit_code: unit_code
         discount:
           reason: reason
           type: percentage
@@ -9975,6 +9993,9 @@ components:
           title: Unit Price
           type: string
         unit:
+          nullable: true
+          type: string
+        unit_code:
           nullable: true
           type: string
         sku:
@@ -11174,6 +11195,7 @@ components:
             quantity: "2"
             name: Web Development
             description: description
+            unit_code: unit_code
             discount:
               reason: reason
               type: percentage
@@ -11201,6 +11223,7 @@ components:
             quantity: "2"
             name: Web Development
             description: description
+            unit_code: unit_code
             discount:
               reason: reason
               type: percentage
@@ -11225,6 +11248,7 @@ components:
             unit_price: "150.00"
             sku: sku
           locale: locale
+          buyer_reference: buyer_reference
           business_profile_id: bp_01ABC
           issue_date: 2026-07-20
           discounts:
@@ -11257,6 +11281,7 @@ components:
               bank_name: bank_name
               routing_number: routing_number
               swift: swift
+          preceding_invoice_number: preceding_invoice_number
           customer_id: cus_01XYZ
           invoice_number: INV-2026-001
           ship_to:
@@ -11429,6 +11454,7 @@ components:
             quantity: "2"
             name: Web Development
             description: description
+            unit_code: unit_code
             discount:
               reason: reason
               type: percentage
@@ -11456,6 +11482,7 @@ components:
             quantity: "2"
             name: Web Development
             description: description
+            unit_code: unit_code
             discount:
               reason: reason
               type: percentage
@@ -11480,6 +11507,7 @@ components:
             unit_price: "150.00"
             sku: sku
           locale: locale
+          buyer_reference: buyer_reference
           business_profile_id: bp_01ABC
           issue_date: 2026-07-20
           discounts:
@@ -11512,6 +11540,7 @@ components:
               bank_name: bank_name
               routing_number: routing_number
               swift: swift
+          preceding_invoice_number: preceding_invoice_number
           customer_id: cus_01XYZ
           invoice_number: INV-2026-001
           ship_to:

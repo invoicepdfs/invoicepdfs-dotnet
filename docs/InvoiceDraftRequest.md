@@ -13,6 +13,8 @@ Name | Type | Description | Notes
 **BusinessProfileId** | **string** |  | 
 **CustomerId** | **string** |  | 
 **ShipTo** | [**PostalAddress**](PostalAddress.md) |  | [optional] 
+**BuyerReference** | **string** |  | [optional] 
+**PrecedingInvoiceNumber** | **string** |  | [optional] 
 **LineItems** | [**List&lt;InvoiceLineItemInput&gt;**](InvoiceLineItemInput.md) |  | 
 **Discounts** | [**List&lt;InvoiceDiscountInput&gt;**](InvoiceDiscountInput.md) |  | [optional] 
 **Shipping** | [**InvoiceShippingInput**](InvoiceShippingInput.md) |  | [optional] 

@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **Quantity** | **string** | Decimal string | 
 **UnitPrice** | **string** | Decimal string in major units | 
 **Unit** | **string** |  | [optional] 
+**UnitCode** | **string** |  | [optional] 
 **Sku** | **string** |  | [optional] 
 **Discount** | [**InvoiceDiscountInput**](InvoiceDiscountInput.md) |  | [optional] 
 **Taxes** | [**List&lt;InvoiceLineItemTaxInput&gt;**](InvoiceLineItemTaxInput.md) |  | [optional] 

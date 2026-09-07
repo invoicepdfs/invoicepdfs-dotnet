@@ -127,6 +127,15 @@ namespace InvoicePDFs.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'PrecedingInvoiceNumber'
+        /// </summary>
+        [Fact]
+        public void PrecedingInvoiceNumberTest()
+        {
+            // TODO unit test for the property 'PrecedingInvoiceNumber'
+        }
+
+        /// <summary>
         /// Test the property 'LineItems'
         /// </summary>
         [Fact]
