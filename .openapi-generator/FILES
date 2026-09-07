@@ -190,6 +190,7 @@ docs/StatsCounts.md
 docs/StatsOverview.md
 docs/StatsRecentInvoice.md
 docs/StatsResponse.md
+docs/TaxCategory.md
 docs/TaxRateCreateRequest.md
 docs/TaxRateOut.md
 docs/TaxRatePatchRequest.md
@@ -439,6 +440,7 @@ src/InvoicePDFs.Test/Model/StatsCountsTests.cs
 src/InvoicePDFs.Test/Model/StatsOverviewTests.cs
 src/InvoicePDFs.Test/Model/StatsRecentInvoiceTests.cs
 src/InvoicePDFs.Test/Model/StatsResponseTests.cs
+src/InvoicePDFs.Test/Model/TaxCategoryTests.cs
 src/InvoicePDFs.Test/Model/TaxRateCreateRequestTests.cs
 src/InvoicePDFs.Test/Model/TaxRateOutTests.cs
 src/InvoicePDFs.Test/Model/TaxRatePatchRequestTests.cs
@@ -698,6 +700,7 @@ src/InvoicePDFs/Model/StatsCounts.cs
 src/InvoicePDFs/Model/StatsOverview.cs
 src/InvoicePDFs/Model/StatsRecentInvoice.cs
 src/InvoicePDFs/Model/StatsResponse.cs
+src/InvoicePDFs/Model/TaxCategory.cs
 src/InvoicePDFs/Model/TaxRateCreateRequest.cs
 src/InvoicePDFs/Model/TaxRateOut.cs
 src/InvoicePDFs/Model/TaxRatePatchRequest.cs

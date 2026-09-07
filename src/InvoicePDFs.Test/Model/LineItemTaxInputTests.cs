@@ -89,5 +89,14 @@ namespace InvoicePDFs.Test.Model
         {
             // TODO unit test for the property 'Inclusive'
         }
+
+        /// <summary>
+        /// Test the property 'Category'
+        /// </summary>
+        [Fact]
+        public void CategoryTest()
+        {
+            // TODO unit test for the property 'Category'
+        }
     }
 }
