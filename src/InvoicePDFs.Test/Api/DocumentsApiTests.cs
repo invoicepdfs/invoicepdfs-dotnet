@@ -270,6 +270,18 @@ namespace InvoicePDFs.Test.Api
         }
 
         /// <summary>
+        /// Test ValidateCompliance
+        /// </summary>
+        [Fact]
+        public void ValidateComplianceTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //DocumentComplianceRequest documentComplianceRequest = null;
+            //var response = instance.ValidateCompliance(documentComplianceRequest);
+            //Assert.IsType<DocumentComplianceResponse>(response);
+        }
+
+        /// <summary>
         /// Test ValidateDocument
         /// </summary>
         [Fact]

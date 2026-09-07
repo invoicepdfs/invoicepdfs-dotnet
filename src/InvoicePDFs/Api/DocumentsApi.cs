@@ -389,6 +389,29 @@ namespace InvoicePDFs.Api
         /// <returns>ApiResponse of DocumentResponse</returns>
         ApiResponse<DocumentResponse> UpdateDocumentWithHttpInfo(string documentId, DocumentPatchRequest documentPatchRequest, int operationIndex = 0);
         /// <summary>
+        /// Validate Compliance
+        /// </summary>
+        /// <remarks>
+        /// Check a document against an e-invoicing ruleset without rendering it.  Costs no renders: nothing is stored and no PDF is produced, so a caller can check every invoice they are about to send rather than discovering the problem from a rejection weeks later.  This is the semantic half — mandatory fields and conditional requirements. Schematron is the authoritative check and is not wired up yet, so a document that passes here is not thereby proven conformant. It says what it can prove is wrong, which is the useful half early.
+        /// </remarks>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="documentComplianceRequest"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>DocumentComplianceResponse</returns>
+        DocumentComplianceResponse ValidateCompliance(DocumentComplianceRequest documentComplianceRequest, int operationIndex = 0);
+
+        /// <summary>
+        /// Validate Compliance
+        /// </summary>
+        /// <remarks>
+        /// Check a document against an e-invoicing ruleset without rendering it.  Costs no renders: nothing is stored and no PDF is produced, so a caller can check every invoice they are about to send rather than discovering the problem from a rejection weeks later.  This is the semantic half — mandatory fields and conditional requirements. Schematron is the authoritative check and is not wired up yet, so a document that passes here is not thereby proven conformant. It says what it can prove is wrong, which is the useful half early.
+        /// </remarks>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="documentComplianceRequest"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of DocumentComplianceResponse</returns>
+        ApiResponse<DocumentComplianceResponse> ValidateComplianceWithHttpInfo(DocumentComplianceRequest documentComplianceRequest, int operationIndex = 0);
+        /// <summary>
         /// Validate Document
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
@@ -884,6 +907,31 @@ namespace InvoicePDFs.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (DocumentResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<DocumentResponse>> UpdateDocumentWithHttpInfoAsync(string documentId, DocumentPatchRequest documentPatchRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// Validate Compliance
+        /// </summary>
+        /// <remarks>
+        /// Check a document against an e-invoicing ruleset without rendering it.  Costs no renders: nothing is stored and no PDF is produced, so a caller can check every invoice they are about to send rather than discovering the problem from a rejection weeks later.  This is the semantic half — mandatory fields and conditional requirements. Schematron is the authoritative check and is not wired up yet, so a document that passes here is not thereby proven conformant. It says what it can prove is wrong, which is the useful half early.
+        /// </remarks>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="documentComplianceRequest"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of DocumentComplianceResponse</returns>
+        System.Threading.Tasks.Task<DocumentComplianceResponse> ValidateComplianceAsync(DocumentComplianceRequest documentComplianceRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Validate Compliance
+        /// </summary>
+        /// <remarks>
+        /// Check a document against an e-invoicing ruleset without rendering it.  Costs no renders: nothing is stored and no PDF is produced, so a caller can check every invoice they are about to send rather than discovering the problem from a rejection weeks later.  This is the semantic half — mandatory fields and conditional requirements. Schematron is the authoritative check and is not wired up yet, so a document that passes here is not thereby proven conformant. It says what it can prove is wrong, which is the useful half early.
+        /// </remarks>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="documentComplianceRequest"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (DocumentComplianceResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DocumentComplianceResponse>> ValidateComplianceWithHttpInfoAsync(DocumentComplianceRequest documentComplianceRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Validate Document
         /// </summary>
@@ -3855,6 +3903,164 @@ namespace InvoicePDFs.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("UpdateDocument", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Validate Compliance Check a document against an e-invoicing ruleset without rendering it.  Costs no renders: nothing is stored and no PDF is produced, so a caller can check every invoice they are about to send rather than discovering the problem from a rejection weeks later.  This is the semantic half — mandatory fields and conditional requirements. Schematron is the authoritative check and is not wired up yet, so a document that passes here is not thereby proven conformant. It says what it can prove is wrong, which is the useful half early.
+        /// </summary>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="documentComplianceRequest"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>DocumentComplianceResponse</returns>
+        public DocumentComplianceResponse ValidateCompliance(DocumentComplianceRequest documentComplianceRequest, int operationIndex = 0)
+        {
+            InvoicePDFs.Client.ApiResponse<DocumentComplianceResponse> localVarResponse = ValidateComplianceWithHttpInfo(documentComplianceRequest);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Validate Compliance Check a document against an e-invoicing ruleset without rendering it.  Costs no renders: nothing is stored and no PDF is produced, so a caller can check every invoice they are about to send rather than discovering the problem from a rejection weeks later.  This is the semantic half — mandatory fields and conditional requirements. Schematron is the authoritative check and is not wired up yet, so a document that passes here is not thereby proven conformant. It says what it can prove is wrong, which is the useful half early.
+        /// </summary>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="documentComplianceRequest"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of DocumentComplianceResponse</returns>
+        public InvoicePDFs.Client.ApiResponse<DocumentComplianceResponse> ValidateComplianceWithHttpInfo(DocumentComplianceRequest documentComplianceRequest, int operationIndex = 0)
+        {
+            // verify the required parameter 'documentComplianceRequest' is set
+            if (documentComplianceRequest == null)
+            {
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'documentComplianceRequest' when calling DocumentsApi->ValidateCompliance");
+            }
+
+            InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = InvoicePDFs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = InvoicePDFs.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = documentComplianceRequest;
+
+            localVarRequestOptions.Operation = "DocumentsApi.ValidateCompliance";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (HTTPBearer) required
+            // bearer authentication required
+            if (!string.IsNullOrEmpty(this.Configuration.AccessToken) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Bearer " + this.Configuration.AccessToken);
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<DocumentComplianceResponse>("/api/v1/documents/validate-compliance", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ValidateCompliance", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Validate Compliance Check a document against an e-invoicing ruleset without rendering it.  Costs no renders: nothing is stored and no PDF is produced, so a caller can check every invoice they are about to send rather than discovering the problem from a rejection weeks later.  This is the semantic half — mandatory fields and conditional requirements. Schematron is the authoritative check and is not wired up yet, so a document that passes here is not thereby proven conformant. It says what it can prove is wrong, which is the useful half early.
+        /// </summary>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="documentComplianceRequest"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of DocumentComplianceResponse</returns>
+        public async System.Threading.Tasks.Task<DocumentComplianceResponse> ValidateComplianceAsync(DocumentComplianceRequest documentComplianceRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            InvoicePDFs.Client.ApiResponse<DocumentComplianceResponse> localVarResponse = await ValidateComplianceWithHttpInfoAsync(documentComplianceRequest, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Validate Compliance Check a document against an e-invoicing ruleset without rendering it.  Costs no renders: nothing is stored and no PDF is produced, so a caller can check every invoice they are about to send rather than discovering the problem from a rejection weeks later.  This is the semantic half — mandatory fields and conditional requirements. Schematron is the authoritative check and is not wired up yet, so a document that passes here is not thereby proven conformant. It says what it can prove is wrong, which is the useful half early.
+        /// </summary>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="documentComplianceRequest"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (DocumentComplianceResponse)</returns>
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<DocumentComplianceResponse>> ValidateComplianceWithHttpInfoAsync(DocumentComplianceRequest documentComplianceRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'documentComplianceRequest' is set
+            if (documentComplianceRequest == null)
+            {
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'documentComplianceRequest' when calling DocumentsApi->ValidateCompliance");
+            }
+
+
+            InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = InvoicePDFs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = InvoicePDFs.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = documentComplianceRequest;
+
+            localVarRequestOptions.Operation = "DocumentsApi.ValidateCompliance";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (HTTPBearer) required
+            // bearer authentication required
+            if (!string.IsNullOrEmpty(this.Configuration.AccessToken) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Bearer " + this.Configuration.AccessToken);
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PostAsync<DocumentComplianceResponse>("/api/v1/documents/validate-compliance", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ValidateCompliance", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

@@ -1638,6 +1638,45 @@ paths:
       tags:
       - documents
       x-visibility: public
+  /api/v1/documents/validate-compliance:
+    post:
+      description: |-
+        Check a document against an e-invoicing ruleset without rendering it.
+
+        Costs no renders: nothing is stored and no PDF is produced, so a caller can
+        check every invoice they are about to send rather than discovering the
+        problem from a rejection weeks later.
+
+        This is the semantic half — mandatory fields and conditional requirements.
+        Schematron is the authoritative check and is not wired up yet, so a document
+        that passes here is not thereby proven conformant. It says what it can prove
+        is wrong, which is the useful half early.
+      operationId: validate_compliance
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DocumentComplianceRequest'
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DocumentComplianceResponse'
+          description: Successful Response
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiErrorResponse'
+          description: Validation Error
+      security:
+      - HTTPBearer: []
+      summary: Validate Compliance
+      tags:
+      - documents
+      x-visibility: public
   /api/v1/documents/calculate:
     post:
       operationId: calculate_document
@@ -6626,6 +6665,72 @@ components:
       - total
       title: CalculationBreakdown
       type: object
+    ComplianceCheckOut:
+      example:
+        valid: true
+        ruleset_version: PEPPOL-UBL-3.15.0
+        profile: peppol_bis_billing_3
+        violations:
+        - path: "lines[1].unit_code"
+          rule: BT-130
+          message: A coded unit is required.
+        - path: "lines[1].unit_code"
+          rule: BT-130
+          message: A coded unit is required.
+      properties:
+        profile:
+          example: peppol_bis_billing_3
+          title: Profile
+          type: string
+        ruleset_version:
+          description: "The version these rules came from. Worth recording alongside\
+            \ any document you file — rulesets revise, and 'which rules did this pass?'\
+            \ is what an audit asks years later."
+          example: PEPPOL-UBL-3.15.0
+          title: Ruleset Version
+          type: string
+        valid:
+          title: Valid
+          type: boolean
+        violations:
+          description: "Every violation found, not the first — fixing one field per\
+            \ round trip is the experience this avoids."
+          items:
+            $ref: '#/components/schemas/ComplianceViolationOut'
+          title: Violations
+          type: array
+      required:
+      - profile
+      - ruleset_version
+      - valid
+      title: ComplianceCheckOut
+      type: object
+    ComplianceViolationOut:
+      example:
+        path: "lines[1].unit_code"
+        rule: BT-130
+        message: A coded unit is required.
+      properties:
+        rule:
+          description: The EN 16931 term or group.
+          example: BT-130
+          title: Rule
+          type: string
+        path:
+          description: Where in the document.
+          example: "lines[1].unit_code"
+          title: Path
+          type: string
+        message:
+          example: A coded unit is required.
+          title: Message
+          type: string
+      required:
+      - message
+      - path
+      - rule
+      title: ComplianceViolationOut
+      type: object
     CountriesListResponse:
       example:
         data:
@@ -7569,6 +7674,228 @@ components:
       required:
       - data
       title: DocumentCalculateResponse
+      type: object
+    DocumentComplianceRequest:
+      example:
+        data:
+          seller:
+            website: website
+            address:
+              country: country
+              city: city
+              state: state
+              postal_code: postal_code
+              line2: line2
+              line1: 1 Main St
+            phone: phone
+            registration_number: registration_number
+            name: Acme Corp
+            legal_name: legal_name
+            email: email
+            tax_id: tax_id
+            electronic_address:
+              scheme_id: "0088"
+              value: "9482348239"
+            bank_account:
+              account_number: account_number
+              account_name: account_name
+              iban: iban
+              bank_name: bank_name
+              routing_number: routing_number
+              swift: swift
+          custom_fields:
+          - label: PO Number
+            value: PO-2026-001
+          - label: PO Number
+            value: PO-2026-001
+          branding:
+            accent_color: '#111827'
+            hide_invoicepdfs_branding: false
+            logo_file_id: logo_file_id
+            font_family: font_family
+            footer_text: Generated by InvoicePDFs
+            primary_color: '#111827'
+          due_date: 2000-01-23
+          line_items:
+          - unit: unit
+            quantity: "2"
+            name: Web Development
+            description: description
+            unit_code: unit_code
+            discount:
+              reason: reason
+              type: percentage
+              value: "10"
+            taxes:
+            - inclusive: false
+              rate: "8.875"
+              name: Sales Tax
+              category:
+                code: S
+                exemption_reason: exemption_reason
+                exemption_reason_code: exemption_reason_code
+            - inclusive: false
+              rate: "8.875"
+              name: Sales Tax
+              category:
+                code: S
+                exemption_reason: exemption_reason
+                exemption_reason_code: exemption_reason_code
+            unit_price: "150.00"
+            sku: sku
+          - unit: unit
+            quantity: "2"
+            name: Web Development
+            description: description
+            unit_code: unit_code
+            discount:
+              reason: reason
+              type: percentage
+              value: "10"
+            taxes:
+            - inclusive: false
+              rate: "8.875"
+              name: Sales Tax
+              category:
+                code: S
+                exemption_reason: exemption_reason
+                exemption_reason_code: exemption_reason_code
+            - inclusive: false
+              rate: "8.875"
+              name: Sales Tax
+              category:
+                code: S
+                exemption_reason: exemption_reason
+                exemption_reason_code: exemption_reason_code
+            unit_price: "150.00"
+            sku: sku
+          buyer_reference: buyer_reference
+          buyer:
+            website: website
+            address:
+              country: country
+              city: city
+              state: state
+              postal_code: postal_code
+              line2: line2
+              line1: 1 Main St
+            phone: phone
+            registration_number: registration_number
+            name: Acme Corp
+            legal_name: legal_name
+            email: email
+            tax_id: tax_id
+            electronic_address:
+              scheme_id: "0088"
+              value: "9482348239"
+            bank_account:
+              account_number: account_number
+              account_name: account_name
+              iban: iban
+              bank_name: bank_name
+              routing_number: routing_number
+              swift: swift
+          issue_date: 2026-07-20
+          discounts:
+          - reason: reason
+            type: percentage
+            value: "10"
+          - reason: reason
+            type: percentage
+            value: "10"
+          shipping:
+            amount: "9.99"
+            taxable: false
+            description: Shipping
+          currency: USD
+          payment:
+            instructions: instructions
+            payment_url: payment_url
+            accepted_methods:
+            - bank_transfer
+            - credit_card
+            bank_account:
+              account_number: account_number
+              account_name: account_name
+              iban: iban
+              bank_name: bank_name
+              routing_number: routing_number
+              swift: swift
+          preceding_invoice_number: preceding_invoice_number
+          invoice_number: INV-2026-001
+          ship_to:
+            website: website
+            address:
+              country: country
+              city: city
+              state: state
+              postal_code: postal_code
+              line2: line2
+              line1: 1 Main St
+            phone: phone
+            registration_number: registration_number
+            name: Acme Corp
+            legal_name: legal_name
+            email: email
+            tax_id: tax_id
+            electronic_address:
+              scheme_id: "0088"
+              value: "9482348239"
+            bank_account:
+              account_number: account_number
+              account_name: account_name
+              iban: iban
+              bank_name: bank_name
+              routing_number: routing_number
+              swift: swift
+        profile: peppol_bis_billing_3
+        document_type: invoice
+      properties:
+        document_type:
+          default: invoice
+          enum:
+          - invoice
+          - credit_note
+          - quote
+          - receipt
+          - proforma
+          - purchase_order
+          - delivery_note
+          title: Document Type
+          type: string
+        data:
+          $ref: '#/components/schemas/DocumentInvoiceDataInput'
+        profile:
+          description: "Which ruleset to hold the document to. Rulesets differ: a\
+            \ document valid under one can be rejected by another, so there is no\
+            \ default."
+          example: peppol_bis_billing_3
+          title: Profile
+          type: string
+      required:
+      - data
+      - profile
+      title: DocumentComplianceRequest
+      type: object
+    DocumentComplianceResponse:
+      example:
+        data:
+          valid: true
+          ruleset_version: PEPPOL-UBL-3.15.0
+          profile: peppol_bis_billing_3
+          violations:
+          - path: "lines[1].unit_code"
+            rule: BT-130
+            message: A coded unit is required.
+          - path: "lines[1].unit_code"
+            rule: BT-130
+            message: A coded unit is required.
+      properties:
+        data:
+          $ref: '#/components/schemas/ComplianceCheckOut'
+      required:
+      - data
+      title: DocumentComplianceResponse
       type: object
     DocumentCreateRequest:
       example:

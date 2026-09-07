@@ -21,6 +21,7 @@ All URIs are relative to *http://localhost*
 | [**RestoreDocument**](DocumentsApi.md#restoredocument) | **POST** /api/v1/documents/{document_id}/restore | Restore Document |
 | [**SendDocument**](DocumentsApi.md#senddocument) | **POST** /api/v1/documents/{document_id}/send | Send Document |
 | [**UpdateDocument**](DocumentsApi.md#updatedocument) | **PATCH** /api/v1/documents/{document_id} | Update Document |
+| [**ValidateCompliance**](DocumentsApi.md#validatecompliance) | **POST** /api/v1/documents/validate-compliance | Validate Compliance |
 | [**ValidateDocument**](DocumentsApi.md#validatedocument) | **POST** /api/v1/documents/validate | Validate Document |
 | [**VoidDocument**](DocumentsApi.md#voiddocument) | **POST** /api/v1/documents/{document_id}/void | Void Document |
 
@@ -1608,6 +1609,101 @@ catch (ApiException e)
 ### Return type
 
 [**DocumentResponse**](DocumentResponse.md)
+
+### Authorization
+
+[HTTPBearer](../README.md#HTTPBearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Successful Response |  -  |
+| **422** | Validation Error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a id="validatecompliance"></a>
+# **ValidateCompliance**
+> DocumentComplianceResponse ValidateCompliance (DocumentComplianceRequest documentComplianceRequest)
+
+Validate Compliance
+
+Check a document against an e-invoicing ruleset without rendering it.  Costs no renders: nothing is stored and no PDF is produced, so a caller can check every invoice they are about to send rather than discovering the problem from a rejection weeks later.  This is the semantic half — mandatory fields and conditional requirements. Schematron is the authoritative check and is not wired up yet, so a document that passes here is not thereby proven conformant. It says what it can prove is wrong, which is the useful half early.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using InvoicePDFs.Api;
+using InvoicePDFs.Client;
+using InvoicePDFs.Model;
+
+namespace Example
+{
+    public class ValidateComplianceExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // Configure Bearer token for authorization: HTTPBearer
+            config.AccessToken = "YOUR_BEARER_TOKEN";
+
+            var apiInstance = new DocumentsApi(config);
+            var documentComplianceRequest = new DocumentComplianceRequest(); // DocumentComplianceRequest | 
+
+            try
+            {
+                // Validate Compliance
+                DocumentComplianceResponse result = apiInstance.ValidateCompliance(documentComplianceRequest);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling DocumentsApi.ValidateCompliance: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the ValidateComplianceWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Validate Compliance
+    ApiResponse<DocumentComplianceResponse> response = apiInstance.ValidateComplianceWithHttpInfo(documentComplianceRequest);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling DocumentsApi.ValidateComplianceWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **documentComplianceRequest** | [**DocumentComplianceRequest**](DocumentComplianceRequest.md) |  |  |
+
+### Return type
+
+[**DocumentComplianceResponse**](DocumentComplianceResponse.md)
 
 ### Authorization
 
