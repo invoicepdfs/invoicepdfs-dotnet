@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **Website** | **string** |  | [optional] 
 **TaxId** | **string** |  | [optional] 
 **Address** | [**PostalAddress**](PostalAddress.md) |  | [optional] 
+**ElectronicAddress** | [**ElectronicAddress**](ElectronicAddress.md) |  | [optional] 
 **DefaultCurrency** | **string** |  | [optional] 
 **DefaultLocale** | **string** |  | [optional] 
 **DefaultTimezone** | **string** |  | [optional] 

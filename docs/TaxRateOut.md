@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **Rate** | **string** |  | 
 **Inclusive** | **bool** |  | 
 **Jurisdiction** | **string** |  | [optional] 
+**Category** | [**TaxCategory**](TaxCategory.md) |  | [optional] 
 **IsActive** | **bool** |  | 
 **CreatedAt** | **string** |  | 
 **UpdatedAt** | **string** |  | 

@@ -118,6 +118,15 @@ namespace InvoicePDFs.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'ElectronicAddress'
+        /// </summary>
+        [Fact]
+        public void ElectronicAddressTest()
+        {
+            // TODO unit test for the property 'ElectronicAddress'
+        }
+
+        /// <summary>
         /// Test the property 'DefaultCurrency'
         /// </summary>
         [Fact]

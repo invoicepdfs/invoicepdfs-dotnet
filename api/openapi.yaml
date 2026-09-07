@@ -6309,6 +6309,9 @@ components:
         default_currency: default_currency
         email: email
         tax_id: tax_id
+        electronic_address:
+          scheme_id: "0088"
+          value: "9482348239"
       properties:
         legal_name:
           example: Acme Corp Inc.
@@ -6331,6 +6334,8 @@ components:
           type: string
         address:
           $ref: '#/components/schemas/PostalAddress'
+        electronic_address:
+          $ref: '#/components/schemas/ElectronicAddress'
         default_currency:
           nullable: true
           type: string
@@ -6361,6 +6366,9 @@ components:
         created_at: created_at
         display_name: display_name
         tax_id: tax_id
+        electronic_address:
+          scheme_id: "0088"
+          value: "9482348239"
         default_timezone: default_timezone
         updated_at: updated_at
         phone: phone
@@ -6391,6 +6399,8 @@ components:
           type: string
         address:
           $ref: '#/components/schemas/PostalAddress'
+        electronic_address:
+          $ref: '#/components/schemas/ElectronicAddress'
         default_currency:
           nullable: true
           type: string
@@ -6438,6 +6448,9 @@ components:
         default_currency: default_currency
         email: email
         tax_id: tax_id
+        electronic_address:
+          scheme_id: "0088"
+          value: "9482348239"
       properties:
         legal_name:
           title: Legal Name
@@ -6459,6 +6472,8 @@ components:
           type: string
         address:
           $ref: '#/components/schemas/PostalAddress'
+        electronic_address:
+          $ref: '#/components/schemas/ElectronicAddress'
         default_currency:
           nullable: true
           type: string
@@ -6488,6 +6503,9 @@ components:
           created_at: created_at
           display_name: display_name
           tax_id: tax_id
+          electronic_address:
+            scheme_id: "0088"
+            value: "9482348239"
           default_timezone: default_timezone
           updated_at: updated_at
           phone: phone
@@ -6521,6 +6539,9 @@ components:
           created_at: created_at
           display_name: display_name
           tax_id: tax_id
+          electronic_address:
+            scheme_id: "0088"
+            value: "9482348239"
           default_timezone: default_timezone
           updated_at: updated_at
           phone: phone
@@ -6541,6 +6562,9 @@ components:
           created_at: created_at
           display_name: display_name
           tax_id: tax_id
+          electronic_address:
+            scheme_id: "0088"
+            value: "9482348239"
           default_timezone: default_timezone
           updated_at: updated_at
           phone: phone
@@ -6834,6 +6858,9 @@ components:
           line1: 1 Main St
         email: email
         tax_id: tax_id
+        electronic_address:
+          scheme_id: "0088"
+          value: "9482348239"
       properties:
         name:
           example: Jane Smith
@@ -6852,6 +6879,8 @@ components:
           $ref: '#/components/schemas/PostalAddress'
         shipping_address:
           $ref: '#/components/schemas/PostalAddress'
+        electronic_address:
+          $ref: '#/components/schemas/ElectronicAddress'
         metadata:
           additionalProperties: true
           nullable: true
@@ -6885,6 +6914,9 @@ components:
         id: id
         email: email
         tax_id: tax_id
+        electronic_address:
+          scheme_id: "0088"
+          value: "9482348239"
       properties:
         name:
           example: Jane Smith
@@ -6903,6 +6935,8 @@ components:
           $ref: '#/components/schemas/PostalAddress'
         shipping_address:
           $ref: '#/components/schemas/PostalAddress'
+        electronic_address:
+          $ref: '#/components/schemas/ElectronicAddress'
         metadata:
           additionalProperties: true
           nullable: true
@@ -6945,6 +6979,9 @@ components:
           line1: 1 Main St
         email: email
         tax_id: tax_id
+        electronic_address:
+          scheme_id: "0088"
+          value: "9482348239"
       properties:
         name:
           title: Name
@@ -6962,6 +6999,8 @@ components:
           $ref: '#/components/schemas/PostalAddress'
         shipping_address:
           $ref: '#/components/schemas/PostalAddress'
+        electronic_address:
+          $ref: '#/components/schemas/ElectronicAddress'
         metadata:
           additionalProperties: true
           nullable: true
@@ -6994,6 +7033,9 @@ components:
           id: id
           email: email
           tax_id: tax_id
+          electronic_address:
+            scheme_id: "0088"
+            value: "9482348239"
       properties:
         data:
           $ref: '#/components/schemas/CustomerOut'
@@ -7030,6 +7072,9 @@ components:
           id: id
           email: email
           tax_id: tax_id
+          electronic_address:
+            scheme_id: "0088"
+            value: "9482348239"
         - metadata:
             key: ""
           updated_at: updated_at
@@ -7053,6 +7098,9 @@ components:
           id: id
           email: email
           tax_id: tax_id
+          electronic_address:
+            scheme_id: "0088"
+            value: "9482348239"
       properties:
         data:
           items:
@@ -7315,6 +7363,9 @@ components:
             legal_name: legal_name
             email: email
             tax_id: tax_id
+            electronic_address:
+              scheme_id: "0088"
+              value: "9482348239"
             bank_account:
               account_number: account_number
               account_name: account_name
@@ -7340,6 +7391,7 @@ components:
             quantity: "2"
             name: Web Development
             description: description
+            unit_code: unit_code
             discount:
               reason: reason
               type: percentage
@@ -7365,6 +7417,7 @@ components:
             quantity: "2"
             name: Web Development
             description: description
+            unit_code: unit_code
             discount:
               reason: reason
               type: percentage
@@ -7386,6 +7439,7 @@ components:
                 exemption_reason_code: exemption_reason_code
             unit_price: "150.00"
             sku: sku
+          buyer_reference: buyer_reference
           buyer:
             website: website
             address:
@@ -7401,6 +7455,9 @@ components:
             legal_name: legal_name
             email: email
             tax_id: tax_id
+            electronic_address:
+              scheme_id: "0088"
+              value: "9482348239"
             bank_account:
               account_number: account_number
               account_name: account_name
@@ -7450,6 +7507,9 @@ components:
             legal_name: legal_name
             email: email
             tax_id: tax_id
+            electronic_address:
+              scheme_id: "0088"
+              value: "9482348239"
             bank_account:
               account_number: account_number
               account_name: account_name
@@ -7537,6 +7597,7 @@ components:
           quantity: "2"
           name: Web Development
           description: description
+          unit_code: unit_code
           discount:
             reason: reason
             type: percentage
@@ -7564,6 +7625,7 @@ components:
           quantity: "2"
           name: Web Development
           description: description
+          unit_code: unit_code
           discount:
             reason: reason
             type: percentage
@@ -7588,6 +7650,7 @@ components:
           unit_price: "150.00"
           sku: sku
         locale: locale
+        buyer_reference: buyer_reference
         business_profile_id: bp_01ABC
         number: INV-2026-001
         issue_date: 2026-07-20
@@ -7682,6 +7745,9 @@ components:
           type: string
         ship_to:
           $ref: '#/components/schemas/PostalAddress'
+        buyer_reference:
+          nullable: true
+          type: string
         line_items:
           items:
             $ref: '#/components/schemas/StandardLineItemInput'
@@ -7784,6 +7850,9 @@ components:
           legal_name: legal_name
           email: email
           tax_id: tax_id
+          electronic_address:
+            scheme_id: "0088"
+            value: "9482348239"
           bank_account:
             account_number: account_number
             account_name: account_name
@@ -7809,6 +7878,7 @@ components:
           quantity: "2"
           name: Web Development
           description: description
+          unit_code: unit_code
           discount:
             reason: reason
             type: percentage
@@ -7834,6 +7904,7 @@ components:
           quantity: "2"
           name: Web Development
           description: description
+          unit_code: unit_code
           discount:
             reason: reason
             type: percentage
@@ -7855,6 +7926,7 @@ components:
               exemption_reason_code: exemption_reason_code
           unit_price: "150.00"
           sku: sku
+        buyer_reference: buyer_reference
         buyer:
           website: website
           address:
@@ -7870,6 +7942,9 @@ components:
           legal_name: legal_name
           email: email
           tax_id: tax_id
+          electronic_address:
+            scheme_id: "0088"
+            value: "9482348239"
           bank_account:
             account_number: account_number
             account_name: account_name
@@ -7919,6 +7994,9 @@ components:
           legal_name: legal_name
           email: email
           tax_id: tax_id
+          electronic_address:
+            scheme_id: "0088"
+            value: "9482348239"
           bank_account:
             account_number: account_number
             account_name: account_name
@@ -7950,6 +8028,9 @@ components:
           $ref: '#/components/schemas/DocumentPartyInput'
         ship_to:
           $ref: '#/components/schemas/DocumentPartyInput'
+        buyer_reference:
+          nullable: true
+          type: string
         line_items:
           items:
             $ref: '#/components/schemas/DocumentLineItemInput'
@@ -7986,6 +8067,7 @@ components:
         quantity: "2"
         name: Web Development
         description: description
+        unit_code: unit_code
         discount:
           reason: reason
           type: percentage
@@ -8025,6 +8107,9 @@ components:
           title: Unit Price
           type: string
         unit:
+          nullable: true
+          type: string
+        unit_code:
           nullable: true
           type: string
         sku:
@@ -8237,6 +8322,9 @@ components:
         legal_name: legal_name
         email: email
         tax_id: tax_id
+        electronic_address:
+          scheme_id: "0088"
+          value: "9482348239"
         bank_account:
           account_number: account_number
           account_name: account_name
@@ -8271,6 +8359,8 @@ components:
           $ref: '#/components/schemas/PostalAddress'
         bank_account:
           $ref: '#/components/schemas/InvoiceBankAccountInput'
+        electronic_address:
+          $ref: '#/components/schemas/ElectronicAddress'
       required:
       - name
       title: DocumentPartyInput
@@ -8302,6 +8392,7 @@ components:
           quantity: "2"
           name: Web Development
           description: description
+          unit_code: unit_code
           discount:
             reason: reason
             type: percentage
@@ -8329,6 +8420,7 @@ components:
           quantity: "2"
           name: Web Development
           description: description
+          unit_code: unit_code
           discount:
             reason: reason
             type: percentage
@@ -8353,6 +8445,7 @@ components:
           unit_price: "150.00"
           sku: sku
         locale: locale
+        buyer_reference: buyer_reference
         business_profile_id: business_profile_id
         number: number
         issue_date: 2000-01-23
@@ -8441,6 +8534,9 @@ components:
           type: string
         ship_to:
           $ref: '#/components/schemas/PostalAddress'
+        buyer_reference:
+          nullable: true
+          type: string
         line_items:
           items:
             $ref: '#/components/schemas/StandardLineItemInput'
@@ -8559,6 +8655,9 @@ components:
             legal_name: legal_name
             email: email
             tax_id: tax_id
+            electronic_address:
+              scheme_id: "0088"
+              value: "9482348239"
             bank_account:
               account_number: account_number
               account_name: account_name
@@ -8584,6 +8683,7 @@ components:
             quantity: "2"
             name: Web Development
             description: description
+            unit_code: unit_code
             discount:
               reason: reason
               type: percentage
@@ -8609,6 +8709,7 @@ components:
             quantity: "2"
             name: Web Development
             description: description
+            unit_code: unit_code
             discount:
               reason: reason
               type: percentage
@@ -8630,6 +8731,7 @@ components:
                 exemption_reason_code: exemption_reason_code
             unit_price: "150.00"
             sku: sku
+          buyer_reference: buyer_reference
           buyer:
             website: website
             address:
@@ -8645,6 +8747,9 @@ components:
             legal_name: legal_name
             email: email
             tax_id: tax_id
+            electronic_address:
+              scheme_id: "0088"
+              value: "9482348239"
             bank_account:
               account_number: account_number
               account_name: account_name
@@ -8694,6 +8799,9 @@ components:
             legal_name: legal_name
             email: email
             tax_id: tax_id
+            electronic_address:
+              scheme_id: "0088"
+              value: "9482348239"
             bank_account:
               account_number: account_number
               account_name: account_name
@@ -8918,6 +9026,9 @@ components:
             legal_name: legal_name
             email: email
             tax_id: tax_id
+            electronic_address:
+              scheme_id: "0088"
+              value: "9482348239"
             bank_account:
               account_number: account_number
               account_name: account_name
@@ -8943,6 +9054,7 @@ components:
             quantity: "2"
             name: Web Development
             description: description
+            unit_code: unit_code
             discount:
               reason: reason
               type: percentage
@@ -8968,6 +9080,7 @@ components:
             quantity: "2"
             name: Web Development
             description: description
+            unit_code: unit_code
             discount:
               reason: reason
               type: percentage
@@ -8989,6 +9102,7 @@ components:
                 exemption_reason_code: exemption_reason_code
             unit_price: "150.00"
             sku: sku
+          buyer_reference: buyer_reference
           buyer:
             website: website
             address:
@@ -9004,6 +9118,9 @@ components:
             legal_name: legal_name
             email: email
             tax_id: tax_id
+            electronic_address:
+              scheme_id: "0088"
+              value: "9482348239"
             bank_account:
               account_number: account_number
               account_name: account_name
@@ -9053,6 +9170,9 @@ components:
             legal_name: legal_name
             email: email
             tax_id: tax_id
+            electronic_address:
+              scheme_id: "0088"
+              value: "9482348239"
             bank_account:
               account_number: account_number
               account_name: account_name
@@ -9201,6 +9321,35 @@ components:
       required:
       - data
       title: DocumentsListResponse
+      type: object
+    ElectronicAddress:
+      description: |-
+        BT-34 / BT-49 — where a document is routed on Peppol or DBNA.
+
+        Both halves are required: an identifier without its scheme cannot be
+        resolved, because the same string means different things in different code
+        lists. This is not the tax id, which identifies a company to a tax
+        authority rather than a mailbox on a network.
+      example:
+        scheme_id: "0088"
+        value: "9482348239"
+      properties:
+        value:
+          example: "9482348239"
+          minLength: 1
+          title: Value
+          type: string
+        scheme_id:
+          description: "EAS code list identifier — 0088 is GLN, 9930 a German VAT\
+            \ number."
+          example: "0088"
+          minLength: 1
+          title: Scheme Id
+          type: string
+      required:
+      - scheme_id
+      - value
+      title: ElectronicAddress
       type: object
     FileOut:
       example:
@@ -11612,6 +11761,7 @@ components:
         quantity: "2"
         name: Web Development
         description: description
+        unit_code: unit_code
         discount:
           reason: reason
           type: percentage
@@ -11655,6 +11805,9 @@ components:
           title: Unit Price
           type: string
         unit:
+          nullable: true
+          type: string
+        unit_code:
           nullable: true
           type: string
         sku:
@@ -11843,6 +11996,10 @@ components:
         rate: "8.375"
         jurisdiction: jurisdiction
         name: California sales tax
+        category:
+          code: S
+          exemption_reason: exemption_reason
+          exemption_reason_code: exemption_reason_code
       properties:
         name:
           example: California sales tax
@@ -11859,6 +12016,8 @@ components:
         jurisdiction:
           nullable: true
           type: string
+        category:
+          $ref: '#/components/schemas/TaxCategory'
       required:
       - name
       - rate
@@ -11874,6 +12033,10 @@ components:
         name: name
         created_at: created_at
         id: id
+        category:
+          code: S
+          exemption_reason: exemption_reason
+          exemption_reason_code: exemption_reason_code
       properties:
         id:
           title: Id
@@ -11890,6 +12053,8 @@ components:
         jurisdiction:
           nullable: true
           type: string
+        category:
+          $ref: '#/components/schemas/TaxCategory'
         is_active:
           title: Is Active
           type: boolean
@@ -11916,6 +12081,10 @@ components:
         rate: rate
         jurisdiction: jurisdiction
         name: name
+        category:
+          code: S
+          exemption_reason: exemption_reason
+          exemption_reason_code: exemption_reason_code
       properties:
         name:
           title: Name
@@ -11932,6 +12101,8 @@ components:
         is_active:
           title: Is Active
           type: boolean
+        category:
+          $ref: '#/components/schemas/TaxCategory'
       title: TaxRatePatchRequest
       type: object
     TaxRateResponse:
@@ -11945,6 +12116,10 @@ components:
           name: name
           created_at: created_at
           id: id
+          category:
+            code: S
+            exemption_reason: exemption_reason
+            exemption_reason_code: exemption_reason_code
       properties:
         data:
           $ref: '#/components/schemas/TaxRateOut'
@@ -11966,6 +12141,10 @@ components:
           name: name
           created_at: created_at
           id: id
+          category:
+            code: S
+            exemption_reason: exemption_reason
+            exemption_reason_code: exemption_reason_code
         - inclusive: true
           is_active: true
           updated_at: updated_at
@@ -11974,6 +12153,10 @@ components:
           name: name
           created_at: created_at
           id: id
+          category:
+            code: S
+            exemption_reason: exemption_reason
+            exemption_reason_code: exemption_reason_code
       properties:
         data:
           items:

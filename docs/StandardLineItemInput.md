@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **Quantity** | **string** | Decimal string | 
 **UnitPrice** | **string** | Decimal string, major units | [optional] [default to "0.00"]
 **Unit** | **string** |  | [optional] 
+**UnitCode** | **string** |  | [optional] 
 **Sku** | **string** |  | [optional] 
 **Discount** | [**LineItemDiscountInput**](LineItemDiscountInput.md) |  | [optional] 
 **Taxes** | [**List&lt;LineItemTaxInput&gt;**](LineItemTaxInput.md) |  | [optional] 

@@ -134,5 +134,14 @@ namespace InvoicePDFs.Test.Model
         {
             // TODO unit test for the property 'BankAccount'
         }
+
+        /// <summary>
+        /// Test the property 'ElectronicAddress'
+        /// </summary>
+        [Fact]
+        public void ElectronicAddressTest()
+        {
+            // TODO unit test for the property 'ElectronicAddress'
+        }
     }
 }

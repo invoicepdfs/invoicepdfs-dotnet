@@ -46,6 +46,7 @@ namespace InvoicePDFs.Model
         /// <param name="website">website.</param>
         /// <param name="taxId">taxId.</param>
         /// <param name="address">address.</param>
+        /// <param name="electronicAddress">electronicAddress.</param>
         /// <param name="defaultCurrency">defaultCurrency.</param>
         /// <param name="defaultLocale">defaultLocale.</param>
         /// <param name="defaultTimezone">defaultTimezone.</param>
@@ -53,7 +54,7 @@ namespace InvoicePDFs.Model
         /// <param name="id">id (required).</param>
         /// <param name="createdAt">createdAt (required).</param>
         /// <param name="updatedAt">updatedAt (required).</param>
-        public BusinessProfileOut(string legalName = default(string), string displayName = default(string), string email = default(string), string phone = default(string), string website = default(string), string taxId = default(string), PostalAddress address = default(PostalAddress), string defaultCurrency = default(string), string defaultLocale = default(string), string defaultTimezone = default(string), string logoFileId = default(string), string id = default(string), string createdAt = default(string), string updatedAt = default(string))
+        public BusinessProfileOut(string legalName = default(string), string displayName = default(string), string email = default(string), string phone = default(string), string website = default(string), string taxId = default(string), PostalAddress address = default(PostalAddress), ElectronicAddress electronicAddress = default(ElectronicAddress), string defaultCurrency = default(string), string defaultLocale = default(string), string defaultTimezone = default(string), string logoFileId = default(string), string id = default(string), string createdAt = default(string), string updatedAt = default(string))
         {
             // to ensure "legalName" is required (not null)
             if (legalName == null)
@@ -85,6 +86,7 @@ namespace InvoicePDFs.Model
             this.Website = website;
             this.TaxId = taxId;
             this.Address = address;
+            this.ElectronicAddress = electronicAddress;
             this.DefaultCurrency = defaultCurrency;
             this.DefaultLocale = defaultLocale;
             this.DefaultTimezone = defaultTimezone;
@@ -133,6 +135,12 @@ namespace InvoicePDFs.Model
         /// </summary>
         [DataMember(Name = "address", EmitDefaultValue = true)]
         public PostalAddress Address { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ElectronicAddress
+        /// </summary>
+        [DataMember(Name = "electronic_address", EmitDefaultValue = true)]
+        public ElectronicAddress ElectronicAddress { get; set; }
 
         /// <summary>
         /// Gets or Sets DefaultCurrency
@@ -191,6 +199,7 @@ namespace InvoicePDFs.Model
             sb.Append("  Website: ").Append(Website).Append("\n");
             sb.Append("  TaxId: ").Append(TaxId).Append("\n");
             sb.Append("  Address: ").Append(Address).Append("\n");
+            sb.Append("  ElectronicAddress: ").Append(ElectronicAddress).Append("\n");
             sb.Append("  DefaultCurrency: ").Append(DefaultCurrency).Append("\n");
             sb.Append("  DefaultLocale: ").Append(DefaultLocale).Append("\n");
             sb.Append("  DefaultTimezone: ").Append(DefaultTimezone).Append("\n");

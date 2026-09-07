@@ -43,7 +43,8 @@ namespace InvoicePDFs.Model
         /// <param name="rate">rate (required).</param>
         /// <param name="inclusive">inclusive (default to false).</param>
         /// <param name="jurisdiction">jurisdiction.</param>
-        public TaxRateCreateRequest(string name = default(string), string rate = default(string), bool inclusive = false, string jurisdiction = default(string))
+        /// <param name="category">category.</param>
+        public TaxRateCreateRequest(string name = default(string), string rate = default(string), bool inclusive = false, string jurisdiction = default(string), TaxCategory category = default(TaxCategory))
         {
             // to ensure "name" is required (not null)
             if (name == null)
@@ -59,6 +60,7 @@ namespace InvoicePDFs.Model
             this.Rate = rate;
             this.Inclusive = inclusive;
             this.Jurisdiction = jurisdiction;
+            this.Category = category;
         }
 
         /// <summary>
@@ -88,6 +90,12 @@ namespace InvoicePDFs.Model
         public string Jurisdiction { get; set; }
 
         /// <summary>
+        /// Gets or Sets Category
+        /// </summary>
+        [DataMember(Name = "category", EmitDefaultValue = true)]
+        public TaxCategory Category { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -99,6 +107,7 @@ namespace InvoicePDFs.Model
             sb.Append("  Rate: ").Append(Rate).Append("\n");
             sb.Append("  Inclusive: ").Append(Inclusive).Append("\n");
             sb.Append("  Jurisdiction: ").Append(Jurisdiction).Append("\n");
+            sb.Append("  Category: ").Append(Category).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

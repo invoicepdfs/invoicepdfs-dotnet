@@ -100,6 +100,15 @@ namespace InvoicePDFs.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'UnitCode'
+        /// </summary>
+        [Fact]
+        public void UnitCodeTest()
+        {
+            // TODO unit test for the property 'UnitCode'
+        }
+
+        /// <summary>
         /// Test the property 'Sku'
         /// </summary>
         [Fact]

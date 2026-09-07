@@ -118,6 +118,15 @@ namespace InvoicePDFs.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'BuyerReference'
+        /// </summary>
+        [Fact]
+        public void BuyerReferenceTest()
+        {
+            // TODO unit test for the property 'BuyerReference'
+        }
+
+        /// <summary>
         /// Test the property 'LineItems'
         /// </summary>
         [Fact]

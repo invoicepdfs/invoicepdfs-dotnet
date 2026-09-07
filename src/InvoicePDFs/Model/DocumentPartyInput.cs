@@ -48,7 +48,8 @@ namespace InvoicePDFs.Model
         /// <param name="registrationNumber">registrationNumber.</param>
         /// <param name="address">address.</param>
         /// <param name="bankAccount">bankAccount.</param>
-        public DocumentPartyInput(string name = default(string), string legalName = default(string), string email = default(string), string phone = default(string), string website = default(string), string taxId = default(string), string registrationNumber = default(string), PostalAddress address = default(PostalAddress), InvoiceBankAccountInput bankAccount = default(InvoiceBankAccountInput))
+        /// <param name="electronicAddress">electronicAddress.</param>
+        public DocumentPartyInput(string name = default(string), string legalName = default(string), string email = default(string), string phone = default(string), string website = default(string), string taxId = default(string), string registrationNumber = default(string), PostalAddress address = default(PostalAddress), InvoiceBankAccountInput bankAccount = default(InvoiceBankAccountInput), ElectronicAddress electronicAddress = default(ElectronicAddress))
         {
             // to ensure "name" is required (not null)
             if (name == null)
@@ -64,6 +65,7 @@ namespace InvoicePDFs.Model
             this.RegistrationNumber = registrationNumber;
             this.Address = address;
             this.BankAccount = bankAccount;
+            this.ElectronicAddress = electronicAddress;
         }
 
         /// <summary>
@@ -122,6 +124,12 @@ namespace InvoicePDFs.Model
         public InvoiceBankAccountInput BankAccount { get; set; }
 
         /// <summary>
+        /// Gets or Sets ElectronicAddress
+        /// </summary>
+        [DataMember(Name = "electronic_address", EmitDefaultValue = true)]
+        public ElectronicAddress ElectronicAddress { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -138,6 +146,7 @@ namespace InvoicePDFs.Model
             sb.Append("  RegistrationNumber: ").Append(RegistrationNumber).Append("\n");
             sb.Append("  Address: ").Append(Address).Append("\n");
             sb.Append("  BankAccount: ").Append(BankAccount).Append("\n");
+            sb.Append("  ElectronicAddress: ").Append(ElectronicAddress).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

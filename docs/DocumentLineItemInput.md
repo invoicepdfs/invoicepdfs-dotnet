@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **Quantity** | **string** |  | 
 **UnitPrice** | **string** | Decimal string in major units | 
 **Unit** | **string** |  | [optional] 
+**UnitCode** | **string** |  | [optional] 
 **Sku** | **string** |  | [optional] 
 **Discount** | [**DocumentDiscountInput**](DocumentDiscountInput.md) |  | [optional] 
 **Taxes** | [**List&lt;DocumentLineItemTaxInput&gt;**](DocumentLineItemTaxInput.md) |  | [optional] 

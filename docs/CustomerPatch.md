@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **TaxId** | **string** |  | [optional] 
 **BillingAddress** | [**PostalAddress**](PostalAddress.md) |  | [optional] 
 **ShippingAddress** | [**PostalAddress**](PostalAddress.md) |  | [optional] 
+**ElectronicAddress** | [**ElectronicAddress**](ElectronicAddress.md) |  | [optional] 
 **Metadata** | **Dictionary&lt;string, Object&gt;** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

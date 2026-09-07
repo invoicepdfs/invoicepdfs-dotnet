@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **RegistrationNumber** | **string** |  | [optional] 
 **Address** | [**PostalAddress**](PostalAddress.md) |  | [optional] 
 **BankAccount** | [**InvoiceBankAccountInput**](InvoiceBankAccountInput.md) |  | [optional] 
+**ElectronicAddress** | [**ElectronicAddress**](ElectronicAddress.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

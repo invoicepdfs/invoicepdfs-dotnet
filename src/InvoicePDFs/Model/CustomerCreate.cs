@@ -45,8 +45,9 @@ namespace InvoicePDFs.Model
         /// <param name="taxId">taxId.</param>
         /// <param name="billingAddress">billingAddress.</param>
         /// <param name="shippingAddress">shippingAddress.</param>
+        /// <param name="electronicAddress">electronicAddress.</param>
         /// <param name="metadata">metadata.</param>
-        public CustomerCreate(string name = default(string), string email = default(string), string phone = default(string), string taxId = default(string), PostalAddress billingAddress = default(PostalAddress), PostalAddress shippingAddress = default(PostalAddress), Dictionary<string, Object> metadata = default(Dictionary<string, Object>))
+        public CustomerCreate(string name = default(string), string email = default(string), string phone = default(string), string taxId = default(string), PostalAddress billingAddress = default(PostalAddress), PostalAddress shippingAddress = default(PostalAddress), ElectronicAddress electronicAddress = default(ElectronicAddress), Dictionary<string, Object> metadata = default(Dictionary<string, Object>))
         {
             // to ensure "name" is required (not null)
             if (name == null)
@@ -59,6 +60,7 @@ namespace InvoicePDFs.Model
             this.TaxId = taxId;
             this.BillingAddress = billingAddress;
             this.ShippingAddress = shippingAddress;
+            this.ElectronicAddress = electronicAddress;
             this.Metadata = metadata;
         }
 
@@ -100,6 +102,12 @@ namespace InvoicePDFs.Model
         public PostalAddress ShippingAddress { get; set; }
 
         /// <summary>
+        /// Gets or Sets ElectronicAddress
+        /// </summary>
+        [DataMember(Name = "electronic_address", EmitDefaultValue = true)]
+        public ElectronicAddress ElectronicAddress { get; set; }
+
+        /// <summary>
         /// Gets or Sets Metadata
         /// </summary>
         [DataMember(Name = "metadata", EmitDefaultValue = true)]
@@ -119,6 +127,7 @@ namespace InvoicePDFs.Model
             sb.Append("  TaxId: ").Append(TaxId).Append("\n");
             sb.Append("  BillingAddress: ").Append(BillingAddress).Append("\n");
             sb.Append("  ShippingAddress: ").Append(ShippingAddress).Append("\n");
+            sb.Append("  ElectronicAddress: ").Append(ElectronicAddress).Append("\n");
             sb.Append("  Metadata: ").Append(Metadata).Append("\n");
             sb.Append("}\n");
             return sb.ToString();

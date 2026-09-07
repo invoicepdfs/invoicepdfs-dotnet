@@ -39,13 +39,15 @@ namespace InvoicePDFs.Model
         /// <param name="inclusive">inclusive.</param>
         /// <param name="jurisdiction">jurisdiction.</param>
         /// <param name="isActive">isActive.</param>
-        public TaxRatePatchRequest(string name = default(string), string rate = default(string), bool inclusive = default(bool), string jurisdiction = default(string), bool isActive = default(bool))
+        /// <param name="category">category.</param>
+        public TaxRatePatchRequest(string name = default(string), string rate = default(string), bool inclusive = default(bool), string jurisdiction = default(string), bool isActive = default(bool), TaxCategory category = default(TaxCategory))
         {
             this.Name = name;
             this.Rate = rate;
             this.Inclusive = inclusive;
             this.Jurisdiction = jurisdiction;
             this.IsActive = isActive;
+            this.Category = category;
         }
 
         /// <summary>
@@ -79,6 +81,12 @@ namespace InvoicePDFs.Model
         public bool IsActive { get; set; }
 
         /// <summary>
+        /// Gets or Sets Category
+        /// </summary>
+        [DataMember(Name = "category", EmitDefaultValue = true)]
+        public TaxCategory Category { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -91,6 +99,7 @@ namespace InvoicePDFs.Model
             sb.Append("  Inclusive: ").Append(Inclusive).Append("\n");
             sb.Append("  Jurisdiction: ").Append(Jurisdiction).Append("\n");
             sb.Append("  IsActive: ").Append(IsActive).Append("\n");
+            sb.Append("  Category: ").Append(Category).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

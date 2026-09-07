@@ -116,6 +116,7 @@ docs/DocumentValidateRequest.md
 docs/DocumentValidateResponse.md
 docs/DocumentsApi.md
 docs/DocumentsListResponse.md
+docs/ElectronicAddress.md
 docs/FileOut.md
 docs/FileResponse.md
 docs/FilesApi.md
@@ -377,6 +378,7 @@ src/InvoicePDFs.Test/Model/DocumentTypesListResponseTests.cs
 src/InvoicePDFs.Test/Model/DocumentValidateRequestTests.cs
 src/InvoicePDFs.Test/Model/DocumentValidateResponseTests.cs
 src/InvoicePDFs.Test/Model/DocumentsListResponseTests.cs
+src/InvoicePDFs.Test/Model/ElectronicAddressTests.cs
 src/InvoicePDFs.Test/Model/FileOutTests.cs
 src/InvoicePDFs.Test/Model/FileResponseTests.cs
 src/InvoicePDFs.Test/Model/HealthResponseTests.cs
@@ -637,6 +639,7 @@ src/InvoicePDFs/Model/DocumentTypesListResponse.cs
 src/InvoicePDFs/Model/DocumentValidateRequest.cs
 src/InvoicePDFs/Model/DocumentValidateResponse.cs
 src/InvoicePDFs/Model/DocumentsListResponse.cs
+src/InvoicePDFs/Model/ElectronicAddress.cs
 src/InvoicePDFs/Model/FileOut.cs
 src/InvoicePDFs/Model/FileResponse.cs
 src/InvoicePDFs/Model/HealthResponse.cs

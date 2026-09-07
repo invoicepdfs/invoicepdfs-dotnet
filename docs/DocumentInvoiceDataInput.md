@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **Seller** | [**DocumentPartyInput**](DocumentPartyInput.md) |  | 
 **Buyer** | [**DocumentPartyInput**](DocumentPartyInput.md) |  | 
 **ShipTo** | [**DocumentPartyInput**](DocumentPartyInput.md) |  | [optional] 
+**BuyerReference** | **string** |  | [optional] 
 **LineItems** | [**List&lt;DocumentLineItemInput&gt;**](DocumentLineItemInput.md) |  | 
 **Discounts** | [**List&lt;DocumentDiscountInput&gt;**](DocumentDiscountInput.md) |  | [optional] 
 **Shipping** | [**DocumentShippingInput**](DocumentShippingInput.md) |  | [optional] 

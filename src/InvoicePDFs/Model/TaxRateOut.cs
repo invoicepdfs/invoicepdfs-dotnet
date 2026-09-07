@@ -44,10 +44,11 @@ namespace InvoicePDFs.Model
         /// <param name="rate">rate (required).</param>
         /// <param name="inclusive">inclusive (required).</param>
         /// <param name="jurisdiction">jurisdiction.</param>
+        /// <param name="category">category.</param>
         /// <param name="isActive">isActive (required).</param>
         /// <param name="createdAt">createdAt (required).</param>
         /// <param name="updatedAt">updatedAt (required).</param>
-        public TaxRateOut(string id = default(string), string name = default(string), string rate = default(string), bool inclusive = default(bool), string jurisdiction = default(string), bool isActive = default(bool), string createdAt = default(string), string updatedAt = default(string))
+        public TaxRateOut(string id = default(string), string name = default(string), string rate = default(string), bool inclusive = default(bool), string jurisdiction = default(string), TaxCategory category = default(TaxCategory), bool isActive = default(bool), string createdAt = default(string), string updatedAt = default(string))
         {
             // to ensure "id" is required (not null)
             if (id == null)
@@ -82,6 +83,7 @@ namespace InvoicePDFs.Model
             }
             this.UpdatedAt = updatedAt;
             this.Jurisdiction = jurisdiction;
+            this.Category = category;
         }
 
         /// <summary>
@@ -115,6 +117,12 @@ namespace InvoicePDFs.Model
         public string Jurisdiction { get; set; }
 
         /// <summary>
+        /// Gets or Sets Category
+        /// </summary>
+        [DataMember(Name = "category", EmitDefaultValue = true)]
+        public TaxCategory Category { get; set; }
+
+        /// <summary>
         /// Gets or Sets IsActive
         /// </summary>
         [DataMember(Name = "is_active", IsRequired = true, EmitDefaultValue = true)]
@@ -145,6 +153,7 @@ namespace InvoicePDFs.Model
             sb.Append("  Rate: ").Append(Rate).Append("\n");
             sb.Append("  Inclusive: ").Append(Inclusive).Append("\n");
             sb.Append("  Jurisdiction: ").Append(Jurisdiction).Append("\n");
+            sb.Append("  Category: ").Append(Category).Append("\n");
             sb.Append("  IsActive: ").Append(IsActive).Append("\n");
             sb.Append("  CreatedAt: ").Append(CreatedAt).Append("\n");
             sb.Append("  UpdatedAt: ").Append(UpdatedAt).Append("\n");

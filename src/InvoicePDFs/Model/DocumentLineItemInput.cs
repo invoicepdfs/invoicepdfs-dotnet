@@ -44,10 +44,11 @@ namespace InvoicePDFs.Model
         /// <param name="quantity">quantity (required).</param>
         /// <param name="unitPrice">Decimal string in major units (required).</param>
         /// <param name="unit">unit.</param>
+        /// <param name="unitCode">unitCode.</param>
         /// <param name="sku">sku.</param>
         /// <param name="discount">discount.</param>
         /// <param name="taxes">taxes.</param>
-        public DocumentLineItemInput(string name = default(string), string description = default(string), string quantity = default(string), string unitPrice = default(string), string unit = default(string), string sku = default(string), DocumentDiscountInput discount = default(DocumentDiscountInput), List<DocumentLineItemTaxInput> taxes = default(List<DocumentLineItemTaxInput>))
+        public DocumentLineItemInput(string name = default(string), string description = default(string), string quantity = default(string), string unitPrice = default(string), string unit = default(string), string unitCode = default(string), string sku = default(string), DocumentDiscountInput discount = default(DocumentDiscountInput), List<DocumentLineItemTaxInput> taxes = default(List<DocumentLineItemTaxInput>))
         {
             // to ensure "name" is required (not null)
             if (name == null)
@@ -69,6 +70,7 @@ namespace InvoicePDFs.Model
             this.UnitPrice = unitPrice;
             this.Description = description;
             this.Unit = unit;
+            this.UnitCode = unitCode;
             this.Sku = sku;
             this.Discount = discount;
             this.Taxes = taxes;
@@ -109,6 +111,12 @@ namespace InvoicePDFs.Model
         public string Unit { get; set; }
 
         /// <summary>
+        /// Gets or Sets UnitCode
+        /// </summary>
+        [DataMember(Name = "unit_code", EmitDefaultValue = true)]
+        public string UnitCode { get; set; }
+
+        /// <summary>
         /// Gets or Sets Sku
         /// </summary>
         [DataMember(Name = "sku", EmitDefaultValue = true)]
@@ -139,6 +147,7 @@ namespace InvoicePDFs.Model
             sb.Append("  Quantity: ").Append(Quantity).Append("\n");
             sb.Append("  UnitPrice: ").Append(UnitPrice).Append("\n");
             sb.Append("  Unit: ").Append(Unit).Append("\n");
+            sb.Append("  UnitCode: ").Append(UnitCode).Append("\n");
             sb.Append("  Sku: ").Append(Sku).Append("\n");
             sb.Append("  Discount: ").Append(Discount).Append("\n");
             sb.Append("  Taxes: ").Append(Taxes).Append("\n");

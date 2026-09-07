@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **TaxId** | **string** |  | [optional] 
 **BillingAddress** | [**PostalAddress**](PostalAddress.md) |  | [optional] 
 **ShippingAddress** | [**PostalAddress**](PostalAddress.md) |  | [optional] 
+**ElectronicAddress** | [**ElectronicAddress**](ElectronicAddress.md) |  | [optional] 
 **Metadata** | **Dictionary&lt;string, Object&gt;** |  | [optional] 
 **Id** | **string** |  | 
 **CreatedAt** | **string** |  | 

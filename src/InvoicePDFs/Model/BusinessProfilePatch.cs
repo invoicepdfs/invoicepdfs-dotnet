@@ -41,11 +41,12 @@ namespace InvoicePDFs.Model
         /// <param name="website">website.</param>
         /// <param name="taxId">taxId.</param>
         /// <param name="address">address.</param>
+        /// <param name="electronicAddress">electronicAddress.</param>
         /// <param name="defaultCurrency">defaultCurrency.</param>
         /// <param name="defaultLocale">defaultLocale.</param>
         /// <param name="defaultTimezone">defaultTimezone.</param>
         /// <param name="logoFileId">logoFileId.</param>
-        public BusinessProfilePatch(string legalName = default(string), string displayName = default(string), string email = default(string), string phone = default(string), string website = default(string), string taxId = default(string), PostalAddress address = default(PostalAddress), string defaultCurrency = default(string), string defaultLocale = default(string), string defaultTimezone = default(string), string logoFileId = default(string))
+        public BusinessProfilePatch(string legalName = default(string), string displayName = default(string), string email = default(string), string phone = default(string), string website = default(string), string taxId = default(string), PostalAddress address = default(PostalAddress), ElectronicAddress electronicAddress = default(ElectronicAddress), string defaultCurrency = default(string), string defaultLocale = default(string), string defaultTimezone = default(string), string logoFileId = default(string))
         {
             this.LegalName = legalName;
             this.DisplayName = displayName;
@@ -54,6 +55,7 @@ namespace InvoicePDFs.Model
             this.Website = website;
             this.TaxId = taxId;
             this.Address = address;
+            this.ElectronicAddress = electronicAddress;
             this.DefaultCurrency = defaultCurrency;
             this.DefaultLocale = defaultLocale;
             this.DefaultTimezone = defaultTimezone;
@@ -103,6 +105,12 @@ namespace InvoicePDFs.Model
         public PostalAddress Address { get; set; }
 
         /// <summary>
+        /// Gets or Sets ElectronicAddress
+        /// </summary>
+        [DataMember(Name = "electronic_address", EmitDefaultValue = true)]
+        public ElectronicAddress ElectronicAddress { get; set; }
+
+        /// <summary>
         /// Gets or Sets DefaultCurrency
         /// </summary>
         [DataMember(Name = "default_currency", EmitDefaultValue = true)]
@@ -141,6 +149,7 @@ namespace InvoicePDFs.Model
             sb.Append("  Website: ").Append(Website).Append("\n");
             sb.Append("  TaxId: ").Append(TaxId).Append("\n");
             sb.Append("  Address: ").Append(Address).Append("\n");
+            sb.Append("  ElectronicAddress: ").Append(ElectronicAddress).Append("\n");
             sb.Append("  DefaultCurrency: ").Append(DefaultCurrency).Append("\n");
             sb.Append("  DefaultLocale: ").Append(DefaultLocale).Append("\n");
             sb.Append("  DefaultTimezone: ").Append(DefaultTimezone).Append("\n");
