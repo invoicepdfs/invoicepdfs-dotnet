@@ -99,34 +99,40 @@ namespace InvoicePDFs.Model
             CreditNote = 2,
 
             /// <summary>
+            /// Enum DebitNote for value: debit_note
+            /// </summary>
+            [EnumMember(Value = "debit_note")]
+            DebitNote = 3,
+
+            /// <summary>
             /// Enum Quote for value: quote
             /// </summary>
             [EnumMember(Value = "quote")]
-            Quote = 3,
+            Quote = 4,
 
             /// <summary>
             /// Enum Receipt for value: receipt
             /// </summary>
             [EnumMember(Value = "receipt")]
-            Receipt = 4,
+            Receipt = 5,
 
             /// <summary>
             /// Enum Proforma for value: proforma
             /// </summary>
             [EnumMember(Value = "proforma")]
-            Proforma = 5,
+            Proforma = 6,
 
             /// <summary>
             /// Enum PurchaseOrder for value: purchase_order
             /// </summary>
             [EnumMember(Value = "purchase_order")]
-            PurchaseOrder = 6,
+            PurchaseOrder = 7,
 
             /// <summary>
             /// Enum DeliveryNote for value: delivery_note
             /// </summary>
             [EnumMember(Value = "delivery_note")]
-            DeliveryNote = 7
+            DeliveryNote = 8
         }
 
 
