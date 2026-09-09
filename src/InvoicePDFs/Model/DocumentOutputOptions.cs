@@ -41,7 +41,13 @@ namespace InvoicePDFs.Model
             /// Enum Pdf for value: pdf
             /// </summary>
             [EnumMember(Value = "pdf")]
-            Pdf = 1
+            Pdf = 1,
+
+            /// <summary>
+            /// Enum FacturxPdf for value: facturx_pdf
+            /// </summary>
+            [EnumMember(Value = "facturx_pdf")]
+            FacturxPdf = 2
         }
 
 

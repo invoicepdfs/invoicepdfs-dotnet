@@ -32,18 +32,48 @@ namespace InvoicePDFs.Model
     public partial class DocumentRenderOptions : IValidatableObject
     {
         /// <summary>
+        /// &#x60;facturx_pdf&#x60; embeds the EN 16931 CII XML in a PDF/A-3, which is what a French or German counterparty means by Factur-X or ZUGFeRD.
+        /// </summary>
+        /// <value>&#x60;facturx_pdf&#x60; embeds the EN 16931 CII XML in a PDF/A-3, which is what a French or German counterparty means by Factur-X or ZUGFeRD.</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum FormatEnum
+        {
+            /// <summary>
+            /// Enum Pdf for value: pdf
+            /// </summary>
+            [EnumMember(Value = "pdf")]
+            Pdf = 1,
+
+            /// <summary>
+            /// Enum FacturxPdf for value: facturx_pdf
+            /// </summary>
+            [EnumMember(Value = "facturx_pdf")]
+            FacturxPdf = 2
+        }
+
+
+        /// <summary>
+        /// &#x60;facturx_pdf&#x60; embeds the EN 16931 CII XML in a PDF/A-3, which is what a French or German counterparty means by Factur-X or ZUGFeRD.
+        /// </summary>
+        /// <value>&#x60;facturx_pdf&#x60; embeds the EN 16931 CII XML in a PDF/A-3, which is what a French or German counterparty means by Factur-X or ZUGFeRD.</value>
+        /// <example>pdf</example>
+        [DataMember(Name = "format", EmitDefaultValue = false)]
+        public FormatEnum? Format { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="DocumentRenderOptions" /> class.
         /// </summary>
         /// <param name="templateId">templateId (default to &quot;tpl_modern&quot;).</param>
         /// <param name="pageSize">pageSize (default to &quot;LETTER&quot;).</param>
         /// <param name="expiresIn">expiresIn (default to 3600).</param>
-        public DocumentRenderOptions(string templateId = @"tpl_modern", string pageSize = @"LETTER", int expiresIn = 3600)
+        /// <param name="format">&#x60;facturx_pdf&#x60; embeds the EN 16931 CII XML in a PDF/A-3, which is what a French or German counterparty means by Factur-X or ZUGFeRD. (default to FormatEnum.Pdf).</param>
+        public DocumentRenderOptions(string templateId = @"tpl_modern", string pageSize = @"LETTER", int expiresIn = 3600, FormatEnum? format = FormatEnum.Pdf)
         {
             // use default value if no "templateId" provided
             this.TemplateId = templateId ?? @"tpl_modern";
             // use default value if no "pageSize" provided
             this.PageSize = pageSize ?? @"LETTER";
             this.ExpiresIn = expiresIn;
+            this.Format = format;
         }
 
         /// <summary>
@@ -75,6 +105,7 @@ namespace InvoicePDFs.Model
             sb.Append("  TemplateId: ").Append(TemplateId).Append("\n");
             sb.Append("  PageSize: ").Append(PageSize).Append("\n");
             sb.Append("  ExpiresIn: ").Append(ExpiresIn).Append("\n");
+            sb.Append("  Format: ").Append(Format).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

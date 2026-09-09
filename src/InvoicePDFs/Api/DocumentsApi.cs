@@ -133,6 +133,31 @@ namespace InvoicePDFs.Api
         /// <returns>ApiResponse of SimpleBoolResponse</returns>
         ApiResponse<SimpleBoolResponse> DeleteDocumentWithHttpInfo(string documentId, int operationIndex = 0);
         /// <summary>
+        /// Download Document Xml
+        /// </summary>
+        /// <remarks>
+        /// The e-invoicing XML for a document already stored here.  Reads &#x60;data_json&#x60; directly rather than going through the render path&#39;s reconstruction: the status, the logo and the source document&#39;s number are all attached there for the *PDF*, and none of them belong in the XML. The credit note&#39;s BG-3 reference is already in the stored payload, resolved when the document was written.
+        /// </remarks>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="documentId"></param>
+        /// <param name="profile">Which ruleset to write this against. No default: a document valid under one can be rejected by another, so the choice is the request.</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>string</returns>
+        string DownloadDocumentXml(string documentId, string profile, int operationIndex = 0);
+
+        /// <summary>
+        /// Download Document Xml
+        /// </summary>
+        /// <remarks>
+        /// The e-invoicing XML for a document already stored here.  Reads &#x60;data_json&#x60; directly rather than going through the render path&#39;s reconstruction: the status, the logo and the source document&#39;s number are all attached there for the *PDF*, and none of them belong in the XML. The credit note&#39;s BG-3 reference is already in the stored payload, resolved when the document was written.
+        /// </remarks>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="documentId"></param>
+        /// <param name="profile">Which ruleset to write this against. No default: a document valid under one can be rejected by another, so the choice is the request.</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of string</returns>
+        ApiResponse<string> DownloadDocumentXmlWithHttpInfo(string documentId, string profile, int operationIndex = 0);
+        /// <summary>
         /// Duplicate Document
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
@@ -324,6 +349,29 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of RenderResponse</returns>
         ApiResponse<RenderResponse> RenderDocumentWithHttpInfo(DocumentRenderRequest documentRenderRequest, string? idempotencyKey = default(string?), int operationIndex = 0);
+        /// <summary>
+        /// Render Document Xml
+        /// </summary>
+        /// <remarks>
+        /// The e-invoicing XML for a document, without storing anything.  Takes the same body as &#x60;/validate-compliance&#x60;, and the pairing is the point: check first, then take the XML once it passes. Nothing here validates against the ruleset — a document missing mandatory fields serialises to XML missing those elements, which is a more useful artefact to look at than a refusal, and &#x60;/validate-compliance&#x60; is where the refusal belongs.  The syntax is not a parameter. It follows from the profile, because a profile already is a syntax plus a ruleset, and asking a caller for both is asking them to know that Peppol means UBL.
+        /// </remarks>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="documentComplianceRequest"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>string</returns>
+        string RenderDocumentXml(DocumentComplianceRequest documentComplianceRequest, int operationIndex = 0);
+
+        /// <summary>
+        /// Render Document Xml
+        /// </summary>
+        /// <remarks>
+        /// The e-invoicing XML for a document, without storing anything.  Takes the same body as &#x60;/validate-compliance&#x60;, and the pairing is the point: check first, then take the XML once it passes. Nothing here validates against the ruleset — a document missing mandatory fields serialises to XML missing those elements, which is a more useful artefact to look at than a refusal, and &#x60;/validate-compliance&#x60; is where the refusal belongs.  The syntax is not a parameter. It follows from the profile, because a profile already is a syntax plus a ruleset, and asking a caller for both is asking them to know that Peppol means UBL.
+        /// </remarks>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="documentComplianceRequest"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of string</returns>
+        ApiResponse<string> RenderDocumentXmlWithHttpInfo(DocumentComplianceRequest documentComplianceRequest, int operationIndex = 0);
         /// <summary>
         /// Restore Document
         /// </summary>
@@ -592,6 +640,33 @@ namespace InvoicePDFs.Api
         /// <returns>Task of ApiResponse (SimpleBoolResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<SimpleBoolResponse>> DeleteDocumentWithHttpInfoAsync(string documentId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
+        /// Download Document Xml
+        /// </summary>
+        /// <remarks>
+        /// The e-invoicing XML for a document already stored here.  Reads &#x60;data_json&#x60; directly rather than going through the render path&#39;s reconstruction: the status, the logo and the source document&#39;s number are all attached there for the *PDF*, and none of them belong in the XML. The credit note&#39;s BG-3 reference is already in the stored payload, resolved when the document was written.
+        /// </remarks>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="documentId"></param>
+        /// <param name="profile">Which ruleset to write this against. No default: a document valid under one can be rejected by another, so the choice is the request.</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of string</returns>
+        System.Threading.Tasks.Task<string> DownloadDocumentXmlAsync(string documentId, string profile, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Download Document Xml
+        /// </summary>
+        /// <remarks>
+        /// The e-invoicing XML for a document already stored here.  Reads &#x60;data_json&#x60; directly rather than going through the render path&#39;s reconstruction: the status, the logo and the source document&#39;s number are all attached there for the *PDF*, and none of them belong in the XML. The credit note&#39;s BG-3 reference is already in the stored payload, resolved when the document was written.
+        /// </remarks>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="documentId"></param>
+        /// <param name="profile">Which ruleset to write this against. No default: a document valid under one can be rejected by another, so the choice is the request.</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        System.Threading.Tasks.Task<ApiResponse<string>> DownloadDocumentXmlWithHttpInfoAsync(string documentId, string profile, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
         /// Duplicate Document
         /// </summary>
         /// <remarks>
@@ -828,6 +903,31 @@ namespace InvoicePDFs.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RenderResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<RenderResponse>> RenderDocumentWithHttpInfoAsync(DocumentRenderRequest documentRenderRequest, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// Render Document Xml
+        /// </summary>
+        /// <remarks>
+        /// The e-invoicing XML for a document, without storing anything.  Takes the same body as &#x60;/validate-compliance&#x60;, and the pairing is the point: check first, then take the XML once it passes. Nothing here validates against the ruleset — a document missing mandatory fields serialises to XML missing those elements, which is a more useful artefact to look at than a refusal, and &#x60;/validate-compliance&#x60; is where the refusal belongs.  The syntax is not a parameter. It follows from the profile, because a profile already is a syntax plus a ruleset, and asking a caller for both is asking them to know that Peppol means UBL.
+        /// </remarks>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="documentComplianceRequest"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of string</returns>
+        System.Threading.Tasks.Task<string> RenderDocumentXmlAsync(DocumentComplianceRequest documentComplianceRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Render Document Xml
+        /// </summary>
+        /// <remarks>
+        /// The e-invoicing XML for a document, without storing anything.  Takes the same body as &#x60;/validate-compliance&#x60;, and the pairing is the point: check first, then take the XML once it passes. Nothing here validates against the ruleset — a document missing mandatory fields serialises to XML missing those elements, which is a more useful artefact to look at than a refusal, and &#x60;/validate-compliance&#x60; is where the refusal belongs.  The syntax is not a parameter. It follows from the profile, because a profile already is a syntax plus a ruleset, and asking a caller for both is asking them to know that Peppol means UBL.
+        /// </remarks>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="documentComplianceRequest"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        System.Threading.Tasks.Task<ApiResponse<string>> RenderDocumentXmlWithHttpInfoAsync(DocumentComplianceRequest documentComplianceRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Restore Document
         /// </summary>
@@ -1921,6 +2021,182 @@ namespace InvoicePDFs.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("DeleteDocument", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Download Document Xml The e-invoicing XML for a document already stored here.  Reads &#x60;data_json&#x60; directly rather than going through the render path&#39;s reconstruction: the status, the logo and the source document&#39;s number are all attached there for the *PDF*, and none of them belong in the XML. The credit note&#39;s BG-3 reference is already in the stored payload, resolved when the document was written.
+        /// </summary>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="documentId"></param>
+        /// <param name="profile">Which ruleset to write this against. No default: a document valid under one can be rejected by another, so the choice is the request.</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>string</returns>
+        public string DownloadDocumentXml(string documentId, string profile, int operationIndex = 0)
+        {
+            InvoicePDFs.Client.ApiResponse<string> localVarResponse = DownloadDocumentXmlWithHttpInfo(documentId, profile);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Download Document Xml The e-invoicing XML for a document already stored here.  Reads &#x60;data_json&#x60; directly rather than going through the render path&#39;s reconstruction: the status, the logo and the source document&#39;s number are all attached there for the *PDF*, and none of them belong in the XML. The credit note&#39;s BG-3 reference is already in the stored payload, resolved when the document was written.
+        /// </summary>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="documentId"></param>
+        /// <param name="profile">Which ruleset to write this against. No default: a document valid under one can be rejected by another, so the choice is the request.</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of string</returns>
+        public InvoicePDFs.Client.ApiResponse<string> DownloadDocumentXmlWithHttpInfo(string documentId, string profile, int operationIndex = 0)
+        {
+            // verify the required parameter 'documentId' is set
+            if (documentId == null)
+            {
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'documentId' when calling DocumentsApi->DownloadDocumentXml");
+            }
+
+            // verify the required parameter 'profile' is set
+            if (profile == null)
+            {
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'profile' when calling DocumentsApi->DownloadDocumentXml");
+            }
+
+            InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/xml",
+                "application/json"
+            };
+
+            var localVarContentType = InvoicePDFs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = InvoicePDFs.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("document_id", InvoicePDFs.Client.ClientUtils.ParameterToString(documentId)); // path parameter
+            localVarRequestOptions.QueryParameters.Add(InvoicePDFs.Client.ClientUtils.ParameterToMultiMap("", "profile", profile));
+
+            localVarRequestOptions.Operation = "DocumentsApi.DownloadDocumentXml";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (HTTPBearer) required
+            // bearer authentication required
+            if (!string.IsNullOrEmpty(this.Configuration.AccessToken) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Bearer " + this.Configuration.AccessToken);
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<string>("/api/v1/documents/{document_id}/xml", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("DownloadDocumentXml", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Download Document Xml The e-invoicing XML for a document already stored here.  Reads &#x60;data_json&#x60; directly rather than going through the render path&#39;s reconstruction: the status, the logo and the source document&#39;s number are all attached there for the *PDF*, and none of them belong in the XML. The credit note&#39;s BG-3 reference is already in the stored payload, resolved when the document was written.
+        /// </summary>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="documentId"></param>
+        /// <param name="profile">Which ruleset to write this against. No default: a document valid under one can be rejected by another, so the choice is the request.</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of string</returns>
+        public async System.Threading.Tasks.Task<string> DownloadDocumentXmlAsync(string documentId, string profile, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            InvoicePDFs.Client.ApiResponse<string> localVarResponse = await DownloadDocumentXmlWithHttpInfoAsync(documentId, profile, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Download Document Xml The e-invoicing XML for a document already stored here.  Reads &#x60;data_json&#x60; directly rather than going through the render path&#39;s reconstruction: the status, the logo and the source document&#39;s number are all attached there for the *PDF*, and none of them belong in the XML. The credit note&#39;s BG-3 reference is already in the stored payload, resolved when the document was written.
+        /// </summary>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="documentId"></param>
+        /// <param name="profile">Which ruleset to write this against. No default: a document valid under one can be rejected by another, so the choice is the request.</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<string>> DownloadDocumentXmlWithHttpInfoAsync(string documentId, string profile, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'documentId' is set
+            if (documentId == null)
+            {
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'documentId' when calling DocumentsApi->DownloadDocumentXml");
+            }
+
+            // verify the required parameter 'profile' is set
+            if (profile == null)
+            {
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'profile' when calling DocumentsApi->DownloadDocumentXml");
+            }
+
+
+            InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/xml",
+                "application/json"
+            };
+
+            var localVarContentType = InvoicePDFs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = InvoicePDFs.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("document_id", InvoicePDFs.Client.ClientUtils.ParameterToString(documentId)); // path parameter
+            localVarRequestOptions.QueryParameters.Add(InvoicePDFs.Client.ClientUtils.ParameterToMultiMap("", "profile", profile));
+
+            localVarRequestOptions.Operation = "DocumentsApi.DownloadDocumentXml";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (HTTPBearer) required
+            // bearer authentication required
+            if (!string.IsNullOrEmpty(this.Configuration.AccessToken) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Bearer " + this.Configuration.AccessToken);
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<string>("/api/v1/documents/{document_id}/xml", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("DownloadDocumentXml", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -3395,6 +3671,166 @@ namespace InvoicePDFs.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("RenderDocument", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Render Document Xml The e-invoicing XML for a document, without storing anything.  Takes the same body as &#x60;/validate-compliance&#x60;, and the pairing is the point: check first, then take the XML once it passes. Nothing here validates against the ruleset — a document missing mandatory fields serialises to XML missing those elements, which is a more useful artefact to look at than a refusal, and &#x60;/validate-compliance&#x60; is where the refusal belongs.  The syntax is not a parameter. It follows from the profile, because a profile already is a syntax plus a ruleset, and asking a caller for both is asking them to know that Peppol means UBL.
+        /// </summary>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="documentComplianceRequest"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>string</returns>
+        public string RenderDocumentXml(DocumentComplianceRequest documentComplianceRequest, int operationIndex = 0)
+        {
+            InvoicePDFs.Client.ApiResponse<string> localVarResponse = RenderDocumentXmlWithHttpInfo(documentComplianceRequest);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Render Document Xml The e-invoicing XML for a document, without storing anything.  Takes the same body as &#x60;/validate-compliance&#x60;, and the pairing is the point: check first, then take the XML once it passes. Nothing here validates against the ruleset — a document missing mandatory fields serialises to XML missing those elements, which is a more useful artefact to look at than a refusal, and &#x60;/validate-compliance&#x60; is where the refusal belongs.  The syntax is not a parameter. It follows from the profile, because a profile already is a syntax plus a ruleset, and asking a caller for both is asking them to know that Peppol means UBL.
+        /// </summary>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="documentComplianceRequest"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of string</returns>
+        public InvoicePDFs.Client.ApiResponse<string> RenderDocumentXmlWithHttpInfo(DocumentComplianceRequest documentComplianceRequest, int operationIndex = 0)
+        {
+            // verify the required parameter 'documentComplianceRequest' is set
+            if (documentComplianceRequest == null)
+            {
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'documentComplianceRequest' when calling DocumentsApi->RenderDocumentXml");
+            }
+
+            InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/xml",
+                "application/json"
+            };
+
+            var localVarContentType = InvoicePDFs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = InvoicePDFs.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = documentComplianceRequest;
+
+            localVarRequestOptions.Operation = "DocumentsApi.RenderDocumentXml";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (HTTPBearer) required
+            // bearer authentication required
+            if (!string.IsNullOrEmpty(this.Configuration.AccessToken) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Bearer " + this.Configuration.AccessToken);
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<string>("/api/v1/documents/xml", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("RenderDocumentXml", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Render Document Xml The e-invoicing XML for a document, without storing anything.  Takes the same body as &#x60;/validate-compliance&#x60;, and the pairing is the point: check first, then take the XML once it passes. Nothing here validates against the ruleset — a document missing mandatory fields serialises to XML missing those elements, which is a more useful artefact to look at than a refusal, and &#x60;/validate-compliance&#x60; is where the refusal belongs.  The syntax is not a parameter. It follows from the profile, because a profile already is a syntax plus a ruleset, and asking a caller for both is asking them to know that Peppol means UBL.
+        /// </summary>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="documentComplianceRequest"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of string</returns>
+        public async System.Threading.Tasks.Task<string> RenderDocumentXmlAsync(DocumentComplianceRequest documentComplianceRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            InvoicePDFs.Client.ApiResponse<string> localVarResponse = await RenderDocumentXmlWithHttpInfoAsync(documentComplianceRequest, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Render Document Xml The e-invoicing XML for a document, without storing anything.  Takes the same body as &#x60;/validate-compliance&#x60;, and the pairing is the point: check first, then take the XML once it passes. Nothing here validates against the ruleset — a document missing mandatory fields serialises to XML missing those elements, which is a more useful artefact to look at than a refusal, and &#x60;/validate-compliance&#x60; is where the refusal belongs.  The syntax is not a parameter. It follows from the profile, because a profile already is a syntax plus a ruleset, and asking a caller for both is asking them to know that Peppol means UBL.
+        /// </summary>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="documentComplianceRequest"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<string>> RenderDocumentXmlWithHttpInfoAsync(DocumentComplianceRequest documentComplianceRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'documentComplianceRequest' is set
+            if (documentComplianceRequest == null)
+            {
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'documentComplianceRequest' when calling DocumentsApi->RenderDocumentXml");
+            }
+
+
+            InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/xml",
+                "application/json"
+            };
+
+            var localVarContentType = InvoicePDFs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = InvoicePDFs.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = documentComplianceRequest;
+
+            localVarRequestOptions.Operation = "DocumentsApi.RenderDocumentXml";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (HTTPBearer) required
+            // bearer authentication required
+            if (!string.IsNullOrEmpty(this.Configuration.AccessToken) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Bearer " + this.Configuration.AccessToken);
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PostAsync<string>("/api/v1/documents/xml", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("RenderDocumentXml", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

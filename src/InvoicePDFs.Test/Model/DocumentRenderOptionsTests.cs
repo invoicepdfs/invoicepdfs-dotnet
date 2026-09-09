@@ -80,5 +80,14 @@ namespace InvoicePDFs.Test.Model
         {
             // TODO unit test for the property 'ExpiresIn'
         }
+
+        /// <summary>
+        /// Test the property 'Format'
+        /// </summary>
+        [Fact]
+        public void FormatTest()
+        {
+            // TODO unit test for the property 'Format'
+        }
     }
 }

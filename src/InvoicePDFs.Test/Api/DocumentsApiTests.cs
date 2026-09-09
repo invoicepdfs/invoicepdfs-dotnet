@@ -118,6 +118,19 @@ namespace InvoicePDFs.Test.Api
         }
 
         /// <summary>
+        /// Test DownloadDocumentXml
+        /// </summary>
+        [Fact]
+        public void DownloadDocumentXmlTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string documentId = null;
+            //string profile = null;
+            //var response = instance.DownloadDocumentXml(documentId, profile);
+            //Assert.IsType<string>(response);
+        }
+
+        /// <summary>
         /// Test DuplicateDocument
         /// </summary>
         [Fact]
@@ -229,6 +242,18 @@ namespace InvoicePDFs.Test.Api
             //string? idempotencyKey = null;
             //var response = instance.RenderDocument(documentRenderRequest, idempotencyKey);
             //Assert.IsType<RenderResponse>(response);
+        }
+
+        /// <summary>
+        /// Test RenderDocumentXml
+        /// </summary>
+        [Fact]
+        public void RenderDocumentXmlTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //DocumentComplianceRequest documentComplianceRequest = null;
+            //var response = instance.RenderDocumentXml(documentComplianceRequest);
+            //Assert.IsType<string>(response);
         }
 
         /// <summary>

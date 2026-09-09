@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **TemplateId** | **string** |  | [optional] [default to "tpl_modern"]
 **PageSize** | **string** |  | [optional] [default to "LETTER"]
 **ExpiresIn** | **int** |  | [optional] [default to 3600]
+**Format** | **string** | &#x60;facturx_pdf&#x60; embeds the EN 16931 CII XML in a PDF/A-3, which is what a French or German counterparty means by Factur-X or ZUGFeRD. | [optional] [default to FormatEnum.Pdf]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
