@@ -39,10 +39,12 @@ namespace InvoicePDFs.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ComplianceViolationOut" /> class.
         /// </summary>
-        /// <param name="rule">The EN 16931 term or group. (required).</param>
-        /// <param name="path">Where in the document. (required).</param>
+        /// <param name="rule">The identifier the standard uses — a business term from the mandatory-field check, a rule id from Schematron. A rule id is what a rejection notice from an access point quotes. (required).</param>
+        /// <param name="path">Where the problem is. The mandatory-field check names a field of the request; Schematron names the node in the generated XML. (required).</param>
         /// <param name="message">message (required).</param>
-        public ComplianceViolationOut(string rule = default(string), string path = default(string), string message = default(string))
+        /// <param name="severity">&#x60;fatal&#x60; would get the document rejected. &#x60;warning&#x60; is a recommendation — both EN 16931 and Peppol grade a large share of their rules as advisory, and &#x60;valid&#x60; ignores those. (default to &quot;fatal&quot;).</param>
+        /// <param name="ruleset">Which ruleset found it — matches an &#x60;id&#x60; in &#x60;rulesets&#x60;. (default to &quot;semantic&quot;).</param>
+        public ComplianceViolationOut(string rule = default(string), string path = default(string), string message = default(string), string severity = @"fatal", string ruleset = @"semantic")
         {
             // to ensure "rule" is required (not null)
             if (rule == null)
@@ -62,20 +64,24 @@ namespace InvoicePDFs.Model
                 throw new ArgumentNullException("message is a required property for ComplianceViolationOut and cannot be null");
             }
             this.Message = message;
+            // use default value if no "severity" provided
+            this.Severity = severity ?? @"fatal";
+            // use default value if no "ruleset" provided
+            this.Ruleset = ruleset ?? @"semantic";
         }
 
         /// <summary>
-        /// The EN 16931 term or group.
+        /// The identifier the standard uses — a business term from the mandatory-field check, a rule id from Schematron. A rule id is what a rejection notice from an access point quotes.
         /// </summary>
-        /// <value>The EN 16931 term or group.</value>
+        /// <value>The identifier the standard uses — a business term from the mandatory-field check, a rule id from Schematron. A rule id is what a rejection notice from an access point quotes.</value>
         /// <example>BT-130</example>
         [DataMember(Name = "rule", IsRequired = true, EmitDefaultValue = true)]
         public string Rule { get; set; }
 
         /// <summary>
-        /// Where in the document.
+        /// Where the problem is. The mandatory-field check names a field of the request; Schematron names the node in the generated XML.
         /// </summary>
-        /// <value>Where in the document.</value>
+        /// <value>Where the problem is. The mandatory-field check names a field of the request; Schematron names the node in the generated XML.</value>
         /// <example>lines[1].unit_code</example>
         [DataMember(Name = "path", IsRequired = true, EmitDefaultValue = true)]
         public string Path { get; set; }
@@ -88,6 +94,22 @@ namespace InvoicePDFs.Model
         public string Message { get; set; }
 
         /// <summary>
+        /// &#x60;fatal&#x60; would get the document rejected. &#x60;warning&#x60; is a recommendation — both EN 16931 and Peppol grade a large share of their rules as advisory, and &#x60;valid&#x60; ignores those.
+        /// </summary>
+        /// <value>&#x60;fatal&#x60; would get the document rejected. &#x60;warning&#x60; is a recommendation — both EN 16931 and Peppol grade a large share of their rules as advisory, and &#x60;valid&#x60; ignores those.</value>
+        /// <example>fatal</example>
+        [DataMember(Name = "severity", EmitDefaultValue = false)]
+        public string Severity { get; set; }
+
+        /// <summary>
+        /// Which ruleset found it — matches an &#x60;id&#x60; in &#x60;rulesets&#x60;.
+        /// </summary>
+        /// <value>Which ruleset found it — matches an &#x60;id&#x60; in &#x60;rulesets&#x60;.</value>
+        /// <example>semantic</example>
+        [DataMember(Name = "ruleset", EmitDefaultValue = false)]
+        public string Ruleset { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -98,6 +120,8 @@ namespace InvoicePDFs.Model
             sb.Append("  Rule: ").Append(Rule).Append("\n");
             sb.Append("  Path: ").Append(Path).Append("\n");
             sb.Append("  Message: ").Append(Message).Append("\n");
+            sb.Append("  Severity: ").Append(Severity).Append("\n");
+            sb.Append("  Ruleset: ").Append(Ruleset).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

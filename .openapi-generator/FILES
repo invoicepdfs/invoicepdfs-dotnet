@@ -72,6 +72,7 @@ docs/BusinessProfilesApi.md
 docs/BusinessProfilesListResponse.md
 docs/CalculationBreakdown.md
 docs/ComplianceCheckOut.md
+docs/ComplianceRulesetOut.md
 docs/ComplianceViolationOut.md
 docs/CountriesListResponse.md
 docs/CountryOut.md
@@ -342,6 +343,7 @@ src/InvoicePDFs.Test/Model/BusinessProfileResponseTests.cs
 src/InvoicePDFs.Test/Model/BusinessProfilesListResponseTests.cs
 src/InvoicePDFs.Test/Model/CalculationBreakdownTests.cs
 src/InvoicePDFs.Test/Model/ComplianceCheckOutTests.cs
+src/InvoicePDFs.Test/Model/ComplianceRulesetOutTests.cs
 src/InvoicePDFs.Test/Model/ComplianceViolationOutTests.cs
 src/InvoicePDFs.Test/Model/CountriesListResponseTests.cs
 src/InvoicePDFs.Test/Model/CountryOutTests.cs
@@ -607,6 +609,7 @@ src/InvoicePDFs/Model/BusinessProfileResponse.cs
 src/InvoicePDFs/Model/BusinessProfilesListResponse.cs
 src/InvoicePDFs/Model/CalculationBreakdown.cs
 src/InvoicePDFs/Model/ComplianceCheckOut.cs
+src/InvoicePDFs/Model/ComplianceRulesetOut.cs
 src/InvoicePDFs/Model/ComplianceViolationOut.cs
 src/InvoicePDFs/Model/CountriesListResponse.cs
 src/InvoicePDFs/Model/CountryOut.cs

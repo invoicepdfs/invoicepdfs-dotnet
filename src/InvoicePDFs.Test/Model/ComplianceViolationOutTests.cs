@@ -80,5 +80,23 @@ namespace InvoicePDFs.Test.Model
         {
             // TODO unit test for the property 'Message'
         }
+
+        /// <summary>
+        /// Test the property 'Severity'
+        /// </summary>
+        [Fact]
+        public void SeverityTest()
+        {
+            // TODO unit test for the property 'Severity'
+        }
+
+        /// <summary>
+        /// Test the property 'Ruleset'
+        /// </summary>
+        [Fact]
+        public void RulesetTest()
+        {
+            // TODO unit test for the property 'Ruleset'
+        }
     }
 }

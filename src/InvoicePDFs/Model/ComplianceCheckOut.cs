@@ -40,10 +40,12 @@ namespace InvoicePDFs.Model
         /// Initializes a new instance of the <see cref="ComplianceCheckOut" /> class.
         /// </summary>
         /// <param name="profile">profile (required).</param>
-        /// <param name="rulesetVersion">The version these rules came from. Worth recording alongside any document you file — rulesets revise, and &#39;which rules did this pass?&#39; is what an audit asks years later. (required).</param>
-        /// <param name="valid">valid (required).</param>
-        /// <param name="violations">Every violation found, not the first — fixing one field per round trip is the experience this avoids..</param>
-        public ComplianceCheckOut(string profile = default(string), string rulesetVersion = default(string), bool valid = default(bool), List<ComplianceViolationOut> violations = default(List<ComplianceViolationOut>))
+        /// <param name="rulesetVersion">The version these rules came from. Worth recording alongside any document you file — rulesets revise, and &#39;which rules did this pass?&#39; is what an audit asks years later. &#x60;rulesets&#x60; breaks the same answer down per ruleset. (required).</param>
+        /// <param name="valid">Nothing fatal was found. Read it with &#x60;fully_checked&#x60; — on its own it says what was checked came back clean, not that everything was checked. (required).</param>
+        /// <param name="fullyChecked">Every ruleset that applies to this profile ran. False means at least one could not, and &#x60;rulesets&#x60; says which and why. (default to true).</param>
+        /// <param name="rulesets">Every ruleset the document was held to, including the mandatory-field check, at the version that ran..</param>
+        /// <param name="violations">Every violation found, not the first — fixing one field per round trip is the experience this avoids. Ordered mandatory-field findings first, since those name a field you can go and change..</param>
+        public ComplianceCheckOut(string profile = default(string), string rulesetVersion = default(string), bool valid = default(bool), bool fullyChecked = true, List<ComplianceRulesetOut> rulesets = default(List<ComplianceRulesetOut>), List<ComplianceViolationOut> violations = default(List<ComplianceViolationOut>))
         {
             // to ensure "profile" is required (not null)
             if (profile == null)
@@ -58,6 +60,8 @@ namespace InvoicePDFs.Model
             }
             this.RulesetVersion = rulesetVersion;
             this.Valid = valid;
+            this.FullyChecked = fullyChecked;
+            this.Rulesets = rulesets;
             this.Violations = violations;
         }
 
@@ -69,23 +73,38 @@ namespace InvoicePDFs.Model
         public string Profile { get; set; }
 
         /// <summary>
-        /// The version these rules came from. Worth recording alongside any document you file — rulesets revise, and &#39;which rules did this pass?&#39; is what an audit asks years later.
+        /// The version these rules came from. Worth recording alongside any document you file — rulesets revise, and &#39;which rules did this pass?&#39; is what an audit asks years later. &#x60;rulesets&#x60; breaks the same answer down per ruleset.
         /// </summary>
-        /// <value>The version these rules came from. Worth recording alongside any document you file — rulesets revise, and &#39;which rules did this pass?&#39; is what an audit asks years later.</value>
-        /// <example>PEPPOL-UBL-3.15.0</example>
+        /// <value>The version these rules came from. Worth recording alongside any document you file — rulesets revise, and &#39;which rules did this pass?&#39; is what an audit asks years later. &#x60;rulesets&#x60; breaks the same answer down per ruleset.</value>
+        /// <example>EN16931-UBL 1.3.16 + Peppol BIS Billing 3.0.20</example>
         [DataMember(Name = "ruleset_version", IsRequired = true, EmitDefaultValue = true)]
         public string RulesetVersion { get; set; }
 
         /// <summary>
-        /// Gets or Sets Valid
+        /// Nothing fatal was found. Read it with &#x60;fully_checked&#x60; — on its own it says what was checked came back clean, not that everything was checked.
         /// </summary>
+        /// <value>Nothing fatal was found. Read it with &#x60;fully_checked&#x60; — on its own it says what was checked came back clean, not that everything was checked.</value>
         [DataMember(Name = "valid", IsRequired = true, EmitDefaultValue = true)]
         public bool Valid { get; set; }
 
         /// <summary>
-        /// Every violation found, not the first — fixing one field per round trip is the experience this avoids.
+        /// Every ruleset that applies to this profile ran. False means at least one could not, and &#x60;rulesets&#x60; says which and why.
         /// </summary>
-        /// <value>Every violation found, not the first — fixing one field per round trip is the experience this avoids.</value>
+        /// <value>Every ruleset that applies to this profile ran. False means at least one could not, and &#x60;rulesets&#x60; says which and why.</value>
+        [DataMember(Name = "fully_checked", EmitDefaultValue = true)]
+        public bool FullyChecked { get; set; }
+
+        /// <summary>
+        /// Every ruleset the document was held to, including the mandatory-field check, at the version that ran.
+        /// </summary>
+        /// <value>Every ruleset the document was held to, including the mandatory-field check, at the version that ran.</value>
+        [DataMember(Name = "rulesets", EmitDefaultValue = false)]
+        public List<ComplianceRulesetOut> Rulesets { get; set; }
+
+        /// <summary>
+        /// Every violation found, not the first — fixing one field per round trip is the experience this avoids. Ordered mandatory-field findings first, since those name a field you can go and change.
+        /// </summary>
+        /// <value>Every violation found, not the first — fixing one field per round trip is the experience this avoids. Ordered mandatory-field findings first, since those name a field you can go and change.</value>
         [DataMember(Name = "violations", EmitDefaultValue = false)]
         public List<ComplianceViolationOut> Violations { get; set; }
 
@@ -100,6 +119,8 @@ namespace InvoicePDFs.Model
             sb.Append("  Profile: ").Append(Profile).Append("\n");
             sb.Append("  RulesetVersion: ").Append(RulesetVersion).Append("\n");
             sb.Append("  Valid: ").Append(Valid).Append("\n");
+            sb.Append("  FullyChecked: ").Append(FullyChecked).Append("\n");
+            sb.Append("  Rulesets: ").Append(Rulesets).Append("\n");
             sb.Append("  Violations: ").Append(Violations).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
