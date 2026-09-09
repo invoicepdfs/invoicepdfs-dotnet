@@ -41,6 +41,7 @@ namespace InvoicePDFs.Model
         /// </summary>
         /// <param name="name">name (required).</param>
         /// <param name="legalName">legalName.</param>
+        /// <param name="contactName">contactName.</param>
         /// <param name="email">email.</param>
         /// <param name="phone">phone.</param>
         /// <param name="website">website.</param>
@@ -49,7 +50,7 @@ namespace InvoicePDFs.Model
         /// <param name="address">address.</param>
         /// <param name="bankAccount">bankAccount.</param>
         /// <param name="electronicAddress">electronicAddress.</param>
-        public DocumentPartyInput(string name = default(string), string legalName = default(string), string email = default(string), string phone = default(string), string website = default(string), string taxId = default(string), string registrationNumber = default(string), PostalAddress address = default(PostalAddress), InvoiceBankAccountInput bankAccount = default(InvoiceBankAccountInput), ElectronicAddress electronicAddress = default(ElectronicAddress))
+        public DocumentPartyInput(string name = default(string), string legalName = default(string), string contactName = default(string), string email = default(string), string phone = default(string), string website = default(string), string taxId = default(string), string registrationNumber = default(string), PostalAddress address = default(PostalAddress), InvoiceBankAccountInput bankAccount = default(InvoiceBankAccountInput), ElectronicAddress electronicAddress = default(ElectronicAddress))
         {
             // to ensure "name" is required (not null)
             if (name == null)
@@ -58,6 +59,7 @@ namespace InvoicePDFs.Model
             }
             this.Name = name;
             this.LegalName = legalName;
+            this.ContactName = contactName;
             this.Email = email;
             this.Phone = phone;
             this.Website = website;
@@ -80,6 +82,12 @@ namespace InvoicePDFs.Model
         /// </summary>
         [DataMember(Name = "legal_name", EmitDefaultValue = true)]
         public string LegalName { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ContactName
+        /// </summary>
+        [DataMember(Name = "contact_name", EmitDefaultValue = true)]
+        public string ContactName { get; set; }
 
         /// <summary>
         /// Gets or Sets Email
@@ -139,6 +147,7 @@ namespace InvoicePDFs.Model
             sb.Append("class DocumentPartyInput {\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  LegalName: ").Append(LegalName).Append("\n");
+            sb.Append("  ContactName: ").Append(ContactName).Append("\n");
             sb.Append("  Email: ").Append(Email).Append("\n");
             sb.Append("  Phone: ").Append(Phone).Append("\n");
             sb.Append("  Website: ").Append(Website).Append("\n");

@@ -6,11 +6,13 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **LegalName** | **string** |  | [optional] 
 **DisplayName** | **string** |  | [optional] 
+**ContactName** | **string** |  | [optional] 
 **Email** | **string** |  | [optional] 
 **Phone** | **string** |  | [optional] 
 **Website** | **string** |  | [optional] 
 **TaxId** | **string** |  | [optional] 
 **Address** | [**PostalAddress**](PostalAddress.md) |  | [optional] 
+**BankAccount** | [**InvoiceBankAccountInput**](InvoiceBankAccountInput.md) |  | [optional] 
 **ElectronicAddress** | [**ElectronicAddress**](ElectronicAddress.md) |  | [optional] 
 **DefaultCurrency** | **string** |  | [optional] 
 **DefaultLocale** | **string** |  | [optional] 

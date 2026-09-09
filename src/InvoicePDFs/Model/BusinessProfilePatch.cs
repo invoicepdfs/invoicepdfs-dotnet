@@ -36,25 +36,29 @@ namespace InvoicePDFs.Model
         /// </summary>
         /// <param name="legalName">legalName.</param>
         /// <param name="displayName">displayName.</param>
+        /// <param name="contactName">contactName.</param>
         /// <param name="email">email.</param>
         /// <param name="phone">phone.</param>
         /// <param name="website">website.</param>
         /// <param name="taxId">taxId.</param>
         /// <param name="address">address.</param>
+        /// <param name="bankAccount">bankAccount.</param>
         /// <param name="electronicAddress">electronicAddress.</param>
         /// <param name="defaultCurrency">defaultCurrency.</param>
         /// <param name="defaultLocale">defaultLocale.</param>
         /// <param name="defaultTimezone">defaultTimezone.</param>
         /// <param name="logoFileId">logoFileId.</param>
-        public BusinessProfilePatch(string legalName = default(string), string displayName = default(string), string email = default(string), string phone = default(string), string website = default(string), string taxId = default(string), PostalAddress address = default(PostalAddress), ElectronicAddress electronicAddress = default(ElectronicAddress), string defaultCurrency = default(string), string defaultLocale = default(string), string defaultTimezone = default(string), string logoFileId = default(string))
+        public BusinessProfilePatch(string legalName = default(string), string displayName = default(string), string contactName = default(string), string email = default(string), string phone = default(string), string website = default(string), string taxId = default(string), PostalAddress address = default(PostalAddress), InvoiceBankAccountInput bankAccount = default(InvoiceBankAccountInput), ElectronicAddress electronicAddress = default(ElectronicAddress), string defaultCurrency = default(string), string defaultLocale = default(string), string defaultTimezone = default(string), string logoFileId = default(string))
         {
             this.LegalName = legalName;
             this.DisplayName = displayName;
+            this.ContactName = contactName;
             this.Email = email;
             this.Phone = phone;
             this.Website = website;
             this.TaxId = taxId;
             this.Address = address;
+            this.BankAccount = bankAccount;
             this.ElectronicAddress = electronicAddress;
             this.DefaultCurrency = defaultCurrency;
             this.DefaultLocale = defaultLocale;
@@ -73,6 +77,12 @@ namespace InvoicePDFs.Model
         /// </summary>
         [DataMember(Name = "display_name", EmitDefaultValue = true)]
         public string DisplayName { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ContactName
+        /// </summary>
+        [DataMember(Name = "contact_name", EmitDefaultValue = true)]
+        public string ContactName { get; set; }
 
         /// <summary>
         /// Gets or Sets Email
@@ -103,6 +113,12 @@ namespace InvoicePDFs.Model
         /// </summary>
         [DataMember(Name = "address", EmitDefaultValue = true)]
         public PostalAddress Address { get; set; }
+
+        /// <summary>
+        /// Gets or Sets BankAccount
+        /// </summary>
+        [DataMember(Name = "bank_account", EmitDefaultValue = true)]
+        public InvoiceBankAccountInput BankAccount { get; set; }
 
         /// <summary>
         /// Gets or Sets ElectronicAddress
@@ -144,11 +160,13 @@ namespace InvoicePDFs.Model
             sb.Append("class BusinessProfilePatch {\n");
             sb.Append("  LegalName: ").Append(LegalName).Append("\n");
             sb.Append("  DisplayName: ").Append(DisplayName).Append("\n");
+            sb.Append("  ContactName: ").Append(ContactName).Append("\n");
             sb.Append("  Email: ").Append(Email).Append("\n");
             sb.Append("  Phone: ").Append(Phone).Append("\n");
             sb.Append("  Website: ").Append(Website).Append("\n");
             sb.Append("  TaxId: ").Append(TaxId).Append("\n");
             sb.Append("  Address: ").Append(Address).Append("\n");
+            sb.Append("  BankAccount: ").Append(BankAccount).Append("\n");
             sb.Append("  ElectronicAddress: ").Append(ElectronicAddress).Append("\n");
             sb.Append("  DefaultCurrency: ").Append(DefaultCurrency).Append("\n");
             sb.Append("  DefaultLocale: ").Append(DefaultLocale).Append("\n");

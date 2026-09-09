@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **Seller** | [**DocumentPartyInput**](DocumentPartyInput.md) |  | 
 **Buyer** | [**DocumentPartyInput**](DocumentPartyInput.md) |  | 
 **ShipTo** | [**DocumentPartyInput**](DocumentPartyInput.md) |  | [optional] 
+**DeliveryDate** | **DateOnly** |  | [optional] 
 **BuyerReference** | **string** |  | [optional] 
 **PrecedingInvoiceNumber** | **string** |  | [optional] 
 **LineItems** | [**List&lt;DocumentLineItemInput&gt;**](DocumentLineItemInput.md) |  | 

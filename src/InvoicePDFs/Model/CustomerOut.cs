@@ -40,6 +40,7 @@ namespace InvoicePDFs.Model
         /// Initializes a new instance of the <see cref="CustomerOut" /> class.
         /// </summary>
         /// <param name="name">name (required).</param>
+        /// <param name="contactName">contactName.</param>
         /// <param name="email">email.</param>
         /// <param name="phone">phone.</param>
         /// <param name="taxId">taxId.</param>
@@ -50,7 +51,7 @@ namespace InvoicePDFs.Model
         /// <param name="id">id (required).</param>
         /// <param name="createdAt">createdAt (required).</param>
         /// <param name="updatedAt">updatedAt (required).</param>
-        public CustomerOut(string name = default(string), string email = default(string), string phone = default(string), string taxId = default(string), PostalAddress billingAddress = default(PostalAddress), PostalAddress shippingAddress = default(PostalAddress), ElectronicAddress electronicAddress = default(ElectronicAddress), Dictionary<string, Object> metadata = default(Dictionary<string, Object>), string id = default(string), string createdAt = default(string), string updatedAt = default(string))
+        public CustomerOut(string name = default(string), string contactName = default(string), string email = default(string), string phone = default(string), string taxId = default(string), PostalAddress billingAddress = default(PostalAddress), PostalAddress shippingAddress = default(PostalAddress), ElectronicAddress electronicAddress = default(ElectronicAddress), Dictionary<string, Object> metadata = default(Dictionary<string, Object>), string id = default(string), string createdAt = default(string), string updatedAt = default(string))
         {
             // to ensure "name" is required (not null)
             if (name == null)
@@ -76,6 +77,7 @@ namespace InvoicePDFs.Model
                 throw new ArgumentNullException("updatedAt is a required property for CustomerOut and cannot be null");
             }
             this.UpdatedAt = updatedAt;
+            this.ContactName = contactName;
             this.Email = email;
             this.Phone = phone;
             this.TaxId = taxId;
@@ -91,6 +93,12 @@ namespace InvoicePDFs.Model
         /// <example>Jane Smith</example>
         [DataMember(Name = "name", IsRequired = true, EmitDefaultValue = true)]
         public string Name { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ContactName
+        /// </summary>
+        [DataMember(Name = "contact_name", EmitDefaultValue = true)]
+        public string ContactName { get; set; }
 
         /// <summary>
         /// Gets or Sets Email
@@ -161,6 +169,7 @@ namespace InvoicePDFs.Model
             StringBuilder sb = new StringBuilder();
             sb.Append("class CustomerOut {\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  ContactName: ").Append(ContactName).Append("\n");
             sb.Append("  Email: ").Append(Email).Append("\n");
             sb.Append("  Phone: ").Append(Phone).Append("\n");
             sb.Append("  TaxId: ").Append(TaxId).Append("\n");

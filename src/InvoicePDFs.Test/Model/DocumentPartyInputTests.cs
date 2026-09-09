@@ -73,6 +73,15 @@ namespace InvoicePDFs.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'ContactName'
+        /// </summary>
+        [Fact]
+        public void ContactNameTest()
+        {
+            // TODO unit test for the property 'ContactName'
+        }
+
+        /// <summary>
         /// Test the property 'Email'
         /// </summary>
         [Fact]

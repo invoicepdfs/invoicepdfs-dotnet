@@ -118,6 +118,15 @@ namespace InvoicePDFs.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'DeliveryDate'
+        /// </summary>
+        [Fact]
+        public void DeliveryDateTest()
+        {
+            // TODO unit test for the property 'DeliveryDate'
+        }
+
+        /// <summary>
         /// Test the property 'BuyerReference'
         /// </summary>
         [Fact]
