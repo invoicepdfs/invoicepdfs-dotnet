@@ -107,6 +107,7 @@ namespace InvoicePDFs.Model
         /// <param name="reason">reason.</param>
         /// <param name="shipTo">shipTo.</param>
         /// <param name="buyerReference">buyerReference.</param>
+        /// <param name="taxScheme">taxScheme.</param>
         /// <param name="deliveryDate">deliveryDate.</param>
         /// <param name="lineItems">lineItems.</param>
         /// <param name="discounts">discounts.</param>
@@ -116,7 +117,7 @@ namespace InvoicePDFs.Model
         /// <param name="customFields">customFields.</param>
         /// <param name="payment">payment.</param>
         /// <param name="branding">branding.</param>
-        public DocumentPatchRequest(string number = default(string), DocumentTypeEnum? documentType = default(DocumentTypeEnum?), DateOnly issueDate = default(DateOnly), DateOnly dueDate = default(DateOnly), string currency = default(string), string locale = default(string), string businessProfileId = default(string), string customerId = default(string), string sourceDocumentId = default(string), string reason = default(string), PostalAddress shipTo = default(PostalAddress), string buyerReference = default(string), DateOnly deliveryDate = default(DateOnly), List<StandardLineItemInput> lineItems = default(List<StandardLineItemInput>), List<LineItemDiscountInput> discounts = default(List<LineItemDiscountInput>), InvoiceShippingInput shipping = default(InvoiceShippingInput), List<InvoiceNoteInput> notes = default(List<InvoiceNoteInput>), List<InvoiceTermInput> terms = default(List<InvoiceTermInput>), List<InvoiceCustomFieldInput> customFields = default(List<InvoiceCustomFieldInput>), InvoicePaymentInput payment = default(InvoicePaymentInput), InvoiceBrandingInput branding = default(InvoiceBrandingInput))
+        public DocumentPatchRequest(string number = default(string), DocumentTypeEnum? documentType = default(DocumentTypeEnum?), DateOnly issueDate = default(DateOnly), DateOnly dueDate = default(DateOnly), string currency = default(string), string locale = default(string), string businessProfileId = default(string), string customerId = default(string), string sourceDocumentId = default(string), string reason = default(string), PostalAddress shipTo = default(PostalAddress), string buyerReference = default(string), string taxScheme = default(string), DateOnly deliveryDate = default(DateOnly), List<StandardLineItemInput> lineItems = default(List<StandardLineItemInput>), List<LineItemDiscountInput> discounts = default(List<LineItemDiscountInput>), InvoiceShippingInput shipping = default(InvoiceShippingInput), List<InvoiceNoteInput> notes = default(List<InvoiceNoteInput>), List<InvoiceTermInput> terms = default(List<InvoiceTermInput>), List<InvoiceCustomFieldInput> customFields = default(List<InvoiceCustomFieldInput>), InvoicePaymentInput payment = default(InvoicePaymentInput), InvoiceBrandingInput branding = default(InvoiceBrandingInput))
         {
             this.Number = number;
             this.DocumentType = documentType;
@@ -130,6 +131,7 @@ namespace InvoicePDFs.Model
             this.Reason = reason;
             this.ShipTo = shipTo;
             this.BuyerReference = buyerReference;
+            this.TaxScheme = taxScheme;
             this.DeliveryDate = deliveryDate;
             this.LineItems = lineItems;
             this.Discounts = discounts;
@@ -208,6 +210,12 @@ namespace InvoicePDFs.Model
         public string BuyerReference { get; set; }
 
         /// <summary>
+        /// Gets or Sets TaxScheme
+        /// </summary>
+        [DataMember(Name = "tax_scheme", EmitDefaultValue = true)]
+        public string TaxScheme { get; set; }
+
+        /// <summary>
         /// Gets or Sets DeliveryDate
         /// </summary>
         [DataMember(Name = "delivery_date", EmitDefaultValue = true)]
@@ -281,6 +289,7 @@ namespace InvoicePDFs.Model
             sb.Append("  Reason: ").Append(Reason).Append("\n");
             sb.Append("  ShipTo: ").Append(ShipTo).Append("\n");
             sb.Append("  BuyerReference: ").Append(BuyerReference).Append("\n");
+            sb.Append("  TaxScheme: ").Append(TaxScheme).Append("\n");
             sb.Append("  DeliveryDate: ").Append(DeliveryDate).Append("\n");
             sb.Append("  LineItems: ").Append(LineItems).Append("\n");
             sb.Append("  Discounts: ").Append(Discounts).Append("\n");

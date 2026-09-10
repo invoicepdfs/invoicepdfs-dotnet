@@ -82,6 +82,15 @@ namespace InvoicePDFs.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'InScope'
+        /// </summary>
+        [Fact]
+        public void InScopeTest()
+        {
+            // TODO unit test for the property 'InScope'
+        }
+
+        /// <summary>
         /// Test the property 'FullyChecked'
         /// </summary>
         [Fact]

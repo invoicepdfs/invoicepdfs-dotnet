@@ -42,10 +42,11 @@ namespace InvoicePDFs.Model
         /// <param name="profile">profile (required).</param>
         /// <param name="rulesetVersion">The version these rules came from. Worth recording alongside any document you file — rulesets revise, and &#39;which rules did this pass?&#39; is what an audit asks years later. &#x60;rulesets&#x60; breaks the same answer down per ruleset. (required).</param>
         /// <param name="valid">Nothing fatal was found. Read it with &#x60;fully_checked&#x60; — on its own it says what was checked came back clean, not that everything was checked. (required).</param>
+        /// <param name="inScope">Whether any of these rulesets is likely to apply to this document at all. False when neither party is in a country that uses one — these are European e-invoicing rulesets, and for a wholly domestic US invoice, say, &#x60;valid&#x60; is answering a question nobody asked. Advisory: it never changes the verdict or withholds the check, because an open network means a US seller invoicing a Dutch buyer genuinely needs it. (default to true).</param>
         /// <param name="fullyChecked">Every ruleset that applies to this profile ran. False means at least one could not, and &#x60;rulesets&#x60; says which and why. (default to true).</param>
         /// <param name="rulesets">Every ruleset the document was held to, including the mandatory-field check, at the version that ran..</param>
         /// <param name="violations">Every violation found, not the first — fixing one field per round trip is the experience this avoids. Ordered mandatory-field findings first, since those name a field you can go and change..</param>
-        public ComplianceCheckOut(string profile = default(string), string rulesetVersion = default(string), bool valid = default(bool), bool fullyChecked = true, List<ComplianceRulesetOut> rulesets = default(List<ComplianceRulesetOut>), List<ComplianceViolationOut> violations = default(List<ComplianceViolationOut>))
+        public ComplianceCheckOut(string profile = default(string), string rulesetVersion = default(string), bool valid = default(bool), bool inScope = true, bool fullyChecked = true, List<ComplianceRulesetOut> rulesets = default(List<ComplianceRulesetOut>), List<ComplianceViolationOut> violations = default(List<ComplianceViolationOut>))
         {
             // to ensure "profile" is required (not null)
             if (profile == null)
@@ -60,6 +61,7 @@ namespace InvoicePDFs.Model
             }
             this.RulesetVersion = rulesetVersion;
             this.Valid = valid;
+            this.InScope = inScope;
             this.FullyChecked = fullyChecked;
             this.Rulesets = rulesets;
             this.Violations = violations;
@@ -86,6 +88,13 @@ namespace InvoicePDFs.Model
         /// <value>Nothing fatal was found. Read it with &#x60;fully_checked&#x60; — on its own it says what was checked came back clean, not that everything was checked.</value>
         [DataMember(Name = "valid", IsRequired = true, EmitDefaultValue = true)]
         public bool Valid { get; set; }
+
+        /// <summary>
+        /// Whether any of these rulesets is likely to apply to this document at all. False when neither party is in a country that uses one — these are European e-invoicing rulesets, and for a wholly domestic US invoice, say, &#x60;valid&#x60; is answering a question nobody asked. Advisory: it never changes the verdict or withholds the check, because an open network means a US seller invoicing a Dutch buyer genuinely needs it.
+        /// </summary>
+        /// <value>Whether any of these rulesets is likely to apply to this document at all. False when neither party is in a country that uses one — these are European e-invoicing rulesets, and for a wholly domestic US invoice, say, &#x60;valid&#x60; is answering a question nobody asked. Advisory: it never changes the verdict or withholds the check, because an open network means a US seller invoicing a Dutch buyer genuinely needs it.</value>
+        [DataMember(Name = "in_scope", EmitDefaultValue = true)]
+        public bool InScope { get; set; }
 
         /// <summary>
         /// Every ruleset that applies to this profile ran. False means at least one could not, and &#x60;rulesets&#x60; says which and why.
@@ -119,6 +128,7 @@ namespace InvoicePDFs.Model
             sb.Append("  Profile: ").Append(Profile).Append("\n");
             sb.Append("  RulesetVersion: ").Append(RulesetVersion).Append("\n");
             sb.Append("  Valid: ").Append(Valid).Append("\n");
+            sb.Append("  InScope: ").Append(InScope).Append("\n");
             sb.Append("  FullyChecked: ").Append(FullyChecked).Append("\n");
             sb.Append("  Rulesets: ").Append(Rulesets).Append("\n");
             sb.Append("  Violations: ").Append(Violations).Append("\n");

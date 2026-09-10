@@ -145,6 +145,15 @@ namespace InvoicePDFs.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'TaxScheme'
+        /// </summary>
+        [Fact]
+        public void TaxSchemeTest()
+        {
+            // TODO unit test for the property 'TaxScheme'
+        }
+
+        /// <summary>
         /// Test the property 'DeliveryDate'
         /// </summary>
         [Fact]
