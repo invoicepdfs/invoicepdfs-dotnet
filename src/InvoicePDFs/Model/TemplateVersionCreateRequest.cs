@@ -36,12 +36,10 @@ namespace InvoicePDFs.Model
         /// </summary>
         /// <param name="label">label.</param>
         /// <param name="changelog">changelog.</param>
-        /// <param name="config">config.</param>
-        public TemplateVersionCreateRequest(string label = default(string), string changelog = default(string), Dictionary<string, Object> config = default(Dictionary<string, Object>))
+        public TemplateVersionCreateRequest(string label = default(string), string changelog = default(string))
         {
             this.Label = label;
             this.Changelog = changelog;
-            this.Config = config;
         }
 
         /// <summary>
@@ -57,12 +55,6 @@ namespace InvoicePDFs.Model
         public string Changelog { get; set; }
 
         /// <summary>
-        /// Gets or Sets Config
-        /// </summary>
-        [DataMember(Name = "config", EmitDefaultValue = false)]
-        public Dictionary<string, Object> Config { get; set; }
-
-        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -72,7 +64,6 @@ namespace InvoicePDFs.Model
             sb.Append("class TemplateVersionCreateRequest {\n");
             sb.Append("  Label: ").Append(Label).Append("\n");
             sb.Append("  Changelog: ").Append(Changelog).Append("\n");
-            sb.Append("  Config: ").Append(Config).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

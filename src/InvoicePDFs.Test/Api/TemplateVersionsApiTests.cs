@@ -91,5 +91,18 @@ namespace InvoicePDFs.Test.Api
             //var response = instance.ListTemplateVersions(templateId);
             //Assert.IsType<TemplateVersionsListResponse>(response);
         }
+
+        /// <summary>
+        /// Test RestoreTemplateVersion
+        /// </summary>
+        [Fact]
+        public void RestoreTemplateVersionTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string templateId = null;
+            //int version = null;
+            //var response = instance.RestoreTemplateVersion(templateId, version);
+            //Assert.IsType<TemplateVersionResponse>(response);
+        }
     }
 }

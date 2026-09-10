@@ -158,8 +158,9 @@ namespace InvoicePDFs.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string templateId = null;
             //DocumentRenderRequest documentRenderRequest = null;
+            //int? version = null;
             //string? idempotencyKey = null;
-            //var response = instance.PreviewTemplate(templateId, documentRenderRequest, idempotencyKey);
+            //var response = instance.PreviewTemplate(templateId, documentRenderRequest, version, idempotencyKey);
             //Assert.IsType<RenderResponse>(response);
         }
 

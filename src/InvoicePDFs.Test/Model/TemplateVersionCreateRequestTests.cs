@@ -71,14 +71,5 @@ namespace InvoicePDFs.Test.Model
         {
             // TODO unit test for the property 'Changelog'
         }
-
-        /// <summary>
-        /// Test the property 'Config'
-        /// </summary>
-        [Fact]
-        public void ConfigTest()
-        {
-            // TODO unit test for the property 'Config'
-        }
     }
 }

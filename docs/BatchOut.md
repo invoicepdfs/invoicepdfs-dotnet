@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **Status** | **string** |  | 
 **Operation** | **string** |  | 
 **TemplateId** | **string** |  | 
+**TemplateVersion** | **int?** |  | [optional] 
 **TotalItems** | **int** |  | 
 **CompletedItems** | **int** |  | 
 **FailedItems** | **int** |  | 

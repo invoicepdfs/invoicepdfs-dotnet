@@ -141,12 +141,14 @@ namespace InvoicePDFs.Model
         /// <param name="id">id (required).</param>
         /// <param name="status">status (required).</param>
         /// <param name="documentType">documentType (required).</param>
+        /// <param name="templateId">templateId (required).</param>
+        /// <param name="templateVersion">templateVersion.</param>
         /// <param name="format">format (required).</param>
         /// <param name="downloadUrl">downloadUrl (required).</param>
         /// <param name="expiresAt">expiresAt (required).</param>
         /// <param name="calculation">calculation (required).</param>
         /// <param name="createdAt">createdAt (required).</param>
-        public RenderOut(string id = default(string), StatusEnum status = default(StatusEnum), DocumentTypeEnum documentType = default(DocumentTypeEnum), FormatEnum format = default(FormatEnum), string downloadUrl = default(string), string expiresAt = default(string), CalculationBreakdown calculation = default(CalculationBreakdown), string createdAt = default(string))
+        public RenderOut(string id = default(string), StatusEnum status = default(StatusEnum), DocumentTypeEnum documentType = default(DocumentTypeEnum), string templateId = default(string), int? templateVersion = default(int?), FormatEnum format = default(FormatEnum), string downloadUrl = default(string), string expiresAt = default(string), CalculationBreakdown calculation = default(CalculationBreakdown), string createdAt = default(string))
         {
             // to ensure "id" is required (not null)
             if (id == null)
@@ -156,6 +158,12 @@ namespace InvoicePDFs.Model
             this.Id = id;
             this.Status = status;
             this.DocumentType = documentType;
+            // to ensure "templateId" is required (not null)
+            if (templateId == null)
+            {
+                throw new ArgumentNullException("templateId is a required property for RenderOut and cannot be null");
+            }
+            this.TemplateId = templateId;
             this.Format = format;
             // to ensure "downloadUrl" is required (not null)
             if (downloadUrl == null)
@@ -181,6 +189,7 @@ namespace InvoicePDFs.Model
                 throw new ArgumentNullException("createdAt is a required property for RenderOut and cannot be null");
             }
             this.CreatedAt = createdAt;
+            this.TemplateVersion = templateVersion;
         }
 
         /// <summary>
@@ -188,6 +197,18 @@ namespace InvoicePDFs.Model
         /// </summary>
         [DataMember(Name = "id", IsRequired = true, EmitDefaultValue = true)]
         public string Id { get; set; }
+
+        /// <summary>
+        /// Gets or Sets TemplateId
+        /// </summary>
+        [DataMember(Name = "template_id", IsRequired = true, EmitDefaultValue = true)]
+        public string TemplateId { get; set; }
+
+        /// <summary>
+        /// Gets or Sets TemplateVersion
+        /// </summary>
+        [DataMember(Name = "template_version", EmitDefaultValue = true)]
+        public int? TemplateVersion { get; set; }
 
         /// <summary>
         /// Gets or Sets DownloadUrl
@@ -224,6 +245,8 @@ namespace InvoicePDFs.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  DocumentType: ").Append(DocumentType).Append("\n");
+            sb.Append("  TemplateId: ").Append(TemplateId).Append("\n");
+            sb.Append("  TemplateVersion: ").Append(TemplateVersion).Append("\n");
             sb.Append("  Format: ").Append(Format).Append("\n");
             sb.Append("  DownloadUrl: ").Append(DownloadUrl).Append("\n");
             sb.Append("  ExpiresAt: ").Append(ExpiresAt).Append("\n");

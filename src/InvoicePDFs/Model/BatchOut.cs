@@ -86,13 +86,14 @@ namespace InvoicePDFs.Model
         /// <param name="status">status (required).</param>
         /// <param name="operation">operation (required).</param>
         /// <param name="templateId">templateId (required).</param>
+        /// <param name="templateVersion">templateVersion.</param>
         /// <param name="totalItems">totalItems (required).</param>
         /// <param name="completedItems">completedItems (required).</param>
         /// <param name="failedItems">failedItems (required).</param>
         /// <param name="createdAt">createdAt (required).</param>
         /// <param name="updatedAt">updatedAt (required).</param>
         /// <param name="completedAt">completedAt.</param>
-        public BatchOut(string id = default(string), StatusEnum status = default(StatusEnum), string operation = default(string), string templateId = default(string), int totalItems = default(int), int completedItems = default(int), int failedItems = default(int), string createdAt = default(string), string updatedAt = default(string), string completedAt = default(string))
+        public BatchOut(string id = default(string), StatusEnum status = default(StatusEnum), string operation = default(string), string templateId = default(string), int? templateVersion = default(int?), int totalItems = default(int), int completedItems = default(int), int failedItems = default(int), string createdAt = default(string), string updatedAt = default(string), string completedAt = default(string))
         {
             // to ensure "id" is required (not null)
             if (id == null)
@@ -128,6 +129,7 @@ namespace InvoicePDFs.Model
                 throw new ArgumentNullException("updatedAt is a required property for BatchOut and cannot be null");
             }
             this.UpdatedAt = updatedAt;
+            this.TemplateVersion = templateVersion;
             this.CompletedAt = completedAt;
         }
 
@@ -148,6 +150,12 @@ namespace InvoicePDFs.Model
         /// </summary>
         [DataMember(Name = "template_id", IsRequired = true, EmitDefaultValue = true)]
         public string TemplateId { get; set; }
+
+        /// <summary>
+        /// Gets or Sets TemplateVersion
+        /// </summary>
+        [DataMember(Name = "template_version", EmitDefaultValue = true)]
+        public int? TemplateVersion { get; set; }
 
         /// <summary>
         /// Gets or Sets TotalItems
@@ -197,6 +205,7 @@ namespace InvoicePDFs.Model
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  Operation: ").Append(Operation).Append("\n");
             sb.Append("  TemplateId: ").Append(TemplateId).Append("\n");
+            sb.Append("  TemplateVersion: ").Append(TemplateVersion).Append("\n");
             sb.Append("  TotalItems: ").Append(TotalItems).Append("\n");
             sb.Append("  CompletedItems: ").Append(CompletedItems).Append("\n");
             sb.Append("  FailedItems: ").Append(FailedItems).Append("\n");

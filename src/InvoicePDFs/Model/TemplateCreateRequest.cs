@@ -43,7 +43,7 @@ namespace InvoicePDFs.Model
         /// <param name="description">description.</param>
         /// <param name="baseTemplateId">baseTemplateId (default to &quot;tpl_modern&quot;).</param>
         /// <param name="config">config.</param>
-        public TemplateCreateRequest(string name = default(string), string description = default(string), string baseTemplateId = @"tpl_modern", Dictionary<string, Object> config = default(Dictionary<string, Object>))
+        public TemplateCreateRequest(string name = default(string), string description = default(string), string baseTemplateId = @"tpl_modern", TemplateConfig config = default(TemplateConfig))
         {
             // to ensure "name" is required (not null)
             if (name == null)
@@ -79,7 +79,7 @@ namespace InvoicePDFs.Model
         /// Gets or Sets Config
         /// </summary>
         [DataMember(Name = "config", EmitDefaultValue = false)]
-        public Dictionary<string, Object> Config { get; set; }
+        public TemplateConfig Config { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

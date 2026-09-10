@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **Name** | **string** |  | 
 **Description** | **string** |  | [optional] 
 **BaseTemplateId** | **string** |  | 
-**Config** | **Dictionary&lt;string, Object&gt;** |  | [optional] 
+**Config** | [**TemplateConfig**](TemplateConfig.md) |  | [optional] 
 **Status** | **string** |  | 
 **IsDefault** | **bool** |  | [optional] [default to false]
 **CreatedAt** | **string** |  | 

@@ -7,6 +7,8 @@ Name | Type | Description | Notes
 **Id** | **string** |  | 
 **Status** | **string** |  | 
 **DocumentType** | **string** |  | 
+**TemplateId** | **string** |  | 
+**TemplateVersion** | **int?** |  | [optional] 
 **Format** | **string** |  | 
 **DownloadUrl** | **string** |  | 
 **ExpiresAt** | **string** |  | 

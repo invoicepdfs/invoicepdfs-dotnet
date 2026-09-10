@@ -49,7 +49,7 @@ namespace InvoicePDFs.Model
         /// <param name="createdAt">createdAt (required).</param>
         /// <param name="updatedAt">updatedAt (required).</param>
         /// <param name="publishedAt">publishedAt.</param>
-        public CustomTemplateOut(string id = default(string), string name = default(string), string description = default(string), string baseTemplateId = default(string), Dictionary<string, Object> config = default(Dictionary<string, Object>), string status = default(string), bool isDefault = false, string createdAt = default(string), string updatedAt = default(string), string publishedAt = default(string))
+        public CustomTemplateOut(string id = default(string), string name = default(string), string description = default(string), string baseTemplateId = default(string), TemplateConfig config = default(TemplateConfig), string status = default(string), bool isDefault = false, string createdAt = default(string), string updatedAt = default(string), string publishedAt = default(string))
         {
             // to ensure "id" is required (not null)
             if (id == null)
@@ -121,7 +121,7 @@ namespace InvoicePDFs.Model
         /// Gets or Sets Config
         /// </summary>
         [DataMember(Name = "config", EmitDefaultValue = false)]
-        public Dictionary<string, Object> Config { get; set; }
+        public TemplateConfig Config { get; set; }
 
         /// <summary>
         /// Gets or Sets Status

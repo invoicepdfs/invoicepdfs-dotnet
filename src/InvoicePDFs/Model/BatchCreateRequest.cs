@@ -61,8 +61,9 @@ namespace InvoicePDFs.Model
         /// <param name="operation">operation (default to OperationEnum.Render).</param>
         /// <param name="items">items (required).</param>
         /// <param name="templateId">templateId (default to &quot;tpl_modern&quot;).</param>
+        /// <param name="templateVersion">templateVersion.</param>
         /// <param name="output">output.</param>
-        public BatchCreateRequest(OperationEnum? operation = OperationEnum.Render, List<BatchItemInput> items = default(List<BatchItemInput>), string templateId = @"tpl_modern", BatchOutputOptions output = default(BatchOutputOptions))
+        public BatchCreateRequest(OperationEnum? operation = OperationEnum.Render, List<BatchItemInput> items = default(List<BatchItemInput>), string templateId = @"tpl_modern", int? templateVersion = default(int?), BatchOutputOptions output = default(BatchOutputOptions))
         {
             // to ensure "items" is required (not null)
             if (items == null)
@@ -73,6 +74,7 @@ namespace InvoicePDFs.Model
             this.Operation = operation;
             // use default value if no "templateId" provided
             this.TemplateId = templateId ?? @"tpl_modern";
+            this.TemplateVersion = templateVersion;
             this.Output = output;
         }
 
@@ -87,6 +89,12 @@ namespace InvoicePDFs.Model
         /// </summary>
         [DataMember(Name = "template_id", EmitDefaultValue = false)]
         public string TemplateId { get; set; }
+
+        /// <summary>
+        /// Gets or Sets TemplateVersion
+        /// </summary>
+        [DataMember(Name = "template_version", EmitDefaultValue = true)]
+        public int? TemplateVersion { get; set; }
 
         /// <summary>
         /// Gets or Sets Output
@@ -105,6 +113,7 @@ namespace InvoicePDFs.Model
             sb.Append("  Operation: ").Append(Operation).Append("\n");
             sb.Append("  Items: ").Append(Items).Append("\n");
             sb.Append("  TemplateId: ").Append(TemplateId).Append("\n");
+            sb.Append("  TemplateVersion: ").Append(TemplateVersion).Append("\n");
             sb.Append("  Output: ").Append(Output).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -126,6 +135,12 @@ namespace InvoicePDFs.Model
         /// <returns>Validation Result</returns>
         IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
+            // TemplateVersion (int?) minimum
+            if (this.TemplateVersion < (int?)1)
+            {
+                yield return new ValidationResult("Invalid value for TemplateVersion, must be a value greater than or equal to 1.", new [] { "TemplateVersion" });
+            }
+
             yield break;
         }
     }

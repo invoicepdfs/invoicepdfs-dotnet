@@ -37,7 +37,7 @@ namespace InvoicePDFs.Model
         /// <param name="name">name.</param>
         /// <param name="description">description.</param>
         /// <param name="config">config.</param>
-        public TemplatePatchRequest(string name = default(string), string description = default(string), Dictionary<string, Object> config = default(Dictionary<string, Object>))
+        public TemplatePatchRequest(string name = default(string), string description = default(string), TemplateConfig config = default(TemplateConfig))
         {
             this.Name = name;
             this.Description = description;
@@ -60,7 +60,7 @@ namespace InvoicePDFs.Model
         /// Gets or Sets Config
         /// </summary>
         [DataMember(Name = "config", EmitDefaultValue = false)]
-        public Dictionary<string, Object> Config { get; set; }
+        public TemplateConfig Config { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

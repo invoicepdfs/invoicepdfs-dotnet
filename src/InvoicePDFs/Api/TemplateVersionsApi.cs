@@ -90,6 +90,31 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of TemplateVersionsListResponse</returns>
         ApiResponse<TemplateVersionsListResponse> ListTemplateVersionsWithHttpInfo(string templateId, int operationIndex = 0);
+        /// <summary>
+        /// Restore Template Version
+        /// </summary>
+        /// <remarks>
+        /// Put a template back to the config a version recorded.  The template moves; the version does not. Restoring v1 over v3&#39;s config does not delete v3 or renumber anything — the next snapshot is v4, and the history stays a record of what happened rather than a record of the last decision. Take a version first if the config being replaced is worth keeping.
+        /// </remarks>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="templateId"></param>
+        /// <param name="version"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>TemplateVersionResponse</returns>
+        TemplateVersionResponse RestoreTemplateVersion(string templateId, int version, int operationIndex = 0);
+
+        /// <summary>
+        /// Restore Template Version
+        /// </summary>
+        /// <remarks>
+        /// Put a template back to the config a version recorded.  The template moves; the version does not. Restoring v1 over v3&#39;s config does not delete v3 or renumber anything — the next snapshot is v4, and the history stays a record of what happened rather than a record of the last decision. Take a version first if the config being replaced is worth keeping.
+        /// </remarks>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="templateId"></param>
+        /// <param name="version"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of TemplateVersionResponse</returns>
+        ApiResponse<TemplateVersionResponse> RestoreTemplateVersionWithHttpInfo(string templateId, int version, int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -178,6 +203,33 @@ namespace InvoicePDFs.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (TemplateVersionsListResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<TemplateVersionsListResponse>> ListTemplateVersionsWithHttpInfoAsync(string templateId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// Restore Template Version
+        /// </summary>
+        /// <remarks>
+        /// Put a template back to the config a version recorded.  The template moves; the version does not. Restoring v1 over v3&#39;s config does not delete v3 or renumber anything — the next snapshot is v4, and the history stays a record of what happened rather than a record of the last decision. Take a version first if the config being replaced is worth keeping.
+        /// </remarks>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="templateId"></param>
+        /// <param name="version"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of TemplateVersionResponse</returns>
+        System.Threading.Tasks.Task<TemplateVersionResponse> RestoreTemplateVersionAsync(string templateId, int version, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Restore Template Version
+        /// </summary>
+        /// <remarks>
+        /// Put a template back to the config a version recorded.  The template moves; the version does not. Restoring v1 over v3&#39;s config does not delete v3 or renumber anything — the next snapshot is v4, and the history stays a record of what happened rather than a record of the last decision. Take a version first if the config being replaced is worth keeping.
+        /// </remarks>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="templateId"></param>
+        /// <param name="version"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (TemplateVersionResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<TemplateVersionResponse>> RestoreTemplateVersionWithHttpInfoAsync(string templateId, int version, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -783,6 +835,168 @@ namespace InvoicePDFs.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ListTemplateVersions", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Restore Template Version Put a template back to the config a version recorded.  The template moves; the version does not. Restoring v1 over v3&#39;s config does not delete v3 or renumber anything — the next snapshot is v4, and the history stays a record of what happened rather than a record of the last decision. Take a version first if the config being replaced is worth keeping.
+        /// </summary>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="templateId"></param>
+        /// <param name="version"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>TemplateVersionResponse</returns>
+        public TemplateVersionResponse RestoreTemplateVersion(string templateId, int version, int operationIndex = 0)
+        {
+            InvoicePDFs.Client.ApiResponse<TemplateVersionResponse> localVarResponse = RestoreTemplateVersionWithHttpInfo(templateId, version);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Restore Template Version Put a template back to the config a version recorded.  The template moves; the version does not. Restoring v1 over v3&#39;s config does not delete v3 or renumber anything — the next snapshot is v4, and the history stays a record of what happened rather than a record of the last decision. Take a version first if the config being replaced is worth keeping.
+        /// </summary>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="templateId"></param>
+        /// <param name="version"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of TemplateVersionResponse</returns>
+        public InvoicePDFs.Client.ApiResponse<TemplateVersionResponse> RestoreTemplateVersionWithHttpInfo(string templateId, int version, int operationIndex = 0)
+        {
+            // verify the required parameter 'templateId' is set
+            if (templateId == null)
+            {
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'templateId' when calling TemplateVersionsApi->RestoreTemplateVersion");
+            }
+
+            InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = InvoicePDFs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = InvoicePDFs.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("template_id", InvoicePDFs.Client.ClientUtils.ParameterToString(templateId)); // path parameter
+            localVarRequestOptions.PathParameters.Add("version", InvoicePDFs.Client.ClientUtils.ParameterToString(version)); // path parameter
+
+            localVarRequestOptions.Operation = "TemplateVersionsApi.RestoreTemplateVersion";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (HTTPBearer) required
+            // bearer authentication required
+            if (!string.IsNullOrEmpty(this.Configuration.AccessToken) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Bearer " + this.Configuration.AccessToken);
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<TemplateVersionResponse>("/api/v1/templates/{template_id}/versions/{version}/restore", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("RestoreTemplateVersion", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Restore Template Version Put a template back to the config a version recorded.  The template moves; the version does not. Restoring v1 over v3&#39;s config does not delete v3 or renumber anything — the next snapshot is v4, and the history stays a record of what happened rather than a record of the last decision. Take a version first if the config being replaced is worth keeping.
+        /// </summary>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="templateId"></param>
+        /// <param name="version"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of TemplateVersionResponse</returns>
+        public async System.Threading.Tasks.Task<TemplateVersionResponse> RestoreTemplateVersionAsync(string templateId, int version, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            InvoicePDFs.Client.ApiResponse<TemplateVersionResponse> localVarResponse = await RestoreTemplateVersionWithHttpInfoAsync(templateId, version, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Restore Template Version Put a template back to the config a version recorded.  The template moves; the version does not. Restoring v1 over v3&#39;s config does not delete v3 or renumber anything — the next snapshot is v4, and the history stays a record of what happened rather than a record of the last decision. Take a version first if the config being replaced is worth keeping.
+        /// </summary>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="templateId"></param>
+        /// <param name="version"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (TemplateVersionResponse)</returns>
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<TemplateVersionResponse>> RestoreTemplateVersionWithHttpInfoAsync(string templateId, int version, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'templateId' is set
+            if (templateId == null)
+            {
+                throw new InvoicePDFs.Client.ApiException(400, "Missing required parameter 'templateId' when calling TemplateVersionsApi->RestoreTemplateVersion");
+            }
+
+
+            InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = InvoicePDFs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = InvoicePDFs.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("template_id", InvoicePDFs.Client.ClientUtils.ParameterToString(templateId)); // path parameter
+            localVarRequestOptions.PathParameters.Add("version", InvoicePDFs.Client.ClientUtils.ParameterToString(version)); // path parameter
+
+            localVarRequestOptions.Operation = "TemplateVersionsApi.RestoreTemplateVersion";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (HTTPBearer) required
+            // bearer authentication required
+            if (!string.IsNullOrEmpty(this.Configuration.AccessToken) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Bearer " + this.Configuration.AccessToken);
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PostAsync<TemplateVersionResponse>("/api/v1/templates/{template_id}/versions/{version}/restore", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("RestoreTemplateVersion", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

@@ -63,13 +63,15 @@ namespace InvoicePDFs.Model
         /// Initializes a new instance of the <see cref="DocumentRenderOptions" /> class.
         /// </summary>
         /// <param name="templateId">templateId (default to &quot;tpl_modern&quot;).</param>
+        /// <param name="templateVersion">templateVersion.</param>
         /// <param name="pageSize">pageSize (default to &quot;LETTER&quot;).</param>
         /// <param name="expiresIn">expiresIn (default to 3600).</param>
         /// <param name="format">&#x60;facturx_pdf&#x60; embeds the EN 16931 CII XML in a PDF/A-3, which is what a French or German counterparty means by Factur-X or ZUGFeRD. (default to FormatEnum.Pdf).</param>
-        public DocumentRenderOptions(string templateId = @"tpl_modern", string pageSize = @"LETTER", int expiresIn = 3600, FormatEnum? format = FormatEnum.Pdf)
+        public DocumentRenderOptions(string templateId = @"tpl_modern", int? templateVersion = default(int?), string pageSize = @"LETTER", int expiresIn = 3600, FormatEnum? format = FormatEnum.Pdf)
         {
             // use default value if no "templateId" provided
             this.TemplateId = templateId ?? @"tpl_modern";
+            this.TemplateVersion = templateVersion;
             // use default value if no "pageSize" provided
             this.PageSize = pageSize ?? @"LETTER";
             this.ExpiresIn = expiresIn;
@@ -81,6 +83,12 @@ namespace InvoicePDFs.Model
         /// </summary>
         [DataMember(Name = "template_id", EmitDefaultValue = false)]
         public string TemplateId { get; set; }
+
+        /// <summary>
+        /// Gets or Sets TemplateVersion
+        /// </summary>
+        [DataMember(Name = "template_version", EmitDefaultValue = true)]
+        public int? TemplateVersion { get; set; }
 
         /// <summary>
         /// Gets or Sets PageSize
@@ -103,6 +111,7 @@ namespace InvoicePDFs.Model
             StringBuilder sb = new StringBuilder();
             sb.Append("class DocumentRenderOptions {\n");
             sb.Append("  TemplateId: ").Append(TemplateId).Append("\n");
+            sb.Append("  TemplateVersion: ").Append(TemplateVersion).Append("\n");
             sb.Append("  PageSize: ").Append(PageSize).Append("\n");
             sb.Append("  ExpiresIn: ").Append(ExpiresIn).Append("\n");
             sb.Append("  Format: ").Append(Format).Append("\n");
@@ -126,6 +135,12 @@ namespace InvoicePDFs.Model
         /// <returns>Validation Result</returns>
         IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
+            // TemplateVersion (int?) minimum
+            if (this.TemplateVersion < (int?)1)
+            {
+                yield return new ValidationResult("Invalid value for TemplateVersion, must be a value greater than or equal to 1.", new [] { "TemplateVersion" });
+            }
+
             yield break;
         }
     }

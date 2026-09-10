@@ -754,7 +754,7 @@ This endpoint does not need any parameter.
 
 <a id="previewtemplate"></a>
 # **PreviewTemplate**
-> RenderResponse PreviewTemplate (string templateId, DocumentRenderRequest documentRenderRequest, string? idempotencyKey = null)
+> RenderResponse PreviewTemplate (string templateId, DocumentRenderRequest documentRenderRequest, int? version = null, string? idempotencyKey = null)
 
 Preview Template
 
@@ -780,12 +780,13 @@ namespace Example
             var apiInstance = new TemplatesApi(config);
             var templateId = "templateId_example";  // string | 
             var documentRenderRequest = new DocumentRenderRequest(); // DocumentRenderRequest | 
+            var version = 56;  // int? | Preview the config this version recorded rather than the template's current config. Only a custom (`ctpl_`) template has versions. (optional) 
             var idempotencyKey = "idempotencyKey_example";  // string? |  (optional) 
 
             try
             {
                 // Preview Template
-                RenderResponse result = apiInstance.PreviewTemplate(templateId, documentRenderRequest, idempotencyKey);
+                RenderResponse result = apiInstance.PreviewTemplate(templateId, documentRenderRequest, version, idempotencyKey);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -806,7 +807,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Preview Template
-    ApiResponse<RenderResponse> response = apiInstance.PreviewTemplateWithHttpInfo(templateId, documentRenderRequest, idempotencyKey);
+    ApiResponse<RenderResponse> response = apiInstance.PreviewTemplateWithHttpInfo(templateId, documentRenderRequest, version, idempotencyKey);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -825,6 +826,7 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **templateId** | **string** |  |  |
 | **documentRenderRequest** | [**DocumentRenderRequest**](DocumentRenderRequest.md) |  |  |
+| **version** | **int?** | Preview the config this version recorded rather than the template&#39;s current config. Only a custom (&#x60;ctpl_&#x60;) template has versions. | [optional]  |
 | **idempotencyKey** | **string?** |  | [optional]  |
 
 ### Return type

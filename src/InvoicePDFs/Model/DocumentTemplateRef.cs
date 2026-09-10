@@ -40,7 +40,8 @@ namespace InvoicePDFs.Model
         /// Initializes a new instance of the <see cref="DocumentTemplateRef" /> class.
         /// </summary>
         /// <param name="id">id (required).</param>
-        public DocumentTemplateRef(string id = default(string))
+        /// <param name="varVersion">varVersion.</param>
+        public DocumentTemplateRef(string id = default(string), int? varVersion = default(int?))
         {
             // to ensure "id" is required (not null)
             if (id == null)
@@ -48,6 +49,7 @@ namespace InvoicePDFs.Model
                 throw new ArgumentNullException("id is a required property for DocumentTemplateRef and cannot be null");
             }
             this.Id = id;
+            this.VarVersion = varVersion;
         }
 
         /// <summary>
@@ -55,6 +57,12 @@ namespace InvoicePDFs.Model
         /// </summary>
         [DataMember(Name = "id", IsRequired = true, EmitDefaultValue = true)]
         public string Id { get; set; }
+
+        /// <summary>
+        /// Gets or Sets VarVersion
+        /// </summary>
+        [DataMember(Name = "version", EmitDefaultValue = true)]
+        public int? VarVersion { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -65,6 +73,7 @@ namespace InvoicePDFs.Model
             StringBuilder sb = new StringBuilder();
             sb.Append("class DocumentTemplateRef {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  VarVersion: ").Append(VarVersion).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -85,6 +94,12 @@ namespace InvoicePDFs.Model
         /// <returns>Validation Result</returns>
         IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
+            // VarVersion (int?) minimum
+            if (this.VarVersion < (int?)1)
+            {
+                yield return new ValidationResult("Invalid value for VarVersion, must be a value greater than or equal to 1.", new [] { "VarVersion" });
+            }
+
             yield break;
         }
     }

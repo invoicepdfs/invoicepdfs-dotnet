@@ -192,10 +192,11 @@ namespace InvoicePDFs.Api
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId"></param>
         /// <param name="documentRenderRequest"></param>
+        /// <param name="version">Preview the config this version recorded rather than the template&#39;s current config. Only a custom (&#x60;ctpl_&#x60;) template has versions. (optional)</param>
         /// <param name="idempotencyKey"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>RenderResponse</returns>
-        RenderResponse PreviewTemplate(string templateId, DocumentRenderRequest documentRenderRequest, string? idempotencyKey = default(string?), int operationIndex = 0);
+        RenderResponse PreviewTemplate(string templateId, DocumentRenderRequest documentRenderRequest, int? version = default(int?), string? idempotencyKey = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// Preview Template
@@ -206,10 +207,11 @@ namespace InvoicePDFs.Api
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId"></param>
         /// <param name="documentRenderRequest"></param>
+        /// <param name="version">Preview the config this version recorded rather than the template&#39;s current config. Only a custom (&#x60;ctpl_&#x60;) template has versions. (optional)</param>
         /// <param name="idempotencyKey"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of RenderResponse</returns>
-        ApiResponse<RenderResponse> PreviewTemplateWithHttpInfo(string templateId, DocumentRenderRequest documentRenderRequest, string? idempotencyKey = default(string?), int operationIndex = 0);
+        ApiResponse<RenderResponse> PreviewTemplateWithHttpInfo(string templateId, DocumentRenderRequest documentRenderRequest, int? version = default(int?), string? idempotencyKey = default(string?), int operationIndex = 0);
         /// <summary>
         /// Publish Template
         /// </summary>
@@ -470,11 +472,12 @@ namespace InvoicePDFs.Api
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId"></param>
         /// <param name="documentRenderRequest"></param>
+        /// <param name="version">Preview the config this version recorded rather than the template&#39;s current config. Only a custom (&#x60;ctpl_&#x60;) template has versions. (optional)</param>
         /// <param name="idempotencyKey"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RenderResponse</returns>
-        System.Threading.Tasks.Task<RenderResponse> PreviewTemplateAsync(string templateId, DocumentRenderRequest documentRenderRequest, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<RenderResponse> PreviewTemplateAsync(string templateId, DocumentRenderRequest documentRenderRequest, int? version = default(int?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Preview Template
@@ -485,11 +488,12 @@ namespace InvoicePDFs.Api
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId"></param>
         /// <param name="documentRenderRequest"></param>
+        /// <param name="version">Preview the config this version recorded rather than the template&#39;s current config. Only a custom (&#x60;ctpl_&#x60;) template has versions. (optional)</param>
         /// <param name="idempotencyKey"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RenderResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RenderResponse>> PreviewTemplateWithHttpInfoAsync(string templateId, DocumentRenderRequest documentRenderRequest, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<RenderResponse>> PreviewTemplateWithHttpInfoAsync(string templateId, DocumentRenderRequest documentRenderRequest, int? version = default(int?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Publish Template
         /// </summary>
@@ -1904,12 +1908,13 @@ namespace InvoicePDFs.Api
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId"></param>
         /// <param name="documentRenderRequest"></param>
+        /// <param name="version">Preview the config this version recorded rather than the template&#39;s current config. Only a custom (&#x60;ctpl_&#x60;) template has versions. (optional)</param>
         /// <param name="idempotencyKey"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>RenderResponse</returns>
-        public RenderResponse PreviewTemplate(string templateId, DocumentRenderRequest documentRenderRequest, string? idempotencyKey = default(string?), int operationIndex = 0)
+        public RenderResponse PreviewTemplate(string templateId, DocumentRenderRequest documentRenderRequest, int? version = default(int?), string? idempotencyKey = default(string?), int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<RenderResponse> localVarResponse = PreviewTemplateWithHttpInfo(templateId, documentRenderRequest, idempotencyKey);
+            InvoicePDFs.Client.ApiResponse<RenderResponse> localVarResponse = PreviewTemplateWithHttpInfo(templateId, documentRenderRequest, version, idempotencyKey);
             return localVarResponse.Data;
         }
 
@@ -1919,10 +1924,11 @@ namespace InvoicePDFs.Api
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId"></param>
         /// <param name="documentRenderRequest"></param>
+        /// <param name="version">Preview the config this version recorded rather than the template&#39;s current config. Only a custom (&#x60;ctpl_&#x60;) template has versions. (optional)</param>
         /// <param name="idempotencyKey"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of RenderResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<RenderResponse> PreviewTemplateWithHttpInfo(string templateId, DocumentRenderRequest documentRenderRequest, string? idempotencyKey = default(string?), int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<RenderResponse> PreviewTemplateWithHttpInfo(string templateId, DocumentRenderRequest documentRenderRequest, int? version = default(int?), string? idempotencyKey = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'templateId' is set
             if (templateId == null)
@@ -1961,6 +1967,10 @@ namespace InvoicePDFs.Api
             }
 
             localVarRequestOptions.PathParameters.Add("template_id", InvoicePDFs.Client.ClientUtils.ParameterToString(templateId)); // path parameter
+            if (version != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(InvoicePDFs.Client.ClientUtils.ParameterToMultiMap("", "version", version));
+            }
             if (idempotencyKey != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Idempotency-Key", InvoicePDFs.Client.ClientUtils.ParameterToString(idempotencyKey)); // header parameter
@@ -1997,13 +2007,14 @@ namespace InvoicePDFs.Api
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId"></param>
         /// <param name="documentRenderRequest"></param>
+        /// <param name="version">Preview the config this version recorded rather than the template&#39;s current config. Only a custom (&#x60;ctpl_&#x60;) template has versions. (optional)</param>
         /// <param name="idempotencyKey"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RenderResponse</returns>
-        public async System.Threading.Tasks.Task<RenderResponse> PreviewTemplateAsync(string templateId, DocumentRenderRequest documentRenderRequest, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<RenderResponse> PreviewTemplateAsync(string templateId, DocumentRenderRequest documentRenderRequest, int? version = default(int?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<RenderResponse> localVarResponse = await PreviewTemplateWithHttpInfoAsync(templateId, documentRenderRequest, idempotencyKey, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<RenderResponse> localVarResponse = await PreviewTemplateWithHttpInfoAsync(templateId, documentRenderRequest, version, idempotencyKey, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2013,11 +2024,12 @@ namespace InvoicePDFs.Api
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId"></param>
         /// <param name="documentRenderRequest"></param>
+        /// <param name="version">Preview the config this version recorded rather than the template&#39;s current config. Only a custom (&#x60;ctpl_&#x60;) template has versions. (optional)</param>
         /// <param name="idempotencyKey"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RenderResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<RenderResponse>> PreviewTemplateWithHttpInfoAsync(string templateId, DocumentRenderRequest documentRenderRequest, string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<RenderResponse>> PreviewTemplateWithHttpInfoAsync(string templateId, DocumentRenderRequest documentRenderRequest, int? version = default(int?), string? idempotencyKey = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'templateId' is set
             if (templateId == null)
@@ -2057,6 +2069,10 @@ namespace InvoicePDFs.Api
             }
 
             localVarRequestOptions.PathParameters.Add("template_id", InvoicePDFs.Client.ClientUtils.ParameterToString(templateId)); // path parameter
+            if (version != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(InvoicePDFs.Client.ClientUtils.ParameterToMultiMap("", "version", version));
+            }
             if (idempotencyKey != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Idempotency-Key", InvoicePDFs.Client.ClientUtils.ParameterToString(idempotencyKey)); // header parameter

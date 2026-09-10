@@ -46,7 +46,7 @@ namespace InvoicePDFs.Model
         /// <param name="changelog">changelog.</param>
         /// <param name="config">config (required).</param>
         /// <param name="createdAt">createdAt (required).</param>
-        public TemplateVersionOut(string id = default(string), string templateId = default(string), int varVersion = default(int), string label = default(string), string changelog = default(string), Dictionary<string, Object> config = default(Dictionary<string, Object>), string createdAt = default(string))
+        public TemplateVersionOut(string id = default(string), string templateId = default(string), int varVersion = default(int), string label = default(string), string changelog = default(string), TemplateConfig config = default(TemplateConfig), string createdAt = default(string))
         {
             // to ensure "id" is required (not null)
             if (id == null)
@@ -111,7 +111,7 @@ namespace InvoicePDFs.Model
         /// Gets or Sets Config
         /// </summary>
         [DataMember(Name = "config", IsRequired = true, EmitDefaultValue = true)]
-        public Dictionary<string, Object> Config { get; set; }
+        public TemplateConfig Config { get; set; }
 
         /// <summary>
         /// Gets or Sets CreatedAt

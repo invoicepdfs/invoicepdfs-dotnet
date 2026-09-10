@@ -203,6 +203,7 @@ docs/TaxRatePatchRequest.md
 docs/TaxRateResponse.md
 docs/TaxRatesApi.md
 docs/TaxRatesListResponse.md
+docs/TemplateConfig.md
 docs/TemplateCreateRequest.md
 docs/TemplateDetail.md
 docs/TemplateDetailResponse.md
@@ -458,6 +459,7 @@ src/InvoicePDFs.Test/Model/TaxRateOutTests.cs
 src/InvoicePDFs.Test/Model/TaxRatePatchRequestTests.cs
 src/InvoicePDFs.Test/Model/TaxRateResponseTests.cs
 src/InvoicePDFs.Test/Model/TaxRatesListResponseTests.cs
+src/InvoicePDFs.Test/Model/TemplateConfigTests.cs
 src/InvoicePDFs.Test/Model/TemplateCreateRequestTests.cs
 src/InvoicePDFs.Test/Model/TemplateDetailResponseTests.cs
 src/InvoicePDFs.Test/Model/TemplateDetailTests.cs
@@ -724,6 +726,7 @@ src/InvoicePDFs/Model/TaxRateOut.cs
 src/InvoicePDFs/Model/TaxRatePatchRequest.cs
 src/InvoicePDFs/Model/TaxRateResponse.cs
 src/InvoicePDFs/Model/TaxRatesListResponse.cs
+src/InvoicePDFs/Model/TemplateConfig.cs
 src/InvoicePDFs/Model/TemplateCreateRequest.cs
 src/InvoicePDFs/Model/TemplateDetail.cs
 src/InvoicePDFs/Model/TemplateDetailResponse.cs

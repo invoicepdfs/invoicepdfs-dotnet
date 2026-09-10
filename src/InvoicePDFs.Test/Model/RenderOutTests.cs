@@ -82,6 +82,24 @@ namespace InvoicePDFs.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'TemplateId'
+        /// </summary>
+        [Fact]
+        public void TemplateIdTest()
+        {
+            // TODO unit test for the property 'TemplateId'
+        }
+
+        /// <summary>
+        /// Test the property 'TemplateVersion'
+        /// </summary>
+        [Fact]
+        public void TemplateVersionTest()
+        {
+            // TODO unit test for the property 'TemplateVersion'
+        }
+
+        /// <summary>
         /// Test the property 'Format'
         /// </summary>
         [Fact]
