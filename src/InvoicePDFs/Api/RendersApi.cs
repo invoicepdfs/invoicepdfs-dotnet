@@ -29,23 +29,28 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// Download Render
         /// </summary>
+        /// <remarks>
+        /// Fetch the PDF, by signature or by API key.  Two ways in, and the signature is checked *first* — before the row is looked up — so a forged token cannot be used to tell a real render id from an invented one. It also means the token path costs no auth work at all, which matters because this is the one endpoint a browser hits directly.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="renderId"></param>
+        /// <param name="token">The signature from this render&#39;s &#x60;download_url&#x60;. Present it and no API key is needed — that is what makes the URL a link. Omit it and the request authenticates normally. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>System.IO.Stream</returns>
-        System.IO.Stream DownloadRender(string renderId, int operationIndex = 0);
+        System.IO.Stream DownloadRender(string renderId, string? token = default(string?), int operationIndex = 0);
 
         /// <summary>
         /// Download Render
         /// </summary>
         /// <remarks>
-        /// 
+        /// Fetch the PDF, by signature or by API key.  Two ways in, and the signature is checked *first* — before the row is looked up — so a forged token cannot be used to tell a real render id from an invented one. It also means the token path costs no auth work at all, which matters because this is the one endpoint a browser hits directly.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="renderId"></param>
+        /// <param name="token">The signature from this render&#39;s &#x60;download_url&#x60;. Present it and no API key is needed — that is what makes the URL a link. Omit it and the request authenticates normally. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of System.IO.Stream</returns>
-        ApiResponse<System.IO.Stream> DownloadRenderWithHttpInfo(string renderId, int operationIndex = 0);
+        ApiResponse<System.IO.Stream> DownloadRenderWithHttpInfo(string renderId, string? token = default(string?), int operationIndex = 0);
         /// <summary>
         /// Get Render
         /// </summary>
@@ -79,27 +84,29 @@ namespace InvoicePDFs.Api
         /// Download Render
         /// </summary>
         /// <remarks>
-        /// 
+        /// Fetch the PDF, by signature or by API key.  Two ways in, and the signature is checked *first* — before the row is looked up — so a forged token cannot be used to tell a real render id from an invented one. It also means the token path costs no auth work at all, which matters because this is the one endpoint a browser hits directly.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="renderId"></param>
+        /// <param name="token">The signature from this render&#39;s &#x60;download_url&#x60;. Present it and no API key is needed — that is what makes the URL a link. Omit it and the request authenticates normally. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of System.IO.Stream</returns>
-        System.Threading.Tasks.Task<System.IO.Stream> DownloadRenderAsync(string renderId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<System.IO.Stream> DownloadRenderAsync(string renderId, string? token = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Download Render
         /// </summary>
         /// <remarks>
-        /// 
+        /// Fetch the PDF, by signature or by API key.  Two ways in, and the signature is checked *first* — before the row is looked up — so a forged token cannot be used to tell a real render id from an invented one. It also means the token path costs no auth work at all, which matters because this is the one endpoint a browser hits directly.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="renderId"></param>
+        /// <param name="token">The signature from this render&#39;s &#x60;download_url&#x60;. Present it and no API key is needed — that is what makes the URL a link. Omit it and the request authenticates normally. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
-        System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> DownloadRenderWithHttpInfoAsync(string renderId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> DownloadRenderWithHttpInfoAsync(string renderId, string? token = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Get Render
         /// </summary>
@@ -246,26 +253,28 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Download Render 
+        /// Download Render Fetch the PDF, by signature or by API key.  Two ways in, and the signature is checked *first* — before the row is looked up — so a forged token cannot be used to tell a real render id from an invented one. It also means the token path costs no auth work at all, which matters because this is the one endpoint a browser hits directly.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="renderId"></param>
+        /// <param name="token">The signature from this render&#39;s &#x60;download_url&#x60;. Present it and no API key is needed — that is what makes the URL a link. Omit it and the request authenticates normally. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>System.IO.Stream</returns>
-        public System.IO.Stream DownloadRender(string renderId, int operationIndex = 0)
+        public System.IO.Stream DownloadRender(string renderId, string? token = default(string?), int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<System.IO.Stream> localVarResponse = DownloadRenderWithHttpInfo(renderId);
+            InvoicePDFs.Client.ApiResponse<System.IO.Stream> localVarResponse = DownloadRenderWithHttpInfo(renderId, token);
             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Download Render 
+        /// Download Render Fetch the PDF, by signature or by API key.  Two ways in, and the signature is checked *first* — before the row is looked up — so a forged token cannot be used to tell a real render id from an invented one. It also means the token path costs no auth work at all, which matters because this is the one endpoint a browser hits directly.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="renderId"></param>
+        /// <param name="token">The signature from this render&#39;s &#x60;download_url&#x60;. Present it and no API key is needed — that is what makes the URL a link. Omit it and the request authenticates normally. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of System.IO.Stream</returns>
-        public InvoicePDFs.Client.ApiResponse<System.IO.Stream> DownloadRenderWithHttpInfo(string renderId, int operationIndex = 0)
+        public InvoicePDFs.Client.ApiResponse<System.IO.Stream> DownloadRenderWithHttpInfo(string renderId, string? token = default(string?), int operationIndex = 0)
         {
             // verify the required parameter 'renderId' is set
             if (renderId == null)
@@ -297,6 +306,10 @@ namespace InvoicePDFs.Api
             }
 
             localVarRequestOptions.PathParameters.Add("render_id", InvoicePDFs.Client.ClientUtils.ParameterToString(renderId)); // path parameter
+            if (token != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(InvoicePDFs.Client.ClientUtils.ParameterToMultiMap("", "token", token));
+            }
 
             localVarRequestOptions.Operation = "RendersApi.DownloadRender";
             localVarRequestOptions.OperationIndex = operationIndex;
@@ -323,28 +336,30 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Download Render 
+        /// Download Render Fetch the PDF, by signature or by API key.  Two ways in, and the signature is checked *first* — before the row is looked up — so a forged token cannot be used to tell a real render id from an invented one. It also means the token path costs no auth work at all, which matters because this is the one endpoint a browser hits directly.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="renderId"></param>
+        /// <param name="token">The signature from this render&#39;s &#x60;download_url&#x60;. Present it and no API key is needed — that is what makes the URL a link. Omit it and the request authenticates normally. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of System.IO.Stream</returns>
-        public async System.Threading.Tasks.Task<System.IO.Stream> DownloadRenderAsync(string renderId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<System.IO.Stream> DownloadRenderAsync(string renderId, string? token = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<System.IO.Stream> localVarResponse = await DownloadRenderWithHttpInfoAsync(renderId, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<System.IO.Stream> localVarResponse = await DownloadRenderWithHttpInfoAsync(renderId, token, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Download Render 
+        /// Download Render Fetch the PDF, by signature or by API key.  Two ways in, and the signature is checked *first* — before the row is looked up — so a forged token cannot be used to tell a real render id from an invented one. It also means the token path costs no auth work at all, which matters because this is the one endpoint a browser hits directly.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="renderId"></param>
+        /// <param name="token">The signature from this render&#39;s &#x60;download_url&#x60;. Present it and no API key is needed — that is what makes the URL a link. Omit it and the request authenticates normally. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<System.IO.Stream>> DownloadRenderWithHttpInfoAsync(string renderId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<System.IO.Stream>> DownloadRenderWithHttpInfoAsync(string renderId, string? token = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'renderId' is set
             if (renderId == null)
@@ -377,6 +392,10 @@ namespace InvoicePDFs.Api
             }
 
             localVarRequestOptions.PathParameters.Add("render_id", InvoicePDFs.Client.ClientUtils.ParameterToString(renderId)); // path parameter
+            if (token != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(InvoicePDFs.Client.ClientUtils.ParameterToMultiMap("", "token", token));
+            }
 
             localVarRequestOptions.Operation = "RendersApi.DownloadRender";
             localVarRequestOptions.OperationIndex = operationIndex;

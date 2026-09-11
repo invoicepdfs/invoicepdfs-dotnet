@@ -120,6 +120,48 @@ namespace InvoicePDFs.Api
         /// <returns>ApiResponse of PageSizesListResponse</returns>
         ApiResponse<PageSizesListResponse> ListPageSizesWithHttpInfo(int operationIndex = 0);
         /// <summary>
+        /// List Tax Categories
+        /// </summary>
+        /// <remarks>
+        /// UNCL5305, in full — the VAT treatment of a line, which its rate does not say.  Two lines at 0% may be zero-rated, exempt, reverse-charge or outside scope, and EN 16931 puts them in separate VAT breakdown groups with different mandatory fields. Exhaustive: a category outside this list is wrong.
+        /// </remarks>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>CodeListResponse</returns>
+        CodeListResponse ListTaxCategories(int operationIndex = 0);
+
+        /// <summary>
+        /// List Tax Categories
+        /// </summary>
+        /// <remarks>
+        /// UNCL5305, in full — the VAT treatment of a line, which its rate does not say.  Two lines at 0% may be zero-rated, exempt, reverse-charge or outside scope, and EN 16931 puts them in separate VAT breakdown groups with different mandatory fields. Exhaustive: a category outside this list is wrong.
+        /// </remarks>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of CodeListResponse</returns>
+        ApiResponse<CodeListResponse> ListTaxCategoriesWithHttpInfo(int operationIndex = 0);
+        /// <summary>
+        /// List Tax Schemes
+        /// </summary>
+        /// <remarks>
+        /// UNCL5153 — which tax regime a document is issued under, one per document.  &#x60;VAT&#x60; is the only member an e-invoice can carry; the others exist so a caller can state that their tax is *not* VAT and be told so, rather than have VAT assumed on their behalf. There is no default: a PDF does not need a scheme, and guessing one puts a claim in a document a tax authority reads that the caller never made.
+        /// </remarks>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>CodeListResponse</returns>
+        CodeListResponse ListTaxSchemes(int operationIndex = 0);
+
+        /// <summary>
+        /// List Tax Schemes
+        /// </summary>
+        /// <remarks>
+        /// UNCL5153 — which tax regime a document is issued under, one per document.  &#x60;VAT&#x60; is the only member an e-invoice can carry; the others exist so a caller can state that their tax is *not* VAT and be told so, rather than have VAT assumed on their behalf. There is no default: a PDF does not need a scheme, and guessing one puts a claim in a document a tax authority reads that the caller never made.
+        /// </remarks>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of CodeListResponse</returns>
+        ApiResponse<CodeListResponse> ListTaxSchemesWithHttpInfo(int operationIndex = 0);
+        /// <summary>
         /// List Timezones
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
@@ -137,6 +179,27 @@ namespace InvoicePDFs.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of TimezonesListResponse</returns>
         ApiResponse<TimezonesListResponse> ListTimezonesWithHttpInfo(int operationIndex = 0);
+        /// <summary>
+        /// List Unit Codes
+        /// </summary>
+        /// <remarks>
+        /// UN/ECE Recommendation 20 — the unit a line item is measured in.  A **shortlist**: twenty-one of hundreds, ordered by how often an invoice needs them. &#x60;exhaustive&#x60; is false, and it means it — &#x60;unit_code&#x60; accepts any value, nothing validates against this list, and an uncommon code is still correct. Offered because the field takes a code rather than the printed label: mapping \&quot;hrs\&quot; to HUR is an inference that is right until it silently is not, and the audience for the result is a tax authority.
+        /// </remarks>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>CodeListResponse</returns>
+        CodeListResponse ListUnitCodes(int operationIndex = 0);
+
+        /// <summary>
+        /// List Unit Codes
+        /// </summary>
+        /// <remarks>
+        /// UN/ECE Recommendation 20 — the unit a line item is measured in.  A **shortlist**: twenty-one of hundreds, ordered by how often an invoice needs them. &#x60;exhaustive&#x60; is false, and it means it — &#x60;unit_code&#x60; accepts any value, nothing validates against this list, and an uncommon code is still correct. Offered because the field takes a code rather than the printed label: mapping \&quot;hrs\&quot; to HUR is an inference that is right until it silently is not, and the audience for the result is a tax authority.
+        /// </remarks>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of CodeListResponse</returns>
+        ApiResponse<CodeListResponse> ListUnitCodesWithHttpInfo(int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -262,6 +325,52 @@ namespace InvoicePDFs.Api
         /// <returns>Task of ApiResponse (PageSizesListResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<PageSizesListResponse>> ListPageSizesWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
+        /// List Tax Categories
+        /// </summary>
+        /// <remarks>
+        /// UNCL5305, in full — the VAT treatment of a line, which its rate does not say.  Two lines at 0% may be zero-rated, exempt, reverse-charge or outside scope, and EN 16931 puts them in separate VAT breakdown groups with different mandatory fields. Exhaustive: a category outside this list is wrong.
+        /// </remarks>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of CodeListResponse</returns>
+        System.Threading.Tasks.Task<CodeListResponse> ListTaxCategoriesAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// List Tax Categories
+        /// </summary>
+        /// <remarks>
+        /// UNCL5305, in full — the VAT treatment of a line, which its rate does not say.  Two lines at 0% may be zero-rated, exempt, reverse-charge or outside scope, and EN 16931 puts them in separate VAT breakdown groups with different mandatory fields. Exhaustive: a category outside this list is wrong.
+        /// </remarks>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (CodeListResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CodeListResponse>> ListTaxCategoriesWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// List Tax Schemes
+        /// </summary>
+        /// <remarks>
+        /// UNCL5153 — which tax regime a document is issued under, one per document.  &#x60;VAT&#x60; is the only member an e-invoice can carry; the others exist so a caller can state that their tax is *not* VAT and be told so, rather than have VAT assumed on their behalf. There is no default: a PDF does not need a scheme, and guessing one puts a claim in a document a tax authority reads that the caller never made.
+        /// </remarks>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of CodeListResponse</returns>
+        System.Threading.Tasks.Task<CodeListResponse> ListTaxSchemesAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// List Tax Schemes
+        /// </summary>
+        /// <remarks>
+        /// UNCL5153 — which tax regime a document is issued under, one per document.  &#x60;VAT&#x60; is the only member an e-invoice can carry; the others exist so a caller can state that their tax is *not* VAT and be told so, rather than have VAT assumed on their behalf. There is no default: a PDF does not need a scheme, and guessing one puts a claim in a document a tax authority reads that the caller never made.
+        /// </remarks>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (CodeListResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CodeListResponse>> ListTaxSchemesWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
         /// List Timezones
         /// </summary>
         /// <remarks>
@@ -284,6 +393,29 @@ namespace InvoicePDFs.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (TimezonesListResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<TimezonesListResponse>> ListTimezonesWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// List Unit Codes
+        /// </summary>
+        /// <remarks>
+        /// UN/ECE Recommendation 20 — the unit a line item is measured in.  A **shortlist**: twenty-one of hundreds, ordered by how often an invoice needs them. &#x60;exhaustive&#x60; is false, and it means it — &#x60;unit_code&#x60; accepts any value, nothing validates against this list, and an uncommon code is still correct. Offered because the field takes a code rather than the printed label: mapping \&quot;hrs\&quot; to HUR is an inference that is right until it silently is not, and the audience for the result is a tax authority.
+        /// </remarks>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of CodeListResponse</returns>
+        System.Threading.Tasks.Task<CodeListResponse> ListUnitCodesAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// List Unit Codes
+        /// </summary>
+        /// <remarks>
+        /// UN/ECE Recommendation 20 — the unit a line item is measured in.  A **shortlist**: twenty-one of hundreds, ordered by how often an invoice needs them. &#x60;exhaustive&#x60; is false, and it means it — &#x60;unit_code&#x60; accepts any value, nothing validates against this list, and an uncommon code is still correct. Offered because the field takes a code rather than the printed label: mapping \&quot;hrs\&quot; to HUR is an inference that is right until it silently is not, and the audience for the result is a tax authority.
+        /// </remarks>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (CodeListResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CodeListResponse>> ListUnitCodesWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -1035,6 +1167,258 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
+        /// List Tax Categories UNCL5305, in full — the VAT treatment of a line, which its rate does not say.  Two lines at 0% may be zero-rated, exempt, reverse-charge or outside scope, and EN 16931 puts them in separate VAT breakdown groups with different mandatory fields. Exhaustive: a category outside this list is wrong.
+        /// </summary>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>CodeListResponse</returns>
+        public CodeListResponse ListTaxCategories(int operationIndex = 0)
+        {
+            InvoicePDFs.Client.ApiResponse<CodeListResponse> localVarResponse = ListTaxCategoriesWithHttpInfo();
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// List Tax Categories UNCL5305, in full — the VAT treatment of a line, which its rate does not say.  Two lines at 0% may be zero-rated, exempt, reverse-charge or outside scope, and EN 16931 puts them in separate VAT breakdown groups with different mandatory fields. Exhaustive: a category outside this list is wrong.
+        /// </summary>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of CodeListResponse</returns>
+        public InvoicePDFs.Client.ApiResponse<CodeListResponse> ListTaxCategoriesWithHttpInfo(int operationIndex = 0)
+        {
+            InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = InvoicePDFs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = InvoicePDFs.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+
+            localVarRequestOptions.Operation = "ReferenceApi.ListTaxCategories";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<CodeListResponse>("/api/v1/reference/tax-categories", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ListTaxCategories", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// List Tax Categories UNCL5305, in full — the VAT treatment of a line, which its rate does not say.  Two lines at 0% may be zero-rated, exempt, reverse-charge or outside scope, and EN 16931 puts them in separate VAT breakdown groups with different mandatory fields. Exhaustive: a category outside this list is wrong.
+        /// </summary>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of CodeListResponse</returns>
+        public async System.Threading.Tasks.Task<CodeListResponse> ListTaxCategoriesAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            InvoicePDFs.Client.ApiResponse<CodeListResponse> localVarResponse = await ListTaxCategoriesWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// List Tax Categories UNCL5305, in full — the VAT treatment of a line, which its rate does not say.  Two lines at 0% may be zero-rated, exempt, reverse-charge or outside scope, and EN 16931 puts them in separate VAT breakdown groups with different mandatory fields. Exhaustive: a category outside this list is wrong.
+        /// </summary>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (CodeListResponse)</returns>
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<CodeListResponse>> ListTaxCategoriesWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+
+            InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = InvoicePDFs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = InvoicePDFs.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+
+            localVarRequestOptions.Operation = "ReferenceApi.ListTaxCategories";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<CodeListResponse>("/api/v1/reference/tax-categories", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ListTaxCategories", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// List Tax Schemes UNCL5153 — which tax regime a document is issued under, one per document.  &#x60;VAT&#x60; is the only member an e-invoice can carry; the others exist so a caller can state that their tax is *not* VAT and be told so, rather than have VAT assumed on their behalf. There is no default: a PDF does not need a scheme, and guessing one puts a claim in a document a tax authority reads that the caller never made.
+        /// </summary>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>CodeListResponse</returns>
+        public CodeListResponse ListTaxSchemes(int operationIndex = 0)
+        {
+            InvoicePDFs.Client.ApiResponse<CodeListResponse> localVarResponse = ListTaxSchemesWithHttpInfo();
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// List Tax Schemes UNCL5153 — which tax regime a document is issued under, one per document.  &#x60;VAT&#x60; is the only member an e-invoice can carry; the others exist so a caller can state that their tax is *not* VAT and be told so, rather than have VAT assumed on their behalf. There is no default: a PDF does not need a scheme, and guessing one puts a claim in a document a tax authority reads that the caller never made.
+        /// </summary>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of CodeListResponse</returns>
+        public InvoicePDFs.Client.ApiResponse<CodeListResponse> ListTaxSchemesWithHttpInfo(int operationIndex = 0)
+        {
+            InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = InvoicePDFs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = InvoicePDFs.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+
+            localVarRequestOptions.Operation = "ReferenceApi.ListTaxSchemes";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<CodeListResponse>("/api/v1/reference/tax-schemes", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ListTaxSchemes", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// List Tax Schemes UNCL5153 — which tax regime a document is issued under, one per document.  &#x60;VAT&#x60; is the only member an e-invoice can carry; the others exist so a caller can state that their tax is *not* VAT and be told so, rather than have VAT assumed on their behalf. There is no default: a PDF does not need a scheme, and guessing one puts a claim in a document a tax authority reads that the caller never made.
+        /// </summary>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of CodeListResponse</returns>
+        public async System.Threading.Tasks.Task<CodeListResponse> ListTaxSchemesAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            InvoicePDFs.Client.ApiResponse<CodeListResponse> localVarResponse = await ListTaxSchemesWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// List Tax Schemes UNCL5153 — which tax regime a document is issued under, one per document.  &#x60;VAT&#x60; is the only member an e-invoice can carry; the others exist so a caller can state that their tax is *not* VAT and be told so, rather than have VAT assumed on their behalf. There is no default: a PDF does not need a scheme, and guessing one puts a claim in a document a tax authority reads that the caller never made.
+        /// </summary>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (CodeListResponse)</returns>
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<CodeListResponse>> ListTaxSchemesWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+
+            InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = InvoicePDFs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = InvoicePDFs.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+
+            localVarRequestOptions.Operation = "ReferenceApi.ListTaxSchemes";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<CodeListResponse>("/api/v1/reference/tax-schemes", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ListTaxSchemes", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
         /// List Timezones 
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
@@ -1151,6 +1535,132 @@ namespace InvoicePDFs.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ListTimezones", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// List Unit Codes UN/ECE Recommendation 20 — the unit a line item is measured in.  A **shortlist**: twenty-one of hundreds, ordered by how often an invoice needs them. &#x60;exhaustive&#x60; is false, and it means it — &#x60;unit_code&#x60; accepts any value, nothing validates against this list, and an uncommon code is still correct. Offered because the field takes a code rather than the printed label: mapping \&quot;hrs\&quot; to HUR is an inference that is right until it silently is not, and the audience for the result is a tax authority.
+        /// </summary>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>CodeListResponse</returns>
+        public CodeListResponse ListUnitCodes(int operationIndex = 0)
+        {
+            InvoicePDFs.Client.ApiResponse<CodeListResponse> localVarResponse = ListUnitCodesWithHttpInfo();
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// List Unit Codes UN/ECE Recommendation 20 — the unit a line item is measured in.  A **shortlist**: twenty-one of hundreds, ordered by how often an invoice needs them. &#x60;exhaustive&#x60; is false, and it means it — &#x60;unit_code&#x60; accepts any value, nothing validates against this list, and an uncommon code is still correct. Offered because the field takes a code rather than the printed label: mapping \&quot;hrs\&quot; to HUR is an inference that is right until it silently is not, and the audience for the result is a tax authority.
+        /// </summary>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of CodeListResponse</returns>
+        public InvoicePDFs.Client.ApiResponse<CodeListResponse> ListUnitCodesWithHttpInfo(int operationIndex = 0)
+        {
+            InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = InvoicePDFs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = InvoicePDFs.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+
+            localVarRequestOptions.Operation = "ReferenceApi.ListUnitCodes";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<CodeListResponse>("/api/v1/reference/unit-codes", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ListUnitCodes", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// List Unit Codes UN/ECE Recommendation 20 — the unit a line item is measured in.  A **shortlist**: twenty-one of hundreds, ordered by how often an invoice needs them. &#x60;exhaustive&#x60; is false, and it means it — &#x60;unit_code&#x60; accepts any value, nothing validates against this list, and an uncommon code is still correct. Offered because the field takes a code rather than the printed label: mapping \&quot;hrs\&quot; to HUR is an inference that is right until it silently is not, and the audience for the result is a tax authority.
+        /// </summary>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of CodeListResponse</returns>
+        public async System.Threading.Tasks.Task<CodeListResponse> ListUnitCodesAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            InvoicePDFs.Client.ApiResponse<CodeListResponse> localVarResponse = await ListUnitCodesWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// List Unit Codes UN/ECE Recommendation 20 — the unit a line item is measured in.  A **shortlist**: twenty-one of hundreds, ordered by how often an invoice needs them. &#x60;exhaustive&#x60; is false, and it means it — &#x60;unit_code&#x60; accepts any value, nothing validates against this list, and an uncommon code is still correct. Offered because the field takes a code rather than the printed label: mapping \&quot;hrs\&quot; to HUR is an inference that is right until it silently is not, and the audience for the result is a tax authority.
+        /// </summary>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (CodeListResponse)</returns>
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<CodeListResponse>> ListUnitCodesWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+
+            InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = InvoicePDFs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = InvoicePDFs.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+
+            localVarRequestOptions.Operation = "ReferenceApi.ListUnitCodes";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<CodeListResponse>("/api/v1/reference/unit-codes", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ListUnitCodes", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

@@ -110,6 +110,28 @@ namespace InvoicePDFs.Test.Api
         }
 
         /// <summary>
+        /// Test ListTaxCategories
+        /// </summary>
+        [Fact]
+        public void ListTaxCategoriesTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.ListTaxCategories();
+            //Assert.IsType<CodeListResponse>(response);
+        }
+
+        /// <summary>
+        /// Test ListTaxSchemes
+        /// </summary>
+        [Fact]
+        public void ListTaxSchemesTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.ListTaxSchemes();
+            //Assert.IsType<CodeListResponse>(response);
+        }
+
+        /// <summary>
         /// Test ListTimezones
         /// </summary>
         [Fact]
@@ -118,6 +140,17 @@ namespace InvoicePDFs.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //var response = instance.ListTimezones();
             //Assert.IsType<TimezonesListResponse>(response);
+        }
+
+        /// <summary>
+        /// Test ListUnitCodes
+        /// </summary>
+        [Fact]
+        public void ListUnitCodesTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.ListUnitCodes();
+            //Assert.IsType<CodeListResponse>(response);
         }
     }
 }

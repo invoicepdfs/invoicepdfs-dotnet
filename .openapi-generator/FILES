@@ -71,6 +71,8 @@ docs/BusinessProfileResponse.md
 docs/BusinessProfilesApi.md
 docs/BusinessProfilesListResponse.md
 docs/CalculationBreakdown.md
+docs/CodeListResponse.md
+docs/CodeOut.md
 docs/ComplianceCheckOut.md
 docs/ComplianceRulesetOut.md
 docs/ComplianceViolationOut.md
@@ -343,6 +345,8 @@ src/InvoicePDFs.Test/Model/BusinessProfilePatchTests.cs
 src/InvoicePDFs.Test/Model/BusinessProfileResponseTests.cs
 src/InvoicePDFs.Test/Model/BusinessProfilesListResponseTests.cs
 src/InvoicePDFs.Test/Model/CalculationBreakdownTests.cs
+src/InvoicePDFs.Test/Model/CodeListResponseTests.cs
+src/InvoicePDFs.Test/Model/CodeOutTests.cs
 src/InvoicePDFs.Test/Model/ComplianceCheckOutTests.cs
 src/InvoicePDFs.Test/Model/ComplianceRulesetOutTests.cs
 src/InvoicePDFs.Test/Model/ComplianceViolationOutTests.cs
@@ -610,6 +614,8 @@ src/InvoicePDFs/Model/BusinessProfilePatch.cs
 src/InvoicePDFs/Model/BusinessProfileResponse.cs
 src/InvoicePDFs/Model/BusinessProfilesListResponse.cs
 src/InvoicePDFs/Model/CalculationBreakdown.cs
+src/InvoicePDFs/Model/CodeListResponse.cs
+src/InvoicePDFs/Model/CodeOut.cs
 src/InvoicePDFs/Model/ComplianceCheckOut.cs
 src/InvoicePDFs/Model/ComplianceRulesetOut.cs
 src/InvoicePDFs/Model/ComplianceViolationOut.cs

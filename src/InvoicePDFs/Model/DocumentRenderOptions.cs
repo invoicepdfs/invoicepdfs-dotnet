@@ -65,7 +65,7 @@ namespace InvoicePDFs.Model
         /// <param name="templateId">templateId (default to &quot;tpl_modern&quot;).</param>
         /// <param name="templateVersion">templateVersion.</param>
         /// <param name="pageSize">pageSize (default to &quot;LETTER&quot;).</param>
-        /// <param name="expiresIn">expiresIn (default to 3600).</param>
+        /// <param name="expiresIn">How long the render stays downloadable, in seconds (1 minute to 7 days). It is also the lifetime of the signature in &#x60;download_url&#x60;, which is why it is bounded: an unbounded value meant an unbounded grant. A value below the floor used to be accepted and produced a render that had already expired. (default to 3600).</param>
         /// <param name="format">&#x60;facturx_pdf&#x60; embeds the EN 16931 CII XML in a PDF/A-3, which is what a French or German counterparty means by Factur-X or ZUGFeRD. (default to FormatEnum.Pdf).</param>
         public DocumentRenderOptions(string templateId = @"tpl_modern", int? templateVersion = default(int?), string pageSize = @"LETTER", int expiresIn = 3600, FormatEnum? format = FormatEnum.Pdf)
         {
@@ -97,8 +97,9 @@ namespace InvoicePDFs.Model
         public string PageSize { get; set; }
 
         /// <summary>
-        /// Gets or Sets ExpiresIn
+        /// How long the render stays downloadable, in seconds (1 minute to 7 days). It is also the lifetime of the signature in &#x60;download_url&#x60;, which is why it is bounded: an unbounded value meant an unbounded grant. A value below the floor used to be accepted and produced a render that had already expired.
         /// </summary>
+        /// <value>How long the render stays downloadable, in seconds (1 minute to 7 days). It is also the lifetime of the signature in &#x60;download_url&#x60;, which is why it is bounded: an unbounded value meant an unbounded grant. A value below the floor used to be accepted and produced a render that had already expired.</value>
         [DataMember(Name = "expires_in", EmitDefaultValue = false)]
         public int ExpiresIn { get; set; }
 
@@ -139,6 +140,18 @@ namespace InvoicePDFs.Model
             if (this.TemplateVersion < (int?)1)
             {
                 yield return new ValidationResult("Invalid value for TemplateVersion, must be a value greater than or equal to 1.", new [] { "TemplateVersion" });
+            }
+
+            // ExpiresIn (int) maximum
+            if (this.ExpiresIn > (int)604800)
+            {
+                yield return new ValidationResult("Invalid value for ExpiresIn, must be a value less than or equal to 604800.", new [] { "ExpiresIn" });
+            }
+
+            // ExpiresIn (int) minimum
+            if (this.ExpiresIn < (int)60)
+            {
+                yield return new ValidationResult("Invalid value for ExpiresIn, must be a value greater than or equal to 60.", new [] { "ExpiresIn" });
             }
 
             yield break;

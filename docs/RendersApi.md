@@ -9,9 +9,11 @@ All URIs are relative to *http://localhost*
 
 <a id="downloadrender"></a>
 # **DownloadRender**
-> System.IO.Stream DownloadRender (string renderId)
+> System.IO.Stream DownloadRender (string renderId, string? token = null)
 
 Download Render
+
+Fetch the PDF, by signature or by API key.  Two ways in, and the signature is checked *first* — before the row is looked up — so a forged token cannot be used to tell a real render id from an invented one. It also means the token path costs no auth work at all, which matters because this is the one endpoint a browser hits directly.
 
 ### Example
 ```csharp
@@ -34,11 +36,12 @@ namespace Example
 
             var apiInstance = new RendersApi(config);
             var renderId = "renderId_example";  // string | 
+            var token = "token_example";  // string? | The signature from this render's `download_url`. Present it and no API key is needed — that is what makes the URL a link. Omit it and the request authenticates normally. (optional) 
 
             try
             {
                 // Download Render
-                System.IO.Stream result = apiInstance.DownloadRender(renderId);
+                System.IO.Stream result = apiInstance.DownloadRender(renderId, token);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -59,7 +62,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Download Render
-    ApiResponse<System.IO.Stream> response = apiInstance.DownloadRenderWithHttpInfo(renderId);
+    ApiResponse<System.IO.Stream> response = apiInstance.DownloadRenderWithHttpInfo(renderId, token);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -77,6 +80,7 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **renderId** | **string** |  |  |
+| **token** | **string?** | The signature from this render&#39;s &#x60;download_url&#x60;. Present it and no API key is needed — that is what makes the URL a link. Omit it and the request authenticates normally. | [optional]  |
 
 ### Return type
 

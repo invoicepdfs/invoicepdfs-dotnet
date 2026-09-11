@@ -86,7 +86,7 @@ namespace InvoicePDFs.Model
         /// </summary>
         /// <param name="format">format (default to FormatEnum.Pdf).</param>
         /// <param name="delivery">delivery (default to DeliveryEnum.Url).</param>
-        /// <param name="expiresIn">expiresIn (default to 3600).</param>
+        /// <param name="expiresIn">How long the render stays downloadable, in seconds (1 minute to 7 days). It is also the lifetime of the signature in &#x60;download_url&#x60;, which is why it is bounded: an unbounded value meant an unbounded grant. A value below the floor used to be accepted and produced a render that had already expired. (default to 3600).</param>
         public DocumentOutputOptions(FormatEnum? format = FormatEnum.Pdf, DeliveryEnum? delivery = DeliveryEnum.Url, int expiresIn = 3600)
         {
             this.Format = format;
@@ -95,8 +95,9 @@ namespace InvoicePDFs.Model
         }
 
         /// <summary>
-        /// Gets or Sets ExpiresIn
+        /// How long the render stays downloadable, in seconds (1 minute to 7 days). It is also the lifetime of the signature in &#x60;download_url&#x60;, which is why it is bounded: an unbounded value meant an unbounded grant. A value below the floor used to be accepted and produced a render that had already expired.
         /// </summary>
+        /// <value>How long the render stays downloadable, in seconds (1 minute to 7 days). It is also the lifetime of the signature in &#x60;download_url&#x60;, which is why it is bounded: an unbounded value meant an unbounded grant. A value below the floor used to be accepted and produced a render that had already expired.</value>
         [DataMember(Name = "expires_in", EmitDefaultValue = false)]
         public int ExpiresIn { get; set; }
 
@@ -131,6 +132,18 @@ namespace InvoicePDFs.Model
         /// <returns>Validation Result</returns>
         IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
+            // ExpiresIn (int) maximum
+            if (this.ExpiresIn > (int)604800)
+            {
+                yield return new ValidationResult("Invalid value for ExpiresIn, must be a value less than or equal to 604800.", new [] { "ExpiresIn" });
+            }
+
+            // ExpiresIn (int) minimum
+            if (this.ExpiresIn < (int)60)
+            {
+                yield return new ValidationResult("Invalid value for ExpiresIn, must be a value greater than or equal to 60.", new [] { "ExpiresIn" });
+            }
+
             yield break;
         }
     }

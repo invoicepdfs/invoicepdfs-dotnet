@@ -62,7 +62,8 @@ namespace InvoicePDFs.Test.Api
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string renderId = null;
-            //var response = instance.DownloadRender(renderId);
+            //string? token = null;
+            //var response = instance.DownloadRender(renderId, token);
             //Assert.IsType<System.IO.Stream>(response);
         }
 
