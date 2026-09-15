@@ -143,5 +143,14 @@ namespace InvoicePDFs.Test.Model
         {
             // TODO unit test for the property 'CreatedAt'
         }
+
+        /// <summary>
+        /// Test the property 'Compliance'
+        /// </summary>
+        [Fact]
+        public void ComplianceTest()
+        {
+            // TODO unit test for the property 'Compliance'
+        }
     }
 }

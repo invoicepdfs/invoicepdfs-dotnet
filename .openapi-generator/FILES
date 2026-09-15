@@ -188,6 +188,7 @@ docs/RecurringInvoiceResponse.md
 docs/RecurringInvoicesApi.md
 docs/RecurringInvoicesListResponse.md
 docs/ReferenceApi.md
+docs/RenderComplianceOut.md
 docs/RenderOut.md
 docs/RenderResponse.md
 docs/RendersApi.md
@@ -449,6 +450,7 @@ src/InvoicePDFs.Test/Model/RecurringInvoiceOutTests.cs
 src/InvoicePDFs.Test/Model/RecurringInvoicePatchRequestTests.cs
 src/InvoicePDFs.Test/Model/RecurringInvoiceResponseTests.cs
 src/InvoicePDFs.Test/Model/RecurringInvoicesListResponseTests.cs
+src/InvoicePDFs.Test/Model/RenderComplianceOutTests.cs
 src/InvoicePDFs.Test/Model/RenderOutTests.cs
 src/InvoicePDFs.Test/Model/RenderResponseTests.cs
 src/InvoicePDFs.Test/Model/SimpleBoolResponseTests.cs
@@ -718,6 +720,7 @@ src/InvoicePDFs/Model/RecurringInvoiceOut.cs
 src/InvoicePDFs/Model/RecurringInvoicePatchRequest.cs
 src/InvoicePDFs/Model/RecurringInvoiceResponse.cs
 src/InvoicePDFs/Model/RecurringInvoicesListResponse.cs
+src/InvoicePDFs/Model/RenderComplianceOut.cs
 src/InvoicePDFs/Model/RenderOut.cs
 src/InvoicePDFs/Model/RenderResponse.cs
 src/InvoicePDFs/Model/SimpleBoolResponse.cs

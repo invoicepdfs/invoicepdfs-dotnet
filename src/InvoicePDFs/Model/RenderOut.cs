@@ -148,7 +148,8 @@ namespace InvoicePDFs.Model
         /// <param name="expiresAt">expiresAt (required).</param>
         /// <param name="calculation">calculation (required).</param>
         /// <param name="createdAt">createdAt (required).</param>
-        public RenderOut(string id = default(string), StatusEnum status = default(StatusEnum), DocumentTypeEnum documentType = default(DocumentTypeEnum), string templateId = default(string), int? templateVersion = default(int?), FormatEnum format = default(FormatEnum), string downloadUrl = default(string), string expiresAt = default(string), CalculationBreakdown calculation = default(CalculationBreakdown), string createdAt = default(string))
+        /// <param name="compliance">compliance.</param>
+        public RenderOut(string id = default(string), StatusEnum status = default(StatusEnum), DocumentTypeEnum documentType = default(DocumentTypeEnum), string templateId = default(string), int? templateVersion = default(int?), FormatEnum format = default(FormatEnum), string downloadUrl = default(string), string expiresAt = default(string), CalculationBreakdown calculation = default(CalculationBreakdown), string createdAt = default(string), RenderComplianceOut compliance = default(RenderComplianceOut))
         {
             // to ensure "id" is required (not null)
             if (id == null)
@@ -190,6 +191,7 @@ namespace InvoicePDFs.Model
             }
             this.CreatedAt = createdAt;
             this.TemplateVersion = templateVersion;
+            this.Compliance = compliance;
         }
 
         /// <summary>
@@ -235,6 +237,12 @@ namespace InvoicePDFs.Model
         public string CreatedAt { get; set; }
 
         /// <summary>
+        /// Gets or Sets Compliance
+        /// </summary>
+        [DataMember(Name = "compliance", EmitDefaultValue = true)]
+        public RenderComplianceOut Compliance { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -252,6 +260,7 @@ namespace InvoicePDFs.Model
             sb.Append("  ExpiresAt: ").Append(ExpiresAt).Append("\n");
             sb.Append("  Calculation: ").Append(Calculation).Append("\n");
             sb.Append("  CreatedAt: ").Append(CreatedAt).Append("\n");
+            sb.Append("  Compliance: ").Append(Compliance).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **ExpiresAt** | **string** |  | 
 **Calculation** | [**CalculationBreakdown**](CalculationBreakdown.md) |  | 
 **CreatedAt** | **string** |  | 
+**Compliance** | [**RenderComplianceOut**](RenderComplianceOut.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
