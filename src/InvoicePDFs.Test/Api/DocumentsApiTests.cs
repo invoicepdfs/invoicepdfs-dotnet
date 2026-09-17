@@ -118,19 +118,6 @@ namespace InvoicePDFs.Test.Api
         }
 
         /// <summary>
-        /// Test DownloadDocumentXml
-        /// </summary>
-        [Fact]
-        public void DownloadDocumentXmlTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string documentId = null;
-            //string profile = null;
-            //var response = instance.DownloadDocumentXml(documentId, profile);
-            //Assert.IsType<string>(response);
-        }
-
-        /// <summary>
         /// Test DuplicateDocument
         /// </summary>
         [Fact]
@@ -245,18 +232,6 @@ namespace InvoicePDFs.Test.Api
         }
 
         /// <summary>
-        /// Test RenderDocumentXml
-        /// </summary>
-        [Fact]
-        public void RenderDocumentXmlTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //DocumentComplianceRequest documentComplianceRequest = null;
-            //var response = instance.RenderDocumentXml(documentComplianceRequest);
-            //Assert.IsType<string>(response);
-        }
-
-        /// <summary>
         /// Test RestoreDocument
         /// </summary>
         [Fact]
@@ -292,18 +267,6 @@ namespace InvoicePDFs.Test.Api
             //DocumentPatchRequest documentPatchRequest = null;
             //var response = instance.UpdateDocument(documentId, documentPatchRequest);
             //Assert.IsType<DocumentResponse>(response);
-        }
-
-        /// <summary>
-        /// Test ValidateCompliance
-        /// </summary>
-        [Fact]
-        public void ValidateComplianceTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //DocumentComplianceRequest documentComplianceRequest = null;
-            //var response = instance.ValidateCompliance(documentComplianceRequest);
-            //Assert.IsType<DocumentComplianceResponse>(response);
         }
 
         /// <summary>
