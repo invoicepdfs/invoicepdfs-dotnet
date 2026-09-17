@@ -79,6 +79,19 @@ namespace InvoicePDFs.Test.Api
         }
 
         /// <summary>
+        /// Test ListJobs
+        /// </summary>
+        [Fact]
+        public void ListJobsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int? limit = null;
+            //string? cursor = null;
+            //var response = instance.ListJobs(limit, cursor);
+            //Assert.IsType<JobsListResponse>(response);
+        }
+
+        /// <summary>
         /// Test RetryJob
         /// </summary>
         [Fact]

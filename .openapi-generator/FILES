@@ -156,6 +156,7 @@ docs/JobOut.md
 docs/JobProgressOut.md
 docs/JobResponse.md
 docs/JobsApi.md
+docs/JobsListResponse.md
 docs/LineItemDiscountInput.md
 docs/LineItemTaxInput.md
 docs/LocaleOut.md
@@ -424,6 +425,7 @@ src/InvoicePDFs.Test/Model/InvoicesListResponseTests.cs
 src/InvoicePDFs.Test/Model/JobOutTests.cs
 src/InvoicePDFs.Test/Model/JobProgressOutTests.cs
 src/InvoicePDFs.Test/Model/JobResponseTests.cs
+src/InvoicePDFs.Test/Model/JobsListResponseTests.cs
 src/InvoicePDFs.Test/Model/LineItemDiscountInputTests.cs
 src/InvoicePDFs.Test/Model/LineItemTaxInputTests.cs
 src/InvoicePDFs.Test/Model/LocaleOutTests.cs
@@ -695,6 +697,7 @@ src/InvoicePDFs/Model/InvoicesListResponse.cs
 src/InvoicePDFs/Model/JobOut.cs
 src/InvoicePDFs/Model/JobProgressOut.cs
 src/InvoicePDFs/Model/JobResponse.cs
+src/InvoicePDFs/Model/JobsListResponse.cs
 src/InvoicePDFs/Model/LineItemDiscountInput.cs
 src/InvoicePDFs/Model/LineItemTaxInput.cs
 src/InvoicePDFs/Model/LocaleOut.cs

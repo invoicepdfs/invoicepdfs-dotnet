@@ -67,6 +67,31 @@ namespace InvoicePDFs.Api
         /// <returns>ApiResponse of JobResponse</returns>
         ApiResponse<JobResponse> GetJobWithHttpInfo(string jobId, int operationIndex = 0);
         /// <summary>
+        /// List Jobs
+        /// </summary>
+        /// <remarks>
+        /// This account&#39;s jobs, newest first.  Without it the other three routes here were unreachable: a job id was never returned by anything, so there was no way to arrive at one.
+        /// </remarks>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="limit"> (optional, default to 50)</param>
+        /// <param name="cursor"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>JobsListResponse</returns>
+        JobsListResponse ListJobs(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0);
+
+        /// <summary>
+        /// List Jobs
+        /// </summary>
+        /// <remarks>
+        /// This account&#39;s jobs, newest first.  Without it the other three routes here were unreachable: a job id was never returned by anything, so there was no way to arrive at one.
+        /// </remarks>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="limit"> (optional, default to 50)</param>
+        /// <param name="cursor"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of JobsListResponse</returns>
+        ApiResponse<JobsListResponse> ListJobsWithHttpInfo(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0);
+        /// <summary>
         /// Retry Job
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
@@ -145,6 +170,33 @@ namespace InvoicePDFs.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (JobResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<JobResponse>> GetJobWithHttpInfoAsync(string jobId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// List Jobs
+        /// </summary>
+        /// <remarks>
+        /// This account&#39;s jobs, newest first.  Without it the other three routes here were unreachable: a job id was never returned by anything, so there was no way to arrive at one.
+        /// </remarks>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="limit"> (optional, default to 50)</param>
+        /// <param name="cursor"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of JobsListResponse</returns>
+        System.Threading.Tasks.Task<JobsListResponse> ListJobsAsync(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// List Jobs
+        /// </summary>
+        /// <remarks>
+        /// This account&#39;s jobs, newest first.  Without it the other three routes here were unreachable: a job id was never returned by anything, so there was no way to arrive at one.
+        /// </remarks>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="limit"> (optional, default to 50)</param>
+        /// <param name="cursor"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (JobsListResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<JobsListResponse>> ListJobsWithHttpInfoAsync(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Retry Job
         /// </summary>
@@ -593,6 +645,168 @@ namespace InvoicePDFs.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("GetJob", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// List Jobs This account&#39;s jobs, newest first.  Without it the other three routes here were unreachable: a job id was never returned by anything, so there was no way to arrive at one.
+        /// </summary>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="limit"> (optional, default to 50)</param>
+        /// <param name="cursor"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>JobsListResponse</returns>
+        public JobsListResponse ListJobs(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0)
+        {
+            InvoicePDFs.Client.ApiResponse<JobsListResponse> localVarResponse = ListJobsWithHttpInfo(limit, cursor);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// List Jobs This account&#39;s jobs, newest first.  Without it the other three routes here were unreachable: a job id was never returned by anything, so there was no way to arrive at one.
+        /// </summary>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="limit"> (optional, default to 50)</param>
+        /// <param name="cursor"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of JobsListResponse</returns>
+        public InvoicePDFs.Client.ApiResponse<JobsListResponse> ListJobsWithHttpInfo(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0)
+        {
+            InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = InvoicePDFs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = InvoicePDFs.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            if (limit != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(InvoicePDFs.Client.ClientUtils.ParameterToMultiMap("", "limit", limit));
+            }
+            if (cursor != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(InvoicePDFs.Client.ClientUtils.ParameterToMultiMap("", "cursor", cursor));
+            }
+
+            localVarRequestOptions.Operation = "JobsApi.ListJobs";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (HTTPBearer) required
+            // bearer authentication required
+            if (!string.IsNullOrEmpty(this.Configuration.AccessToken) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Bearer " + this.Configuration.AccessToken);
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<JobsListResponse>("/api/v1/jobs", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ListJobs", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// List Jobs This account&#39;s jobs, newest first.  Without it the other three routes here were unreachable: a job id was never returned by anything, so there was no way to arrive at one.
+        /// </summary>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="limit"> (optional, default to 50)</param>
+        /// <param name="cursor"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of JobsListResponse</returns>
+        public async System.Threading.Tasks.Task<JobsListResponse> ListJobsAsync(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            InvoicePDFs.Client.ApiResponse<JobsListResponse> localVarResponse = await ListJobsWithHttpInfoAsync(limit, cursor, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// List Jobs This account&#39;s jobs, newest first.  Without it the other three routes here were unreachable: a job id was never returned by anything, so there was no way to arrive at one.
+        /// </summary>
+        /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="limit"> (optional, default to 50)</param>
+        /// <param name="cursor"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (JobsListResponse)</returns>
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<JobsListResponse>> ListJobsWithHttpInfoAsync(int? limit = default(int?), string? cursor = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+
+            InvoicePDFs.Client.RequestOptions localVarRequestOptions = new InvoicePDFs.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = InvoicePDFs.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = InvoicePDFs.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            if (limit != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(InvoicePDFs.Client.ClientUtils.ParameterToMultiMap("", "limit", limit));
+            }
+            if (cursor != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(InvoicePDFs.Client.ClientUtils.ParameterToMultiMap("", "cursor", cursor));
+            }
+
+            localVarRequestOptions.Operation = "JobsApi.ListJobs";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (HTTPBearer) required
+            // bearer authentication required
+            if (!string.IsNullOrEmpty(this.Configuration.AccessToken) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Bearer " + this.Configuration.AccessToken);
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<JobsListResponse>("/api/v1/jobs", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ListJobs", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
