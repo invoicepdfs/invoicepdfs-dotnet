@@ -49,6 +49,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// Retry Delivery
         /// </summary>
+        /// <remarks>
+        /// Queue a fresh delivery copying a failed one.  Returns 202 with the new delivery in &#x60;queued&#x60;. Transient failures are already retried automatically; this is for after those are exhausted.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deliveryId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -59,7 +62,7 @@ namespace InvoicePDFs.Api
         /// Retry Delivery
         /// </summary>
         /// <remarks>
-        /// 
+        /// Queue a fresh delivery copying a failed one.  Returns 202 with the new delivery in &#x60;queued&#x60;. Transient failures are already retried automatically; this is for after those are exhausted.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deliveryId"></param>
@@ -104,7 +107,7 @@ namespace InvoicePDFs.Api
         /// Retry Delivery
         /// </summary>
         /// <remarks>
-        /// 
+        /// Queue a fresh delivery copying a failed one.  Returns 202 with the new delivery in &#x60;queued&#x60;. Transient failures are already retried automatically; this is for after those are exhausted.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deliveryId"></param>
@@ -117,7 +120,7 @@ namespace InvoicePDFs.Api
         /// Retry Delivery
         /// </summary>
         /// <remarks>
-        /// 
+        /// Queue a fresh delivery copying a failed one.  Returns 202 with the new delivery in &#x60;queued&#x60;. Transient failures are already retried automatically; this is for after those are exhausted.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deliveryId"></param>
@@ -402,7 +405,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Retry Delivery 
+        /// Retry Delivery Queue a fresh delivery copying a failed one.  Returns 202 with the new delivery in &#x60;queued&#x60;. Transient failures are already retried automatically; this is for after those are exhausted.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deliveryId"></param>
@@ -415,7 +418,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Retry Delivery 
+        /// Retry Delivery Queue a fresh delivery copying a failed one.  Returns 202 with the new delivery in &#x60;queued&#x60;. Transient failures are already retried automatically; this is for after those are exhausted.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deliveryId"></param>
@@ -478,7 +481,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Retry Delivery 
+        /// Retry Delivery Queue a fresh delivery copying a failed one.  Returns 202 with the new delivery in &#x60;queued&#x60;. Transient failures are already retried automatically; this is for after those are exhausted.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deliveryId"></param>
@@ -492,7 +495,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Retry Delivery 
+        /// Retry Delivery Queue a fresh delivery copying a failed one.  Returns 202 with the new delivery in &#x60;queued&#x60;. Transient failures are already retried automatically; this is for after those are exhausted.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deliveryId"></param>

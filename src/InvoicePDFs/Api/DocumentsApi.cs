@@ -347,6 +347,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// Send Document
         /// </summary>
+        /// <remarks>
+        /// Queue the document to be emailed.  Returns 202 with the delivery in &#x60;queued&#x60;. The mail is sent in the background and retried on transient failure; poll &#x60;GET /deliveries/{id}&#x60; for the outcome.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId"></param>
         /// <param name="deliverySendRequest"></param>
@@ -358,7 +361,7 @@ namespace InvoicePDFs.Api
         /// Send Document
         /// </summary>
         /// <remarks>
-        /// 
+        /// Queue the document to be emailed.  Returns 202 with the delivery in &#x60;queued&#x60;. The mail is sent in the background and retried on transient failure; poll &#x60;GET /deliveries/{id}&#x60; for the outcome.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId"></param>
@@ -834,7 +837,7 @@ namespace InvoicePDFs.Api
         /// Send Document
         /// </summary>
         /// <remarks>
-        /// 
+        /// Queue the document to be emailed.  Returns 202 with the delivery in &#x60;queued&#x60;. The mail is sent in the background and retried on transient failure; poll &#x60;GET /deliveries/{id}&#x60; for the outcome.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId"></param>
@@ -848,7 +851,7 @@ namespace InvoicePDFs.Api
         /// Send Document
         /// </summary>
         /// <remarks>
-        /// 
+        /// Queue the document to be emailed.  Returns 202 with the delivery in &#x60;queued&#x60;. The mail is sent in the background and retried on transient failure; poll &#x60;GET /deliveries/{id}&#x60; for the outcome.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId"></param>
@@ -3513,7 +3516,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Send Document 
+        /// Send Document Queue the document to be emailed.  Returns 202 with the delivery in &#x60;queued&#x60;. The mail is sent in the background and retried on transient failure; poll &#x60;GET /deliveries/{id}&#x60; for the outcome.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId"></param>
@@ -3527,7 +3530,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Send Document 
+        /// Send Document Queue the document to be emailed.  Returns 202 with the delivery in &#x60;queued&#x60;. The mail is sent in the background and retried on transient failure; poll &#x60;GET /deliveries/{id}&#x60; for the outcome.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId"></param>
@@ -3599,7 +3602,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Send Document 
+        /// Send Document Queue the document to be emailed.  Returns 202 with the delivery in &#x60;queued&#x60;. The mail is sent in the background and retried on transient failure; poll &#x60;GET /deliveries/{id}&#x60; for the outcome.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId"></param>
@@ -3614,7 +3617,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Send Document 
+        /// Send Document Queue the document to be emailed.  Returns 202 with the delivery in &#x60;queued&#x60;. The mail is sent in the background and retried on transient failure; poll &#x60;GET /deliveries/{id}&#x60; for the outcome.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId"></param>
