@@ -52,6 +52,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// Get Current User
         /// </summary>
+        /// <remarks>
+        /// The account behind the current credential, and the plan it is on.  Works with either an API key or a Firebase token, so it is the cheapest way to confirm a credential is live and see what it can reach.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AuthMeResponse</returns>
@@ -61,7 +64,7 @@ namespace InvoicePDFs.Api
         /// Get Current User
         /// </summary>
         /// <remarks>
-        /// 
+        /// The account behind the current credential, and the plan it is on.  Works with either an API key or a Firebase token, so it is the cheapest way to confirm a credential is live and see what it can reach.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -241,7 +244,7 @@ namespace InvoicePDFs.Api
         /// Get Current User
         /// </summary>
         /// <remarks>
-        /// 
+        /// The account behind the current credential, and the plan it is on.  Works with either an API key or a Firebase token, so it is the cheapest way to confirm a credential is live and see what it can reach.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -253,7 +256,7 @@ namespace InvoicePDFs.Api
         /// Get Current User
         /// </summary>
         /// <remarks>
-        /// 
+        /// The account behind the current credential, and the plan it is on.  Works with either an API key or a Firebase token, so it is the cheapest way to confirm a credential is live and see what it can reach.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -675,7 +678,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Get Current User 
+        /// Get Current User The account behind the current credential, and the plan it is on.  Works with either an API key or a Firebase token, so it is the cheapest way to confirm a credential is live and see what it can reach.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -687,7 +690,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Get Current User 
+        /// Get Current User The account behind the current credential, and the plan it is on.  Works with either an API key or a Firebase token, so it is the cheapest way to confirm a credential is live and see what it can reach.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -742,7 +745,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Get Current User 
+        /// Get Current User The account behind the current credential, and the plan it is on.  Works with either an API key or a Firebase token, so it is the cheapest way to confirm a credential is live and see what it can reach.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -755,7 +758,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Get Current User 
+        /// Get Current User The account behind the current credential, and the plan it is on.  Works with either an API key or a Firebase token, so it is the cheapest way to confirm a credential is live and see what it can reach.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
