@@ -52,6 +52,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// Create Sequence
         /// </summary>
+        /// <remarks>
+        /// Define how a document type&#39;s numbers are built.  A prefix, an optional date pattern, and a zero-padded counter — &#x60;INV-2026-0001&#x60;. &#x60;reset&#x60; decides whether the counter returns to one each year.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="numberingSequenceCreateRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -62,7 +65,7 @@ namespace InvoicePDFs.Api
         /// Create Sequence
         /// </summary>
         /// <remarks>
-        /// 
+        /// Define how a document type&#39;s numbers are built.  A prefix, an optional date pattern, and a zero-padded counter — &#x60;INV-2026-0001&#x60;. &#x60;reset&#x60; decides whether the counter returns to one each year.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="numberingSequenceCreateRequest"></param>
@@ -72,6 +75,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// Delete Sequence
         /// </summary>
+        /// <remarks>
+        /// Remove a numbering scheme.  Documents of that type then need their number supplied explicitly.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sequenceId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -82,7 +88,7 @@ namespace InvoicePDFs.Api
         /// Delete Sequence
         /// </summary>
         /// <remarks>
-        /// 
+        /// Remove a numbering scheme.  Documents of that type then need their number supplied explicitly.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sequenceId"></param>
@@ -92,6 +98,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// Get Sequence
         /// </summary>
+        /// <remarks>
+        /// One numbering sequence, including the number it will issue next.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sequenceId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -102,7 +111,7 @@ namespace InvoicePDFs.Api
         /// Get Sequence
         /// </summary>
         /// <remarks>
-        /// 
+        /// One numbering sequence, including the number it will issue next.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sequenceId"></param>
@@ -112,6 +121,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// List Sequences
         /// </summary>
+        /// <remarks>
+        /// The numbering schemes that produce document numbers, newest first.  Each names the document type it numbers, so invoices and credit notes can run on separate counters.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit"> (optional, default to 50)</param>
         /// <param name="cursor"> (optional)</param>
@@ -123,7 +135,7 @@ namespace InvoicePDFs.Api
         /// List Sequences
         /// </summary>
         /// <remarks>
-        /// 
+        /// The numbering schemes that produce document numbers, newest first.  Each names the document type it numbers, so invoices and credit notes can run on separate counters.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit"> (optional, default to 50)</param>
@@ -134,6 +146,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// Preview Sequence
         /// </summary>
+        /// <remarks>
+        /// Show the next number **without consuming it**.  Nothing is claimed, so calling this twice returns the same number and the number stays available. Use &#x60;consume_sequence_number&#x60; to take it.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sequenceId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -144,7 +159,7 @@ namespace InvoicePDFs.Api
         /// Preview Sequence
         /// </summary>
         /// <remarks>
-        /// 
+        /// Show the next number **without consuming it**.  Nothing is claimed, so calling this twice returns the same number and the number stays available. Use &#x60;consume_sequence_number&#x60; to take it.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sequenceId"></param>
@@ -154,6 +169,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// Update Sequence
         /// </summary>
+        /// <remarks>
+        /// Change a numbering scheme.  Numbers already issued are not rewritten, so a change takes effect from the next document. Moving the counter backwards can collide with a number already used.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sequenceId"></param>
         /// <param name="numberingSequencePatchRequest"></param>
@@ -165,7 +183,7 @@ namespace InvoicePDFs.Api
         /// Update Sequence
         /// </summary>
         /// <remarks>
-        /// 
+        /// Change a numbering scheme.  Numbers already issued are not rewritten, so a change takes effect from the next document. Moving the counter backwards can collide with a number already used.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sequenceId"></param>
@@ -211,7 +229,7 @@ namespace InvoicePDFs.Api
         /// Create Sequence
         /// </summary>
         /// <remarks>
-        /// 
+        /// Define how a document type&#39;s numbers are built.  A prefix, an optional date pattern, and a zero-padded counter — &#x60;INV-2026-0001&#x60;. &#x60;reset&#x60; decides whether the counter returns to one each year.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="numberingSequenceCreateRequest"></param>
@@ -224,7 +242,7 @@ namespace InvoicePDFs.Api
         /// Create Sequence
         /// </summary>
         /// <remarks>
-        /// 
+        /// Define how a document type&#39;s numbers are built.  A prefix, an optional date pattern, and a zero-padded counter — &#x60;INV-2026-0001&#x60;. &#x60;reset&#x60; decides whether the counter returns to one each year.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="numberingSequenceCreateRequest"></param>
@@ -236,7 +254,7 @@ namespace InvoicePDFs.Api
         /// Delete Sequence
         /// </summary>
         /// <remarks>
-        /// 
+        /// Remove a numbering scheme.  Documents of that type then need their number supplied explicitly.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sequenceId"></param>
@@ -249,7 +267,7 @@ namespace InvoicePDFs.Api
         /// Delete Sequence
         /// </summary>
         /// <remarks>
-        /// 
+        /// Remove a numbering scheme.  Documents of that type then need their number supplied explicitly.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sequenceId"></param>
@@ -261,7 +279,7 @@ namespace InvoicePDFs.Api
         /// Get Sequence
         /// </summary>
         /// <remarks>
-        /// 
+        /// One numbering sequence, including the number it will issue next.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sequenceId"></param>
@@ -274,7 +292,7 @@ namespace InvoicePDFs.Api
         /// Get Sequence
         /// </summary>
         /// <remarks>
-        /// 
+        /// One numbering sequence, including the number it will issue next.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sequenceId"></param>
@@ -286,7 +304,7 @@ namespace InvoicePDFs.Api
         /// List Sequences
         /// </summary>
         /// <remarks>
-        /// 
+        /// The numbering schemes that produce document numbers, newest first.  Each names the document type it numbers, so invoices and credit notes can run on separate counters.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit"> (optional, default to 50)</param>
@@ -300,7 +318,7 @@ namespace InvoicePDFs.Api
         /// List Sequences
         /// </summary>
         /// <remarks>
-        /// 
+        /// The numbering schemes that produce document numbers, newest first.  Each names the document type it numbers, so invoices and credit notes can run on separate counters.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit"> (optional, default to 50)</param>
@@ -313,7 +331,7 @@ namespace InvoicePDFs.Api
         /// Preview Sequence
         /// </summary>
         /// <remarks>
-        /// 
+        /// Show the next number **without consuming it**.  Nothing is claimed, so calling this twice returns the same number and the number stays available. Use &#x60;consume_sequence_number&#x60; to take it.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sequenceId"></param>
@@ -326,7 +344,7 @@ namespace InvoicePDFs.Api
         /// Preview Sequence
         /// </summary>
         /// <remarks>
-        /// 
+        /// Show the next number **without consuming it**.  Nothing is claimed, so calling this twice returns the same number and the number stays available. Use &#x60;consume_sequence_number&#x60; to take it.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sequenceId"></param>
@@ -338,7 +356,7 @@ namespace InvoicePDFs.Api
         /// Update Sequence
         /// </summary>
         /// <remarks>
-        /// 
+        /// Change a numbering scheme.  Numbers already issued are not rewritten, so a change takes effect from the next document. Moving the counter backwards can collide with a number already used.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sequenceId"></param>
@@ -352,7 +370,7 @@ namespace InvoicePDFs.Api
         /// Update Sequence
         /// </summary>
         /// <remarks>
-        /// 
+        /// Change a numbering scheme.  Numbers already issued are not rewritten, so a change takes effect from the next document. Moving the counter backwards can collide with a number already used.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sequenceId"></param>
@@ -638,7 +656,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Create Sequence 
+        /// Create Sequence Define how a document type&#39;s numbers are built.  A prefix, an optional date pattern, and a zero-padded counter — &#x60;INV-2026-0001&#x60;. &#x60;reset&#x60; decides whether the counter returns to one each year.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="numberingSequenceCreateRequest"></param>
@@ -651,7 +669,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Create Sequence 
+        /// Create Sequence Define how a document type&#39;s numbers are built.  A prefix, an optional date pattern, and a zero-padded counter — &#x60;INV-2026-0001&#x60;. &#x60;reset&#x60; decides whether the counter returns to one each year.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="numberingSequenceCreateRequest"></param>
@@ -715,7 +733,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Create Sequence 
+        /// Create Sequence Define how a document type&#39;s numbers are built.  A prefix, an optional date pattern, and a zero-padded counter — &#x60;INV-2026-0001&#x60;. &#x60;reset&#x60; decides whether the counter returns to one each year.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="numberingSequenceCreateRequest"></param>
@@ -729,7 +747,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Create Sequence 
+        /// Create Sequence Define how a document type&#39;s numbers are built.  A prefix, an optional date pattern, and a zero-padded counter — &#x60;INV-2026-0001&#x60;. &#x60;reset&#x60; decides whether the counter returns to one each year.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="numberingSequenceCreateRequest"></param>
@@ -796,7 +814,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Delete Sequence 
+        /// Delete Sequence Remove a numbering scheme.  Documents of that type then need their number supplied explicitly.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sequenceId"></param>
@@ -809,7 +827,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Delete Sequence 
+        /// Delete Sequence Remove a numbering scheme.  Documents of that type then need their number supplied explicitly.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sequenceId"></param>
@@ -872,7 +890,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Delete Sequence 
+        /// Delete Sequence Remove a numbering scheme.  Documents of that type then need their number supplied explicitly.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sequenceId"></param>
@@ -886,7 +904,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Delete Sequence 
+        /// Delete Sequence Remove a numbering scheme.  Documents of that type then need their number supplied explicitly.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sequenceId"></param>
@@ -952,7 +970,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Get Sequence 
+        /// Get Sequence One numbering sequence, including the number it will issue next.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sequenceId"></param>
@@ -965,7 +983,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Get Sequence 
+        /// Get Sequence One numbering sequence, including the number it will issue next.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sequenceId"></param>
@@ -1028,7 +1046,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Get Sequence 
+        /// Get Sequence One numbering sequence, including the number it will issue next.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sequenceId"></param>
@@ -1042,7 +1060,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Get Sequence 
+        /// Get Sequence One numbering sequence, including the number it will issue next.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sequenceId"></param>
@@ -1108,7 +1126,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Sequences 
+        /// List Sequences The numbering schemes that produce document numbers, newest first.  Each names the document type it numbers, so invoices and credit notes can run on separate counters.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit"> (optional, default to 50)</param>
@@ -1122,7 +1140,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Sequences 
+        /// List Sequences The numbering schemes that produce document numbers, newest first.  Each names the document type it numbers, so invoices and credit notes can run on separate counters.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit"> (optional, default to 50)</param>
@@ -1187,7 +1205,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Sequences 
+        /// List Sequences The numbering schemes that produce document numbers, newest first.  Each names the document type it numbers, so invoices and credit notes can run on separate counters.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit"> (optional, default to 50)</param>
@@ -1202,7 +1220,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Sequences 
+        /// List Sequences The numbering schemes that produce document numbers, newest first.  Each names the document type it numbers, so invoices and credit notes can run on separate counters.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit"> (optional, default to 50)</param>
@@ -1270,7 +1288,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Preview Sequence 
+        /// Preview Sequence Show the next number **without consuming it**.  Nothing is claimed, so calling this twice returns the same number and the number stays available. Use &#x60;consume_sequence_number&#x60; to take it.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sequenceId"></param>
@@ -1283,7 +1301,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Preview Sequence 
+        /// Preview Sequence Show the next number **without consuming it**.  Nothing is claimed, so calling this twice returns the same number and the number stays available. Use &#x60;consume_sequence_number&#x60; to take it.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sequenceId"></param>
@@ -1346,7 +1364,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Preview Sequence 
+        /// Preview Sequence Show the next number **without consuming it**.  Nothing is claimed, so calling this twice returns the same number and the number stays available. Use &#x60;consume_sequence_number&#x60; to take it.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sequenceId"></param>
@@ -1360,7 +1378,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Preview Sequence 
+        /// Preview Sequence Show the next number **without consuming it**.  Nothing is claimed, so calling this twice returns the same number and the number stays available. Use &#x60;consume_sequence_number&#x60; to take it.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sequenceId"></param>
@@ -1426,7 +1444,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Update Sequence 
+        /// Update Sequence Change a numbering scheme.  Numbers already issued are not rewritten, so a change takes effect from the next document. Moving the counter backwards can collide with a number already used.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sequenceId"></param>
@@ -1440,7 +1458,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Update Sequence 
+        /// Update Sequence Change a numbering scheme.  Numbers already issued are not rewritten, so a change takes effect from the next document. Moving the counter backwards can collide with a number already used.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sequenceId"></param>
@@ -1512,7 +1530,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Update Sequence 
+        /// Update Sequence Change a numbering scheme.  Numbers already issued are not rewritten, so a change takes effect from the next document. Moving the counter backwards can collide with a number already used.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sequenceId"></param>
@@ -1527,7 +1545,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Update Sequence 
+        /// Update Sequence Change a numbering scheme.  Numbers already issued are not rewritten, so a change takes effect from the next document. Moving the counter backwards can collide with a number already used.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sequenceId"></param>

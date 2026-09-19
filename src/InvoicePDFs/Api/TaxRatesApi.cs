@@ -29,6 +29,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// Create Tax Rate
         /// </summary>
+        /// <remarks>
+        /// Store a reusable tax rate.  &#x60;inclusive&#x60; decides whether the rate is already inside the unit price or added to it — the difference is the total, so it is worth being sure. The tax &#x60;category&#x60; travels with the rate into e-invoicing XML.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="taxRateCreateRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -39,7 +42,7 @@ namespace InvoicePDFs.Api
         /// Create Tax Rate
         /// </summary>
         /// <remarks>
-        /// 
+        /// Store a reusable tax rate.  &#x60;inclusive&#x60; decides whether the rate is already inside the unit price or added to it — the difference is the total, so it is worth being sure. The tax &#x60;category&#x60; travels with the rate into e-invoicing XML.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="taxRateCreateRequest"></param>
@@ -49,6 +52,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// Delete Tax Rate
         /// </summary>
+        /// <remarks>
+        /// Remove a stored tax rate. Documents already issued are unaffected.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="taxRateId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -59,7 +65,7 @@ namespace InvoicePDFs.Api
         /// Delete Tax Rate
         /// </summary>
         /// <remarks>
-        /// 
+        /// Remove a stored tax rate. Documents already issued are unaffected.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="taxRateId"></param>
@@ -69,6 +75,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// Get Tax Rate
         /// </summary>
+        /// <remarks>
+        /// One stored tax rate.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="taxRateId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -79,7 +88,7 @@ namespace InvoicePDFs.Api
         /// Get Tax Rate
         /// </summary>
         /// <remarks>
-        /// 
+        /// One stored tax rate.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="taxRateId"></param>
@@ -89,6 +98,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// List Tax Rates
         /// </summary>
+        /// <remarks>
+        /// Named tax rates you can apply by reference, newest first.  A convenience, not a requirement: a line item can state its rate inline instead. Storing one means a rate change is made in a single place.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit"> (optional, default to 50)</param>
         /// <param name="cursor"> (optional)</param>
@@ -100,7 +112,7 @@ namespace InvoicePDFs.Api
         /// List Tax Rates
         /// </summary>
         /// <remarks>
-        /// 
+        /// Named tax rates you can apply by reference, newest first.  A convenience, not a requirement: a line item can state its rate inline instead. Storing one means a rate change is made in a single place.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit"> (optional, default to 50)</param>
@@ -111,6 +123,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// Update Tax Rate
         /// </summary>
+        /// <remarks>
+        /// Change a stored tax rate.  Documents already issued keep the rate they were calculated with. This affects future documents only.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="taxRateId"></param>
         /// <param name="taxRatePatchRequest"></param>
@@ -122,7 +137,7 @@ namespace InvoicePDFs.Api
         /// Update Tax Rate
         /// </summary>
         /// <remarks>
-        /// 
+        /// Change a stored tax rate.  Documents already issued keep the rate they were calculated with. This affects future documents only.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="taxRateId"></param>
@@ -143,7 +158,7 @@ namespace InvoicePDFs.Api
         /// Create Tax Rate
         /// </summary>
         /// <remarks>
-        /// 
+        /// Store a reusable tax rate.  &#x60;inclusive&#x60; decides whether the rate is already inside the unit price or added to it — the difference is the total, so it is worth being sure. The tax &#x60;category&#x60; travels with the rate into e-invoicing XML.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="taxRateCreateRequest"></param>
@@ -156,7 +171,7 @@ namespace InvoicePDFs.Api
         /// Create Tax Rate
         /// </summary>
         /// <remarks>
-        /// 
+        /// Store a reusable tax rate.  &#x60;inclusive&#x60; decides whether the rate is already inside the unit price or added to it — the difference is the total, so it is worth being sure. The tax &#x60;category&#x60; travels with the rate into e-invoicing XML.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="taxRateCreateRequest"></param>
@@ -168,7 +183,7 @@ namespace InvoicePDFs.Api
         /// Delete Tax Rate
         /// </summary>
         /// <remarks>
-        /// 
+        /// Remove a stored tax rate. Documents already issued are unaffected.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="taxRateId"></param>
@@ -181,7 +196,7 @@ namespace InvoicePDFs.Api
         /// Delete Tax Rate
         /// </summary>
         /// <remarks>
-        /// 
+        /// Remove a stored tax rate. Documents already issued are unaffected.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="taxRateId"></param>
@@ -193,7 +208,7 @@ namespace InvoicePDFs.Api
         /// Get Tax Rate
         /// </summary>
         /// <remarks>
-        /// 
+        /// One stored tax rate.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="taxRateId"></param>
@@ -206,7 +221,7 @@ namespace InvoicePDFs.Api
         /// Get Tax Rate
         /// </summary>
         /// <remarks>
-        /// 
+        /// One stored tax rate.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="taxRateId"></param>
@@ -218,7 +233,7 @@ namespace InvoicePDFs.Api
         /// List Tax Rates
         /// </summary>
         /// <remarks>
-        /// 
+        /// Named tax rates you can apply by reference, newest first.  A convenience, not a requirement: a line item can state its rate inline instead. Storing one means a rate change is made in a single place.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit"> (optional, default to 50)</param>
@@ -232,7 +247,7 @@ namespace InvoicePDFs.Api
         /// List Tax Rates
         /// </summary>
         /// <remarks>
-        /// 
+        /// Named tax rates you can apply by reference, newest first.  A convenience, not a requirement: a line item can state its rate inline instead. Storing one means a rate change is made in a single place.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit"> (optional, default to 50)</param>
@@ -245,7 +260,7 @@ namespace InvoicePDFs.Api
         /// Update Tax Rate
         /// </summary>
         /// <remarks>
-        /// 
+        /// Change a stored tax rate.  Documents already issued keep the rate they were calculated with. This affects future documents only.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="taxRateId"></param>
@@ -259,7 +274,7 @@ namespace InvoicePDFs.Api
         /// Update Tax Rate
         /// </summary>
         /// <remarks>
-        /// 
+        /// Change a stored tax rate.  Documents already issued keep the rate they were calculated with. This affects future documents only.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="taxRateId"></param>
@@ -389,7 +404,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Create Tax Rate 
+        /// Create Tax Rate Store a reusable tax rate.  &#x60;inclusive&#x60; decides whether the rate is already inside the unit price or added to it — the difference is the total, so it is worth being sure. The tax &#x60;category&#x60; travels with the rate into e-invoicing XML.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="taxRateCreateRequest"></param>
@@ -402,7 +417,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Create Tax Rate 
+        /// Create Tax Rate Store a reusable tax rate.  &#x60;inclusive&#x60; decides whether the rate is already inside the unit price or added to it — the difference is the total, so it is worth being sure. The tax &#x60;category&#x60; travels with the rate into e-invoicing XML.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="taxRateCreateRequest"></param>
@@ -466,7 +481,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Create Tax Rate 
+        /// Create Tax Rate Store a reusable tax rate.  &#x60;inclusive&#x60; decides whether the rate is already inside the unit price or added to it — the difference is the total, so it is worth being sure. The tax &#x60;category&#x60; travels with the rate into e-invoicing XML.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="taxRateCreateRequest"></param>
@@ -480,7 +495,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Create Tax Rate 
+        /// Create Tax Rate Store a reusable tax rate.  &#x60;inclusive&#x60; decides whether the rate is already inside the unit price or added to it — the difference is the total, so it is worth being sure. The tax &#x60;category&#x60; travels with the rate into e-invoicing XML.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="taxRateCreateRequest"></param>
@@ -547,7 +562,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Delete Tax Rate 
+        /// Delete Tax Rate Remove a stored tax rate. Documents already issued are unaffected.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="taxRateId"></param>
@@ -560,7 +575,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Delete Tax Rate 
+        /// Delete Tax Rate Remove a stored tax rate. Documents already issued are unaffected.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="taxRateId"></param>
@@ -623,7 +638,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Delete Tax Rate 
+        /// Delete Tax Rate Remove a stored tax rate. Documents already issued are unaffected.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="taxRateId"></param>
@@ -637,7 +652,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Delete Tax Rate 
+        /// Delete Tax Rate Remove a stored tax rate. Documents already issued are unaffected.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="taxRateId"></param>
@@ -703,7 +718,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Get Tax Rate 
+        /// Get Tax Rate One stored tax rate.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="taxRateId"></param>
@@ -716,7 +731,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Get Tax Rate 
+        /// Get Tax Rate One stored tax rate.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="taxRateId"></param>
@@ -779,7 +794,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Get Tax Rate 
+        /// Get Tax Rate One stored tax rate.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="taxRateId"></param>
@@ -793,7 +808,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Get Tax Rate 
+        /// Get Tax Rate One stored tax rate.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="taxRateId"></param>
@@ -859,7 +874,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Tax Rates 
+        /// List Tax Rates Named tax rates you can apply by reference, newest first.  A convenience, not a requirement: a line item can state its rate inline instead. Storing one means a rate change is made in a single place.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit"> (optional, default to 50)</param>
@@ -873,7 +888,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Tax Rates 
+        /// List Tax Rates Named tax rates you can apply by reference, newest first.  A convenience, not a requirement: a line item can state its rate inline instead. Storing one means a rate change is made in a single place.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit"> (optional, default to 50)</param>
@@ -938,7 +953,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Tax Rates 
+        /// List Tax Rates Named tax rates you can apply by reference, newest first.  A convenience, not a requirement: a line item can state its rate inline instead. Storing one means a rate change is made in a single place.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit"> (optional, default to 50)</param>
@@ -953,7 +968,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Tax Rates 
+        /// List Tax Rates Named tax rates you can apply by reference, newest first.  A convenience, not a requirement: a line item can state its rate inline instead. Storing one means a rate change is made in a single place.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit"> (optional, default to 50)</param>
@@ -1021,7 +1036,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Update Tax Rate 
+        /// Update Tax Rate Change a stored tax rate.  Documents already issued keep the rate they were calculated with. This affects future documents only.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="taxRateId"></param>
@@ -1035,7 +1050,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Update Tax Rate 
+        /// Update Tax Rate Change a stored tax rate.  Documents already issued keep the rate they were calculated with. This affects future documents only.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="taxRateId"></param>
@@ -1107,7 +1122,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Update Tax Rate 
+        /// Update Tax Rate Change a stored tax rate.  Documents already issued keep the rate they were calculated with. This affects future documents only.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="taxRateId"></param>
@@ -1122,7 +1137,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Update Tax Rate 
+        /// Update Tax Rate Change a stored tax rate.  Documents already issued keep the rate they were calculated with. This affects future documents only.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="taxRateId"></param>

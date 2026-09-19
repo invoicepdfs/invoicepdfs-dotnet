@@ -29,6 +29,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// Create Business Profile
         /// </summary>
+        /// <remarks>
+        /// Create an identity to issue documents as: the seller side.  &#x60;legal_name&#x60;, &#x60;tax_id&#x60;, address and bank details are what appears as the issuer, and what an e-invoicing ruleset checks. Distinct from a branding profile, which sets colours and a logo and says nothing about who you are.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessProfileCreate"></param>
         /// <param name="idempotencyKey"> (optional)</param>
@@ -40,7 +43,7 @@ namespace InvoicePDFs.Api
         /// Create Business Profile
         /// </summary>
         /// <remarks>
-        /// 
+        /// Create an identity to issue documents as: the seller side.  &#x60;legal_name&#x60;, &#x60;tax_id&#x60;, address and bank details are what appears as the issuer, and what an e-invoicing ruleset checks. Distinct from a branding profile, which sets colours and a logo and says nothing about who you are.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessProfileCreate"></param>
@@ -51,6 +54,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// Delete Business Profile
         /// </summary>
+        /// <remarks>
+        /// Remove a business profile.  &#x60;409&#x60; if any document was issued under it, naming what still points at it.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessProfileId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -61,7 +67,7 @@ namespace InvoicePDFs.Api
         /// Delete Business Profile
         /// </summary>
         /// <remarks>
-        /// 
+        /// Remove a business profile.  &#x60;409&#x60; if any document was issued under it, naming what still points at it.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessProfileId"></param>
@@ -71,6 +77,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// Get Business Profile
         /// </summary>
+        /// <remarks>
+        /// One business profile.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessProfileId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -81,7 +90,7 @@ namespace InvoicePDFs.Api
         /// Get Business Profile
         /// </summary>
         /// <remarks>
-        /// 
+        /// One business profile.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessProfileId"></param>
@@ -91,6 +100,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// List Business Profiles
         /// </summary>
+        /// <remarks>
+        /// The identities you issue documents *as*, newest first.  One per entity you bill from — a business with two trading names or two tax registrations needs two. For how documents *look* rather than who issues them, see the branding profiles.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit"> (optional, default to 50)</param>
         /// <param name="cursor"> (optional)</param>
@@ -102,7 +114,7 @@ namespace InvoicePDFs.Api
         /// List Business Profiles
         /// </summary>
         /// <remarks>
-        /// 
+        /// The identities you issue documents *as*, newest first.  One per entity you bill from — a business with two trading names or two tax registrations needs two. For how documents *look* rather than who issues them, see the branding profiles.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit"> (optional, default to 50)</param>
@@ -113,6 +125,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// Update Business Profile
         /// </summary>
+        /// <remarks>
+        /// Change a business profile.  Only the fields you send are changed. Documents already issued keep the issuer details they carried at the time.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessProfileId"></param>
         /// <param name="businessProfilePatch"></param>
@@ -125,7 +140,7 @@ namespace InvoicePDFs.Api
         /// Update Business Profile
         /// </summary>
         /// <remarks>
-        /// 
+        /// Change a business profile.  Only the fields you send are changed. Documents already issued keep the issuer details they carried at the time.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessProfileId"></param>
@@ -147,7 +162,7 @@ namespace InvoicePDFs.Api
         /// Create Business Profile
         /// </summary>
         /// <remarks>
-        /// 
+        /// Create an identity to issue documents as: the seller side.  &#x60;legal_name&#x60;, &#x60;tax_id&#x60;, address and bank details are what appears as the issuer, and what an e-invoicing ruleset checks. Distinct from a branding profile, which sets colours and a logo and says nothing about who you are.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessProfileCreate"></param>
@@ -161,7 +176,7 @@ namespace InvoicePDFs.Api
         /// Create Business Profile
         /// </summary>
         /// <remarks>
-        /// 
+        /// Create an identity to issue documents as: the seller side.  &#x60;legal_name&#x60;, &#x60;tax_id&#x60;, address and bank details are what appears as the issuer, and what an e-invoicing ruleset checks. Distinct from a branding profile, which sets colours and a logo and says nothing about who you are.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessProfileCreate"></param>
@@ -174,7 +189,7 @@ namespace InvoicePDFs.Api
         /// Delete Business Profile
         /// </summary>
         /// <remarks>
-        /// 
+        /// Remove a business profile.  &#x60;409&#x60; if any document was issued under it, naming what still points at it.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessProfileId"></param>
@@ -187,7 +202,7 @@ namespace InvoicePDFs.Api
         /// Delete Business Profile
         /// </summary>
         /// <remarks>
-        /// 
+        /// Remove a business profile.  &#x60;409&#x60; if any document was issued under it, naming what still points at it.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessProfileId"></param>
@@ -199,7 +214,7 @@ namespace InvoicePDFs.Api
         /// Get Business Profile
         /// </summary>
         /// <remarks>
-        /// 
+        /// One business profile.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessProfileId"></param>
@@ -212,7 +227,7 @@ namespace InvoicePDFs.Api
         /// Get Business Profile
         /// </summary>
         /// <remarks>
-        /// 
+        /// One business profile.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessProfileId"></param>
@@ -224,7 +239,7 @@ namespace InvoicePDFs.Api
         /// List Business Profiles
         /// </summary>
         /// <remarks>
-        /// 
+        /// The identities you issue documents *as*, newest first.  One per entity you bill from — a business with two trading names or two tax registrations needs two. For how documents *look* rather than who issues them, see the branding profiles.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit"> (optional, default to 50)</param>
@@ -238,7 +253,7 @@ namespace InvoicePDFs.Api
         /// List Business Profiles
         /// </summary>
         /// <remarks>
-        /// 
+        /// The identities you issue documents *as*, newest first.  One per entity you bill from — a business with two trading names or two tax registrations needs two. For how documents *look* rather than who issues them, see the branding profiles.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit"> (optional, default to 50)</param>
@@ -251,7 +266,7 @@ namespace InvoicePDFs.Api
         /// Update Business Profile
         /// </summary>
         /// <remarks>
-        /// 
+        /// Change a business profile.  Only the fields you send are changed. Documents already issued keep the issuer details they carried at the time.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessProfileId"></param>
@@ -266,7 +281,7 @@ namespace InvoicePDFs.Api
         /// Update Business Profile
         /// </summary>
         /// <remarks>
-        /// 
+        /// Change a business profile.  Only the fields you send are changed. Documents already issued keep the issuer details they carried at the time.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessProfileId"></param>
@@ -397,7 +412,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Create Business Profile 
+        /// Create Business Profile Create an identity to issue documents as: the seller side.  &#x60;legal_name&#x60;, &#x60;tax_id&#x60;, address and bank details are what appears as the issuer, and what an e-invoicing ruleset checks. Distinct from a branding profile, which sets colours and a logo and says nothing about who you are.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessProfileCreate"></param>
@@ -411,7 +426,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Create Business Profile 
+        /// Create Business Profile Create an identity to issue documents as: the seller side.  &#x60;legal_name&#x60;, &#x60;tax_id&#x60;, address and bank details are what appears as the issuer, and what an e-invoicing ruleset checks. Distinct from a branding profile, which sets colours and a logo and says nothing about who you are.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessProfileCreate"></param>
@@ -480,7 +495,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Create Business Profile 
+        /// Create Business Profile Create an identity to issue documents as: the seller side.  &#x60;legal_name&#x60;, &#x60;tax_id&#x60;, address and bank details are what appears as the issuer, and what an e-invoicing ruleset checks. Distinct from a branding profile, which sets colours and a logo and says nothing about who you are.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessProfileCreate"></param>
@@ -495,7 +510,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Create Business Profile 
+        /// Create Business Profile Create an identity to issue documents as: the seller side.  &#x60;legal_name&#x60;, &#x60;tax_id&#x60;, address and bank details are what appears as the issuer, and what an e-invoicing ruleset checks. Distinct from a branding profile, which sets colours and a logo and says nothing about who you are.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessProfileCreate"></param>
@@ -567,7 +582,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Delete Business Profile 
+        /// Delete Business Profile Remove a business profile.  &#x60;409&#x60; if any document was issued under it, naming what still points at it.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessProfileId"></param>
@@ -580,7 +595,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Delete Business Profile 
+        /// Delete Business Profile Remove a business profile.  &#x60;409&#x60; if any document was issued under it, naming what still points at it.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessProfileId"></param>
@@ -643,7 +658,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Delete Business Profile 
+        /// Delete Business Profile Remove a business profile.  &#x60;409&#x60; if any document was issued under it, naming what still points at it.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessProfileId"></param>
@@ -657,7 +672,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Delete Business Profile 
+        /// Delete Business Profile Remove a business profile.  &#x60;409&#x60; if any document was issued under it, naming what still points at it.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessProfileId"></param>
@@ -723,7 +738,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Get Business Profile 
+        /// Get Business Profile One business profile.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessProfileId"></param>
@@ -736,7 +751,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Get Business Profile 
+        /// Get Business Profile One business profile.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessProfileId"></param>
@@ -799,7 +814,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Get Business Profile 
+        /// Get Business Profile One business profile.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessProfileId"></param>
@@ -813,7 +828,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Get Business Profile 
+        /// Get Business Profile One business profile.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessProfileId"></param>
@@ -879,7 +894,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Business Profiles 
+        /// List Business Profiles The identities you issue documents *as*, newest first.  One per entity you bill from — a business with two trading names or two tax registrations needs two. For how documents *look* rather than who issues them, see the branding profiles.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit"> (optional, default to 50)</param>
@@ -893,7 +908,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Business Profiles 
+        /// List Business Profiles The identities you issue documents *as*, newest first.  One per entity you bill from — a business with two trading names or two tax registrations needs two. For how documents *look* rather than who issues them, see the branding profiles.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit"> (optional, default to 50)</param>
@@ -958,7 +973,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Business Profiles 
+        /// List Business Profiles The identities you issue documents *as*, newest first.  One per entity you bill from — a business with two trading names or two tax registrations needs two. For how documents *look* rather than who issues them, see the branding profiles.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit"> (optional, default to 50)</param>
@@ -973,7 +988,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Business Profiles 
+        /// List Business Profiles The identities you issue documents *as*, newest first.  One per entity you bill from — a business with two trading names or two tax registrations needs two. For how documents *look* rather than who issues them, see the branding profiles.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit"> (optional, default to 50)</param>
@@ -1041,7 +1056,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Update Business Profile 
+        /// Update Business Profile Change a business profile.  Only the fields you send are changed. Documents already issued keep the issuer details they carried at the time.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessProfileId"></param>
@@ -1056,7 +1071,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Update Business Profile 
+        /// Update Business Profile Change a business profile.  Only the fields you send are changed. Documents already issued keep the issuer details they carried at the time.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessProfileId"></param>
@@ -1133,7 +1148,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Update Business Profile 
+        /// Update Business Profile Change a business profile.  Only the fields you send are changed. Documents already issued keep the issuer details they carried at the time.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessProfileId"></param>
@@ -1149,7 +1164,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Update Business Profile 
+        /// Update Business Profile Change a business profile.  Only the fields you send are changed. Documents already issued keep the issuer details they carried at the time.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessProfileId"></param>

@@ -442,6 +442,12 @@ paths:
       x-visibility: public
   /api/v1/business-profiles:
     get:
+      description: |-
+        The identities you issue documents *as*, newest first.
+
+        One per entity you bill from — a business with two trading names or two tax
+        registrations needs two. For how documents *look* rather than who issues
+        them, see the branding profiles.
       operationId: list_business_profiles
       parameters:
       - explode: true
@@ -483,6 +489,12 @@ paths:
       - business-profiles
       x-visibility: public
     post:
+      description: |-
+        Create an identity to issue documents as: the seller side.
+
+        `legal_name`, `tax_id`, address and bank details are what appears as the
+        issuer, and what an e-invoicing ruleset checks. Distinct from a branding
+        profile, which sets colours and a logo and says nothing about who you are.
       operationId: create_business_profile
       parameters:
       - explode: false
@@ -520,6 +532,10 @@ paths:
       x-visibility: public
   /api/v1/business-profiles/{business_profile_id}:
     delete:
+      description: |-
+        Remove a business profile.
+
+        `409` if any document was issued under it, naming what still points at it.
       operationId: delete_business_profile
       parameters:
       - explode: false
@@ -557,6 +573,7 @@ paths:
       - business-profiles
       x-visibility: public
     get:
+      description: One business profile.
       operationId: get_business_profile
       parameters:
       - explode: false
@@ -587,6 +604,11 @@ paths:
       - business-profiles
       x-visibility: public
     patch:
+      description: |-
+        Change a business profile.
+
+        Only the fields you send are changed. Documents already issued keep the
+        issuer details they carried at the time.
       operationId: update_business_profile
       parameters:
       - explode: false
@@ -632,6 +654,11 @@ paths:
       x-visibility: public
   /api/v1/branding-profiles:
     get:
+      description: |-
+        The looks a document can be rendered in, newest first.
+
+        Colours, logo, fonts and footer text — how a document appears. Who it is
+        issued by is a business profile, which is a different thing.
       operationId: list_branding_profiles
       responses:
         "200":
@@ -647,6 +674,12 @@ paths:
       - branding-profiles
       x-visibility: public
     post:
+      description: |-
+        Create a look: colours, logo, fonts and footer.
+
+        Applies on top of whichever template a render names, so one template can
+        serve several brands. Mark one as the default and documents that name no
+        profile will use it.
       operationId: create_branding_profile
       requestBody:
         content:
@@ -675,6 +708,11 @@ paths:
       x-visibility: public
   /api/v1/branding-profiles/{profile_id}:
     delete:
+      description: |-
+        Remove a branding profile.
+
+        Deleting the default is allowed: the oldest remaining profile becomes the
+        default in its place, so documents that name no profile keep rendering.
       operationId: delete_branding_profile
       parameters:
       - explode: false
@@ -705,6 +743,7 @@ paths:
       - branding-profiles
       x-visibility: public
     get:
+      description: One branding profile.
       operationId: get_branding_profile
       parameters:
       - explode: false
@@ -735,6 +774,13 @@ paths:
       - branding-profiles
       x-visibility: public
     patch:
+      description: |-
+        Change a branding profile.
+
+        Only the fields you send are changed. `hide_invoicepdfs_branding` is stored
+        on any plan but only honoured on a plan that includes it — it is applied
+        when a document renders, not validated here, so setting it on a plan without
+        it is accepted and has no effect.
       operationId: update_branding_profile
       parameters:
       - explode: false
@@ -772,6 +818,10 @@ paths:
       x-visibility: public
   /api/v1/branding-profiles/{profile_id}/default:
     post:
+      description: |-
+        Make this the profile used when a document names none.
+
+        Exactly one profile is the default; setting a new one clears the previous.
       operationId: set_default_branding_profile
       parameters:
       - explode: false
@@ -803,6 +853,7 @@ paths:
       x-visibility: public
   /api/v1/branding-profiles/{profile_id}/logo:
     delete:
+      description: "Remove this profile's logo, leaving its colours and text intact."
       operationId: delete_branding_logo
       parameters:
       - explode: false
@@ -833,6 +884,12 @@ paths:
       - branding-profiles
       x-visibility: public
     post:
+      description: |-
+        Attach a logo image to this branding profile.
+
+        Replaces whatever logo the profile carried. The image is embedded when a
+        document renders, so a later change applies to future renders and leaves
+        PDFs already produced as they were.
       operationId: upload_branding_logo
       parameters:
       - explode: false
@@ -870,6 +927,11 @@ paths:
       x-visibility: public
   /api/v1/customers:
     get:
+      description: |-
+        The people and companies you bill, newest first.
+
+        Cursor-paginated. A customer is optional — the stateless render endpoints take
+        a buyer inline — but storing one lets a document reference it by id.
       operationId: list_customers
       parameters:
       - explode: true
@@ -911,6 +973,12 @@ paths:
       - customers
       x-visibility: public
     post:
+      description: |-
+        Store a customer you can bill repeatedly.
+
+        `tax_id` and `electronic_address` are what e-invoicing needs: a buyer VAT
+        number and the Peppol identifier a receiver is addressed by. Neither is
+        required for a plain PDF.
       operationId: create_customer
       parameters:
       - explode: false
@@ -948,6 +1016,11 @@ paths:
       x-visibility: public
   /api/v1/customers/{customer_id}:
     delete:
+      description: |-
+        Remove a customer.
+
+        `409` if any document still references them, naming what does. History is
+        kept rather than rewritten.
       operationId: delete_customer
       parameters:
       - explode: false
@@ -985,6 +1058,7 @@ paths:
       - customers
       x-visibility: public
     get:
+      description: One stored customer.
       operationId: get_customer
       parameters:
       - explode: false
@@ -1015,6 +1089,12 @@ paths:
       - customers
       x-visibility: public
     patch:
+      description: |-
+        Change a stored customer.
+
+        Only the fields you send are changed — omit one to leave it alone, send
+        `null` to clear it. Documents already issued keep the details they were
+        issued with; this does not rewrite them.
       operationId: update_customer
       parameters:
       - explode: false
@@ -3664,6 +3744,11 @@ paths:
       x-visibility: internal
   /api/v1/numbering-sequences:
     get:
+      description: |-
+        The numbering schemes that produce document numbers, newest first.
+
+        Each names the document type it numbers, so invoices and credit notes can
+        run on separate counters.
       operationId: list_sequences
       parameters:
       - explode: true
@@ -3705,6 +3790,11 @@ paths:
       - numbering-sequences
       x-visibility: public
     post:
+      description: |-
+        Define how a document type's numbers are built.
+
+        A prefix, an optional date pattern, and a zero-padded counter — `INV-2026-0001`.
+        `reset` decides whether the counter returns to one each year.
       operationId: create_sequence
       requestBody:
         content:
@@ -3733,6 +3823,10 @@ paths:
       x-visibility: public
   /api/v1/numbering-sequences/{sequence_id}:
     delete:
+      description: |-
+        Remove a numbering scheme.
+
+        Documents of that type then need their number supplied explicitly.
       operationId: delete_sequence
       parameters:
       - explode: false
@@ -3763,6 +3857,7 @@ paths:
       - numbering-sequences
       x-visibility: public
     get:
+      description: "One numbering sequence, including the number it will issue next."
       operationId: get_sequence
       parameters:
       - explode: false
@@ -3793,6 +3888,12 @@ paths:
       - numbering-sequences
       x-visibility: public
     patch:
+      description: |-
+        Change a numbering scheme.
+
+        Numbers already issued are not rewritten, so a change takes effect from the
+        next document. Moving the counter backwards can collide with a number already
+        used.
       operationId: update_sequence
       parameters:
       - explode: false
@@ -3830,6 +3931,11 @@ paths:
       x-visibility: public
   /api/v1/numbering-sequences/{sequence_id}/preview:
     post:
+      description: |-
+        Show the next number **without consuming it**.
+
+        Nothing is claimed, so calling this twice returns the same number and the
+        number stays available. Use `consume_sequence_number` to take it.
       operationId: preview_sequence
       parameters:
       - explode: false
@@ -3893,6 +3999,11 @@ paths:
       x-visibility: public
   /api/v1/tax-rates:
     get:
+      description: |-
+        Named tax rates you can apply by reference, newest first.
+
+        A convenience, not a requirement: a line item can state its rate inline
+        instead. Storing one means a rate change is made in a single place.
       operationId: list_tax_rates
       parameters:
       - explode: true
@@ -3934,6 +4045,12 @@ paths:
       - tax-rates
       x-visibility: public
     post:
+      description: |-
+        Store a reusable tax rate.
+
+        `inclusive` decides whether the rate is already inside the unit price or
+        added to it — the difference is the total, so it is worth being sure. The
+        tax `category` travels with the rate into e-invoicing XML.
       operationId: create_tax_rate
       requestBody:
         content:
@@ -3962,6 +4079,7 @@ paths:
       x-visibility: public
   /api/v1/tax-rates/{tax_rate_id}:
     delete:
+      description: Remove a stored tax rate. Documents already issued are unaffected.
       operationId: delete_tax_rate
       parameters:
       - explode: false
@@ -3992,6 +4110,7 @@ paths:
       - tax-rates
       x-visibility: public
     get:
+      description: One stored tax rate.
       operationId: get_tax_rate
       parameters:
       - explode: false
@@ -4022,6 +4141,11 @@ paths:
       - tax-rates
       x-visibility: public
     patch:
+      description: |-
+        Change a stored tax rate.
+
+        Documents already issued keep the rate they were calculated with. This
+        affects future documents only.
       operationId: update_tax_rate
       parameters:
       - explode: false

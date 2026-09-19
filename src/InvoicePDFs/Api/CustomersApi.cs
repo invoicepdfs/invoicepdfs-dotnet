@@ -29,6 +29,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// Create Customer
         /// </summary>
+        /// <remarks>
+        /// Store a customer you can bill repeatedly.  &#x60;tax_id&#x60; and &#x60;electronic_address&#x60; are what e-invoicing needs: a buyer VAT number and the Peppol identifier a receiver is addressed by. Neither is required for a plain PDF.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="customerCreate"></param>
         /// <param name="idempotencyKey"> (optional)</param>
@@ -40,7 +43,7 @@ namespace InvoicePDFs.Api
         /// Create Customer
         /// </summary>
         /// <remarks>
-        /// 
+        /// Store a customer you can bill repeatedly.  &#x60;tax_id&#x60; and &#x60;electronic_address&#x60; are what e-invoicing needs: a buyer VAT number and the Peppol identifier a receiver is addressed by. Neither is required for a plain PDF.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="customerCreate"></param>
@@ -51,6 +54,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// Delete Customer
         /// </summary>
+        /// <remarks>
+        /// Remove a customer.  &#x60;409&#x60; if any document still references them, naming what does. History is kept rather than rewritten.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="customerId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -61,7 +67,7 @@ namespace InvoicePDFs.Api
         /// Delete Customer
         /// </summary>
         /// <remarks>
-        /// 
+        /// Remove a customer.  &#x60;409&#x60; if any document still references them, naming what does. History is kept rather than rewritten.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="customerId"></param>
@@ -71,6 +77,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// Get Customer
         /// </summary>
+        /// <remarks>
+        /// One stored customer.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="customerId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -81,7 +90,7 @@ namespace InvoicePDFs.Api
         /// Get Customer
         /// </summary>
         /// <remarks>
-        /// 
+        /// One stored customer.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="customerId"></param>
@@ -91,6 +100,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// List Customers
         /// </summary>
+        /// <remarks>
+        /// The people and companies you bill, newest first.  Cursor-paginated. A customer is optional — the stateless render endpoints take a buyer inline — but storing one lets a document reference it by id.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit"> (optional, default to 50)</param>
         /// <param name="cursor"> (optional)</param>
@@ -102,7 +114,7 @@ namespace InvoicePDFs.Api
         /// List Customers
         /// </summary>
         /// <remarks>
-        /// 
+        /// The people and companies you bill, newest first.  Cursor-paginated. A customer is optional — the stateless render endpoints take a buyer inline — but storing one lets a document reference it by id.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit"> (optional, default to 50)</param>
@@ -113,6 +125,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// Update Customer
         /// </summary>
+        /// <remarks>
+        /// Change a stored customer.  Only the fields you send are changed — omit one to leave it alone, send &#x60;null&#x60; to clear it. Documents already issued keep the details they were issued with; this does not rewrite them.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="customerId"></param>
         /// <param name="customerPatch"></param>
@@ -125,7 +140,7 @@ namespace InvoicePDFs.Api
         /// Update Customer
         /// </summary>
         /// <remarks>
-        /// 
+        /// Change a stored customer.  Only the fields you send are changed — omit one to leave it alone, send &#x60;null&#x60; to clear it. Documents already issued keep the details they were issued with; this does not rewrite them.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="customerId"></param>
@@ -147,7 +162,7 @@ namespace InvoicePDFs.Api
         /// Create Customer
         /// </summary>
         /// <remarks>
-        /// 
+        /// Store a customer you can bill repeatedly.  &#x60;tax_id&#x60; and &#x60;electronic_address&#x60; are what e-invoicing needs: a buyer VAT number and the Peppol identifier a receiver is addressed by. Neither is required for a plain PDF.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="customerCreate"></param>
@@ -161,7 +176,7 @@ namespace InvoicePDFs.Api
         /// Create Customer
         /// </summary>
         /// <remarks>
-        /// 
+        /// Store a customer you can bill repeatedly.  &#x60;tax_id&#x60; and &#x60;electronic_address&#x60; are what e-invoicing needs: a buyer VAT number and the Peppol identifier a receiver is addressed by. Neither is required for a plain PDF.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="customerCreate"></param>
@@ -174,7 +189,7 @@ namespace InvoicePDFs.Api
         /// Delete Customer
         /// </summary>
         /// <remarks>
-        /// 
+        /// Remove a customer.  &#x60;409&#x60; if any document still references them, naming what does. History is kept rather than rewritten.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="customerId"></param>
@@ -187,7 +202,7 @@ namespace InvoicePDFs.Api
         /// Delete Customer
         /// </summary>
         /// <remarks>
-        /// 
+        /// Remove a customer.  &#x60;409&#x60; if any document still references them, naming what does. History is kept rather than rewritten.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="customerId"></param>
@@ -199,7 +214,7 @@ namespace InvoicePDFs.Api
         /// Get Customer
         /// </summary>
         /// <remarks>
-        /// 
+        /// One stored customer.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="customerId"></param>
@@ -212,7 +227,7 @@ namespace InvoicePDFs.Api
         /// Get Customer
         /// </summary>
         /// <remarks>
-        /// 
+        /// One stored customer.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="customerId"></param>
@@ -224,7 +239,7 @@ namespace InvoicePDFs.Api
         /// List Customers
         /// </summary>
         /// <remarks>
-        /// 
+        /// The people and companies you bill, newest first.  Cursor-paginated. A customer is optional — the stateless render endpoints take a buyer inline — but storing one lets a document reference it by id.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit"> (optional, default to 50)</param>
@@ -238,7 +253,7 @@ namespace InvoicePDFs.Api
         /// List Customers
         /// </summary>
         /// <remarks>
-        /// 
+        /// The people and companies you bill, newest first.  Cursor-paginated. A customer is optional — the stateless render endpoints take a buyer inline — but storing one lets a document reference it by id.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit"> (optional, default to 50)</param>
@@ -251,7 +266,7 @@ namespace InvoicePDFs.Api
         /// Update Customer
         /// </summary>
         /// <remarks>
-        /// 
+        /// Change a stored customer.  Only the fields you send are changed — omit one to leave it alone, send &#x60;null&#x60; to clear it. Documents already issued keep the details they were issued with; this does not rewrite them.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="customerId"></param>
@@ -266,7 +281,7 @@ namespace InvoicePDFs.Api
         /// Update Customer
         /// </summary>
         /// <remarks>
-        /// 
+        /// Change a stored customer.  Only the fields you send are changed — omit one to leave it alone, send &#x60;null&#x60; to clear it. Documents already issued keep the details they were issued with; this does not rewrite them.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="customerId"></param>
@@ -397,7 +412,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Create Customer 
+        /// Create Customer Store a customer you can bill repeatedly.  &#x60;tax_id&#x60; and &#x60;electronic_address&#x60; are what e-invoicing needs: a buyer VAT number and the Peppol identifier a receiver is addressed by. Neither is required for a plain PDF.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="customerCreate"></param>
@@ -411,7 +426,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Create Customer 
+        /// Create Customer Store a customer you can bill repeatedly.  &#x60;tax_id&#x60; and &#x60;electronic_address&#x60; are what e-invoicing needs: a buyer VAT number and the Peppol identifier a receiver is addressed by. Neither is required for a plain PDF.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="customerCreate"></param>
@@ -480,7 +495,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Create Customer 
+        /// Create Customer Store a customer you can bill repeatedly.  &#x60;tax_id&#x60; and &#x60;electronic_address&#x60; are what e-invoicing needs: a buyer VAT number and the Peppol identifier a receiver is addressed by. Neither is required for a plain PDF.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="customerCreate"></param>
@@ -495,7 +510,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Create Customer 
+        /// Create Customer Store a customer you can bill repeatedly.  &#x60;tax_id&#x60; and &#x60;electronic_address&#x60; are what e-invoicing needs: a buyer VAT number and the Peppol identifier a receiver is addressed by. Neither is required for a plain PDF.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="customerCreate"></param>
@@ -567,7 +582,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Delete Customer 
+        /// Delete Customer Remove a customer.  &#x60;409&#x60; if any document still references them, naming what does. History is kept rather than rewritten.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="customerId"></param>
@@ -580,7 +595,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Delete Customer 
+        /// Delete Customer Remove a customer.  &#x60;409&#x60; if any document still references them, naming what does. History is kept rather than rewritten.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="customerId"></param>
@@ -643,7 +658,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Delete Customer 
+        /// Delete Customer Remove a customer.  &#x60;409&#x60; if any document still references them, naming what does. History is kept rather than rewritten.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="customerId"></param>
@@ -657,7 +672,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Delete Customer 
+        /// Delete Customer Remove a customer.  &#x60;409&#x60; if any document still references them, naming what does. History is kept rather than rewritten.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="customerId"></param>
@@ -723,7 +738,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Get Customer 
+        /// Get Customer One stored customer.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="customerId"></param>
@@ -736,7 +751,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Get Customer 
+        /// Get Customer One stored customer.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="customerId"></param>
@@ -799,7 +814,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Get Customer 
+        /// Get Customer One stored customer.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="customerId"></param>
@@ -813,7 +828,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Get Customer 
+        /// Get Customer One stored customer.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="customerId"></param>
@@ -879,7 +894,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Customers 
+        /// List Customers The people and companies you bill, newest first.  Cursor-paginated. A customer is optional — the stateless render endpoints take a buyer inline — but storing one lets a document reference it by id.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit"> (optional, default to 50)</param>
@@ -893,7 +908,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Customers 
+        /// List Customers The people and companies you bill, newest first.  Cursor-paginated. A customer is optional — the stateless render endpoints take a buyer inline — but storing one lets a document reference it by id.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit"> (optional, default to 50)</param>
@@ -958,7 +973,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Customers 
+        /// List Customers The people and companies you bill, newest first.  Cursor-paginated. A customer is optional — the stateless render endpoints take a buyer inline — but storing one lets a document reference it by id.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit"> (optional, default to 50)</param>
@@ -973,7 +988,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Customers 
+        /// List Customers The people and companies you bill, newest first.  Cursor-paginated. A customer is optional — the stateless render endpoints take a buyer inline — but storing one lets a document reference it by id.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit"> (optional, default to 50)</param>
@@ -1041,7 +1056,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Update Customer 
+        /// Update Customer Change a stored customer.  Only the fields you send are changed — omit one to leave it alone, send &#x60;null&#x60; to clear it. Documents already issued keep the details they were issued with; this does not rewrite them.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="customerId"></param>
@@ -1056,7 +1071,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Update Customer 
+        /// Update Customer Change a stored customer.  Only the fields you send are changed — omit one to leave it alone, send &#x60;null&#x60; to clear it. Documents already issued keep the details they were issued with; this does not rewrite them.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="customerId"></param>
@@ -1133,7 +1148,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Update Customer 
+        /// Update Customer Change a stored customer.  Only the fields you send are changed — omit one to leave it alone, send &#x60;null&#x60; to clear it. Documents already issued keep the details they were issued with; this does not rewrite them.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="customerId"></param>
@@ -1149,7 +1164,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Update Customer 
+        /// Update Customer Change a stored customer.  Only the fields you send are changed — omit one to leave it alone, send &#x60;null&#x60; to clear it. Documents already issued keep the details they were issued with; this does not rewrite them.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="customerId"></param>

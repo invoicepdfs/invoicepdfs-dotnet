@@ -16,6 +16,8 @@ All URIs are relative to *http://localhost*
 
 Create Tax Rate
 
+Store a reusable tax rate.  `inclusive` decides whether the rate is already inside the unit price or added to it — the difference is the total, so it is worth being sure. The tax `category` travels with the rate into e-invoicing XML.
+
 ### Example
 ```csharp
 using System.Collections.Generic;
@@ -108,6 +110,8 @@ catch (ApiException e)
 > SimpleBoolResponse DeleteTaxRate (string taxRateId)
 
 Delete Tax Rate
+
+Remove a stored tax rate. Documents already issued are unaffected.
 
 ### Example
 ```csharp
@@ -202,6 +206,8 @@ catch (ApiException e)
 
 Get Tax Rate
 
+One stored tax rate.
+
 ### Example
 ```csharp
 using System.Collections.Generic;
@@ -294,6 +300,8 @@ catch (ApiException e)
 > TaxRatesListResponse ListTaxRates (int? limit = null, string? cursor = null)
 
 List Tax Rates
+
+Named tax rates you can apply by reference, newest first.  A convenience, not a requirement: a line item can state its rate inline instead. Storing one means a rate change is made in a single place.
 
 ### Example
 ```csharp
@@ -389,6 +397,8 @@ catch (ApiException e)
 > TaxRateResponse UpdateTaxRate (string taxRateId, TaxRatePatchRequest taxRatePatchRequest)
 
 Update Tax Rate
+
+Change a stored tax rate.  Documents already issued keep the rate they were calculated with. This affects future documents only.
 
 ### Example
 ```csharp

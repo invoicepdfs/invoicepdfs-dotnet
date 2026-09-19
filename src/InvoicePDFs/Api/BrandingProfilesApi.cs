@@ -29,6 +29,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// Create Branding Profile
         /// </summary>
+        /// <remarks>
+        /// Create a look: colours, logo, fonts and footer.  Applies on top of whichever template a render names, so one template can serve several brands. Mark one as the default and documents that name no profile will use it.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="brandingProfileCreateRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -39,7 +42,7 @@ namespace InvoicePDFs.Api
         /// Create Branding Profile
         /// </summary>
         /// <remarks>
-        /// 
+        /// Create a look: colours, logo, fonts and footer.  Applies on top of whichever template a render names, so one template can serve several brands. Mark one as the default and documents that name no profile will use it.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="brandingProfileCreateRequest"></param>
@@ -49,6 +52,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// Delete Branding Logo
         /// </summary>
+        /// <remarks>
+        /// Remove this profile&#39;s logo, leaving its colours and text intact.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -59,7 +65,7 @@ namespace InvoicePDFs.Api
         /// Delete Branding Logo
         /// </summary>
         /// <remarks>
-        /// 
+        /// Remove this profile&#39;s logo, leaving its colours and text intact.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId"></param>
@@ -69,6 +75,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// Delete Branding Profile
         /// </summary>
+        /// <remarks>
+        /// Remove a branding profile.  Deleting the default is allowed: the oldest remaining profile becomes the default in its place, so documents that name no profile keep rendering.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -79,7 +88,7 @@ namespace InvoicePDFs.Api
         /// Delete Branding Profile
         /// </summary>
         /// <remarks>
-        /// 
+        /// Remove a branding profile.  Deleting the default is allowed: the oldest remaining profile becomes the default in its place, so documents that name no profile keep rendering.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId"></param>
@@ -89,6 +98,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// Get Branding Profile
         /// </summary>
+        /// <remarks>
+        /// One branding profile.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -99,7 +111,7 @@ namespace InvoicePDFs.Api
         /// Get Branding Profile
         /// </summary>
         /// <remarks>
-        /// 
+        /// One branding profile.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId"></param>
@@ -109,6 +121,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// List Branding Profiles
         /// </summary>
+        /// <remarks>
+        /// The looks a document can be rendered in, newest first.  Colours, logo, fonts and footer text — how a document appears. Who it is issued by is a business profile, which is a different thing.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>BrandingProfilesListResponse</returns>
@@ -118,7 +133,7 @@ namespace InvoicePDFs.Api
         /// List Branding Profiles
         /// </summary>
         /// <remarks>
-        /// 
+        /// The looks a document can be rendered in, newest first.  Colours, logo, fonts and footer text — how a document appears. Who it is issued by is a business profile, which is a different thing.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -127,6 +142,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// Set Default Branding Profile
         /// </summary>
+        /// <remarks>
+        /// Make this the profile used when a document names none.  Exactly one profile is the default; setting a new one clears the previous.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -137,7 +155,7 @@ namespace InvoicePDFs.Api
         /// Set Default Branding Profile
         /// </summary>
         /// <remarks>
-        /// 
+        /// Make this the profile used when a document names none.  Exactly one profile is the default; setting a new one clears the previous.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId"></param>
@@ -147,6 +165,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// Update Branding Profile
         /// </summary>
+        /// <remarks>
+        /// Change a branding profile.  Only the fields you send are changed. &#x60;hide_invoicepdfs_branding&#x60; is stored on any plan but only honoured on a plan that includes it — it is applied when a document renders, not validated here, so setting it on a plan without it is accepted and has no effect.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId"></param>
         /// <param name="brandingProfilePatchRequest"></param>
@@ -158,7 +179,7 @@ namespace InvoicePDFs.Api
         /// Update Branding Profile
         /// </summary>
         /// <remarks>
-        /// 
+        /// Change a branding profile.  Only the fields you send are changed. &#x60;hide_invoicepdfs_branding&#x60; is stored on any plan but only honoured on a plan that includes it — it is applied when a document renders, not validated here, so setting it on a plan without it is accepted and has no effect.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId"></param>
@@ -169,6 +190,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// Upload Branding Logo
         /// </summary>
+        /// <remarks>
+        /// Attach a logo image to this branding profile.  Replaces whatever logo the profile carried. The image is embedded when a document renders, so a later change applies to future renders and leaves PDFs already produced as they were.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId"></param>
         /// <param name="file"></param>
@@ -180,7 +204,7 @@ namespace InvoicePDFs.Api
         /// Upload Branding Logo
         /// </summary>
         /// <remarks>
-        /// 
+        /// Attach a logo image to this branding profile.  Replaces whatever logo the profile carried. The image is embedded when a document renders, so a later change applies to future renders and leaves PDFs already produced as they were.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId"></param>
@@ -201,7 +225,7 @@ namespace InvoicePDFs.Api
         /// Create Branding Profile
         /// </summary>
         /// <remarks>
-        /// 
+        /// Create a look: colours, logo, fonts and footer.  Applies on top of whichever template a render names, so one template can serve several brands. Mark one as the default and documents that name no profile will use it.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="brandingProfileCreateRequest"></param>
@@ -214,7 +238,7 @@ namespace InvoicePDFs.Api
         /// Create Branding Profile
         /// </summary>
         /// <remarks>
-        /// 
+        /// Create a look: colours, logo, fonts and footer.  Applies on top of whichever template a render names, so one template can serve several brands. Mark one as the default and documents that name no profile will use it.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="brandingProfileCreateRequest"></param>
@@ -226,7 +250,7 @@ namespace InvoicePDFs.Api
         /// Delete Branding Logo
         /// </summary>
         /// <remarks>
-        /// 
+        /// Remove this profile&#39;s logo, leaving its colours and text intact.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId"></param>
@@ -239,7 +263,7 @@ namespace InvoicePDFs.Api
         /// Delete Branding Logo
         /// </summary>
         /// <remarks>
-        /// 
+        /// Remove this profile&#39;s logo, leaving its colours and text intact.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId"></param>
@@ -251,7 +275,7 @@ namespace InvoicePDFs.Api
         /// Delete Branding Profile
         /// </summary>
         /// <remarks>
-        /// 
+        /// Remove a branding profile.  Deleting the default is allowed: the oldest remaining profile becomes the default in its place, so documents that name no profile keep rendering.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId"></param>
@@ -264,7 +288,7 @@ namespace InvoicePDFs.Api
         /// Delete Branding Profile
         /// </summary>
         /// <remarks>
-        /// 
+        /// Remove a branding profile.  Deleting the default is allowed: the oldest remaining profile becomes the default in its place, so documents that name no profile keep rendering.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId"></param>
@@ -276,7 +300,7 @@ namespace InvoicePDFs.Api
         /// Get Branding Profile
         /// </summary>
         /// <remarks>
-        /// 
+        /// One branding profile.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId"></param>
@@ -289,7 +313,7 @@ namespace InvoicePDFs.Api
         /// Get Branding Profile
         /// </summary>
         /// <remarks>
-        /// 
+        /// One branding profile.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId"></param>
@@ -301,7 +325,7 @@ namespace InvoicePDFs.Api
         /// List Branding Profiles
         /// </summary>
         /// <remarks>
-        /// 
+        /// The looks a document can be rendered in, newest first.  Colours, logo, fonts and footer text — how a document appears. Who it is issued by is a business profile, which is a different thing.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -313,7 +337,7 @@ namespace InvoicePDFs.Api
         /// List Branding Profiles
         /// </summary>
         /// <remarks>
-        /// 
+        /// The looks a document can be rendered in, newest first.  Colours, logo, fonts and footer text — how a document appears. Who it is issued by is a business profile, which is a different thing.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -324,7 +348,7 @@ namespace InvoicePDFs.Api
         /// Set Default Branding Profile
         /// </summary>
         /// <remarks>
-        /// 
+        /// Make this the profile used when a document names none.  Exactly one profile is the default; setting a new one clears the previous.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId"></param>
@@ -337,7 +361,7 @@ namespace InvoicePDFs.Api
         /// Set Default Branding Profile
         /// </summary>
         /// <remarks>
-        /// 
+        /// Make this the profile used when a document names none.  Exactly one profile is the default; setting a new one clears the previous.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId"></param>
@@ -349,7 +373,7 @@ namespace InvoicePDFs.Api
         /// Update Branding Profile
         /// </summary>
         /// <remarks>
-        /// 
+        /// Change a branding profile.  Only the fields you send are changed. &#x60;hide_invoicepdfs_branding&#x60; is stored on any plan but only honoured on a plan that includes it — it is applied when a document renders, not validated here, so setting it on a plan without it is accepted and has no effect.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId"></param>
@@ -363,7 +387,7 @@ namespace InvoicePDFs.Api
         /// Update Branding Profile
         /// </summary>
         /// <remarks>
-        /// 
+        /// Change a branding profile.  Only the fields you send are changed. &#x60;hide_invoicepdfs_branding&#x60; is stored on any plan but only honoured on a plan that includes it — it is applied when a document renders, not validated here, so setting it on a plan without it is accepted and has no effect.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId"></param>
@@ -376,7 +400,7 @@ namespace InvoicePDFs.Api
         /// Upload Branding Logo
         /// </summary>
         /// <remarks>
-        /// 
+        /// Attach a logo image to this branding profile.  Replaces whatever logo the profile carried. The image is embedded when a document renders, so a later change applies to future renders and leaves PDFs already produced as they were.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId"></param>
@@ -390,7 +414,7 @@ namespace InvoicePDFs.Api
         /// Upload Branding Logo
         /// </summary>
         /// <remarks>
-        /// 
+        /// Attach a logo image to this branding profile.  Replaces whatever logo the profile carried. The image is embedded when a document renders, so a later change applies to future renders and leaves PDFs already produced as they were.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId"></param>
@@ -520,7 +544,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Create Branding Profile 
+        /// Create Branding Profile Create a look: colours, logo, fonts and footer.  Applies on top of whichever template a render names, so one template can serve several brands. Mark one as the default and documents that name no profile will use it.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="brandingProfileCreateRequest"></param>
@@ -533,7 +557,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Create Branding Profile 
+        /// Create Branding Profile Create a look: colours, logo, fonts and footer.  Applies on top of whichever template a render names, so one template can serve several brands. Mark one as the default and documents that name no profile will use it.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="brandingProfileCreateRequest"></param>
@@ -597,7 +621,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Create Branding Profile 
+        /// Create Branding Profile Create a look: colours, logo, fonts and footer.  Applies on top of whichever template a render names, so one template can serve several brands. Mark one as the default and documents that name no profile will use it.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="brandingProfileCreateRequest"></param>
@@ -611,7 +635,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Create Branding Profile 
+        /// Create Branding Profile Create a look: colours, logo, fonts and footer.  Applies on top of whichever template a render names, so one template can serve several brands. Mark one as the default and documents that name no profile will use it.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="brandingProfileCreateRequest"></param>
@@ -678,7 +702,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Delete Branding Logo 
+        /// Delete Branding Logo Remove this profile&#39;s logo, leaving its colours and text intact.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId"></param>
@@ -691,7 +715,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Delete Branding Logo 
+        /// Delete Branding Logo Remove this profile&#39;s logo, leaving its colours and text intact.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId"></param>
@@ -754,7 +778,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Delete Branding Logo 
+        /// Delete Branding Logo Remove this profile&#39;s logo, leaving its colours and text intact.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId"></param>
@@ -768,7 +792,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Delete Branding Logo 
+        /// Delete Branding Logo Remove this profile&#39;s logo, leaving its colours and text intact.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId"></param>
@@ -834,7 +858,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Delete Branding Profile 
+        /// Delete Branding Profile Remove a branding profile.  Deleting the default is allowed: the oldest remaining profile becomes the default in its place, so documents that name no profile keep rendering.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId"></param>
@@ -847,7 +871,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Delete Branding Profile 
+        /// Delete Branding Profile Remove a branding profile.  Deleting the default is allowed: the oldest remaining profile becomes the default in its place, so documents that name no profile keep rendering.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId"></param>
@@ -910,7 +934,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Delete Branding Profile 
+        /// Delete Branding Profile Remove a branding profile.  Deleting the default is allowed: the oldest remaining profile becomes the default in its place, so documents that name no profile keep rendering.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId"></param>
@@ -924,7 +948,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Delete Branding Profile 
+        /// Delete Branding Profile Remove a branding profile.  Deleting the default is allowed: the oldest remaining profile becomes the default in its place, so documents that name no profile keep rendering.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId"></param>
@@ -990,7 +1014,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Get Branding Profile 
+        /// Get Branding Profile One branding profile.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId"></param>
@@ -1003,7 +1027,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Get Branding Profile 
+        /// Get Branding Profile One branding profile.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId"></param>
@@ -1066,7 +1090,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Get Branding Profile 
+        /// Get Branding Profile One branding profile.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId"></param>
@@ -1080,7 +1104,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Get Branding Profile 
+        /// Get Branding Profile One branding profile.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId"></param>
@@ -1146,7 +1170,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Branding Profiles 
+        /// List Branding Profiles The looks a document can be rendered in, newest first.  Colours, logo, fonts and footer text — how a document appears. Who it is issued by is a business profile, which is a different thing.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -1158,7 +1182,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Branding Profiles 
+        /// List Branding Profiles The looks a document can be rendered in, newest first.  Colours, logo, fonts and footer text — how a document appears. Who it is issued by is a business profile, which is a different thing.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -1213,7 +1237,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Branding Profiles 
+        /// List Branding Profiles The looks a document can be rendered in, newest first.  Colours, logo, fonts and footer text — how a document appears. Who it is issued by is a business profile, which is a different thing.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -1226,7 +1250,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Branding Profiles 
+        /// List Branding Profiles The looks a document can be rendered in, newest first.  Colours, logo, fonts and footer text — how a document appears. Who it is issued by is a business profile, which is a different thing.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -1284,7 +1308,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Set Default Branding Profile 
+        /// Set Default Branding Profile Make this the profile used when a document names none.  Exactly one profile is the default; setting a new one clears the previous.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId"></param>
@@ -1297,7 +1321,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Set Default Branding Profile 
+        /// Set Default Branding Profile Make this the profile used when a document names none.  Exactly one profile is the default; setting a new one clears the previous.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId"></param>
@@ -1360,7 +1384,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Set Default Branding Profile 
+        /// Set Default Branding Profile Make this the profile used when a document names none.  Exactly one profile is the default; setting a new one clears the previous.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId"></param>
@@ -1374,7 +1398,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Set Default Branding Profile 
+        /// Set Default Branding Profile Make this the profile used when a document names none.  Exactly one profile is the default; setting a new one clears the previous.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId"></param>
@@ -1440,7 +1464,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Update Branding Profile 
+        /// Update Branding Profile Change a branding profile.  Only the fields you send are changed. &#x60;hide_invoicepdfs_branding&#x60; is stored on any plan but only honoured on a plan that includes it — it is applied when a document renders, not validated here, so setting it on a plan without it is accepted and has no effect.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId"></param>
@@ -1454,7 +1478,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Update Branding Profile 
+        /// Update Branding Profile Change a branding profile.  Only the fields you send are changed. &#x60;hide_invoicepdfs_branding&#x60; is stored on any plan but only honoured on a plan that includes it — it is applied when a document renders, not validated here, so setting it on a plan without it is accepted and has no effect.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId"></param>
@@ -1526,7 +1550,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Update Branding Profile 
+        /// Update Branding Profile Change a branding profile.  Only the fields you send are changed. &#x60;hide_invoicepdfs_branding&#x60; is stored on any plan but only honoured on a plan that includes it — it is applied when a document renders, not validated here, so setting it on a plan without it is accepted and has no effect.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId"></param>
@@ -1541,7 +1565,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Update Branding Profile 
+        /// Update Branding Profile Change a branding profile.  Only the fields you send are changed. &#x60;hide_invoicepdfs_branding&#x60; is stored on any plan but only honoured on a plan that includes it — it is applied when a document renders, not validated here, so setting it on a plan without it is accepted and has no effect.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId"></param>
@@ -1616,7 +1640,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Upload Branding Logo 
+        /// Upload Branding Logo Attach a logo image to this branding profile.  Replaces whatever logo the profile carried. The image is embedded when a document renders, so a later change applies to future renders and leaves PDFs already produced as they were.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId"></param>
@@ -1630,7 +1654,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Upload Branding Logo 
+        /// Upload Branding Logo Attach a logo image to this branding profile.  Replaces whatever logo the profile carried. The image is embedded when a document renders, so a later change applies to future renders and leaves PDFs already produced as they were.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId"></param>
@@ -1702,7 +1726,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Upload Branding Logo 
+        /// Upload Branding Logo Attach a logo image to this branding profile.  Replaces whatever logo the profile carried. The image is embedded when a document renders, so a later change applies to future renders and leaves PDFs already produced as they were.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId"></param>
@@ -1717,7 +1741,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Upload Branding Logo 
+        /// Upload Branding Logo Attach a logo image to this branding profile.  Replaces whatever logo the profile carried. The image is embedded when a document renders, so a later change applies to future renders and leaves PDFs already produced as they were.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId"></param>
