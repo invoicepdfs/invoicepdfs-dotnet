@@ -29,6 +29,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// Cancel Import
         /// </summary>
+        /// <remarks>
+        /// Discard an import without creating anything. Only while it is &#x60;pending&#x60; or &#x60;processing&#x60;.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="importId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -39,7 +42,7 @@ namespace InvoicePDFs.Api
         /// Cancel Import
         /// </summary>
         /// <remarks>
-        /// 
+        /// Discard an import without creating anything. Only while it is &#x60;pending&#x60; or &#x60;processing&#x60;.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="importId"></param>
@@ -49,6 +52,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// Confirm Import
         /// </summary>
+        /// <remarks>
+        /// Commit a reviewed import, creating its documents.  Only from &#x60;pending&#x60; — an import already confirmed or cancelled returns &#x60;409&#x60;.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="importId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -59,7 +65,7 @@ namespace InvoicePDFs.Api
         /// Confirm Import
         /// </summary>
         /// <remarks>
-        /// 
+        /// Commit a reviewed import, creating its documents.  Only from &#x60;pending&#x60; — an import already confirmed or cancelled returns &#x60;409&#x60;.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="importId"></param>
@@ -69,6 +75,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// Create Import
         /// </summary>
+        /// <remarks>
+        /// Upload rows to be turned into documents, for review first.  Nothing is created yet: the rows are parsed and held so you can check them. &#x60;confirm_import&#x60; commits them, &#x60;cancel_import&#x60; discards them.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="importCreateRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -79,7 +88,7 @@ namespace InvoicePDFs.Api
         /// Create Import
         /// </summary>
         /// <remarks>
-        /// 
+        /// Upload rows to be turned into documents, for review first.  Nothing is created yet: the rows are parsed and held so you can check them. &#x60;confirm_import&#x60; commits them, &#x60;cancel_import&#x60; discards them.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="importCreateRequest"></param>
@@ -89,6 +98,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// Get Import
         /// </summary>
+        /// <remarks>
+        /// An import&#39;s status and how many rows it holds.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="importId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -99,7 +111,7 @@ namespace InvoicePDFs.Api
         /// Get Import
         /// </summary>
         /// <remarks>
-        /// 
+        /// An import&#39;s status and how many rows it holds.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="importId"></param>
@@ -119,7 +131,7 @@ namespace InvoicePDFs.Api
         /// Cancel Import
         /// </summary>
         /// <remarks>
-        /// 
+        /// Discard an import without creating anything. Only while it is &#x60;pending&#x60; or &#x60;processing&#x60;.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="importId"></param>
@@ -132,7 +144,7 @@ namespace InvoicePDFs.Api
         /// Cancel Import
         /// </summary>
         /// <remarks>
-        /// 
+        /// Discard an import without creating anything. Only while it is &#x60;pending&#x60; or &#x60;processing&#x60;.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="importId"></param>
@@ -144,7 +156,7 @@ namespace InvoicePDFs.Api
         /// Confirm Import
         /// </summary>
         /// <remarks>
-        /// 
+        /// Commit a reviewed import, creating its documents.  Only from &#x60;pending&#x60; — an import already confirmed or cancelled returns &#x60;409&#x60;.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="importId"></param>
@@ -157,7 +169,7 @@ namespace InvoicePDFs.Api
         /// Confirm Import
         /// </summary>
         /// <remarks>
-        /// 
+        /// Commit a reviewed import, creating its documents.  Only from &#x60;pending&#x60; — an import already confirmed or cancelled returns &#x60;409&#x60;.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="importId"></param>
@@ -169,7 +181,7 @@ namespace InvoicePDFs.Api
         /// Create Import
         /// </summary>
         /// <remarks>
-        /// 
+        /// Upload rows to be turned into documents, for review first.  Nothing is created yet: the rows are parsed and held so you can check them. &#x60;confirm_import&#x60; commits them, &#x60;cancel_import&#x60; discards them.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="importCreateRequest"></param>
@@ -182,7 +194,7 @@ namespace InvoicePDFs.Api
         /// Create Import
         /// </summary>
         /// <remarks>
-        /// 
+        /// Upload rows to be turned into documents, for review first.  Nothing is created yet: the rows are parsed and held so you can check them. &#x60;confirm_import&#x60; commits them, &#x60;cancel_import&#x60; discards them.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="importCreateRequest"></param>
@@ -194,7 +206,7 @@ namespace InvoicePDFs.Api
         /// Get Import
         /// </summary>
         /// <remarks>
-        /// 
+        /// An import&#39;s status and how many rows it holds.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="importId"></param>
@@ -207,7 +219,7 @@ namespace InvoicePDFs.Api
         /// Get Import
         /// </summary>
         /// <remarks>
-        /// 
+        /// An import&#39;s status and how many rows it holds.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="importId"></param>
@@ -336,7 +348,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Cancel Import 
+        /// Cancel Import Discard an import without creating anything. Only while it is &#x60;pending&#x60; or &#x60;processing&#x60;.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="importId"></param>
@@ -349,7 +361,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Cancel Import 
+        /// Cancel Import Discard an import without creating anything. Only while it is &#x60;pending&#x60; or &#x60;processing&#x60;.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="importId"></param>
@@ -412,7 +424,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Cancel Import 
+        /// Cancel Import Discard an import without creating anything. Only while it is &#x60;pending&#x60; or &#x60;processing&#x60;.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="importId"></param>
@@ -426,7 +438,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Cancel Import 
+        /// Cancel Import Discard an import without creating anything. Only while it is &#x60;pending&#x60; or &#x60;processing&#x60;.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="importId"></param>
@@ -492,7 +504,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Confirm Import 
+        /// Confirm Import Commit a reviewed import, creating its documents.  Only from &#x60;pending&#x60; — an import already confirmed or cancelled returns &#x60;409&#x60;.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="importId"></param>
@@ -505,7 +517,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Confirm Import 
+        /// Confirm Import Commit a reviewed import, creating its documents.  Only from &#x60;pending&#x60; — an import already confirmed or cancelled returns &#x60;409&#x60;.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="importId"></param>
@@ -568,7 +580,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Confirm Import 
+        /// Confirm Import Commit a reviewed import, creating its documents.  Only from &#x60;pending&#x60; — an import already confirmed or cancelled returns &#x60;409&#x60;.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="importId"></param>
@@ -582,7 +594,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Confirm Import 
+        /// Confirm Import Commit a reviewed import, creating its documents.  Only from &#x60;pending&#x60; — an import already confirmed or cancelled returns &#x60;409&#x60;.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="importId"></param>
@@ -648,7 +660,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Create Import 
+        /// Create Import Upload rows to be turned into documents, for review first.  Nothing is created yet: the rows are parsed and held so you can check them. &#x60;confirm_import&#x60; commits them, &#x60;cancel_import&#x60; discards them.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="importCreateRequest"></param>
@@ -661,7 +673,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Create Import 
+        /// Create Import Upload rows to be turned into documents, for review first.  Nothing is created yet: the rows are parsed and held so you can check them. &#x60;confirm_import&#x60; commits them, &#x60;cancel_import&#x60; discards them.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="importCreateRequest"></param>
@@ -725,7 +737,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Create Import 
+        /// Create Import Upload rows to be turned into documents, for review first.  Nothing is created yet: the rows are parsed and held so you can check them. &#x60;confirm_import&#x60; commits them, &#x60;cancel_import&#x60; discards them.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="importCreateRequest"></param>
@@ -739,7 +751,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Create Import 
+        /// Create Import Upload rows to be turned into documents, for review first.  Nothing is created yet: the rows are parsed and held so you can check them. &#x60;confirm_import&#x60; commits them, &#x60;cancel_import&#x60; discards them.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="importCreateRequest"></param>
@@ -806,7 +818,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Get Import 
+        /// Get Import An import&#39;s status and how many rows it holds.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="importId"></param>
@@ -819,7 +831,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Get Import 
+        /// Get Import An import&#39;s status and how many rows it holds.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="importId"></param>
@@ -882,7 +894,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Get Import 
+        /// Get Import An import&#39;s status and how many rows it holds.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="importId"></param>
@@ -896,7 +908,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Get Import 
+        /// Get Import An import&#39;s status and how many rows it holds.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="importId"></param>

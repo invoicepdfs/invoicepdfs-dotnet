@@ -29,6 +29,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// Create Document Attachment
         /// </summary>
+        /// <remarks>
+        /// Attach an already-uploaded file to a document.  Takes the &#x60;file_id&#x60; from &#x60;upload_file&#x60; rather than the bytes, so one upload can be attached to several documents.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId"></param>
         /// <param name="invoiceAttachmentCreateRequest"></param>
@@ -40,7 +43,7 @@ namespace InvoicePDFs.Api
         /// Create Document Attachment
         /// </summary>
         /// <remarks>
-        /// 
+        /// Attach an already-uploaded file to a document.  Takes the &#x60;file_id&#x60; from &#x60;upload_file&#x60; rather than the bytes, so one upload can be attached to several documents.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId"></param>
@@ -51,6 +54,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// Delete Document Attachment
         /// </summary>
+        /// <remarks>
+        /// Detach a file from this document. The file itself is kept.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId"></param>
         /// <param name="attachmentId"></param>
@@ -62,7 +68,7 @@ namespace InvoicePDFs.Api
         /// Delete Document Attachment
         /// </summary>
         /// <remarks>
-        /// 
+        /// Detach a file from this document. The file itself is kept.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId"></param>
@@ -73,6 +79,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// List Document Attachments
         /// </summary>
+        /// <remarks>
+        /// Files attached to this document.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -83,7 +92,7 @@ namespace InvoicePDFs.Api
         /// List Document Attachments
         /// </summary>
         /// <remarks>
-        /// 
+        /// Files attached to this document.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId"></param>
@@ -103,7 +112,7 @@ namespace InvoicePDFs.Api
         /// Create Document Attachment
         /// </summary>
         /// <remarks>
-        /// 
+        /// Attach an already-uploaded file to a document.  Takes the &#x60;file_id&#x60; from &#x60;upload_file&#x60; rather than the bytes, so one upload can be attached to several documents.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId"></param>
@@ -117,7 +126,7 @@ namespace InvoicePDFs.Api
         /// Create Document Attachment
         /// </summary>
         /// <remarks>
-        /// 
+        /// Attach an already-uploaded file to a document.  Takes the &#x60;file_id&#x60; from &#x60;upload_file&#x60; rather than the bytes, so one upload can be attached to several documents.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId"></param>
@@ -130,7 +139,7 @@ namespace InvoicePDFs.Api
         /// Delete Document Attachment
         /// </summary>
         /// <remarks>
-        /// 
+        /// Detach a file from this document. The file itself is kept.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId"></param>
@@ -144,7 +153,7 @@ namespace InvoicePDFs.Api
         /// Delete Document Attachment
         /// </summary>
         /// <remarks>
-        /// 
+        /// Detach a file from this document. The file itself is kept.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId"></param>
@@ -157,7 +166,7 @@ namespace InvoicePDFs.Api
         /// List Document Attachments
         /// </summary>
         /// <remarks>
-        /// 
+        /// Files attached to this document.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId"></param>
@@ -170,7 +179,7 @@ namespace InvoicePDFs.Api
         /// List Document Attachments
         /// </summary>
         /// <remarks>
-        /// 
+        /// Files attached to this document.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId"></param>
@@ -299,7 +308,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Create Document Attachment 
+        /// Create Document Attachment Attach an already-uploaded file to a document.  Takes the &#x60;file_id&#x60; from &#x60;upload_file&#x60; rather than the bytes, so one upload can be attached to several documents.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId"></param>
@@ -313,7 +322,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Create Document Attachment 
+        /// Create Document Attachment Attach an already-uploaded file to a document.  Takes the &#x60;file_id&#x60; from &#x60;upload_file&#x60; rather than the bytes, so one upload can be attached to several documents.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId"></param>
@@ -385,7 +394,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Create Document Attachment 
+        /// Create Document Attachment Attach an already-uploaded file to a document.  Takes the &#x60;file_id&#x60; from &#x60;upload_file&#x60; rather than the bytes, so one upload can be attached to several documents.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId"></param>
@@ -400,7 +409,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Create Document Attachment 
+        /// Create Document Attachment Attach an already-uploaded file to a document.  Takes the &#x60;file_id&#x60; from &#x60;upload_file&#x60; rather than the bytes, so one upload can be attached to several documents.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId"></param>
@@ -475,7 +484,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Delete Document Attachment 
+        /// Delete Document Attachment Detach a file from this document. The file itself is kept.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId"></param>
@@ -489,7 +498,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Delete Document Attachment 
+        /// Delete Document Attachment Detach a file from this document. The file itself is kept.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId"></param>
@@ -560,7 +569,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Delete Document Attachment 
+        /// Delete Document Attachment Detach a file from this document. The file itself is kept.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId"></param>
@@ -575,7 +584,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Delete Document Attachment 
+        /// Delete Document Attachment Detach a file from this document. The file itself is kept.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId"></param>
@@ -649,7 +658,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Document Attachments 
+        /// List Document Attachments Files attached to this document.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId"></param>
@@ -662,7 +671,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Document Attachments 
+        /// List Document Attachments Files attached to this document.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId"></param>
@@ -725,7 +734,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Document Attachments 
+        /// List Document Attachments Files attached to this document.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId"></param>
@@ -739,7 +748,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Document Attachments 
+        /// List Document Attachments Files attached to this document.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId"></param>

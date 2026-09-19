@@ -29,6 +29,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// Create Template Version
         /// </summary>
+        /// <remarks>
+        /// Snapshot a template&#39;s current configuration as a new version.  A document can pin a version, so a render months later reproduces the design that was live when it was issued rather than today&#39;s.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId"></param>
         /// <param name="templateVersionCreateRequest"></param>
@@ -40,7 +43,7 @@ namespace InvoicePDFs.Api
         /// Create Template Version
         /// </summary>
         /// <remarks>
-        /// 
+        /// Snapshot a template&#39;s current configuration as a new version.  A document can pin a version, so a render months later reproduces the design that was live when it was issued rather than today&#39;s.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId"></param>
@@ -51,6 +54,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// Get Template Version
         /// </summary>
+        /// <remarks>
+        /// One version&#39;s stored configuration.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId"></param>
         /// <param name="version"></param>
@@ -62,7 +68,7 @@ namespace InvoicePDFs.Api
         /// Get Template Version
         /// </summary>
         /// <remarks>
-        /// 
+        /// One version&#39;s stored configuration.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId"></param>
@@ -73,6 +79,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// List Template Versions
         /// </summary>
+        /// <remarks>
+        /// Every published version of a custom template, newest first.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -83,7 +92,7 @@ namespace InvoicePDFs.Api
         /// List Template Versions
         /// </summary>
         /// <remarks>
-        /// 
+        /// Every published version of a custom template, newest first.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId"></param>
@@ -128,7 +137,7 @@ namespace InvoicePDFs.Api
         /// Create Template Version
         /// </summary>
         /// <remarks>
-        /// 
+        /// Snapshot a template&#39;s current configuration as a new version.  A document can pin a version, so a render months later reproduces the design that was live when it was issued rather than today&#39;s.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId"></param>
@@ -142,7 +151,7 @@ namespace InvoicePDFs.Api
         /// Create Template Version
         /// </summary>
         /// <remarks>
-        /// 
+        /// Snapshot a template&#39;s current configuration as a new version.  A document can pin a version, so a render months later reproduces the design that was live when it was issued rather than today&#39;s.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId"></param>
@@ -155,7 +164,7 @@ namespace InvoicePDFs.Api
         /// Get Template Version
         /// </summary>
         /// <remarks>
-        /// 
+        /// One version&#39;s stored configuration.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId"></param>
@@ -169,7 +178,7 @@ namespace InvoicePDFs.Api
         /// Get Template Version
         /// </summary>
         /// <remarks>
-        /// 
+        /// One version&#39;s stored configuration.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId"></param>
@@ -182,7 +191,7 @@ namespace InvoicePDFs.Api
         /// List Template Versions
         /// </summary>
         /// <remarks>
-        /// 
+        /// Every published version of a custom template, newest first.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId"></param>
@@ -195,7 +204,7 @@ namespace InvoicePDFs.Api
         /// List Template Versions
         /// </summary>
         /// <remarks>
-        /// 
+        /// Every published version of a custom template, newest first.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId"></param>
@@ -351,7 +360,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Create Template Version 
+        /// Create Template Version Snapshot a template&#39;s current configuration as a new version.  A document can pin a version, so a render months later reproduces the design that was live when it was issued rather than today&#39;s.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId"></param>
@@ -365,7 +374,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Create Template Version 
+        /// Create Template Version Snapshot a template&#39;s current configuration as a new version.  A document can pin a version, so a render months later reproduces the design that was live when it was issued rather than today&#39;s.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId"></param>
@@ -437,7 +446,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Create Template Version 
+        /// Create Template Version Snapshot a template&#39;s current configuration as a new version.  A document can pin a version, so a render months later reproduces the design that was live when it was issued rather than today&#39;s.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId"></param>
@@ -452,7 +461,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Create Template Version 
+        /// Create Template Version Snapshot a template&#39;s current configuration as a new version.  A document can pin a version, so a render months later reproduces the design that was live when it was issued rather than today&#39;s.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId"></param>
@@ -527,7 +536,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Get Template Version 
+        /// Get Template Version One version&#39;s stored configuration.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId"></param>
@@ -541,7 +550,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Get Template Version 
+        /// Get Template Version One version&#39;s stored configuration.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId"></param>
@@ -606,7 +615,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Get Template Version 
+        /// Get Template Version One version&#39;s stored configuration.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId"></param>
@@ -621,7 +630,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Get Template Version 
+        /// Get Template Version One version&#39;s stored configuration.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId"></param>
@@ -689,7 +698,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Template Versions 
+        /// List Template Versions Every published version of a custom template, newest first.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId"></param>
@@ -702,7 +711,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Template Versions 
+        /// List Template Versions Every published version of a custom template, newest first.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId"></param>
@@ -765,7 +774,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Template Versions 
+        /// List Template Versions Every published version of a custom template, newest first.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId"></param>
@@ -779,7 +788,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Template Versions 
+        /// List Template Versions Every published version of a custom template, newest first.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId"></param>

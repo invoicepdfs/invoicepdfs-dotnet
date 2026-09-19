@@ -29,6 +29,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// Delete File
         /// </summary>
+        /// <remarks>
+        /// Remove a stored file.  &#x60;409&#x60; if a branding profile or a document attachment still references it.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="fileId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -39,7 +42,7 @@ namespace InvoicePDFs.Api
         /// Delete File
         /// </summary>
         /// <remarks>
-        /// 
+        /// Remove a stored file.  &#x60;409&#x60; if a branding profile or a document attachment still references it.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="fileId"></param>
@@ -49,6 +52,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// Get File
         /// </summary>
+        /// <remarks>
+        /// A stored file&#39;s metadata — name, type and size.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="fileId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -59,7 +65,7 @@ namespace InvoicePDFs.Api
         /// Get File
         /// </summary>
         /// <remarks>
-        /// 
+        /// A stored file&#39;s metadata — name, type and size.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="fileId"></param>
@@ -69,6 +75,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// Upload File
         /// </summary>
+        /// <remarks>
+        /// Store a file and get an id for it.  Where logos and document attachments come from: upload once, then reference the returned &#x60;file_id&#x60; from a branding profile or an attachment.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="file"></param>
         /// <param name="idempotencyKey"> (optional)</param>
@@ -80,7 +89,7 @@ namespace InvoicePDFs.Api
         /// Upload File
         /// </summary>
         /// <remarks>
-        /// 
+        /// Store a file and get an id for it.  Where logos and document attachments come from: upload once, then reference the returned &#x60;file_id&#x60; from a branding profile or an attachment.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="file"></param>
@@ -101,7 +110,7 @@ namespace InvoicePDFs.Api
         /// Delete File
         /// </summary>
         /// <remarks>
-        /// 
+        /// Remove a stored file.  &#x60;409&#x60; if a branding profile or a document attachment still references it.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="fileId"></param>
@@ -114,7 +123,7 @@ namespace InvoicePDFs.Api
         /// Delete File
         /// </summary>
         /// <remarks>
-        /// 
+        /// Remove a stored file.  &#x60;409&#x60; if a branding profile or a document attachment still references it.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="fileId"></param>
@@ -126,7 +135,7 @@ namespace InvoicePDFs.Api
         /// Get File
         /// </summary>
         /// <remarks>
-        /// 
+        /// A stored file&#39;s metadata — name, type and size.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="fileId"></param>
@@ -139,7 +148,7 @@ namespace InvoicePDFs.Api
         /// Get File
         /// </summary>
         /// <remarks>
-        /// 
+        /// A stored file&#39;s metadata — name, type and size.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="fileId"></param>
@@ -151,7 +160,7 @@ namespace InvoicePDFs.Api
         /// Upload File
         /// </summary>
         /// <remarks>
-        /// 
+        /// Store a file and get an id for it.  Where logos and document attachments come from: upload once, then reference the returned &#x60;file_id&#x60; from a branding profile or an attachment.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="file"></param>
@@ -165,7 +174,7 @@ namespace InvoicePDFs.Api
         /// Upload File
         /// </summary>
         /// <remarks>
-        /// 
+        /// Store a file and get an id for it.  Where logos and document attachments come from: upload once, then reference the returned &#x60;file_id&#x60; from a branding profile or an attachment.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="file"></param>
@@ -295,7 +304,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Delete File 
+        /// Delete File Remove a stored file.  &#x60;409&#x60; if a branding profile or a document attachment still references it.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="fileId"></param>
@@ -308,7 +317,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Delete File 
+        /// Delete File Remove a stored file.  &#x60;409&#x60; if a branding profile or a document attachment still references it.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="fileId"></param>
@@ -371,7 +380,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Delete File 
+        /// Delete File Remove a stored file.  &#x60;409&#x60; if a branding profile or a document attachment still references it.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="fileId"></param>
@@ -385,7 +394,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Delete File 
+        /// Delete File Remove a stored file.  &#x60;409&#x60; if a branding profile or a document attachment still references it.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="fileId"></param>
@@ -451,7 +460,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Get File 
+        /// Get File A stored file&#39;s metadata — name, type and size.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="fileId"></param>
@@ -464,7 +473,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Get File 
+        /// Get File A stored file&#39;s metadata — name, type and size.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="fileId"></param>
@@ -527,7 +536,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Get File 
+        /// Get File A stored file&#39;s metadata — name, type and size.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="fileId"></param>
@@ -541,7 +550,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Get File 
+        /// Get File A stored file&#39;s metadata — name, type and size.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="fileId"></param>
@@ -607,7 +616,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Upload File 
+        /// Upload File Store a file and get an id for it.  Where logos and document attachments come from: upload once, then reference the returned &#x60;file_id&#x60; from a branding profile or an attachment.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="file"></param>
@@ -621,7 +630,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Upload File 
+        /// Upload File Store a file and get an id for it.  Where logos and document attachments come from: upload once, then reference the returned &#x60;file_id&#x60; from a branding profile or an attachment.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="file"></param>
@@ -690,7 +699,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Upload File 
+        /// Upload File Store a file and get an id for it.  Where logos and document attachments come from: upload once, then reference the returned &#x60;file_id&#x60; from a branding profile or an attachment.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="file"></param>
@@ -705,7 +714,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Upload File 
+        /// Upload File Store a file and get an id for it.  Where logos and document attachments come from: upload once, then reference the returned &#x60;file_id&#x60; from a branding profile or an attachment.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="file"></param>

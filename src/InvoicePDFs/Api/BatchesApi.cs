@@ -29,6 +29,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// Cancel Batch
         /// </summary>
+        /// <remarks>
+        /// Stop a batch that has not finished.  Items not yet started are cancelled. An item already rendering completes — the work is done and cancelling it would waste it.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="batchId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -39,7 +42,7 @@ namespace InvoicePDFs.Api
         /// Cancel Batch
         /// </summary>
         /// <remarks>
-        /// 
+        /// Stop a batch that has not finished.  Items not yet started are cancelled. An item already rendering completes — the work is done and cancelling it would waste it.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="batchId"></param>
@@ -49,6 +52,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// Create Batch
         /// </summary>
+        /// <remarks>
+        /// Queue many documents to be rendered at once.  Returns &#x60;202&#x60; — the batch is recorded and a worker renders it; nothing is rendered inside this request. Poll &#x60;get_batch&#x60; for progress, then &#x60;download_batch&#x60; for the results.  The whole batch is refused if it would exceed the monthly quota, rather than rendering part of it.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="batchCreateRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -59,7 +65,7 @@ namespace InvoicePDFs.Api
         /// Create Batch
         /// </summary>
         /// <remarks>
-        /// 
+        /// Queue many documents to be rendered at once.  Returns &#x60;202&#x60; — the batch is recorded and a worker renders it; nothing is rendered inside this request. Poll &#x60;get_batch&#x60; for progress, then &#x60;download_batch&#x60; for the results.  The whole batch is refused if it would exceed the monthly quota, rather than rendering part of it.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="batchCreateRequest"></param>
@@ -69,6 +75,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// Download Batch
         /// </summary>
+        /// <remarks>
+        /// Every completed render in the batch, as a ZIP.  &#x60;409&#x60; until the batch is &#x60;completed&#x60;. Items that failed are simply absent, so check &#x60;failed_items&#x60; rather than counting files.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="batchId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -79,7 +88,7 @@ namespace InvoicePDFs.Api
         /// Download Batch
         /// </summary>
         /// <remarks>
-        /// 
+        /// Every completed render in the batch, as a ZIP.  &#x60;409&#x60; until the batch is &#x60;completed&#x60;. Items that failed are simply absent, so check &#x60;failed_items&#x60; rather than counting files.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="batchId"></param>
@@ -89,6 +98,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// Get Batch
         /// </summary>
+        /// <remarks>
+        /// A batch&#39;s status and its per-item counts.  The poll surface: &#x60;total_items&#x60;, &#x60;completed_items&#x60; and &#x60;failed_items&#x60; say how far it has got without listing every item.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="batchId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -99,7 +111,7 @@ namespace InvoicePDFs.Api
         /// Get Batch
         /// </summary>
         /// <remarks>
-        /// 
+        /// A batch&#39;s status and its per-item counts.  The poll surface: &#x60;total_items&#x60;, &#x60;completed_items&#x60; and &#x60;failed_items&#x60; say how far it has got without listing every item.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="batchId"></param>
@@ -109,6 +121,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// List Batch Items
         /// </summary>
+        /// <remarks>
+        /// Every item in a batch with its own status, newest first.  Where to look when &#x60;failed_items&#x60; is not zero: each row carries its error and, once rendered, its &#x60;render_id&#x60;.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="batchId"></param>
         /// <param name="limit"> (optional, default to 50)</param>
@@ -121,7 +136,7 @@ namespace InvoicePDFs.Api
         /// List Batch Items
         /// </summary>
         /// <remarks>
-        /// 
+        /// Every item in a batch with its own status, newest first.  Where to look when &#x60;failed_items&#x60; is not zero: each row carries its error and, once rendered, its &#x60;render_id&#x60;.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="batchId"></param>
@@ -133,6 +148,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// List Batches
         /// </summary>
+        /// <remarks>
+        /// Batch jobs on this account, newest first.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit"> (optional, default to 50)</param>
         /// <param name="cursor"> (optional)</param>
@@ -144,7 +162,7 @@ namespace InvoicePDFs.Api
         /// List Batches
         /// </summary>
         /// <remarks>
-        /// 
+        /// Batch jobs on this account, newest first.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit"> (optional, default to 50)</param>
@@ -165,7 +183,7 @@ namespace InvoicePDFs.Api
         /// Cancel Batch
         /// </summary>
         /// <remarks>
-        /// 
+        /// Stop a batch that has not finished.  Items not yet started are cancelled. An item already rendering completes — the work is done and cancelling it would waste it.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="batchId"></param>
@@ -178,7 +196,7 @@ namespace InvoicePDFs.Api
         /// Cancel Batch
         /// </summary>
         /// <remarks>
-        /// 
+        /// Stop a batch that has not finished.  Items not yet started are cancelled. An item already rendering completes — the work is done and cancelling it would waste it.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="batchId"></param>
@@ -190,7 +208,7 @@ namespace InvoicePDFs.Api
         /// Create Batch
         /// </summary>
         /// <remarks>
-        /// 
+        /// Queue many documents to be rendered at once.  Returns &#x60;202&#x60; — the batch is recorded and a worker renders it; nothing is rendered inside this request. Poll &#x60;get_batch&#x60; for progress, then &#x60;download_batch&#x60; for the results.  The whole batch is refused if it would exceed the monthly quota, rather than rendering part of it.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="batchCreateRequest"></param>
@@ -203,7 +221,7 @@ namespace InvoicePDFs.Api
         /// Create Batch
         /// </summary>
         /// <remarks>
-        /// 
+        /// Queue many documents to be rendered at once.  Returns &#x60;202&#x60; — the batch is recorded and a worker renders it; nothing is rendered inside this request. Poll &#x60;get_batch&#x60; for progress, then &#x60;download_batch&#x60; for the results.  The whole batch is refused if it would exceed the monthly quota, rather than rendering part of it.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="batchCreateRequest"></param>
@@ -215,7 +233,7 @@ namespace InvoicePDFs.Api
         /// Download Batch
         /// </summary>
         /// <remarks>
-        /// 
+        /// Every completed render in the batch, as a ZIP.  &#x60;409&#x60; until the batch is &#x60;completed&#x60;. Items that failed are simply absent, so check &#x60;failed_items&#x60; rather than counting files.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="batchId"></param>
@@ -228,7 +246,7 @@ namespace InvoicePDFs.Api
         /// Download Batch
         /// </summary>
         /// <remarks>
-        /// 
+        /// Every completed render in the batch, as a ZIP.  &#x60;409&#x60; until the batch is &#x60;completed&#x60;. Items that failed are simply absent, so check &#x60;failed_items&#x60; rather than counting files.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="batchId"></param>
@@ -240,7 +258,7 @@ namespace InvoicePDFs.Api
         /// Get Batch
         /// </summary>
         /// <remarks>
-        /// 
+        /// A batch&#39;s status and its per-item counts.  The poll surface: &#x60;total_items&#x60;, &#x60;completed_items&#x60; and &#x60;failed_items&#x60; say how far it has got without listing every item.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="batchId"></param>
@@ -253,7 +271,7 @@ namespace InvoicePDFs.Api
         /// Get Batch
         /// </summary>
         /// <remarks>
-        /// 
+        /// A batch&#39;s status and its per-item counts.  The poll surface: &#x60;total_items&#x60;, &#x60;completed_items&#x60; and &#x60;failed_items&#x60; say how far it has got without listing every item.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="batchId"></param>
@@ -265,7 +283,7 @@ namespace InvoicePDFs.Api
         /// List Batch Items
         /// </summary>
         /// <remarks>
-        /// 
+        /// Every item in a batch with its own status, newest first.  Where to look when &#x60;failed_items&#x60; is not zero: each row carries its error and, once rendered, its &#x60;render_id&#x60;.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="batchId"></param>
@@ -280,7 +298,7 @@ namespace InvoicePDFs.Api
         /// List Batch Items
         /// </summary>
         /// <remarks>
-        /// 
+        /// Every item in a batch with its own status, newest first.  Where to look when &#x60;failed_items&#x60; is not zero: each row carries its error and, once rendered, its &#x60;render_id&#x60;.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="batchId"></param>
@@ -294,7 +312,7 @@ namespace InvoicePDFs.Api
         /// List Batches
         /// </summary>
         /// <remarks>
-        /// 
+        /// Batch jobs on this account, newest first.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit"> (optional, default to 50)</param>
@@ -308,7 +326,7 @@ namespace InvoicePDFs.Api
         /// List Batches
         /// </summary>
         /// <remarks>
-        /// 
+        /// Batch jobs on this account, newest first.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit"> (optional, default to 50)</param>
@@ -438,7 +456,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Cancel Batch 
+        /// Cancel Batch Stop a batch that has not finished.  Items not yet started are cancelled. An item already rendering completes — the work is done and cancelling it would waste it.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="batchId"></param>
@@ -451,7 +469,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Cancel Batch 
+        /// Cancel Batch Stop a batch that has not finished.  Items not yet started are cancelled. An item already rendering completes — the work is done and cancelling it would waste it.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="batchId"></param>
@@ -514,7 +532,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Cancel Batch 
+        /// Cancel Batch Stop a batch that has not finished.  Items not yet started are cancelled. An item already rendering completes — the work is done and cancelling it would waste it.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="batchId"></param>
@@ -528,7 +546,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Cancel Batch 
+        /// Cancel Batch Stop a batch that has not finished.  Items not yet started are cancelled. An item already rendering completes — the work is done and cancelling it would waste it.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="batchId"></param>
@@ -594,7 +612,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Create Batch 
+        /// Create Batch Queue many documents to be rendered at once.  Returns &#x60;202&#x60; — the batch is recorded and a worker renders it; nothing is rendered inside this request. Poll &#x60;get_batch&#x60; for progress, then &#x60;download_batch&#x60; for the results.  The whole batch is refused if it would exceed the monthly quota, rather than rendering part of it.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="batchCreateRequest"></param>
@@ -607,7 +625,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Create Batch 
+        /// Create Batch Queue many documents to be rendered at once.  Returns &#x60;202&#x60; — the batch is recorded and a worker renders it; nothing is rendered inside this request. Poll &#x60;get_batch&#x60; for progress, then &#x60;download_batch&#x60; for the results.  The whole batch is refused if it would exceed the monthly quota, rather than rendering part of it.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="batchCreateRequest"></param>
@@ -671,7 +689,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Create Batch 
+        /// Create Batch Queue many documents to be rendered at once.  Returns &#x60;202&#x60; — the batch is recorded and a worker renders it; nothing is rendered inside this request. Poll &#x60;get_batch&#x60; for progress, then &#x60;download_batch&#x60; for the results.  The whole batch is refused if it would exceed the monthly quota, rather than rendering part of it.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="batchCreateRequest"></param>
@@ -685,7 +703,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Create Batch 
+        /// Create Batch Queue many documents to be rendered at once.  Returns &#x60;202&#x60; — the batch is recorded and a worker renders it; nothing is rendered inside this request. Poll &#x60;get_batch&#x60; for progress, then &#x60;download_batch&#x60; for the results.  The whole batch is refused if it would exceed the monthly quota, rather than rendering part of it.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="batchCreateRequest"></param>
@@ -752,7 +770,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Download Batch 
+        /// Download Batch Every completed render in the batch, as a ZIP.  &#x60;409&#x60; until the batch is &#x60;completed&#x60;. Items that failed are simply absent, so check &#x60;failed_items&#x60; rather than counting files.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="batchId"></param>
@@ -765,7 +783,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Download Batch 
+        /// Download Batch Every completed render in the batch, as a ZIP.  &#x60;409&#x60; until the batch is &#x60;completed&#x60;. Items that failed are simply absent, so check &#x60;failed_items&#x60; rather than counting files.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="batchId"></param>
@@ -829,7 +847,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Download Batch 
+        /// Download Batch Every completed render in the batch, as a ZIP.  &#x60;409&#x60; until the batch is &#x60;completed&#x60;. Items that failed are simply absent, so check &#x60;failed_items&#x60; rather than counting files.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="batchId"></param>
@@ -843,7 +861,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Download Batch 
+        /// Download Batch Every completed render in the batch, as a ZIP.  &#x60;409&#x60; until the batch is &#x60;completed&#x60;. Items that failed are simply absent, so check &#x60;failed_items&#x60; rather than counting files.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="batchId"></param>
@@ -910,7 +928,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Get Batch 
+        /// Get Batch A batch&#39;s status and its per-item counts.  The poll surface: &#x60;total_items&#x60;, &#x60;completed_items&#x60; and &#x60;failed_items&#x60; say how far it has got without listing every item.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="batchId"></param>
@@ -923,7 +941,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Get Batch 
+        /// Get Batch A batch&#39;s status and its per-item counts.  The poll surface: &#x60;total_items&#x60;, &#x60;completed_items&#x60; and &#x60;failed_items&#x60; say how far it has got without listing every item.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="batchId"></param>
@@ -986,7 +1004,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Get Batch 
+        /// Get Batch A batch&#39;s status and its per-item counts.  The poll surface: &#x60;total_items&#x60;, &#x60;completed_items&#x60; and &#x60;failed_items&#x60; say how far it has got without listing every item.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="batchId"></param>
@@ -1000,7 +1018,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Get Batch 
+        /// Get Batch A batch&#39;s status and its per-item counts.  The poll surface: &#x60;total_items&#x60;, &#x60;completed_items&#x60; and &#x60;failed_items&#x60; say how far it has got without listing every item.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="batchId"></param>
@@ -1066,7 +1084,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Batch Items 
+        /// List Batch Items Every item in a batch with its own status, newest first.  Where to look when &#x60;failed_items&#x60; is not zero: each row carries its error and, once rendered, its &#x60;render_id&#x60;.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="batchId"></param>
@@ -1081,7 +1099,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Batch Items 
+        /// List Batch Items Every item in a batch with its own status, newest first.  Where to look when &#x60;failed_items&#x60; is not zero: each row carries its error and, once rendered, its &#x60;render_id&#x60;.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="batchId"></param>
@@ -1154,7 +1172,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Batch Items 
+        /// List Batch Items Every item in a batch with its own status, newest first.  Where to look when &#x60;failed_items&#x60; is not zero: each row carries its error and, once rendered, its &#x60;render_id&#x60;.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="batchId"></param>
@@ -1170,7 +1188,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Batch Items 
+        /// List Batch Items Every item in a batch with its own status, newest first.  Where to look when &#x60;failed_items&#x60; is not zero: each row carries its error and, once rendered, its &#x60;render_id&#x60;.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="batchId"></param>
@@ -1246,7 +1264,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Batches 
+        /// List Batches Batch jobs on this account, newest first.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit"> (optional, default to 50)</param>
@@ -1260,7 +1278,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Batches 
+        /// List Batches Batch jobs on this account, newest first.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit"> (optional, default to 50)</param>
@@ -1325,7 +1343,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Batches 
+        /// List Batches Batch jobs on this account, newest first.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit"> (optional, default to 50)</param>
@@ -1340,7 +1358,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Batches 
+        /// List Batches Batch jobs on this account, newest first.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit"> (optional, default to 50)</param>

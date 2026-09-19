@@ -14,6 +14,8 @@ All URIs are relative to *http://localhost*
 
 Delete File
 
+Remove a stored file.  `409` if a branding profile or a document attachment still references it.
+
 ### Example
 ```csharp
 using System.Collections.Generic;
@@ -107,6 +109,8 @@ catch (ApiException e)
 
 Get File
 
+A stored file's metadata — name, type and size.
+
 ### Example
 ```csharp
 using System.Collections.Generic;
@@ -199,6 +203,8 @@ catch (ApiException e)
 > FileResponse UploadFile (System.IO.Stream file, string? idempotencyKey = null)
 
 Upload File
+
+Store a file and get an id for it.  Where logos and document attachments come from: upload once, then reference the returned `file_id` from a branding profile or an attachment.
 
 ### Example
 ```csharp

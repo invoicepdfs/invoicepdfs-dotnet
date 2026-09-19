@@ -29,6 +29,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// Create Template
         /// </summary>
+        /// <remarks>
+        /// Design a template of your own, starting as a &#x60;draft&#x60;.  A custom template is a built-in plus your own configuration — it does not replace the layout, it adjusts it. Drafts can be rendered while you iterate; publish it when you want a version pinned.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateCreateRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -39,7 +42,7 @@ namespace InvoicePDFs.Api
         /// Create Template
         /// </summary>
         /// <remarks>
-        /// 
+        /// Design a template of your own, starting as a &#x60;draft&#x60;.  A custom template is a built-in plus your own configuration — it does not replace the layout, it adjusts it. Drafts can be rendered while you iterate; publish it when you want a version pinned.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateCreateRequest"></param>
@@ -49,6 +52,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// Delete Template
         /// </summary>
+        /// <remarks>
+        /// Remove a custom template.  &#x60;409&#x60; if a document or a recurring schedule still names it.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -59,7 +65,7 @@ namespace InvoicePDFs.Api
         /// Delete Template
         /// </summary>
         /// <remarks>
-        /// 
+        /// Remove a custom template.  &#x60;409&#x60; if a document or a recurring schedule still names it.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId"></param>
@@ -69,6 +75,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// Duplicate Template
         /// </summary>
+        /// <remarks>
+        /// Copy a custom template into a new &#x60;draft&#x60;, to change without affecting the original.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -79,7 +88,7 @@ namespace InvoicePDFs.Api
         /// Duplicate Template
         /// </summary>
         /// <remarks>
-        /// 
+        /// Copy a custom template into a new &#x60;draft&#x60;, to change without affecting the original.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId"></param>
@@ -89,6 +98,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// Get Builtin Template
         /// </summary>
+        /// <remarks>
+        /// One built-in template: its id, name and the options it accepts.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -99,7 +111,7 @@ namespace InvoicePDFs.Api
         /// Get Builtin Template
         /// </summary>
         /// <remarks>
-        /// 
+        /// One built-in template: its id, name and the options it accepts.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId"></param>
@@ -109,6 +121,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// Get Custom Template
         /// </summary>
+        /// <remarks>
+        /// One of this account&#39;s templates.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -119,7 +134,7 @@ namespace InvoicePDFs.Api
         /// Get Custom Template
         /// </summary>
         /// <remarks>
-        /// 
+        /// One of this account&#39;s templates.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId"></param>
@@ -129,6 +144,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// Get Template
         /// </summary>
+        /// <remarks>
+        /// One built-in template: its id, name and the options it accepts.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -139,7 +157,7 @@ namespace InvoicePDFs.Api
         /// Get Template
         /// </summary>
         /// <remarks>
-        /// 
+        /// One built-in template: its id, name and the options it accepts.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId"></param>
@@ -149,6 +167,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// List Custom Templates
         /// </summary>
+        /// <remarks>
+        /// Templates this account has designed, newest first. Cursor-paginated.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit"> (optional, default to 50)</param>
         /// <param name="cursor"> (optional)</param>
@@ -160,7 +181,7 @@ namespace InvoicePDFs.Api
         /// List Custom Templates
         /// </summary>
         /// <remarks>
-        /// 
+        /// Templates this account has designed, newest first. Cursor-paginated.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit"> (optional, default to 50)</param>
@@ -171,6 +192,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// List Templates
         /// </summary>
+        /// <remarks>
+        /// The built-in templates every account can render with.  Your own designs are listed separately by &#x60;list_custom_templates&#x60;.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>TemplatesListResponse</returns>
@@ -180,7 +204,7 @@ namespace InvoicePDFs.Api
         /// List Templates
         /// </summary>
         /// <remarks>
-        /// 
+        /// The built-in templates every account can render with.  Your own designs are listed separately by &#x60;list_custom_templates&#x60;.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -189,6 +213,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// Preview Template
         /// </summary>
+        /// <remarks>
+        /// Render a template against sample data to see how it looks.  **This is a real render**: it counts against the monthly quota and is metered like any other, because it does the same work. Use it to check a design, not as a way to render documents.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId"></param>
         /// <param name="documentRenderRequest"></param>
@@ -202,7 +229,7 @@ namespace InvoicePDFs.Api
         /// Preview Template
         /// </summary>
         /// <remarks>
-        /// 
+        /// Render a template against sample data to see how it looks.  **This is a real render**: it counts against the monthly quota and is metered like any other, because it does the same work. Use it to check a design, not as a way to render documents.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId"></param>
@@ -215,6 +242,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// Publish Template
         /// </summary>
+        /// <remarks>
+        /// Mark a custom template &#x60;published&#x60;.  &#x60;409&#x60; if it is published already. Publishing is what makes a version pinnable, so a document rendered months from now can still be reproduced.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -225,7 +255,7 @@ namespace InvoicePDFs.Api
         /// Publish Template
         /// </summary>
         /// <remarks>
-        /// 
+        /// Mark a custom template &#x60;published&#x60;.  &#x60;409&#x60; if it is published already. Publishing is what makes a version pinnable, so a document rendered months from now can still be reproduced.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId"></param>
@@ -235,6 +265,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// Update Template
         /// </summary>
+        /// <remarks>
+        /// Change a custom template. Only the fields you send are changed.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId"></param>
         /// <param name="templatePatchRequest"></param>
@@ -246,7 +279,7 @@ namespace InvoicePDFs.Api
         /// Update Template
         /// </summary>
         /// <remarks>
-        /// 
+        /// Change a custom template. Only the fields you send are changed.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId"></param>
@@ -267,7 +300,7 @@ namespace InvoicePDFs.Api
         /// Create Template
         /// </summary>
         /// <remarks>
-        /// 
+        /// Design a template of your own, starting as a &#x60;draft&#x60;.  A custom template is a built-in plus your own configuration — it does not replace the layout, it adjusts it. Drafts can be rendered while you iterate; publish it when you want a version pinned.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateCreateRequest"></param>
@@ -280,7 +313,7 @@ namespace InvoicePDFs.Api
         /// Create Template
         /// </summary>
         /// <remarks>
-        /// 
+        /// Design a template of your own, starting as a &#x60;draft&#x60;.  A custom template is a built-in plus your own configuration — it does not replace the layout, it adjusts it. Drafts can be rendered while you iterate; publish it when you want a version pinned.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateCreateRequest"></param>
@@ -292,7 +325,7 @@ namespace InvoicePDFs.Api
         /// Delete Template
         /// </summary>
         /// <remarks>
-        /// 
+        /// Remove a custom template.  &#x60;409&#x60; if a document or a recurring schedule still names it.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId"></param>
@@ -305,7 +338,7 @@ namespace InvoicePDFs.Api
         /// Delete Template
         /// </summary>
         /// <remarks>
-        /// 
+        /// Remove a custom template.  &#x60;409&#x60; if a document or a recurring schedule still names it.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId"></param>
@@ -317,7 +350,7 @@ namespace InvoicePDFs.Api
         /// Duplicate Template
         /// </summary>
         /// <remarks>
-        /// 
+        /// Copy a custom template into a new &#x60;draft&#x60;, to change without affecting the original.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId"></param>
@@ -330,7 +363,7 @@ namespace InvoicePDFs.Api
         /// Duplicate Template
         /// </summary>
         /// <remarks>
-        /// 
+        /// Copy a custom template into a new &#x60;draft&#x60;, to change without affecting the original.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId"></param>
@@ -342,7 +375,7 @@ namespace InvoicePDFs.Api
         /// Get Builtin Template
         /// </summary>
         /// <remarks>
-        /// 
+        /// One built-in template: its id, name and the options it accepts.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId"></param>
@@ -355,7 +388,7 @@ namespace InvoicePDFs.Api
         /// Get Builtin Template
         /// </summary>
         /// <remarks>
-        /// 
+        /// One built-in template: its id, name and the options it accepts.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId"></param>
@@ -367,7 +400,7 @@ namespace InvoicePDFs.Api
         /// Get Custom Template
         /// </summary>
         /// <remarks>
-        /// 
+        /// One of this account&#39;s templates.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId"></param>
@@ -380,7 +413,7 @@ namespace InvoicePDFs.Api
         /// Get Custom Template
         /// </summary>
         /// <remarks>
-        /// 
+        /// One of this account&#39;s templates.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId"></param>
@@ -392,7 +425,7 @@ namespace InvoicePDFs.Api
         /// Get Template
         /// </summary>
         /// <remarks>
-        /// 
+        /// One built-in template: its id, name and the options it accepts.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId"></param>
@@ -405,7 +438,7 @@ namespace InvoicePDFs.Api
         /// Get Template
         /// </summary>
         /// <remarks>
-        /// 
+        /// One built-in template: its id, name and the options it accepts.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId"></param>
@@ -417,7 +450,7 @@ namespace InvoicePDFs.Api
         /// List Custom Templates
         /// </summary>
         /// <remarks>
-        /// 
+        /// Templates this account has designed, newest first. Cursor-paginated.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit"> (optional, default to 50)</param>
@@ -431,7 +464,7 @@ namespace InvoicePDFs.Api
         /// List Custom Templates
         /// </summary>
         /// <remarks>
-        /// 
+        /// Templates this account has designed, newest first. Cursor-paginated.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit"> (optional, default to 50)</param>
@@ -444,7 +477,7 @@ namespace InvoicePDFs.Api
         /// List Templates
         /// </summary>
         /// <remarks>
-        /// 
+        /// The built-in templates every account can render with.  Your own designs are listed separately by &#x60;list_custom_templates&#x60;.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -456,7 +489,7 @@ namespace InvoicePDFs.Api
         /// List Templates
         /// </summary>
         /// <remarks>
-        /// 
+        /// The built-in templates every account can render with.  Your own designs are listed separately by &#x60;list_custom_templates&#x60;.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -467,7 +500,7 @@ namespace InvoicePDFs.Api
         /// Preview Template
         /// </summary>
         /// <remarks>
-        /// 
+        /// Render a template against sample data to see how it looks.  **This is a real render**: it counts against the monthly quota and is metered like any other, because it does the same work. Use it to check a design, not as a way to render documents.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId"></param>
@@ -483,7 +516,7 @@ namespace InvoicePDFs.Api
         /// Preview Template
         /// </summary>
         /// <remarks>
-        /// 
+        /// Render a template against sample data to see how it looks.  **This is a real render**: it counts against the monthly quota and is metered like any other, because it does the same work. Use it to check a design, not as a way to render documents.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId"></param>
@@ -498,7 +531,7 @@ namespace InvoicePDFs.Api
         /// Publish Template
         /// </summary>
         /// <remarks>
-        /// 
+        /// Mark a custom template &#x60;published&#x60;.  &#x60;409&#x60; if it is published already. Publishing is what makes a version pinnable, so a document rendered months from now can still be reproduced.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId"></param>
@@ -511,7 +544,7 @@ namespace InvoicePDFs.Api
         /// Publish Template
         /// </summary>
         /// <remarks>
-        /// 
+        /// Mark a custom template &#x60;published&#x60;.  &#x60;409&#x60; if it is published already. Publishing is what makes a version pinnable, so a document rendered months from now can still be reproduced.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId"></param>
@@ -523,7 +556,7 @@ namespace InvoicePDFs.Api
         /// Update Template
         /// </summary>
         /// <remarks>
-        /// 
+        /// Change a custom template. Only the fields you send are changed.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId"></param>
@@ -537,7 +570,7 @@ namespace InvoicePDFs.Api
         /// Update Template
         /// </summary>
         /// <remarks>
-        /// 
+        /// Change a custom template. Only the fields you send are changed.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId"></param>
@@ -667,7 +700,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Create Template 
+        /// Create Template Design a template of your own, starting as a &#x60;draft&#x60;.  A custom template is a built-in plus your own configuration — it does not replace the layout, it adjusts it. Drafts can be rendered while you iterate; publish it when you want a version pinned.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateCreateRequest"></param>
@@ -680,7 +713,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Create Template 
+        /// Create Template Design a template of your own, starting as a &#x60;draft&#x60;.  A custom template is a built-in plus your own configuration — it does not replace the layout, it adjusts it. Drafts can be rendered while you iterate; publish it when you want a version pinned.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateCreateRequest"></param>
@@ -744,7 +777,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Create Template 
+        /// Create Template Design a template of your own, starting as a &#x60;draft&#x60;.  A custom template is a built-in plus your own configuration — it does not replace the layout, it adjusts it. Drafts can be rendered while you iterate; publish it when you want a version pinned.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateCreateRequest"></param>
@@ -758,7 +791,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Create Template 
+        /// Create Template Design a template of your own, starting as a &#x60;draft&#x60;.  A custom template is a built-in plus your own configuration — it does not replace the layout, it adjusts it. Drafts can be rendered while you iterate; publish it when you want a version pinned.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateCreateRequest"></param>
@@ -825,7 +858,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Delete Template 
+        /// Delete Template Remove a custom template.  &#x60;409&#x60; if a document or a recurring schedule still names it.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId"></param>
@@ -837,7 +870,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Delete Template 
+        /// Delete Template Remove a custom template.  &#x60;409&#x60; if a document or a recurring schedule still names it.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId"></param>
@@ -900,7 +933,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Delete Template 
+        /// Delete Template Remove a custom template.  &#x60;409&#x60; if a document or a recurring schedule still names it.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId"></param>
@@ -913,7 +946,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Delete Template 
+        /// Delete Template Remove a custom template.  &#x60;409&#x60; if a document or a recurring schedule still names it.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId"></param>
@@ -979,7 +1012,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Duplicate Template 
+        /// Duplicate Template Copy a custom template into a new &#x60;draft&#x60;, to change without affecting the original.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId"></param>
@@ -992,7 +1025,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Duplicate Template 
+        /// Duplicate Template Copy a custom template into a new &#x60;draft&#x60;, to change without affecting the original.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId"></param>
@@ -1055,7 +1088,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Duplicate Template 
+        /// Duplicate Template Copy a custom template into a new &#x60;draft&#x60;, to change without affecting the original.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId"></param>
@@ -1069,7 +1102,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Duplicate Template 
+        /// Duplicate Template Copy a custom template into a new &#x60;draft&#x60;, to change without affecting the original.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId"></param>
@@ -1135,7 +1168,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Get Builtin Template 
+        /// Get Builtin Template One built-in template: its id, name and the options it accepts.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId"></param>
@@ -1148,7 +1181,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Get Builtin Template 
+        /// Get Builtin Template One built-in template: its id, name and the options it accepts.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId"></param>
@@ -1211,7 +1244,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Get Builtin Template 
+        /// Get Builtin Template One built-in template: its id, name and the options it accepts.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId"></param>
@@ -1225,7 +1258,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Get Builtin Template 
+        /// Get Builtin Template One built-in template: its id, name and the options it accepts.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId"></param>
@@ -1291,7 +1324,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Get Custom Template 
+        /// Get Custom Template One of this account&#39;s templates.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId"></param>
@@ -1304,7 +1337,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Get Custom Template 
+        /// Get Custom Template One of this account&#39;s templates.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId"></param>
@@ -1367,7 +1400,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Get Custom Template 
+        /// Get Custom Template One of this account&#39;s templates.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId"></param>
@@ -1381,7 +1414,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Get Custom Template 
+        /// Get Custom Template One of this account&#39;s templates.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId"></param>
@@ -1447,7 +1480,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Get Template 
+        /// Get Template One built-in template: its id, name and the options it accepts.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId"></param>
@@ -1460,7 +1493,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Get Template 
+        /// Get Template One built-in template: its id, name and the options it accepts.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId"></param>
@@ -1523,7 +1556,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Get Template 
+        /// Get Template One built-in template: its id, name and the options it accepts.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId"></param>
@@ -1537,7 +1570,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Get Template 
+        /// Get Template One built-in template: its id, name and the options it accepts.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId"></param>
@@ -1603,7 +1636,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Custom Templates 
+        /// List Custom Templates Templates this account has designed, newest first. Cursor-paginated.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit"> (optional, default to 50)</param>
@@ -1617,7 +1650,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Custom Templates 
+        /// List Custom Templates Templates this account has designed, newest first. Cursor-paginated.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit"> (optional, default to 50)</param>
@@ -1682,7 +1715,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Custom Templates 
+        /// List Custom Templates Templates this account has designed, newest first. Cursor-paginated.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit"> (optional, default to 50)</param>
@@ -1697,7 +1730,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Custom Templates 
+        /// List Custom Templates Templates this account has designed, newest first. Cursor-paginated.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit"> (optional, default to 50)</param>
@@ -1765,7 +1798,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Templates 
+        /// List Templates The built-in templates every account can render with.  Your own designs are listed separately by &#x60;list_custom_templates&#x60;.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -1777,7 +1810,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Templates 
+        /// List Templates The built-in templates every account can render with.  Your own designs are listed separately by &#x60;list_custom_templates&#x60;.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -1832,7 +1865,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Templates 
+        /// List Templates The built-in templates every account can render with.  Your own designs are listed separately by &#x60;list_custom_templates&#x60;.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -1845,7 +1878,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Templates 
+        /// List Templates The built-in templates every account can render with.  Your own designs are listed separately by &#x60;list_custom_templates&#x60;.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -1903,7 +1936,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Preview Template 
+        /// Preview Template Render a template against sample data to see how it looks.  **This is a real render**: it counts against the monthly quota and is metered like any other, because it does the same work. Use it to check a design, not as a way to render documents.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId"></param>
@@ -1919,7 +1952,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Preview Template 
+        /// Preview Template Render a template against sample data to see how it looks.  **This is a real render**: it counts against the monthly quota and is metered like any other, because it does the same work. Use it to check a design, not as a way to render documents.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId"></param>
@@ -2002,7 +2035,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Preview Template 
+        /// Preview Template Render a template against sample data to see how it looks.  **This is a real render**: it counts against the monthly quota and is metered like any other, because it does the same work. Use it to check a design, not as a way to render documents.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId"></param>
@@ -2019,7 +2052,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Preview Template 
+        /// Preview Template Render a template against sample data to see how it looks.  **This is a real render**: it counts against the monthly quota and is metered like any other, because it does the same work. Use it to check a design, not as a way to render documents.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId"></param>
@@ -2105,7 +2138,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Publish Template 
+        /// Publish Template Mark a custom template &#x60;published&#x60;.  &#x60;409&#x60; if it is published already. Publishing is what makes a version pinnable, so a document rendered months from now can still be reproduced.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId"></param>
@@ -2118,7 +2151,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Publish Template 
+        /// Publish Template Mark a custom template &#x60;published&#x60;.  &#x60;409&#x60; if it is published already. Publishing is what makes a version pinnable, so a document rendered months from now can still be reproduced.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId"></param>
@@ -2181,7 +2214,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Publish Template 
+        /// Publish Template Mark a custom template &#x60;published&#x60;.  &#x60;409&#x60; if it is published already. Publishing is what makes a version pinnable, so a document rendered months from now can still be reproduced.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId"></param>
@@ -2195,7 +2228,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Publish Template 
+        /// Publish Template Mark a custom template &#x60;published&#x60;.  &#x60;409&#x60; if it is published already. Publishing is what makes a version pinnable, so a document rendered months from now can still be reproduced.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId"></param>
@@ -2261,7 +2294,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Update Template 
+        /// Update Template Change a custom template. Only the fields you send are changed.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId"></param>
@@ -2275,7 +2308,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Update Template 
+        /// Update Template Change a custom template. Only the fields you send are changed.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId"></param>
@@ -2347,7 +2380,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Update Template 
+        /// Update Template Change a custom template. Only the fields you send are changed.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId"></param>
@@ -2362,7 +2395,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Update Template 
+        /// Update Template Change a custom template. Only the fields you send are changed.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId"></param>

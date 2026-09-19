@@ -15,6 +15,8 @@ All URIs are relative to *http://localhost*
 
 Create Template Version
 
+Snapshot a template's current configuration as a new version.  A document can pin a version, so a render months later reproduces the design that was live when it was issued rather than today's.
+
 ### Example
 ```csharp
 using System.Collections.Generic;
@@ -110,6 +112,8 @@ catch (ApiException e)
 
 Get Template Version
 
+One version's stored configuration.
+
 ### Example
 ```csharp
 using System.Collections.Generic;
@@ -204,6 +208,8 @@ catch (ApiException e)
 > TemplateVersionsListResponse ListTemplateVersions (string templateId)
 
 List Template Versions
+
+Every published version of a custom template, newest first.
 
 ### Example
 ```csharp

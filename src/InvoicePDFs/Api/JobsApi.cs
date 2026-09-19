@@ -29,6 +29,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// Cancel Job
         /// </summary>
+        /// <remarks>
+        /// Stop a job that has not finished.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -39,7 +42,7 @@ namespace InvoicePDFs.Api
         /// Cancel Job
         /// </summary>
         /// <remarks>
-        /// 
+        /// Stop a job that has not finished.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId"></param>
@@ -49,6 +52,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// Get Job
         /// </summary>
+        /// <remarks>
+        /// One job&#39;s status and progress.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -59,7 +65,7 @@ namespace InvoicePDFs.Api
         /// Get Job
         /// </summary>
         /// <remarks>
-        /// 
+        /// One job&#39;s status and progress.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId"></param>
@@ -94,6 +100,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// Retry Job
         /// </summary>
+        /// <remarks>
+        /// Return a &#x60;failed&#x60; or &#x60;cancelled&#x60; job to &#x60;queued&#x60;, clearing its progress and error.  &#x60;409&#x60; from any other status.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -104,7 +113,7 @@ namespace InvoicePDFs.Api
         /// Retry Job
         /// </summary>
         /// <remarks>
-        /// 
+        /// Return a &#x60;failed&#x60; or &#x60;cancelled&#x60; job to &#x60;queued&#x60;, clearing its progress and error.  &#x60;409&#x60; from any other status.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId"></param>
@@ -124,7 +133,7 @@ namespace InvoicePDFs.Api
         /// Cancel Job
         /// </summary>
         /// <remarks>
-        /// 
+        /// Stop a job that has not finished.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId"></param>
@@ -137,7 +146,7 @@ namespace InvoicePDFs.Api
         /// Cancel Job
         /// </summary>
         /// <remarks>
-        /// 
+        /// Stop a job that has not finished.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId"></param>
@@ -149,7 +158,7 @@ namespace InvoicePDFs.Api
         /// Get Job
         /// </summary>
         /// <remarks>
-        /// 
+        /// One job&#39;s status and progress.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId"></param>
@@ -162,7 +171,7 @@ namespace InvoicePDFs.Api
         /// Get Job
         /// </summary>
         /// <remarks>
-        /// 
+        /// One job&#39;s status and progress.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId"></param>
@@ -201,7 +210,7 @@ namespace InvoicePDFs.Api
         /// Retry Job
         /// </summary>
         /// <remarks>
-        /// 
+        /// Return a &#x60;failed&#x60; or &#x60;cancelled&#x60; job to &#x60;queued&#x60;, clearing its progress and error.  &#x60;409&#x60; from any other status.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId"></param>
@@ -214,7 +223,7 @@ namespace InvoicePDFs.Api
         /// Retry Job
         /// </summary>
         /// <remarks>
-        /// 
+        /// Return a &#x60;failed&#x60; or &#x60;cancelled&#x60; job to &#x60;queued&#x60;, clearing its progress and error.  &#x60;409&#x60; from any other status.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId"></param>
@@ -343,7 +352,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Cancel Job 
+        /// Cancel Job Stop a job that has not finished.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId"></param>
@@ -356,7 +365,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Cancel Job 
+        /// Cancel Job Stop a job that has not finished.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId"></param>
@@ -419,7 +428,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Cancel Job 
+        /// Cancel Job Stop a job that has not finished.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId"></param>
@@ -433,7 +442,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Cancel Job 
+        /// Cancel Job Stop a job that has not finished.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId"></param>
@@ -499,7 +508,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Get Job 
+        /// Get Job One job&#39;s status and progress.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId"></param>
@@ -512,7 +521,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Get Job 
+        /// Get Job One job&#39;s status and progress.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId"></param>
@@ -575,7 +584,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Get Job 
+        /// Get Job One job&#39;s status and progress.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId"></param>
@@ -589,7 +598,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Get Job 
+        /// Get Job One job&#39;s status and progress.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId"></param>
@@ -817,7 +826,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Retry Job 
+        /// Retry Job Return a &#x60;failed&#x60; or &#x60;cancelled&#x60; job to &#x60;queued&#x60;, clearing its progress and error.  &#x60;409&#x60; from any other status.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId"></param>
@@ -830,7 +839,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Retry Job 
+        /// Retry Job Return a &#x60;failed&#x60; or &#x60;cancelled&#x60; job to &#x60;queued&#x60;, clearing its progress and error.  &#x60;409&#x60; from any other status.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId"></param>
@@ -893,7 +902,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Retry Job 
+        /// Retry Job Return a &#x60;failed&#x60; or &#x60;cancelled&#x60; job to &#x60;queued&#x60;, clearing its progress and error.  &#x60;409&#x60; from any other status.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId"></param>
@@ -907,7 +916,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Retry Job 
+        /// Retry Job Return a &#x60;failed&#x60; or &#x60;cancelled&#x60; job to &#x60;queued&#x60;, clearing its progress and error.  &#x60;409&#x60; from any other status.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId"></param>
