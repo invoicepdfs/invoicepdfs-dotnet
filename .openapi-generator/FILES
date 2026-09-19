@@ -39,10 +39,12 @@ docs/AuthTokenResponse.md
 docs/BatchCreateRequest.md
 docs/BatchItemInput.md
 docs/BatchItemOut.md
+docs/BatchItemStatus.md
 docs/BatchItemsListResponse.md
 docs/BatchOut.md
 docs/BatchOutputOptions.md
 docs/BatchResponse.md
+docs/BatchStatus.md
 docs/BatchesApi.md
 docs/BatchesListResponse.md
 docs/BillingApi.md
@@ -96,6 +98,7 @@ docs/DeliveriesListResponse.md
 docs/DeliveryOut.md
 docs/DeliveryResponse.md
 docs/DeliverySendRequest.md
+docs/DeliveryStatus.md
 docs/DocumentAttachmentsApi.md
 docs/DocumentBrandingInput.md
 docs/DocumentCalculateRequest.md
@@ -117,6 +120,7 @@ docs/DocumentRenderOptions.md
 docs/DocumentRenderRequest.md
 docs/DocumentResponse.md
 docs/DocumentShippingInput.md
+docs/DocumentStatus.md
 docs/DocumentTemplateRef.md
 docs/DocumentTypeOut.md
 docs/DocumentTypesListResponse.md
@@ -133,6 +137,7 @@ docs/HealthResponse.md
 docs/ImportCreateRequest.md
 docs/ImportOut.md
 docs/ImportResponse.md
+docs/ImportStatus.md
 docs/ImportsApi.md
 docs/InvoiceAttachmentCreateRequest.md
 docs/InvoiceAttachmentOut.md
@@ -155,6 +160,7 @@ docs/InvoicesListResponse.md
 docs/JobOut.md
 docs/JobProgressOut.md
 docs/JobResponse.md
+docs/JobStatus.md
 docs/JobsApi.md
 docs/JobsListResponse.md
 docs/LineItemDiscountInput.md
@@ -187,6 +193,7 @@ docs/RecurringInvoiceCreateRequest.md
 docs/RecurringInvoiceOut.md
 docs/RecurringInvoicePatchRequest.md
 docs/RecurringInvoiceResponse.md
+docs/RecurringInvoiceStatus.md
 docs/RecurringInvoicesApi.md
 docs/RecurringInvoicesListResponse.md
 docs/ReferenceApi.md
@@ -194,6 +201,7 @@ docs/RenderComplianceOut.md
 docs/RenderFailureOut.md
 docs/RenderOut.md
 docs/RenderResponse.md
+docs/RenderStatus.md
 docs/RendersApi.md
 docs/SimpleBoolResponse.md
 docs/StandardLineItemInput.md
@@ -240,6 +248,7 @@ docs/VersionResponse.md
 docs/WebhookDeliveriesListResponse.md
 docs/WebhookDeliveryOut.md
 docs/WebhookDeliveryResponse.md
+docs/WebhookDeliveryStatus.md
 docs/WebhookEndpointCreateRequest.md
 docs/WebhookEndpointOut.md
 docs/WebhookEndpointPatchRequest.md
@@ -322,10 +331,12 @@ src/InvoicePDFs.Test/Model/AuthTokenResponseTests.cs
 src/InvoicePDFs.Test/Model/BatchCreateRequestTests.cs
 src/InvoicePDFs.Test/Model/BatchItemInputTests.cs
 src/InvoicePDFs.Test/Model/BatchItemOutTests.cs
+src/InvoicePDFs.Test/Model/BatchItemStatusTests.cs
 src/InvoicePDFs.Test/Model/BatchItemsListResponseTests.cs
 src/InvoicePDFs.Test/Model/BatchOutTests.cs
 src/InvoicePDFs.Test/Model/BatchOutputOptionsTests.cs
 src/InvoicePDFs.Test/Model/BatchResponseTests.cs
+src/InvoicePDFs.Test/Model/BatchStatusTests.cs
 src/InvoicePDFs.Test/Model/BatchesListResponseTests.cs
 src/InvoicePDFs.Test/Model/BillingCheckoutDataTests.cs
 src/InvoicePDFs.Test/Model/BillingCheckoutRequestTests.cs
@@ -372,6 +383,7 @@ src/InvoicePDFs.Test/Model/DeliveriesListResponseTests.cs
 src/InvoicePDFs.Test/Model/DeliveryOutTests.cs
 src/InvoicePDFs.Test/Model/DeliveryResponseTests.cs
 src/InvoicePDFs.Test/Model/DeliverySendRequestTests.cs
+src/InvoicePDFs.Test/Model/DeliveryStatusTests.cs
 src/InvoicePDFs.Test/Model/DocumentBrandingInputTests.cs
 src/InvoicePDFs.Test/Model/DocumentCalculateRequestTests.cs
 src/InvoicePDFs.Test/Model/DocumentCalculateResponseTests.cs
@@ -392,6 +404,7 @@ src/InvoicePDFs.Test/Model/DocumentRenderOptionsTests.cs
 src/InvoicePDFs.Test/Model/DocumentRenderRequestTests.cs
 src/InvoicePDFs.Test/Model/DocumentResponseTests.cs
 src/InvoicePDFs.Test/Model/DocumentShippingInputTests.cs
+src/InvoicePDFs.Test/Model/DocumentStatusTests.cs
 src/InvoicePDFs.Test/Model/DocumentTemplateRefTests.cs
 src/InvoicePDFs.Test/Model/DocumentTypeOutTests.cs
 src/InvoicePDFs.Test/Model/DocumentTypesListResponseTests.cs
@@ -405,6 +418,7 @@ src/InvoicePDFs.Test/Model/HealthResponseTests.cs
 src/InvoicePDFs.Test/Model/ImportCreateRequestTests.cs
 src/InvoicePDFs.Test/Model/ImportOutTests.cs
 src/InvoicePDFs.Test/Model/ImportResponseTests.cs
+src/InvoicePDFs.Test/Model/ImportStatusTests.cs
 src/InvoicePDFs.Test/Model/InvoiceAttachmentCreateRequestTests.cs
 src/InvoicePDFs.Test/Model/InvoiceAttachmentOutTests.cs
 src/InvoicePDFs.Test/Model/InvoiceAttachmentResponseTests.cs
@@ -426,6 +440,7 @@ src/InvoicePDFs.Test/Model/InvoicesListResponseTests.cs
 src/InvoicePDFs.Test/Model/JobOutTests.cs
 src/InvoicePDFs.Test/Model/JobProgressOutTests.cs
 src/InvoicePDFs.Test/Model/JobResponseTests.cs
+src/InvoicePDFs.Test/Model/JobStatusTests.cs
 src/InvoicePDFs.Test/Model/JobsListResponseTests.cs
 src/InvoicePDFs.Test/Model/LineItemDiscountInputTests.cs
 src/InvoicePDFs.Test/Model/LineItemTaxInputTests.cs
@@ -454,11 +469,13 @@ src/InvoicePDFs.Test/Model/RecurringInvoiceCreateRequestTests.cs
 src/InvoicePDFs.Test/Model/RecurringInvoiceOutTests.cs
 src/InvoicePDFs.Test/Model/RecurringInvoicePatchRequestTests.cs
 src/InvoicePDFs.Test/Model/RecurringInvoiceResponseTests.cs
+src/InvoicePDFs.Test/Model/RecurringInvoiceStatusTests.cs
 src/InvoicePDFs.Test/Model/RecurringInvoicesListResponseTests.cs
 src/InvoicePDFs.Test/Model/RenderComplianceOutTests.cs
 src/InvoicePDFs.Test/Model/RenderFailureOutTests.cs
 src/InvoicePDFs.Test/Model/RenderOutTests.cs
 src/InvoicePDFs.Test/Model/RenderResponseTests.cs
+src/InvoicePDFs.Test/Model/RenderStatusTests.cs
 src/InvoicePDFs.Test/Model/SimpleBoolResponseTests.cs
 src/InvoicePDFs.Test/Model/StandardLineItemInputTests.cs
 src/InvoicePDFs.Test/Model/StatsCountsTests.cs
@@ -499,6 +516,7 @@ src/InvoicePDFs.Test/Model/VersionResponseTests.cs
 src/InvoicePDFs.Test/Model/WebhookDeliveriesListResponseTests.cs
 src/InvoicePDFs.Test/Model/WebhookDeliveryOutTests.cs
 src/InvoicePDFs.Test/Model/WebhookDeliveryResponseTests.cs
+src/InvoicePDFs.Test/Model/WebhookDeliveryStatusTests.cs
 src/InvoicePDFs.Test/Model/WebhookEndpointCreateRequestTests.cs
 src/InvoicePDFs.Test/Model/WebhookEndpointOutTests.cs
 src/InvoicePDFs.Test/Model/WebhookEndpointPatchRequestTests.cs
@@ -595,10 +613,12 @@ src/InvoicePDFs/Model/AuthTokenResponse.cs
 src/InvoicePDFs/Model/BatchCreateRequest.cs
 src/InvoicePDFs/Model/BatchItemInput.cs
 src/InvoicePDFs/Model/BatchItemOut.cs
+src/InvoicePDFs/Model/BatchItemStatus.cs
 src/InvoicePDFs/Model/BatchItemsListResponse.cs
 src/InvoicePDFs/Model/BatchOut.cs
 src/InvoicePDFs/Model/BatchOutputOptions.cs
 src/InvoicePDFs/Model/BatchResponse.cs
+src/InvoicePDFs/Model/BatchStatus.cs
 src/InvoicePDFs/Model/BatchesListResponse.cs
 src/InvoicePDFs/Model/BillingCheckoutData.cs
 src/InvoicePDFs/Model/BillingCheckoutRequest.cs
@@ -645,6 +665,7 @@ src/InvoicePDFs/Model/DeliveriesListResponse.cs
 src/InvoicePDFs/Model/DeliveryOut.cs
 src/InvoicePDFs/Model/DeliveryResponse.cs
 src/InvoicePDFs/Model/DeliverySendRequest.cs
+src/InvoicePDFs/Model/DeliveryStatus.cs
 src/InvoicePDFs/Model/DocumentBrandingInput.cs
 src/InvoicePDFs/Model/DocumentCalculateRequest.cs
 src/InvoicePDFs/Model/DocumentCalculateResponse.cs
@@ -665,6 +686,7 @@ src/InvoicePDFs/Model/DocumentRenderOptions.cs
 src/InvoicePDFs/Model/DocumentRenderRequest.cs
 src/InvoicePDFs/Model/DocumentResponse.cs
 src/InvoicePDFs/Model/DocumentShippingInput.cs
+src/InvoicePDFs/Model/DocumentStatus.cs
 src/InvoicePDFs/Model/DocumentTemplateRef.cs
 src/InvoicePDFs/Model/DocumentTypeOut.cs
 src/InvoicePDFs/Model/DocumentTypesListResponse.cs
@@ -678,6 +700,7 @@ src/InvoicePDFs/Model/HealthResponse.cs
 src/InvoicePDFs/Model/ImportCreateRequest.cs
 src/InvoicePDFs/Model/ImportOut.cs
 src/InvoicePDFs/Model/ImportResponse.cs
+src/InvoicePDFs/Model/ImportStatus.cs
 src/InvoicePDFs/Model/InvoiceAttachmentCreateRequest.cs
 src/InvoicePDFs/Model/InvoiceAttachmentOut.cs
 src/InvoicePDFs/Model/InvoiceAttachmentResponse.cs
@@ -699,6 +722,7 @@ src/InvoicePDFs/Model/InvoicesListResponse.cs
 src/InvoicePDFs/Model/JobOut.cs
 src/InvoicePDFs/Model/JobProgressOut.cs
 src/InvoicePDFs/Model/JobResponse.cs
+src/InvoicePDFs/Model/JobStatus.cs
 src/InvoicePDFs/Model/JobsListResponse.cs
 src/InvoicePDFs/Model/LineItemDiscountInput.cs
 src/InvoicePDFs/Model/LineItemTaxInput.cs
@@ -727,11 +751,13 @@ src/InvoicePDFs/Model/RecurringInvoiceCreateRequest.cs
 src/InvoicePDFs/Model/RecurringInvoiceOut.cs
 src/InvoicePDFs/Model/RecurringInvoicePatchRequest.cs
 src/InvoicePDFs/Model/RecurringInvoiceResponse.cs
+src/InvoicePDFs/Model/RecurringInvoiceStatus.cs
 src/InvoicePDFs/Model/RecurringInvoicesListResponse.cs
 src/InvoicePDFs/Model/RenderComplianceOut.cs
 src/InvoicePDFs/Model/RenderFailureOut.cs
 src/InvoicePDFs/Model/RenderOut.cs
 src/InvoicePDFs/Model/RenderResponse.cs
+src/InvoicePDFs/Model/RenderStatus.cs
 src/InvoicePDFs/Model/SimpleBoolResponse.cs
 src/InvoicePDFs/Model/StandardLineItemInput.cs
 src/InvoicePDFs/Model/StatsCounts.cs
@@ -772,6 +798,7 @@ src/InvoicePDFs/Model/VersionResponse.cs
 src/InvoicePDFs/Model/WebhookDeliveriesListResponse.cs
 src/InvoicePDFs/Model/WebhookDeliveryOut.cs
 src/InvoicePDFs/Model/WebhookDeliveryResponse.cs
+src/InvoicePDFs/Model/WebhookDeliveryStatus.cs
 src/InvoicePDFs/Model/WebhookEndpointCreateRequest.cs
 src/InvoicePDFs/Model/WebhookEndpointOut.cs
 src/InvoicePDFs/Model/WebhookEndpointPatchRequest.cs

@@ -31,49 +31,12 @@ namespace InvoicePDFs.Model
     [DataContract(Name = "BatchOut")]
     public partial class BatchOut : IValidatableObject
     {
-        /// <summary>
-        /// Defines Status
-        /// </summary>
-        [JsonConverter(typeof(StringEnumConverter))]
-        public enum StatusEnum
-        {
-            /// <summary>
-            /// Enum Queued for value: queued
-            /// </summary>
-            [EnumMember(Value = "queued")]
-            Queued = 1,
-
-            /// <summary>
-            /// Enum Processing for value: processing
-            /// </summary>
-            [EnumMember(Value = "processing")]
-            Processing = 2,
-
-            /// <summary>
-            /// Enum Completed for value: completed
-            /// </summary>
-            [EnumMember(Value = "completed")]
-            Completed = 3,
-
-            /// <summary>
-            /// Enum Failed for value: failed
-            /// </summary>
-            [EnumMember(Value = "failed")]
-            Failed = 4,
-
-            /// <summary>
-            /// Enum Cancelled for value: cancelled
-            /// </summary>
-            [EnumMember(Value = "cancelled")]
-            Cancelled = 5
-        }
-
 
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
         [DataMember(Name = "status", IsRequired = true, EmitDefaultValue = true)]
-        public StatusEnum Status { get; set; }
+        public BatchStatus Status { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="BatchOut" /> class.
         /// </summary>
@@ -93,7 +56,7 @@ namespace InvoicePDFs.Model
         /// <param name="createdAt">createdAt (required).</param>
         /// <param name="updatedAt">updatedAt (required).</param>
         /// <param name="completedAt">completedAt.</param>
-        public BatchOut(string id = default(string), StatusEnum status = default(StatusEnum), string operation = default(string), string templateId = default(string), int? templateVersion = default(int?), int totalItems = default(int), int completedItems = default(int), int failedItems = default(int), string createdAt = default(string), string updatedAt = default(string), string completedAt = default(string))
+        public BatchOut(string id = default(string), BatchStatus status = default(BatchStatus), string operation = default(string), string templateId = default(string), int? templateVersion = default(int?), int totalItems = default(int), int completedItems = default(int), int failedItems = default(int), string createdAt = default(string), string updatedAt = default(string), string completedAt = default(string))
         {
             // to ensure "id" is required (not null)
             if (id == null)

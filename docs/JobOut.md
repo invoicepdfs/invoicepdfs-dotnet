@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Id** | **string** |  | 
 **Type** | **string** |  | 
-**Status** | **string** |  | 
+**Status** | **JobStatus** |  | 
 **Progress** | [**JobProgressOut**](JobProgressOut.md) |  | 
 **Result** | **Dictionary&lt;string, Object&gt;** |  | [optional] 
 **Error** | **string** |  | [optional] 

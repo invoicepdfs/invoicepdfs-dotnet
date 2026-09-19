@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **Id** | **string** |  | 
 **ExternalId** | **string** |  | [optional] 
 **DocumentType** | **string** |  | 
-**Status** | **string** |  | 
+**Status** | **BatchItemStatus** |  | 
 **RenderId** | **string** |  | [optional] 
 **ErrorMessage** | **string** |  | [optional] 
 **CreatedAt** | **string** |  | 

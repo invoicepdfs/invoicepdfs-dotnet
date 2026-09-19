@@ -31,49 +31,12 @@ namespace InvoicePDFs.Model
     [DataContract(Name = "ImportOut")]
     public partial class ImportOut : IValidatableObject
     {
-        /// <summary>
-        /// Defines Status
-        /// </summary>
-        [JsonConverter(typeof(StringEnumConverter))]
-        public enum StatusEnum
-        {
-            /// <summary>
-            /// Enum Pending for value: pending
-            /// </summary>
-            [EnumMember(Value = "pending")]
-            Pending = 1,
-
-            /// <summary>
-            /// Enum Processing for value: processing
-            /// </summary>
-            [EnumMember(Value = "processing")]
-            Processing = 2,
-
-            /// <summary>
-            /// Enum Completed for value: completed
-            /// </summary>
-            [EnumMember(Value = "completed")]
-            Completed = 3,
-
-            /// <summary>
-            /// Enum Failed for value: failed
-            /// </summary>
-            [EnumMember(Value = "failed")]
-            Failed = 4,
-
-            /// <summary>
-            /// Enum Cancelled for value: cancelled
-            /// </summary>
-            [EnumMember(Value = "cancelled")]
-            Cancelled = 5
-        }
-
 
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
         [DataMember(Name = "status", IsRequired = true, EmitDefaultValue = true)]
-        public StatusEnum Status { get; set; }
+        public ImportStatus Status { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="ImportOut" /> class.
         /// </summary>
@@ -92,7 +55,7 @@ namespace InvoicePDFs.Model
         /// <param name="createdAt">createdAt (required).</param>
         /// <param name="updatedAt">updatedAt (required).</param>
         /// <param name="completedAt">completedAt.</param>
-        public ImportOut(string id = default(string), string sourceFormat = default(string), StatusEnum status = default(StatusEnum), int totalRows = default(int), int importedRows = default(int), int failedRows = default(int), List<Dictionary<string, Object>> errors = default(List<Dictionary<string, Object>>), string createdAt = default(string), string updatedAt = default(string), string completedAt = default(string))
+        public ImportOut(string id = default(string), string sourceFormat = default(string), ImportStatus status = default(ImportStatus), int totalRows = default(int), int importedRows = default(int), int failedRows = default(int), List<Dictionary<string, Object>> errors = default(List<Dictionary<string, Object>>), string createdAt = default(string), string updatedAt = default(string), string completedAt = default(string))
         {
             // to ensure "id" is required (not null)
             if (id == null)

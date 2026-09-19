@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **Id** | **string** |  | 
 **DocumentType** | **string** |  | 
 **Number** | **string** |  | 
-**Status** | **string** |  | 
+**Status** | **DocumentStatus** |  | 
 **IssueDate** | **DateOnly** |  | 
 **DueDate** | **DateOnly** |  | [optional] 
 **Currency** | **string** |  | 

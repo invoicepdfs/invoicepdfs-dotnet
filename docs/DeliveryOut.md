@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **Subject** | **string** |  | 
 **Message** | **string** |  | [optional] 
 **AttachPdf** | **bool** |  | 
-**Status** | **string** |  | 
+**Status** | **DeliveryStatus** |  | 
 **CreatedAt** | **string** |  | 
 **SentAt** | **string** |  | [optional] 
 

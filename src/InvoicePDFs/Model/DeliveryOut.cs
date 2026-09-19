@@ -31,37 +31,12 @@ namespace InvoicePDFs.Model
     [DataContract(Name = "DeliveryOut")]
     public partial class DeliveryOut : IValidatableObject
     {
-        /// <summary>
-        /// Defines Status
-        /// </summary>
-        [JsonConverter(typeof(StringEnumConverter))]
-        public enum StatusEnum
-        {
-            /// <summary>
-            /// Enum Queued for value: queued
-            /// </summary>
-            [EnumMember(Value = "queued")]
-            Queued = 1,
-
-            /// <summary>
-            /// Enum Sent for value: sent
-            /// </summary>
-            [EnumMember(Value = "sent")]
-            Sent = 2,
-
-            /// <summary>
-            /// Enum Failed for value: failed
-            /// </summary>
-            [EnumMember(Value = "failed")]
-            Failed = 3
-        }
-
 
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
         [DataMember(Name = "status", IsRequired = true, EmitDefaultValue = true)]
-        public StatusEnum Status { get; set; }
+        public DeliveryStatus Status { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="DeliveryOut" /> class.
         /// </summary>
@@ -81,7 +56,7 @@ namespace InvoicePDFs.Model
         /// <param name="status">status (required).</param>
         /// <param name="createdAt">createdAt (required).</param>
         /// <param name="sentAt">sentAt.</param>
-        public DeliveryOut(string id = default(string), string invoiceId = default(string), List<string> to = default(List<string>), List<string> cc = default(List<string>), List<string> bcc = default(List<string>), string subject = default(string), string message = default(string), bool attachPdf = default(bool), StatusEnum status = default(StatusEnum), string createdAt = default(string), string sentAt = default(string))
+        public DeliveryOut(string id = default(string), string invoiceId = default(string), List<string> to = default(List<string>), List<string> cc = default(List<string>), List<string> bcc = default(List<string>), string subject = default(string), string message = default(string), bool attachPdf = default(bool), DeliveryStatus status = default(DeliveryStatus), string createdAt = default(string), string sentAt = default(string))
         {
             // to ensure "id" is required (not null)
             if (id == null)

@@ -31,6 +31,12 @@ namespace InvoicePDFs.Model
     [DataContract(Name = "RecurringInvoiceOut")]
     public partial class RecurringInvoiceOut : IValidatableObject
     {
+
+        /// <summary>
+        /// Gets or Sets Status
+        /// </summary>
+        [DataMember(Name = "status", IsRequired = true, EmitDefaultValue = true)]
+        public RecurringInvoiceStatus Status { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="RecurringInvoiceOut" /> class.
         /// </summary>
@@ -53,7 +59,7 @@ namespace InvoicePDFs.Model
         /// <param name="autoFinalize">autoFinalize (required).</param>
         /// <param name="createdAt">createdAt (required).</param>
         /// <param name="updatedAt">updatedAt (required).</param>
-        public RecurringInvoiceOut(string id = default(string), string status = default(string), string businessProfileId = default(string), string customerId = default(string), string frequency = default(string), int interval = default(int), DateOnly nextOccurrenceDate = default(DateOnly), DateOnly endDate = default(DateOnly), int occurrencesCreated = default(int), int? maxOccurrences = default(int?), string numberingSequenceId = default(string), bool autoFinalize = default(bool), string createdAt = default(string), string updatedAt = default(string))
+        public RecurringInvoiceOut(string id = default(string), RecurringInvoiceStatus status = default(RecurringInvoiceStatus), string businessProfileId = default(string), string customerId = default(string), string frequency = default(string), int interval = default(int), DateOnly nextOccurrenceDate = default(DateOnly), DateOnly endDate = default(DateOnly), int occurrencesCreated = default(int), int? maxOccurrences = default(int?), string numberingSequenceId = default(string), bool autoFinalize = default(bool), string createdAt = default(string), string updatedAt = default(string))
         {
             // to ensure "id" is required (not null)
             if (id == null)
@@ -61,11 +67,6 @@ namespace InvoicePDFs.Model
                 throw new ArgumentNullException("id is a required property for RecurringInvoiceOut and cannot be null");
             }
             this.Id = id;
-            // to ensure "status" is required (not null)
-            if (status == null)
-            {
-                throw new ArgumentNullException("status is a required property for RecurringInvoiceOut and cannot be null");
-            }
             this.Status = status;
             // to ensure "businessProfileId" is required (not null)
             if (businessProfileId == null)
@@ -131,12 +132,6 @@ namespace InvoicePDFs.Model
         /// </summary>
         [DataMember(Name = "id", IsRequired = true, EmitDefaultValue = true)]
         public string Id { get; set; }
-
-        /// <summary>
-        /// Gets or Sets Status
-        /// </summary>
-        [DataMember(Name = "status", IsRequired = true, EmitDefaultValue = true)]
-        public string Status { get; set; }
 
         /// <summary>
         /// Gets or Sets BusinessProfileId

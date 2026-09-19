@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Id** | **string** |  | 
-**Status** | **string** |  | 
+**Status** | **DocumentStatus** |  | 
 **InvoiceNumber** | **string** |  | 
 **DocumentType** | **string** |  | 
 **IssueDate** | **DateOnly** |  | 

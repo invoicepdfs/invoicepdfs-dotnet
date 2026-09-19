@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Id** | **string** |  | 
 **SourceFormat** | **string** |  | 
-**Status** | **string** |  | 
+**Status** | **ImportStatus** |  | 
 **TotalRows** | **int** |  | 
 **ImportedRows** | **int** |  | 
 **FailedRows** | **int** |  | 

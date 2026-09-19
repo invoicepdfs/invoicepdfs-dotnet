@@ -31,49 +31,12 @@ namespace InvoicePDFs.Model
     [DataContract(Name = "JobOut")]
     public partial class JobOut : IValidatableObject
     {
-        /// <summary>
-        /// Defines Status
-        /// </summary>
-        [JsonConverter(typeof(StringEnumConverter))]
-        public enum StatusEnum
-        {
-            /// <summary>
-            /// Enum Queued for value: queued
-            /// </summary>
-            [EnumMember(Value = "queued")]
-            Queued = 1,
-
-            /// <summary>
-            /// Enum Processing for value: processing
-            /// </summary>
-            [EnumMember(Value = "processing")]
-            Processing = 2,
-
-            /// <summary>
-            /// Enum Completed for value: completed
-            /// </summary>
-            [EnumMember(Value = "completed")]
-            Completed = 3,
-
-            /// <summary>
-            /// Enum Failed for value: failed
-            /// </summary>
-            [EnumMember(Value = "failed")]
-            Failed = 4,
-
-            /// <summary>
-            /// Enum Cancelled for value: cancelled
-            /// </summary>
-            [EnumMember(Value = "cancelled")]
-            Cancelled = 5
-        }
-
 
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
         [DataMember(Name = "status", IsRequired = true, EmitDefaultValue = true)]
-        public StatusEnum Status { get; set; }
+        public JobStatus Status { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="JobOut" /> class.
         /// </summary>
@@ -91,7 +54,7 @@ namespace InvoicePDFs.Model
         /// <param name="createdAt">createdAt (required).</param>
         /// <param name="startedAt">startedAt.</param>
         /// <param name="completedAt">completedAt.</param>
-        public JobOut(string id = default(string), string type = default(string), StatusEnum status = default(StatusEnum), JobProgressOut progress = default(JobProgressOut), Dictionary<string, Object> result = default(Dictionary<string, Object>), string error = default(string), string createdAt = default(string), string startedAt = default(string), string completedAt = default(string))
+        public JobOut(string id = default(string), string type = default(string), JobStatus status = default(JobStatus), JobProgressOut progress = default(JobProgressOut), Dictionary<string, Object> result = default(Dictionary<string, Object>), string error = default(string), string createdAt = default(string), string startedAt = default(string), string completedAt = default(string))
         {
             // to ensure "id" is required (not null)
             if (id == null)

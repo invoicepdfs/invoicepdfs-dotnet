@@ -92,6 +92,12 @@ namespace InvoicePDFs.Model
         /// </summary>
         [DataMember(Name = "document_type", IsRequired = true, EmitDefaultValue = true)]
         public DocumentTypeEnum DocumentType { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Status
+        /// </summary>
+        [DataMember(Name = "status", IsRequired = true, EmitDefaultValue = true)]
+        public DocumentStatus Status { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="DocumentOut" /> class.
         /// </summary>
@@ -117,7 +123,7 @@ namespace InvoicePDFs.Model
         /// <param name="createdAt">createdAt (required).</param>
         /// <param name="updatedAt">updatedAt (required).</param>
         /// <param name="finalizedAt">finalizedAt.</param>
-        public DocumentOut(string id = default(string), DocumentTypeEnum documentType = default(DocumentTypeEnum), string number = default(string), string status = default(string), DateOnly issueDate = default(DateOnly), DateOnly dueDate = default(DateOnly), string currency = default(string), string locale = default(string), string businessProfileId = default(string), string customerId = default(string), string sourceDocumentId = default(string), string reason = default(string), Dictionary<string, Object> data = default(Dictionary<string, Object>), InvoiceTotalsOut totals = default(InvoiceTotalsOut), string createdAt = default(string), string updatedAt = default(string), string finalizedAt = default(string))
+        public DocumentOut(string id = default(string), DocumentTypeEnum documentType = default(DocumentTypeEnum), string number = default(string), DocumentStatus status = default(DocumentStatus), DateOnly issueDate = default(DateOnly), DateOnly dueDate = default(DateOnly), string currency = default(string), string locale = default(string), string businessProfileId = default(string), string customerId = default(string), string sourceDocumentId = default(string), string reason = default(string), Dictionary<string, Object> data = default(Dictionary<string, Object>), InvoiceTotalsOut totals = default(InvoiceTotalsOut), string createdAt = default(string), string updatedAt = default(string), string finalizedAt = default(string))
         {
             // to ensure "id" is required (not null)
             if (id == null)
@@ -132,11 +138,6 @@ namespace InvoicePDFs.Model
                 throw new ArgumentNullException("number is a required property for DocumentOut and cannot be null");
             }
             this.Number = number;
-            // to ensure "status" is required (not null)
-            if (status == null)
-            {
-                throw new ArgumentNullException("status is a required property for DocumentOut and cannot be null");
-            }
             this.Status = status;
             // to ensure "issueDate" is required (not null)
             if (issueDate == null)
@@ -204,12 +205,6 @@ namespace InvoicePDFs.Model
         /// </summary>
         [DataMember(Name = "number", IsRequired = true, EmitDefaultValue = true)]
         public string Number { get; set; }
-
-        /// <summary>
-        /// Gets or Sets Status
-        /// </summary>
-        [DataMember(Name = "status", IsRequired = true, EmitDefaultValue = true)]
-        public string Status { get; set; }
 
         /// <summary>
         /// Gets or Sets IssueDate

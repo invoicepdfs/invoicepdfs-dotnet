@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **EndpointId** | **string** |  | 
 **EventId** | **string** |  | 
 **EventType** | **string** |  | 
-**Status** | **string** |  | 
+**Status** | **WebhookDeliveryStatus** |  | 
 **HttpStatus** | **int?** |  | [optional] 
 **Attempts** | **int** |  | 
 **ErrorMessage** | **string** |  | [optional] 

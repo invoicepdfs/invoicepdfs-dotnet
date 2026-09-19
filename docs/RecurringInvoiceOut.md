@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Id** | **string** |  | 
-**Status** | **string** |  | 
+**Status** | **RecurringInvoiceStatus** |  | 
 **BusinessProfileId** | **string** |  | 
 **CustomerId** | **string** |  | 
 **Frequency** | **string** |  | 

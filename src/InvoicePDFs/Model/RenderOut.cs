@@ -31,43 +31,12 @@ namespace InvoicePDFs.Model
     [DataContract(Name = "RenderOut")]
     public partial class RenderOut : IValidatableObject
     {
-        /// <summary>
-        /// Defines Status
-        /// </summary>
-        [JsonConverter(typeof(StringEnumConverter))]
-        public enum StatusEnum
-        {
-            /// <summary>
-            /// Enum Queued for value: queued
-            /// </summary>
-            [EnumMember(Value = "queued")]
-            Queued = 1,
-
-            /// <summary>
-            /// Enum Processing for value: processing
-            /// </summary>
-            [EnumMember(Value = "processing")]
-            Processing = 2,
-
-            /// <summary>
-            /// Enum Completed for value: completed
-            /// </summary>
-            [EnumMember(Value = "completed")]
-            Completed = 3,
-
-            /// <summary>
-            /// Enum Failed for value: failed
-            /// </summary>
-            [EnumMember(Value = "failed")]
-            Failed = 4
-        }
-
 
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
         [DataMember(Name = "status", IsRequired = true, EmitDefaultValue = true)]
-        public StatusEnum Status { get; set; }
+        public RenderStatus Status { get; set; }
         /// <summary>
         /// Defines DocumentType
         /// </summary>
@@ -168,7 +137,7 @@ namespace InvoicePDFs.Model
         /// <param name="createdAt">createdAt (required).</param>
         /// <param name="compliance">compliance.</param>
         /// <param name="failure">failure.</param>
-        public RenderOut(string id = default(string), StatusEnum status = default(StatusEnum), DocumentTypeEnum documentType = default(DocumentTypeEnum), string templateId = default(string), int? templateVersion = default(int?), FormatEnum format = default(FormatEnum), string downloadUrl = default(string), string expiresAt = default(string), CalculationBreakdown calculation = default(CalculationBreakdown), string createdAt = default(string), RenderComplianceOut compliance = default(RenderComplianceOut), RenderFailureOut failure = default(RenderFailureOut))
+        public RenderOut(string id = default(string), RenderStatus status = default(RenderStatus), DocumentTypeEnum documentType = default(DocumentTypeEnum), string templateId = default(string), int? templateVersion = default(int?), FormatEnum format = default(FormatEnum), string downloadUrl = default(string), string expiresAt = default(string), CalculationBreakdown calculation = default(CalculationBreakdown), string createdAt = default(string), RenderComplianceOut compliance = default(RenderComplianceOut), RenderFailureOut failure = default(RenderFailureOut))
         {
             // to ensure "id" is required (not null)
             if (id == null)

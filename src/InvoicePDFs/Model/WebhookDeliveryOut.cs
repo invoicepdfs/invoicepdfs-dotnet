@@ -31,43 +31,12 @@ namespace InvoicePDFs.Model
     [DataContract(Name = "WebhookDeliveryOut")]
     public partial class WebhookDeliveryOut : IValidatableObject
     {
-        /// <summary>
-        /// Defines Status
-        /// </summary>
-        [JsonConverter(typeof(StringEnumConverter))]
-        public enum StatusEnum
-        {
-            /// <summary>
-            /// Enum Pending for value: pending
-            /// </summary>
-            [EnumMember(Value = "pending")]
-            Pending = 1,
-
-            /// <summary>
-            /// Enum Retrying for value: retrying
-            /// </summary>
-            [EnumMember(Value = "retrying")]
-            Retrying = 2,
-
-            /// <summary>
-            /// Enum Delivered for value: delivered
-            /// </summary>
-            [EnumMember(Value = "delivered")]
-            Delivered = 3,
-
-            /// <summary>
-            /// Enum Failed for value: failed
-            /// </summary>
-            [EnumMember(Value = "failed")]
-            Failed = 4
-        }
-
 
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
         [DataMember(Name = "status", IsRequired = true, EmitDefaultValue = true)]
-        public StatusEnum Status { get; set; }
+        public WebhookDeliveryStatus Status { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="WebhookDeliveryOut" /> class.
         /// </summary>
@@ -86,7 +55,7 @@ namespace InvoicePDFs.Model
         /// <param name="errorMessage">errorMessage.</param>
         /// <param name="createdAt">createdAt (required).</param>
         /// <param name="deliveredAt">deliveredAt.</param>
-        public WebhookDeliveryOut(string id = default(string), string endpointId = default(string), string eventId = default(string), string eventType = default(string), StatusEnum status = default(StatusEnum), int? httpStatus = default(int?), int attempts = default(int), string errorMessage = default(string), string createdAt = default(string), string deliveredAt = default(string))
+        public WebhookDeliveryOut(string id = default(string), string endpointId = default(string), string eventId = default(string), string eventType = default(string), WebhookDeliveryStatus status = default(WebhookDeliveryStatus), int? httpStatus = default(int?), int attempts = default(int), string errorMessage = default(string), string createdAt = default(string), string deliveredAt = default(string))
         {
             // to ensure "id" is required (not null)
             if (id == null)

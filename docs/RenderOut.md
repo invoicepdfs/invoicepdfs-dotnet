@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Id** | **string** |  | 
-**Status** | **string** |  | 
+**Status** | **RenderStatus** |  | 
 **DocumentType** | **string** |  | 
 **TemplateId** | **string** |  | 
 **TemplateVersion** | **int?** |  | [optional] 

@@ -31,37 +31,12 @@ namespace InvoicePDFs.Model
     [DataContract(Name = "BatchItemOut")]
     public partial class BatchItemOut : IValidatableObject
     {
-        /// <summary>
-        /// Defines Status
-        /// </summary>
-        [JsonConverter(typeof(StringEnumConverter))]
-        public enum StatusEnum
-        {
-            /// <summary>
-            /// Enum Pending for value: pending
-            /// </summary>
-            [EnumMember(Value = "pending")]
-            Pending = 1,
-
-            /// <summary>
-            /// Enum Completed for value: completed
-            /// </summary>
-            [EnumMember(Value = "completed")]
-            Completed = 2,
-
-            /// <summary>
-            /// Enum Failed for value: failed
-            /// </summary>
-            [EnumMember(Value = "failed")]
-            Failed = 3
-        }
-
 
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
         [DataMember(Name = "status", IsRequired = true, EmitDefaultValue = true)]
-        public StatusEnum Status { get; set; }
+        public BatchItemStatus Status { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="BatchItemOut" /> class.
         /// </summary>
@@ -77,7 +52,7 @@ namespace InvoicePDFs.Model
         /// <param name="renderId">renderId.</param>
         /// <param name="errorMessage">errorMessage.</param>
         /// <param name="createdAt">createdAt (required).</param>
-        public BatchItemOut(string id = default(string), string externalId = default(string), string documentType = default(string), StatusEnum status = default(StatusEnum), string renderId = default(string), string errorMessage = default(string), string createdAt = default(string))
+        public BatchItemOut(string id = default(string), string externalId = default(string), string documentType = default(string), BatchItemStatus status = default(BatchItemStatus), string renderId = default(string), string errorMessage = default(string), string createdAt = default(string))
         {
             // to ensure "id" is required (not null)
             if (id == null)

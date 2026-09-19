@@ -31,55 +31,12 @@ namespace InvoicePDFs.Model
     [DataContract(Name = "InvoiceOut")]
     public partial class InvoiceOut : IValidatableObject
     {
-        /// <summary>
-        /// Defines Status
-        /// </summary>
-        [JsonConverter(typeof(StringEnumConverter))]
-        public enum StatusEnum
-        {
-            /// <summary>
-            /// Enum Draft for value: draft
-            /// </summary>
-            [EnumMember(Value = "draft")]
-            Draft = 1,
-
-            /// <summary>
-            /// Enum Finalized for value: finalized
-            /// </summary>
-            [EnumMember(Value = "finalized")]
-            Finalized = 2,
-
-            /// <summary>
-            /// Enum Sent for value: sent
-            /// </summary>
-            [EnumMember(Value = "sent")]
-            Sent = 3,
-
-            /// <summary>
-            /// Enum Paid for value: paid
-            /// </summary>
-            [EnumMember(Value = "paid")]
-            Paid = 4,
-
-            /// <summary>
-            /// Enum Void for value: void
-            /// </summary>
-            [EnumMember(Value = "void")]
-            Void = 5,
-
-            /// <summary>
-            /// Enum Archived for value: archived
-            /// </summary>
-            [EnumMember(Value = "archived")]
-            Archived = 6
-        }
-
 
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
         [DataMember(Name = "status", IsRequired = true, EmitDefaultValue = true)]
-        public StatusEnum Status { get; set; }
+        public DocumentStatus Status { get; set; }
         /// <summary>
         /// Defines DocumentType
         /// </summary>
@@ -164,7 +121,7 @@ namespace InvoicePDFs.Model
         /// <param name="createdAt">createdAt (required).</param>
         /// <param name="updatedAt">updatedAt (required).</param>
         /// <param name="finalizedAt">finalizedAt.</param>
-        public InvoiceOut(string id = default(string), StatusEnum status = default(StatusEnum), string invoiceNumber = default(string), DocumentTypeEnum documentType = default(DocumentTypeEnum), DateOnly issueDate = default(DateOnly), DateOnly dueDate = default(DateOnly), string currency = default(string), string locale = default(string), string businessProfileId = default(string), string customerId = default(string), Dictionary<string, Object> invoice = default(Dictionary<string, Object>), InvoiceTotalsOut totals = default(InvoiceTotalsOut), string createdAt = default(string), string updatedAt = default(string), string finalizedAt = default(string))
+        public InvoiceOut(string id = default(string), DocumentStatus status = default(DocumentStatus), string invoiceNumber = default(string), DocumentTypeEnum documentType = default(DocumentTypeEnum), DateOnly issueDate = default(DateOnly), DateOnly dueDate = default(DateOnly), string currency = default(string), string locale = default(string), string businessProfileId = default(string), string customerId = default(string), Dictionary<string, Object> invoice = default(Dictionary<string, Object>), InvoiceTotalsOut totals = default(InvoiceTotalsOut), string createdAt = default(string), string updatedAt = default(string), string finalizedAt = default(string))
         {
             // to ensure "id" is required (not null)
             if (id == null)
