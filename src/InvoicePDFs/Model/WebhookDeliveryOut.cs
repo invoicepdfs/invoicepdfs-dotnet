@@ -44,16 +44,22 @@ namespace InvoicePDFs.Model
             Pending = 1,
 
             /// <summary>
+            /// Enum Retrying for value: retrying
+            /// </summary>
+            [EnumMember(Value = "retrying")]
+            Retrying = 2,
+
+            /// <summary>
             /// Enum Delivered for value: delivered
             /// </summary>
             [EnumMember(Value = "delivered")]
-            Delivered = 2,
+            Delivered = 3,
 
             /// <summary>
             /// Enum Failed for value: failed
             /// </summary>
             [EnumMember(Value = "failed")]
-            Failed = 3
+            Failed = 4
         }
 
 

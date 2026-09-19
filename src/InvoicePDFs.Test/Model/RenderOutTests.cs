@@ -152,5 +152,14 @@ namespace InvoicePDFs.Test.Model
         {
             // TODO unit test for the property 'Compliance'
         }
+
+        /// <summary>
+        /// Test the property 'Failure'
+        /// </summary>
+        [Fact]
+        public void FailureTest()
+        {
+            // TODO unit test for the property 'Failure'
+        }
     }
 }

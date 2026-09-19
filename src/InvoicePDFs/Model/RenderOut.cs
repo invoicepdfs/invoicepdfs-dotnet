@@ -38,10 +38,28 @@ namespace InvoicePDFs.Model
         public enum StatusEnum
         {
             /// <summary>
+            /// Enum Queued for value: queued
+            /// </summary>
+            [EnumMember(Value = "queued")]
+            Queued = 1,
+
+            /// <summary>
+            /// Enum Processing for value: processing
+            /// </summary>
+            [EnumMember(Value = "processing")]
+            Processing = 2,
+
+            /// <summary>
             /// Enum Completed for value: completed
             /// </summary>
             [EnumMember(Value = "completed")]
-            Completed = 1
+            Completed = 3,
+
+            /// <summary>
+            /// Enum Failed for value: failed
+            /// </summary>
+            [EnumMember(Value = "failed")]
+            Failed = 4
         }
 
 
@@ -144,12 +162,13 @@ namespace InvoicePDFs.Model
         /// <param name="templateId">templateId (required).</param>
         /// <param name="templateVersion">templateVersion.</param>
         /// <param name="format">format (required).</param>
-        /// <param name="downloadUrl">downloadUrl (required).</param>
-        /// <param name="expiresAt">expiresAt (required).</param>
+        /// <param name="downloadUrl">downloadUrl.</param>
+        /// <param name="expiresAt">expiresAt.</param>
         /// <param name="calculation">calculation (required).</param>
         /// <param name="createdAt">createdAt (required).</param>
         /// <param name="compliance">compliance.</param>
-        public RenderOut(string id = default(string), StatusEnum status = default(StatusEnum), DocumentTypeEnum documentType = default(DocumentTypeEnum), string templateId = default(string), int? templateVersion = default(int?), FormatEnum format = default(FormatEnum), string downloadUrl = default(string), string expiresAt = default(string), CalculationBreakdown calculation = default(CalculationBreakdown), string createdAt = default(string), RenderComplianceOut compliance = default(RenderComplianceOut))
+        /// <param name="failure">failure.</param>
+        public RenderOut(string id = default(string), StatusEnum status = default(StatusEnum), DocumentTypeEnum documentType = default(DocumentTypeEnum), string templateId = default(string), int? templateVersion = default(int?), FormatEnum format = default(FormatEnum), string downloadUrl = default(string), string expiresAt = default(string), CalculationBreakdown calculation = default(CalculationBreakdown), string createdAt = default(string), RenderComplianceOut compliance = default(RenderComplianceOut), RenderFailureOut failure = default(RenderFailureOut))
         {
             // to ensure "id" is required (not null)
             if (id == null)
@@ -166,18 +185,6 @@ namespace InvoicePDFs.Model
             }
             this.TemplateId = templateId;
             this.Format = format;
-            // to ensure "downloadUrl" is required (not null)
-            if (downloadUrl == null)
-            {
-                throw new ArgumentNullException("downloadUrl is a required property for RenderOut and cannot be null");
-            }
-            this.DownloadUrl = downloadUrl;
-            // to ensure "expiresAt" is required (not null)
-            if (expiresAt == null)
-            {
-                throw new ArgumentNullException("expiresAt is a required property for RenderOut and cannot be null");
-            }
-            this.ExpiresAt = expiresAt;
             // to ensure "calculation" is required (not null)
             if (calculation == null)
             {
@@ -191,7 +198,10 @@ namespace InvoicePDFs.Model
             }
             this.CreatedAt = createdAt;
             this.TemplateVersion = templateVersion;
+            this.DownloadUrl = downloadUrl;
+            this.ExpiresAt = expiresAt;
             this.Compliance = compliance;
+            this.Failure = failure;
         }
 
         /// <summary>
@@ -215,13 +225,13 @@ namespace InvoicePDFs.Model
         /// <summary>
         /// Gets or Sets DownloadUrl
         /// </summary>
-        [DataMember(Name = "download_url", IsRequired = true, EmitDefaultValue = true)]
+        [DataMember(Name = "download_url", EmitDefaultValue = true)]
         public string DownloadUrl { get; set; }
 
         /// <summary>
         /// Gets or Sets ExpiresAt
         /// </summary>
-        [DataMember(Name = "expires_at", IsRequired = true, EmitDefaultValue = true)]
+        [DataMember(Name = "expires_at", EmitDefaultValue = true)]
         public string ExpiresAt { get; set; }
 
         /// <summary>
@@ -243,6 +253,12 @@ namespace InvoicePDFs.Model
         public RenderComplianceOut Compliance { get; set; }
 
         /// <summary>
+        /// Gets or Sets Failure
+        /// </summary>
+        [DataMember(Name = "failure", EmitDefaultValue = true)]
+        public RenderFailureOut Failure { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -261,6 +277,7 @@ namespace InvoicePDFs.Model
             sb.Append("  Calculation: ").Append(Calculation).Append("\n");
             sb.Append("  CreatedAt: ").Append(CreatedAt).Append("\n");
             sb.Append("  Compliance: ").Append(Compliance).Append("\n");
+            sb.Append("  Failure: ").Append(Failure).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

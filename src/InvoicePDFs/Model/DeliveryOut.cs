@@ -50,22 +50,10 @@ namespace InvoicePDFs.Model
             Sent = 2,
 
             /// <summary>
-            /// Enum Delivered for value: delivered
-            /// </summary>
-            [EnumMember(Value = "delivered")]
-            Delivered = 3,
-
-            /// <summary>
-            /// Enum Bounced for value: bounced
-            /// </summary>
-            [EnumMember(Value = "bounced")]
-            Bounced = 4,
-
-            /// <summary>
             /// Enum Failed for value: failed
             /// </summary>
             [EnumMember(Value = "failed")]
-            Failed = 5
+            Failed = 3
         }
 
 

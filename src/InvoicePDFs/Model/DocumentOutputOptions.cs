@@ -82,15 +82,44 @@ namespace InvoicePDFs.Model
         [DataMember(Name = "delivery", EmitDefaultValue = false)]
         public DeliveryEnum? Delivery { get; set; }
         /// <summary>
+        /// &#x60;sync&#x60; renders inside the request and answers with the finished document. &#x60;async&#x60; returns &#x60;202&#x60; with a &#x60;queued&#x60; render a worker picks up; follow it with &#x60;GET /renders/{id}&#x60;. Use it for bursts — rendering is CPU-bound, so a hundred at once queue behind each other whichever mode you ask for, and only one of the two holds a connection open while they do.
+        /// </summary>
+        /// <value>&#x60;sync&#x60; renders inside the request and answers with the finished document. &#x60;async&#x60; returns &#x60;202&#x60; with a &#x60;queued&#x60; render a worker picks up; follow it with &#x60;GET /renders/{id}&#x60;. Use it for bursts — rendering is CPU-bound, so a hundred at once queue behind each other whichever mode you ask for, and only one of the two holds a connection open while they do.</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum ModeEnum
+        {
+            /// <summary>
+            /// Enum Sync for value: sync
+            /// </summary>
+            [EnumMember(Value = "sync")]
+            Sync = 1,
+
+            /// <summary>
+            /// Enum Async for value: async
+            /// </summary>
+            [EnumMember(Value = "async")]
+            Async = 2
+        }
+
+
+        /// <summary>
+        /// &#x60;sync&#x60; renders inside the request and answers with the finished document. &#x60;async&#x60; returns &#x60;202&#x60; with a &#x60;queued&#x60; render a worker picks up; follow it with &#x60;GET /renders/{id}&#x60;. Use it for bursts — rendering is CPU-bound, so a hundred at once queue behind each other whichever mode you ask for, and only one of the two holds a connection open while they do.
+        /// </summary>
+        /// <value>&#x60;sync&#x60; renders inside the request and answers with the finished document. &#x60;async&#x60; returns &#x60;202&#x60; with a &#x60;queued&#x60; render a worker picks up; follow it with &#x60;GET /renders/{id}&#x60;. Use it for bursts — rendering is CPU-bound, so a hundred at once queue behind each other whichever mode you ask for, and only one of the two holds a connection open while they do.</value>
+        [DataMember(Name = "mode", EmitDefaultValue = false)]
+        public ModeEnum? Mode { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="DocumentOutputOptions" /> class.
         /// </summary>
         /// <param name="format">format (default to FormatEnum.Pdf).</param>
         /// <param name="delivery">delivery (default to DeliveryEnum.Url).</param>
+        /// <param name="mode">&#x60;sync&#x60; renders inside the request and answers with the finished document. &#x60;async&#x60; returns &#x60;202&#x60; with a &#x60;queued&#x60; render a worker picks up; follow it with &#x60;GET /renders/{id}&#x60;. Use it for bursts — rendering is CPU-bound, so a hundred at once queue behind each other whichever mode you ask for, and only one of the two holds a connection open while they do. (default to ModeEnum.Sync).</param>
         /// <param name="expiresIn">How long the render stays downloadable, in seconds (1 minute to 7 days). It is also the lifetime of the signature in &#x60;download_url&#x60;, which is why it is bounded: an unbounded value meant an unbounded grant. A value below the floor used to be accepted and produced a render that had already expired. (default to 3600).</param>
-        public DocumentOutputOptions(FormatEnum? format = FormatEnum.Pdf, DeliveryEnum? delivery = DeliveryEnum.Url, int expiresIn = 3600)
+        public DocumentOutputOptions(FormatEnum? format = FormatEnum.Pdf, DeliveryEnum? delivery = DeliveryEnum.Url, ModeEnum? mode = ModeEnum.Sync, int expiresIn = 3600)
         {
             this.Format = format;
             this.Delivery = delivery;
+            this.Mode = mode;
             this.ExpiresIn = expiresIn;
         }
 
@@ -111,6 +140,7 @@ namespace InvoicePDFs.Model
             sb.Append("class DocumentOutputOptions {\n");
             sb.Append("  Format: ").Append(Format).Append("\n");
             sb.Append("  Delivery: ").Append(Delivery).Append("\n");
+            sb.Append("  Mode: ").Append(Mode).Append("\n");
             sb.Append("  ExpiresIn: ").Append(ExpiresIn).Append("\n");
             sb.Append("}\n");
             return sb.ToString();

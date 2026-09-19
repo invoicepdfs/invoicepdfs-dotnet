@@ -10,11 +10,12 @@ Name | Type | Description | Notes
 **TemplateId** | **string** |  | 
 **TemplateVersion** | **int?** |  | [optional] 
 **Format** | **string** |  | 
-**DownloadUrl** | **string** |  | 
-**ExpiresAt** | **string** |  | 
+**DownloadUrl** | **string** |  | [optional] 
+**ExpiresAt** | **string** |  | [optional] 
 **Calculation** | [**CalculationBreakdown**](CalculationBreakdown.md) |  | 
 **CreatedAt** | **string** |  | 
 **Compliance** | [**RenderComplianceOut**](RenderComplianceOut.md) |  | [optional] 
+**Failure** | [**RenderFailureOut**](RenderFailureOut.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
