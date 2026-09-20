@@ -26,7 +26,7 @@ using OpenAPIDateConverter = InvoicePDFs.Client.OpenAPIDateConverter;
 namespace InvoicePDFs.Model
 {
     /// <summary>
-    /// Render options for an already-stored document (&#x60;&#x60;POST /documents/{id}/renders&#x60;&#x60;).  Distinct from &#x60;&#x60;app.schemas.v1.DocumentRenderRequest&#x60;&#x60;, which carries a full inline document for the stateless &#x60;&#x60;POST /documents/render&#x60;&#x60;. Two classes sharing one name made FastAPI fall back to module-qualified schema names in the spec (&#x60;&#x60;app__documents__schemas__DocumentRenderRequest&#x60;&#x60;), which the SDK generators turned into &#x60;&#x60;AppDocumentsSchemasDocumentRenderRequest&#x60;&#x60;.
+    /// Render options for a document that is already stored.  For &#x60;&#x60;POST /documents/{id}/renders&#x60;&#x60;. The stateless &#x60;&#x60;POST /documents/render&#x60;&#x60; takes the whole document inline instead.
     /// </summary>
     [DataContract(Name = "DocumentRenderOptions")]
     public partial class DocumentRenderOptions : IValidatableObject

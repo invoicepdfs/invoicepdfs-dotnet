@@ -1,5 +1,5 @@
 # InvoicePDFs.Model.ImportStatus
-Three, not the five that were published. `confirm_import` does the work inside the request — \"For MVP, mark as completed immediately; future: background processing\" (app/api/v1/imports.py) — so nothing is ever `processing`, and nothing sets `failed`. They described a background path that was never built, the same way `render.*` events and `bounced` did.
+How far an import has got.  `confirm_import` completes the work before it responds, so an import is `pending` until it is confirmed and `completed` immediately afterwards.
 
 ## Properties
 

@@ -1,5 +1,5 @@
 # InvoicePDFs.Model.RecurringInvoiceStatus
-`completed` is the schedule running out, not a failure — set by app/recurring/processor.py when the end date or occurrence count is reached. `RecurringInvoiceOut.status` was an unconstrained `str`, so this is the first time the set has been written down anywhere.
+Where a recurring schedule is in its life.  `completed` is the schedule running out, not a failure: it is set automatically once the end date or the occurrence count is reached.
 
 ## Properties
 

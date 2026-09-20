@@ -26,9 +26,9 @@ using OpenAPIDateConverter = InvoicePDFs.Client.OpenAPIDateConverter;
 namespace InvoicePDFs.Model
 {
     /// <summary>
-    /// &#x60;completed&#x60; is the schedule running out, not a failure — set by app/recurring/processor.py when the end date or occurrence count is reached. &#x60;RecurringInvoiceOut.status&#x60; was an unconstrained &#x60;str&#x60;, so this is the first time the set has been written down anywhere.
+    /// Where a recurring schedule is in its life.  &#x60;completed&#x60; is the schedule running out, not a failure: it is set automatically once the end date or the occurrence count is reached.
     /// </summary>
-    /// <value>&#x60;completed&#x60; is the schedule running out, not a failure — set by app/recurring/processor.py when the end date or occurrence count is reached. &#x60;RecurringInvoiceOut.status&#x60; was an unconstrained &#x60;str&#x60;, so this is the first time the set has been written down anywhere.</value>
+    /// <value>Where a recurring schedule is in its life.  &#x60;completed&#x60; is the schedule running out, not a failure: it is set automatically once the end date or the occurrence count is reached.</value>
     [JsonConverter(typeof(StringEnumConverter))]
     public enum RecurringInvoiceStatus
     {

@@ -26,9 +26,9 @@ using OpenAPIDateConverter = InvoicePDFs.Client.OpenAPIDateConverter;
 namespace InvoicePDFs.Model
 {
     /// <summary>
-    /// The document lifecycle. The transitions between these live in app/documents/base.py, which is the only thing that moves a document.
+    /// The document lifecycle.
     /// </summary>
-    /// <value>The document lifecycle. The transitions between these live in app/documents/base.py, which is the only thing that moves a document.</value>
+    /// <value>The document lifecycle.</value>
     [JsonConverter(typeof(StringEnumConverter))]
     public enum DocumentStatus
     {
