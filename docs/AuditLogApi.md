@@ -13,6 +13,8 @@ All URIs are relative to *http://localhost*
 
 Get Audit Event
 
+One audit event by id.
+
 ### Example
 ```csharp
 using System.Collections.Generic;
@@ -105,6 +107,8 @@ catch (ApiException e)
 > AuditEventsListResponse ListAuditEvents (int? limit = null, string? cursor = null, string? action = null, string? resourceType = null, string? resourceId = null)
 
 List Audit Events
+
+Who changed what on this account, newest first.  Filter by `action`, `resource_type` and `resource_id` to follow a single object's history.
 
 ### Example
 ```csharp

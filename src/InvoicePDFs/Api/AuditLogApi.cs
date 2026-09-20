@@ -29,6 +29,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// Get Audit Event
         /// </summary>
+        /// <remarks>
+        /// One audit event by id.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="auditEventId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -39,7 +42,7 @@ namespace InvoicePDFs.Api
         /// Get Audit Event
         /// </summary>
         /// <remarks>
-        /// 
+        /// One audit event by id.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="auditEventId"></param>
@@ -49,6 +52,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// List Audit Events
         /// </summary>
+        /// <remarks>
+        /// Who changed what on this account, newest first.  Filter by &#x60;action&#x60;, &#x60;resource_type&#x60; and &#x60;resource_id&#x60; to follow a single object&#39;s history.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit"> (optional, default to 50)</param>
         /// <param name="cursor"> (optional)</param>
@@ -63,7 +69,7 @@ namespace InvoicePDFs.Api
         /// List Audit Events
         /// </summary>
         /// <remarks>
-        /// 
+        /// Who changed what on this account, newest first.  Filter by &#x60;action&#x60;, &#x60;resource_type&#x60; and &#x60;resource_id&#x60; to follow a single object&#39;s history.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit"> (optional, default to 50)</param>
@@ -87,7 +93,7 @@ namespace InvoicePDFs.Api
         /// Get Audit Event
         /// </summary>
         /// <remarks>
-        /// 
+        /// One audit event by id.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="auditEventId"></param>
@@ -100,7 +106,7 @@ namespace InvoicePDFs.Api
         /// Get Audit Event
         /// </summary>
         /// <remarks>
-        /// 
+        /// One audit event by id.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="auditEventId"></param>
@@ -112,7 +118,7 @@ namespace InvoicePDFs.Api
         /// List Audit Events
         /// </summary>
         /// <remarks>
-        /// 
+        /// Who changed what on this account, newest first.  Filter by &#x60;action&#x60;, &#x60;resource_type&#x60; and &#x60;resource_id&#x60; to follow a single object&#39;s history.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit"> (optional, default to 50)</param>
@@ -129,7 +135,7 @@ namespace InvoicePDFs.Api
         /// List Audit Events
         /// </summary>
         /// <remarks>
-        /// 
+        /// Who changed what on this account, newest first.  Filter by &#x60;action&#x60;, &#x60;resource_type&#x60; and &#x60;resource_id&#x60; to follow a single object&#39;s history.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit"> (optional, default to 50)</param>
@@ -262,7 +268,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Get Audit Event 
+        /// Get Audit Event One audit event by id.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="auditEventId"></param>
@@ -275,7 +281,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Get Audit Event 
+        /// Get Audit Event One audit event by id.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="auditEventId"></param>
@@ -338,7 +344,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Get Audit Event 
+        /// Get Audit Event One audit event by id.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="auditEventId"></param>
@@ -352,7 +358,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Get Audit Event 
+        /// Get Audit Event One audit event by id.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="auditEventId"></param>
@@ -418,7 +424,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Audit Events 
+        /// List Audit Events Who changed what on this account, newest first.  Filter by &#x60;action&#x60;, &#x60;resource_type&#x60; and &#x60;resource_id&#x60; to follow a single object&#39;s history.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit"> (optional, default to 50)</param>
@@ -435,7 +441,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Audit Events 
+        /// List Audit Events Who changed what on this account, newest first.  Filter by &#x60;action&#x60;, &#x60;resource_type&#x60; and &#x60;resource_id&#x60; to follow a single object&#39;s history.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit"> (optional, default to 50)</param>
@@ -515,7 +521,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Audit Events 
+        /// List Audit Events Who changed what on this account, newest first.  Filter by &#x60;action&#x60;, &#x60;resource_type&#x60; and &#x60;resource_id&#x60; to follow a single object&#39;s history.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit"> (optional, default to 50)</param>
@@ -533,7 +539,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Audit Events 
+        /// List Audit Events Who changed what on this account, newest first.  Filter by &#x60;action&#x60;, &#x60;resource_type&#x60; and &#x60;resource_id&#x60; to follow a single object&#39;s history.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit"> (optional, default to 50)</param>

@@ -29,6 +29,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// Get Delivery
         /// </summary>
+        /// <remarks>
+        /// One email delivery by id — an email sent to a customer.  Not to be confused with &#x60;get_webhook_delivery&#x60;, which is an HTTP POST to one of your webhook endpoints.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deliveryId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -39,7 +42,7 @@ namespace InvoicePDFs.Api
         /// Get Delivery
         /// </summary>
         /// <remarks>
-        /// 
+        /// One email delivery by id — an email sent to a customer.  Not to be confused with &#x60;get_webhook_delivery&#x60;, which is an HTTP POST to one of your webhook endpoints.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deliveryId"></param>
@@ -82,7 +85,7 @@ namespace InvoicePDFs.Api
         /// Get Delivery
         /// </summary>
         /// <remarks>
-        /// 
+        /// One email delivery by id — an email sent to a customer.  Not to be confused with &#x60;get_webhook_delivery&#x60;, which is an HTTP POST to one of your webhook endpoints.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deliveryId"></param>
@@ -95,7 +98,7 @@ namespace InvoicePDFs.Api
         /// Get Delivery
         /// </summary>
         /// <remarks>
-        /// 
+        /// One email delivery by id — an email sent to a customer.  Not to be confused with &#x60;get_webhook_delivery&#x60;, which is an HTTP POST to one of your webhook endpoints.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deliveryId"></param>
@@ -249,7 +252,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Get Delivery 
+        /// Get Delivery One email delivery by id — an email sent to a customer.  Not to be confused with &#x60;get_webhook_delivery&#x60;, which is an HTTP POST to one of your webhook endpoints.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deliveryId"></param>
@@ -262,7 +265,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Get Delivery 
+        /// Get Delivery One email delivery by id — an email sent to a customer.  Not to be confused with &#x60;get_webhook_delivery&#x60;, which is an HTTP POST to one of your webhook endpoints.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deliveryId"></param>
@@ -325,7 +328,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Get Delivery 
+        /// Get Delivery One email delivery by id — an email sent to a customer.  Not to be confused with &#x60;get_webhook_delivery&#x60;, which is an HTTP POST to one of your webhook endpoints.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deliveryId"></param>
@@ -339,7 +342,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Get Delivery 
+        /// Get Delivery One email delivery by id — an email sent to a customer.  Not to be confused with &#x60;get_webhook_delivery&#x60;, which is an HTTP POST to one of your webhook endpoints.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deliveryId"></param>

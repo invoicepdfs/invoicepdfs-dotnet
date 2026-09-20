@@ -29,6 +29,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// Create Webhook Endpoint
         /// </summary>
+        /// <remarks>
+        /// Register a URL to receive events.  The endpoint starts active and begins receiving the events you list.  A signing secret is generated but is **not** returned here. Call &#x60;rotate_webhook_secret&#x60; to obtain one before you can verify signatures.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="webhookEndpointCreateRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -39,7 +42,7 @@ namespace InvoicePDFs.Api
         /// Create Webhook Endpoint
         /// </summary>
         /// <remarks>
-        /// 
+        /// Register a URL to receive events.  The endpoint starts active and begins receiving the events you list.  A signing secret is generated but is **not** returned here. Call &#x60;rotate_webhook_secret&#x60; to obtain one before you can verify signatures.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="webhookEndpointCreateRequest"></param>
@@ -49,6 +52,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// Delete Webhook Endpoint
         /// </summary>
+        /// <remarks>
+        /// Remove an endpoint and its delivery history.  The endpoint&#39;s delivery records are deleted with it, including any still waiting to be retried. To stop deliveries without losing the history, set &#x60;is_active&#x60; to false instead.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="endpointId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -59,7 +65,7 @@ namespace InvoicePDFs.Api
         /// Delete Webhook Endpoint
         /// </summary>
         /// <remarks>
-        /// 
+        /// Remove an endpoint and its delivery history.  The endpoint&#39;s delivery records are deleted with it, including any still waiting to be retried. To stop deliveries without losing the history, set &#x60;is_active&#x60; to false instead.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="endpointId"></param>
@@ -69,6 +75,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// Get Webhook Delivery
         /// </summary>
+        /// <remarks>
+        /// One webhook delivery by id — an HTTP POST to one of your endpoints.  Not to be confused with &#x60;get_delivery&#x60;, which is an email sent to a customer.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deliveryId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -79,7 +88,7 @@ namespace InvoicePDFs.Api
         /// Get Webhook Delivery
         /// </summary>
         /// <remarks>
-        /// 
+        /// One webhook delivery by id — an HTTP POST to one of your endpoints.  Not to be confused with &#x60;get_delivery&#x60;, which is an email sent to a customer.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deliveryId"></param>
@@ -89,6 +98,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// Get Webhook Endpoint
         /// </summary>
+        /// <remarks>
+        /// One webhook endpoint by id.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="endpointId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -99,7 +111,7 @@ namespace InvoicePDFs.Api
         /// Get Webhook Endpoint
         /// </summary>
         /// <remarks>
-        /// 
+        /// One webhook endpoint by id.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="endpointId"></param>
@@ -109,6 +121,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// List Webhook Deliveries
         /// </summary>
+        /// <remarks>
+        /// Every webhook delivery attempt on the account, newest first.  One row per attempt to POST an event to one of your endpoints, with the HTTP status and attempt count. For emails sent to your customers, see &#x60;get_delivery&#x60;.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit"> (optional, default to 50)</param>
         /// <param name="cursor"> (optional)</param>
@@ -120,7 +135,7 @@ namespace InvoicePDFs.Api
         /// List Webhook Deliveries
         /// </summary>
         /// <remarks>
-        /// 
+        /// Every webhook delivery attempt on the account, newest first.  One row per attempt to POST an event to one of your endpoints, with the HTTP status and attempt count. For emails sent to your customers, see &#x60;get_delivery&#x60;.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit"> (optional, default to 50)</param>
@@ -131,6 +146,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// List Webhook Endpoints
         /// </summary>
+        /// <remarks>
+        /// Every webhook endpoint registered on the account, newest first.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit"> (optional, default to 50)</param>
         /// <param name="cursor"> (optional)</param>
@@ -142,7 +160,7 @@ namespace InvoicePDFs.Api
         /// List Webhook Endpoints
         /// </summary>
         /// <remarks>
-        /// 
+        /// Every webhook endpoint registered on the account, newest first.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit"> (optional, default to 50)</param>
@@ -153,6 +171,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// Retry Webhook Delivery
         /// </summary>
+        /// <remarks>
+        /// Send a failed or pending webhook delivery again, immediately.  Resets the attempt counter on the same delivery and dispatches it without waiting for the retry schedule. Failed deliveries are already retried automatically with backoff, so this is for after those are exhausted — or to send a delivery created by &#x60;test_webhook_endpoint&#x60;.  Refused with 409 in any other status. To re-send an email, use &#x60;retry_delivery&#x60;.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deliveryId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -163,7 +184,7 @@ namespace InvoicePDFs.Api
         /// Retry Webhook Delivery
         /// </summary>
         /// <remarks>
-        /// 
+        /// Send a failed or pending webhook delivery again, immediately.  Resets the attempt counter on the same delivery and dispatches it without waiting for the retry schedule. Failed deliveries are already retried automatically with backoff, so this is for after those are exhausted — or to send a delivery created by &#x60;test_webhook_endpoint&#x60;.  Refused with 409 in any other status. To re-send an email, use &#x60;retry_delivery&#x60;.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deliveryId"></param>
@@ -173,6 +194,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// Rotate Webhook Secret
         /// </summary>
+        /// <remarks>
+        /// Issue a new signing secret and return it.  This is the only response that contains the secret, so it is also how you obtain the first one after creating an endpoint. The previous secret stops being accepted immediately: signatures computed with it will not verify.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="endpointId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -183,7 +207,7 @@ namespace InvoicePDFs.Api
         /// Rotate Webhook Secret
         /// </summary>
         /// <remarks>
-        /// 
+        /// Issue a new signing secret and return it.  This is the only response that contains the secret, so it is also how you obtain the first one after creating an endpoint. The previous secret stops being accepted immediately: signatures computed with it will not verify.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="endpointId"></param>
@@ -193,6 +217,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// Test Webhook Endpoint
         /// </summary>
+        /// <remarks>
+        /// Record a test event against this endpoint.  Creates a &#x60;test&#x60; event and a delivery in &#x60;pending&#x60;, which you can inspect with &#x60;get_webhook_delivery&#x60;.  This call does not send the delivery. Pass the returned delivery id to &#x60;retry_webhook_delivery&#x60; to have it dispatched.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="endpointId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -203,7 +230,7 @@ namespace InvoicePDFs.Api
         /// Test Webhook Endpoint
         /// </summary>
         /// <remarks>
-        /// 
+        /// Record a test event against this endpoint.  Creates a &#x60;test&#x60; event and a delivery in &#x60;pending&#x60;, which you can inspect with &#x60;get_webhook_delivery&#x60;.  This call does not send the delivery. Pass the returned delivery id to &#x60;retry_webhook_delivery&#x60; to have it dispatched.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="endpointId"></param>
@@ -213,6 +240,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// Update Webhook Endpoint
         /// </summary>
+        /// <remarks>
+        /// Change an endpoint&#39;s URL, description, event list or active flag.  Only the fields you send are changed. Setting &#x60;is_active&#x60; to false stops new deliveries while keeping the endpoint and its history, which is the reversible alternative to deleting it.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="endpointId"></param>
         /// <param name="webhookEndpointPatchRequest"></param>
@@ -224,7 +254,7 @@ namespace InvoicePDFs.Api
         /// Update Webhook Endpoint
         /// </summary>
         /// <remarks>
-        /// 
+        /// Change an endpoint&#39;s URL, description, event list or active flag.  Only the fields you send are changed. Setting &#x60;is_active&#x60; to false stops new deliveries while keeping the endpoint and its history, which is the reversible alternative to deleting it.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="endpointId"></param>
@@ -245,7 +275,7 @@ namespace InvoicePDFs.Api
         /// Create Webhook Endpoint
         /// </summary>
         /// <remarks>
-        /// 
+        /// Register a URL to receive events.  The endpoint starts active and begins receiving the events you list.  A signing secret is generated but is **not** returned here. Call &#x60;rotate_webhook_secret&#x60; to obtain one before you can verify signatures.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="webhookEndpointCreateRequest"></param>
@@ -258,7 +288,7 @@ namespace InvoicePDFs.Api
         /// Create Webhook Endpoint
         /// </summary>
         /// <remarks>
-        /// 
+        /// Register a URL to receive events.  The endpoint starts active and begins receiving the events you list.  A signing secret is generated but is **not** returned here. Call &#x60;rotate_webhook_secret&#x60; to obtain one before you can verify signatures.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="webhookEndpointCreateRequest"></param>
@@ -270,7 +300,7 @@ namespace InvoicePDFs.Api
         /// Delete Webhook Endpoint
         /// </summary>
         /// <remarks>
-        /// 
+        /// Remove an endpoint and its delivery history.  The endpoint&#39;s delivery records are deleted with it, including any still waiting to be retried. To stop deliveries without losing the history, set &#x60;is_active&#x60; to false instead.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="endpointId"></param>
@@ -283,7 +313,7 @@ namespace InvoicePDFs.Api
         /// Delete Webhook Endpoint
         /// </summary>
         /// <remarks>
-        /// 
+        /// Remove an endpoint and its delivery history.  The endpoint&#39;s delivery records are deleted with it, including any still waiting to be retried. To stop deliveries without losing the history, set &#x60;is_active&#x60; to false instead.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="endpointId"></param>
@@ -295,7 +325,7 @@ namespace InvoicePDFs.Api
         /// Get Webhook Delivery
         /// </summary>
         /// <remarks>
-        /// 
+        /// One webhook delivery by id — an HTTP POST to one of your endpoints.  Not to be confused with &#x60;get_delivery&#x60;, which is an email sent to a customer.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deliveryId"></param>
@@ -308,7 +338,7 @@ namespace InvoicePDFs.Api
         /// Get Webhook Delivery
         /// </summary>
         /// <remarks>
-        /// 
+        /// One webhook delivery by id — an HTTP POST to one of your endpoints.  Not to be confused with &#x60;get_delivery&#x60;, which is an email sent to a customer.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deliveryId"></param>
@@ -320,7 +350,7 @@ namespace InvoicePDFs.Api
         /// Get Webhook Endpoint
         /// </summary>
         /// <remarks>
-        /// 
+        /// One webhook endpoint by id.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="endpointId"></param>
@@ -333,7 +363,7 @@ namespace InvoicePDFs.Api
         /// Get Webhook Endpoint
         /// </summary>
         /// <remarks>
-        /// 
+        /// One webhook endpoint by id.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="endpointId"></param>
@@ -345,7 +375,7 @@ namespace InvoicePDFs.Api
         /// List Webhook Deliveries
         /// </summary>
         /// <remarks>
-        /// 
+        /// Every webhook delivery attempt on the account, newest first.  One row per attempt to POST an event to one of your endpoints, with the HTTP status and attempt count. For emails sent to your customers, see &#x60;get_delivery&#x60;.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit"> (optional, default to 50)</param>
@@ -359,7 +389,7 @@ namespace InvoicePDFs.Api
         /// List Webhook Deliveries
         /// </summary>
         /// <remarks>
-        /// 
+        /// Every webhook delivery attempt on the account, newest first.  One row per attempt to POST an event to one of your endpoints, with the HTTP status and attempt count. For emails sent to your customers, see &#x60;get_delivery&#x60;.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit"> (optional, default to 50)</param>
@@ -372,7 +402,7 @@ namespace InvoicePDFs.Api
         /// List Webhook Endpoints
         /// </summary>
         /// <remarks>
-        /// 
+        /// Every webhook endpoint registered on the account, newest first.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit"> (optional, default to 50)</param>
@@ -386,7 +416,7 @@ namespace InvoicePDFs.Api
         /// List Webhook Endpoints
         /// </summary>
         /// <remarks>
-        /// 
+        /// Every webhook endpoint registered on the account, newest first.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit"> (optional, default to 50)</param>
@@ -399,7 +429,7 @@ namespace InvoicePDFs.Api
         /// Retry Webhook Delivery
         /// </summary>
         /// <remarks>
-        /// 
+        /// Send a failed or pending webhook delivery again, immediately.  Resets the attempt counter on the same delivery and dispatches it without waiting for the retry schedule. Failed deliveries are already retried automatically with backoff, so this is for after those are exhausted — or to send a delivery created by &#x60;test_webhook_endpoint&#x60;.  Refused with 409 in any other status. To re-send an email, use &#x60;retry_delivery&#x60;.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deliveryId"></param>
@@ -412,7 +442,7 @@ namespace InvoicePDFs.Api
         /// Retry Webhook Delivery
         /// </summary>
         /// <remarks>
-        /// 
+        /// Send a failed or pending webhook delivery again, immediately.  Resets the attempt counter on the same delivery and dispatches it without waiting for the retry schedule. Failed deliveries are already retried automatically with backoff, so this is for after those are exhausted — or to send a delivery created by &#x60;test_webhook_endpoint&#x60;.  Refused with 409 in any other status. To re-send an email, use &#x60;retry_delivery&#x60;.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deliveryId"></param>
@@ -424,7 +454,7 @@ namespace InvoicePDFs.Api
         /// Rotate Webhook Secret
         /// </summary>
         /// <remarks>
-        /// 
+        /// Issue a new signing secret and return it.  This is the only response that contains the secret, so it is also how you obtain the first one after creating an endpoint. The previous secret stops being accepted immediately: signatures computed with it will not verify.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="endpointId"></param>
@@ -437,7 +467,7 @@ namespace InvoicePDFs.Api
         /// Rotate Webhook Secret
         /// </summary>
         /// <remarks>
-        /// 
+        /// Issue a new signing secret and return it.  This is the only response that contains the secret, so it is also how you obtain the first one after creating an endpoint. The previous secret stops being accepted immediately: signatures computed with it will not verify.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="endpointId"></param>
@@ -449,7 +479,7 @@ namespace InvoicePDFs.Api
         /// Test Webhook Endpoint
         /// </summary>
         /// <remarks>
-        /// 
+        /// Record a test event against this endpoint.  Creates a &#x60;test&#x60; event and a delivery in &#x60;pending&#x60;, which you can inspect with &#x60;get_webhook_delivery&#x60;.  This call does not send the delivery. Pass the returned delivery id to &#x60;retry_webhook_delivery&#x60; to have it dispatched.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="endpointId"></param>
@@ -462,7 +492,7 @@ namespace InvoicePDFs.Api
         /// Test Webhook Endpoint
         /// </summary>
         /// <remarks>
-        /// 
+        /// Record a test event against this endpoint.  Creates a &#x60;test&#x60; event and a delivery in &#x60;pending&#x60;, which you can inspect with &#x60;get_webhook_delivery&#x60;.  This call does not send the delivery. Pass the returned delivery id to &#x60;retry_webhook_delivery&#x60; to have it dispatched.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="endpointId"></param>
@@ -474,7 +504,7 @@ namespace InvoicePDFs.Api
         /// Update Webhook Endpoint
         /// </summary>
         /// <remarks>
-        /// 
+        /// Change an endpoint&#39;s URL, description, event list or active flag.  Only the fields you send are changed. Setting &#x60;is_active&#x60; to false stops new deliveries while keeping the endpoint and its history, which is the reversible alternative to deleting it.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="endpointId"></param>
@@ -488,7 +518,7 @@ namespace InvoicePDFs.Api
         /// Update Webhook Endpoint
         /// </summary>
         /// <remarks>
-        /// 
+        /// Change an endpoint&#39;s URL, description, event list or active flag.  Only the fields you send are changed. Setting &#x60;is_active&#x60; to false stops new deliveries while keeping the endpoint and its history, which is the reversible alternative to deleting it.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="endpointId"></param>
@@ -618,7 +648,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Create Webhook Endpoint 
+        /// Create Webhook Endpoint Register a URL to receive events.  The endpoint starts active and begins receiving the events you list.  A signing secret is generated but is **not** returned here. Call &#x60;rotate_webhook_secret&#x60; to obtain one before you can verify signatures.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="webhookEndpointCreateRequest"></param>
@@ -631,7 +661,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Create Webhook Endpoint 
+        /// Create Webhook Endpoint Register a URL to receive events.  The endpoint starts active and begins receiving the events you list.  A signing secret is generated but is **not** returned here. Call &#x60;rotate_webhook_secret&#x60; to obtain one before you can verify signatures.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="webhookEndpointCreateRequest"></param>
@@ -695,7 +725,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Create Webhook Endpoint 
+        /// Create Webhook Endpoint Register a URL to receive events.  The endpoint starts active and begins receiving the events you list.  A signing secret is generated but is **not** returned here. Call &#x60;rotate_webhook_secret&#x60; to obtain one before you can verify signatures.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="webhookEndpointCreateRequest"></param>
@@ -709,7 +739,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Create Webhook Endpoint 
+        /// Create Webhook Endpoint Register a URL to receive events.  The endpoint starts active and begins receiving the events you list.  A signing secret is generated but is **not** returned here. Call &#x60;rotate_webhook_secret&#x60; to obtain one before you can verify signatures.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="webhookEndpointCreateRequest"></param>
@@ -776,7 +806,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Delete Webhook Endpoint 
+        /// Delete Webhook Endpoint Remove an endpoint and its delivery history.  The endpoint&#39;s delivery records are deleted with it, including any still waiting to be retried. To stop deliveries without losing the history, set &#x60;is_active&#x60; to false instead.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="endpointId"></param>
@@ -789,7 +819,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Delete Webhook Endpoint 
+        /// Delete Webhook Endpoint Remove an endpoint and its delivery history.  The endpoint&#39;s delivery records are deleted with it, including any still waiting to be retried. To stop deliveries without losing the history, set &#x60;is_active&#x60; to false instead.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="endpointId"></param>
@@ -852,7 +882,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Delete Webhook Endpoint 
+        /// Delete Webhook Endpoint Remove an endpoint and its delivery history.  The endpoint&#39;s delivery records are deleted with it, including any still waiting to be retried. To stop deliveries without losing the history, set &#x60;is_active&#x60; to false instead.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="endpointId"></param>
@@ -866,7 +896,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Delete Webhook Endpoint 
+        /// Delete Webhook Endpoint Remove an endpoint and its delivery history.  The endpoint&#39;s delivery records are deleted with it, including any still waiting to be retried. To stop deliveries without losing the history, set &#x60;is_active&#x60; to false instead.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="endpointId"></param>
@@ -932,7 +962,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Get Webhook Delivery 
+        /// Get Webhook Delivery One webhook delivery by id — an HTTP POST to one of your endpoints.  Not to be confused with &#x60;get_delivery&#x60;, which is an email sent to a customer.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deliveryId"></param>
@@ -945,7 +975,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Get Webhook Delivery 
+        /// Get Webhook Delivery One webhook delivery by id — an HTTP POST to one of your endpoints.  Not to be confused with &#x60;get_delivery&#x60;, which is an email sent to a customer.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deliveryId"></param>
@@ -1008,7 +1038,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Get Webhook Delivery 
+        /// Get Webhook Delivery One webhook delivery by id — an HTTP POST to one of your endpoints.  Not to be confused with &#x60;get_delivery&#x60;, which is an email sent to a customer.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deliveryId"></param>
@@ -1022,7 +1052,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Get Webhook Delivery 
+        /// Get Webhook Delivery One webhook delivery by id — an HTTP POST to one of your endpoints.  Not to be confused with &#x60;get_delivery&#x60;, which is an email sent to a customer.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deliveryId"></param>
@@ -1088,7 +1118,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Get Webhook Endpoint 
+        /// Get Webhook Endpoint One webhook endpoint by id.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="endpointId"></param>
@@ -1101,7 +1131,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Get Webhook Endpoint 
+        /// Get Webhook Endpoint One webhook endpoint by id.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="endpointId"></param>
@@ -1164,7 +1194,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Get Webhook Endpoint 
+        /// Get Webhook Endpoint One webhook endpoint by id.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="endpointId"></param>
@@ -1178,7 +1208,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Get Webhook Endpoint 
+        /// Get Webhook Endpoint One webhook endpoint by id.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="endpointId"></param>
@@ -1244,7 +1274,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Webhook Deliveries 
+        /// List Webhook Deliveries Every webhook delivery attempt on the account, newest first.  One row per attempt to POST an event to one of your endpoints, with the HTTP status and attempt count. For emails sent to your customers, see &#x60;get_delivery&#x60;.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit"> (optional, default to 50)</param>
@@ -1258,7 +1288,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Webhook Deliveries 
+        /// List Webhook Deliveries Every webhook delivery attempt on the account, newest first.  One row per attempt to POST an event to one of your endpoints, with the HTTP status and attempt count. For emails sent to your customers, see &#x60;get_delivery&#x60;.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit"> (optional, default to 50)</param>
@@ -1323,7 +1353,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Webhook Deliveries 
+        /// List Webhook Deliveries Every webhook delivery attempt on the account, newest first.  One row per attempt to POST an event to one of your endpoints, with the HTTP status and attempt count. For emails sent to your customers, see &#x60;get_delivery&#x60;.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit"> (optional, default to 50)</param>
@@ -1338,7 +1368,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Webhook Deliveries 
+        /// List Webhook Deliveries Every webhook delivery attempt on the account, newest first.  One row per attempt to POST an event to one of your endpoints, with the HTTP status and attempt count. For emails sent to your customers, see &#x60;get_delivery&#x60;.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit"> (optional, default to 50)</param>
@@ -1406,7 +1436,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Webhook Endpoints 
+        /// List Webhook Endpoints Every webhook endpoint registered on the account, newest first.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit"> (optional, default to 50)</param>
@@ -1420,7 +1450,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Webhook Endpoints 
+        /// List Webhook Endpoints Every webhook endpoint registered on the account, newest first.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit"> (optional, default to 50)</param>
@@ -1485,7 +1515,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Webhook Endpoints 
+        /// List Webhook Endpoints Every webhook endpoint registered on the account, newest first.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit"> (optional, default to 50)</param>
@@ -1500,7 +1530,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Webhook Endpoints 
+        /// List Webhook Endpoints Every webhook endpoint registered on the account, newest first.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit"> (optional, default to 50)</param>
@@ -1568,7 +1598,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Retry Webhook Delivery 
+        /// Retry Webhook Delivery Send a failed or pending webhook delivery again, immediately.  Resets the attempt counter on the same delivery and dispatches it without waiting for the retry schedule. Failed deliveries are already retried automatically with backoff, so this is for after those are exhausted — or to send a delivery created by &#x60;test_webhook_endpoint&#x60;.  Refused with 409 in any other status. To re-send an email, use &#x60;retry_delivery&#x60;.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deliveryId"></param>
@@ -1581,7 +1611,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Retry Webhook Delivery 
+        /// Retry Webhook Delivery Send a failed or pending webhook delivery again, immediately.  Resets the attempt counter on the same delivery and dispatches it without waiting for the retry schedule. Failed deliveries are already retried automatically with backoff, so this is for after those are exhausted — or to send a delivery created by &#x60;test_webhook_endpoint&#x60;.  Refused with 409 in any other status. To re-send an email, use &#x60;retry_delivery&#x60;.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deliveryId"></param>
@@ -1644,7 +1674,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Retry Webhook Delivery 
+        /// Retry Webhook Delivery Send a failed or pending webhook delivery again, immediately.  Resets the attempt counter on the same delivery and dispatches it without waiting for the retry schedule. Failed deliveries are already retried automatically with backoff, so this is for after those are exhausted — or to send a delivery created by &#x60;test_webhook_endpoint&#x60;.  Refused with 409 in any other status. To re-send an email, use &#x60;retry_delivery&#x60;.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deliveryId"></param>
@@ -1658,7 +1688,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Retry Webhook Delivery 
+        /// Retry Webhook Delivery Send a failed or pending webhook delivery again, immediately.  Resets the attempt counter on the same delivery and dispatches it without waiting for the retry schedule. Failed deliveries are already retried automatically with backoff, so this is for after those are exhausted — or to send a delivery created by &#x60;test_webhook_endpoint&#x60;.  Refused with 409 in any other status. To re-send an email, use &#x60;retry_delivery&#x60;.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deliveryId"></param>
@@ -1724,7 +1754,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Rotate Webhook Secret 
+        /// Rotate Webhook Secret Issue a new signing secret and return it.  This is the only response that contains the secret, so it is also how you obtain the first one after creating an endpoint. The previous secret stops being accepted immediately: signatures computed with it will not verify.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="endpointId"></param>
@@ -1737,7 +1767,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Rotate Webhook Secret 
+        /// Rotate Webhook Secret Issue a new signing secret and return it.  This is the only response that contains the secret, so it is also how you obtain the first one after creating an endpoint. The previous secret stops being accepted immediately: signatures computed with it will not verify.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="endpointId"></param>
@@ -1800,7 +1830,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Rotate Webhook Secret 
+        /// Rotate Webhook Secret Issue a new signing secret and return it.  This is the only response that contains the secret, so it is also how you obtain the first one after creating an endpoint. The previous secret stops being accepted immediately: signatures computed with it will not verify.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="endpointId"></param>
@@ -1814,7 +1844,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Rotate Webhook Secret 
+        /// Rotate Webhook Secret Issue a new signing secret and return it.  This is the only response that contains the secret, so it is also how you obtain the first one after creating an endpoint. The previous secret stops being accepted immediately: signatures computed with it will not verify.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="endpointId"></param>
@@ -1880,7 +1910,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Test Webhook Endpoint 
+        /// Test Webhook Endpoint Record a test event against this endpoint.  Creates a &#x60;test&#x60; event and a delivery in &#x60;pending&#x60;, which you can inspect with &#x60;get_webhook_delivery&#x60;.  This call does not send the delivery. Pass the returned delivery id to &#x60;retry_webhook_delivery&#x60; to have it dispatched.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="endpointId"></param>
@@ -1893,7 +1923,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Test Webhook Endpoint 
+        /// Test Webhook Endpoint Record a test event against this endpoint.  Creates a &#x60;test&#x60; event and a delivery in &#x60;pending&#x60;, which you can inspect with &#x60;get_webhook_delivery&#x60;.  This call does not send the delivery. Pass the returned delivery id to &#x60;retry_webhook_delivery&#x60; to have it dispatched.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="endpointId"></param>
@@ -1956,7 +1986,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Test Webhook Endpoint 
+        /// Test Webhook Endpoint Record a test event against this endpoint.  Creates a &#x60;test&#x60; event and a delivery in &#x60;pending&#x60;, which you can inspect with &#x60;get_webhook_delivery&#x60;.  This call does not send the delivery. Pass the returned delivery id to &#x60;retry_webhook_delivery&#x60; to have it dispatched.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="endpointId"></param>
@@ -1970,7 +2000,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Test Webhook Endpoint 
+        /// Test Webhook Endpoint Record a test event against this endpoint.  Creates a &#x60;test&#x60; event and a delivery in &#x60;pending&#x60;, which you can inspect with &#x60;get_webhook_delivery&#x60;.  This call does not send the delivery. Pass the returned delivery id to &#x60;retry_webhook_delivery&#x60; to have it dispatched.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="endpointId"></param>
@@ -2036,7 +2066,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Update Webhook Endpoint 
+        /// Update Webhook Endpoint Change an endpoint&#39;s URL, description, event list or active flag.  Only the fields you send are changed. Setting &#x60;is_active&#x60; to false stops new deliveries while keeping the endpoint and its history, which is the reversible alternative to deleting it.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="endpointId"></param>
@@ -2050,7 +2080,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Update Webhook Endpoint 
+        /// Update Webhook Endpoint Change an endpoint&#39;s URL, description, event list or active flag.  Only the fields you send are changed. Setting &#x60;is_active&#x60; to false stops new deliveries while keeping the endpoint and its history, which is the reversible alternative to deleting it.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="endpointId"></param>
@@ -2122,7 +2152,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Update Webhook Endpoint 
+        /// Update Webhook Endpoint Change an endpoint&#39;s URL, description, event list or active flag.  Only the fields you send are changed. Setting &#x60;is_active&#x60; to false stops new deliveries while keeping the endpoint and its history, which is the reversible alternative to deleting it.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="endpointId"></param>
@@ -2137,7 +2167,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Update Webhook Endpoint 
+        /// Update Webhook Endpoint Change an endpoint&#39;s URL, description, event list or active flag.  Only the fields you send are changed. Setting &#x60;is_active&#x60; to false stops new deliveries while keeping the endpoint and its history, which is the reversible alternative to deleting it.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="endpointId"></param>

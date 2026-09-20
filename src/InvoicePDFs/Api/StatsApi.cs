@@ -29,6 +29,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// Get Stats
         /// </summary>
+        /// <remarks>
+        /// Counts and recent activity for the account, in one call.  Totals for documents, customers and business profiles, a breakdown of documents by status, and the ten most recent documents — cheaper than paging each collection to build a dashboard.  The &#x60;invoice&#x60;-prefixed fields cover every document type, not only invoices.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>StatsResponse</returns>
@@ -38,7 +41,7 @@ namespace InvoicePDFs.Api
         /// Get Stats
         /// </summary>
         /// <remarks>
-        /// 
+        /// Counts and recent activity for the account, in one call.  Totals for documents, customers and business profiles, a breakdown of documents by status, and the ten most recent documents — cheaper than paging each collection to build a dashboard.  The &#x60;invoice&#x60;-prefixed fields cover every document type, not only invoices.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -57,7 +60,7 @@ namespace InvoicePDFs.Api
         /// Get Stats
         /// </summary>
         /// <remarks>
-        /// 
+        /// Counts and recent activity for the account, in one call.  Totals for documents, customers and business profiles, a breakdown of documents by status, and the ten most recent documents — cheaper than paging each collection to build a dashboard.  The &#x60;invoice&#x60;-prefixed fields cover every document type, not only invoices.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -69,7 +72,7 @@ namespace InvoicePDFs.Api
         /// Get Stats
         /// </summary>
         /// <remarks>
-        /// 
+        /// Counts and recent activity for the account, in one call.  Totals for documents, customers and business profiles, a breakdown of documents by status, and the ten most recent documents — cheaper than paging each collection to build a dashboard.  The &#x60;invoice&#x60;-prefixed fields cover every document type, not only invoices.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -197,7 +200,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Get Stats 
+        /// Get Stats Counts and recent activity for the account, in one call.  Totals for documents, customers and business profiles, a breakdown of documents by status, and the ten most recent documents — cheaper than paging each collection to build a dashboard.  The &#x60;invoice&#x60;-prefixed fields cover every document type, not only invoices.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -209,7 +212,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Get Stats 
+        /// Get Stats Counts and recent activity for the account, in one call.  Totals for documents, customers and business profiles, a breakdown of documents by status, and the ten most recent documents — cheaper than paging each collection to build a dashboard.  The &#x60;invoice&#x60;-prefixed fields cover every document type, not only invoices.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -264,7 +267,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Get Stats 
+        /// Get Stats Counts and recent activity for the account, in one call.  Totals for documents, customers and business profiles, a breakdown of documents by status, and the ten most recent documents — cheaper than paging each collection to build a dashboard.  The &#x60;invoice&#x60;-prefixed fields cover every document type, not only invoices.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -277,7 +280,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Get Stats 
+        /// Get Stats Counts and recent activity for the account, in one call.  Totals for documents, customers and business profiles, a breakdown of documents by status, and the ten most recent documents — cheaper than paging each collection to build a dashboard.  The &#x60;invoice&#x60;-prefixed fields cover every document type, not only invoices.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>

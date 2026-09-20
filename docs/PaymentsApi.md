@@ -16,6 +16,8 @@ All URIs are relative to *http://localhost*
 
 Create Document Payment
 
+Record a payment received against an invoice.  The currency is taken from the invoice rather than from the request, so a payment can never disagree with what was billed.  Refused with 409 while the invoice is still a draft. Recording a payment does not move the invoice to `paid` — use `mark_paid` for that.
+
 ### Example
 ```csharp
 using System.Collections.Generic;
@@ -111,6 +113,8 @@ catch (ApiException e)
 
 Delete Payment
 
+Remove a recorded payment.  The payment is deleted outright rather than reversed, and the invoice's status is left alone. The deletion is kept in the audit log.
+
 ### Example
 ```csharp
 using System.Collections.Generic;
@@ -204,6 +208,8 @@ catch (ApiException e)
 
 Get Payment
 
+One recorded payment by id.
+
 ### Example
 ```csharp
 using System.Collections.Generic;
@@ -296,6 +302,8 @@ catch (ApiException e)
 > PaymentsListResponse ListDocumentPayments (string documentId, int? limit = null, string? cursor = null)
 
 List Document Payments
+
+Payments recorded against one document, newest first.
 
 ### Example
 ```csharp
@@ -393,6 +401,8 @@ catch (ApiException e)
 > PaymentResponse UpdatePayment (string paymentId, PaymentPatchRequest paymentPatchRequest)
 
 Update Payment
+
+Correct a payment that was already recorded.  Only the fields you send are changed. The invoice's status and totals are left alone.
 
 ### Example
 ```csharp

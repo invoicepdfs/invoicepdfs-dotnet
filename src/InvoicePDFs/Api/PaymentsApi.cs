@@ -29,6 +29,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// Create Document Payment
         /// </summary>
+        /// <remarks>
+        /// Record a payment received against an invoice.  The currency is taken from the invoice rather than from the request, so a payment can never disagree with what was billed.  Refused with 409 while the invoice is still a draft. Recording a payment does not move the invoice to &#x60;paid&#x60; — use &#x60;mark_paid&#x60; for that.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId"></param>
         /// <param name="paymentCreateRequest"></param>
@@ -40,7 +43,7 @@ namespace InvoicePDFs.Api
         /// Create Document Payment
         /// </summary>
         /// <remarks>
-        /// 
+        /// Record a payment received against an invoice.  The currency is taken from the invoice rather than from the request, so a payment can never disagree with what was billed.  Refused with 409 while the invoice is still a draft. Recording a payment does not move the invoice to &#x60;paid&#x60; — use &#x60;mark_paid&#x60; for that.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId"></param>
@@ -51,6 +54,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// Delete Payment
         /// </summary>
+        /// <remarks>
+        /// Remove a recorded payment.  The payment is deleted outright rather than reversed, and the invoice&#39;s status is left alone. The deletion is kept in the audit log.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="paymentId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -61,7 +67,7 @@ namespace InvoicePDFs.Api
         /// Delete Payment
         /// </summary>
         /// <remarks>
-        /// 
+        /// Remove a recorded payment.  The payment is deleted outright rather than reversed, and the invoice&#39;s status is left alone. The deletion is kept in the audit log.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="paymentId"></param>
@@ -71,6 +77,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// Get Payment
         /// </summary>
+        /// <remarks>
+        /// One recorded payment by id.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="paymentId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -81,7 +90,7 @@ namespace InvoicePDFs.Api
         /// Get Payment
         /// </summary>
         /// <remarks>
-        /// 
+        /// One recorded payment by id.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="paymentId"></param>
@@ -91,6 +100,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// List Document Payments
         /// </summary>
+        /// <remarks>
+        /// Payments recorded against one document, newest first.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId"></param>
         /// <param name="limit"> (optional, default to 50)</param>
@@ -103,7 +115,7 @@ namespace InvoicePDFs.Api
         /// List Document Payments
         /// </summary>
         /// <remarks>
-        /// 
+        /// Payments recorded against one document, newest first.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId"></param>
@@ -115,6 +127,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// Update Payment
         /// </summary>
+        /// <remarks>
+        /// Correct a payment that was already recorded.  Only the fields you send are changed. The invoice&#39;s status and totals are left alone.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="paymentId"></param>
         /// <param name="paymentPatchRequest"></param>
@@ -126,7 +141,7 @@ namespace InvoicePDFs.Api
         /// Update Payment
         /// </summary>
         /// <remarks>
-        /// 
+        /// Correct a payment that was already recorded.  Only the fields you send are changed. The invoice&#39;s status and totals are left alone.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="paymentId"></param>
@@ -147,7 +162,7 @@ namespace InvoicePDFs.Api
         /// Create Document Payment
         /// </summary>
         /// <remarks>
-        /// 
+        /// Record a payment received against an invoice.  The currency is taken from the invoice rather than from the request, so a payment can never disagree with what was billed.  Refused with 409 while the invoice is still a draft. Recording a payment does not move the invoice to &#x60;paid&#x60; — use &#x60;mark_paid&#x60; for that.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId"></param>
@@ -161,7 +176,7 @@ namespace InvoicePDFs.Api
         /// Create Document Payment
         /// </summary>
         /// <remarks>
-        /// 
+        /// Record a payment received against an invoice.  The currency is taken from the invoice rather than from the request, so a payment can never disagree with what was billed.  Refused with 409 while the invoice is still a draft. Recording a payment does not move the invoice to &#x60;paid&#x60; — use &#x60;mark_paid&#x60; for that.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId"></param>
@@ -174,7 +189,7 @@ namespace InvoicePDFs.Api
         /// Delete Payment
         /// </summary>
         /// <remarks>
-        /// 
+        /// Remove a recorded payment.  The payment is deleted outright rather than reversed, and the invoice&#39;s status is left alone. The deletion is kept in the audit log.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="paymentId"></param>
@@ -187,7 +202,7 @@ namespace InvoicePDFs.Api
         /// Delete Payment
         /// </summary>
         /// <remarks>
-        /// 
+        /// Remove a recorded payment.  The payment is deleted outright rather than reversed, and the invoice&#39;s status is left alone. The deletion is kept in the audit log.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="paymentId"></param>
@@ -199,7 +214,7 @@ namespace InvoicePDFs.Api
         /// Get Payment
         /// </summary>
         /// <remarks>
-        /// 
+        /// One recorded payment by id.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="paymentId"></param>
@@ -212,7 +227,7 @@ namespace InvoicePDFs.Api
         /// Get Payment
         /// </summary>
         /// <remarks>
-        /// 
+        /// One recorded payment by id.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="paymentId"></param>
@@ -224,7 +239,7 @@ namespace InvoicePDFs.Api
         /// List Document Payments
         /// </summary>
         /// <remarks>
-        /// 
+        /// Payments recorded against one document, newest first.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId"></param>
@@ -239,7 +254,7 @@ namespace InvoicePDFs.Api
         /// List Document Payments
         /// </summary>
         /// <remarks>
-        /// 
+        /// Payments recorded against one document, newest first.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId"></param>
@@ -253,7 +268,7 @@ namespace InvoicePDFs.Api
         /// Update Payment
         /// </summary>
         /// <remarks>
-        /// 
+        /// Correct a payment that was already recorded.  Only the fields you send are changed. The invoice&#39;s status and totals are left alone.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="paymentId"></param>
@@ -267,7 +282,7 @@ namespace InvoicePDFs.Api
         /// Update Payment
         /// </summary>
         /// <remarks>
-        /// 
+        /// Correct a payment that was already recorded.  Only the fields you send are changed. The invoice&#39;s status and totals are left alone.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="paymentId"></param>
@@ -397,7 +412,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Create Document Payment 
+        /// Create Document Payment Record a payment received against an invoice.  The currency is taken from the invoice rather than from the request, so a payment can never disagree with what was billed.  Refused with 409 while the invoice is still a draft. Recording a payment does not move the invoice to &#x60;paid&#x60; — use &#x60;mark_paid&#x60; for that.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId"></param>
@@ -411,7 +426,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Create Document Payment 
+        /// Create Document Payment Record a payment received against an invoice.  The currency is taken from the invoice rather than from the request, so a payment can never disagree with what was billed.  Refused with 409 while the invoice is still a draft. Recording a payment does not move the invoice to &#x60;paid&#x60; — use &#x60;mark_paid&#x60; for that.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId"></param>
@@ -483,7 +498,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Create Document Payment 
+        /// Create Document Payment Record a payment received against an invoice.  The currency is taken from the invoice rather than from the request, so a payment can never disagree with what was billed.  Refused with 409 while the invoice is still a draft. Recording a payment does not move the invoice to &#x60;paid&#x60; — use &#x60;mark_paid&#x60; for that.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId"></param>
@@ -498,7 +513,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Create Document Payment 
+        /// Create Document Payment Record a payment received against an invoice.  The currency is taken from the invoice rather than from the request, so a payment can never disagree with what was billed.  Refused with 409 while the invoice is still a draft. Recording a payment does not move the invoice to &#x60;paid&#x60; — use &#x60;mark_paid&#x60; for that.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId"></param>
@@ -573,7 +588,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Delete Payment 
+        /// Delete Payment Remove a recorded payment.  The payment is deleted outright rather than reversed, and the invoice&#39;s status is left alone. The deletion is kept in the audit log.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="paymentId"></param>
@@ -586,7 +601,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Delete Payment 
+        /// Delete Payment Remove a recorded payment.  The payment is deleted outright rather than reversed, and the invoice&#39;s status is left alone. The deletion is kept in the audit log.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="paymentId"></param>
@@ -649,7 +664,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Delete Payment 
+        /// Delete Payment Remove a recorded payment.  The payment is deleted outright rather than reversed, and the invoice&#39;s status is left alone. The deletion is kept in the audit log.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="paymentId"></param>
@@ -663,7 +678,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Delete Payment 
+        /// Delete Payment Remove a recorded payment.  The payment is deleted outright rather than reversed, and the invoice&#39;s status is left alone. The deletion is kept in the audit log.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="paymentId"></param>
@@ -729,7 +744,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Get Payment 
+        /// Get Payment One recorded payment by id.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="paymentId"></param>
@@ -742,7 +757,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Get Payment 
+        /// Get Payment One recorded payment by id.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="paymentId"></param>
@@ -805,7 +820,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Get Payment 
+        /// Get Payment One recorded payment by id.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="paymentId"></param>
@@ -819,7 +834,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Get Payment 
+        /// Get Payment One recorded payment by id.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="paymentId"></param>
@@ -885,7 +900,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Document Payments 
+        /// List Document Payments Payments recorded against one document, newest first.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId"></param>
@@ -900,7 +915,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Document Payments 
+        /// List Document Payments Payments recorded against one document, newest first.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId"></param>
@@ -973,7 +988,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Document Payments 
+        /// List Document Payments Payments recorded against one document, newest first.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId"></param>
@@ -989,7 +1004,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Document Payments 
+        /// List Document Payments Payments recorded against one document, newest first.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId"></param>
@@ -1065,7 +1080,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Update Payment 
+        /// Update Payment Correct a payment that was already recorded.  Only the fields you send are changed. The invoice&#39;s status and totals are left alone.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="paymentId"></param>
@@ -1079,7 +1094,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Update Payment 
+        /// Update Payment Correct a payment that was already recorded.  Only the fields you send are changed. The invoice&#39;s status and totals are left alone.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="paymentId"></param>
@@ -1151,7 +1166,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Update Payment 
+        /// Update Payment Correct a payment that was already recorded.  Only the fields you send are changed. The invoice&#39;s status and totals are left alone.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="paymentId"></param>
@@ -1166,7 +1181,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Update Payment 
+        /// Update Payment Correct a payment that was already recorded.  Only the fields you send are changed. The invoice&#39;s status and totals are left alone.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="paymentId"></param>
