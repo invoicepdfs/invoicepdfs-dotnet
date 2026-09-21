@@ -17,11 +17,11 @@ All URIs are relative to *http://localhost*
 
 <a id="createwebhookendpoint"></a>
 # **CreateWebhookEndpoint**
-> WebhookEndpointResponse CreateWebhookEndpoint (WebhookEndpointCreateRequest webhookEndpointCreateRequest)
+> WebhookEndpointCreatedResponse CreateWebhookEndpoint (WebhookEndpointCreateRequest webhookEndpointCreateRequest)
 
 Create Webhook Endpoint
 
-Register a URL to receive events.  The endpoint starts active and begins receiving the events you list.  A signing secret is generated but is **not** returned here. Call `rotate_webhook_secret` to obtain one before you can verify signatures.
+Register a URL to receive events.  The endpoint starts active and begins receiving the events you list.  The response carries the signing secret, and is the only one that ever will — store it now. Reading or listing endpoints never returns it, and the only way to get another is `rotate_webhook_secret`, which stops this one working.
 
 ### Example
 ```csharp
@@ -48,7 +48,7 @@ namespace Example
             try
             {
                 // Create Webhook Endpoint
-                WebhookEndpointResponse result = apiInstance.CreateWebhookEndpoint(webhookEndpointCreateRequest);
+                WebhookEndpointCreatedResponse result = apiInstance.CreateWebhookEndpoint(webhookEndpointCreateRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -69,7 +69,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Create Webhook Endpoint
-    ApiResponse<WebhookEndpointResponse> response = apiInstance.CreateWebhookEndpointWithHttpInfo(webhookEndpointCreateRequest);
+    ApiResponse<WebhookEndpointCreatedResponse> response = apiInstance.CreateWebhookEndpointWithHttpInfo(webhookEndpointCreateRequest);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -90,7 +90,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**WebhookEndpointResponse**](WebhookEndpointResponse.md)
+[**WebhookEndpointCreatedResponse**](WebhookEndpointCreatedResponse.md)
 
 ### Authorization
 
@@ -785,7 +785,7 @@ catch (ApiException e)
 
 Test Webhook Endpoint
 
-Record a test event against this endpoint.  Creates a `test` event and a delivery in `pending`, which you can inspect with `get_webhook_delivery`.  This call does not send the delivery. Pass the returned delivery id to `retry_webhook_delivery` to have it dispatched.
+Send a test event to this endpoint.  Delivers a `test` event immediately, so you can confirm the URL is reachable and your signature check works before real events depend on it.  Returns straight away with the delivery in `pending`; follow it with `get_webhook_delivery` to see whether it arrived.
 
 ### Example
 ```csharp

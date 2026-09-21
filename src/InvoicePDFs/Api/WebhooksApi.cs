@@ -30,25 +30,25 @@ namespace InvoicePDFs.Api
         /// Create Webhook Endpoint
         /// </summary>
         /// <remarks>
-        /// Register a URL to receive events.  The endpoint starts active and begins receiving the events you list.  A signing secret is generated but is **not** returned here. Call &#x60;rotate_webhook_secret&#x60; to obtain one before you can verify signatures.
+        /// Register a URL to receive events.  The endpoint starts active and begins receiving the events you list.  The response carries the signing secret, and is the only one that ever will — store it now. Reading or listing endpoints never returns it, and the only way to get another is &#x60;rotate_webhook_secret&#x60;, which stops this one working.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="webhookEndpointCreateRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>WebhookEndpointResponse</returns>
-        WebhookEndpointResponse CreateWebhookEndpoint(WebhookEndpointCreateRequest webhookEndpointCreateRequest, int operationIndex = 0);
+        /// <returns>WebhookEndpointCreatedResponse</returns>
+        WebhookEndpointCreatedResponse CreateWebhookEndpoint(WebhookEndpointCreateRequest webhookEndpointCreateRequest, int operationIndex = 0);
 
         /// <summary>
         /// Create Webhook Endpoint
         /// </summary>
         /// <remarks>
-        /// Register a URL to receive events.  The endpoint starts active and begins receiving the events you list.  A signing secret is generated but is **not** returned here. Call &#x60;rotate_webhook_secret&#x60; to obtain one before you can verify signatures.
+        /// Register a URL to receive events.  The endpoint starts active and begins receiving the events you list.  The response carries the signing secret, and is the only one that ever will — store it now. Reading or listing endpoints never returns it, and the only way to get another is &#x60;rotate_webhook_secret&#x60;, which stops this one working.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="webhookEndpointCreateRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of WebhookEndpointResponse</returns>
-        ApiResponse<WebhookEndpointResponse> CreateWebhookEndpointWithHttpInfo(WebhookEndpointCreateRequest webhookEndpointCreateRequest, int operationIndex = 0);
+        /// <returns>ApiResponse of WebhookEndpointCreatedResponse</returns>
+        ApiResponse<WebhookEndpointCreatedResponse> CreateWebhookEndpointWithHttpInfo(WebhookEndpointCreateRequest webhookEndpointCreateRequest, int operationIndex = 0);
         /// <summary>
         /// Delete Webhook Endpoint
         /// </summary>
@@ -218,7 +218,7 @@ namespace InvoicePDFs.Api
         /// Test Webhook Endpoint
         /// </summary>
         /// <remarks>
-        /// Record a test event against this endpoint.  Creates a &#x60;test&#x60; event and a delivery in &#x60;pending&#x60;, which you can inspect with &#x60;get_webhook_delivery&#x60;.  This call does not send the delivery. Pass the returned delivery id to &#x60;retry_webhook_delivery&#x60; to have it dispatched.
+        /// Send a test event to this endpoint.  Delivers a &#x60;test&#x60; event immediately, so you can confirm the URL is reachable and your signature check works before real events depend on it.  Returns straight away with the delivery in &#x60;pending&#x60;; follow it with &#x60;get_webhook_delivery&#x60; to see whether it arrived.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="endpointId"></param>
@@ -230,7 +230,7 @@ namespace InvoicePDFs.Api
         /// Test Webhook Endpoint
         /// </summary>
         /// <remarks>
-        /// Record a test event against this endpoint.  Creates a &#x60;test&#x60; event and a delivery in &#x60;pending&#x60;, which you can inspect with &#x60;get_webhook_delivery&#x60;.  This call does not send the delivery. Pass the returned delivery id to &#x60;retry_webhook_delivery&#x60; to have it dispatched.
+        /// Send a test event to this endpoint.  Delivers a &#x60;test&#x60; event immediately, so you can confirm the URL is reachable and your signature check works before real events depend on it.  Returns straight away with the delivery in &#x60;pending&#x60;; follow it with &#x60;get_webhook_delivery&#x60; to see whether it arrived.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="endpointId"></param>
@@ -275,27 +275,27 @@ namespace InvoicePDFs.Api
         /// Create Webhook Endpoint
         /// </summary>
         /// <remarks>
-        /// Register a URL to receive events.  The endpoint starts active and begins receiving the events you list.  A signing secret is generated but is **not** returned here. Call &#x60;rotate_webhook_secret&#x60; to obtain one before you can verify signatures.
+        /// Register a URL to receive events.  The endpoint starts active and begins receiving the events you list.  The response carries the signing secret, and is the only one that ever will — store it now. Reading or listing endpoints never returns it, and the only way to get another is &#x60;rotate_webhook_secret&#x60;, which stops this one working.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="webhookEndpointCreateRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of WebhookEndpointResponse</returns>
-        System.Threading.Tasks.Task<WebhookEndpointResponse> CreateWebhookEndpointAsync(WebhookEndpointCreateRequest webhookEndpointCreateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of WebhookEndpointCreatedResponse</returns>
+        System.Threading.Tasks.Task<WebhookEndpointCreatedResponse> CreateWebhookEndpointAsync(WebhookEndpointCreateRequest webhookEndpointCreateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Create Webhook Endpoint
         /// </summary>
         /// <remarks>
-        /// Register a URL to receive events.  The endpoint starts active and begins receiving the events you list.  A signing secret is generated but is **not** returned here. Call &#x60;rotate_webhook_secret&#x60; to obtain one before you can verify signatures.
+        /// Register a URL to receive events.  The endpoint starts active and begins receiving the events you list.  The response carries the signing secret, and is the only one that ever will — store it now. Reading or listing endpoints never returns it, and the only way to get another is &#x60;rotate_webhook_secret&#x60;, which stops this one working.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="webhookEndpointCreateRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (WebhookEndpointResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<WebhookEndpointResponse>> CreateWebhookEndpointWithHttpInfoAsync(WebhookEndpointCreateRequest webhookEndpointCreateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (WebhookEndpointCreatedResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<WebhookEndpointCreatedResponse>> CreateWebhookEndpointWithHttpInfoAsync(WebhookEndpointCreateRequest webhookEndpointCreateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Delete Webhook Endpoint
         /// </summary>
@@ -479,7 +479,7 @@ namespace InvoicePDFs.Api
         /// Test Webhook Endpoint
         /// </summary>
         /// <remarks>
-        /// Record a test event against this endpoint.  Creates a &#x60;test&#x60; event and a delivery in &#x60;pending&#x60;, which you can inspect with &#x60;get_webhook_delivery&#x60;.  This call does not send the delivery. Pass the returned delivery id to &#x60;retry_webhook_delivery&#x60; to have it dispatched.
+        /// Send a test event to this endpoint.  Delivers a &#x60;test&#x60; event immediately, so you can confirm the URL is reachable and your signature check works before real events depend on it.  Returns straight away with the delivery in &#x60;pending&#x60;; follow it with &#x60;get_webhook_delivery&#x60; to see whether it arrived.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="endpointId"></param>
@@ -492,7 +492,7 @@ namespace InvoicePDFs.Api
         /// Test Webhook Endpoint
         /// </summary>
         /// <remarks>
-        /// Record a test event against this endpoint.  Creates a &#x60;test&#x60; event and a delivery in &#x60;pending&#x60;, which you can inspect with &#x60;get_webhook_delivery&#x60;.  This call does not send the delivery. Pass the returned delivery id to &#x60;retry_webhook_delivery&#x60; to have it dispatched.
+        /// Send a test event to this endpoint.  Delivers a &#x60;test&#x60; event immediately, so you can confirm the URL is reachable and your signature check works before real events depend on it.  Returns straight away with the delivery in &#x60;pending&#x60;; follow it with &#x60;get_webhook_delivery&#x60; to see whether it arrived.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="endpointId"></param>
@@ -648,26 +648,26 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Create Webhook Endpoint Register a URL to receive events.  The endpoint starts active and begins receiving the events you list.  A signing secret is generated but is **not** returned here. Call &#x60;rotate_webhook_secret&#x60; to obtain one before you can verify signatures.
+        /// Create Webhook Endpoint Register a URL to receive events.  The endpoint starts active and begins receiving the events you list.  The response carries the signing secret, and is the only one that ever will — store it now. Reading or listing endpoints never returns it, and the only way to get another is &#x60;rotate_webhook_secret&#x60;, which stops this one working.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="webhookEndpointCreateRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>WebhookEndpointResponse</returns>
-        public WebhookEndpointResponse CreateWebhookEndpoint(WebhookEndpointCreateRequest webhookEndpointCreateRequest, int operationIndex = 0)
+        /// <returns>WebhookEndpointCreatedResponse</returns>
+        public WebhookEndpointCreatedResponse CreateWebhookEndpoint(WebhookEndpointCreateRequest webhookEndpointCreateRequest, int operationIndex = 0)
         {
-            InvoicePDFs.Client.ApiResponse<WebhookEndpointResponse> localVarResponse = CreateWebhookEndpointWithHttpInfo(webhookEndpointCreateRequest);
+            InvoicePDFs.Client.ApiResponse<WebhookEndpointCreatedResponse> localVarResponse = CreateWebhookEndpointWithHttpInfo(webhookEndpointCreateRequest);
             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Create Webhook Endpoint Register a URL to receive events.  The endpoint starts active and begins receiving the events you list.  A signing secret is generated but is **not** returned here. Call &#x60;rotate_webhook_secret&#x60; to obtain one before you can verify signatures.
+        /// Create Webhook Endpoint Register a URL to receive events.  The endpoint starts active and begins receiving the events you list.  The response carries the signing secret, and is the only one that ever will — store it now. Reading or listing endpoints never returns it, and the only way to get another is &#x60;rotate_webhook_secret&#x60;, which stops this one working.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="webhookEndpointCreateRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of WebhookEndpointResponse</returns>
-        public InvoicePDFs.Client.ApiResponse<WebhookEndpointResponse> CreateWebhookEndpointWithHttpInfo(WebhookEndpointCreateRequest webhookEndpointCreateRequest, int operationIndex = 0)
+        /// <returns>ApiResponse of WebhookEndpointCreatedResponse</returns>
+        public InvoicePDFs.Client.ApiResponse<WebhookEndpointCreatedResponse> CreateWebhookEndpointWithHttpInfo(WebhookEndpointCreateRequest webhookEndpointCreateRequest, int operationIndex = 0)
         {
             // verify the required parameter 'webhookEndpointCreateRequest' is set
             if (webhookEndpointCreateRequest == null)
@@ -711,7 +711,7 @@ namespace InvoicePDFs.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<WebhookEndpointResponse>("/api/v1/webhook-endpoints", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<WebhookEndpointCreatedResponse>("/api/v1/webhook-endpoints", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("CreateWebhookEndpoint", localVarResponse);
@@ -725,28 +725,28 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Create Webhook Endpoint Register a URL to receive events.  The endpoint starts active and begins receiving the events you list.  A signing secret is generated but is **not** returned here. Call &#x60;rotate_webhook_secret&#x60; to obtain one before you can verify signatures.
+        /// Create Webhook Endpoint Register a URL to receive events.  The endpoint starts active and begins receiving the events you list.  The response carries the signing secret, and is the only one that ever will — store it now. Reading or listing endpoints never returns it, and the only way to get another is &#x60;rotate_webhook_secret&#x60;, which stops this one working.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="webhookEndpointCreateRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of WebhookEndpointResponse</returns>
-        public async System.Threading.Tasks.Task<WebhookEndpointResponse> CreateWebhookEndpointAsync(WebhookEndpointCreateRequest webhookEndpointCreateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of WebhookEndpointCreatedResponse</returns>
+        public async System.Threading.Tasks.Task<WebhookEndpointCreatedResponse> CreateWebhookEndpointAsync(WebhookEndpointCreateRequest webhookEndpointCreateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            InvoicePDFs.Client.ApiResponse<WebhookEndpointResponse> localVarResponse = await CreateWebhookEndpointWithHttpInfoAsync(webhookEndpointCreateRequest, operationIndex, cancellationToken).ConfigureAwait(false);
+            InvoicePDFs.Client.ApiResponse<WebhookEndpointCreatedResponse> localVarResponse = await CreateWebhookEndpointWithHttpInfoAsync(webhookEndpointCreateRequest, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Create Webhook Endpoint Register a URL to receive events.  The endpoint starts active and begins receiving the events you list.  A signing secret is generated but is **not** returned here. Call &#x60;rotate_webhook_secret&#x60; to obtain one before you can verify signatures.
+        /// Create Webhook Endpoint Register a URL to receive events.  The endpoint starts active and begins receiving the events you list.  The response carries the signing secret, and is the only one that ever will — store it now. Reading or listing endpoints never returns it, and the only way to get another is &#x60;rotate_webhook_secret&#x60;, which stops this one working.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="webhookEndpointCreateRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (WebhookEndpointResponse)</returns>
-        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<WebhookEndpointResponse>> CreateWebhookEndpointWithHttpInfoAsync(WebhookEndpointCreateRequest webhookEndpointCreateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (WebhookEndpointCreatedResponse)</returns>
+        public async System.Threading.Tasks.Task<InvoicePDFs.Client.ApiResponse<WebhookEndpointCreatedResponse>> CreateWebhookEndpointWithHttpInfoAsync(WebhookEndpointCreateRequest webhookEndpointCreateRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'webhookEndpointCreateRequest' is set
             if (webhookEndpointCreateRequest == null)
@@ -791,7 +791,7 @@ namespace InvoicePDFs.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<WebhookEndpointResponse>("/api/v1/webhook-endpoints", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<WebhookEndpointCreatedResponse>("/api/v1/webhook-endpoints", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1910,7 +1910,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Test Webhook Endpoint Record a test event against this endpoint.  Creates a &#x60;test&#x60; event and a delivery in &#x60;pending&#x60;, which you can inspect with &#x60;get_webhook_delivery&#x60;.  This call does not send the delivery. Pass the returned delivery id to &#x60;retry_webhook_delivery&#x60; to have it dispatched.
+        /// Test Webhook Endpoint Send a test event to this endpoint.  Delivers a &#x60;test&#x60; event immediately, so you can confirm the URL is reachable and your signature check works before real events depend on it.  Returns straight away with the delivery in &#x60;pending&#x60;; follow it with &#x60;get_webhook_delivery&#x60; to see whether it arrived.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="endpointId"></param>
@@ -1923,7 +1923,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Test Webhook Endpoint Record a test event against this endpoint.  Creates a &#x60;test&#x60; event and a delivery in &#x60;pending&#x60;, which you can inspect with &#x60;get_webhook_delivery&#x60;.  This call does not send the delivery. Pass the returned delivery id to &#x60;retry_webhook_delivery&#x60; to have it dispatched.
+        /// Test Webhook Endpoint Send a test event to this endpoint.  Delivers a &#x60;test&#x60; event immediately, so you can confirm the URL is reachable and your signature check works before real events depend on it.  Returns straight away with the delivery in &#x60;pending&#x60;; follow it with &#x60;get_webhook_delivery&#x60; to see whether it arrived.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="endpointId"></param>
@@ -1986,7 +1986,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Test Webhook Endpoint Record a test event against this endpoint.  Creates a &#x60;test&#x60; event and a delivery in &#x60;pending&#x60;, which you can inspect with &#x60;get_webhook_delivery&#x60;.  This call does not send the delivery. Pass the returned delivery id to &#x60;retry_webhook_delivery&#x60; to have it dispatched.
+        /// Test Webhook Endpoint Send a test event to this endpoint.  Delivers a &#x60;test&#x60; event immediately, so you can confirm the URL is reachable and your signature check works before real events depend on it.  Returns straight away with the delivery in &#x60;pending&#x60;; follow it with &#x60;get_webhook_delivery&#x60; to see whether it arrived.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="endpointId"></param>
@@ -2000,7 +2000,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Test Webhook Endpoint Record a test event against this endpoint.  Creates a &#x60;test&#x60; event and a delivery in &#x60;pending&#x60;, which you can inspect with &#x60;get_webhook_delivery&#x60;.  This call does not send the delivery. Pass the returned delivery id to &#x60;retry_webhook_delivery&#x60; to have it dispatched.
+        /// Test Webhook Endpoint Send a test event to this endpoint.  Delivers a &#x60;test&#x60; event immediately, so you can confirm the URL is reachable and your signature check works before real events depend on it.  Returns straight away with the delivery in &#x60;pending&#x60;; follow it with &#x60;get_webhook_delivery&#x60; to see whether it arrived.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="endpointId"></param>

@@ -250,6 +250,8 @@ docs/WebhookDeliveryOut.md
 docs/WebhookDeliveryResponse.md
 docs/WebhookDeliveryStatus.md
 docs/WebhookEndpointCreateRequest.md
+docs/WebhookEndpointCreatedOut.md
+docs/WebhookEndpointCreatedResponse.md
 docs/WebhookEndpointOut.md
 docs/WebhookEndpointPatchRequest.md
 docs/WebhookEndpointResponse.md
@@ -518,6 +520,8 @@ src/InvoicePDFs.Test/Model/WebhookDeliveryOutTests.cs
 src/InvoicePDFs.Test/Model/WebhookDeliveryResponseTests.cs
 src/InvoicePDFs.Test/Model/WebhookDeliveryStatusTests.cs
 src/InvoicePDFs.Test/Model/WebhookEndpointCreateRequestTests.cs
+src/InvoicePDFs.Test/Model/WebhookEndpointCreatedOutTests.cs
+src/InvoicePDFs.Test/Model/WebhookEndpointCreatedResponseTests.cs
 src/InvoicePDFs.Test/Model/WebhookEndpointOutTests.cs
 src/InvoicePDFs.Test/Model/WebhookEndpointPatchRequestTests.cs
 src/InvoicePDFs.Test/Model/WebhookEndpointResponseTests.cs
@@ -800,6 +804,8 @@ src/InvoicePDFs/Model/WebhookDeliveryOut.cs
 src/InvoicePDFs/Model/WebhookDeliveryResponse.cs
 src/InvoicePDFs/Model/WebhookDeliveryStatus.cs
 src/InvoicePDFs/Model/WebhookEndpointCreateRequest.cs
+src/InvoicePDFs/Model/WebhookEndpointCreatedOut.cs
+src/InvoicePDFs/Model/WebhookEndpointCreatedResponse.cs
 src/InvoicePDFs/Model/WebhookEndpointOut.cs
 src/InvoicePDFs/Model/WebhookEndpointPatchRequest.cs
 src/InvoicePDFs/Model/WebhookEndpointResponse.cs

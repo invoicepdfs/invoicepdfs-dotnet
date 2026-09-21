@@ -63,7 +63,7 @@ namespace InvoicePDFs.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //WebhookEndpointCreateRequest webhookEndpointCreateRequest = null;
             //var response = instance.CreateWebhookEndpoint(webhookEndpointCreateRequest);
-            //Assert.IsType<WebhookEndpointResponse>(response);
+            //Assert.IsType<WebhookEndpointCreatedResponse>(response);
         }
 
         /// <summary>
