@@ -29,6 +29,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// List Logs
         /// </summary>
+        /// <remarks>
+        /// Recent API requests made with your keys, newest first.  Method, path, status, duration and the request and response bodies, so you can see what an integration actually sent rather than what it meant to.  Filter to &#x60;success&#x60; or &#x60;error&#x60; with &#x60;status&#x60;. How long these are kept depends on the plan — &#x60;get_usage_limits&#x60; reports the retention.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="status"> (optional, default to &quot;&quot;)</param>
         /// <param name="limit"> (optional, default to 100)</param>
@@ -40,7 +43,7 @@ namespace InvoicePDFs.Api
         /// List Logs
         /// </summary>
         /// <remarks>
-        /// 
+        /// Recent API requests made with your keys, newest first.  Method, path, status, duration and the request and response bodies, so you can see what an integration actually sent rather than what it meant to.  Filter to &#x60;success&#x60; or &#x60;error&#x60; with &#x60;status&#x60;. How long these are kept depends on the plan — &#x60;get_usage_limits&#x60; reports the retention.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="status"> (optional, default to &quot;&quot;)</param>
@@ -61,7 +64,7 @@ namespace InvoicePDFs.Api
         /// List Logs
         /// </summary>
         /// <remarks>
-        /// 
+        /// Recent API requests made with your keys, newest first.  Method, path, status, duration and the request and response bodies, so you can see what an integration actually sent rather than what it meant to.  Filter to &#x60;success&#x60; or &#x60;error&#x60; with &#x60;status&#x60;. How long these are kept depends on the plan — &#x60;get_usage_limits&#x60; reports the retention.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="status"> (optional, default to &quot;&quot;)</param>
@@ -75,7 +78,7 @@ namespace InvoicePDFs.Api
         /// List Logs
         /// </summary>
         /// <remarks>
-        /// 
+        /// Recent API requests made with your keys, newest first.  Method, path, status, duration and the request and response bodies, so you can see what an integration actually sent rather than what it meant to.  Filter to &#x60;success&#x60; or &#x60;error&#x60; with &#x60;status&#x60;. How long these are kept depends on the plan — &#x60;get_usage_limits&#x60; reports the retention.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="status"> (optional, default to &quot;&quot;)</param>
@@ -205,7 +208,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Logs 
+        /// List Logs Recent API requests made with your keys, newest first.  Method, path, status, duration and the request and response bodies, so you can see what an integration actually sent rather than what it meant to.  Filter to &#x60;success&#x60; or &#x60;error&#x60; with &#x60;status&#x60;. How long these are kept depends on the plan — &#x60;get_usage_limits&#x60; reports the retention.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="status"> (optional, default to &quot;&quot;)</param>
@@ -219,7 +222,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Logs 
+        /// List Logs Recent API requests made with your keys, newest first.  Method, path, status, duration and the request and response bodies, so you can see what an integration actually sent rather than what it meant to.  Filter to &#x60;success&#x60; or &#x60;error&#x60; with &#x60;status&#x60;. How long these are kept depends on the plan — &#x60;get_usage_limits&#x60; reports the retention.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="status"> (optional, default to &quot;&quot;)</param>
@@ -284,7 +287,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Logs 
+        /// List Logs Recent API requests made with your keys, newest first.  Method, path, status, duration and the request and response bodies, so you can see what an integration actually sent rather than what it meant to.  Filter to &#x60;success&#x60; or &#x60;error&#x60; with &#x60;status&#x60;. How long these are kept depends on the plan — &#x60;get_usage_limits&#x60; reports the retention.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="status"> (optional, default to &quot;&quot;)</param>
@@ -299,7 +302,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Logs 
+        /// List Logs Recent API requests made with your keys, newest first.  Method, path, status, duration and the request and response bodies, so you can see what an integration actually sent rather than what it meant to.  Filter to &#x60;success&#x60; or &#x60;error&#x60; with &#x60;status&#x60;. How long these are kept depends on the plan — &#x60;get_usage_limits&#x60; reports the retention.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="status"> (optional, default to &quot;&quot;)</param>

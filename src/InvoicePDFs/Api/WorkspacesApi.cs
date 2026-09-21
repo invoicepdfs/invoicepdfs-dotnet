@@ -29,6 +29,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// Add Workspace Member
         /// </summary>
+        /// <remarks>
+        /// Add someone to a workspace by email address.  Refused with 409 if that email is already a member. The address does not have to belong to an existing account.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId"></param>
         /// <param name="workspaceMemberCreateRequest"></param>
@@ -41,7 +44,7 @@ namespace InvoicePDFs.Api
         /// Add Workspace Member
         /// </summary>
         /// <remarks>
-        /// 
+        /// Add someone to a workspace by email address.  Refused with 409 if that email is already a member. The address does not have to belong to an existing account.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId"></param>
@@ -53,6 +56,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// Create Workspace
         /// </summary>
+        /// <remarks>
+        /// Create a workspace, owned by this account.  The creating account is added as its first member with the &#x60;owner&#x60; role.  Send an &#x60;Idempotency-Key&#x60; header to make retrying safe: a repeat with the same key and body returns the original workspace instead of a second one.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceCreateRequest"></param>
         /// <param name="idempotencyKey"> (optional)</param>
@@ -64,7 +70,7 @@ namespace InvoicePDFs.Api
         /// Create Workspace
         /// </summary>
         /// <remarks>
-        /// 
+        /// Create a workspace, owned by this account.  The creating account is added as its first member with the &#x60;owner&#x60; role.  Send an &#x60;Idempotency-Key&#x60; header to make retrying safe: a repeat with the same key and body returns the original workspace instead of a second one.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceCreateRequest"></param>
@@ -75,6 +81,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// Delete Workspace
         /// </summary>
+        /// <remarks>
+        /// Delete a workspace and its membership list.  Every member record goes with it. This cannot be undone, and documents are unaffected — they belong to the account, not the workspace.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -85,7 +94,7 @@ namespace InvoicePDFs.Api
         /// Delete Workspace
         /// </summary>
         /// <remarks>
-        /// 
+        /// Delete a workspace and its membership list.  Every member record goes with it. This cannot be undone, and documents are unaffected — they belong to the account, not the workspace.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId"></param>
@@ -95,6 +104,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// Get Workspace
         /// </summary>
+        /// <remarks>
+        /// One workspace by id.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -105,7 +117,7 @@ namespace InvoicePDFs.Api
         /// Get Workspace
         /// </summary>
         /// <remarks>
-        /// 
+        /// One workspace by id.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId"></param>
@@ -115,6 +127,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// List Workspace Members
         /// </summary>
+        /// <remarks>
+        /// Everyone on a workspace, with their role.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -125,7 +140,7 @@ namespace InvoicePDFs.Api
         /// List Workspace Members
         /// </summary>
         /// <remarks>
-        /// 
+        /// Everyone on a workspace, with their role.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId"></param>
@@ -135,6 +150,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// List Workspaces
         /// </summary>
+        /// <remarks>
+        /// Workspaces this account owns, newest first.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit"> (optional, default to 50)</param>
         /// <param name="cursor"> (optional)</param>
@@ -146,7 +164,7 @@ namespace InvoicePDFs.Api
         /// List Workspaces
         /// </summary>
         /// <remarks>
-        /// 
+        /// Workspaces this account owns, newest first.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit"> (optional, default to 50)</param>
@@ -157,6 +175,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// Remove Workspace Member
         /// </summary>
+        /// <remarks>
+        /// Remove someone from a workspace.  Removes the membership only; nothing they created is affected.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId"></param>
         /// <param name="memberId"></param>
@@ -168,7 +189,7 @@ namespace InvoicePDFs.Api
         /// Remove Workspace Member
         /// </summary>
         /// <remarks>
-        /// 
+        /// Remove someone from a workspace.  Removes the membership only; nothing they created is affected.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId"></param>
@@ -179,6 +200,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// Update Workspace
         /// </summary>
+        /// <remarks>
+        /// Rename a workspace.  Only the fields you send are changed.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId"></param>
         /// <param name="workspacePatchRequest"></param>
@@ -191,7 +215,7 @@ namespace InvoicePDFs.Api
         /// Update Workspace
         /// </summary>
         /// <remarks>
-        /// 
+        /// Rename a workspace.  Only the fields you send are changed.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId"></param>
@@ -203,6 +227,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// Update Workspace Member
         /// </summary>
+        /// <remarks>
+        /// Change a member&#39;s role.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId"></param>
         /// <param name="memberId"></param>
@@ -215,7 +242,7 @@ namespace InvoicePDFs.Api
         /// Update Workspace Member
         /// </summary>
         /// <remarks>
-        /// 
+        /// Change a member&#39;s role.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId"></param>
@@ -237,7 +264,7 @@ namespace InvoicePDFs.Api
         /// Add Workspace Member
         /// </summary>
         /// <remarks>
-        /// 
+        /// Add someone to a workspace by email address.  Refused with 409 if that email is already a member. The address does not have to belong to an existing account.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId"></param>
@@ -252,7 +279,7 @@ namespace InvoicePDFs.Api
         /// Add Workspace Member
         /// </summary>
         /// <remarks>
-        /// 
+        /// Add someone to a workspace by email address.  Refused with 409 if that email is already a member. The address does not have to belong to an existing account.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId"></param>
@@ -266,7 +293,7 @@ namespace InvoicePDFs.Api
         /// Create Workspace
         /// </summary>
         /// <remarks>
-        /// 
+        /// Create a workspace, owned by this account.  The creating account is added as its first member with the &#x60;owner&#x60; role.  Send an &#x60;Idempotency-Key&#x60; header to make retrying safe: a repeat with the same key and body returns the original workspace instead of a second one.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceCreateRequest"></param>
@@ -280,7 +307,7 @@ namespace InvoicePDFs.Api
         /// Create Workspace
         /// </summary>
         /// <remarks>
-        /// 
+        /// Create a workspace, owned by this account.  The creating account is added as its first member with the &#x60;owner&#x60; role.  Send an &#x60;Idempotency-Key&#x60; header to make retrying safe: a repeat with the same key and body returns the original workspace instead of a second one.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceCreateRequest"></param>
@@ -293,7 +320,7 @@ namespace InvoicePDFs.Api
         /// Delete Workspace
         /// </summary>
         /// <remarks>
-        /// 
+        /// Delete a workspace and its membership list.  Every member record goes with it. This cannot be undone, and documents are unaffected — they belong to the account, not the workspace.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId"></param>
@@ -306,7 +333,7 @@ namespace InvoicePDFs.Api
         /// Delete Workspace
         /// </summary>
         /// <remarks>
-        /// 
+        /// Delete a workspace and its membership list.  Every member record goes with it. This cannot be undone, and documents are unaffected — they belong to the account, not the workspace.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId"></param>
@@ -318,7 +345,7 @@ namespace InvoicePDFs.Api
         /// Get Workspace
         /// </summary>
         /// <remarks>
-        /// 
+        /// One workspace by id.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId"></param>
@@ -331,7 +358,7 @@ namespace InvoicePDFs.Api
         /// Get Workspace
         /// </summary>
         /// <remarks>
-        /// 
+        /// One workspace by id.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId"></param>
@@ -343,7 +370,7 @@ namespace InvoicePDFs.Api
         /// List Workspace Members
         /// </summary>
         /// <remarks>
-        /// 
+        /// Everyone on a workspace, with their role.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId"></param>
@@ -356,7 +383,7 @@ namespace InvoicePDFs.Api
         /// List Workspace Members
         /// </summary>
         /// <remarks>
-        /// 
+        /// Everyone on a workspace, with their role.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId"></param>
@@ -368,7 +395,7 @@ namespace InvoicePDFs.Api
         /// List Workspaces
         /// </summary>
         /// <remarks>
-        /// 
+        /// Workspaces this account owns, newest first.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit"> (optional, default to 50)</param>
@@ -382,7 +409,7 @@ namespace InvoicePDFs.Api
         /// List Workspaces
         /// </summary>
         /// <remarks>
-        /// 
+        /// Workspaces this account owns, newest first.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit"> (optional, default to 50)</param>
@@ -395,7 +422,7 @@ namespace InvoicePDFs.Api
         /// Remove Workspace Member
         /// </summary>
         /// <remarks>
-        /// 
+        /// Remove someone from a workspace.  Removes the membership only; nothing they created is affected.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId"></param>
@@ -409,7 +436,7 @@ namespace InvoicePDFs.Api
         /// Remove Workspace Member
         /// </summary>
         /// <remarks>
-        /// 
+        /// Remove someone from a workspace.  Removes the membership only; nothing they created is affected.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId"></param>
@@ -422,7 +449,7 @@ namespace InvoicePDFs.Api
         /// Update Workspace
         /// </summary>
         /// <remarks>
-        /// 
+        /// Rename a workspace.  Only the fields you send are changed.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId"></param>
@@ -437,7 +464,7 @@ namespace InvoicePDFs.Api
         /// Update Workspace
         /// </summary>
         /// <remarks>
-        /// 
+        /// Rename a workspace.  Only the fields you send are changed.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId"></param>
@@ -451,7 +478,7 @@ namespace InvoicePDFs.Api
         /// Update Workspace Member
         /// </summary>
         /// <remarks>
-        /// 
+        /// Change a member&#39;s role.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId"></param>
@@ -466,7 +493,7 @@ namespace InvoicePDFs.Api
         /// Update Workspace Member
         /// </summary>
         /// <remarks>
-        /// 
+        /// Change a member&#39;s role.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId"></param>
@@ -597,7 +624,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Add Workspace Member 
+        /// Add Workspace Member Add someone to a workspace by email address.  Refused with 409 if that email is already a member. The address does not have to belong to an existing account.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId"></param>
@@ -612,7 +639,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Add Workspace Member 
+        /// Add Workspace Member Add someone to a workspace by email address.  Refused with 409 if that email is already a member. The address does not have to belong to an existing account.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId"></param>
@@ -689,7 +716,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Add Workspace Member 
+        /// Add Workspace Member Add someone to a workspace by email address.  Refused with 409 if that email is already a member. The address does not have to belong to an existing account.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId"></param>
@@ -705,7 +732,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Add Workspace Member 
+        /// Add Workspace Member Add someone to a workspace by email address.  Refused with 409 if that email is already a member. The address does not have to belong to an existing account.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId"></param>
@@ -785,7 +812,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Create Workspace 
+        /// Create Workspace Create a workspace, owned by this account.  The creating account is added as its first member with the &#x60;owner&#x60; role.  Send an &#x60;Idempotency-Key&#x60; header to make retrying safe: a repeat with the same key and body returns the original workspace instead of a second one.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceCreateRequest"></param>
@@ -799,7 +826,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Create Workspace 
+        /// Create Workspace Create a workspace, owned by this account.  The creating account is added as its first member with the &#x60;owner&#x60; role.  Send an &#x60;Idempotency-Key&#x60; header to make retrying safe: a repeat with the same key and body returns the original workspace instead of a second one.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceCreateRequest"></param>
@@ -868,7 +895,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Create Workspace 
+        /// Create Workspace Create a workspace, owned by this account.  The creating account is added as its first member with the &#x60;owner&#x60; role.  Send an &#x60;Idempotency-Key&#x60; header to make retrying safe: a repeat with the same key and body returns the original workspace instead of a second one.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceCreateRequest"></param>
@@ -883,7 +910,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Create Workspace 
+        /// Create Workspace Create a workspace, owned by this account.  The creating account is added as its first member with the &#x60;owner&#x60; role.  Send an &#x60;Idempotency-Key&#x60; header to make retrying safe: a repeat with the same key and body returns the original workspace instead of a second one.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceCreateRequest"></param>
@@ -955,7 +982,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Delete Workspace 
+        /// Delete Workspace Delete a workspace and its membership list.  Every member record goes with it. This cannot be undone, and documents are unaffected — they belong to the account, not the workspace.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId"></param>
@@ -968,7 +995,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Delete Workspace 
+        /// Delete Workspace Delete a workspace and its membership list.  Every member record goes with it. This cannot be undone, and documents are unaffected — they belong to the account, not the workspace.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId"></param>
@@ -1031,7 +1058,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Delete Workspace 
+        /// Delete Workspace Delete a workspace and its membership list.  Every member record goes with it. This cannot be undone, and documents are unaffected — they belong to the account, not the workspace.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId"></param>
@@ -1045,7 +1072,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Delete Workspace 
+        /// Delete Workspace Delete a workspace and its membership list.  Every member record goes with it. This cannot be undone, and documents are unaffected — they belong to the account, not the workspace.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId"></param>
@@ -1111,7 +1138,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Get Workspace 
+        /// Get Workspace One workspace by id.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId"></param>
@@ -1124,7 +1151,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Get Workspace 
+        /// Get Workspace One workspace by id.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId"></param>
@@ -1187,7 +1214,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Get Workspace 
+        /// Get Workspace One workspace by id.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId"></param>
@@ -1201,7 +1228,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Get Workspace 
+        /// Get Workspace One workspace by id.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId"></param>
@@ -1267,7 +1294,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Workspace Members 
+        /// List Workspace Members Everyone on a workspace, with their role.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId"></param>
@@ -1280,7 +1307,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Workspace Members 
+        /// List Workspace Members Everyone on a workspace, with their role.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId"></param>
@@ -1343,7 +1370,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Workspace Members 
+        /// List Workspace Members Everyone on a workspace, with their role.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId"></param>
@@ -1357,7 +1384,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Workspace Members 
+        /// List Workspace Members Everyone on a workspace, with their role.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId"></param>
@@ -1423,7 +1450,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Workspaces 
+        /// List Workspaces Workspaces this account owns, newest first.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit"> (optional, default to 50)</param>
@@ -1437,7 +1464,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Workspaces 
+        /// List Workspaces Workspaces this account owns, newest first.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit"> (optional, default to 50)</param>
@@ -1502,7 +1529,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Workspaces 
+        /// List Workspaces Workspaces this account owns, newest first.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit"> (optional, default to 50)</param>
@@ -1517,7 +1544,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Workspaces 
+        /// List Workspaces Workspaces this account owns, newest first.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit"> (optional, default to 50)</param>
@@ -1585,7 +1612,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Remove Workspace Member 
+        /// Remove Workspace Member Remove someone from a workspace.  Removes the membership only; nothing they created is affected.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId"></param>
@@ -1599,7 +1626,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Remove Workspace Member 
+        /// Remove Workspace Member Remove someone from a workspace.  Removes the membership only; nothing they created is affected.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId"></param>
@@ -1670,7 +1697,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Remove Workspace Member 
+        /// Remove Workspace Member Remove someone from a workspace.  Removes the membership only; nothing they created is affected.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId"></param>
@@ -1685,7 +1712,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Remove Workspace Member 
+        /// Remove Workspace Member Remove someone from a workspace.  Removes the membership only; nothing they created is affected.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId"></param>
@@ -1759,7 +1786,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Update Workspace 
+        /// Update Workspace Rename a workspace.  Only the fields you send are changed.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId"></param>
@@ -1774,7 +1801,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Update Workspace 
+        /// Update Workspace Rename a workspace.  Only the fields you send are changed.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId"></param>
@@ -1851,7 +1878,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Update Workspace 
+        /// Update Workspace Rename a workspace.  Only the fields you send are changed.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId"></param>
@@ -1867,7 +1894,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Update Workspace 
+        /// Update Workspace Rename a workspace.  Only the fields you send are changed.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId"></param>
@@ -1947,7 +1974,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Update Workspace Member 
+        /// Update Workspace Member Change a member&#39;s role.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId"></param>
@@ -1962,7 +1989,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Update Workspace Member 
+        /// Update Workspace Member Change a member&#39;s role.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId"></param>
@@ -2042,7 +2069,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Update Workspace Member 
+        /// Update Workspace Member Change a member&#39;s role.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId"></param>
@@ -2058,7 +2085,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Update Workspace Member 
+        /// Update Workspace Member Change a member&#39;s role.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId"></param>

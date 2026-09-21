@@ -29,6 +29,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// List Countries
         /// </summary>
+        /// <remarks>
+        /// The country codes accepted anywhere an address is given.  ISO 3166-1 alpha-2.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CountriesListResponse</returns>
@@ -38,7 +41,7 @@ namespace InvoicePDFs.Api
         /// List Countries
         /// </summary>
         /// <remarks>
-        /// 
+        /// The country codes accepted anywhere an address is given.  ISO 3166-1 alpha-2.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -47,6 +50,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// List Currencies
         /// </summary>
+        /// <remarks>
+        /// The currency codes a document may be issued in.  ISO 4217, with the minor-unit count each one uses — the amounts in this API are integers in the currency&#39;s smallest unit, so that figure is what says where the decimal point goes.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CurrenciesListResponse</returns>
@@ -56,7 +62,7 @@ namespace InvoicePDFs.Api
         /// List Currencies
         /// </summary>
         /// <remarks>
-        /// 
+        /// The currency codes a document may be issued in.  ISO 4217, with the minor-unit count each one uses — the amounts in this API are integers in the currency&#39;s smallest unit, so that figure is what says where the decimal point goes.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -86,6 +92,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// List Locales
         /// </summary>
+        /// <remarks>
+        /// The locale codes accepted on a document or business profile.  The value is stored and returned as given; it is not currently applied to anything a render produces.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>LocalesListResponse</returns>
@@ -95,7 +104,7 @@ namespace InvoicePDFs.Api
         /// List Locales
         /// </summary>
         /// <remarks>
-        /// 
+        /// The locale codes accepted on a document or business profile.  The value is stored and returned as given; it is not currently applied to anything a render produces.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -104,6 +113,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// List Page Sizes
         /// </summary>
+        /// <remarks>
+        /// The page sizes a render can use.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>PageSizesListResponse</returns>
@@ -113,7 +125,7 @@ namespace InvoicePDFs.Api
         /// List Page Sizes
         /// </summary>
         /// <remarks>
-        /// 
+        /// The page sizes a render can use.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -164,6 +176,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// List Timezones
         /// </summary>
+        /// <remarks>
+        /// The time zone names accepted on a business profile.  IANA names. Stored and returned as given: recurring schedules are evaluated in UTC and do not consult it.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>TimezonesListResponse</returns>
@@ -173,7 +188,7 @@ namespace InvoicePDFs.Api
         /// List Timezones
         /// </summary>
         /// <remarks>
-        /// 
+        /// The time zone names accepted on a business profile.  IANA names. Stored and returned as given: recurring schedules are evaluated in UTC and do not consult it.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -213,7 +228,7 @@ namespace InvoicePDFs.Api
         /// List Countries
         /// </summary>
         /// <remarks>
-        /// 
+        /// The country codes accepted anywhere an address is given.  ISO 3166-1 alpha-2.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -225,7 +240,7 @@ namespace InvoicePDFs.Api
         /// List Countries
         /// </summary>
         /// <remarks>
-        /// 
+        /// The country codes accepted anywhere an address is given.  ISO 3166-1 alpha-2.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -236,7 +251,7 @@ namespace InvoicePDFs.Api
         /// List Currencies
         /// </summary>
         /// <remarks>
-        /// 
+        /// The currency codes a document may be issued in.  ISO 4217, with the minor-unit count each one uses — the amounts in this API are integers in the currency&#39;s smallest unit, so that figure is what says where the decimal point goes.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -248,7 +263,7 @@ namespace InvoicePDFs.Api
         /// List Currencies
         /// </summary>
         /// <remarks>
-        /// 
+        /// The currency codes a document may be issued in.  ISO 4217, with the minor-unit count each one uses — the amounts in this API are integers in the currency&#39;s smallest unit, so that figure is what says where the decimal point goes.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -282,7 +297,7 @@ namespace InvoicePDFs.Api
         /// List Locales
         /// </summary>
         /// <remarks>
-        /// 
+        /// The locale codes accepted on a document or business profile.  The value is stored and returned as given; it is not currently applied to anything a render produces.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -294,7 +309,7 @@ namespace InvoicePDFs.Api
         /// List Locales
         /// </summary>
         /// <remarks>
-        /// 
+        /// The locale codes accepted on a document or business profile.  The value is stored and returned as given; it is not currently applied to anything a render produces.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -305,7 +320,7 @@ namespace InvoicePDFs.Api
         /// List Page Sizes
         /// </summary>
         /// <remarks>
-        /// 
+        /// The page sizes a render can use.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -317,7 +332,7 @@ namespace InvoicePDFs.Api
         /// List Page Sizes
         /// </summary>
         /// <remarks>
-        /// 
+        /// The page sizes a render can use.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -374,7 +389,7 @@ namespace InvoicePDFs.Api
         /// List Timezones
         /// </summary>
         /// <remarks>
-        /// 
+        /// The time zone names accepted on a business profile.  IANA names. Stored and returned as given: recurring schedules are evaluated in UTC and do not consult it.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -386,7 +401,7 @@ namespace InvoicePDFs.Api
         /// List Timezones
         /// </summary>
         /// <remarks>
-        /// 
+        /// The time zone names accepted on a business profile.  IANA names. Stored and returned as given: recurring schedules are evaluated in UTC and do not consult it.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -537,7 +552,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Countries 
+        /// List Countries The country codes accepted anywhere an address is given.  ISO 3166-1 alpha-2.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -549,7 +564,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Countries 
+        /// List Countries The country codes accepted anywhere an address is given.  ISO 3166-1 alpha-2.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -598,7 +613,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Countries 
+        /// List Countries The country codes accepted anywhere an address is given.  ISO 3166-1 alpha-2.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -611,7 +626,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Countries 
+        /// List Countries The country codes accepted anywhere an address is given.  ISO 3166-1 alpha-2.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -663,7 +678,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Currencies 
+        /// List Currencies The currency codes a document may be issued in.  ISO 4217, with the minor-unit count each one uses — the amounts in this API are integers in the currency&#39;s smallest unit, so that figure is what says where the decimal point goes.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -675,7 +690,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Currencies 
+        /// List Currencies The currency codes a document may be issued in.  ISO 4217, with the minor-unit count each one uses — the amounts in this API are integers in the currency&#39;s smallest unit, so that figure is what says where the decimal point goes.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -724,7 +739,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Currencies 
+        /// List Currencies The currency codes a document may be issued in.  ISO 4217, with the minor-unit count each one uses — the amounts in this API are integers in the currency&#39;s smallest unit, so that figure is what says where the decimal point goes.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -737,7 +752,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Currencies 
+        /// List Currencies The currency codes a document may be issued in.  ISO 4217, with the minor-unit count each one uses — the amounts in this API are integers in the currency&#39;s smallest unit, so that figure is what says where the decimal point goes.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -915,7 +930,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Locales 
+        /// List Locales The locale codes accepted on a document or business profile.  The value is stored and returned as given; it is not currently applied to anything a render produces.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -927,7 +942,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Locales 
+        /// List Locales The locale codes accepted on a document or business profile.  The value is stored and returned as given; it is not currently applied to anything a render produces.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -976,7 +991,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Locales 
+        /// List Locales The locale codes accepted on a document or business profile.  The value is stored and returned as given; it is not currently applied to anything a render produces.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -989,7 +1004,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Locales 
+        /// List Locales The locale codes accepted on a document or business profile.  The value is stored and returned as given; it is not currently applied to anything a render produces.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -1041,7 +1056,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Page Sizes 
+        /// List Page Sizes The page sizes a render can use.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -1053,7 +1068,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Page Sizes 
+        /// List Page Sizes The page sizes a render can use.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -1102,7 +1117,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Page Sizes 
+        /// List Page Sizes The page sizes a render can use.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -1115,7 +1130,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Page Sizes 
+        /// List Page Sizes The page sizes a render can use.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -1419,7 +1434,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Timezones 
+        /// List Timezones The time zone names accepted on a business profile.  IANA names. Stored and returned as given: recurring schedules are evaluated in UTC and do not consult it.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -1431,7 +1446,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Timezones 
+        /// List Timezones The time zone names accepted on a business profile.  IANA names. Stored and returned as given: recurring schedules are evaluated in UTC and do not consult it.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -1480,7 +1495,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Timezones 
+        /// List Timezones The time zone names accepted on a business profile.  IANA names. Stored and returned as given: recurring schedules are evaluated in UTC and do not consult it.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -1493,7 +1508,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Timezones 
+        /// List Timezones The time zone names accepted on a business profile.  IANA names. Stored and returned as given: recurring schedules are evaluated in UTC and do not consult it.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>

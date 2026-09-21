@@ -20,6 +20,8 @@ All URIs are relative to *http://localhost*
 
 Add Workspace Member
 
+Add someone to a workspace by email address.  Refused with 409 if that email is already a member. The address does not have to belong to an existing account.
+
 ### Example
 ```csharp
 using System.Collections.Generic;
@@ -117,6 +119,8 @@ catch (ApiException e)
 
 Create Workspace
 
+Create a workspace, owned by this account.  The creating account is added as its first member with the `owner` role.  Send an `Idempotency-Key` header to make retrying safe: a repeat with the same key and body returns the original workspace instead of a second one.
+
 ### Example
 ```csharp
 using System.Collections.Generic;
@@ -212,6 +216,8 @@ catch (ApiException e)
 
 Delete Workspace
 
+Delete a workspace and its membership list.  Every member record goes with it. This cannot be undone, and documents are unaffected — they belong to the account, not the workspace.
+
 ### Example
 ```csharp
 using System.Collections.Generic;
@@ -304,6 +310,8 @@ catch (ApiException e)
 > WorkspaceResponse GetWorkspace (string workspaceId)
 
 Get Workspace
+
+One workspace by id.
 
 ### Example
 ```csharp
@@ -398,6 +406,8 @@ catch (ApiException e)
 
 List Workspace Members
 
+Everyone on a workspace, with their role.
+
 ### Example
 ```csharp
 using System.Collections.Generic;
@@ -490,6 +500,8 @@ catch (ApiException e)
 > WorkspacesListResponse ListWorkspaces (int? limit = null, string? cursor = null)
 
 List Workspaces
+
+Workspaces this account owns, newest first.
 
 ### Example
 ```csharp
@@ -586,6 +598,8 @@ catch (ApiException e)
 
 Remove Workspace Member
 
+Remove someone from a workspace.  Removes the membership only; nothing they created is affected.
+
 ### Example
 ```csharp
 using System.Collections.Generic;
@@ -680,6 +694,8 @@ catch (ApiException e)
 > WorkspaceResponse UpdateWorkspace (string workspaceId, WorkspacePatchRequest workspacePatchRequest, string? idempotencyKey = null)
 
 Update Workspace
+
+Rename a workspace.  Only the fields you send are changed.
 
 ### Example
 ```csharp
@@ -777,6 +793,8 @@ catch (ApiException e)
 > WorkspaceMemberOut UpdateWorkspaceMember (string workspaceId, string memberId, WorkspaceMemberPatchRequest workspaceMemberPatchRequest)
 
 Update Workspace Member
+
+Change a member's role.
 
 ### Example
 ```csharp

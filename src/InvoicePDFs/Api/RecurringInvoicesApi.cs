@@ -29,6 +29,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// Cancel Recurring Invoice
         /// </summary>
+        /// <remarks>
+        /// End a schedule permanently.  Terminal: it cannot be resumed or edited afterwards, and cancelling twice is refused with 409. To stop issuing temporarily, use &#x60;pause_recurring_invoice&#x60; instead.  Invoices already issued are left alone.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recurringId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -39,7 +42,7 @@ namespace InvoicePDFs.Api
         /// Cancel Recurring Invoice
         /// </summary>
         /// <remarks>
-        /// 
+        /// End a schedule permanently.  Terminal: it cannot be resumed or edited afterwards, and cancelling twice is refused with 409. To stop issuing temporarily, use &#x60;pause_recurring_invoice&#x60; instead.  Invoices already issued are left alone.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recurringId"></param>
@@ -49,6 +52,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// Create Recurring Invoice
         /// </summary>
+        /// <remarks>
+        /// Set up a schedule that issues invoices on its own.  Starts &#x60;active&#x60;, so the first invoice is issued when the schedule next falls due. The invoices it produces are ordinary documents — read them with &#x60;list_generated_invoices&#x60;.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recurringInvoiceCreateRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -59,7 +65,7 @@ namespace InvoicePDFs.Api
         /// Create Recurring Invoice
         /// </summary>
         /// <remarks>
-        /// 
+        /// Set up a schedule that issues invoices on its own.  Starts &#x60;active&#x60;, so the first invoice is issued when the schedule next falls due. The invoices it produces are ordinary documents — read them with &#x60;list_generated_invoices&#x60;.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recurringInvoiceCreateRequest"></param>
@@ -69,6 +75,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// Get Recurring Invoice
         /// </summary>
+        /// <remarks>
+        /// One recurring schedule by id.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recurringId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -79,7 +88,7 @@ namespace InvoicePDFs.Api
         /// Get Recurring Invoice
         /// </summary>
         /// <remarks>
-        /// 
+        /// One recurring schedule by id.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recurringId"></param>
@@ -89,6 +98,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// List Generated Invoices
         /// </summary>
+        /// <remarks>
+        /// The invoices one schedule has actually issued, newest first.  The documents produced by this schedule, as opposed to &#x60;list_recurring_invoices&#x60;, which lists the schedules themselves.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recurringId"></param>
         /// <param name="limit"> (optional, default to 50)</param>
@@ -101,7 +113,7 @@ namespace InvoicePDFs.Api
         /// List Generated Invoices
         /// </summary>
         /// <remarks>
-        /// 
+        /// The invoices one schedule has actually issued, newest first.  The documents produced by this schedule, as opposed to &#x60;list_recurring_invoices&#x60;, which lists the schedules themselves.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recurringId"></param>
@@ -113,6 +125,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// List Recurring Invoices
         /// </summary>
+        /// <remarks>
+        /// The schedules on this account, newest first.  These are the recurring definitions, not the invoices they produce; for those, use &#x60;list_generated_invoices&#x60;. Narrow with &#x60;status&#x60;.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit"> (optional, default to 50)</param>
         /// <param name="cursor"> (optional)</param>
@@ -125,7 +140,7 @@ namespace InvoicePDFs.Api
         /// List Recurring Invoices
         /// </summary>
         /// <remarks>
-        /// 
+        /// The schedules on this account, newest first.  These are the recurring definitions, not the invoices they produce; for those, use &#x60;list_generated_invoices&#x60;. Narrow with &#x60;status&#x60;.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit"> (optional, default to 50)</param>
@@ -137,6 +152,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// Pause Recurring Invoice
         /// </summary>
+        /// <remarks>
+        /// Stop a schedule issuing invoices, for now.  Only an &#x60;active&#x60; schedule can be paused; anything else is refused with 409. Nothing already issued changes. Restart it with &#x60;resume_recurring_invoice&#x60;.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recurringId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -147,7 +165,7 @@ namespace InvoicePDFs.Api
         /// Pause Recurring Invoice
         /// </summary>
         /// <remarks>
-        /// 
+        /// Stop a schedule issuing invoices, for now.  Only an &#x60;active&#x60; schedule can be paused; anything else is refused with 409. Nothing already issued changes. Restart it with &#x60;resume_recurring_invoice&#x60;.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recurringId"></param>
@@ -157,6 +175,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// Resume Recurring Invoice
         /// </summary>
+        /// <remarks>
+        /// Start a paused schedule issuing again.  Only a &#x60;paused&#x60; schedule can be resumed; anything else is refused with 409. A cancelled schedule cannot be brought back — create a new one.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recurringId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -167,7 +188,7 @@ namespace InvoicePDFs.Api
         /// Resume Recurring Invoice
         /// </summary>
         /// <remarks>
-        /// 
+        /// Start a paused schedule issuing again.  Only a &#x60;paused&#x60; schedule can be resumed; anything else is refused with 409. A cancelled schedule cannot be brought back — create a new one.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recurringId"></param>
@@ -177,6 +198,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// Update Recurring Invoice
         /// </summary>
+        /// <remarks>
+        /// Change a recurring schedule.  Only the fields you send are changed. Refused with 409 once the schedule is cancelled, which is terminal. Invoices already issued are not revisited.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recurringId"></param>
         /// <param name="recurringInvoicePatchRequest"></param>
@@ -188,7 +212,7 @@ namespace InvoicePDFs.Api
         /// Update Recurring Invoice
         /// </summary>
         /// <remarks>
-        /// 
+        /// Change a recurring schedule.  Only the fields you send are changed. Refused with 409 once the schedule is cancelled, which is terminal. Invoices already issued are not revisited.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recurringId"></param>
@@ -209,7 +233,7 @@ namespace InvoicePDFs.Api
         /// Cancel Recurring Invoice
         /// </summary>
         /// <remarks>
-        /// 
+        /// End a schedule permanently.  Terminal: it cannot be resumed or edited afterwards, and cancelling twice is refused with 409. To stop issuing temporarily, use &#x60;pause_recurring_invoice&#x60; instead.  Invoices already issued are left alone.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recurringId"></param>
@@ -222,7 +246,7 @@ namespace InvoicePDFs.Api
         /// Cancel Recurring Invoice
         /// </summary>
         /// <remarks>
-        /// 
+        /// End a schedule permanently.  Terminal: it cannot be resumed or edited afterwards, and cancelling twice is refused with 409. To stop issuing temporarily, use &#x60;pause_recurring_invoice&#x60; instead.  Invoices already issued are left alone.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recurringId"></param>
@@ -234,7 +258,7 @@ namespace InvoicePDFs.Api
         /// Create Recurring Invoice
         /// </summary>
         /// <remarks>
-        /// 
+        /// Set up a schedule that issues invoices on its own.  Starts &#x60;active&#x60;, so the first invoice is issued when the schedule next falls due. The invoices it produces are ordinary documents — read them with &#x60;list_generated_invoices&#x60;.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recurringInvoiceCreateRequest"></param>
@@ -247,7 +271,7 @@ namespace InvoicePDFs.Api
         /// Create Recurring Invoice
         /// </summary>
         /// <remarks>
-        /// 
+        /// Set up a schedule that issues invoices on its own.  Starts &#x60;active&#x60;, so the first invoice is issued when the schedule next falls due. The invoices it produces are ordinary documents — read them with &#x60;list_generated_invoices&#x60;.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recurringInvoiceCreateRequest"></param>
@@ -259,7 +283,7 @@ namespace InvoicePDFs.Api
         /// Get Recurring Invoice
         /// </summary>
         /// <remarks>
-        /// 
+        /// One recurring schedule by id.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recurringId"></param>
@@ -272,7 +296,7 @@ namespace InvoicePDFs.Api
         /// Get Recurring Invoice
         /// </summary>
         /// <remarks>
-        /// 
+        /// One recurring schedule by id.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recurringId"></param>
@@ -284,7 +308,7 @@ namespace InvoicePDFs.Api
         /// List Generated Invoices
         /// </summary>
         /// <remarks>
-        /// 
+        /// The invoices one schedule has actually issued, newest first.  The documents produced by this schedule, as opposed to &#x60;list_recurring_invoices&#x60;, which lists the schedules themselves.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recurringId"></param>
@@ -299,7 +323,7 @@ namespace InvoicePDFs.Api
         /// List Generated Invoices
         /// </summary>
         /// <remarks>
-        /// 
+        /// The invoices one schedule has actually issued, newest first.  The documents produced by this schedule, as opposed to &#x60;list_recurring_invoices&#x60;, which lists the schedules themselves.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recurringId"></param>
@@ -313,7 +337,7 @@ namespace InvoicePDFs.Api
         /// List Recurring Invoices
         /// </summary>
         /// <remarks>
-        /// 
+        /// The schedules on this account, newest first.  These are the recurring definitions, not the invoices they produce; for those, use &#x60;list_generated_invoices&#x60;. Narrow with &#x60;status&#x60;.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit"> (optional, default to 50)</param>
@@ -328,7 +352,7 @@ namespace InvoicePDFs.Api
         /// List Recurring Invoices
         /// </summary>
         /// <remarks>
-        /// 
+        /// The schedules on this account, newest first.  These are the recurring definitions, not the invoices they produce; for those, use &#x60;list_generated_invoices&#x60;. Narrow with &#x60;status&#x60;.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit"> (optional, default to 50)</param>
@@ -342,7 +366,7 @@ namespace InvoicePDFs.Api
         /// Pause Recurring Invoice
         /// </summary>
         /// <remarks>
-        /// 
+        /// Stop a schedule issuing invoices, for now.  Only an &#x60;active&#x60; schedule can be paused; anything else is refused with 409. Nothing already issued changes. Restart it with &#x60;resume_recurring_invoice&#x60;.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recurringId"></param>
@@ -355,7 +379,7 @@ namespace InvoicePDFs.Api
         /// Pause Recurring Invoice
         /// </summary>
         /// <remarks>
-        /// 
+        /// Stop a schedule issuing invoices, for now.  Only an &#x60;active&#x60; schedule can be paused; anything else is refused with 409. Nothing already issued changes. Restart it with &#x60;resume_recurring_invoice&#x60;.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recurringId"></param>
@@ -367,7 +391,7 @@ namespace InvoicePDFs.Api
         /// Resume Recurring Invoice
         /// </summary>
         /// <remarks>
-        /// 
+        /// Start a paused schedule issuing again.  Only a &#x60;paused&#x60; schedule can be resumed; anything else is refused with 409. A cancelled schedule cannot be brought back — create a new one.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recurringId"></param>
@@ -380,7 +404,7 @@ namespace InvoicePDFs.Api
         /// Resume Recurring Invoice
         /// </summary>
         /// <remarks>
-        /// 
+        /// Start a paused schedule issuing again.  Only a &#x60;paused&#x60; schedule can be resumed; anything else is refused with 409. A cancelled schedule cannot be brought back — create a new one.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recurringId"></param>
@@ -392,7 +416,7 @@ namespace InvoicePDFs.Api
         /// Update Recurring Invoice
         /// </summary>
         /// <remarks>
-        /// 
+        /// Change a recurring schedule.  Only the fields you send are changed. Refused with 409 once the schedule is cancelled, which is terminal. Invoices already issued are not revisited.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recurringId"></param>
@@ -406,7 +430,7 @@ namespace InvoicePDFs.Api
         /// Update Recurring Invoice
         /// </summary>
         /// <remarks>
-        /// 
+        /// Change a recurring schedule.  Only the fields you send are changed. Refused with 409 once the schedule is cancelled, which is terminal. Invoices already issued are not revisited.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recurringId"></param>
@@ -536,7 +560,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Cancel Recurring Invoice 
+        /// Cancel Recurring Invoice End a schedule permanently.  Terminal: it cannot be resumed or edited afterwards, and cancelling twice is refused with 409. To stop issuing temporarily, use &#x60;pause_recurring_invoice&#x60; instead.  Invoices already issued are left alone.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recurringId"></param>
@@ -549,7 +573,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Cancel Recurring Invoice 
+        /// Cancel Recurring Invoice End a schedule permanently.  Terminal: it cannot be resumed or edited afterwards, and cancelling twice is refused with 409. To stop issuing temporarily, use &#x60;pause_recurring_invoice&#x60; instead.  Invoices already issued are left alone.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recurringId"></param>
@@ -612,7 +636,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Cancel Recurring Invoice 
+        /// Cancel Recurring Invoice End a schedule permanently.  Terminal: it cannot be resumed or edited afterwards, and cancelling twice is refused with 409. To stop issuing temporarily, use &#x60;pause_recurring_invoice&#x60; instead.  Invoices already issued are left alone.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recurringId"></param>
@@ -626,7 +650,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Cancel Recurring Invoice 
+        /// Cancel Recurring Invoice End a schedule permanently.  Terminal: it cannot be resumed or edited afterwards, and cancelling twice is refused with 409. To stop issuing temporarily, use &#x60;pause_recurring_invoice&#x60; instead.  Invoices already issued are left alone.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recurringId"></param>
@@ -692,7 +716,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Create Recurring Invoice 
+        /// Create Recurring Invoice Set up a schedule that issues invoices on its own.  Starts &#x60;active&#x60;, so the first invoice is issued when the schedule next falls due. The invoices it produces are ordinary documents — read them with &#x60;list_generated_invoices&#x60;.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recurringInvoiceCreateRequest"></param>
@@ -705,7 +729,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Create Recurring Invoice 
+        /// Create Recurring Invoice Set up a schedule that issues invoices on its own.  Starts &#x60;active&#x60;, so the first invoice is issued when the schedule next falls due. The invoices it produces are ordinary documents — read them with &#x60;list_generated_invoices&#x60;.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recurringInvoiceCreateRequest"></param>
@@ -769,7 +793,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Create Recurring Invoice 
+        /// Create Recurring Invoice Set up a schedule that issues invoices on its own.  Starts &#x60;active&#x60;, so the first invoice is issued when the schedule next falls due. The invoices it produces are ordinary documents — read them with &#x60;list_generated_invoices&#x60;.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recurringInvoiceCreateRequest"></param>
@@ -783,7 +807,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Create Recurring Invoice 
+        /// Create Recurring Invoice Set up a schedule that issues invoices on its own.  Starts &#x60;active&#x60;, so the first invoice is issued when the schedule next falls due. The invoices it produces are ordinary documents — read them with &#x60;list_generated_invoices&#x60;.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recurringInvoiceCreateRequest"></param>
@@ -850,7 +874,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Get Recurring Invoice 
+        /// Get Recurring Invoice One recurring schedule by id.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recurringId"></param>
@@ -863,7 +887,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Get Recurring Invoice 
+        /// Get Recurring Invoice One recurring schedule by id.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recurringId"></param>
@@ -926,7 +950,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Get Recurring Invoice 
+        /// Get Recurring Invoice One recurring schedule by id.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recurringId"></param>
@@ -940,7 +964,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Get Recurring Invoice 
+        /// Get Recurring Invoice One recurring schedule by id.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recurringId"></param>
@@ -1006,7 +1030,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Generated Invoices 
+        /// List Generated Invoices The invoices one schedule has actually issued, newest first.  The documents produced by this schedule, as opposed to &#x60;list_recurring_invoices&#x60;, which lists the schedules themselves.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recurringId"></param>
@@ -1021,7 +1045,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Generated Invoices 
+        /// List Generated Invoices The invoices one schedule has actually issued, newest first.  The documents produced by this schedule, as opposed to &#x60;list_recurring_invoices&#x60;, which lists the schedules themselves.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recurringId"></param>
@@ -1094,7 +1118,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Generated Invoices 
+        /// List Generated Invoices The invoices one schedule has actually issued, newest first.  The documents produced by this schedule, as opposed to &#x60;list_recurring_invoices&#x60;, which lists the schedules themselves.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recurringId"></param>
@@ -1110,7 +1134,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Generated Invoices 
+        /// List Generated Invoices The invoices one schedule has actually issued, newest first.  The documents produced by this schedule, as opposed to &#x60;list_recurring_invoices&#x60;, which lists the schedules themselves.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recurringId"></param>
@@ -1186,7 +1210,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Recurring Invoices 
+        /// List Recurring Invoices The schedules on this account, newest first.  These are the recurring definitions, not the invoices they produce; for those, use &#x60;list_generated_invoices&#x60;. Narrow with &#x60;status&#x60;.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit"> (optional, default to 50)</param>
@@ -1201,7 +1225,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Recurring Invoices 
+        /// List Recurring Invoices The schedules on this account, newest first.  These are the recurring definitions, not the invoices they produce; for those, use &#x60;list_generated_invoices&#x60;. Narrow with &#x60;status&#x60;.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit"> (optional, default to 50)</param>
@@ -1271,7 +1295,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Recurring Invoices 
+        /// List Recurring Invoices The schedules on this account, newest first.  These are the recurring definitions, not the invoices they produce; for those, use &#x60;list_generated_invoices&#x60;. Narrow with &#x60;status&#x60;.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit"> (optional, default to 50)</param>
@@ -1287,7 +1311,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// List Recurring Invoices 
+        /// List Recurring Invoices The schedules on this account, newest first.  These are the recurring definitions, not the invoices they produce; for those, use &#x60;list_generated_invoices&#x60;. Narrow with &#x60;status&#x60;.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit"> (optional, default to 50)</param>
@@ -1360,7 +1384,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Pause Recurring Invoice 
+        /// Pause Recurring Invoice Stop a schedule issuing invoices, for now.  Only an &#x60;active&#x60; schedule can be paused; anything else is refused with 409. Nothing already issued changes. Restart it with &#x60;resume_recurring_invoice&#x60;.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recurringId"></param>
@@ -1373,7 +1397,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Pause Recurring Invoice 
+        /// Pause Recurring Invoice Stop a schedule issuing invoices, for now.  Only an &#x60;active&#x60; schedule can be paused; anything else is refused with 409. Nothing already issued changes. Restart it with &#x60;resume_recurring_invoice&#x60;.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recurringId"></param>
@@ -1436,7 +1460,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Pause Recurring Invoice 
+        /// Pause Recurring Invoice Stop a schedule issuing invoices, for now.  Only an &#x60;active&#x60; schedule can be paused; anything else is refused with 409. Nothing already issued changes. Restart it with &#x60;resume_recurring_invoice&#x60;.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recurringId"></param>
@@ -1450,7 +1474,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Pause Recurring Invoice 
+        /// Pause Recurring Invoice Stop a schedule issuing invoices, for now.  Only an &#x60;active&#x60; schedule can be paused; anything else is refused with 409. Nothing already issued changes. Restart it with &#x60;resume_recurring_invoice&#x60;.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recurringId"></param>
@@ -1516,7 +1540,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Resume Recurring Invoice 
+        /// Resume Recurring Invoice Start a paused schedule issuing again.  Only a &#x60;paused&#x60; schedule can be resumed; anything else is refused with 409. A cancelled schedule cannot be brought back — create a new one.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recurringId"></param>
@@ -1529,7 +1553,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Resume Recurring Invoice 
+        /// Resume Recurring Invoice Start a paused schedule issuing again.  Only a &#x60;paused&#x60; schedule can be resumed; anything else is refused with 409. A cancelled schedule cannot be brought back — create a new one.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recurringId"></param>
@@ -1592,7 +1616,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Resume Recurring Invoice 
+        /// Resume Recurring Invoice Start a paused schedule issuing again.  Only a &#x60;paused&#x60; schedule can be resumed; anything else is refused with 409. A cancelled schedule cannot be brought back — create a new one.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recurringId"></param>
@@ -1606,7 +1630,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Resume Recurring Invoice 
+        /// Resume Recurring Invoice Start a paused schedule issuing again.  Only a &#x60;paused&#x60; schedule can be resumed; anything else is refused with 409. A cancelled schedule cannot be brought back — create a new one.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recurringId"></param>
@@ -1672,7 +1696,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Update Recurring Invoice 
+        /// Update Recurring Invoice Change a recurring schedule.  Only the fields you send are changed. Refused with 409 once the schedule is cancelled, which is terminal. Invoices already issued are not revisited.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recurringId"></param>
@@ -1686,7 +1710,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Update Recurring Invoice 
+        /// Update Recurring Invoice Change a recurring schedule.  Only the fields you send are changed. Refused with 409 once the schedule is cancelled, which is terminal. Invoices already issued are not revisited.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recurringId"></param>
@@ -1758,7 +1782,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Update Recurring Invoice 
+        /// Update Recurring Invoice Change a recurring schedule.  Only the fields you send are changed. Refused with 409 once the schedule is cancelled, which is terminal. Invoices already issued are not revisited.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recurringId"></param>
@@ -1773,7 +1797,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Update Recurring Invoice 
+        /// Update Recurring Invoice Change a recurring schedule.  Only the fields you send are changed. Refused with 409 once the schedule is cancelled, which is terminal. Invoices already issued are not revisited.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recurringId"></param>

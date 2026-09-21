@@ -29,6 +29,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// Get Health
         /// </summary>
+        /// <remarks>
+        /// Is the API process alive.  Answers as long as the process can serve a request; it checks nothing behind it. For whether the service can actually do work, use &#x60;get_readiness&#x60;.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>HealthResponse</returns>
@@ -38,7 +41,7 @@ namespace InvoicePDFs.Api
         /// Get Health
         /// </summary>
         /// <remarks>
-        /// 
+        /// Is the API process alive.  Answers as long as the process can serve a request; it checks nothing behind it. For whether the service can actually do work, use &#x60;get_readiness&#x60;.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -47,6 +50,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// Get Readiness
         /// </summary>
+        /// <remarks>
+        /// Can the API serve real traffic — dependencies included.  Checks the database, storage, and the separate render service, and reports each one. &#x60;status&#x60; is &#x60;ready&#x60; only when all three are &#x60;ok&#x60;, so this is the check to point a load balancer at. &#x60;get_health&#x60; answers sooner but proves less.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ReadyResponse</returns>
@@ -56,7 +62,7 @@ namespace InvoicePDFs.Api
         /// Get Readiness
         /// </summary>
         /// <remarks>
-        /// 
+        /// Can the API serve real traffic — dependencies included.  Checks the database, storage, and the separate render service, and reports each one. &#x60;status&#x60; is &#x60;ready&#x60; only when all three are &#x60;ok&#x60;, so this is the check to point a load balancer at. &#x60;get_health&#x60; answers sooner but proves less.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -65,6 +71,9 @@ namespace InvoicePDFs.Api
         /// <summary>
         /// Get Version
         /// </summary>
+        /// <remarks>
+        /// Which build is deployed.
+        /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>VersionResponse</returns>
@@ -74,7 +83,7 @@ namespace InvoicePDFs.Api
         /// Get Version
         /// </summary>
         /// <remarks>
-        /// 
+        /// Which build is deployed.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -93,7 +102,7 @@ namespace InvoicePDFs.Api
         /// Get Health
         /// </summary>
         /// <remarks>
-        /// 
+        /// Is the API process alive.  Answers as long as the process can serve a request; it checks nothing behind it. For whether the service can actually do work, use &#x60;get_readiness&#x60;.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -105,7 +114,7 @@ namespace InvoicePDFs.Api
         /// Get Health
         /// </summary>
         /// <remarks>
-        /// 
+        /// Is the API process alive.  Answers as long as the process can serve a request; it checks nothing behind it. For whether the service can actually do work, use &#x60;get_readiness&#x60;.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -116,7 +125,7 @@ namespace InvoicePDFs.Api
         /// Get Readiness
         /// </summary>
         /// <remarks>
-        /// 
+        /// Can the API serve real traffic — dependencies included.  Checks the database, storage, and the separate render service, and reports each one. &#x60;status&#x60; is &#x60;ready&#x60; only when all three are &#x60;ok&#x60;, so this is the check to point a load balancer at. &#x60;get_health&#x60; answers sooner but proves less.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -128,7 +137,7 @@ namespace InvoicePDFs.Api
         /// Get Readiness
         /// </summary>
         /// <remarks>
-        /// 
+        /// Can the API serve real traffic — dependencies included.  Checks the database, storage, and the separate render service, and reports each one. &#x60;status&#x60; is &#x60;ready&#x60; only when all three are &#x60;ok&#x60;, so this is the check to point a load balancer at. &#x60;get_health&#x60; answers sooner but proves less.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -139,7 +148,7 @@ namespace InvoicePDFs.Api
         /// Get Version
         /// </summary>
         /// <remarks>
-        /// 
+        /// Which build is deployed.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -151,7 +160,7 @@ namespace InvoicePDFs.Api
         /// Get Version
         /// </summary>
         /// <remarks>
-        /// 
+        /// Which build is deployed.
         /// </remarks>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -279,7 +288,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Get Health 
+        /// Get Health Is the API process alive.  Answers as long as the process can serve a request; it checks nothing behind it. For whether the service can actually do work, use &#x60;get_readiness&#x60;.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -291,7 +300,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Get Health 
+        /// Get Health Is the API process alive.  Answers as long as the process can serve a request; it checks nothing behind it. For whether the service can actually do work, use &#x60;get_readiness&#x60;.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -340,7 +349,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Get Health 
+        /// Get Health Is the API process alive.  Answers as long as the process can serve a request; it checks nothing behind it. For whether the service can actually do work, use &#x60;get_readiness&#x60;.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -353,7 +362,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Get Health 
+        /// Get Health Is the API process alive.  Answers as long as the process can serve a request; it checks nothing behind it. For whether the service can actually do work, use &#x60;get_readiness&#x60;.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -405,7 +414,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Get Readiness 
+        /// Get Readiness Can the API serve real traffic — dependencies included.  Checks the database, storage, and the separate render service, and reports each one. &#x60;status&#x60; is &#x60;ready&#x60; only when all three are &#x60;ok&#x60;, so this is the check to point a load balancer at. &#x60;get_health&#x60; answers sooner but proves less.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -417,7 +426,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Get Readiness 
+        /// Get Readiness Can the API serve real traffic — dependencies included.  Checks the database, storage, and the separate render service, and reports each one. &#x60;status&#x60; is &#x60;ready&#x60; only when all three are &#x60;ok&#x60;, so this is the check to point a load balancer at. &#x60;get_health&#x60; answers sooner but proves less.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -466,7 +475,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Get Readiness 
+        /// Get Readiness Can the API serve real traffic — dependencies included.  Checks the database, storage, and the separate render service, and reports each one. &#x60;status&#x60; is &#x60;ready&#x60; only when all three are &#x60;ok&#x60;, so this is the check to point a load balancer at. &#x60;get_health&#x60; answers sooner but proves less.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -479,7 +488,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Get Readiness 
+        /// Get Readiness Can the API serve real traffic — dependencies included.  Checks the database, storage, and the separate render service, and reports each one. &#x60;status&#x60; is &#x60;ready&#x60; only when all three are &#x60;ok&#x60;, so this is the check to point a load balancer at. &#x60;get_health&#x60; answers sooner but proves less.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -531,7 +540,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Get Version 
+        /// Get Version Which build is deployed.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -543,7 +552,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Get Version 
+        /// Get Version Which build is deployed.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -592,7 +601,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Get Version 
+        /// Get Version Which build is deployed.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -605,7 +614,7 @@ namespace InvoicePDFs.Api
         }
 
         /// <summary>
-        /// Get Version 
+        /// Get Version Which build is deployed.
         /// </summary>
         /// <exception cref="InvoicePDFs.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
