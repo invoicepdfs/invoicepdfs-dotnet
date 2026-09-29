@@ -85,7 +85,9 @@ namespace InvoicePDFs.Model
         /// </summary>
         /// <param name="status">status (required).</param>
         /// <param name="dependencies">dependencies (required).</param>
-        public ReadyResponse(StatusEnum status = default(StatusEnum), Dictionary<string, InnerEnum> dependencies = default(Dictionary<string, InnerEnum>))
+        /// <param name="workers">workers.</param>
+        /// <param name="degraded">degraded.</param>
+        public ReadyResponse(StatusEnum status = default(StatusEnum), Dictionary<string, InnerEnum> dependencies = default(Dictionary<string, InnerEnum>), Dictionary<string, string> workers = default(Dictionary<string, string>), List<string> degraded = default(List<string>))
         {
             this.Status = status;
             // to ensure "dependencies" is required (not null)
@@ -94,6 +96,8 @@ namespace InvoicePDFs.Model
                 throw new ArgumentNullException("dependencies is a required property for ReadyResponse and cannot be null");
             }
             this.Dependencies = dependencies;
+            this.Workers = workers;
+            this.Degraded = degraded;
         }
 
         /// <summary>
@@ -101,6 +105,18 @@ namespace InvoicePDFs.Model
         /// </summary>
         [DataMember(Name = "dependencies", IsRequired = true, EmitDefaultValue = true)]
         public Dictionary<string, ReadyResponse.InnerEnum> Dependencies { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Workers
+        /// </summary>
+        [DataMember(Name = "workers", EmitDefaultValue = false)]
+        public Dictionary<string, string> Workers { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Degraded
+        /// </summary>
+        [DataMember(Name = "degraded", EmitDefaultValue = true)]
+        public List<string> Degraded { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -112,6 +128,8 @@ namespace InvoicePDFs.Model
             sb.Append("class ReadyResponse {\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  Dependencies: ").Append(Dependencies).Append("\n");
+            sb.Append("  Workers: ").Append(Workers).Append("\n");
+            sb.Append("  Degraded: ").Append(Degraded).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

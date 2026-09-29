@@ -71,5 +71,23 @@ namespace InvoicePDFs.Test.Model
         {
             // TODO unit test for the property 'Dependencies'
         }
+
+        /// <summary>
+        /// Test the property 'Workers'
+        /// </summary>
+        [Fact]
+        public void WorkersTest()
+        {
+            // TODO unit test for the property 'Workers'
+        }
+
+        /// <summary>
+        /// Test the property 'Degraded'
+        /// </summary>
+        [Fact]
+        public void DegradedTest()
+        {
+            // TODO unit test for the property 'Degraded'
+        }
     }
 }
