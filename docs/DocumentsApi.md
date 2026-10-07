@@ -1475,7 +1475,7 @@ catch (ApiException e)
 
 Send Document
 
-Queue the document to be emailed.  Returns 202 with the delivery in `queued`. The mail is sent in the background and retried on transient failure; poll `GET /deliveries/{id}` for the outcome.
+Queue the document to be emailed, with its PDF attached.  The document must be finalized; sending a draft is a 409. `attach_pdf` defaults to true, and on that path a render must already exist — the email attaches an existing render rather than making one — so the natural sequence is create, finalize, render, send, and sending straight after finalizing is refused with `No render exists for this document`. Send with `attach_pdf: false` and no render is needed, because none is attached.  Returns 202 with the delivery in `queued`. The mail is sent in the background and retried on transient failure; poll `GET /deliveries/{id}` for the outcome.
 
 ### Example
 ```csharp
